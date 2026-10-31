@@ -24,10 +24,11 @@ elif a.action=='inventory':
  discovery=Path(a.input); reg=Path(__file__).with_name('handler-registry.json');status=json.loads(reg.read_text())['registrations'][0]['status']
  item={'componentType':1,'inUse':True,'identityStatus':'resolved','typeIdentity':'platform:1','handlers':{'export':{'status':status}}}
  counts={k:int(k==status) for k in ('supported','partial','unsupported','excluded','unregistered')}
- report={'schemaVersion':2,'kind':'component-inventory-report','profile':profile,'organizationVersion':version,'discoveryComplete':os.environ.get('TEST_MODE')!='partial-discovery','rawInventoryConsistency':{'solutionsMatch':True,'organizationVersionMatch':True,'claimedFlagsMatch':True},'types':[item],'totals':{'inUseTypes':1,'stageStatusesInUse':{'export':counts}}}
+ sdk=Path(__file__).with_name('sdk-component-contracts.json'); module=Path(__file__).with_name('platform_component_types.py')
+ report={'schemaVersion':2,'classificationVersion':2,'typeCatalogueSha256':sha(sdk.read_bytes()),'kind':'component-inventory-report','profile':profile,'organizationVersion':version,'discoveryComplete':os.environ.get('TEST_MODE')!='partial-discovery','rawInventoryConsistency':{'solutionsMatch':True,'organizationVersionMatch':True,'claimedFlagsMatch':True},'types':[item],'totals':{'inUseTypes':1,'stageStatusesInUse':{'export':counts}}}
  if os.environ.get('TEST_MODE')=='forged-inventory':report['types'][0]['handlers']['export']['status']='partial'
  if os.environ.get('TEST_MODE')=='forged-identity':report['types'][0]['typeIdentity']='entity:forged'
- write(out/'inventory.json',report);write(out/'provenance.json',{'captureSha256':sha((discovery/'capture.json').read_bytes()),'catalogueSha256':sha((discovery/'type-catalogue.json').read_bytes()),'registrySha256':sha(reg.read_bytes())})
+ write(out/'inventory.json',report);write(out/'provenance.json',{'captureSha256':sha((discovery/'capture.json').read_bytes()),'catalogueSha256':sha((discovery/'type-catalogue.json').read_bytes()),'registrySha256':sha(reg.read_bytes()),'typeCatalogueSha256':sha(sdk.read_bytes()),'classificationModuleSha256':sha(module.read_bytes()),'classificationVersion':2})
  if os.environ.get('TEST_MODE')=='inventory-fail':print('SYNTHETIC_SECRET_DETAIL',file=sys.stderr);sys.exit(37)
  if status!='supported' or os.environ.get('TEST_MODE')=='partial-discovery':sys.exit(2)
 elif a.action=='identity-coverage':

@@ -19,3 +19,7 @@
   with a dedicated role containing exactly 14 verified Global reads and no effective writes;
   an impersonated version read returned `9.2.26094.165`. No workflow was run against this target
   as part of the switch; publication qualification remains open.
+
+- Prepared independent controller verification for classification version 2, including the
+  nine reviewed SDK fallbacks and collision checks. Offline tests passed; the producer pin,
+  live diagnostic and publication qualification remain separate steps.

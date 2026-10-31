@@ -77,6 +77,8 @@ class PublicationFixture(unittest.TestCase):
         self.producer = self.root / 'producer'; self.producer.mkdir(); self.git(self.producer, 'init')
         self.git(self.producer, 'config', 'user.name', 'Fixture'); self.git(self.producer, 'config', 'user.email', 'fixture@example.invalid')
         cli = self.producer / 'tools/PowerSpec.Baseline/baseline.py'; cli.parent.mkdir(parents=True); shutil.copy(ROOT / 'fixtures/producer.py', cli)
+        (cli.parent/'sdk-component-contracts.json').write_text('{}')
+        (cli.parent/'platform_component_types.py').write_text('# synthetic fixture\n')
         (cli.parent/'handler-registry.json').write_text(json.dumps({'schemaVersion':2,'registrations':[{'typeIdentity':'platform:1','stage':'export','status':'supported','verification':{'status':'passed','tests':['fixture']}}]}))
         (cli.parent/'export-identity-rules.json').write_text(json.dumps({'schemaVersion':1,'rules':[{'typeIdentity':'platform:1','status':'qualified','snapshotFamily':'family','verification':{'status':'passed','tests':['fixture']}}]}))
         self.git(self.producer, 'add', '.'); self.git(self.producer, 'commit', '-m', 'synthetic producer')

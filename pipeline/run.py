@@ -207,13 +207,23 @@ def _safe_summary(values, references_evaluated=False):
         with open(summary, 'a', encoding='utf-8') as stream: stream.write(message + '\n')
 
 
+SDK_FALLBACK = {15:'EntityKeyAttribute', 30:'ProcessTrigger', 80:'AppModule', 88:'AppModuleToRoleMap',
+                171:'ProfileEntityAccessLevel', 172:'ChannelAccessProfile', 181:'EntityDataProvider',
+                183:'EntityDataSource', 270:'SolutionComponentDefinition'}
+SDK_EVIDENCE = {'product':'Microsoft Power Platform CLI', 'version':'2.5.1',
+                'packageUrl':'https://www.nuget.org/packages/Microsoft.PowerApps.CLI.Tool/2.5.1',
+                'assembly':'SolutionPackagerLib.dll',
+                'assemblySha256':'719c9c6e7d056980b926692f1225d42bc1b21239335394bd00f8bcb513936b43',
+                'enum':'Microsoft.Crm.Tools.SolutionPackager.ComponentType',
+                'decompiledSourceSha256':'afe394758fdd8a840c644e3d2955c32907eda5dd51b9291ebcd92c4f951f41b5'}
+
 def _catalogue_identity(entry, profile):
     code = entry['componentType']
     definitions = entry.get('definitions', [])
     labels = entry.get('optionLabels', [])
     if not isinstance(definitions, list) or not isinstance(labels, list): raise Hold('Invalid catalogue identity evidence.')
     candidates = set()
-    if not definitions and any(isinstance(x, dict) and x.get('source') in ('component-options','dependent-options','required-options') for x in labels):
+    if code in SDK_FALLBACK or (not definitions and any(isinstance(x, dict) and x.get('source') in ('component-options','dependent-options','required-options') for x in labels)):
         candidates.add('platform:' + str(code))
     ambiguous = len(definitions) > 1
     for definition in definitions:
@@ -242,6 +252,12 @@ def verify_inventory(discovery, inventory, producer, c, v):
             or provenance.get('catalogueSha256') != capture.get('catalogue', {}).get('sha256')
             or provenance.get('registrySha256') != _safe_digest(producer, 'tools/PowerSpec.Baseline/handler-registry.json')):
         raise Hold('Discovery inventory provenance does not match its inputs.')
+    sdk_hash = _safe_digest(producer, 'tools/PowerSpec.Baseline/sdk-component-contracts.json')
+    classification_hash = _safe_digest(producer, 'tools/PowerSpec.Baseline/platform_component_types.py')
+    if (provenance.get('classificationVersion') != 2 or provenance.get('typeCatalogueSha256') != sdk_hash
+            or provenance.get('classificationModuleSha256') != classification_hash
+            or report.get('classificationVersion') != 2):
+        raise Hold('Inventory classification provenance does not match reviewed inputs.')
     catalogue = _safe_json(discovery, catalogue_path)
     if (report.get('schemaVersion') != 2 or report.get('kind') != 'component-inventory-report'
             or report.get('profile') != c['profile'] or report.get('organizationVersion') != v
@@ -285,6 +301,13 @@ def verify_inventory(discovery, inventory, producer, c, v):
         number = item['componentType']
         if number in seen or number not in raw_by_code or item['inUse'] is not raw_by_code[number]['inUse']: raise Hold('Inventory does not match discovery types.')
         seen.add(number)
+        if number in SDK_FALLBACK:
+            evidence = item.get('identityEvidence', {})
+            sdk = evidence.get('sdk') if isinstance(evidence, dict) else None
+            if (not isinstance(sdk, dict) or evidence.get('sdkName') != SDK_FALLBACK[number]
+                    or sdk.get('typeCatalogueSha256') != sdk_hash
+                    or any(sdk.get(key) != value for key, value in SDK_EVIDENCE.items())):
+                raise Hold('Inventory SDK fallback evidence is invalid.')
         identity = item.get('identityStatus')
         if identity not in ('resolved', 'unresolved', 'ambiguous') or (item.get('typeIdentity'), identity) != expected_identities[number]: raise Hold('Inventory identity does not match discovery evidence.')
         if item['inUse']:
