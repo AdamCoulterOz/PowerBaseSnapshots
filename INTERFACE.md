@@ -1,29 +1,13 @@
 # Interface
 
-The pipeline polls a caller-configured sentinel and, for a new exact four-part service version, coordinates the pinned private PowerSpec producer's read-only capture and normalization. On qualified success it commits the resulting baseline and creates an immutable annotated `service/<version>` tag. Polling is not a webhook and cannot recover versions skipped between observations; version changes during capture hold the result for retry.
+The controller polls the caller-configured sentinel and coordinates a clean pinned PowerSpec producer for a new exact four-part service version. It runs `acquire-baseline` then `finalize-publication --acquisition DIR --producer-root DIR --producer-commit SHA --output FILE`; a missing finalizer, failed or partial acquisition, absent attestation, or unapproved exact policy byte hash holds publication. Check and diagnostic modes remain available independently of policy approval. The public producer policy must explicitly set `publicationApproved` true.
 
-Publication requires complete capture and component-family coverage, an approved field/content policy and attestation bound to the snapshot hash, producer revision, policy, profile and matching before/after versions. Missing or unqualified evidence holds publication. The producer is pinned, but the policy hash and portable families remain unset and the producer does not yet emit the required public attestation; existing capture semantics are not yet qualified.
+The finalizer emits a sanitized `raw-baseline-publication-attestation-v1`, separate from `projection/public/`. Its exact fields are `schemaVersion`, `kind`, `producerCommit`, `policySha256`, `profile`, `sourceVersionBefore`, `sourceVersionAfter`, `inventoryConsistency`, `coverageSchemaVersion`, `coverageComplete`, `requiredGateResults`, `scopeUnresolvedMembershipRows`, `publicSubtreeSha256`, and `publicFiles`. The five required gates are `configurationSource`, `representationIdentity`, `normalizationLossAccounting`, `publicFieldPolicy`, and `reproducibility`, all true; coverage is v2, complete and has zero unresolved scope. Inventory consistency is `matched-non-atomic`. The producer finalizer must verify frozen input hashes against Git blobs at the pinned commit, acquisition evidence, exact approved policy, projection reproducibility, scope ledger and before/after service and solution inventory.
 
-Retain evidence-backed stable component IDs. Classify installation bookkeeping and environment bindings by field and evidence, never by blindly removing GUIDs. PowerSpec owns semantic model extraction and reference packaging; neither is a stage of this repository's pipeline. Private historical candidates are outside this public history.
+`publicFiles` is a sorted array of `{path, sha256, bytes}` for every regular file under the public subtree including `manifest.json`. `publicSubtreeSha256` hashes its UTF-8 JSON serialization with sorted keys, compact separators, and a trailing newline. The manifest lists every other public file with its path and SHA-256. The controller independently verifies these, path safety, the producer checkout and policy hash, attested profile and versions, and external version observations before and after capture and before publication. It publishes only that subtree and sanitized attestation; private captures, loss ledgers, frozen inputs and environment paths stay private. A successful publication commits version evidence and creates an immutable annotated `service/<version>` tag atomically with the branch update. Polling can miss versions; matching brackets do not prove atomicity. Dependency graph closure and import readiness are not raw baseline gates.
 
-Before a new-version publication attempt, fresh discovery and a gated export
-inventory report are verified against their catalogue, registries, profile and service
-version. Identity/reference coverage must be bound to the normalized snapshot and
-discovery and must explicitly establish complete reference evidence; an empty list of
-references is not proof. The attestation binds discovery, inventory and identity report
-hashes in addition to the existing policy, producer, snapshot and version facts.
-Informational `diagnose` does not capture or publish a baseline and exposes only
-validated aggregate counts. Unsupported, missing, ambiguous or partial evidence holds.
+GitHub execution selects `POWERSPEC_AUTH_MODE=github-oidc` with the configured tenant and client IDs and the job OIDC request credentials. The controller obtains a fresh assertion and Dataverse-scoped token for each version poll and retries one HTTP 401 with a newly acquired token; OIDC failure holds without a CLI fallback. Local callers may use the CLI mode. Tokens and assertions remain in process memory and are not publication artifacts.
 
-The configured sentinel application user has 14 verified Global read privileges and
-no effective write privileges. The four metadata-specific additions are
-`prvReadEntity`, `prvReadOptionSet`, `prvReadAttribute` and `prvReadRelationship`;
-no EntityKey privilege was added. Eight read-only impersonated metadata probes returned
-HTTP 200. [Diagnostic run 41210320964](https://github.com/AdamCoulterOz/PowerBaseSnapshots/actions/runs/41210320964) then completed the live
-discovery and identity preflight without attempting publication; it did not evaluate
-reference completeness. Raw configuration stays private, and the coordinator does not
-run a C# extraction stage.
+The manual `auth-check` mode independently obtains two OIDC tokens, compares the caller application ID with the configured client, checks bounded file-upload, SDK-step, data-source and custom-control-metadata reads, and requires matching service versions before and after. It emits only the version, aggregate result, and fixed route/status on failure; it does not clone the producer or publish.
 
-The selected sentinel profile is `developerreference`. The sentinel origin remains a protected
-environment secret; switching the target does not itself establish an accepted baseline, a
-verified release wave or complete platform coverage.
+Each publication commits `diffs/<profile>/<serviceVersion>.json`, a deterministic comparison of manifest-indexed public files with added, removed and changed paths and their SHA-256 values. It includes the previous and current public subtree hashes; the previous hash is null for the first baseline. Unsafe or inconsistent prior and current manifests hold publication.

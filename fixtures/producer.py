@@ -9,10 +9,33 @@ import sys
 def canonical(x): return (json.dumps(x, sort_keys=True, separators=(',', ':'))+'\n').encode()
 def write(p,x): p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(canonical(x))
 def sha(b): return hashlib.sha256(b).hexdigest()
-parser=argparse.ArgumentParser(); parser.add_argument('action');parser.add_argument('--environment');parser.add_argument('--profile');parser.add_argument('--output',required=True);parser.add_argument('--input');parser.add_argument('--previous');parser.add_argument('--current');parser.add_argument('--discovery');parser.add_argument('--require-stage');parser.add_argument('--snapshot');parser.add_argument('--require-complete',action='store_true');a=parser.parse_args()
+parser=argparse.ArgumentParser(); parser.add_argument('action');parser.add_argument('--environment');parser.add_argument('--profile');parser.add_argument('--output',required=True);parser.add_argument('--input');parser.add_argument('--previous');parser.add_argument('--current');parser.add_argument('--discovery');parser.add_argument('--require-stage');parser.add_argument('--snapshot');parser.add_argument('--require-complete',action='store_true');parser.add_argument('--acquisition');parser.add_argument('--producer-root');parser.add_argument('--producer-commit');a=parser.parse_args()
 with open(os.environ['TEST_ACTIONS'],'a') as log: log.write(a.action + '\n')
-out=Path(a.output);out.mkdir();version=os.environ.get('TEST_VERSION','1.2.3.4');profile=os.environ.get('TEST_PROFILE','synthetic')
-if a.action=='discover':
+out=Path(a.output);
+if a.action != 'finalize-publication': out.mkdir()
+version=os.environ.get('TEST_VERSION','1.2.3.4');profile=os.environ.get('TEST_PROFILE','synthetic')
+if a.action=='acquire-baseline':
+ (out/'raw-private.txt').write_text('SYNTHETIC_PRIVATE_CAPTURE_PAYLOAD')
+ public=out/'projection'/'public'; data=public/'family'/'one.json'; write(data,{'id':'stable','value':1})
+ mode=os.environ.get('TEST_MODE')
+ path='../outside.json' if mode=='escape' else 'family/one.json'
+ doc_hash='0'*64 if mode=='hash' else sha(data.read_bytes())
+ write(public/'manifest.json',{'schemaVersion':1,'documents':[{'path':path,'sha256':doc_hash}]})
+ if mode=='symlink': data.unlink();data.symlink_to('/etc/hosts')
+ if mode=='secretpath': (public/'raw-private.txt').write_text('SYNTHETIC_PRIVATE_CAPTURE_PAYLOAD')
+ if mode=='capture-partial':sys.exit(2)
+elif a.action=='finalize-publication':
+ if os.environ.get('TEST_MODE')=='no-attestation':sys.exit(0)
+ public=Path(a.acquisition)/'projection'/'public'
+ files=[{'path':p.relative_to(public).as_posix(),'sha256':sha(p.read_bytes()),'bytes':p.stat().st_size} for p in sorted(public.rglob('*')) if p.is_file()]
+ gates={k:True for k in ('configurationSource','representationIdentity','normalizationLossAccounting','publicFieldPolicy','reproducibility')}
+ att={'schemaVersion':1,'kind':'raw-baseline-publication-attestation-v1','producerCommit':os.environ['TEST_PRODUCER_SHA'],'policySha256':os.environ['TEST_POLICY_HASH'],'profile':profile,'sourceVersionBefore':version,'sourceVersionAfter':version,'inventoryConsistency':'matched-non-atomic','coverageSchemaVersion':2,'coverageComplete':True,'requiredGateResults':gates,'scopeUnresolvedMembershipRows':0,'publicSubtreeSha256':sha(canonical(files)),'publicFiles':files}
+ mode=os.environ.get('TEST_MODE')
+ if mode=='attestation':att['publicSubtreeSha256']='0'*64
+ if mode=='unknown-scope':att['scopeUnresolvedMembershipRows']=1
+ if mode=='partial-gate':att['requiredGateResults']['representationIdentity']=False
+ write(out,att)
+elif a.action=='discover':
  if os.environ.get('TEST_MODE')=='discover-fail':
   write(out/'capture.json',{'sources':[{'name':'dependency-endpoints','status':'failed','failure':{'httpStatus':403},'reason':'SYNTHETIC_SECRET_DETAIL'}]});sys.exit(1)
  catalogue={'types':[{'componentType':1,'inUse':True,'definitions':[],'optionLabels':[{'source':'component-options'}]}]}

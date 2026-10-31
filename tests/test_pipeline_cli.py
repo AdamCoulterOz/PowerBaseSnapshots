@@ -49,13 +49,191 @@ class PublicPipelineCLI(unittest.TestCase):
             if args[:2]==['git','clone']:
                 observed.append((key.read_text(),key.stat().st_mode & 0o777,env['GIT_SSH_COMMAND']))
                 Path(args[-1]).mkdir()
-            return Result()
+            result=Result()
+            if args[:2]==['git','status']: result.stdout=''
+            return result
         with patch.dict(os.environ,{'PRODUCER_SSH_KEY':expected}),patch.object(module,'execute',side_effect=fake_execute):
             module.clone_producer({'producerCommit':'a'*40},self.work)
         self.assertEqual(observed[0][0],expected+'\n')
         self.assertEqual(observed[0][1],0o600)
         self.assertIn('StrictHostKeyChecking=yes',observed[0][2])
         self.assertFalse((self.work/'deploy-key').exists())
+
+    def test_oidc_token_exchange_refreshes_without_cli_and_scopes_dataverse(self):
+        import io
+        from urllib.parse import parse_qs, urlsplit
+        spec=importlib.util.spec_from_file_location('oidc_pipeline',CLI);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        tenant='11111111-1111-1111-1111-111111111111';client='22222222-2222-2222-2222-222222222222';calls=[]
+        class Response(io.BytesIO):
+            status=200
+            def __enter__(self):return self
+            def __exit__(self,*args):self.close()
+        class Opener:
+            def open(self,request,timeout):
+                calls.append(request)
+                if 'actions.githubusercontent.com' in request.full_url:return Response(b'{"value":"synthetic-assertion"}')
+                return Response(b'{"access_token":"synthetic-access"}')
+        settings={'POWERSPEC_AUTH_MODE':'github-oidc','POWERSPEC_AZURE_TENANT_ID':tenant,'POWERSPEC_AZURE_CLIENT_ID':client,'ACTIONS_ID_TOKEN_REQUEST_URL':'https://pipelines.actions.githubusercontent.com/oidc?api-version=2.0','ACTIONS_ID_TOKEN_REQUEST_TOKEN':'synthetic-bearer'}
+        with patch.dict(os.environ,settings,clear=True),patch.object(module.urllib.request,'build_opener',return_value=Opener()),patch.object(module,'execute',side_effect=AssertionError('CLI fallback')):
+            for _ in range(2):self.assertEqual(module.token_for('https://synthetic.crm.dynamics.com'),'synthetic-access')
+        self.assertEqual(len(calls),4)
+        self.assertEqual(parse_qs(urlsplit(calls[0].full_url).query)['audience'],['api://AzureADTokenExchange'])
+        self.assertEqual(calls[1].full_url,'https://login.microsoftonline.com/'+tenant+'/oauth2/v2.0/token')
+        form=parse_qs(calls[1].data.decode());self.assertEqual(form['scope'],['https://synthetic.crm.dynamics.com/.default'])
+        self.assertEqual(form['client_assertion'],['synthetic-assertion']);self.assertEqual(form['client_id'],[client])
+
+    def test_oidc_rejects_untrusted_url_redirect_and_never_falls_back(self):
+        spec=importlib.util.spec_from_file_location('oidc_pipeline_reject',CLI);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        settings={'POWERSPEC_AUTH_MODE':'github-oidc','POWERSPEC_AZURE_TENANT_ID':'11111111-1111-1111-1111-111111111111','POWERSPEC_AZURE_CLIENT_ID':'22222222-2222-2222-2222-222222222222','ACTIONS_ID_TOKEN_REQUEST_URL':'https://attacker.invalid/oidc','ACTIONS_ID_TOKEN_REQUEST_TOKEN':'secret-assertion-token'}
+        with patch.dict(os.environ,settings,clear=True),patch.object(module,'execute',side_effect=AssertionError('CLI fallback')),patch.object(module.urllib.request,'build_opener',side_effect=AssertionError('network')):
+            with self.assertRaises(module.Hold) as error:module.token_for('https://synthetic.crm.dynamics.com')
+        self.assertNotIn('secret-assertion-token',str(error.exception))
+        with self.assertRaises(module.Hold):module.NoRedirect().redirect_request(None,None,None,None,None,None)
+
+    def test_version_query_renews_once_on_401_only(self):
+        import io
+        from urllib.error import HTTPError
+        spec=importlib.util.spec_from_file_location('oidc_pipeline_401',CLI);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        class Response(io.BytesIO):
+            status=200
+            def __enter__(self):return self
+            def __exit__(self,*args):self.close()
+        class Opener:
+            def __init__(self,status):self.status=status;self.calls=[]
+            def open(self,request,timeout):
+                self.calls.append(request)
+                if len(self.calls)==1:raise HTTPError(request.full_url,self.status,'private-detail',None,None)
+                return Response(b'{"Version":"1.2.3.4"}')
+        opener=Opener(401)
+        with patch.object(module,'token_for',side_effect=['first','second']) as token,patch.object(module.urllib.request,'build_opener',return_value=opener):
+            self.assertEqual(module.sentinel('https://synthetic.crm.dynamics.com'),'1.2.3.4')
+            self.assertEqual(token.call_count,2)
+        self.assertEqual([x.get_header('Authorization') for x in opener.calls],['Bearer first','Bearer second'])
+        opener=Opener(403)
+        with patch.object(module,'token_for',return_value='token') as token,patch.object(module.urllib.request,'build_opener',return_value=opener):
+            with self.assertRaises(module.Hold) as error:module.sentinel('https://synthetic.crm.dynamics.com')
+            self.assertEqual(token.call_count,1);self.assertNotIn('private-detail',str(error.exception))
+
+    def test_oidc_identity_proof_checks_routes_identity_and_version(self):
+        import io
+        spec=importlib.util.spec_from_file_location('oidc_identity_test',CLI);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        user='33333333-3333-3333-3333-333333333333';client='22222222-2222-2222-2222-222222222222'
+        class Response(io.BytesIO):
+            status=200
+            def __enter__(self):return self
+            def __exit__(self,*args):self.close()
+        requests=[]
+        class Opener:
+            def open(self,request,timeout):
+                requests.append(request);url=request.full_url
+                if 'WhoAmI()' in url:body={'UserId':user}
+                elif '/systemusers(' in url:body={'applicationid':client}
+                elif 'EntityDefinitions(' in url:body={'LogicalName':'customcontrol','PrimaryIdAttribute':'customcontrolid'}
+                elif 'RetrieveVersion()' in url:body={'Version':'1.2.3.4'}
+                else:body={'value':[]}
+                return Response(json.dumps(body).encode())
+        with patch.dict(os.environ,{'POWERSPEC_AZURE_CLIENT_ID':client}),patch.object(module,'token_for',return_value='second-token') as token,patch.object(module.urllib.request,'build_opener',return_value=Opener()):
+            module.oidc_identity_check('https://synthetic.crm.dynamics.com','1.2.3.4')
+        token.assert_called_once_with('https://synthetic.crm.dynamics.com');self.assertEqual(len(requests),7)
+        self.assertEqual([x.get_header('Authorization') for x in requests],['Bearer second-token']*7)
+        urls=[x.full_url for x in requests]
+        for route in ('WhoAmI()','systemusers(','msdyn_fileuploads','sdkmessageprocessingsteps','entitydatasources',"EntityDefinitions(LogicalName='customcontrol')",'RetrieveVersion()'):
+            self.assertTrue(any(route in url for url in urls),route)
+
+    def test_oidc_read_proof_rejects_wrong_identity_and_reports_status_only(self):
+        import io
+        from urllib.error import HTTPError
+        spec=importlib.util.spec_from_file_location('oidc_identity_reject',CLI);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        user='33333333-3333-3333-3333-333333333333'
+        class Response(io.BytesIO):
+            status=200
+            def __enter__(self):return self
+            def __exit__(self,*args):self.close()
+        class Opener:
+            def __init__(self,fail=False):self.fail=fail
+            def open(self,request,timeout):
+                if 'WhoAmI()' in request.full_url:return Response(json.dumps({'UserId':user}).encode())
+                if '/systemusers(' in request.full_url:return Response(b'{"applicationid":"22222222-2222-2222-2222-222222222222"}')
+                if self.fail:raise HTTPError(request.full_url,403,'sensitive-detail',None,None)
+                raise AssertionError('Unexpected request')
+        with patch.dict(os.environ,{'POWERSPEC_AZURE_CLIENT_ID':'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa'}),patch.object(module,'token_for',return_value='secret-token'),patch.object(module.urllib.request,'build_opener',return_value=Opener()):
+            with self.assertRaises(module.Hold) as error:module.oidc_identity_check('https://synthetic.crm.dynamics.com','1.2.3.4')
+            self.assertNotIn(user,str(error.exception));self.assertNotIn('secret-token',str(error.exception))
+        with patch.dict(os.environ,{'POWERSPEC_AZURE_CLIENT_ID':'22222222-2222-2222-2222-222222222222'}),patch.object(module,'token_for',return_value='secret-token'),patch.object(module.urllib.request,'build_opener',return_value=Opener(True)):
+            with self.assertRaises(module.Hold) as error:module.oidc_identity_check('https://synthetic.crm.dynamics.com','1.2.3.4')
+            self.assertIn('file uploads HTTP 403',str(error.exception));self.assertNotIn('sensitive-detail',str(error.exception));self.assertNotIn(user,str(error.exception))
+
+    def test_oidc_read_proof_rejects_bad_shape_and_version_drift(self):
+        import io
+        spec=importlib.util.spec_from_file_location('oidc_shape_test',CLI);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        class Response(io.BytesIO):
+            status=200
+            def __enter__(self):return self
+            def __exit__(self,*args):self.close()
+        class Opener:
+            def __init__(self,bad):self.bad=bad
+            def open(self,request,timeout):
+                url=request.full_url
+                if 'WhoAmI()' in url:body={'UserId':'33333333-3333-3333-3333-333333333333'}
+                elif '/systemusers(' in url:body={'applicationid':'22222222-2222-2222-2222-222222222222'}
+                elif 'EntityDefinitions(' in url:body={'LogicalName':'customcontrol','PrimaryIdAttribute':'customcontrolid'}
+                elif 'RetrieveVersion()' in url:body={'Version':'1.2.3.5'}
+                else:body={'value':{} if self.bad else []}
+                return Response(json.dumps(body).encode())
+        settings={'POWERSPEC_AZURE_CLIENT_ID':'22222222-2222-2222-2222-222222222222'}
+        for bad,phrase in ((True,'invalid file uploads'),(False,'version changed')):
+            with self.subTest(bad=bad),patch.dict(os.environ,settings),patch.object(module,'token_for',return_value='x'),patch.object(module.urllib.request,'build_opener',return_value=Opener(bad)):
+                with self.assertRaises(module.Hold) as error:module.oidc_identity_check('https://synthetic.crm.dynamics.com','1.2.3.4')
+                self.assertIn(phrase,str(error.exception))
+
+    def test_auth_check_does_not_clone_producer_or_inspect_tags(self):
+        import contextlib,io
+        spec=importlib.util.spec_from_file_location('oidc_main_test',CLI);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        self.config.write_text(json.dumps({'schemaVersion':1,'producerRepository':'AdamCoulterOz/PowerSpec','profile':'synthetic'}))
+        class Result:
+            def __init__(self,out):self.stdout=out
+        def git(args,**kwargs):
+            if args[:2]==['git','status']:return Result('')
+            if args[:2]==['git','branch']:return Result('main')
+            raise AssertionError('Unexpected command')
+        env={'SENTINEL_URL':'https://synthetic.crm.dynamics.com','POWERSPEC_AUTH_MODE':'github-oidc'}
+        argv=[str(CLI),'--config',str(self.config),'--workdir',str(self.work),'--mode','auth-check']
+        output=io.StringIO()
+        with patch.dict(os.environ,env,clear=True),patch.object(sys,'argv',argv),patch.object(module,'execute',side_effect=git),patch.object(module,'sentinel',return_value='1.2.3.4'),patch.object(module,'oidc_identity_check') as identity,patch.object(module,'existing_tag',side_effect=AssertionError('Unexpected tag check')),patch.object(module,'clone_producer',side_effect=AssertionError('Unexpected clone')),contextlib.redirect_stdout(output):
+            self.assertEqual(module.main(),0)
+        identity.assert_called_once_with(env['SENTINEL_URL'],'1.2.3.4');self.assertIn('application identity matched',output.getvalue())
+
+    def test_manifest_indexed_diff_and_tampered_prior(self):
+        spec=importlib.util.spec_from_file_location('diff_pipeline',CLI);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        def tree(name,entries):
+            root=self.root/name;root.mkdir();documents=[]
+            for path,data in entries.items():
+                target=root/path;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(data)
+                documents.append({'path':path,'sha256':hashlib.sha256(data).hexdigest()})
+            (root/'manifest.json').write_text(json.dumps({'schemaVersion':1,'documents':documents}))
+            return root
+        previous=tree('previous',{'stable.json':b'same','changed.json':b'old','removed.json':b'gone'})
+        current=tree('current',{'stable.json':b'same','changed.json':b'new','added.json':b'added'})
+        diff=module.snapshot_diff(previous,current,'synthetic','1.2.3.4')
+        self.assertEqual([x['path'] for x in diff['added']],['added.json'])
+        self.assertEqual([x['path'] for x in diff['removed']],['removed.json'])
+        self.assertEqual([x['path'] for x in diff['changed']],['changed.json'])
+        self.assertEqual(diff['changed'][0]['oldSha256'],hashlib.sha256(b'old').hexdigest())
+        self.assertEqual(diff['changed'][0]['newSha256'],hashlib.sha256(b'new').hexdigest())
+        self.assertNotEqual(diff['previousPublicSubtreeSha256'],diff['currentPublicSubtreeSha256'])
+        empty=module.snapshot_diff(None,current,'synthetic','1.2.3.4');self.assertIsNone(empty['previousPublicSubtreeSha256']);self.assertEqual(len(empty['added']),3)
+        same=module.snapshot_diff(current,current,'synthetic','1.2.3.4');self.assertEqual((same['added'],same['removed'],same['changed']),([],[],[]))
+        (previous/'removed.json').write_bytes(b'tampered')
+        with self.assertRaises(module.Hold):module.snapshot_diff(previous,current,'synthetic','1.2.3.4')
+
+    def test_diff_rejects_unsafe_prior_manifest_and_symlink(self):
+        spec=importlib.util.spec_from_file_location('diff_safety',CLI);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        old=self.root/'old';old.mkdir();new=self.root/'new';new.mkdir()
+        (new/'manifest.json').write_text('{"schemaVersion":1,"documents":[]}')
+        (old/'manifest.json').write_text(json.dumps({'schemaVersion':1,'documents':[{'path':'../secret','sha256':'0'*64}]}))
+        with self.assertRaises(module.Hold):module.snapshot_diff(old,new,'synthetic','1.2.3.4')
+        (old/'manifest.json').write_text('{"schemaVersion":1,"documents":[]}');(old/'link').symlink_to('/etc/hosts')
+        with self.assertRaises(module.Hold):module.snapshot_diff(old,new,'synthetic','1.2.3.4')
 
     def test_help_does_not_invoke_azure_or_producer(self):
         result = subprocess.run([sys.executable, str(CLI), '--help'], capture_output=True, text=True, env=self.env)
@@ -81,10 +259,11 @@ class PublicationFixture(unittest.TestCase):
         (cli.parent/'platform_component_types.py').write_text('# synthetic fixture\n')
         (cli.parent/'handler-registry.json').write_text(json.dumps({'schemaVersion':2,'registrations':[{'typeIdentity':'platform:1','stage':'export','status':'supported','verification':{'status':'passed','tests':['fixture']}}]}))
         (cli.parent/'export-identity-rules.json').write_text(json.dumps({'schemaVersion':1,'rules':[{'typeIdentity':'platform:1','status':'qualified','snapshotFamily':'family','verification':{'status':'passed','tests':['fixture']}}]}))
+        (cli.parent/'public-projection-policy.json').write_text(json.dumps({'publicationApproved': True}))
         self.git(self.producer, 'add', '.'); self.git(self.producer, 'commit', '-m', 'synthetic producer')
         self.producer_sha = self.git(self.producer, 'rev-parse', 'HEAD').stdout.strip()
         policy={'policyVersion': 1, 'portableFamilies': ['family']}
-        self.policy_sha=hashlib.sha256((json.dumps(policy,sort_keys=True,separators=(',',':'))+'\n').encode()).hexdigest()
+        self.policy_sha=hashlib.sha256((cli.parent/'public-projection-policy.json').read_bytes()).hexdigest()
         self.config=self.root/'config.json';self.config.write_text(json.dumps({'schemaVersion':1,'producerRepository':'AdamCoulterOz/PowerSpec','producerCommit':self.producer_sha,'profile':'synthetic','approvedPolicySha256':self.policy_sha, **policy}))
         self.work=self.root/'private';self.work.mkdir()
         bindir=self.root/'bin';bindir.mkdir();az=bindir/'az';az.write_text("#!/bin/sh\nprintf called >> \"$TEST_AZ_CALLS\"\nprintf '%s' '{\"accessToken\":\"synthetic\"}'\n");az.chmod(0o755)
@@ -101,7 +280,8 @@ class PublicationFixture(unittest.TestCase):
         self.assertEqual(self.git(self.repo,'cat-file','-t','service/1.2.3.4').stdout.strip(),'tag')
         head=self.git(self.repo,'rev-parse','HEAD').stdout
         self.assertTrue((self.repo/'versions/synthetic/1.2.3.4.json').is_file())
-        self.assertEqual((self.root/'actions').read_text().splitlines(), ['discover','inventory','identity-coverage','capture','normalize','identity-coverage'])
+        delta=json.loads((self.repo/'diffs/synthetic/1.2.3.4.json').read_text());self.assertIsNone(delta['previousPublicSubtreeSha256']);self.assertEqual([x['path'] for x in delta['added']],['family/one.json'])
+        self.assertEqual((self.root/'actions').read_text().splitlines(), ['acquire-baseline','finalize-publication'])
         self.assertNotIn('SYNTHETIC_PRIVATE_CAPTURE_PAYLOAD', result.stdout + result.stderr)
         files = self.git(self.repo,'ls-files').stdout
         self.assertNotIn('raw-private.txt', files)
@@ -110,7 +290,7 @@ class PublicationFixture(unittest.TestCase):
         result=self.run_cli();self.assertEqual(result.returncode,0,result.stdout+result.stderr)
         self.assertEqual(self.git(self.repo,'rev-parse','HEAD').stdout,head)
     def test_unqualified_cases_hold_without_publication(self):
-        for mode in ('capture-partial','no-attestation','attestation','hash','escape','symlink','forged-inventory','forged-identity','forged-reference','missing-reference-proof'):
+        for mode in ('capture-partial','no-attestation','attestation','hash','escape','symlink','unknown-scope','partial-gate','secretpath'):
             with self.subTest(mode=mode):
                 self.env['TEST_MODE']=mode
                 result=self.run_cli();self.assertEqual(result.returncode,2,result.stdout+result.stderr)
@@ -174,30 +354,6 @@ class PublicationFixture(unittest.TestCase):
         self.assertEqual((self.root/'actions').read_text().splitlines(), ['discover','inventory','identity-coverage'])
         self.assertEqual(self.tags(),'')
 
-    def test_partial_handler_is_reported_but_cannot_start_capture(self):
-        registry=self.producer/'tools/PowerSpec.Baseline/handler-registry.json'
-        data=json.loads(registry.read_text());data['registrations'][0]['status']='partial';registry.write_text(json.dumps(data))
-        self.git(self.producer,'add','.');self.git(self.producer,'commit','-m','partial handler')
-        self.producer_sha=self.git(self.producer,'rev-parse','HEAD').stdout.strip()
-        config=json.loads(self.config.read_text());config['producerCommit']=self.producer_sha;self.config.write_text(json.dumps(config));self.env['TEST_PRODUCER_SHA']=self.producer_sha
-        diagnostic=self.run_cli('diagnose');self.assertEqual(diagnostic.returncode,0,diagnostic.stdout+diagnostic.stderr)
-        self.assertIn('partial=1',diagnostic.stdout)
-        (self.root/'actions').unlink()
-        result=self.run_cli('run');self.assertEqual(result.returncode,2,result.stdout+result.stderr)
-        self.assertEqual((self.root/'actions').read_text().splitlines(), ['discover','inventory','identity-coverage'])
-        self.assertEqual(self.tags(),'')
-
-    def test_unqualified_identity_rules_hold_before_capture(self):
-        rules=self.producer/'tools/PowerSpec.Baseline/export-identity-rules.json'
-        data=json.loads(rules.read_text());data['rules'][0]['status']='partial';rules.write_text(json.dumps(data))
-        self.git(self.producer,'add','.');self.git(self.producer,'commit','-m','partial identity')
-        self.producer_sha=self.git(self.producer,'rev-parse','HEAD').stdout.strip()
-        config=json.loads(self.config.read_text());config['producerCommit']=self.producer_sha;self.config.write_text(json.dumps(config));self.env['TEST_PRODUCER_SHA']=self.producer_sha
-        result=self.run_cli('run');self.assertEqual(result.returncode,2,result.stdout+result.stderr)
-        self.assertIn('Identity or reference rules',result.stderr)
-        self.assertEqual((self.root/'actions').read_text().splitlines(), ['discover','inventory','identity-coverage'])
-        self.assertEqual(self.tags(),'')
-
     def test_existing_tag_does_not_skip_diagnose(self):
         self.git(self.repo,'tag','-a','service/1.2.3.4','-m','{}')
         self.git(self.repo,'push','origin','refs/tags/service/1.2.3.4')
@@ -220,7 +376,7 @@ class PublicationFixture(unittest.TestCase):
         self.config.write_text(json.dumps(config))
         result=self.run_cli();self.assertEqual(result.returncode,2,result.stdout+result.stderr)
         self.assertIn('1.2.3.4',result.stdout)
-        self.assertEqual((self.root/'actions').read_text().splitlines(), ['discover','inventory','identity-coverage']);self.assertEqual(self.tags(),'')
+        self.assertFalse((self.root/'actions').exists());self.assertEqual(self.tags(),'')
 
     def test_atomic_push_rejection_does_not_publish_branch_or_tag(self):
         before = self.git(self.repo,'ls-remote','--heads','origin').stdout
@@ -244,6 +400,7 @@ class PublicationFixture(unittest.TestCase):
         self.env['TEST_SENTINEL_VERSIONS']='1.2.3.5';self.env['TEST_VERSION']='1.2.3.5'
         second=self.run_cli();self.assertEqual(second.returncode,0,second.stdout+second.stderr)
         self.assertIn('refs/tags/service/1.2.3.5',self.tags());self.assertTrue((self.repo/'versions/synthetic/1.2.3.5.json').is_file())
+        delta=json.loads((self.repo/'diffs/synthetic/1.2.3.5.json').read_text());self.assertEqual((delta['added'],delta['removed'],delta['changed']),([],[],[]));self.assertEqual(delta['previousPublicSubtreeSha256'],delta['currentPublicSubtreeSha256'])
 
 
 if __name__ == '__main__':

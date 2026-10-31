@@ -25,3 +25,10 @@
   live diagnostic and publication qualification remain separate steps.
 
 - Deployed classification version 2 verification with the pinned private producer. [Diagnostic run 41216628995](https://github.com/AdamCoulterOz/PowerBaseSnapshots/actions/runs/41216628995) on the dedicated reference target reported 120 in-use types, zero unresolved or ambiguous; export had 12 partial and zero supported, identity had 10 partial and 110 unregistered. Reference completeness was not evaluated; publication was not attempted. [Offline CI 41216624708](https://github.com/AdamCoulterOz/PowerBaseSnapshots/actions/runs/41216624708) passed 24 tests.
+
+## 2026-11-01 — raw baseline contract
+
+- Replaced the obsolete pre-capture export/identity and reference-closure publication model with pinned producer acquisition, coverage-v2 and sanitized public-subtree finalizer attestation. Diagnostics remain informational. Exact policy approval and a producer finalizer remain prerequisites; offline fixtures are not live qualification.
+
+- Prepared fresh GitHub OIDC token acquisition for public-controller polls and producer execution using the existing workload identity; validation is offline only and deployment is pending.
+- Restored deterministic manifest-indexed public diffs with prior/current subtree hashes; unsafe or inconsistent prior content holds publication.

@@ -39,12 +39,67 @@ def execute(args, cwd=None, env=None, allowed=(0,), phase=None):
 def load(path):
     def reject_constant(value):
         raise ValueError('Nonfinite JSON number')
-    return json.loads(Path(path).read_text(encoding='utf-8'), parse_constant=reject_constant)
+    def unique_pairs(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result: raise ValueError('Duplicate JSON key')
+            result[key] = value
+        return result
+    return json.loads(Path(path).read_text(encoding='utf-8'), parse_constant=reject_constant, object_pairs_hook=unique_pairs)
 
 
 def version(value):
     if not isinstance(value, str) or not VERSION.fullmatch(value): raise Hold('Sentinel version is not a numeric four-part version.')
     return value
+
+
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *args, **kwargs): raise Hold('Authentication or sentinel redirect rejected.')
+
+
+def token_for(base):
+    mode = os.environ.get('POWERSPEC_AUTH_MODE', 'cli')
+    if mode == 'cli':
+        data = execute(['az', 'account', 'get-access-token', '--resource', base, '--output', 'json'])
+        token = json.loads(data.stdout).get('accessToken')
+    elif mode == 'github-oidc':
+        tenant=os.environ.get('POWERSPEC_AZURE_TENANT_ID','')
+        client=os.environ.get('POWERSPEC_AZURE_CLIENT_ID','')
+        request_url=os.environ.get('ACTIONS_ID_TOKEN_REQUEST_URL','')
+        bearer=os.environ.get('ACTIONS_ID_TOKEN_REQUEST_TOKEN','')
+        guid=r'[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}'
+        if not re.fullmatch(guid,tenant) or not re.fullmatch(guid,client) or not bearer:
+            raise Hold('GitHub OIDC configuration unavailable.')
+        url=urllib.parse.urlsplit(request_url)
+        query=urllib.parse.parse_qsl(url.query,keep_blank_values=True)
+        if (url.scheme!='https' or not url.hostname or not url.hostname.endswith('.actions.githubusercontent.com')
+                or url.netloc.lower()!=url.hostname.lower() or url.username or url.password or url.fragment
+                or not url.path.startswith('/') or any(key.lower()=='audience' for key,_ in query)):
+            raise Hold('Invalid GitHub OIDC endpoint.')
+        query.append(('audience','api://AzureADTokenExchange'))
+        assertion_url=urllib.parse.urlunsplit((url.scheme,url.netloc,url.path,urllib.parse.urlencode(query),''))
+        opener=urllib.request.build_opener(NoRedirect())
+        try:
+            req=urllib.request.Request(assertion_url,headers={'Authorization':'Bearer '+bearer,'Accept':'application/json'})
+            with opener.open(req,timeout=60) as response:
+                if response.status!=200:raise Hold('GitHub OIDC assertion request failed.')
+                assertion_data=json.load(response)
+            assertion=assertion_data.get('value') if isinstance(assertion_data,dict) else None
+            if not isinstance(assertion,str) or not assertion: raise Hold('GitHub OIDC assertion unavailable.')
+            form=urllib.parse.urlencode({'client_id':client,'scope':base+'/.default','grant_type':'client_credentials',
+                'client_assertion_type':'urn:ietf:params:oauth:client-assertion-type:jwt-bearer','client_assertion':assertion}).encode()
+            req=urllib.request.Request('https://login.microsoftonline.com/'+tenant+'/oauth2/v2.0/token',data=form,
+                    headers={'Content-Type':'application/x-www-form-urlencoded','Accept':'application/json'})
+            with opener.open(req,timeout=60) as response:
+                if response.status!=200:raise Hold('GitHub OIDC token exchange failed; details withheld.')
+                token_data=json.load(response)
+            token=token_data.get('access_token') if isinstance(token_data,dict) else None
+        except (OSError,ValueError,TypeError,urllib.error.HTTPError):
+            raise Hold('GitHub OIDC token exchange failed; details withheld.') from None
+    else:
+        raise Hold('Unsupported authentication mode.')
+    if not isinstance(token,str) or not token: raise Hold('Azure token unavailable.')
+    return token
 
 
 def sentinel(origin):
@@ -54,17 +109,58 @@ def sentinel(origin):
             or url.query or url.fragment or url.path not in ('', '/')):
         raise Hold('Invalid sentinel origin.')
     base = 'https://' + url.netloc
-    token_data = execute(['az', 'account', 'get-access-token', '--resource', base, '--output', 'json'])
-    token = json.loads(token_data.stdout).get('accessToken')
-    if not isinstance(token, str) or not token: raise Hold('Azure token unavailable.')
-    class NoRedirect(urllib.request.HTTPRedirectHandler):
-        def redirect_request(self, *args, **kwargs): raise Hold('Sentinel redirect rejected.')
-    request = urllib.request.Request(base + '/api/data/v9.2/RetrieveVersion()', headers={'Authorization': 'Bearer ' + token, 'Accept': 'application/json'})
-    try:
-        with urllib.request.build_opener(NoRedirect()).open(request, timeout=60) as response:
-            return version(json.load(response).get('Version'))
-    except (OSError, ValueError, urllib.error.HTTPError):
-        raise Hold('Sentinel version request failed.') from None
+    for attempt in range(2):
+        token = token_for(base)
+        request = urllib.request.Request(base + '/api/data/v9.2/RetrieveVersion()', headers={'Authorization': 'Bearer ' + token, 'Accept': 'application/json'})
+        try:
+            with urllib.request.build_opener(NoRedirect()).open(request, timeout=60) as response:
+                if response.status != 200:raise Hold('Sentinel version request failed.')
+                body=json.load(response)
+                return version(body.get('Version') if isinstance(body,dict) else None)
+        except urllib.error.HTTPError as exc:
+            status=exc.code;exc.close()
+            if status==401 and attempt==0:continue
+            raise Hold('Sentinel version request failed.') from None
+        except (OSError, ValueError, TypeError):
+            raise Hold('Sentinel version request failed.') from None
+
+
+def oidc_identity_check(origin, expected_version):
+    """Use a second OIDC token for a bounded, identity-bound read proof."""
+    base=origin.rstrip('/');token=token_for(base);opener=urllib.request.build_opener(NoRedirect())
+    def read(label,path):
+        request=urllib.request.Request(base+'/api/data/v9.2/'+path,headers={'Authorization':'Bearer '+token,'Accept':'application/json'})
+        try:
+            with opener.open(request,timeout=60) as response:
+                if response.status != 200:raise Hold(f'OIDC read proof failed: {label} HTTP {response.status}.')
+                body=json.load(response)
+        except urllib.error.HTTPError as exc:
+            status=exc.code;exc.close()
+            raise Hold(f'OIDC read proof failed: {label} HTTP {status}.') from None
+        except (OSError,ValueError,TypeError):
+            raise Hold(f'OIDC read proof failed: {label}; details withheld.') from None
+        if not isinstance(body,dict):raise Hold(f'OIDC read proof returned invalid {label} data.')
+        return body
+    ident=read('WhoAmI','WhoAmI()').get('UserId')
+    guid=r'[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}'
+    if not isinstance(ident,str) or not re.fullmatch(guid,ident):raise Hold('OIDC identity response invalid.')
+    application=read('system user','systemusers('+ident+')?$select=applicationid').get('applicationid')
+    expected=os.environ.get('POWERSPEC_AZURE_CLIENT_ID','')
+    if not isinstance(application,str) or not re.fullmatch(guid,application) or application.casefold()!=expected.casefold():
+        raise Hold('OIDC application identity did not match the configured client.')
+    probes=(('file uploads','msdyn_fileuploads?$select=msdyn_fileuploadid&$top=1','msdyn_fileuploadid'),
+            ('plugin steps','sdkmessageprocessingsteps?$select=sdkmessageprocessingstepid&$top=1','sdkmessageprocessingstepid'),
+            ('data sources','entitydatasources?$select=entitydatasourceid&$top=1','entitydatasourceid'))
+    for label,path,primary in probes:
+        rows=read(label,path).get('value')
+        if (not isinstance(rows,list) or len(rows)>1 or any(not isinstance(row,dict) or not isinstance(row.get(primary),str)
+                or not re.fullmatch(guid,row[primary]) for row in rows)):
+            raise Hold(f'OIDC read proof returned invalid {label} data.')
+    entity=read('custom control metadata',"EntityDefinitions(LogicalName='customcontrol')?$select=LogicalName,PrimaryIdAttribute")
+    if entity.get('LogicalName')!='customcontrol' or not isinstance(entity.get('PrimaryIdAttribute'),str) or not entity['PrimaryIdAttribute']:
+        raise Hold('OIDC read proof returned invalid custom control metadata.')
+    after=version(read('final version','RetrieveVersion()').get('Version'))
+    if after!=expected_version:raise Hold('Sentinel version changed during OIDC read proof.')
 
 
 def config(path):
@@ -74,14 +170,15 @@ def config(path):
     return c
 
 
-def qualify(c):
-    if not SHA.fullmatch(c.get('producerCommit') or '') or not SHA256.fullmatch(c.get('approvedPolicySha256') or '') or not c.get('portableFamilies'):
-        raise Hold('Producer revision and approved portable publication policy are not configured.')
-    policy = {k:c[k] for k in ('policyVersion', 'portableFamilies')}
-    if hashlib.sha256(canonical(policy)).hexdigest() != c['approvedPolicySha256']:
-        raise Hold('Approved policy hash does not match the configured policy.')
-    if not isinstance(c['portableFamilies'], list) or len(set(c['portableFamilies'])) != len(c['portableFamilies']) or not all(isinstance(f, str) and f for f in c['portableFamilies']):
-        raise Hold('Invalid portable family policy.')
+def qualify(c, producer):
+    if not SHA.fullmatch(c.get('producerCommit') or '') or not SHA256.fullmatch(c.get('approvedPolicySha256') or ''):
+        raise Hold('Producer revision and approved publication policy are not configured.')
+    policy = producer / 'tools/PowerSpec.Baseline/public-projection-policy.json'
+    if _safe_digest(producer, 'tools/PowerSpec.Baseline/public-projection-policy.json') != c['approvedPolicySha256']:
+        raise Hold('Producer policy differs from approved policy.')
+    data = load(policy)
+    if data.get('publicationApproved') is not True:
+        raise Hold('Producer policy is not approved.')
 
 
 def canonical(value):
@@ -102,73 +199,65 @@ def tree_hash(root):
     return hashlib.sha256(canonical(files)).hexdigest(), files
 
 
-def verify_capture(root, c, v):
-    root = Path(root)
-    manifest = load(root / 'capture.json')
-    if (manifest.get('schemaVersion') != 1 or manifest.get('profile') != c['profile']
-            or manifest.get('status') != 'complete' or manifest.get('fullConfigurationComplete') is not True
-            or manifest.get('organizationVersion') != v):
-        raise Hold('Capture profile, completeness or version is invalid.')
-    consistency = manifest.get('inventoryConsistency', {})
-    if consistency.get('solutionsMatch') is not True or consistency.get('organizationVersionMatch') is not True:
-        raise Hold('Capture consistency check failed.')
-    sources = manifest.get('sources')
-    if not isinstance(sources, list): raise Hold('Capture source evidence is missing.')
-    for source_name in ('organization-version-before', 'organization-version-after'):
-        matching = [item for item in sources if item.get('name') == source_name]
-        if len(matching) != 1 or matching[0].get('status') != 'complete' or len(matching[0].get('pages', [])) != 1:
-            raise Hold('Capture version evidence is incomplete.')
-        page = matching[0]['pages'][0]; relative = page.get('path')
-        if not isinstance(relative, str) or '\\' in relative:
-            raise Hold('Unsafe capture version evidence path.')
-        parts = PurePosixPath(relative).parts
-        if not parts or PurePosixPath(relative).is_absolute() or any(p in ('', '.', '..') for p in parts):
-            raise Hold('Unsafe capture version evidence path.')
-        path = root
-        for part in parts:
-            path = path / part
-            if path.is_symlink(): raise Hold('Capture version evidence symlink rejected.')
-        data = path.read_bytes()
-        if hashlib.sha256(data).hexdigest() != page.get('sha256') or json.loads(data).get('Version') != v:
-            raise Hold('Capture version evidence does not match sentinel.')
+REQUIRED_GATES = ('configurationSource', 'representationIdentity', 'normalizationLossAccounting',
+                  'publicFieldPolicy', 'reproducibility')
 
-def verify_snapshot(root, c, v, attestation, qualification):
-    root = Path(root)
-    manifest, coverage = load(root/'manifest.json'), load(root/'coverage.json')
-    if manifest.get('schemaVersion') != 1 or manifest.get('profile') != c['profile'] or manifest.get('organizationVersion') != v:
-        raise Hold('Snapshot profile or version mismatch.')
-    if manifest.get('complete') is not True or coverage.get('complete') is not True:
-        raise Hold('Snapshot coverage is incomplete.')
-    if not coverage.get('componentTypes') or any(item.get('complete') is not True for item in coverage['componentTypes']):
-        raise Hold('One or more component families are incomplete.')
-    if not coverage.get('sources') or any(source.get('status') != 'complete' for source in coverage['sources']):
-        raise Hold('One or more captured sources are incomplete.')
-    consistency = coverage.get('inventoryConsistency', {})
-    if consistency.get('solutionsMatch') is not True or consistency.get('organizationVersionMatch') is not True or coverage.get('scopeTruncated') is not False:
-        raise Hold('Snapshot consistency or scope check failed.')
-    seen = set()
-    for doc in manifest.get('documents', []):
-        rel = doc.get('path'); family = doc.get('family')
-        if family not in c['portableFamilies'] or not isinstance(rel, str) or '\\' in rel: raise Hold('Document family or path is not approved.')
-        parts = PurePosixPath(rel).parts
-        if not parts or PurePosixPath(rel).is_absolute() or any(p in ('', '.', '..') for p in parts) or rel.casefold() in seen: raise Hold('Unsafe or duplicate document path.')
-        seen.add(rel.casefold()); path = root
-        for part in parts:
-            path = path / part
-            if path.is_symlink(): raise Hold('Document symlink rejected.')
-        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != doc.get('sha256'): raise Hold('Document hash check failed.')
+
+def public_index(root):
     digest, files = tree_hash(root)
-    actual = {x['path'].casefold() for x in files}
-    if actual != seen | {'manifest.json', 'coverage.json', 'provenance.json'}:
-        raise Hold('Snapshot contains missing or unexpected files.')
-    expected = {'schemaVersion': 1, 'snapshotSha256': digest, 'profile': c['profile'], 'producerCommit': c['producerCommit'],
-                'policySha256': c['approvedPolicySha256'], 'sourceVersionBefore': v, 'sourceVersionAfter': v,
-                'familyCoverage': 'complete', 'portability': 'qualified', 'provenance': 'qualified', 'publicSafety': 'qualified',
-                'discoverySha256': qualification['discoverySha256'], 'inventorySha256': qualification['inventorySha256'],
-                'identityCoverageSha256': qualification['identityCoverageSha256'], 'referenceClosure': 'qualified'}
-    if attestation != expected: raise Hold('Publication attestation missing or does not match approved facts.')
+    for item in files:
+        path = item['path']
+        if ('\\' in path or path.startswith('/') or any(part in ('', '.', '..') for part in path.split('/'))):
+            raise Hold('Unsafe public path.')
+    names = [item['path'].casefold() for item in files]
+    if len(names) != len(set(names)): raise Hold('Duplicate public paths.')
+    manifest = _safe_json(root, 'manifest.json')
+    if set(manifest) != {'schemaVersion', 'documents'} or manifest['schemaVersion'] != 1 or not isinstance(manifest['documents'], list):
+        raise Hold('Invalid public manifest.')
+    index = {}
+    for doc in manifest['documents']:
+        if not isinstance(doc, dict) or set(doc) != {'path', 'sha256'}:
+            raise Hold('Invalid public manifest entry.')
+        path = doc['path']
+        if not isinstance(path, str) or not path or '\\' in path or path.startswith('/') or any(part in ('', '.', '..') for part in path.split('/')) or path.casefold() in index or path.casefold() == 'manifest.json':
+            raise Hold('Unsafe public manifest path.')
+        index[path.casefold()] = (path, doc['sha256'])
+    actual = {item['path'].casefold(): (item['path'], item['sha256']) for item in files if item['path'] != 'manifest.json'}
+    if index != actual: raise Hold('Public manifest does not match subtree.')
+    return digest, files, {value[0]:value[1] for value in index.values()}
+
+
+def verify_publication(root, c, v, attestation):
+    digest, files, _ = public_index(root)
+    expected = {'schemaVersion': 1, 'kind': 'raw-baseline-publication-attestation-v1',
+                'producerCommit': c['producerCommit'], 'policySha256': c['approvedPolicySha256'],
+                'profile': c['profile'], 'sourceVersionBefore': v, 'sourceVersionAfter': v,
+                'inventoryConsistency': 'matched-non-atomic', 'coverageSchemaVersion': 2,
+                'coverageComplete': True, 'requiredGateResults': {key: True for key in REQUIRED_GATES},
+                'scopeUnresolvedMembershipRows': 0, 'publicSubtreeSha256': digest, 'publicFiles': files}
+    if (attestation != expected or type(attestation.get('schemaVersion')) is not int
+            or type(attestation.get('coverageSchemaVersion')) is not int
+            or type(attestation.get('scopeUnresolvedMembershipRows')) is not int
+            or any(type(item.get('bytes')) is not int for item in attestation.get('publicFiles', []) if isinstance(item, dict))
+            or attestation.get('coverageComplete') is not True
+            or any(attestation.get('requiredGateResults', {}).get(k) is not True for k in REQUIRED_GATES)):
+        raise Hold('Publication attestation missing or does not match approved facts.')
     return digest
 
+
+def snapshot_diff(previous, current, profile, service_version):
+    current_hash, _, current_docs = public_index(current)
+    if previous is None:
+        prior_hash, prior_docs = None, {}
+    else:
+        prior_hash, _, prior_docs = public_index(previous)
+    added=[{'path':path,'newSha256':current_docs[path]} for path in sorted(current_docs.keys()-prior_docs.keys())]
+    removed=[{'path':path,'oldSha256':prior_docs[path]} for path in sorted(prior_docs.keys()-current_docs.keys())]
+    changed=[{'path':path,'oldSha256':prior_docs[path],'newSha256':current_docs[path]}
+             for path in sorted(prior_docs.keys() & current_docs.keys()) if prior_docs[path]!=current_docs[path]]
+    return {'schemaVersion':1,'profile':profile,'serviceVersion':service_version,
+            'previousPublicSubtreeSha256':prior_hash,'currentPublicSubtreeSha256':current_hash,
+            'added':added,'removed':removed,'changed':changed}
 
 def _safe_digest(root, relative):
     if not isinstance(relative, str) or not relative or "\\" in relative:
@@ -442,7 +531,9 @@ def existing_tag(repo, tag, c, v):
                 tar.extractall(Path(tmp) / 'contents', filter='data')
         except (tarfile.TarError, OSError):
             raise Hold('Existing tagged baseline is unsafe.') from None
-        digest, _ = tree_hash(Path(tmp) / 'contents' / 'baselines' / c['profile'])
+        raw_attestation = execute(['git', 'show', f'{commit}:versions/{c["profile"]}/{v}.attestation.json'], cwd=repo).stdout
+        attestation_file = Path(tmp) / 'attestation.json'; attestation_file.write_text(raw_attestation)
+        digest = verify_publication(Path(tmp) / 'contents' / 'baselines' / c['profile'], c, v, load(attestation_file))
         if digest != evidence['snapshotSha256']: raise Hold('Existing tagged baseline content does not match evidence.')
     return True
 
@@ -460,6 +551,7 @@ def clone_producer(c, directory):
     print('Stage: producer checkout.', flush=True)
     execute(['git', 'checkout', '--detach', c['producerCommit']], cwd=target, env=env, phase='Producer checkout')
     if execute(['git', 'rev-parse', 'HEAD'], cwd=target, phase='Producer revision check').stdout.strip() != c['producerCommit']: raise Hold('Producer revision mismatch.')
+    if execute(['git', 'status', '--porcelain'], cwd=target).stdout.strip(): raise Hold('Producer checkout is not clean.')
     keyfile.unlink()
     return target
 
@@ -488,15 +580,20 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', default='pipeline/config.json'); parser.add_argument('--workdir', required=True)
     parser.add_argument('--producer', help='Optional clean, pinned local producer checkout')
-    parser.add_argument('--mode', choices=['check','run','diagnose'], default='run')
+    parser.add_argument('--mode', choices=['check','run','diagnose','auth-check'], default='run')
     args = parser.parse_args(); repo = Path.cwd(); c = config(args.config)
     origin = os.environ.get('SENTINEL_URL', '')
     if not origin: raise Hold('Sentinel is not configured.')
     if execute(['git', 'status', '--porcelain'], cwd=repo).stdout.strip(): raise Hold('Working tree is not clean.')
     branch = execute(['git', 'branch', '--show-current'], cwd=repo).stdout.strip()
     if not branch: raise Hold('An attached publication branch is required.')
+    if args.mode == 'auth-check' and os.environ.get('POWERSPEC_AUTH_MODE') != 'github-oidc': raise Hold('Authentication check requires GitHub OIDC mode.')
     v = sentinel(origin); tag = 'service/' + v
     print('Observed service version: ' + v)
+    if args.mode == 'auth-check':
+        oidc_identity_check(origin,v)
+        print('OIDC read proof: two token exchanges; application identity matched; four capabilities passed; version bracket matched.')
+        return 0
     if args.mode != 'diagnose' and existing_tag(repo, tag, c, v): print('Already published and verified.'); return 0
     if args.mode == 'check': print('New sentinel version; publication is not yet established.'); return 0
     if not SHA.fullmatch(c.get('producerCommit') or ''): raise Hold('Producer revision is not configured.')
@@ -511,99 +608,74 @@ def main():
         else:
             producer = clone_producer(c, private)
         cli = producer/'tools/PowerSpec.Baseline/baseline.py'
-        discovery = private/'discovery'; inventory = private/'inventory'; preliminary = private/'identity-preflight'
-        capture = private/'capture'; snapshot = private/'snapshot'; identity = private/'identity'
-        print('Stage: discovery.', flush=True)
-        discovery_status = execute([sys.executable, str(cli), 'discover', '--environment', origin, '--profile', c['profile'], '--output', str(discovery)], allowed=(0,1,2), phase='Discovery')
-        if discovery_status.returncode != 0: report_discovery_failures(discovery)
-        if discovery_status.returncode == 1: raise Hold('Discovery failed (exit 1); sensitive output withheld.')
-        print('Stage: inventory.', flush=True)
-        inventory_status = execute([sys.executable, str(cli), 'inventory', '--input', str(discovery), '--output', str(inventory), '--require-stage', 'export'], allowed=(0,2), phase='Inventory')
-        inventory_report, counts, export_ready = verify_inventory(discovery, inventory, producer, c, v)
-        print('Stage: identity preflight.', flush=True)
-        coverage_status = execute([sys.executable, str(cli), 'identity-coverage', '--discovery', str(discovery), '--output', str(preliminary)], allowed=(0,2), phase='Identity preflight')
-        pre_report, rule_counts, unresolved_refs, reference_counts = verify_identity(discovery, inventory_report, preliminary, producer, c, v)
-        _safe_summary({**counts, 'identityMissing': rule_counts['unregistered'], 'identityPartial': rule_counts['partial'],
-                       'identityAmbiguous': rule_counts['ambiguous'], **reference_counts})
-        if sentinel(origin) != v: raise Hold('Sentinel version changed during discovery.')
-        if args.mode == 'diagnose':
-            if discovery_status.returncode != 0 or not inventory_report['discoveryComplete'] or coverage_status.returncode != 0:
-                raise Hold('Discovery diagnostics are incomplete.')
-            print('Diagnostic inventory produced; publication was not attempted.')
-            return 0
-        if discovery_status.returncode != 0 or inventory_status.returncode != 0 or coverage_status.returncode != 0 or not export_ready:
-            raise Hold('Discovery identity or export coverage is incomplete.')
-        # Informational coverage lacks snapshot data; use the pinned rule registry
-        # to distinguish rules awaiting data from rules which are themselves unqualified.
-        rules = _safe_json(producer, 'tools/PowerSpec.Baseline/export-identity-rules.json')
-        entries = rules.get('rules') if rules.get('schemaVersion') == 1 else None
-        if not isinstance(entries, list): raise Hold('Identity rule registry invalid.')
-        by_identity = {}
-        for item in entries:
-            if not isinstance(item, dict) or not isinstance(item.get('typeIdentity'), str) or item['typeIdentity'] in by_identity:
-                raise Hold('Identity rule registry invalid.')
-            by_identity[item['typeIdentity']] = item
-        for item in pre_report['types']:
-            if not item['inUse']: continue
-            rule = by_identity.get(item.get('catalogueKey'), {})
-            proof = rule.get('verification', {})
-            if (item.get('identityStatus') != 'resolved' or rule.get('status') != 'qualified'
-                    or not isinstance(proof, dict) or proof.get('status') != 'passed'
-                    or not isinstance(proof.get('tests'), list) or not proof['tests']):
-                raise Hold('Identity or reference rules are not qualified.')
-        if pre_report.get('rulesReady') is not True: raise Hold('Identity or reference rules are not qualified.')
-        qualify(c)
-        print('Stage: capture.', flush=True)
-        status = execute([sys.executable, str(cli), 'capture', '--environment', origin, '--profile', c['profile'], '--output', str(capture)], allowed=(0,2), phase='Capture')
-        if status.returncode != 0: raise Hold('Capture incomplete; publication withheld.')
-        verify_capture(capture, c, v)
-        print('Stage: normalization.', flush=True)
-        status = execute([sys.executable, str(cli), 'normalize', '--input', str(capture), '--output', str(snapshot)], allowed=(0,2), phase='Normalization')
-        if status.returncode != 0: raise Hold('Normalization incomplete; publication withheld.')
-        if sentinel(origin) != v: raise Hold('Sentinel version changed during capture.')
-        print('Stage: identity verification.', flush=True)
-        status = execute([sys.executable, str(cli), 'identity-coverage', '--discovery', str(discovery), '--snapshot', str(snapshot), '--output', str(identity), '--require-complete'], allowed=(0,2), phase='Identity verification')
-        identity_report, identity_counts, unresolved_refs, reference_counts = verify_identity(discovery, inventory_report, identity, producer, c, v, snapshot)
-        if (status.returncode != 0 or identity_report.get('complete') is not True or identity_counts['qualified'] != counts['inUse']
-                or identity_report.get('referenceEvidenceComplete') is not True
-                or identity_report.get('referenceCoverage', {}).get('snapshot', {}).get('status') != 'complete'
-                or unresolved_refs or identity_report.get('diagnostics') or identity_report.get('snapshot', {}).get('coverageComplete') is not True
-                or any(item.get('inUse') and (item.get('identityStatus') != 'resolved' or item.get('dataStatus') != 'observed' or not item.get('snapshotDocumentCount')) for item in identity_report['types'])):
-            raise Hold('Identity or reference coverage is incomplete.')
-        _safe_summary({**counts, 'identityMissing': identity_counts['unregistered'], 'identityPartial': identity_counts['partial'],
-                       'identityAmbiguous': identity_counts['ambiguous'], **reference_counts}, references_evaluated=True)
-        qualification = {'discoverySha256': _safe_digest(discovery, 'capture.json'),
-                         'inventorySha256': _safe_digest(inventory, 'inventory.json'),
-                         'identityCoverageSha256': _safe_digest(identity, 'identity-coverage.json')}
-        attestation_path = private/'attestation.json'
-        if not attestation_path.is_file(): raise Hold('Qualified publication attestation is unavailable.')
-        digest = verify_snapshot(snapshot, c, v, load(attestation_path), qualification)
-        prior = repo/'baselines'/c['profile']; delta = private/'diff'
-        if prior.exists():
-            status = execute([sys.executable, str(cli), 'diff', '--previous', str(prior), '--current', str(snapshot), '--output', str(delta)], allowed=(0,2))
-            if status.returncode != 0: raise Hold('Previous baseline diff is incomparable.')
+        if args.mode == 'run':
+            qualify(c, producer)
+            acquisition = private/'acquisition'; attestation_path = private/'publication-attestation.json'
+            print('Stage: baseline acquisition.', flush=True)
+            result = execute([sys.executable, str(cli), 'acquire-baseline', '--environment', origin,
+                              '--profile', c['profile'], '--output', str(acquisition)], allowed=(0,2), phase='Acquisition')
+            if result.returncode != 0: raise Hold('Baseline acquisition incomplete; publication withheld.')
+            print('Stage: publication finalization.', flush=True)
+            execute([sys.executable, str(cli), 'finalize-publication', '--acquisition', str(acquisition),
+                     '--producer-root', str(producer), '--producer-commit', c['producerCommit'],
+                     '--output', str(attestation_path)], phase='Finalization')
+            if sentinel(origin) != v: raise Hold('Sentinel version changed during capture.')
+            if not attestation_path.is_file() or attestation_path.is_symlink(): raise Hold('Qualified publication attestation is unavailable.')
+            snapshot = acquisition/'projection'/'public'
+            if any(path.is_symlink() for path in (acquisition, acquisition/'projection', snapshot)):
+                raise Hold('Public subtree ancestor is a symlink.')
+            if execute(['git', 'rev-parse', 'HEAD'], cwd=producer).stdout.strip() != c['producerCommit'] or execute(['git', 'status', '--porcelain'], cwd=producer).stdout.strip():
+                raise Hold('Producer changed during acquisition.')
+            qualify(c, producer)
+            digest = verify_publication(snapshot, c, v, load(attestation_path))
+        else:
+            discovery = private/'discovery'; inventory = private/'inventory'; preliminary = private/'identity-preflight'
+            capture = private/'capture'; snapshot = private/'snapshot'; identity = private/'identity'
+            print('Stage: discovery.', flush=True)
+            discovery_status = execute([sys.executable, str(cli), 'discover', '--environment', origin, '--profile', c['profile'], '--output', str(discovery)], allowed=(0,1,2), phase='Discovery')
+            if discovery_status.returncode != 0: report_discovery_failures(discovery)
+            if discovery_status.returncode == 1: raise Hold('Discovery failed (exit 1); sensitive output withheld.')
+            print('Stage: inventory.', flush=True)
+            inventory_status = execute([sys.executable, str(cli), 'inventory', '--input', str(discovery), '--output', str(inventory), '--require-stage', 'export'], allowed=(0,2), phase='Inventory')
+            inventory_report, counts, export_ready = verify_inventory(discovery, inventory, producer, c, v)
+            print('Stage: identity preflight.', flush=True)
+            coverage_status = execute([sys.executable, str(cli), 'identity-coverage', '--discovery', str(discovery), '--output', str(preliminary)], allowed=(0,2), phase='Identity preflight')
+            pre_report, rule_counts, unresolved_refs, reference_counts = verify_identity(discovery, inventory_report, preliminary, producer, c, v)
+            _safe_summary({**counts, 'identityMissing': rule_counts['unregistered'], 'identityPartial': rule_counts['partial'],
+                           'identityAmbiguous': rule_counts['ambiguous'], **reference_counts})
+            if sentinel(origin) != v: raise Hold('Sentinel version changed during discovery.')
+            if args.mode == 'diagnose':
+                if discovery_status.returncode != 0 or not inventory_report['discoveryComplete'] or coverage_status.returncode != 0:
+                    raise Hold('Discovery diagnostics are incomplete.')
+                print('Diagnostic inventory produced; publication was not attempted.')
+                return 0
+
+        prior = repo/'baselines'/c['profile']
         # Revalidate source state and publication head immediately before modifying the worktree.
         if sentinel(origin) != v: raise Hold('Sentinel version changed before publication.')
         head = execute(['git', 'rev-parse', 'HEAD'], cwd=repo).stdout.strip()
         remote = execute(['git', 'ls-remote', '--heads', 'origin', 'refs/heads/' + branch], cwd=repo).stdout.split()
         if not remote or remote[0] != head: raise Hold('Remote branch changed; retry with a fresh checkout.')
         if execute(['git', 'status', '--porcelain'], cwd=repo).stdout.strip(): raise Hold('Working tree changed during capture.')
-        diff_target = repo/'diffs'/c['profile']/v
         version_file = repo/'versions'/c['profile']/(v+'.json')
-        if diff_target.exists() or diff_target.is_symlink() or version_file.exists() or version_file.is_symlink():
+        attestation_file = version_file.with_name(v + '.attestation.json')
+        diff_file = repo/'diffs'/c['profile']/(v+'.json')
+        if version_file.exists() or version_file.is_symlink() or attestation_file.exists() or attestation_file.is_symlink() or diff_file.exists() or diff_file.is_symlink():
             raise Hold('Version output already exists without a verified tag.')
-        for parent in (repo/'baselines', repo/'diffs', repo/'versions', prior.parent, diff_target.parent, version_file.parent):
+        for parent in (repo/'baselines', repo/'versions', repo/'diffs', prior.parent, version_file.parent, diff_file.parent):
             if parent.is_symlink(): raise Hold('Publication path contains a symlink.')
         if prior.exists() and execute(['git', 'ls-files', '--others', '--ignored', '--exclude-standard', '--', str(prior.relative_to(repo))], cwd=repo).stdout.strip():
             raise Hold('Baseline contains ignored files; refusing replacement.')
         if prior.is_symlink(): raise Hold('Baseline symlink rejected.')
+        delta=snapshot_diff(prior if prior.exists() else None,snapshot,c['profile'],v)
+        if delta['currentPublicSubtreeSha256'] != digest: raise Hold('Public subtree changed after verification.')
         if prior.exists(): shutil.rmtree(prior)
         prior.parent.mkdir(parents=True, exist_ok=True); shutil.copytree(snapshot, prior)
-        if delta.exists(): diff_target.parent.mkdir(parents=True, exist_ok=True); shutil.copytree(delta, diff_target)
         evidence = {'profile':c['profile'], 'producerCommit':c['producerCommit'], 'policySha256':c['approvedPolicySha256'], 'serviceVersion':v, 'snapshotSha256':digest}
         version_file.parent.mkdir(parents=True, exist_ok=True); version_file.write_bytes(canonical(evidence))
-        allowed = [str(prior.relative_to(repo)), str(version_file.relative_to(repo))]
-        if delta.exists(): allowed.append(str(diff_target.relative_to(repo)))
+        attestation_file.write_bytes(canonical(load(attestation_path)))
+        diff_file.parent.mkdir(parents=True,exist_ok=True);diff_file.write_bytes(canonical(delta))
+        allowed = [str(prior.relative_to(repo)), str(version_file.relative_to(repo)), str(attestation_file.relative_to(repo)), str(diff_file.relative_to(repo))]
         execute(['git', 'add', '-A', '--', *allowed], cwd=repo)
         execute(['git', '-c', 'user.name=PowerBaseSnapshots automation', '-c', 'user.email=41898282+github-actions[bot]@users.noreply.github.com', 'commit', '-m', 'Capture service ' + v], cwd=repo)
         execute(['git', '-c', 'user.name=PowerBaseSnapshots automation', '-c', 'user.email=41898282+github-actions[bot]@users.noreply.github.com', 'tag', '-a', tag, '-m', canonical(evidence).decode()], cwd=repo)

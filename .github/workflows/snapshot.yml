@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: Sentinel check, diagnostic discovery, or attested capture
+        description: Sentinel check, diagnostic discovery, attested capture, or OIDC read proof
         type: choice
-        options: [check, diagnose, run]
+        options: [check, diagnose, run, auth-check]
         default: check
         required: true
   schedule:
@@ -27,15 +27,12 @@ jobs:
         with:
           ref: ${{ github.event.repository.default_branch }}
           fetch-depth: 0
-      - name: Authenticate to Azure
-        uses: azure/login@eec3c95657c1536435858eda1f3ff5437fee8474 # v2.3.0
-        with:
-          client-id: ${{ vars.AZURE_CLIENT_ID }}
-          tenant-id: ${{ vars.AZURE_TENANT_ID }}
-          allow-no-subscriptions: true
       - name: Check and capture sentinel
         env:
           SENTINEL_URL: ${{ secrets.SENTINEL_URL }}
+          POWERSPEC_AUTH_MODE: github-oidc
+          POWERSPEC_AZURE_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
+          POWERSPEC_AZURE_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
           PRODUCER_SSH_KEY: ${{ secrets.PRODUCER_SSH_KEY }}
           PIPELINE_MODE: ${{ inputs.mode || 'run' }}
         run: python3 pipeline/run.py --workdir "$RUNNER_TEMP" --mode "$PIPELINE_MODE"
