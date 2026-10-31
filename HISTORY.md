@@ -23,3 +23,5 @@
 - Prepared independent controller verification for classification version 2, including the
   nine reviewed SDK fallbacks and collision checks. Offline tests passed; the producer pin,
   live diagnostic and publication qualification remain separate steps.
+
+- Deployed classification version 2 verification with the pinned private producer. [Diagnostic run 41216628995](https://github.com/AdamCoulterOz/PowerBaseSnapshots/actions/runs/41216628995) on the dedicated reference target reported 120 in-use types, zero unresolved or ambiguous; export had 12 partial and zero supported, identity had 10 partial and 110 unregistered. Reference completeness was not evaluated; publication was not attempted. [Offline CI 41216624708](https://github.com/AdamCoulterOz/PowerBaseSnapshots/actions/runs/41216624708) passed 24 tests.

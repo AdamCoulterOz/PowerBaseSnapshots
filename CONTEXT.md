@@ -28,12 +28,15 @@ configured profile is `developerreference`. A read-only application user in that
 has one dedicated role with exactly 14 Global read privileges and no effective writes; an
 impersonated version query returned `9.2.26094.165`. The GitHub environment secret now points
 to that reference environment. The earlier live workflow evidence above pertains to the prior
-personal sentinel: no workflow has yet been run against the newly selected target. The reference
+personal sentinel. The reference
 environment contains an empty automatically created CDS Default Solution; this observation alone
 does not establish platform provenance or pristine configuration. Qualification remains blocked.
 
-The controller independently verifies classification version 2 and the nine
-reviewed SDK fallback identities; registered-type collisions remain ambiguous. This update
-has passed offline tests but has not yet been checked against the new sentinel.
-Identity classification alone does not qualify configuration coverage, reference closure,
-portability or publication.
+The controller independently verifies classification version 2 and the nine reviewed SDK
+fallback identities; registered-type collisions remain ambiguous. [Diagnostic run 41216628995](https://github.com/AdamCoulterOz/PowerBaseSnapshots/actions/runs/41216628995)
+completed on the reference target at service version `9.2.26094.165`: 120 in-use types,
+zero unresolved and zero ambiguous; export had 12 partial and zero supported, and identity
+had 10 partial and 110 unregistered. Reference completeness was not evaluated and publication
+was not attempted. [Offline CI 41216624708](https://github.com/AdamCoulterOz/PowerBaseSnapshots/actions/runs/41216624708)
+passed 24 tests. Identity classification does not qualify configuration coverage, reference
+closure, portability or publication.
