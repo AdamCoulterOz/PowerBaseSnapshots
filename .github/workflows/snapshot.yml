@@ -1,0 +1,41 @@
+name: Capture platform baseline
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Sentinel check or attested capture
+        type: choice
+        options: [check, run]
+        default: check
+        required: true
+  schedule:
+    - cron: '17 * * * *'
+permissions: {}
+concurrency:
+  group: platform-sentinel-baseline
+  cancel-in-progress: false
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    environment: sentinel
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - name: Checkout publication branch
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+      - name: Authenticate to Azure
+        uses: azure/login@eec3c95657c1536435858eda1f3ff5437fee8474 # v2.3.0
+        with:
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          allow-no-subscriptions: true
+      - name: Check and capture sentinel
+        env:
+          SENTINEL_URL: ${{ secrets.SENTINEL_URL }}
+          PRODUCER_SSH_KEY: ${{ secrets.PRODUCER_SSH_KEY }}
+          PIPELINE_MODE: ${{ inputs.mode || 'run' }}
+        run: python3 pipeline/run.py --workdir "$RUNNER_TEMP" --mode "$PIPELINE_MODE"
