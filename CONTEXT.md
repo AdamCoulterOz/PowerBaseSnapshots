@@ -22,3 +22,12 @@ producer clone/checkout, discovery, inventory and identity preflight ran against
 version `9.2.26094.166`. Among 126 in-use types, nine were unresolved and none ambiguous;
 identity rules were 115 unregistered and 11 partial, while export included 11 partial
 types. Reference completeness was not evaluated. The run did not attempt publication.
+
+The user selected the dedicated Developer reference environment as the new sentinel and the
+configured profile is `developerreference`. A read-only application user in that environment
+has one dedicated role with exactly 14 Global read privileges and no effective writes; an
+impersonated version query returned `9.2.26094.165`. The GitHub environment secret now points
+to that reference environment. The earlier live workflow evidence above pertains to the prior
+personal sentinel: no workflow has yet been run against the newly selected target. The reference
+environment contains an empty automatically created CDS Default Solution; this observation alone
+does not establish platform provenance or pristine configuration. Qualification remains blocked.

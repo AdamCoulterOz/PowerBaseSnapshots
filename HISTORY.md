@@ -11,3 +11,11 @@
 - Pinned the private producer distribution and verified its dedicated read-only SSH access. At that checkpoint Azure OIDC trust and the protected environment branch restriction were configured; Dataverse read authorization and runtime execution were pending. Ten offline pipeline tests, a targeted origin/policy case and 23 producer CLI tests passed.
 - Initially verified the application user had ten read privileges and no effective writes, and remote offline CI passed. A GitHub live check subsequently authenticated via OIDC and read service version `9.2.26094.166`; full capture and publication remain unverified; no Azure client secret or Azure RBAC role was added.
 - Corrected the federated subject to the observed immutable owner/repository-ID form after the initial OIDC failure, without broadening issuer, audience or branch trust. Scheduled publication remains held by unqualified policy.
+
+## 2026-11-01
+
+- Switched the sentinel secret to the user-selected dedicated Developer reference environment
+  and selected profile `developerreference`. Provisioned the existing application registration
+  with a dedicated role containing exactly 14 verified Global reads and no effective writes;
+  an impersonated version read returned `9.2.26094.165`. No workflow was run against this target
+  as part of the switch; publication qualification remains open.

@@ -23,3 +23,7 @@ HTTP 200. [Diagnostic run 41210320964](https://github.com/AdamCoulterOz/PowerBas
 discovery and identity preflight without attempting publication; it did not evaluate
 reference completeness. Raw configuration stays private, and the coordinator does not
 run a C# extraction stage.
+
+The selected sentinel profile is `developerreference`. The sentinel origin remains a protected
+environment secret; switching the target does not itself establish an accepted baseline, a
+verified release wave or complete platform coverage.
