@@ -13,6 +13,8 @@ parser=argparse.ArgumentParser(); parser.add_argument('action');parser.add_argum
 with open(os.environ['TEST_ACTIONS'],'a') as log: log.write(a.action + '\n')
 out=Path(a.output);out.mkdir();version=os.environ.get('TEST_VERSION','1.2.3.4');profile=os.environ.get('TEST_PROFILE','synthetic')
 if a.action=='discover':
+ if os.environ.get('TEST_MODE')=='discover-fail':
+  write(out/'capture.json',{'sources':[{'name':'dependency-endpoints','status':'failed','failure':{'httpStatus':403},'reason':'SYNTHETIC_SECRET_DETAIL'}]});sys.exit(1)
  catalogue={'types':[{'componentType':1,'inUse':True,'definitions':[],'optionLabels':[{'source':'component-options'}]}]}
  write(out/'type-catalogue.json',catalogue)
  partial=os.environ.get('TEST_MODE')=='partial-discovery'
@@ -26,6 +28,7 @@ elif a.action=='inventory':
  if os.environ.get('TEST_MODE')=='forged-inventory':report['types'][0]['handlers']['export']['status']='partial'
  if os.environ.get('TEST_MODE')=='forged-identity':report['types'][0]['typeIdentity']='entity:forged'
  write(out/'inventory.json',report);write(out/'provenance.json',{'captureSha256':sha((discovery/'capture.json').read_bytes()),'catalogueSha256':sha((discovery/'type-catalogue.json').read_bytes()),'registrySha256':sha(reg.read_bytes())})
+ if os.environ.get('TEST_MODE')=='inventory-fail':print('SYNTHETIC_SECRET_DETAIL',file=sys.stderr);sys.exit(37)
  if status!='supported' or os.environ.get('TEST_MODE')=='partial-discovery':sys.exit(2)
 elif a.action=='identity-coverage':
  discovery=Path(a.discovery);rules=Path(__file__).with_name('export-identity-rules.json');snap=Path(a.snapshot) if a.snapshot else None

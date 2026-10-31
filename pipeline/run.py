@@ -27,9 +27,11 @@ PROFILE = re.compile(r'^[a-z0-9][a-z0-9-]{0,63}$')
 class Hold(Exception): pass
 
 
-def execute(args, cwd=None, env=None, allowed=(0,)):
+def execute(args, cwd=None, env=None, allowed=(0,), phase=None):
     result = subprocess.run(args, cwd=cwd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     if result.returncode not in allowed:
+        if phase is not None:
+            raise Hold(f'{phase} failed (exit {result.returncode}); sensitive output withheld.')
         raise Hold('An external command failed; sensitive command output was withheld.')
     return result
 
@@ -425,16 +427,38 @@ def existing_tag(repo, tag, c, v):
 def clone_producer(c, directory):
     key = os.environ.get('PRODUCER_SSH_KEY', '')
     if not key: raise Hold('Read-only producer deploy key is unavailable.')
-    keyfile = Path(directory)/'deploy-key'; keyfile.write_text(key); keyfile.chmod(0o600)
+    keyfile = Path(directory)/'deploy-key'; keyfile.write_text(key if key.endswith('\n') else key + '\n'); keyfile.chmod(0o600)
     known_hosts = Path(directory)/'known_hosts'; known_hosts.write_text(GITHUB_HOST_KEY); known_hosts.chmod(0o600)
     env = os.environ.copy()
     env['GIT_SSH_COMMAND'] = f'ssh -i {shlex.quote(str(keyfile))} -o UserKnownHostsFile={shlex.quote(str(known_hosts))} -o GlobalKnownHostsFile=/dev/null -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes'
     target = Path(directory)/'producer'
-    execute(['git', 'clone', '--no-checkout', '--filter=blob:none', 'git@github.com:AdamCoulterOz/PowerSpec.git', str(target)], env=env)
-    execute(['git', 'checkout', '--detach', c['producerCommit']], cwd=target, env=env)
-    if execute(['git', 'rev-parse', 'HEAD'], cwd=target).stdout.strip() != c['producerCommit']: raise Hold('Producer revision mismatch.')
+    print('Stage: producer clone.', flush=True)
+    execute(['git', 'clone', '--no-checkout', '--filter=blob:none', 'git@github.com:AdamCoulterOz/PowerSpec.git', str(target)], env=env, phase='Producer clone')
+    print('Stage: producer checkout.', flush=True)
+    execute(['git', 'checkout', '--detach', c['producerCommit']], cwd=target, env=env, phase='Producer checkout')
+    if execute(['git', 'rev-parse', 'HEAD'], cwd=target, phase='Producer revision check').stdout.strip() != c['producerCommit']: raise Hold('Producer revision mismatch.')
     keyfile.unlink()
     return target
+
+
+def report_discovery_failures(discovery):
+    """Expose only recognized source names and numeric HTTP status, never response text."""
+    allowed = {'organization-version-before','organization-version-after','solutions-before','solutions-after',
+               'component-attribute','dependent-attribute','required-attribute',
+               'component-options','dependent-options','required-options','component-definitions',
+               'entity-definitions','solution-components','dependency-endpoints'}
+    try:
+        manifest = _safe_json(discovery, 'capture.json')
+        sources = manifest.get('sources', [])
+        if not isinstance(sources, list): return
+        for source in sources:
+            if not isinstance(source, dict) or source.get('name') not in allowed or source.get('status') not in ('failed','unsupported'):
+                continue
+            status = source.get('failure', {}).get('httpStatus') if isinstance(source.get('failure'), dict) else None
+            suffix = f'HTTP {status}' if type(status) is int and 100 <= status <= 599 else 'status unavailable'
+            print(f"Discovery source {source['name']}: {suffix}.", flush=True)
+    except (OSError, ValueError, TypeError, KeyError, Hold):
+        pass
 
 
 def main():
@@ -466,10 +490,15 @@ def main():
         cli = producer/'tools/PowerSpec.Baseline/baseline.py'
         discovery = private/'discovery'; inventory = private/'inventory'; preliminary = private/'identity-preflight'
         capture = private/'capture'; snapshot = private/'snapshot'; identity = private/'identity'
-        discovery_status = execute([sys.executable, str(cli), 'discover', '--environment', origin, '--profile', c['profile'], '--output', str(discovery)], allowed=(0,2))
-        inventory_status = execute([sys.executable, str(cli), 'inventory', '--input', str(discovery), '--output', str(inventory), '--require-stage', 'export'], allowed=(0,2))
+        print('Stage: discovery.', flush=True)
+        discovery_status = execute([sys.executable, str(cli), 'discover', '--environment', origin, '--profile', c['profile'], '--output', str(discovery)], allowed=(0,1,2), phase='Discovery')
+        if discovery_status.returncode != 0: report_discovery_failures(discovery)
+        if discovery_status.returncode == 1: raise Hold('Discovery failed (exit 1); sensitive output withheld.')
+        print('Stage: inventory.', flush=True)
+        inventory_status = execute([sys.executable, str(cli), 'inventory', '--input', str(discovery), '--output', str(inventory), '--require-stage', 'export'], allowed=(0,2), phase='Inventory')
         inventory_report, counts, export_ready = verify_inventory(discovery, inventory, producer, c, v)
-        coverage_status = execute([sys.executable, str(cli), 'identity-coverage', '--discovery', str(discovery), '--output', str(preliminary)], allowed=(0,2))
+        print('Stage: identity preflight.', flush=True)
+        coverage_status = execute([sys.executable, str(cli), 'identity-coverage', '--discovery', str(discovery), '--output', str(preliminary)], allowed=(0,2), phase='Identity preflight')
         pre_report, rule_counts, unresolved_refs, reference_counts = verify_identity(discovery, inventory_report, preliminary, producer, c, v)
         _safe_summary({**counts, 'identityMissing': rule_counts['unregistered'], 'identityPartial': rule_counts['partial'],
                        'identityAmbiguous': rule_counts['ambiguous'], **reference_counts})
@@ -501,13 +530,16 @@ def main():
                 raise Hold('Identity or reference rules are not qualified.')
         if pre_report.get('rulesReady') is not True: raise Hold('Identity or reference rules are not qualified.')
         qualify(c)
-        status = execute([sys.executable, str(cli), 'capture', '--environment', origin, '--profile', c['profile'], '--output', str(capture)], allowed=(0,2))
+        print('Stage: capture.', flush=True)
+        status = execute([sys.executable, str(cli), 'capture', '--environment', origin, '--profile', c['profile'], '--output', str(capture)], allowed=(0,2), phase='Capture')
         if status.returncode != 0: raise Hold('Capture incomplete; publication withheld.')
         verify_capture(capture, c, v)
-        status = execute([sys.executable, str(cli), 'normalize', '--input', str(capture), '--output', str(snapshot)], allowed=(0,2))
+        print('Stage: normalization.', flush=True)
+        status = execute([sys.executable, str(cli), 'normalize', '--input', str(capture), '--output', str(snapshot)], allowed=(0,2), phase='Normalization')
         if status.returncode != 0: raise Hold('Normalization incomplete; publication withheld.')
         if sentinel(origin) != v: raise Hold('Sentinel version changed during capture.')
-        status = execute([sys.executable, str(cli), 'identity-coverage', '--discovery', str(discovery), '--snapshot', str(snapshot), '--output', str(identity), '--require-complete'], allowed=(0,2))
+        print('Stage: identity verification.', flush=True)
+        status = execute([sys.executable, str(cli), 'identity-coverage', '--discovery', str(discovery), '--snapshot', str(snapshot), '--output', str(identity), '--require-complete'], allowed=(0,2), phase='Identity verification')
         identity_report, identity_counts, unresolved_refs, reference_counts = verify_identity(discovery, inventory_report, identity, producer, c, v, snapshot)
         if (status.returncode != 0 or identity_report.get('complete') is not True or identity_counts['qualified'] != counts['inUse']
                 or identity_report.get('referenceEvidenceComplete') is not True

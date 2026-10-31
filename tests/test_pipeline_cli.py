@@ -8,6 +8,8 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import importlib.util
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 CLI = ROOT / 'pipeline' / 'run.py'
@@ -35,6 +37,25 @@ class PublicPipelineCLI(unittest.TestCase):
 
     def run_cli(self, mode='check', config=None, producer=None, workdir=None):
         return subprocess.run([sys.executable, str(CLI), '--config', str(config or self.config), '--producer', str(producer or self.producer), '--workdir', str(workdir or self.work), '--mode', mode], capture_output=True, text=True, env=self.env)
+
+    def test_clone_adds_missing_key_newline_without_exposing_it(self):
+        spec=importlib.util.spec_from_file_location('pipeline_controller',CLI)
+        module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        expected='synthetic-key-material';observed=[]
+        class Result:
+            stdout='a'*40
+        def fake_execute(args, cwd=None, env=None, allowed=(0,), phase=None):
+            key=self.work/'deploy-key'
+            if args[:2]==['git','clone']:
+                observed.append((key.read_text(),key.stat().st_mode & 0o777,env['GIT_SSH_COMMAND']))
+                Path(args[-1]).mkdir()
+            return Result()
+        with patch.dict(os.environ,{'PRODUCER_SSH_KEY':expected}),patch.object(module,'execute',side_effect=fake_execute):
+            module.clone_producer({'producerCommit':'a'*40},self.work)
+        self.assertEqual(observed[0][0],expected+'\n')
+        self.assertEqual(observed[0][1],0o600)
+        self.assertIn('StrictHostKeyChecking=yes',observed[0][2])
+        self.assertFalse((self.work/'deploy-key').exists())
 
     def test_help_does_not_invoke_azure_or_producer(self):
         result = subprocess.run([sys.executable, str(CLI), '--help'], capture_output=True, text=True, env=self.env)
@@ -122,6 +143,25 @@ class PublicationFixture(unittest.TestCase):
         self.assertIn('Reference completeness not evaluated',summary.read_text())
         self.assertNotIn('SYNTHETIC_PRIVATE_CAPTURE_PAYLOAD',result.stdout+result.stderr+summary.read_text())
         self.assertEqual(self.git(self.repo,'rev-parse','HEAD').stdout,before)
+        self.assertEqual(self.tags(),'')
+
+    def test_failed_discovery_reports_only_fixed_source_and_status(self):
+        self.env['TEST_MODE']='discover-fail'
+        result=self.run_cli('diagnose')
+        self.assertEqual(result.returncode,2,result.stdout+result.stderr)
+        self.assertIn('Stage: discovery.',result.stdout)
+        self.assertIn('Discovery source dependency-endpoints: HTTP 403.',result.stdout)
+        self.assertIn('Discovery failed (exit 1)',result.stderr)
+        self.assertNotIn('SYNTHETIC_SECRET_DETAIL',result.stdout+result.stderr)
+        self.assertEqual(self.tags(),'')
+
+    def test_failed_inventory_identifies_phase_without_stderr(self):
+        self.env['TEST_MODE']='inventory-fail'
+        result=self.run_cli('diagnose')
+        self.assertEqual(result.returncode,2,result.stdout+result.stderr)
+        self.assertIn('Stage: inventory.',result.stdout)
+        self.assertIn('Inventory failed (exit 37)',result.stderr)
+        self.assertNotIn('SYNTHETIC_SECRET_DETAIL',result.stdout+result.stderr)
         self.assertEqual(self.tags(),'')
 
     def test_partial_discovery_preserves_diagnostic_but_holds(self):
