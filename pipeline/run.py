@@ -130,7 +130,7 @@ def verify_capture(root, c, v):
         if hashlib.sha256(data).hexdigest() != page.get('sha256') or json.loads(data).get('Version') != v:
             raise Hold('Capture version evidence does not match sentinel.')
 
-def verify_snapshot(root, c, v, attestation):
+def verify_snapshot(root, c, v, attestation, qualification):
     root = Path(root)
     manifest, coverage = load(root/'manifest.json'), load(root/'coverage.json')
     if manifest.get('schemaVersion') != 1 or manifest.get('profile') != c['profile'] or manifest.get('organizationVersion') != v:
@@ -161,9 +161,232 @@ def verify_snapshot(root, c, v, attestation):
         raise Hold('Snapshot contains missing or unexpected files.')
     expected = {'schemaVersion': 1, 'snapshotSha256': digest, 'profile': c['profile'], 'producerCommit': c['producerCommit'],
                 'policySha256': c['approvedPolicySha256'], 'sourceVersionBefore': v, 'sourceVersionAfter': v,
-                'familyCoverage': 'complete', 'portability': 'qualified', 'provenance': 'qualified', 'publicSafety': 'qualified'}
+                'familyCoverage': 'complete', 'portability': 'qualified', 'provenance': 'qualified', 'publicSafety': 'qualified',
+                'discoverySha256': qualification['discoverySha256'], 'inventorySha256': qualification['inventorySha256'],
+                'identityCoverageSha256': qualification['identityCoverageSha256'], 'referenceClosure': 'qualified'}
     if attestation != expected: raise Hold('Publication attestation missing or does not match approved facts.')
     return digest
+
+
+def _safe_digest(root, relative):
+    if not isinstance(relative, str) or not relative or "\\" in relative:
+        raise Hold('Unsafe evidence path.')
+    parts = PurePosixPath(relative).parts
+    if not parts or PurePosixPath(relative).is_absolute() or any(p in ('', '.', '..') for p in parts):
+        raise Hold('Unsafe evidence path.')
+    path = Path(root)
+    if path.is_symlink() or not path.is_dir(): raise Hold('Unsafe evidence root.')
+    for part in parts:
+        path = path / part
+        if path.is_symlink(): raise Hold('Evidence symlink rejected.')
+    if not path.is_file(): raise Hold('Evidence file missing.')
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _safe_json(root, relative):
+    _safe_digest(root, relative)
+    return load(Path(root) / relative)
+
+
+def _safe_summary(values, references_evaluated=False):
+    # Only validated nonnegative integers and fixed labels are written to logs.
+    message = ('Component inventory: in use={inUse}, unresolved={unresolved}, ambiguous={ambiguous}; '
+               'export supported={supported}, partial={partial}, unsupported={unsupported}, '
+               'excluded={excluded}, unregistered={unregistered}; identity unregistered={identityMissing}, '
+               'partial={identityPartial}, ambiguous={identityAmbiguous}.').format(**values)
+    if references_evaluated:
+        message += (' Reference evidence: missing={referencesMissing}, ambiguous={referencesAmbiguous}, '
+                    'invalid={referencesInvalid}.').format(**values)
+    else:
+        message += ' Reference completeness not evaluated.'
+    print(message)
+    summary = os.environ.get('GITHUB_STEP_SUMMARY')
+    if summary:
+        with open(summary, 'a', encoding='utf-8') as stream: stream.write(message + '\n')
+
+
+def _catalogue_identity(entry, profile):
+    code = entry['componentType']
+    definitions = entry.get('definitions', [])
+    labels = entry.get('optionLabels', [])
+    if not isinstance(definitions, list) or not isinstance(labels, list): raise Hold('Invalid catalogue identity evidence.')
+    candidates = set()
+    if not definitions and any(isinstance(x, dict) and x.get('source') in ('component-options','dependent-options','required-options') for x in labels):
+        candidates.add('platform:' + str(code))
+    ambiguous = len(definitions) > 1
+    for definition in definitions:
+        if not isinstance(definition, dict): raise Hold('Invalid catalogue definition.')
+        entities = definition.get('entityDefinitions', [])
+        primary = definition.get('primaryEntityName')
+        if (definition.get('entityResolution') == 'matched' and isinstance(definition.get('name'), str) and definition['name']
+                and isinstance(primary, str) and isinstance(entities, list) and len(entities) == 1 and isinstance(entities[0], dict)
+                and isinstance(entities[0].get('logicalName'), str) and entities[0]['logicalName'].casefold() == primary.casefold()
+                and re.fullmatch(r'[a-z0-9_]+', primary.casefold())):
+            candidates.add('entity:' + primary.casefold())
+        else:
+            ambiguous = True
+    if ambiguous or len(candidates) > 1: return None, 'ambiguous'
+    if len(candidates) == 1: return next(iter(candidates)), 'resolved'
+    return 'local:' + profile.casefold() + ':' + str(code), 'unresolved'
+
+
+def verify_inventory(discovery, inventory, producer, c, v):
+    capture = _safe_json(discovery, 'capture.json')
+    report = _safe_json(inventory, 'inventory.json')
+    provenance = _safe_json(inventory, 'provenance.json')
+    catalogue_path = capture.get('catalogue', {}).get('path')
+    if (provenance.get('captureSha256') != _safe_digest(discovery, 'capture.json')
+            or provenance.get('catalogueSha256') != _safe_digest(discovery, catalogue_path)
+            or provenance.get('catalogueSha256') != capture.get('catalogue', {}).get('sha256')
+            or provenance.get('registrySha256') != _safe_digest(producer, 'tools/PowerSpec.Baseline/handler-registry.json')):
+        raise Hold('Discovery inventory provenance does not match its inputs.')
+    catalogue = _safe_json(discovery, catalogue_path)
+    if (report.get('schemaVersion') != 2 or report.get('kind') != 'component-inventory-report'
+            or report.get('profile') != c['profile'] or report.get('organizationVersion') != v
+            or capture.get('profile') != c['profile'] or capture.get('organizationVersion') != v
+            or capture.get('status') not in ('complete', 'partial')
+            or report.get('discoveryComplete') not in (True, False)
+            or report.get('rawInventoryConsistency', {}).get('claimedFlagsMatch') is not True):
+        raise Hold('Discovery identity, version or consistency is invalid.')
+    types = report.get('types'); rawtypes = catalogue.get('types')
+    if not isinstance(types, list) or not isinstance(rawtypes, list) or not types:
+        raise Hold('Discovery inventory types missing.')
+    raw_by_code = {}
+    for item in rawtypes:
+        if not isinstance(item, dict) or type(item.get('componentType')) is not int or type(item.get('inUse')) is not bool or item['componentType'] in raw_by_code:
+            raise Hold('Invalid discovery type evidence.')
+        raw_by_code[item['componentType']] = item
+    expected_identities = {code: _catalogue_identity(item, c['profile']) for code, item in raw_by_code.items()}
+    identity_counts = {}
+    for identity, status in expected_identities.values():
+        if status == 'resolved': identity_counts[identity] = identity_counts.get(identity, 0) + 1
+    expected_identities = {code: ((None, 'ambiguous') if status == 'resolved' and identity_counts[identity] > 1 else (identity, status))
+                           for code, (identity, status) in expected_identities.items()}
+    registry = _safe_json(producer, 'tools/PowerSpec.Baseline/handler-registry.json')
+    if registry.get('schemaVersion') != 2 or not isinstance(registry.get('registrations'), list):
+        raise Hold('Invalid export registry.')
+    registrations = {}
+    for row in registry['registrations']:
+        if not isinstance(row, dict): raise Hold('Invalid export registration.')
+        key = (row.get('typeIdentity'), row.get('stage'))
+        if key in registrations: raise Hold('Duplicate export registration.')
+        if row.get('status') == 'supported':
+            proof = row.get('verification', {})
+            if not isinstance(proof, dict) or proof.get('status') != 'passed' or not isinstance(proof.get('tests'), list) or not proof['tests']:
+                raise Hold('Supported export registration lacks verification.')
+        registrations[key] = row.get('status')
+    seen = set(); active = []; counts = {k: 0 for k in ('supported', 'partial', 'unsupported', 'excluded', 'unregistered')}
+    unresolved = ambiguous = 0
+    for item in types:
+        if not isinstance(item, dict) or type(item.get('componentType')) is not int or type(item.get('inUse')) is not bool:
+            raise Hold('Invalid inventory type.')
+        number = item['componentType']
+        if number in seen or number not in raw_by_code or item['inUse'] is not raw_by_code[number]['inUse']: raise Hold('Inventory does not match discovery types.')
+        seen.add(number)
+        identity = item.get('identityStatus')
+        if identity not in ('resolved', 'unresolved', 'ambiguous') or (item.get('typeIdentity'), identity) != expected_identities[number]: raise Hold('Inventory identity does not match discovery evidence.')
+        if item['inUse']:
+            active.append(item)
+            unresolved += identity == 'unresolved'; ambiguous += identity == 'ambiguous'
+            export = item.get('handlers', {}).get('export', {})
+            status = export.get('status')
+            if status not in counts or status != registrations.get((item.get('typeIdentity'), 'export'), 'unregistered'):
+                raise Hold('Export status does not match registry.')
+            counts[status] += 1
+    if seen != set(raw_by_code) or not active or report.get('totals', {}).get('inUseTypes') != len(active):
+        raise Hold('Discovery inventory count mismatch.')
+    declared = report.get('totals', {}).get('stageStatusesInUse', {}).get('export')
+    if declared != counts: raise Hold('Discovery export totals mismatch.')
+    ready = (capture.get('status') == 'complete' and capture.get('inventoryComplete') is True
+             and report.get('discoveryComplete') is True
+             and all(report.get('rawInventoryConsistency', {}).get(k) is True for k in ('solutionsMatch', 'organizationVersionMatch', 'claimedFlagsMatch'))
+             and unresolved == 0 and ambiguous == 0 and counts['supported'] == len(active))
+    return report, {'inUse': len(active), 'unresolved': unresolved, 'ambiguous': ambiguous, **counts}, ready
+
+
+def verify_identity(discovery, inventory_report, evidence, producer, c, v, snapshot=None):
+    report = _safe_json(evidence, 'identity-coverage.json')
+    provenance = _safe_json(evidence, 'provenance.json')
+    capture = _safe_json(discovery, 'capture.json')
+    if (report.get('schemaVersion') != 1 or report.get('kind') != 'identity-coverage'
+            or report.get('profile') != c['profile'] or report.get('organizationVersion') != v
+            or report.get('discoveryComplete') is not inventory_report.get('discoveryComplete')
+            or provenance.get('discoveryCaptureSha256') != _safe_digest(discovery, 'capture.json')
+            or provenance.get('discoveryCatalogueSha256') != _safe_digest(discovery, capture.get('catalogue', {}).get('path'))
+            or provenance.get('rulesSha256') != _safe_digest(producer, 'tools/PowerSpec.Baseline/export-identity-rules.json')
+            or provenance.get('packageSha256') != []):
+        raise Hold('Identity coverage provenance or version is invalid.')
+    expected_snapshot = _safe_digest(snapshot, 'manifest.json') if snapshot is not None else None
+    expected_coverage = _safe_digest(snapshot, 'coverage.json') if snapshot is not None else None
+    if provenance.get('snapshotManifestSha256') != expected_snapshot or provenance.get('snapshotCoverageSha256') != expected_coverage:
+        raise Hold('Identity coverage snapshot does not match.')
+    snap = report.get('snapshot')
+    if snapshot is None:
+        if snap is not None: raise Hold('Unexpected identity snapshot.')
+    elif (not isinstance(snap, dict) or snap.get('provided') is not True or snap.get('verified') is not True
+          or snap.get('profile') != c['profile'] or snap.get('organizationVersion') != v):
+        raise Hold('Identity snapshot facts invalid.')
+    rules = _safe_json(producer, 'tools/PowerSpec.Baseline/export-identity-rules.json')
+    if rules.get('schemaVersion') != 1 or not isinstance(rules.get('rules'), list): raise Hold('Identity rule registry invalid.')
+    rule_map = {}
+    for rule in rules['rules']:
+        if not isinstance(rule, dict) or not isinstance(rule.get('typeIdentity'), str) or rule['typeIdentity'] in rule_map or rule.get('status') not in ('partial', 'qualified'):
+            raise Hold('Identity rule registry invalid.')
+        rule_map[rule['typeIdentity']] = rule
+    snapshot_documents = {}; snapshot_statuses = {}
+    if snapshot is not None:
+        snapshot_manifest = _safe_json(snapshot, 'manifest.json'); snapshot_coverage = _safe_json(snapshot, 'coverage.json')
+        if not isinstance(snapshot_manifest.get('documents'), list) or not isinstance(snapshot_coverage.get('sources'), list): raise Hold('Snapshot family evidence invalid.')
+        for document in snapshot_manifest['documents']:
+            if not isinstance(document, dict) or not isinstance(document.get('family'), str): raise Hold('Snapshot family evidence invalid.')
+            family = document['family']; snapshot_documents[family] = snapshot_documents.get(family, 0) + 1
+        for source in snapshot_coverage['sources']:
+            if not isinstance(source, dict): raise Hold('Snapshot family evidence invalid.')
+            snapshot_statuses.setdefault(source.get('family'), []).append(source.get('status'))
+    entries = report.get('types'); inv = inventory_report['types']
+    if not isinstance(entries, list) or len(entries) != len(inv): raise Hold('Identity coverage types missing.')
+    by_code = {x['componentType']: x for x in inv}; seen = set(); counts = {'unregistered': 0, 'partial': 0, 'ambiguous': 0, 'qualified': 0}
+    blocked_declared = 0
+    for item in entries:
+        if not isinstance(item, dict) or type(item.get('componentType')) is not int: raise Hold('Invalid identity coverage type.')
+        code = item['componentType']; baseline = by_code.get(code)
+        if code in seen or baseline is None or item.get('inUse') is not baseline['inUse'] or item.get('identityStatus') != baseline['identityStatus'] or item.get('catalogueKey') != baseline.get('typeIdentity'):
+            raise Hold('Identity coverage and inventory disagree.')
+        seen.add(code)
+        if item['inUse']:
+            status = item.get('ruleStatus')
+            if status not in counts: raise Hold('Invalid identity rule status.')
+            rule = rule_map.get(item.get('catalogueKey'))
+            family = rule.get('snapshotFamily') if rule else None
+            source_states = snapshot_statuses.get(family, [])
+            expected_data = 'observed' if snapshot is not None and source_states and all(x == 'complete' for x in source_states) else 'unavailable'
+            expected_documents = snapshot_documents.get(family, 0) if family else 0
+            if item.get('dataStatus') != expected_data or item.get('snapshotDocumentCount') != expected_documents:
+                raise Hold('Identity data coverage differs from snapshot evidence.')
+            declared = 'unregistered' if rule is None else rule['status']
+            if item.get('declaredRuleStatus') != declared: raise Hold('Declared identity status differs from registry.')
+            blocked_declared += declared != 'qualified' or item['identityStatus'] != 'resolved'
+            expected = 'ambiguous' if item['identityStatus'] == 'ambiguous' else ('unregistered' if rule is None else rule['status'])
+            if expected == 'qualified' and (item.get('dataStatus') != 'observed' or not item.get('snapshotDocumentCount')): expected = 'partial'
+            if status != expected: raise Hold('Identity status does not match rule registry and data evidence.')
+            counts[status] += 1
+    summary = report.get('summary', {})
+    refs = report.get('references'); identities = report.get('identities'); diagnostics = report.get('diagnostics')
+    if (not isinstance(refs, list) or not isinstance(identities, list) or not isinstance(diagnostics, list)
+            or summary.get('discoveredTypes') != len(entries) or summary.get('inUseTypes') != sum(counts.values())
+            or summary.get('ruleStatusesInUse') != {k: n for k, n in counts.items() if n}
+            or summary.get('identityCount') != len(identities) or summary.get('referenceCount') != len(refs)
+            or summary.get('blockedDeclaredInUseCount') != blocked_declared
+            or report.get('rulesReady') is not (blocked_declared == 0)):
+        raise Hold('Identity coverage counts invalid.')
+    if any(not isinstance(ref, dict) or ref.get('resolution') not in ('resolved', 'ambiguous', 'unresolved-external-or-missing', 'invalid') for ref in refs):
+        raise Hold('Invalid reference evidence.')
+    unresolved_refs = sum(ref['resolution'] != 'resolved' for ref in refs)
+    if summary.get('unresolvedReferenceCount') != unresolved_refs: raise Hold('Reference counts invalid.')
+    reference_counts = {'referencesMissing': sum(ref['resolution'] == 'unresolved-external-or-missing' for ref in refs),
+                        'referencesAmbiguous': sum(ref['resolution'] == 'ambiguous' for ref in refs),
+                        'referencesInvalid': sum(ref['resolution'] == 'invalid' for ref in refs)}
+    return report, counts, unresolved_refs, reference_counts
 
 
 def existing_tag(repo, tag, c, v):
@@ -218,7 +441,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', default='pipeline/config.json'); parser.add_argument('--workdir', required=True)
     parser.add_argument('--producer', help='Optional clean, pinned local producer checkout')
-    parser.add_argument('--mode', choices=['check','run'], default='run')
+    parser.add_argument('--mode', choices=['check','run','diagnose'], default='run')
     args = parser.parse_args(); repo = Path.cwd(); c = config(args.config)
     origin = os.environ.get('SENTINEL_URL', '')
     if not origin: raise Hold('Sentinel is not configured.')
@@ -227,9 +450,9 @@ def main():
     if not branch: raise Hold('An attached publication branch is required.')
     v = sentinel(origin); tag = 'service/' + v
     print('Observed service version: ' + v)
-    if existing_tag(repo, tag, c, v): print('Already published and verified.'); return 0
+    if args.mode != 'diagnose' and existing_tag(repo, tag, c, v): print('Already published and verified.'); return 0
     if args.mode == 'check': print('New sentinel version; publication is not yet established.'); return 0
-    qualify(c)
+    if not SHA.fullmatch(c.get('producerCommit') or ''): raise Hold('Producer revision is not configured.')
     base = Path(args.workdir).resolve(strict=True)
     with tempfile.TemporaryDirectory(prefix='powerspec-private-', dir=base) as tmp:
         private = Path(tmp)
@@ -240,16 +463,66 @@ def main():
                 raise Hold('Local producer does not match the clean pinned revision.')
         else:
             producer = clone_producer(c, private)
-        cli = producer/'tools/PowerSpec.Baseline/baseline.py'; capture = private/'capture'; snapshot = private/'snapshot'
+        cli = producer/'tools/PowerSpec.Baseline/baseline.py'
+        discovery = private/'discovery'; inventory = private/'inventory'; preliminary = private/'identity-preflight'
+        capture = private/'capture'; snapshot = private/'snapshot'; identity = private/'identity'
+        discovery_status = execute([sys.executable, str(cli), 'discover', '--environment', origin, '--profile', c['profile'], '--output', str(discovery)], allowed=(0,2))
+        inventory_status = execute([sys.executable, str(cli), 'inventory', '--input', str(discovery), '--output', str(inventory), '--require-stage', 'export'], allowed=(0,2))
+        inventory_report, counts, export_ready = verify_inventory(discovery, inventory, producer, c, v)
+        coverage_status = execute([sys.executable, str(cli), 'identity-coverage', '--discovery', str(discovery), '--output', str(preliminary)], allowed=(0,2))
+        pre_report, rule_counts, unresolved_refs, reference_counts = verify_identity(discovery, inventory_report, preliminary, producer, c, v)
+        _safe_summary({**counts, 'identityMissing': rule_counts['unregistered'], 'identityPartial': rule_counts['partial'],
+                       'identityAmbiguous': rule_counts['ambiguous'], **reference_counts})
+        if sentinel(origin) != v: raise Hold('Sentinel version changed during discovery.')
+        if args.mode == 'diagnose':
+            if discovery_status.returncode != 0 or not inventory_report['discoveryComplete'] or coverage_status.returncode != 0:
+                raise Hold('Discovery diagnostics are incomplete.')
+            print('Diagnostic inventory produced; publication was not attempted.')
+            return 0
+        if discovery_status.returncode != 0 or inventory_status.returncode != 0 or coverage_status.returncode != 0 or not export_ready:
+            raise Hold('Discovery identity or export coverage is incomplete.')
+        # Informational coverage lacks snapshot data; use the pinned rule registry
+        # to distinguish rules awaiting data from rules which are themselves unqualified.
+        rules = _safe_json(producer, 'tools/PowerSpec.Baseline/export-identity-rules.json')
+        entries = rules.get('rules') if rules.get('schemaVersion') == 1 else None
+        if not isinstance(entries, list): raise Hold('Identity rule registry invalid.')
+        by_identity = {}
+        for item in entries:
+            if not isinstance(item, dict) or not isinstance(item.get('typeIdentity'), str) or item['typeIdentity'] in by_identity:
+                raise Hold('Identity rule registry invalid.')
+            by_identity[item['typeIdentity']] = item
+        for item in pre_report['types']:
+            if not item['inUse']: continue
+            rule = by_identity.get(item.get('catalogueKey'), {})
+            proof = rule.get('verification', {})
+            if (item.get('identityStatus') != 'resolved' or rule.get('status') != 'qualified'
+                    or not isinstance(proof, dict) or proof.get('status') != 'passed'
+                    or not isinstance(proof.get('tests'), list) or not proof['tests']):
+                raise Hold('Identity or reference rules are not qualified.')
+        if pre_report.get('rulesReady') is not True: raise Hold('Identity or reference rules are not qualified.')
+        qualify(c)
         status = execute([sys.executable, str(cli), 'capture', '--environment', origin, '--profile', c['profile'], '--output', str(capture)], allowed=(0,2))
         if status.returncode != 0: raise Hold('Capture incomplete; publication withheld.')
         verify_capture(capture, c, v)
         status = execute([sys.executable, str(cli), 'normalize', '--input', str(capture), '--output', str(snapshot)], allowed=(0,2))
         if status.returncode != 0: raise Hold('Normalization incomplete; publication withheld.')
         if sentinel(origin) != v: raise Hold('Sentinel version changed during capture.')
+        status = execute([sys.executable, str(cli), 'identity-coverage', '--discovery', str(discovery), '--snapshot', str(snapshot), '--output', str(identity), '--require-complete'], allowed=(0,2))
+        identity_report, identity_counts, unresolved_refs, reference_counts = verify_identity(discovery, inventory_report, identity, producer, c, v, snapshot)
+        if (status.returncode != 0 or identity_report.get('complete') is not True or identity_counts['qualified'] != counts['inUse']
+                or identity_report.get('referenceEvidenceComplete') is not True
+                or identity_report.get('referenceCoverage', {}).get('snapshot', {}).get('status') != 'complete'
+                or unresolved_refs or identity_report.get('diagnostics') or identity_report.get('snapshot', {}).get('coverageComplete') is not True
+                or any(item.get('inUse') and (item.get('identityStatus') != 'resolved' or item.get('dataStatus') != 'observed' or not item.get('snapshotDocumentCount')) for item in identity_report['types'])):
+            raise Hold('Identity or reference coverage is incomplete.')
+        _safe_summary({**counts, 'identityMissing': identity_counts['unregistered'], 'identityPartial': identity_counts['partial'],
+                       'identityAmbiguous': identity_counts['ambiguous'], **reference_counts}, references_evaluated=True)
+        qualification = {'discoverySha256': _safe_digest(discovery, 'capture.json'),
+                         'inventorySha256': _safe_digest(inventory, 'inventory.json'),
+                         'identityCoverageSha256': _safe_digest(identity, 'identity-coverage.json')}
         attestation_path = private/'attestation.json'
         if not attestation_path.is_file(): raise Hold('Qualified publication attestation is unavailable.')
-        digest = verify_snapshot(snapshot, c, v, load(attestation_path))
+        digest = verify_snapshot(snapshot, c, v, load(attestation_path), qualification)
         prior = repo/'baselines'/c['profile']; delta = private/'diff'
         if prior.exists():
             status = execute([sys.executable, str(cli), 'diff', '--previous', str(prior), '--current', str(snapshot), '--output', str(delta)], allowed=(0,2))

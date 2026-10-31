@@ -56,6 +56,8 @@ class PublicationFixture(unittest.TestCase):
         self.producer = self.root / 'producer'; self.producer.mkdir(); self.git(self.producer, 'init')
         self.git(self.producer, 'config', 'user.name', 'Fixture'); self.git(self.producer, 'config', 'user.email', 'fixture@example.invalid')
         cli = self.producer / 'tools/PowerSpec.Baseline/baseline.py'; cli.parent.mkdir(parents=True); shutil.copy(ROOT / 'fixtures/producer.py', cli)
+        (cli.parent/'handler-registry.json').write_text(json.dumps({'schemaVersion':2,'registrations':[{'typeIdentity':'platform:1','stage':'export','status':'supported','verification':{'status':'passed','tests':['fixture']}}]}))
+        (cli.parent/'export-identity-rules.json').write_text(json.dumps({'schemaVersion':1,'rules':[{'typeIdentity':'platform:1','status':'qualified','snapshotFamily':'family','verification':{'status':'passed','tests':['fixture']}}]}))
         self.git(self.producer, 'add', '.'); self.git(self.producer, 'commit', '-m', 'synthetic producer')
         self.producer_sha = self.git(self.producer, 'rev-parse', 'HEAD').stdout.strip()
         policy={'policyVersion': 1, 'portableFamilies': ['family']}
@@ -76,7 +78,7 @@ class PublicationFixture(unittest.TestCase):
         self.assertEqual(self.git(self.repo,'cat-file','-t','service/1.2.3.4').stdout.strip(),'tag')
         head=self.git(self.repo,'rev-parse','HEAD').stdout
         self.assertTrue((self.repo/'versions/synthetic/1.2.3.4.json').is_file())
-        self.assertEqual((self.root/'actions').read_text().splitlines(), ['capture','normalize'])
+        self.assertEqual((self.root/'actions').read_text().splitlines(), ['discover','inventory','identity-coverage','capture','normalize','identity-coverage'])
         self.assertNotIn('SYNTHETIC_PRIVATE_CAPTURE_PAYLOAD', result.stdout + result.stderr)
         files = self.git(self.repo,'ls-files').stdout
         self.assertNotIn('raw-private.txt', files)
@@ -85,7 +87,7 @@ class PublicationFixture(unittest.TestCase):
         result=self.run_cli();self.assertEqual(result.returncode,0,result.stdout+result.stderr)
         self.assertEqual(self.git(self.repo,'rev-parse','HEAD').stdout,head)
     def test_unqualified_cases_hold_without_publication(self):
-        for mode in ('capture-partial','no-attestation','attestation','hash','escape','symlink'):
+        for mode in ('capture-partial','no-attestation','attestation','hash','escape','symlink','forged-inventory','forged-identity','forged-reference','missing-reference-proof'):
             with self.subTest(mode=mode):
                 self.env['TEST_MODE']=mode
                 result=self.run_cli();self.assertEqual(result.returncode,2,result.stdout+result.stderr)
@@ -109,6 +111,58 @@ class PublicationFixture(unittest.TestCase):
         self.assertEqual(self.git(self.repo,'rev-parse','HEAD').stdout,before)
         self.assertEqual(self.tags(),'')
 
+    def test_diagnose_runs_without_policy_or_publication_and_emits_only_counts(self):
+        config=json.loads(self.config.read_text());config['approvedPolicySha256']=None;config['portableFamilies']=[]
+        self.config.write_text(json.dumps(config))
+        before=self.git(self.repo,'rev-parse','HEAD').stdout
+        summary=self.root/'summary';self.env['GITHUB_STEP_SUMMARY']=str(summary)
+        result=self.run_cli('diagnose')
+        self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+        self.assertEqual((self.root/'actions').read_text().splitlines(), ['discover','inventory','identity-coverage'])
+        self.assertIn('Reference completeness not evaluated',summary.read_text())
+        self.assertNotIn('SYNTHETIC_PRIVATE_CAPTURE_PAYLOAD',result.stdout+result.stderr+summary.read_text())
+        self.assertEqual(self.git(self.repo,'rev-parse','HEAD').stdout,before)
+        self.assertEqual(self.tags(),'')
+
+    def test_partial_discovery_preserves_diagnostic_but_holds(self):
+        self.env['TEST_MODE']='partial-discovery'
+        result=self.run_cli('diagnose');self.assertEqual(result.returncode,2,result.stdout+result.stderr)
+        self.assertIn('Component inventory:',result.stdout)
+        self.assertIn('Discovery diagnostics are incomplete',result.stderr)
+        self.assertEqual((self.root/'actions').read_text().splitlines(), ['discover','inventory','identity-coverage'])
+        self.assertEqual(self.tags(),'')
+
+    def test_partial_handler_is_reported_but_cannot_start_capture(self):
+        registry=self.producer/'tools/PowerSpec.Baseline/handler-registry.json'
+        data=json.loads(registry.read_text());data['registrations'][0]['status']='partial';registry.write_text(json.dumps(data))
+        self.git(self.producer,'add','.');self.git(self.producer,'commit','-m','partial handler')
+        self.producer_sha=self.git(self.producer,'rev-parse','HEAD').stdout.strip()
+        config=json.loads(self.config.read_text());config['producerCommit']=self.producer_sha;self.config.write_text(json.dumps(config));self.env['TEST_PRODUCER_SHA']=self.producer_sha
+        diagnostic=self.run_cli('diagnose');self.assertEqual(diagnostic.returncode,0,diagnostic.stdout+diagnostic.stderr)
+        self.assertIn('partial=1',diagnostic.stdout)
+        (self.root/'actions').unlink()
+        result=self.run_cli('run');self.assertEqual(result.returncode,2,result.stdout+result.stderr)
+        self.assertEqual((self.root/'actions').read_text().splitlines(), ['discover','inventory','identity-coverage'])
+        self.assertEqual(self.tags(),'')
+
+    def test_unqualified_identity_rules_hold_before_capture(self):
+        rules=self.producer/'tools/PowerSpec.Baseline/export-identity-rules.json'
+        data=json.loads(rules.read_text());data['rules'][0]['status']='partial';rules.write_text(json.dumps(data))
+        self.git(self.producer,'add','.');self.git(self.producer,'commit','-m','partial identity')
+        self.producer_sha=self.git(self.producer,'rev-parse','HEAD').stdout.strip()
+        config=json.loads(self.config.read_text());config['producerCommit']=self.producer_sha;self.config.write_text(json.dumps(config));self.env['TEST_PRODUCER_SHA']=self.producer_sha
+        result=self.run_cli('run');self.assertEqual(result.returncode,2,result.stdout+result.stderr)
+        self.assertIn('Identity or reference rules',result.stderr)
+        self.assertEqual((self.root/'actions').read_text().splitlines(), ['discover','inventory','identity-coverage'])
+        self.assertEqual(self.tags(),'')
+
+    def test_existing_tag_does_not_skip_diagnose(self):
+        self.git(self.repo,'tag','-a','service/1.2.3.4','-m','{}')
+        self.git(self.repo,'push','origin','refs/tags/service/1.2.3.4')
+        result=self.run_cli('diagnose')
+        self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+        self.assertEqual((self.root/'actions').read_text().splitlines(), ['discover','inventory','identity-coverage'])
+
     def test_invalid_sentinel_origins_are_rejected_before_token_acquisition(self):
         for origin in ('https://example.com', 'http://synthetic.crm.dynamics.com', 'https://synthetic.crm.dynamics.com:443', 'https://user@synthetic.crm.dynamics.com', 'https://synthetic.crm.dynamics.com/path', 'https://synthetic.crm.dynamics.com?x=y', 'https://synthetic.crm.dynamics.com#x'):
             with self.subTest(origin=origin):
@@ -124,7 +178,7 @@ class PublicationFixture(unittest.TestCase):
         self.config.write_text(json.dumps(config))
         result=self.run_cli();self.assertEqual(result.returncode,2,result.stdout+result.stderr)
         self.assertIn('1.2.3.4',result.stdout)
-        self.assertFalse((self.root/'actions').exists());self.assertEqual(self.tags(),'')
+        self.assertEqual((self.root/'actions').read_text().splitlines(), ['discover','inventory','identity-coverage']);self.assertEqual(self.tags(),'')
 
     def test_atomic_push_rejection_does_not_publish_branch_or_tag(self):
         before = self.git(self.repo,'ls-remote','--heads','origin').stdout

@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: Sentinel check or attested capture
+        description: Sentinel check, diagnostic discovery, or attested capture
         type: choice
-        options: [check, run]
+        options: [check, diagnose, run]
         default: check
         required: true
   schedule:
