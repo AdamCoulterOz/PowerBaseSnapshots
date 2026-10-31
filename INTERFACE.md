@@ -14,3 +14,12 @@ references is not proof. The attestation binds discovery, inventory and identity
 hashes in addition to the existing policy, producer, snapshot and version facts.
 Informational `diagnose` does not capture or publish a baseline and exposes only
 validated aggregate counts. Unsupported, missing, ambiguous or partial evidence holds.
+
+The configured sentinel application user has 14 verified Global read privileges and
+no effective write privileges. The four metadata-specific additions are
+`prvReadEntity`, `prvReadOptionSet`, `prvReadAttribute` and `prvReadRelationship`;
+no EntityKey privilege was added. Eight read-only impersonated metadata probes returned
+HTTP 200. [Diagnostic run 41210320964](https://github.com/AdamCoulterOz/PowerBaseSnapshots/actions/runs/41210320964) then completed the live
+discovery and identity preflight without attempting publication; it did not evaluate
+reference completeness. Raw configuration stays private, and the coordinator does not
+run a C# extraction stage.

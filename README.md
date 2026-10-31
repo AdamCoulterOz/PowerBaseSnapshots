@@ -8,11 +8,11 @@ The scheduled workflow polls hourly at minute 17 rather than receiving an instan
 
 ## Operational setup
 
-Azure workload identity federation and the protected environment main-branch restriction have been configured. The Dataverse application user has ten verified read privileges and no effective write privileges; a GitHub live check authenticated through OIDC and read service version `9.2.26094.166`. Full capture and publication have not been established.
+Azure workload identity federation and the protected environment main-branch restriction have been configured. The dedicated Dataverse application user has 14 verified Global read privileges and no effective write privileges. The four metadata reads added after the initial ten are `prvReadEntity`, `prvReadOptionSet`, `prvReadAttribute` and `prvReadRelationship`; no EntityKey privilege was granted. Eight read-only impersonated metadata probes returned HTTP 200. A GitHub live check authenticated through OIDC and read service version `9.2.26094.166`. Full capture and publication have not been established.
 
-The private PowerSpec producer branch is pinned at `13ad120b7a6bafa1dff0096f56a12b67064be695`. Its dedicated read-only deploy key and `PRODUCER_SSH_KEY` environment secret are configured; a strict-host-key clone verified the earlier pinned revision; the updated pin has not yet been verified in a live workflow. Set the approved policy hash and portable families only after qualification. Do not put credentials or sentinel details in repository files. The checked-in configuration intentionally cannot authorize full publication today.
+The private PowerSpec producer branch is pinned at `13ad120b7a6bafa1dff0096f56a12b67064be695`. Its dedicated read-only deploy key and `PRODUCER_SSH_KEY` environment secret are configured; a live diagnostic verified strict-host-key clone and checkout of the updated pin. Set the approved policy hash and portable families only after qualification. Do not put credentials or sentinel details in repository files. The checked-in configuration intentionally cannot authorize full publication today.
 
-Stable component IDs are preserved when supported by evidence. Installation bookkeeping and environment bindings are classified by field and evidence, not by stripping GUID-shaped values. Fifteen local offline pipeline tests passed, as did 55 tests in the reviewed producer distribution. The earlier remote offline CI run passed on the older pipeline. These tests do not prove complete capture, portability or publication.
+Stable component IDs are preserved when supported by evidence. Installation bookkeeping and environment bindings are classified by field and evidence, not by stripping GUID-shaped values. Eighteen offline pipeline tests passed in remote CI run `41209729133`; 55 tests passed in the reviewed producer distribution. These tests do not prove complete capture, portability or publication.
 
 This public branch is isolated from the private candidate history. Do not push the private candidate branch or use `--all` or `--mirror`. No service-version tag or baseline data has been published. The application identity uses no Azure client secret or Azure RBAC role.
 
@@ -24,5 +24,10 @@ identity/reference coverage bound to that same discovery and snapshot. An empty
 reference list does not establish reference closure: the controller holds until
 explicit complete reference evidence and the bound attestation are available.
 Diagnostic summaries never print raw rows, component identities or sentinel URLs.
-The producer pin now points to the reviewed distribution revision; live verification
-of these new stages remains pending. No baseline publication is claimed.
+The updated producer completed OIDC authentication, clone and checkout, discovery,
+inventory and identity preflight in [live diagnostic run 41210320964](https://github.com/AdamCoulterOz/PowerBaseSnapshots/actions/runs/41210320964)
+on service version `9.2.26094.166`. It reported 126 in-use types: nine unresolved
+and none ambiguous. Identity rules were 115 unregistered and 11 partial; export
+coverage included 11 partial types. Reference completeness was not evaluated. This
+was diagnostic only: no capture or publication was attempted. Raw configuration
+remains private, and there is no C# extraction stage.
