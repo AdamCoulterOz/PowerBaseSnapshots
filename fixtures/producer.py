@@ -9,7 +9,9 @@ import sys
 def canonical(x): return (json.dumps(x, sort_keys=True, separators=(',', ':'))+'\n').encode()
 def write(p,x): p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(canonical(x))
 def sha(b): return hashlib.sha256(b).hexdigest()
-parser=argparse.ArgumentParser(); parser.add_argument('action');parser.add_argument('--environment');parser.add_argument('--profile');parser.add_argument('--output',required=True);parser.add_argument('--input');parser.add_argument('--previous');parser.add_argument('--current');parser.add_argument('--discovery');parser.add_argument('--require-stage');parser.add_argument('--snapshot');parser.add_argument('--require-complete',action='store_true');parser.add_argument('--acquisition');parser.add_argument('--producer-root');parser.add_argument('--producer-commit');a=parser.parse_args()
+parser=argparse.ArgumentParser(); parser.add_argument('action');parser.add_argument('--environment');parser.add_argument('--profile');parser.add_argument('--output',required=True);parser.add_argument('--input');parser.add_argument('--previous');parser.add_argument('--current');parser.add_argument('--discovery');parser.add_argument('--require-stage');parser.add_argument('--snapshot');parser.add_argument('--require-complete',action='store_true');parser.add_argument('--acquisition');parser.add_argument('--producer-root');parser.add_argument('--producer-commit');parser.add_argument('--instrumentation-client-id');parser.add_argument('--instrumentation-role-id');a=parser.parse_args()
+if a.action in ('acquire-baseline','finalize-publication'):
+ if a.instrumentation_client_id != os.environ.get('TEST_INSTRUMENTATION_CLIENT') or a.instrumentation_role_id != os.environ.get('TEST_INSTRUMENTATION_ROLE'): sys.exit(41)
 with open(os.environ['TEST_ACTIONS'],'a') as log: log.write(a.action + '\n')
 out=Path(a.output);
 if a.action != 'finalize-publication': out.mkdir()

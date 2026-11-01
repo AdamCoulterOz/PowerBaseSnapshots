@@ -7,7 +7,7 @@
 - Prepared local discovery, export-inventory and snapshot identity/reference qualification gates with a diagnostic-only mode. The new producer distribution passed 55 offline tests and the initial controller pass had 15 local offline tests; later remote CI passed 18 tests. A subsequent diagnostic verified the live discovery and preflight stages, not full capture or publication. An empty reference list is not evidence of closure, and the existing policy and attestation gates remain in force.
 
 - Established a separate public pipeline history for sentinel-based normalized baseline publication, retaining private candidate history separately. PowerSpec remains the producer and semantic extraction owner.
-- Publication is gated on full coverage, an approved field/content policy and bound attestation. Current configuration intentionally holds; synthetic test success is not live publication proof.
+- Publication is gated on full coverage, an approved field/content policy and bound attestation. At that checkpoint configuration held; synthetic test success is not live publication proof.
 - Pinned the private producer distribution and verified its dedicated read-only SSH access. At that checkpoint Azure OIDC trust and the protected environment branch restriction were configured; Dataverse read authorization and runtime execution were pending. Ten offline pipeline tests, a targeted origin/policy case and 23 producer CLI tests passed.
 - Initially verified the application user had ten read privileges and no effective writes, and remote offline CI passed. A GitHub live check subsequently authenticated via OIDC and read service version `9.2.26094.166`; full capture and publication remain unverified; no Azure client secret or Azure RBAC role was added.
 - Corrected the federated subject to the observed immutable owner/repository-ID form after the initial OIDC failure, without broadening issuer, audience or branch trust. Scheduled publication remains held by unqualified policy.
@@ -30,5 +30,9 @@
 
 - Replaced the obsolete pre-capture export/identity and reference-closure publication model with pinned producer acquisition, coverage-v2 and sanitized public-subtree finalizer attestation. Diagnostics remain informational. Exact policy approval and a producer finalizer remain prerequisites; offline fixtures are not live qualification.
 
-- Prepared fresh GitHub OIDC token acquisition for public-controller polls and producer execution using the existing workload identity; validation is offline only and deployment is pending.
+- Deployed public controller OIDC acquisition in commit `80e16a432cd6e26398a8c9ba3224ce040ddc47df`. [Auth-check run 41234952032](https://github.com/AdamCoulterOz/PowerBaseSnapshots/actions/runs/41234952032) succeeded at `9.2.26094.165`, with two token exchanges, matching application identity, four bounded reads and matching version observations. It did not run the producer or prove token renewal during a long acquisition.
 - Restored deterministic manifest-indexed public diffs with prior/current subtree hashes; unsafe or inconsistent prior content holds publication.
+
+- Prepared paired instrumentation identity propagation for private acquisition and finalization, with a private context binding and no exclusive role-assignment claim. Public activation remains held.
+
+- Prepared configuration for private producer `2eaadb153dae8d2fdd5538ce45e05f6f68c7212d` and its approved policy hash; public deployment and full baseline qualification remain pending.

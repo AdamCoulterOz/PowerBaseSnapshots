@@ -33,6 +33,7 @@ jobs:
           POWERSPEC_AUTH_MODE: github-oidc
           POWERSPEC_AZURE_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
           POWERSPEC_AZURE_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
+          POWERSPEC_INSTRUMENTATION_ROLE_ID: ${{ vars.POWERSPEC_INSTRUMENTATION_ROLE_ID }}
           PRODUCER_SSH_KEY: ${{ secrets.PRODUCER_SSH_KEY }}
           PIPELINE_MODE: ${{ inputs.mode || 'run' }}
         run: python3 pipeline/run.py --workdir "$RUNNER_TEMP" --mode "$PIPELINE_MODE"

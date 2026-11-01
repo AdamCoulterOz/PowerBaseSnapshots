@@ -15,6 +15,7 @@ import tempfile
 import urllib.error
 import urllib.parse
 import urllib.request
+import uuid
 
 # GitHub's published Ed25519 host key: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints
 GITHUB_HOST_KEY = 'github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl\n'
@@ -23,6 +24,8 @@ VERSION = re.compile(r'^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$')
 SHA = re.compile(r'^[0-9a-f]{40}$')
 SHA256 = re.compile(r'^[0-9a-f]{64}$')
 PROFILE = re.compile(r'^[a-z0-9][a-z0-9-]{0,63}$')
+MAX_GIT_BLOB_BYTES = 100 * 1024 * 1024
+MAX_PUSH_PACK_BYTES = 2 * 1024 * 1024 * 1024 - 64 * 1024 * 1024
 
 class Hold(Exception): pass
 
@@ -46,6 +49,16 @@ def load(path):
             result[key] = value
         return result
     return json.loads(Path(path).read_text(encoding='utf-8'), parse_constant=reject_constant, object_pairs_hook=unique_pairs)
+
+
+def instrumentation_arguments():
+    try:
+        client = uuid.UUID(os.environ.get('POWERSPEC_AZURE_CLIENT_ID', ''))
+        role = uuid.UUID(os.environ.get('POWERSPEC_INSTRUMENTATION_ROLE_ID', ''))
+        if not client.int or not role.int: raise ValueError('nil identifier')
+    except (ValueError, TypeError, AttributeError):
+        raise Hold('Instrumentation client and role configuration is missing or invalid.') from None
+    return ['--instrumentation-client-id', str(client), '--instrumentation-role-id', str(role)]
 
 
 def version(value):
@@ -185,6 +198,100 @@ def canonical(value):
     return (json.dumps(value, sort_keys=True, separators=(',', ':'), ensure_ascii=False, allow_nan=False) + '\n').encode()
 
 
+def file_hash(path, algorithm, prefix=b''):
+    digest = hashlib.new(algorithm)
+    digest.update(prefix)
+    with Path(path).open('rb') as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b''):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def verify_staged_publication(repo, snapshot, attested_files, support_files, allowed):
+    """Verify each indexed blob matches the checked worktree, including ignored files."""
+    repo = Path(repo); snapshot = Path(snapshot)
+    expected = [(snapshot / item['path'], item['sha256'], item['bytes']) for item in attested_files]
+    expected += [(path, hashlib.sha256(data).hexdigest(), len(data)) for path, data in support_files.items()]
+    expected_blobs = {}
+    for path, expected_sha, expected_size in expected:
+        if path.is_symlink() or not path.is_file(): raise Hold('Publication file is unsafe.')
+        size = path.stat().st_size
+        if size > MAX_GIT_BLOB_BYTES: raise Hold('Publication exceeds the GitHub object size limit.')
+        if size != expected_size or file_hash(path, 'sha256') != expected_sha: raise Hold('Publication file differs from verified evidence.')
+        relative = path.relative_to(repo).as_posix()
+        expected_blobs[relative] = file_hash(path, 'sha1', f'blob {size}\0'.encode())
+    result = subprocess.run(['git', 'ls-files', '--stage', '-z', '--', *allowed], cwd=repo,
+                            stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    if result.returncode: raise Hold('Publication index verification failed.')
+    actual = {}
+    try:
+        for entry in result.stdout.split(b'\0'):
+            if not entry: continue
+            metadata, path = entry.split(b'\t', 1)
+            mode, oid, stage = metadata.decode('ascii').split(' ')
+            path = path.decode('utf-8')
+            if mode not in ('100644', '100755') or stage != '0' or path in actual: raise ValueError()
+            actual[path] = oid
+    except (ValueError, UnicodeDecodeError):
+        raise Hold('Publication index verification failed.') from None
+    if actual != expected_blobs: raise Hold('Staged publication differs from verified files.')
+    changes = subprocess.run(['git', 'diff', '--cached', '--name-only', '--no-renames', '-z'], cwd=repo,
+                             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    if changes.returncode: raise Hold('Publication index verification failed.')
+    try:
+        paths = [item.decode('utf-8') for item in changes.stdout.split(b'\0') if item]
+    except UnicodeDecodeError:
+        raise Hold('Publication index verification failed.') from None
+    if any(not any(path == item or path.startswith(item + '/') for item in allowed) for path in paths):
+        raise Hold('Staged changes outside publication paths.')
+    return expected_blobs
+
+
+def verify_commit_objects(repo, commit, expected_tree, previous_head, expected_blobs, allowed):
+    if not all(SHA.fullmatch(x) for x in (commit, expected_tree, previous_head)):
+        raise Hold('Invalid publication object identifier.')
+    raw = execute(['git', 'cat-file', '-p', commit], cwd=repo).stdout.split('\n\n', 1)[0].splitlines()
+    trees = [line[5:] for line in raw if line.startswith('tree ')]
+    parents = [line[7:] for line in raw if line.startswith('parent ')]
+    if trees != [expected_tree] or parents != [previous_head]: raise Hold('Publication commit does not match the verified index and parent.')
+    result = subprocess.run(['git', 'ls-tree', '-r', '-z', commit, '--', *allowed], cwd=repo,
+                            stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    if result.returncode: raise Hold('Publication commit verification failed.')
+    actual = {}
+    try:
+        for entry in result.stdout.split(b'\0'):
+            if not entry: continue
+            metadata, path = entry.split(b'\t', 1)
+            mode, kind, oid = metadata.decode('ascii').split(' ')
+            path = path.decode('utf-8')
+            if mode not in ('100644', '100755') or kind != 'blob' or path in actual: raise ValueError()
+            actual[path] = oid
+    except (ValueError, UnicodeDecodeError):
+        raise Hold('Publication commit verification failed.') from None
+    if actual != expected_blobs: raise Hold('Publication commit files differ from verified index.')
+
+
+def verify_publication_refs(repo, branch, commit, tag, tag_oid):
+    if not all(SHA.fullmatch(x) for x in (commit, tag_oid)): raise Hold('Invalid publication object identifier.')
+    if execute(['git', 'rev-parse', 'HEAD'], cwd=repo).stdout.strip() != commit or execute(['git', 'rev-parse', 'refs/heads/' + branch], cwd=repo).stdout.strip() != commit:
+        raise Hold('Publication branch changed before push.')
+    if execute(['git', 'rev-parse', 'refs/tags/' + tag], cwd=repo).stdout.strip() != tag_oid or execute(['git', 'cat-file', '-t', tag_oid], cwd=repo).stdout.strip() != 'tag':
+        raise Hold('Publication tag changed before push.')
+    header = execute(['git', 'cat-file', '-p', tag_oid], cwd=repo).stdout.split('\n\n', 1)[0].splitlines()
+    if header[:3] != ['object ' + commit, 'type commit', 'tag ' + tag]: raise Hold('Publication tag does not identify verified commit.')
+
+
+def verify_push_pack(repo, previous_head, commit, tag_oid):
+    """Measure the actual outgoing pack, reserving space for protocol overhead."""
+    if not all(SHA.fullmatch(x) for x in (previous_head, commit, tag_oid)): raise Hold('Invalid publication object identifier.')
+    with tempfile.TemporaryFile() as pack:
+        result = subprocess.run(['git', 'pack-objects', '--stdout', '--revs'], cwd=repo,
+                                input=f'{commit}\n{tag_oid}\n^{previous_head}\n'.encode(),
+                                stdout=pack, stderr=subprocess.PIPE)
+        if result.returncode: raise Hold('Publication pack measurement failed.')
+        if pack.tell() > MAX_PUSH_PACK_BYTES: raise Hold('Publication pack exceeds the safe GitHub push limit.')
+
+
 def tree_hash(root):
     root = Path(root)
     if root.is_symlink() or not root.is_dir(): raise Hold('Unsafe snapshot root.')
@@ -195,7 +302,7 @@ def tree_hash(root):
         if not path.is_file(): raise Hold('Snapshot contains a nonregular file.')
         rel = path.relative_to(root).as_posix()
         if any(x in ('', '.', '..') for x in PurePosixPath(rel).parts): raise Hold('Unsafe snapshot path.')
-        files.append({'path': rel, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest(), 'bytes': path.stat().st_size})
+        files.append({'path': rel, 'sha256': file_hash(path, 'sha256'), 'bytes': path.stat().st_size})
     return hashlib.sha256(canonical(files)).hexdigest(), files
 
 
@@ -225,6 +332,74 @@ def public_index(root):
     actual = {item['path'].casefold(): (item['path'], item['sha256']) for item in files if item['path'] != 'manifest.json'}
     if index != actual: raise Hold('Public manifest does not match subtree.')
     return digest, files, {value[0]:value[1] for value in index.values()}
+
+
+ACQUISITION_STAGES = frozenset((
+    'discovery', 'inventory', 'config-capture', 'config-compile', 'registered-capture',
+    'legacy-capture', 'contained-metadata', 'contained-components', 'contained-initial',
+    'contained-layers', 'contained-final', 'registered-files', 'base-reconcile',
+    'publisher-evidence', 'scope-preflight', 'reference-capture', 'registered-reconcile',
+    'registered-identities', 'ribbon-capture', 'representation-initial',
+    'nonmaterialization', 'representation', 'operational-scope', 'projection-initial',
+    'projection-replay', 'final-discovery', 'final-inventory', 'coverage'))
+
+
+def acquisition_failure_summary(root):
+    """Return only fixed-schema, bounded diagnostics; discard everything else."""
+    generic = {'status': 'unavailable'}
+    try:
+        report = _safe_json(root, 'acquisition.json')
+        allowed = {'schemaVersion', 'kind', 'profile', 'inputSha256', 'stages',
+                   'consistency', 'fullConfigurationComplete', 'publicationQualified',
+                   'nonmaterializationEvidence', 'projectionReproducible', 'instrumentationContextSha256'}
+        if (not isinstance(report, dict) or set(report) - allowed
+                or type(report.get('schemaVersion')) is not int or report['schemaVersion'] != 1
+                or report.get('kind') != 'private-baseline-acquisition-v1'
+                or not isinstance(report.get('stages'), list)):
+            return generic
+        context_hash = report.get('instrumentationContextSha256')
+        if context_hash is not None and (not isinstance(context_hash, str) or not SHA256.fullmatch(context_hash)): return generic
+        stages = []
+        seen = set()
+        for row in report['stages']:
+            if not isinstance(row, dict) or set(row) - {'name', 'status', 'exitCode', 'dependencies', 'reason', 'reportSha256', 'bundleSha256'}:
+                return generic
+            name, status = row.get('name'), row.get('status')
+            if name not in ACQUISITION_STAGES or name in seen or status not in ('complete', 'partial', 'failed', 'blocked'):
+                return generic
+            seen.add(name)
+            code = row.get('exitCode')
+            if status == 'blocked':
+                deps = row.get('dependencies')
+                if 'exitCode' in row or not isinstance(deps, list) or any(x not in ACQUISITION_STAGES for x in deps): return generic
+            elif type(code) is not int or code != {'complete': 0, 'failed': 1, 'partial': 2}[status]:
+                return generic
+            if 'reason' in row and row['reason'] != 'missing hashed stage reports': return generic
+            for key in ('reportSha256', 'bundleSha256'):
+                if key in row and (not isinstance(row[key], str) or not SHA256.fullmatch(row[key])): return generic
+            if status != 'complete':
+                item = {'stage': name, 'status': status}
+                if code is not None: item['exitCode'] = code
+                stages.append(item)
+        result = {'status': 'incomplete', 'stages': stages}
+        coverage_path = root / 'coverage' / 'coverage.json'
+        if coverage_path.exists() or coverage_path.is_symlink():
+            coverage = _safe_json(root, 'coverage/coverage.json')
+            if (not isinstance(coverage, dict) or set(coverage) != {'schemaVersion', 'kind', 'profile', 'organizationVersion', 'types', 'requiredGateResults', 'diagnostics', 'summary', 'complete', 'interpretation'}
+                    or type(coverage.get('schemaVersion')) is not int or coverage['schemaVersion'] != 2
+                    or coverage.get('kind') != 'baseline-coverage-v2'):
+                return generic
+            gates = coverage.get('requiredGateResults')
+            if not isinstance(gates, dict) or set(gates) != set(REQUIRED_GATES) or any(type(v) is not bool for v in gates.values()): return generic
+            diagnostics = coverage.get('diagnostics')
+            if not isinstance(diagnostics, dict) or set(diagnostics) != {'dependencyOnlyAcquisition', 'scopeUnresolvedMembershipRows', 'referenceClosure', 'importReadiness', 'producerPublicProjectionQualified'}: return generic
+            count = diagnostics.get('scopeUnresolvedMembershipRows')
+            if type(count) is not int or not 0 <= count <= 2**31-1: return generic
+            result['requiredGateResults'] = gates
+            result['counts'] = {'scopeUnresolvedMembershipRows': count}
+        return result
+    except (OSError, ValueError, TypeError, KeyError, Hold, RecursionError):
+        return generic
 
 
 def verify_publication(root, c, v, attestation):
@@ -597,6 +772,7 @@ def main():
     if args.mode != 'diagnose' and existing_tag(repo, tag, c, v): print('Already published and verified.'); return 0
     if args.mode == 'check': print('New sentinel version; publication is not yet established.'); return 0
     if not SHA.fullmatch(c.get('producerCommit') or ''): raise Hold('Producer revision is not configured.')
+    instrumentation = instrumentation_arguments() if args.mode == 'run' else []
     base = Path(args.workdir).resolve(strict=True)
     with tempfile.TemporaryDirectory(prefix='powerspec-private-', dir=base) as tmp:
         private = Path(tmp)
@@ -613,12 +789,14 @@ def main():
             acquisition = private/'acquisition'; attestation_path = private/'publication-attestation.json'
             print('Stage: baseline acquisition.', flush=True)
             result = execute([sys.executable, str(cli), 'acquire-baseline', '--environment', origin,
-                              '--profile', c['profile'], '--output', str(acquisition)], allowed=(0,2), phase='Acquisition')
-            if result.returncode != 0: raise Hold('Baseline acquisition incomplete; publication withheld.')
+                              '--profile', c['profile'], '--output', str(acquisition), *instrumentation], allowed=(0,1,2), phase='Acquisition')
+            if result.returncode != 0:
+                print('Acquisition diagnostics: ' + json.dumps(acquisition_failure_summary(acquisition), sort_keys=True, separators=(',', ':')), flush=True)
+                raise Hold('Baseline acquisition incomplete; publication withheld.')
             print('Stage: publication finalization.', flush=True)
             execute([sys.executable, str(cli), 'finalize-publication', '--acquisition', str(acquisition),
                      '--producer-root', str(producer), '--producer-commit', c['producerCommit'],
-                     '--output', str(attestation_path)], phase='Finalization')
+                     '--output', str(attestation_path), *instrumentation], phase='Finalization')
             if sentinel(origin) != v: raise Hold('Sentinel version changed during capture.')
             if not attestation_path.is_file() or attestation_path.is_symlink(): raise Hold('Qualified publication attestation is unavailable.')
             snapshot = acquisition/'projection'/'public'
@@ -676,10 +854,24 @@ def main():
         attestation_file.write_bytes(canonical(load(attestation_path)))
         diff_file.parent.mkdir(parents=True,exist_ok=True);diff_file.write_bytes(canonical(delta))
         allowed = [str(prior.relative_to(repo)), str(version_file.relative_to(repo)), str(attestation_file.relative_to(repo)), str(diff_file.relative_to(repo))]
+        if verify_publication(prior, c, v, load(attestation_file)) != digest: raise Hold('Copied publication differs from attestation.')
+        for file in [*(prior / item['path'] for item in tree_hash(prior)[1]), version_file, attestation_file, diff_file]:
+            if file.stat().st_size > MAX_GIT_BLOB_BYTES: raise Hold('Publication exceeds the GitHub object size limit.')
         execute(['git', 'add', '-A', '--', *allowed], cwd=repo)
-        execute(['git', '-c', 'user.name=PowerBaseSnapshots automation', '-c', 'user.email=41898282+github-actions[bot]@users.noreply.github.com', 'commit', '-m', 'Capture service ' + v], cwd=repo)
-        execute(['git', '-c', 'user.name=PowerBaseSnapshots automation', '-c', 'user.email=41898282+github-actions[bot]@users.noreply.github.com', 'tag', '-a', tag, '-m', canonical(evidence).decode()], cwd=repo)
-        execute(['git', 'push', '--atomic', 'origin', 'HEAD:refs/heads/' + branch, 'refs/tags/' + tag], cwd=repo)
+        attestation = load(attestation_path)
+        verified_tree = execute(['git', 'write-tree'], cwd=repo).stdout.strip()
+        blobs = verify_staged_publication(repo, prior, attestation['publicFiles'],
+                                          {version_file: canonical(evidence), attestation_file: canonical(attestation), diff_file: canonical(delta)}, allowed)
+        if execute(['git', 'write-tree'], cwd=repo).stdout.strip() != verified_tree: raise Hold('Publication index changed during verification.')
+        execute(['git', '-c', 'core.hooksPath=/dev/null', '-c', 'user.name=PowerBaseSnapshots automation', '-c', 'user.email=41898282+github-actions[bot]@users.noreply.github.com', 'commit', '-m', 'Capture service ' + v], cwd=repo)
+        commit = execute(['git', 'rev-parse', 'HEAD'], cwd=repo).stdout.strip()
+        verify_commit_objects(repo, commit, verified_tree, head, blobs, allowed)
+        execute(['git', '-c', 'core.hooksPath=/dev/null', '-c', 'user.name=PowerBaseSnapshots automation', '-c', 'user.email=41898282+github-actions[bot]@users.noreply.github.com', 'tag', '-a', tag, '-m', canonical(evidence).decode()], cwd=repo)
+        tag_oid = execute(['git', 'rev-parse', 'refs/tags/' + tag], cwd=repo).stdout.strip()
+        verify_publication_refs(repo, branch, commit, tag, tag_oid)
+        verify_push_pack(repo, head, commit, tag_oid)
+        verify_publication_refs(repo, branch, commit, tag, tag_oid)
+        execute(['git', 'push', '--atomic', 'origin', commit + ':refs/heads/' + branch, tag_oid + ':refs/tags/' + tag], cwd=repo)
     print('Attested service snapshot published.'); return 0
 
 

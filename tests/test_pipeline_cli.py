@@ -267,7 +267,7 @@ class PublicationFixture(unittest.TestCase):
         self.config=self.root/'config.json';self.config.write_text(json.dumps({'schemaVersion':1,'producerRepository':'AdamCoulterOz/PowerSpec','producerCommit':self.producer_sha,'profile':'synthetic','approvedPolicySha256':self.policy_sha, **policy}))
         self.work=self.root/'private';self.work.mkdir()
         bindir=self.root/'bin';bindir.mkdir();az=bindir/'az';az.write_text("#!/bin/sh\nprintf called >> \"$TEST_AZ_CALLS\"\nprintf '%s' '{\"accessToken\":\"synthetic\"}'\n");az.chmod(0o755)
-        self.env=dict(os.environ,PATH=str(bindir)+os.pathsep+os.environ.get('PATH',''),PYTHONPATH=str(ROOT/'fixtures'),SENTINEL_URL='https://synthetic.crm.dynamics.com',TEST_SENTINEL_CALLS=str(self.root/'sentinel-calls'),TEST_SENTINEL_VERSIONS='1.2.3.4',TEST_VERSION='1.2.3.4',TEST_PROFILE='synthetic',TEST_PRODUCER_SHA=self.producer_sha,TEST_POLICY_HASH=self.policy_sha,TEST_AZ_CALLS=str(self.root/'az-calls'),TEST_ACTIONS=str(self.root/'actions'))
+        self.env=dict(os.environ,PATH=str(bindir)+os.pathsep+os.environ.get('PATH',''),PYTHONPATH=str(ROOT/'fixtures'),SENTINEL_URL='https://synthetic.crm.dynamics.com',TEST_SENTINEL_CALLS=str(self.root/'sentinel-calls'),TEST_SENTINEL_VERSIONS='1.2.3.4',TEST_VERSION='1.2.3.4',TEST_PROFILE='synthetic',TEST_PRODUCER_SHA=self.producer_sha,TEST_POLICY_HASH=self.policy_sha,TEST_AZ_CALLS=str(self.root/'az-calls'),TEST_ACTIONS=str(self.root/'actions'),POWERSPEC_AZURE_CLIENT_ID='11111111-1111-1111-1111-111111111111',POWERSPEC_INSTRUMENTATION_ROLE_ID='22222222-2222-2222-2222-222222222222',TEST_INSTRUMENTATION_CLIENT='11111111-1111-1111-1111-111111111111',TEST_INSTRUMENTATION_ROLE='22222222-2222-2222-2222-222222222222')
 
     def tearDown(self): self.tmp.cleanup()
     def git(self,cwd,*args): return subprocess.run(['git',*args],cwd=cwd,capture_output=True,text=True,check=True)
@@ -283,12 +283,24 @@ class PublicationFixture(unittest.TestCase):
         delta=json.loads((self.repo/'diffs/synthetic/1.2.3.4.json').read_text());self.assertIsNone(delta['previousPublicSubtreeSha256']);self.assertEqual([x['path'] for x in delta['added']],['family/one.json'])
         self.assertEqual((self.root/'actions').read_text().splitlines(), ['acquire-baseline','finalize-publication'])
         self.assertNotIn('SYNTHETIC_PRIVATE_CAPTURE_PAYLOAD', result.stdout + result.stderr)
+        self.assertNotIn(self.env['POWERSPEC_AZURE_CLIENT_ID'], result.stdout + result.stderr)
+        self.assertNotIn(self.env['POWERSPEC_INSTRUMENTATION_ROLE_ID'], result.stdout + result.stderr)
         files = self.git(self.repo,'ls-files').stdout
         self.assertNotIn('raw-private.txt', files)
         search=subprocess.run(['git','grep','-l','SYNTHETIC_PRIVATE_CAPTURE_PAYLOAD','HEAD'],cwd=self.repo,capture_output=True,text=True)
         self.assertEqual(search.returncode,1)
         result=self.run_cli();self.assertEqual(result.returncode,0,result.stdout+result.stderr)
         self.assertEqual(self.git(self.repo,'rev-parse','HEAD').stdout,head)
+    def test_publication_disables_commit_hook_and_publishes_exact_tree(self):
+        hook = self.repo/'.git'/'hooks'/'pre-commit'
+        hook.write_text('#!/bin/sh\nprintf injected > unapproved\ngit add unapproved\n')
+        hook.chmod(0o755)
+        result = self.run_cli()
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertFalse((self.repo/'unapproved').exists())
+        self.assertNotIn('unapproved', self.git(self.repo, 'ls-tree', '-r', '--name-only', 'HEAD').stdout)
+        self.assertIn('refs/tags/service/1.2.3.4', self.tags())
+
     def test_unqualified_cases_hold_without_publication(self):
         for mode in ('capture-partial','no-attestation','attestation','hash','escape','symlink','unknown-scope','partial-gate','secretpath'):
             with self.subTest(mode=mode):
@@ -296,6 +308,23 @@ class PublicationFixture(unittest.TestCase):
                 result=self.run_cli();self.assertEqual(result.returncode,2,result.stdout+result.stderr)
                 self.assertEqual(self.tags(),'')
                 self.assertNotIn('synthetic',result.stdout+result.stderr)
+    def test_missing_or_invalid_instrumentation_holds_before_capture(self):
+        for value in ('', 'not-a-uuid', '00000000-0000-0000-0000-000000000000'):
+            with self.subTest(value=value):
+                self.env['POWERSPEC_INSTRUMENTATION_ROLE_ID'] = value
+                result = self.run_cli()
+                self.assertEqual(result.returncode, 2)
+                self.assertIn('Instrumentation client and role configuration is missing or invalid.', result.stderr)
+                self.assertFalse((self.root/'actions').exists())
+                self.assertEqual(self.tags(), '')
+
+    def test_different_expected_pair_holds_at_producer(self):
+        self.env['TEST_INSTRUMENTATION_ROLE'] = '33333333-3333-3333-3333-333333333333'
+        result = self.run_cli()
+        self.assertEqual(result.returncode, 2)
+        self.assertNotIn(self.env['POWERSPEC_INSTRUMENTATION_ROLE_ID'], result.stdout + result.stderr)
+        self.assertEqual(self.tags(), '')
+
     def test_version_changed_during_capture_holds(self):
         self.env['TEST_SENTINEL_VERSIONS']='1.2.3.4,1.2.3.5'
         result=self.run_cli();self.assertEqual(result.returncode,2,result.stdout+result.stderr);self.assertEqual(self.tags(),'')
@@ -405,3 +434,153 @@ class PublicationFixture(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+class AcquisitionFailureSummaryTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        spec = importlib.util.spec_from_file_location('failure_controller', CLI)
+        self.controller = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(self.controller)
+
+    def write_report(self, stages):
+        (self.root / 'acquisition.json').write_text(json.dumps({
+            'schemaVersion': 1, 'kind': 'private-baseline-acquisition-v1',
+            'profile': 'secret-host/private-path', 'inputSha256': {}, 'stages': stages,
+            'consistency': 'not-evaluated', 'fullConfigurationComplete': False,
+            'publicationQualified': False}))
+
+    def test_partial_stage_and_coverage_expose_only_allowlisted_facts(self):
+        self.write_report([{'name': 'representation', 'status': 'partial', 'exitCode': 2},
+                           {'name': 'coverage', 'status': 'blocked', 'dependencies': ['representation']}])
+        (self.root / 'coverage').mkdir()
+        gates = {name: False for name in self.controller.REQUIRED_GATES}
+        (self.root / 'coverage' / 'coverage.json').write_text(json.dumps({
+            'schemaVersion': 2, 'kind': 'baseline-coverage-v2', 'profile': 'secret',
+            'organizationVersion': 'secret', 'types': [{'secret': 'private-path'}],
+            'requiredGateResults': gates, 'diagnostics': {
+                'dependencyOnlyAcquisition': 'secret', 'scopeUnresolvedMembershipRows': 3,
+                'referenceClosure': 'secret', 'importReadiness': 'secret',
+                'producerPublicProjectionQualified': False}, 'summary': {},
+            'complete': False, 'interpretation': 'private-path'}))
+        result = self.controller.acquisition_failure_summary(self.root)
+        self.assertEqual(result['stages'], [{'stage': 'representation', 'status': 'partial', 'exitCode': 2},
+                                            {'stage': 'coverage', 'status': 'blocked'}])
+        self.assertEqual(result['requiredGateResults'], gates)
+        self.assertEqual(result['counts'], {'scopeUnresolvedMembershipRows': 3})
+        self.assertNotIn('secret', json.dumps(result))
+        self.assertNotIn('private-path', json.dumps(result))
+
+    def test_frozen_stage_manifest_schema_is_accepted(self):
+        stages = [{'name': name, 'status': 'complete', 'exitCode': 0,
+                   'reportSha256': 'a' * 64}
+                  for name in sorted(self.controller.ACQUISITION_STAGES) if name != 'coverage']
+        stages.append({'name': 'coverage', 'status': 'blocked',
+                       'dependencies': ['projection-replay'], 'reason': 'missing hashed stage reports'})
+        stages[0]['bundleSha256'] = 'b' * 64
+        self.write_report(stages)
+        report = json.loads((self.root / 'acquisition.json').read_text())
+        report['nonmaterializationEvidence'] = {'private': 'ignored'}
+        report['projectionReproducible'] = False
+        report['instrumentationContextSha256'] = 'c' * 64
+        (self.root / 'acquisition.json').write_text(json.dumps(report))
+        result = self.controller.acquisition_failure_summary(self.root)
+        self.assertEqual(result, {'status': 'incomplete', 'stages': [{'stage': 'coverage', 'status': 'blocked'}]})
+
+    def test_hostile_and_unknown_fields_are_generic(self):
+        for row in ({'name': 'https://private.example/path', 'status': 'failed', 'exitCode': 1},
+                    {'name': 'coverage', 'status': 'failed', 'exitCode': 1, 'error': 'secret/path'},
+                    {'name': 'coverage', 'status': 'failed', 'exitCode': 1, 'reason': 'secret/path'},
+                    {'name': 'coverage', 'status': 'failed', 'exitCode': True}):
+            with self.subTest(row=row):
+                self.write_report([row])
+                result = self.controller.acquisition_failure_summary(self.root)
+                self.assertEqual(result, {'status': 'unavailable'})
+                self.assertNotIn('secret', json.dumps(result))
+        (self.root / 'acquisition.json').unlink()
+        (self.root / 'acquisition.json').symlink_to('/etc/passwd')
+        self.assertEqual(self.controller.acquisition_failure_summary(self.root), {'status': 'unavailable'})
+
+class PublicationPreflightTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory(); self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        spec = importlib.util.spec_from_file_location('preflight_controller', CLI)
+        self.controller = importlib.util.module_from_spec(spec); spec.loader.exec_module(self.controller)
+        self.git('init', '-q'); self.git('config', 'user.name', 'Fixture'); self.git('config', 'user.email', 'fixture@example.invalid')
+        (self.root/'base').write_text('base'); self.git('add', 'base'); self.git('commit', '-qm', 'base')
+        self.previous = self.git('rev-parse', 'HEAD').strip()
+        self.snapshot = self.root/'baselines'/'profile'; self.snapshot.mkdir(parents=True)
+        self.data = self.snapshot/'data.json'; self.data.write_bytes(b'approved data')
+        self.support = self.root/'versions'/'evidence.json'; self.support.parent.mkdir(); self.support.write_bytes(b'approved evidence')
+        self.allowed = ['baselines/profile', 'versions/evidence.json']
+        self.attested = [{'path':'data.json', 'sha256':hashlib.sha256(b'approved data').hexdigest(), 'bytes':13}]
+
+    def git(self, *args):
+        return subprocess.run(['git', *args], cwd=self.root, capture_output=True, text=True, check=True).stdout
+
+    def verify(self):
+        self.controller.verify_staged_publication(self.root, self.snapshot, self.attested,
+                                                  {self.support:b'approved evidence'}, self.allowed)
+
+    def test_staged_exact_bytes_and_index_tampering(self):
+        self.git('add', '-A', '--', *self.allowed); self.verify()
+        self.data.write_bytes(b'tampered data'); self.git('add', str(self.data.relative_to(self.root)))
+        self.data.write_bytes(b'approved data')
+        with self.assertRaises(self.controller.Hold): self.verify()
+
+    def test_ignored_attested_file_fails_index_check(self):
+        (self.root/'.gitignore').write_text('data.json\n')
+        self.git('add', '-A', '--', *self.allowed)
+        with self.assertRaises(self.controller.Hold): self.verify()
+
+    def test_object_limit_holds(self):
+        self.git('add', '-A', '--', *self.allowed)
+        with patch.object(self.controller, 'MAX_GIT_BLOB_BYTES', 12):
+            with self.assertRaises(self.controller.Hold): self.verify()
+
+    def test_pack_measured_for_commit_and_tag_and_limit_holds(self):
+        self.git('add', '-A', '--', *self.allowed); self.verify()
+        self.git('commit', '-qm', 'snapshot'); self.git('tag', '-a', 'service/1.2.3.4', '-m', 'evidence')
+        commit = self.git('rev-parse', 'HEAD').strip(); tag = self.git('rev-parse', 'refs/tags/service/1.2.3.4').strip()
+        self.controller.verify_push_pack(self.root, self.previous, commit, tag)
+        with patch.object(self.controller, 'MAX_PUSH_PACK_BYTES', 1):
+            with self.assertRaises(self.controller.Hold): self.controller.verify_push_pack(self.root, self.previous, commit, tag)
+
+    def test_extra_staged_path_is_rejected(self):
+        self.git('add', '-A', '--', *self.allowed)
+        (self.root/'unapproved').write_text('unapproved'); self.git('add', 'unapproved')
+        with self.assertRaises(self.controller.Hold): self.verify()
+
+    def test_commit_hook_tampering_fails_tree_verification(self):
+        self.git('add', '-A', '--', *self.allowed)
+        tree = self.git('write-tree').strip()
+        blobs = self.controller.verify_staged_publication(self.root, self.snapshot, self.attested,
+                                                          {self.support:b'approved evidence'}, self.allowed)
+        hook = self.root/'.git'/'hooks'/'pre-commit'
+        hook.write_text('#!/bin/sh\nprintf bad > unapproved\ngit add unapproved\n')
+        hook.chmod(0o755)
+        self.git('commit', '-qm', 'hook tampered')
+        commit = self.git('rev-parse', 'HEAD').strip()
+        with self.assertRaises(self.controller.Hold):
+            self.controller.verify_commit_objects(self.root, commit, tree, self.previous, blobs, self.allowed)
+
+    def test_changed_branch_or_tag_ref_holds(self):
+        self.git('add', '-A', '--', *self.allowed); self.verify()
+        tree = self.git('write-tree').strip()
+        blobs = self.controller.verify_staged_publication(self.root, self.snapshot, self.attested,
+                                                          {self.support:b'approved evidence'}, self.allowed)
+        self.git('-c', 'core.hooksPath=/dev/null', 'commit', '-qm', 'snapshot')
+        commit = self.git('rev-parse', 'HEAD').strip()
+        self.controller.verify_commit_objects(self.root, commit, tree, self.previous, blobs, self.allowed)
+        self.git('tag', '-a', 'service/1.2.3.4', '-m', 'evidence')
+        tag = self.git('rev-parse', 'refs/tags/service/1.2.3.4').strip()
+        branch = self.git('branch', '--show-current').strip()
+        self.controller.verify_publication_refs(self.root, branch, commit, 'service/1.2.3.4', tag)
+        self.git('tag', '-f', 'service/1.2.3.4', self.previous)
+        with self.assertRaises(self.controller.Hold):
+            self.controller.verify_publication_refs(self.root, branch, commit, 'service/1.2.3.4', tag)
+        self.git('reset', '--hard', self.previous)
+        with self.assertRaises(self.controller.Hold):
+            self.controller.verify_publication_refs(self.root, branch, commit, 'service/1.2.3.4', tag)
