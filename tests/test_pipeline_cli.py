@@ -704,3 +704,29 @@ class MetadataSummarySafetyTests(unittest.TestCase):
             summary=m.metadata_capture_summary(root)
             self.assertEqual(len(summary['failedSources']),20);self.assertEqual(summary['omittedFailures'],5)
             self.assertEqual(summary['failedSources'][0]['reasonCategory'],'identity-mismatch')
+
+class AcquisitionEvidenceSummaryTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp=tempfile.TemporaryDirectory(); self.addCleanup(self.tmp.cleanup); self.root=Path(self.tmp.name)
+        spec=importlib.util.spec_from_file_location('evidence_summary',CLI); self.controller=importlib.util.module_from_spec(spec); spec.loader.exec_module(self.controller)
+    def write(self,name,value):
+        path=self.root/name;path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(value))
+    def test_scoped_counts_and_allowlisted_projection_only(self):
+        scope={'schemaVersion':1,'kind':'solution-membership-scope-v1','entries':[{'componentType':2,'disposition':'unresolved','objectId':'SECRET'}, {'componentType':2,'disposition':'unresolved'}, {'componentType':9,'disposition':'required'}]}
+        self.write('scope-preflight/scope-ledger.json',scope);self.write('projection/scope-ledger.json',scope)
+        self.write('nonmaterialization/nonmaterialization.json',{'schemaVersion':1,'kind':'membership-nonmaterialization-v1','observations':[{'componentType':2,'qualified':True,'evidence':'SECRET'}, {'componentType':2,'qualified':False}]})
+        projection={'schemaVersion':1,'kind':'private-public-projection-candidate-v1', 'sourceVerified':True,'sourceComplete':False,'contentComplete':False,'fieldPolicyComplete':False,'lossAccountingComplete':True,'reproducible':True,'uniqueUnclassifiedFieldCount':3,'unclassifiedFields':[{'field':'SECRET'}], 'diagnosticCounts':{'scope-unresolved-membership':2,'secret-path':99}}
+        self.write('projection/projection.json',projection)
+        r=self.controller.acquisition_evidence_summary(self.root)
+        self.assertEqual(r['preliminaryScope'],[{'componentType':2,'category':'unresolved','count':2}]);self.assertEqual(r['finalScope'],r['preliminaryScope'])
+        self.assertEqual(r['nonmaterialization'],[{'componentType':2,'category':'qualified','count':1},{'componentType':2,'category':'unqualified','count':1}])
+        self.assertEqual(r['projection']['diagnosticCounts'],{'scope-unresolved-membership':2});self.assertEqual(r['projection']['unclassifiedFieldCount'],3)
+        self.assertNotIn('SECRET',json.dumps(r));self.assertNotIn('secret-path',json.dumps(r))
+        projection['reproducible']=None;self.write('projection/projection.json',projection)
+        self.assertNotIn('reproducible',self.controller.acquisition_evidence_summary(self.root)['projection']['gates'])
+    def test_bad_optional_report_does_not_suppress_other_evidence(self):
+        self.write('scope-preflight/scope-ledger.json',{'schemaVersion':1,'kind':'solution-membership-scope-v1','entries':[{'componentType':'PRIVATE','disposition':'unresolved'}]})
+        self.write('nonmaterialization/nonmaterialization.json',{'schemaVersion':1,'kind':'membership-nonmaterialization-v1','observations':[{'componentType':1,'qualified':False}]})
+        r=self.controller.acquisition_evidence_summary(self.root)
+        self.assertEqual(r['preliminaryScope'],{'status':'unavailable'});self.assertEqual(r['nonmaterialization'][0]['count'],1)
+        self.assertNotIn('PRIVATE',json.dumps(r))

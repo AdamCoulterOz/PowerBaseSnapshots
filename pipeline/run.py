@@ -407,6 +407,73 @@ def acquisition_failure_summary(root, *, include_complete=False):
         return generic
 
 
+TELEMETRY_DIAGNOSTIC_KEYS = frozenset((
+    'scope-unresolved-membership', 'foundation-membership-not-acquired',
+    'reference-evidence-incomplete', 'operational-scope-incomplete',
+    'required-representation-missing', 'required-identity-unresolved',
+    'unclassified-family', 'unclassified-field', 'typed-reference-unresolved',
+    'opaque-content-policy-unqualified', 'declared-secret-present',
+    'unmanaged-effective-record-needs-attribution', 'file-content-unavailable',
+    'metadata-source-incomplete-or-mismatch', 'metadata-nested-continuation',
+    'metadata-unclassified-field', 'metadata-selected-tables-missing',
+    'metadata-selected-columns-missing', 'table-attributes-unavailable',
+    'table-schema-identity-missing', 'column-schema-identity-missing'))
+
+
+def acquisition_evidence_summary(root):
+    """Aggregate bounded facts from optional private reports without emitting their contents."""
+    result = {}
+    def bounded(value):
+        if type(value) is not int or not 0 <= value <= 2**31-1: raise ValueError('Invalid count')
+        return value
+    def grouped(rows, classify):
+        if not isinstance(rows, list) or len(rows) > 2000000: raise ValueError('Invalid rows')
+        groups = {}
+        for row in rows:
+            if not isinstance(row, dict): raise ValueError('Invalid row')
+            label = classify(row)
+            if label is None: continue
+            code = row.get('componentType')
+            if type(code) is not int or not 0 <= code <= 65535: raise ValueError('Invalid type')
+            key = (code, label); groups[key] = bounded(groups.get(key, 0) + 1)
+            if len(groups) > 256: raise ValueError('Too many groups')
+        return [{'componentType':code, 'category':label, 'count':count} for (code,label),count in sorted(groups.items())]
+    def scope(path):
+        data = _safe_json(root, path)
+        if not isinstance(data, dict) or data.get('schemaVersion') != 1 or type(data.get('schemaVersion')) is not int or data.get('kind') != 'solution-membership-scope-v1': raise ValueError('Invalid scope')
+        return grouped(data.get('entries'), lambda row: 'unresolved' if row.get('disposition') == 'unresolved' else None)
+    def nonmaterialization(path):
+        data = _safe_json(root, path)
+        if not isinstance(data, dict) or data.get('schemaVersion') != 1 or type(data.get('schemaVersion')) is not int or data.get('kind') != 'membership-nonmaterialization-v1': raise ValueError('Invalid nonmaterialization')
+        def classify(row):
+            value = row.get('qualified')
+            if type(value) is not bool: raise ValueError('Invalid qualification')
+            return 'qualified' if value else 'unqualified'
+        return grouped(data.get('observations'), classify)
+    def projection(path):
+        data = _safe_json(root, path)
+        if not isinstance(data, dict) or data.get('schemaVersion') != 1 or type(data.get('schemaVersion')) is not int or data.get('kind') != 'private-public-projection-candidate-v1': raise ValueError('Invalid projection')
+        keys = ('sourceVerified','sourceComplete','contentComplete','fieldPolicyComplete','lossAccountingComplete','reproducible')
+        gates = {key:data.get(key) for key in keys}
+        if gates['reproducible'] is None: del gates['reproducible']
+        if any(type(value) is not bool for value in gates.values()): raise ValueError('Invalid gates')
+        counts = data.get('diagnosticCounts')
+        if not isinstance(counts, dict): raise ValueError('Invalid diagnostics')
+        safe_counts = {key:bounded(counts[key]) for key in sorted(TELEMETRY_DIAGNOSTIC_KEYS) if key in counts}
+        return {'gates':gates,'diagnosticCounts':safe_counts,
+                'unclassifiedFieldCount':bounded(data.get('uniqueUnclassifiedFieldCount'))}
+    for name,path,reader in (
+        ('preliminaryScope','scope-preflight/scope-ledger.json',scope),
+        ('finalScope','projection/scope-ledger.json',scope),
+        ('nonmaterialization','nonmaterialization/nonmaterialization.json',nonmaterialization),
+        ('projection','projection/projection.json',projection)):
+        candidate = Path(root)/path
+        if not candidate.exists() and not candidate.is_symlink(): continue
+        try: result[name] = reader(path)
+        except (OSError, ValueError, TypeError, KeyError, Hold, RecursionError): result[name] = {'status':'unavailable'}
+    return result
+
+
 ACQUISITION_PROGRESS_INTERVAL = 20
 
 
@@ -896,6 +963,8 @@ def main():
                                         '--profile', c['profile'], '--output', str(acquisition), *instrumentation], acquisition)
             if code != 0:
                 print('Acquisition diagnostics: ' + json.dumps(acquisition_failure_summary(acquisition), sort_keys=True, separators=(',', ':')), flush=True)
+                evidence = acquisition_evidence_summary(acquisition)
+                if evidence: print('Evidence diagnostics: ' + json.dumps(evidence, sort_keys=True, separators=(',', ':')), flush=True)
                 metadata = acquisition/'contained-metadata'
                 if metadata.exists() or metadata.is_symlink():
                     try:
