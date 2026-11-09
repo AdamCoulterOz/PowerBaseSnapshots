@@ -627,6 +627,17 @@ class MetadataSummarySafetyTests(unittest.TestCase):
             path.unlink();path.symlink_to('/etc/passwd')
             with self.assertRaises(m.Hold):m.metadata_capture_summary(root)
 
+    def test_only_fixed_transport_categories_are_disclosed(self):
+        spec=importlib.util.spec_from_file_location('metadata_transport',CLI);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            categories=['transient-transport-exhausted','nonretryable-transport','private-host/token',{'secret':'path'}]
+            rows=[{'family':'entity-metadata','status':'failed','failure':{'httpStatus':None,'category':value}} for value in categories]
+            (root/'capture.json').write_text(json.dumps({'evidenceKind':'contained-component-evidence-v1','status':'partial','versionMatchesDiscovery':True,'sources':rows}))
+            summary=m.metadata_capture_summary(root)
+            self.assertEqual([x['reasonCategory'] for x in summary['failedSources']],['transient-transport-exhausted','nonretryable-transport','unclassified','unclassified'])
+            self.assertNotIn('private-host',json.dumps(summary));self.assertNotIn('secret',json.dumps(summary))
+
     def test_failure_list_is_bounded_and_identity_reason_classified(self):
         spec=importlib.util.spec_from_file_location('metadata_bounds',CLI);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
         with tempfile.TemporaryDirectory() as temp:

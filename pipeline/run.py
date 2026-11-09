@@ -752,7 +752,9 @@ def metadata_capture_summary(root):
                 if failure is not None and not isinstance(failure, dict): raise ValueError('Invalid source failure')
                 http = failure.get('httpStatus') if failure else None
                 if http is not None and (type(http) is not int or not 100 <= http <= 599): raise ValueError('Invalid HTTP status')
-                reason = ('http-error' if http is not None else
+                category = failure.get('category') if failure else None
+                transport = category if isinstance(category, str) and category in ('transient-transport-exhausted', 'nonretryable-transport') else None
+                reason = ('http-error' if http is not None else transport if transport is not None else
                           'identity-mismatch' if source.get('reason') == 'Entity metadata did not match requested entity' else
                           'unclassified')
                 if len(failures) < 20:
