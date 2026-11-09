@@ -6,6 +6,7 @@ import json
 import os
 from pathlib import Path, PurePosixPath
 import re
+import signal
 import shutil
 import shlex
 import subprocess
@@ -344,7 +345,7 @@ ACQUISITION_STAGES = frozenset((
     'projection-replay', 'final-discovery', 'final-inventory', 'coverage'))
 
 
-def acquisition_failure_summary(root):
+def acquisition_failure_summary(root, *, include_complete=False):
     """Return only fixed-schema, bounded diagnostics; discard everything else."""
     generic = {'status': 'unavailable'}
     try:
@@ -377,29 +378,80 @@ def acquisition_failure_summary(root):
             if 'reason' in row and row['reason'] != 'missing hashed stage reports': return generic
             for key in ('reportSha256', 'bundleSha256'):
                 if key in row and (not isinstance(row[key], str) or not SHA256.fullmatch(row[key])): return generic
-            if status != 'complete':
+            if include_complete or status != 'complete':
                 item = {'stage': name, 'status': status}
                 if code is not None: item['exitCode'] = code
                 stages.append(item)
         result = {'status': 'incomplete', 'stages': stages}
         coverage_path = root / 'coverage' / 'coverage.json'
         if coverage_path.exists() or coverage_path.is_symlink():
-            coverage = _safe_json(root, 'coverage/coverage.json')
-            if (not isinstance(coverage, dict) or set(coverage) != {'schemaVersion', 'kind', 'profile', 'organizationVersion', 'types', 'requiredGateResults', 'diagnostics', 'summary', 'complete', 'interpretation'}
-                    or type(coverage.get('schemaVersion')) is not int or coverage['schemaVersion'] != 2
-                    or coverage.get('kind') != 'baseline-coverage-v2'):
-                return generic
-            gates = coverage.get('requiredGateResults')
-            if not isinstance(gates, dict) or set(gates) != set(REQUIRED_GATES) or any(type(v) is not bool for v in gates.values()): return generic
-            diagnostics = coverage.get('diagnostics')
-            if not isinstance(diagnostics, dict) or set(diagnostics) != {'dependencyOnlyAcquisition', 'scopeUnresolvedMembershipRows', 'referenceClosure', 'importReadiness', 'producerPublicProjectionQualified'}: return generic
-            count = diagnostics.get('scopeUnresolvedMembershipRows')
-            if type(count) is not int or not 0 <= count <= 2**31-1: return generic
-            result['requiredGateResults'] = gates
-            result['counts'] = {'scopeUnresolvedMembershipRows': count}
+            try:
+                coverage = _safe_json(root, 'coverage/coverage.json')
+                if (not isinstance(coverage, dict) or set(coverage) != {'schemaVersion', 'kind', 'profile', 'organizationVersion', 'types', 'requiredGateResults', 'diagnostics', 'summary', 'complete', 'interpretation'}
+                        or type(coverage.get('schemaVersion')) is not int or coverage['schemaVersion'] != 2
+                        or coverage.get('kind') != 'baseline-coverage-v2'):
+                    raise ValueError('Invalid coverage')
+                gates = coverage.get('requiredGateResults')
+                if not isinstance(gates, dict) or set(gates) != set(REQUIRED_GATES) or any(type(v) is not bool for v in gates.values()): raise ValueError('Invalid gates')
+                diagnostics = coverage.get('diagnostics')
+                known = {'dependencyOnlyAcquisition', 'scopeUnresolvedMembershipRows', 'referenceClosure', 'importReadiness', 'producerPublicProjectionQualified'}
+                if not isinstance(diagnostics, dict) or set(diagnostics) not in (known, known | {'formReferenceAccounting'}): raise ValueError('Invalid diagnostics')
+                count = diagnostics.get('scopeUnresolvedMembershipRows')
+                if type(count) is not int or not 0 <= count <= 2**31-1: raise ValueError('Invalid count')
+                result['requiredGateResults'] = gates
+                result['counts'] = {'scopeUnresolvedMembershipRows': count}
+            except (OSError, ValueError, TypeError, KeyError, Hold, RecursionError):
+                result['coverageStatus'] = 'unavailable'
         return result
     except (OSError, ValueError, TypeError, KeyError, Hold, RecursionError):
         return generic
+
+
+ACQUISITION_PROGRESS_INTERVAL = 20
+
+
+def execute_acquisition(args, acquisition):
+    """Wait for the private producer while reporting validated stage transitions."""
+    reported = set()
+    def progress():
+        summary = acquisition_failure_summary(acquisition, include_complete=True)
+        for item in summary.get('stages', []):
+            key = (item['stage'], item['status'])
+            if key not in reported:
+                reported.add(key)
+                print('Acquisition progress: ' + json.dumps(item, sort_keys=True, separators=(',', ':')), flush=True)
+    process = subprocess.Popen(args, stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL,
+                               stderr=subprocess.DEVNULL, start_new_session=True)
+    try:
+        while True:
+            try:
+                code = process.wait(timeout=ACQUISITION_PROGRESS_INTERVAL)
+                break
+            except subprocess.TimeoutExpired:
+                progress()
+        progress()
+    except BaseException:
+        # Stop the entire private producer tree before the caller removes its files.
+        try:
+            os.killpg(process.pid, signal.SIGTERM)
+        except ProcessLookupError:
+            pass
+        try:
+            process.wait(timeout=2)
+        except subprocess.TimeoutExpired:
+            pass
+        # A child can outlive its exited parent; always clear the process group.
+        try:
+            os.killpg(process.pid, signal.SIGKILL)
+        except ProcessLookupError:
+            pass
+        try:
+            process.wait(timeout=2)
+        except subprocess.TimeoutExpired:
+            raise RuntimeError('Acquisition process did not stop.') from None
+        raise
+    if code not in (0, 1, 2): raise Hold('Acquisition failed; sensitive output withheld.')
+    return code
 
 
 def verify_publication(root, c, v, attestation):
@@ -840,9 +892,9 @@ def main():
             qualify(c, producer)
             acquisition = private/'acquisition'; attestation_path = private/'publication-attestation.json'
             print('Stage: baseline acquisition.', flush=True)
-            result = execute([sys.executable, str(cli), 'acquire-baseline', '--environment', origin,
-                              '--profile', c['profile'], '--output', str(acquisition), *instrumentation], allowed=(0,1,2), phase='Acquisition')
-            if result.returncode != 0:
+            code = execute_acquisition([sys.executable, str(cli), 'acquire-baseline', '--environment', origin,
+                                        '--profile', c['profile'], '--output', str(acquisition), *instrumentation], acquisition)
+            if code != 0:
                 print('Acquisition diagnostics: ' + json.dumps(acquisition_failure_summary(acquisition), sort_keys=True, separators=(',', ':')), flush=True)
                 metadata = acquisition/'contained-metadata'
                 if metadata.exists() or metadata.is_symlink():

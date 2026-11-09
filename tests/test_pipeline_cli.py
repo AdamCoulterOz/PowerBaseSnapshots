@@ -502,6 +502,64 @@ class AcquisitionFailureSummaryTests(unittest.TestCase):
         self.assertNotIn('secret', json.dumps(result))
         self.assertNotIn('private-path', json.dumps(result))
 
+    def test_deployed_coverage_extra_diagnostics_and_malformed_coverage_preserve_stages(self):
+        self.write_report([{'name':'coverage','status':'partial','exitCode':2}])
+        (self.root/'coverage').mkdir(); path=self.root/'coverage'/'coverage.json'
+        gates={name:False for name in self.controller.REQUIRED_GATES}
+        report={'schemaVersion':2,'kind':'baseline-coverage-v2','profile':'private','organizationVersion':'private',
+                'types':[],'requiredGateResults':gates,'diagnostics':{'dependencyOnlyAcquisition':'private',
+                'scopeUnresolvedMembershipRows':4,'referenceClosure':'private','importReadiness':'private',
+                'producerPublicProjectionQualified':False,'formReferenceAccounting':{'secret':'private-path'}},
+                'summary':{},'complete':False,'interpretation':'private'}
+        path.write_text(json.dumps(report))
+        result=self.controller.acquisition_failure_summary(self.root)
+        self.assertEqual(result['requiredGateResults'],gates);self.assertEqual(result['counts'],{'scopeUnresolvedMembershipRows':4})
+        self.assertNotIn('private',json.dumps(result))
+        for raw in ('{bad',json.dumps({**report,'unknown':'secret'})):
+            path.write_text(raw);result=self.controller.acquisition_failure_summary(self.root)
+            self.assertEqual(result,{'status':'incomplete','stages':[{'stage':'coverage','status':'partial','exitCode':2}],'coverageStatus':'unavailable'})
+
+    def test_progress_polls_atomic_reports_and_suppresses_child_output(self):
+        import contextlib,io
+        report={'schemaVersion':1,'kind':'private-baseline-acquisition-v1','profile':'secret',
+                'inputSha256':{},'stages':[{'name':'discovery','status':'complete','exitCode':0}]}
+        child=("import json,os,sys,time; p=sys.argv[1]; r=json.loads(sys.argv[2]); "
+               "open(p+'.tmp','w').write(json.dumps(r)); os.replace(p+'.tmp',p); "
+               "print('SECRET_CHILD_OUTPUT',flush=True); time.sleep(.12); "
+               "r['stages'].append({'name':'coverage','status':'failed','exitCode':1}); "
+               "open(p+'.tmp','w').write(json.dumps(r));os.replace(p+'.tmp',p);sys.exit(2)")
+        output=io.StringIO()
+        with patch.object(self.controller,'ACQUISITION_PROGRESS_INTERVAL',.02),contextlib.redirect_stdout(output):
+            code=self.controller.execute_acquisition([sys.executable,'-c',child,str(self.root/'acquisition.json'),json.dumps(report)],self.root)
+        self.assertEqual(code,2)
+        text=output.getvalue();self.assertEqual(text.count('"stage":"discovery"'),1);self.assertEqual(text.count('"stage":"coverage"'),1)
+        self.assertNotIn('SECRET',text);self.assertNotIn('secret',text)
+
+    def test_interruption_stops_producer_and_term_ignoring_descendant(self):
+        import fcntl,time
+        lock=self.root/'descendant.lock'; ready=self.root/'ready'; parent_pid=self.root/'parent.pid'
+        grandchild=("import fcntl,signal,sys,time; f=open(sys.argv[1],'w'); "
+                    "fcntl.flock(f,fcntl.LOCK_EX); signal.signal(signal.SIGTERM,signal.SIG_IGN); "
+                    "open(sys.argv[2],'w').write('ready'); time.sleep(60)")
+        parent=("import os,subprocess,sys,time; open(sys.argv[3],'w').write(str(os.getpid())); "
+                "subprocess.Popen([sys.executable,'-c',sys.argv[1],sys.argv[2],sys.argv[4]]); time.sleep(60)")
+        def interrupt_when_ready(*args,**kwargs):
+            if ready.exists(): raise KeyboardInterrupt()
+            return {'status':'unavailable'}
+        with patch.object(self.controller,'ACQUISITION_PROGRESS_INTERVAL',.05), patch.object(self.controller,'acquisition_failure_summary',side_effect=interrupt_when_ready):
+            with self.assertRaises(KeyboardInterrupt):
+                self.controller.execute_acquisition([sys.executable,'-c',parent,grandchild,str(lock),str(parent_pid),str(ready)],self.root)
+        self.assertTrue(ready.exists());self.assertTrue(parent_pid.exists())
+        with self.assertRaises(ProcessLookupError): os.kill(int(parent_pid.read_text()),0)
+        with lock.open('w') as stream:
+            deadline=time.monotonic()+3
+            while True:
+                try:
+                    fcntl.flock(stream,fcntl.LOCK_EX|fcntl.LOCK_NB);break
+                except BlockingIOError:
+                    if time.monotonic()>=deadline:self.fail('Descendant survived interruption')
+                    time.sleep(.02)
+
     def test_frozen_stage_manifest_schema_is_accepted(self):
         stages = [{'name': name, 'status': 'complete', 'exitCode': 0,
                    'reportSha256': 'a' * 64}
