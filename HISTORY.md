@@ -36,3 +36,5 @@
 - Prepared paired instrumentation identity propagation for private acquisition and finalization, with a private context binding and no exclusive role-assignment claim. Public activation remains held.
 
 - Prepared configuration for private producer `2eaadb153dae8d2fdd5538ce45e05f6f68c7212d` and its approved policy hash; public deployment and full baseline qualification remain pending.
+
+- Prepared a manual same-reader contained-metadata diagnostic, sanitized for public logs, and temporarily removed hourly scheduling during investigation. Publication gates are unchanged.

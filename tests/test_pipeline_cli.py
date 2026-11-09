@@ -255,6 +255,7 @@ class PublicationFixture(unittest.TestCase):
         self.producer = self.root / 'producer'; self.producer.mkdir(); self.git(self.producer, 'init')
         self.git(self.producer, 'config', 'user.name', 'Fixture'); self.git(self.producer, 'config', 'user.email', 'fixture@example.invalid')
         cli = self.producer / 'tools/PowerSpec.Baseline/baseline.py'; cli.parent.mkdir(parents=True); shutil.copy(ROOT / 'fixtures/producer.py', cli)
+        shutil.copy(ROOT / 'fixtures/contained_metadata_probe.py', cli.parent/'contained_components.py')
         (cli.parent/'sdk-component-contracts.json').write_text('{}')
         (cli.parent/'platform_component_types.py').write_text('# synthetic fixture\n')
         (cli.parent/'handler-registry.json').write_text(json.dumps({'schemaVersion':2,'registrations':[{'typeIdentity':'platform:1','stage':'export','status':'supported','verification':{'status':'passed','tests':['fixture']}}]}))
@@ -308,6 +309,35 @@ class PublicationFixture(unittest.TestCase):
                 result=self.run_cli();self.assertEqual(result.returncode,2,result.stdout+result.stderr)
                 self.assertEqual(self.tags(),'')
                 self.assertNotIn('synthetic',result.stdout+result.stderr)
+    def test_metadata_probe_runs_exact_stages_and_sanitizes_failure(self):
+        self.env['TEST_MODE'] = 'probe-partial'
+        result = self.run_cli('metadata-probe')
+        self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+        self.assertEqual((self.root/'actions').read_text().splitlines(), ['discover'])
+        self.assertIn('"family":"entity-metadata"', result.stdout)
+        self.assertIn('"ordinal":1', result.stdout)
+        self.assertIn('"httpStatus":403', result.stdout)
+        for value in ('secret-identifier', 'private-host', 'private-path', 'secret-url'):
+            self.assertNotIn(value, result.stdout + result.stderr)
+        self.assertEqual(self.tags(), '')
+
+    def test_partial_full_run_reports_safe_metadata_failure(self):
+        self.env['TEST_MODE'] = 'capture-partial-metadata'
+        result = self.run_cli()
+        self.assertEqual(result.returncode, 2)
+        self.assertIn('Metadata diagnostics:', result.stdout)
+        self.assertIn('"httpStatus":403', result.stdout)
+        self.assertNotIn('private-secret', result.stdout + result.stderr)
+        self.assertNotIn('secret-host', result.stdout + result.stderr)
+        self.assertEqual(self.tags(), '')
+
+    def test_metadata_probe_complete_never_publishes(self):
+        result = self.run_cli('metadata-probe')
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn('"status":"complete"', result.stdout)
+        self.assertEqual(self.tags(), '')
+        self.assertEqual((self.root/'actions').read_text().splitlines(), ['discover'])
+
     def test_missing_or_invalid_instrumentation_holds_before_capture(self):
         for value in ('', 'not-a-uuid', '00000000-0000-0000-0000-000000000000'):
             with self.subTest(value=value):
@@ -584,3 +614,24 @@ class PublicationPreflightTests(unittest.TestCase):
         self.git('reset', '--hard', self.previous)
         with self.assertRaises(self.controller.Hold):
             self.controller.verify_publication_refs(self.root, branch, commit, 'service/1.2.3.4', tag)
+
+class MetadataSummarySafetyTests(unittest.TestCase):
+    def test_unknown_family_malformed_http_and_symlink_hold(self):
+        spec=importlib.util.spec_from_file_location('metadata_safety',CLI);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);path=root/'capture.json'
+            for family, code in [('secret/path', 403), ('entity-metadata', '403'), ('entity-metadata', True)]:
+                path.write_text(json.dumps({'evidenceKind':'contained-component-evidence-v1','status':'partial', 'versionMatchesDiscovery':True,'sources':[{'family':family,'status':'failed','failure':{'httpStatus':code}}]}))
+                with self.assertRaises(m.Hold) as e:m.metadata_capture_summary(root)
+                self.assertNotIn('secret',str(e.exception))
+            path.unlink();path.symlink_to('/etc/passwd')
+            with self.assertRaises(m.Hold):m.metadata_capture_summary(root)
+
+    def test_failure_list_is_bounded_and_identity_reason_classified(self):
+        spec=importlib.util.spec_from_file_location('metadata_bounds',CLI);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp); rows=[{'family':'entity-metadata','status':'failed','reason':'Entity metadata did not match requested entity'} for _ in range(25)]
+            (root/'capture.json').write_text(json.dumps({'evidenceKind':'contained-component-evidence-v1','status':'partial','versionMatchesDiscovery':False,'sources':rows}))
+            summary=m.metadata_capture_summary(root)
+            self.assertEqual(len(summary['failedSources']),20);self.assertEqual(summary['omittedFailures'],5)
+            self.assertEqual(summary['failedSources'][0]['reasonCategory'],'identity-mismatch')

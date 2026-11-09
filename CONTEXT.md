@@ -13,3 +13,5 @@ Local controller changes prepare a sanitized, fixed-schema acquisition-failure s
 The prepared capture workflow supplies the configured client and instrumentation role as a validated pair to both producer commands; this identifies owned instrumentation without an exclusive-assignment claim. Source-bound negative availability accounts for references from accepted published configuration sources without claiming the current target exists or reconstructing original archives.
 
 Prepared publication preflights validate Git object sizes and the staged index against attested content, then measure the outgoing commit-and-tag pack with margin before an atomic push.
+
+Prepared a manual isolated contained-metadata probe and temporary schedule pause for diagnosis; incomplete normal acquisitions also report the same bounded metadata summary. This remains local until deployed and does not qualify a snapshot.

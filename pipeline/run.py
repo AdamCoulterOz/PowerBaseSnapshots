@@ -731,6 +731,40 @@ def clone_producer(c, directory):
     return target
 
 
+def metadata_capture_summary(root):
+    """Summarize known source families without exposing private source content."""
+    try:
+        manifest = _safe_json(root, 'capture.json')
+        if (not isinstance(manifest, dict) or manifest.get('evidenceKind') != 'contained-component-evidence-v1'
+                or manifest.get('status') not in ('complete', 'partial')
+                or type(manifest.get('versionMatchesDiscovery')) is not bool
+                or not isinstance(manifest.get('sources'), list) or len(manifest['sources']) > 100000):
+            raise ValueError('Invalid metadata capture')
+        families = {'version', 'entity-metadata', 'global-options', 'object-identity'}
+        counts = {'complete': 0, 'failed': 0}
+        failures = []
+        for ordinal, source in enumerate(manifest['sources'], 1):
+            if not isinstance(source, dict) or source.get('family') not in families or source.get('status') not in counts:
+                raise ValueError('Invalid metadata source')
+            status = source['status']; counts[status] += 1
+            if status == 'failed':
+                failure = source.get('failure')
+                if failure is not None and not isinstance(failure, dict): raise ValueError('Invalid source failure')
+                http = failure.get('httpStatus') if failure else None
+                if http is not None and (type(http) is not int or not 100 <= http <= 599): raise ValueError('Invalid HTTP status')
+                reason = ('http-error' if http is not None else
+                          'identity-mismatch' if source.get('reason') == 'Entity metadata did not match requested entity' else
+                          'unclassified')
+                if len(failures) < 20:
+                    failures.append({'ordinal': ordinal, 'family': source['family'], 'status': status,
+                                     'httpStatus': http, 'reasonCategory': reason})
+        if not manifest['sources']: raise ValueError('Missing metadata sources')
+        return {'status': manifest['status'], 'versionMatchesDiscovery': manifest['versionMatchesDiscovery'],
+                'sourceCounts': counts, 'failedSources': failures, 'omittedFailures': counts['failed'] - len(failures)}
+    except (OSError, ValueError, TypeError, KeyError, Hold, RecursionError):
+        raise Hold('Metadata diagnostics unavailable; details withheld.') from None
+
+
 def report_discovery_failures(discovery):
     """Expose only recognized source names and numeric HTTP status, never response text."""
     allowed = {'organization-version-before','organization-version-after','solutions-before','solutions-after',
@@ -755,7 +789,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', default='pipeline/config.json'); parser.add_argument('--workdir', required=True)
     parser.add_argument('--producer', help='Optional clean, pinned local producer checkout')
-    parser.add_argument('--mode', choices=['check','run','diagnose','auth-check'], default='run')
+    parser.add_argument('--mode', choices=['check','run','diagnose','auth-check','metadata-probe'], default='run')
     args = parser.parse_args(); repo = Path.cwd(); c = config(args.config)
     origin = os.environ.get('SENTINEL_URL', '')
     if not origin: raise Hold('Sentinel is not configured.')
@@ -769,7 +803,7 @@ def main():
         oidc_identity_check(origin,v)
         print('OIDC read proof: two token exchanges; application identity matched; four capabilities passed; version bracket matched.')
         return 0
-    if args.mode != 'diagnose' and existing_tag(repo, tag, c, v): print('Already published and verified.'); return 0
+    if args.mode not in ('diagnose', 'metadata-probe') and existing_tag(repo, tag, c, v): print('Already published and verified.'); return 0
     if args.mode == 'check': print('New sentinel version; publication is not yet established.'); return 0
     if not SHA.fullmatch(c.get('producerCommit') or ''): raise Hold('Producer revision is not configured.')
     instrumentation = instrumentation_arguments() if args.mode == 'run' else []
@@ -784,6 +818,22 @@ def main():
         else:
             producer = clone_producer(c, private)
         cli = producer/'tools/PowerSpec.Baseline/baseline.py'
+        if args.mode == 'metadata-probe':
+            discovery = private/'probe-discovery'; probe = private/'metadata-probe'
+            print('Stage: metadata probe discovery.', flush=True)
+            result = execute([sys.executable, str(cli), 'discover', '--environment', origin,
+                              '--profile', c['profile'], '--output', str(discovery)],
+                             allowed=(0,1,2), phase='Metadata probe discovery')
+            if result.returncode != 0: raise Hold('Metadata probe discovery incomplete; details withheld.')
+            print('Stage: contained metadata capture.', flush=True)
+            result = execute([sys.executable, str(producer/'tools/PowerSpec.Baseline/contained_components.py'),
+                              'capture', '--discovery', str(discovery), '--environment', origin,
+                              '--output', str(probe)], allowed=(0,1,2), phase='Metadata capture')
+            summary = metadata_capture_summary(probe)
+            print('Metadata diagnostics: ' + json.dumps(summary, sort_keys=True, separators=(',', ':')), flush=True)
+            if result.returncode != 0 or summary['status'] != 'complete' or not summary['versionMatchesDiscovery'] or summary['sourceCounts']['failed']:
+                raise Hold('Metadata capture incomplete; publication was not attempted.')
+            return 0
         if args.mode == 'run':
             qualify(c, producer)
             acquisition = private/'acquisition'; attestation_path = private/'publication-attestation.json'
@@ -792,6 +842,13 @@ def main():
                               '--profile', c['profile'], '--output', str(acquisition), *instrumentation], allowed=(0,1,2), phase='Acquisition')
             if result.returncode != 0:
                 print('Acquisition diagnostics: ' + json.dumps(acquisition_failure_summary(acquisition), sort_keys=True, separators=(',', ':')), flush=True)
+                metadata = acquisition/'contained-metadata'
+                if metadata.exists() or metadata.is_symlink():
+                    try:
+                        summary = metadata_capture_summary(metadata)
+                        print('Metadata diagnostics: ' + json.dumps(summary, sort_keys=True, separators=(',', ':')), flush=True)
+                    except Hold:
+                        print('Metadata diagnostics unavailable; details withheld.', flush=True)
                 raise Hold('Baseline acquisition incomplete; publication withheld.')
             print('Stage: publication finalization.', flush=True)
             execute([sys.executable, str(cli), 'finalize-publication', '--acquisition', str(acquisition),

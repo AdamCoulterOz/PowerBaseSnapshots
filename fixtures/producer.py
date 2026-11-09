@@ -25,6 +25,9 @@ if a.action=='acquire-baseline':
  write(public/'manifest.json',{'schemaVersion':1,'documents':[{'path':path,'sha256':doc_hash}]})
  if mode=='symlink': data.unlink();data.symlink_to('/etc/hosts')
  if mode=='secretpath': (public/'raw-private.txt').write_text('SYNTHETIC_PRIVATE_CAPTURE_PAYLOAD')
+ if mode=='capture-partial-metadata':
+  write(out/'contained-metadata'/'capture.json',{'evidenceKind':'contained-component-evidence-v1','status':'partial','versionMatchesDiscovery':True,'sources':[{'family':'entity-metadata','status':'failed','reason':'private-secret/path','failure':{'httpStatus':403,'requestPath':'secret-host'}}]})
+  sys.exit(2)
  if mode=='capture-partial':sys.exit(2)
 elif a.action=='finalize-publication':
  if os.environ.get('TEST_MODE')=='no-attestation':sys.exit(0)
