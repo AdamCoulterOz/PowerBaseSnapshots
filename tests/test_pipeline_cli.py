@@ -934,3 +934,32 @@ class LegacyProbeTests(unittest.TestCase):
                 if kind=='invalid':value['sources'][-1]['status']='invalid-response'
                 if kind=='unrecovered':value['sources'][-2]['recoveryStatus']='unrecovered'
                 self.assertFalse(self.controller.legacy_probe_complete(self.controller.legacy_manifest_summary(value,expected_version='1.2.3.4')))
+
+    def test_complete_sources_require_compatible_http_status(self):
+        data=self.manifest()
+        for status in (None,200,500):
+            with self.subTest(status=status):
+                data['sources'][0]['httpStatus']=status
+                summary=self.controller.legacy_manifest_summary(data,expected_version='1.2.3.4')
+                self.assertEqual(self.controller.legacy_probe_complete(summary),status in (None,200))
+        data['sources'][0]['httpStatus']=200
+        data['sources'].extend([
+            {'componentType':62,'status':'failed','attemptKind':'initial','batchIndex':8,'httpStatus':500,'recoveryStatus':'recovered'},
+            {'componentType':62,'status':'complete','attemptKind':'single-retry','batchIndex':8,'parentBatchIndex':8,'requestedCount':1,'httpStatus':500}])
+        self.assertFalse(self.controller.legacy_probe_complete(self.controller.legacy_manifest_summary(data,expected_version='1.2.3.4')))
+
+    def test_recovery_index_reads_sources_linearly(self):
+        class CountedSource(dict):
+            reads=0
+            def get(self,key,default=None):
+                type(self).reads+=1
+                return super().get(key,default)
+        data=self.manifest()
+        for i in range(1,301):
+            data['sources'].extend([
+                {'componentType':62,'status':'failed','attemptKind':'initial','batchIndex':i,'httpStatus':500,'recoveryStatus':'recovered'},
+                {'componentType':62,'status':'complete','attemptKind':'single-retry','batchIndex':i,'parentBatchIndex':i,'requestedCount':1}])
+        data['sources']=[CountedSource(source) for source in data['sources']]
+        summary=self.controller.legacy_manifest_summary(data,expected_version='1.2.3.4')
+        self.assertTrue(self.controller.legacy_probe_complete(summary))
+        self.assertLess(CountedSource.reads,len(data['sources'])*30)

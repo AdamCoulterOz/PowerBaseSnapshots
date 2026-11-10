@@ -493,7 +493,7 @@ def legacy_manifest_summary(data, *, expected_version=None):
             if not isinstance(obj,dict) or obj.get('status') not in counts:raise ValueError('Invalid object status')
             counts[obj['status']]=count(counts[obj['status']]+1)
         types.append({'componentType':code,'status':item['status'],'selectedCount':selected,'invalidSelectionCount':invalid,'objectStatusCounts':counts})
-    source_counts={};selected_sources=[];complete_by_type={62:0,80:0}
+    source_counts={};selected_sources=[];complete_by_type={62:0,80:0};retry_index={}
     for source in sources:
         if not isinstance(source,dict):raise ValueError('Invalid legacy source')
         code=source.get('componentType')
@@ -507,23 +507,28 @@ def legacy_manifest_summary(data, *, expected_version=None):
         key=(code,status,http,source_class,recovery);source_counts[key]=count(source_counts.get(key,0)+1)
         if len(source_counts)>128:raise ValueError('Too many source groups')
         if status=='complete':complete_by_type[code]+=1
+        attempt=source.get('attemptKind')
+        if attempt in ('single-retry','missing-single-retry'):
+            parent=source.get('parentBatchIndex')
+            if type(parent) is not int or parent<0:raise ValueError('Invalid retry parent')
+            retry_key=(code,attempt,parent)
+            valid_retry=(status=='complete' and source.get('requestedCount')==1)
+            retry_index[retry_key]=retry_index.get(retry_key,True) and valid_retry
         selected_sources.append(source)
     sources_qualified=all(complete_by_type.values())
     for source in selected_sources:
         status=source.get('status');http=source.get('httpStatus');recovery=source.get('recoveryStatus')
-        if status=='invalid-response' or recovery not in (None,'recovered') or http in (401,403,404,429):
+        if status=='invalid-response' or recovery not in (None,'recovered') or http in (401,403,404,429) or (status=='complete' and http not in (None,200)):
             sources_qualified=False;continue
         if status=='complete' and recovery=='recovered':
-            retries=[item for item in selected_sources if item.get('componentType')==source.get('componentType')
-                     and item.get('attemptKind')=='missing-single-retry' and item.get('parentBatchIndex')==source.get('batchIndex')]
-            if source.get('componentType')!=62 or source.get('attemptKind')!='initial' or not retries or any(item.get('status')!='complete' or item.get('requestedCount')!=1 for item in retries):sources_qualified=False
+            retry_ok=retry_index.get((source.get('componentType'),'missing-single-retry',source.get('batchIndex')),False)
+            if source.get('componentType')!=62 or source.get('attemptKind')!='initial' or not retry_ok:sources_qualified=False
         if status=='failed':
             retryable=(source.get('attemptKind')=='initial' and recovery=='recovered' and
                        (source.get('failureKind')=='page-size-limit' or http in (500,502,503,504) or
                         (http is None and source.get('failureClass') in ('OSError','URLError','TimeoutError','ConnectionError'))))
-            retries=[item for item in selected_sources if item.get('componentType')==source.get('componentType')
-                     and item.get('attemptKind')=='single-retry' and item.get('parentBatchIndex')==source.get('batchIndex')]
-            if not retryable or not retries or any(item.get('status')!='complete' or item.get('requestedCount')!=1 for item in retries):sources_qualified=False
+            retry_ok=retry_index.get((source.get('componentType'),'single-retry',source.get('batchIndex')),False)
+            if not retryable or not retry_ok:sources_qualified=False
     selection=data.get('selectionScope')
     if selection not in ('selected-types','retry-missing','all-non-definition-in-use'): selection='unavailable'
     return {'status':data['status'],'selectionScope':selection,'privateComplete':flag(data.get('privateComplete')),
