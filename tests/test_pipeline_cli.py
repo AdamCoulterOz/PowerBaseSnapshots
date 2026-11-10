@@ -847,3 +847,90 @@ class TerminalTelemetrySafetyTests(unittest.TestCase):
                 result=self.controller.acquisition_evidence_summary(self.root)
                 self.assertEqual(result['projectionIssueDiagnostics'],{'status':'unavailable'});self.assertFalse(result['projection']['gates']['sourceComplete'])
                 self.assertNotIn('PRIVATE',json.dumps(result))
+
+class LegacyProbeTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup);self.root=Path(self.tmp.name)
+        spec=importlib.util.spec_from_file_location('legacy_probe_controller',CLI);self.controller=importlib.util.module_from_spec(spec);spec.loader.exec_module(self.controller)
+    def manifest(self):
+        return {'schemaVersion':1,'kind':'legacy-component-private-capture-v1','status':'partial','selectionScope':'selected-types','privateComplete':False,
+                'discoveryVersion':'1.2.3.4','versionBefore':'1.2.3.4','versionAfter':'1.2.3.4','versionBracketMatches':True,
+                'solutionsBeforeMatchesDiscovery':True,'solutionsBracketMatches':True,
+                'types':[{'componentType':n,'status':'captured','selectedCount':1,'invalidSelectionCount':0,'objects':[{'status':'captured','objectId':'SECRET'}]} for n in (62,80)],
+                'sources':[{'componentType':n,'status':'complete','attemptKind':'initial','batchIndex':0,'requestPath':'SECRET'} for n in (62,80)]}
+    def test_selected_partial_status_can_qualify_only_with_both_types_and_brackets(self):
+        data=self.manifest();summary=self.controller.legacy_manifest_summary(data,expected_version='1.2.3.4')
+        self.assertTrue(self.controller.legacy_probe_complete(summary));self.assertEqual(summary['sourceCounts'][0]['httpCategory'],'unavailable');self.assertEqual(summary['callerBracket'],'not-recorded');self.assertNotIn('SECRET',json.dumps(summary))
+        for change in ('failure','missing','version','solutions','partial','scope','privateComplete','extra','sentinel'):
+            import copy
+            value=copy.deepcopy(data)
+            if change=='failure':value['status']='failed'
+            if change=='missing':value['types'].pop()
+            if change=='version':value['versionBracketMatches']=False;value['versionAfter']='1.2.3.5'
+            if change=='solutions':value.pop('solutionsBracketMatches')
+            if change=='partial':value['types'][0]['status']='partial'
+            if change=='scope':value['selectionScope']='all-non-definition-in-use'
+            if change=='privateComplete':value['privateComplete']=True
+            if change=='extra':value['types'].append({'componentType':99})
+            self.assertFalse(self.controller.legacy_probe_complete(self.controller.legacy_manifest_summary(value,expected_version='9.9.9.9' if change=='sentinel' else '1.2.3.4')))
+    def test_terminal_legacy_requires_matching_stage_hash_and_preserves_other_summary(self):
+        directory=self.root/'legacy';directory.mkdir();path=directory/'manifest.json';path.write_text(json.dumps(self.manifest()))
+        report={'schemaVersion':1,'kind':'private-baseline-acquisition-v1','stages':[{'name':'legacy-capture','status':'failed','exitCode':1,'reportSha256':hashlib.sha256(path.read_bytes()).hexdigest()}]}
+        (self.root/'acquisition.json').write_text(json.dumps(report));summary=self.controller.acquisition_evidence_summary(self.root)
+        self.assertEqual(summary['legacyCapture']['status'],'partial');self.assertNotIn('SECRET',json.dumps(summary))
+        path.write_text(json.dumps({**self.manifest(),'status':'failed'}));summary=self.controller.acquisition_evidence_summary(self.root)
+        self.assertEqual(summary['legacyCapture'],{'status':'unavailable'})
+        report['stages'][0]['status']='blocked';(self.root/'acquisition.json').write_text(json.dumps(report))
+        self.assertEqual(self.controller.acquisition_evidence_summary(self.root)['legacyCapture'],{'status':'unavailable'})
+    def test_manual_mode_uses_exact_two_type_command_and_no_publication(self):
+        import contextlib,io
+        module=self.controller;producer=self.root/'producer';producer.mkdir();work=self.root/'work';work.mkdir();pin='a'*40;calls=[]
+        class Result:
+            def __init__(self,stdout='',returncode=0):self.stdout=stdout;self.returncode=returncode
+        def fake_execute(args,**kwargs):
+            calls.append(args)
+            if args[:2]==['git','status']:return Result()
+            if args[:2]==['git','branch']:return Result('main')
+            if args[:2]==['git','rev-parse']:return Result(pin)
+            if 'discover' in args:
+                Path(args[args.index('--output')+1]).mkdir();return Result()
+            if any(str(x).endswith('legacy_capture.py') for x in args):
+                out=Path(args[args.index('--output')+1]);out.mkdir();(out/'manifest.json').write_text(json.dumps(self.manifest()));return Result(returncode=2)
+            raise AssertionError('Unexpected command')
+        argv=[str(CLI),'--config','unused','--workdir',str(work),'--producer',str(producer),'--mode','legacy-probe']
+        env={'SENTINEL_URL':'https://example.invalid','POWERSPEC_AUTH_MODE':'github-oidc'};output=io.StringIO()
+        with patch.dict(os.environ,env,clear=True),patch.object(sys,'argv',argv),patch.object(module,'config',return_value={'producerCommit':pin,'profile':'synthetic'}),patch.object(module,'execute',side_effect=fake_execute),patch.object(module,'sentinel',return_value='1.2.3.4'),patch.object(module,'oidc_identity_check') as identity,patch.object(module,'existing_tag',side_effect=AssertionError('Unexpected tag')),contextlib.redirect_stdout(output):
+            self.assertEqual(module.main(),0)
+        capture=next(x for x in calls if any(str(v).endswith('legacy_capture.py') for v in x))
+        self.assertEqual([capture[i+1] for i,x in enumerate(capture) if x=='--only-type'],['62','80'])
+        self.assertEqual(identity.call_count,2);self.assertIn('application identity matched before and after',output.getvalue());self.assertNotIn('SECRET',output.getvalue())
+        self.assertFalse(any(x[:2]==['git','push'] for x in calls))
+
+    def test_fixed_failure_class_and_http_categories_never_copy_raw_text(self):
+        data=self.manifest();data.update(status='failed',failureClass='PRIVATE_EXCEPTION')
+        data['sources']=[{'componentType':80,'status':'failed','attemptKind':'initial','batchIndex':0,'httpStatus':500,'failureClass':'PRIVATE_EXCEPTION','reason':'PRIVATE_PATH'}]
+        summary=self.controller.legacy_manifest_summary(data)
+        self.assertEqual(summary['failureClass'],'other');self.assertEqual(summary['sourceCounts'][0]['failureClass'],'other')
+        self.assertEqual(summary['sourceCounts'][0]['httpCategory'],'server-error');self.assertNotIn('PRIVATE',json.dumps(summary))
+        data['sources'][0]['httpStatus']='PRIVATE';
+        with self.assertRaises(ValueError):self.controller.legacy_manifest_summary(data)
+
+    def test_probe_requires_complete_sources_and_only_supported_recovery(self):
+        import copy
+        data=self.manifest();data['sources'].pop()
+        self.assertFalse(self.controller.legacy_probe_complete(self.controller.legacy_manifest_summary(data,expected_version='1.2.3.4')))
+        base=self.manifest();failed={'componentType':62,'status':'failed','attemptKind':'initial','batchIndex':8,'failureClass':'HTTPError','httpStatus':500,'failureKind':'request-failed','recoveryStatus':'recovered'}
+        retry={'componentType':62,'status':'complete','attemptKind':'single-retry','batchIndex':8,'parentBatchIndex':8,'requestedCount':1}
+        data=copy.deepcopy(base);data['sources'].extend([failed,retry])
+        self.assertTrue(self.controller.legacy_probe_complete(self.controller.legacy_manifest_summary(data,expected_version='1.2.3.4')))
+        for http in (401,403,404,429):
+            with self.subTest(http=http):
+                value=copy.deepcopy(data);value['sources'][-2]['httpStatus']=http
+                self.assertFalse(self.controller.legacy_probe_complete(self.controller.legacy_manifest_summary(value,expected_version='1.2.3.4')))
+        for kind in ('missing-retry','invalid','unrecovered'):
+            with self.subTest(kind=kind):
+                value=copy.deepcopy(data)
+                if kind=='missing-retry':value['sources'].pop()
+                if kind=='invalid':value['sources'][-1]['status']='invalid-response'
+                if kind=='unrecovered':value['sources'][-2]['recoveryStatus']='unrecovered'
+                self.assertFalse(self.controller.legacy_probe_complete(self.controller.legacy_manifest_summary(value,expected_version='1.2.3.4')))

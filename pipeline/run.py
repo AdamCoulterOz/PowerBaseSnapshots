@@ -454,6 +454,101 @@ TELEMETRY_DIAGNOSTIC_KEYS = frozenset((
     'table-schema-identity-missing', 'column-schema-identity-missing'))
 
 
+def legacy_manifest_summary(data, *, expected_version=None):
+    """Summarize only fixed metadata about selected legacy types and brackets."""
+    if (not isinstance(data,dict) or type(data.get('schemaVersion')) is not int or data['schemaVersion']!=1
+            or data.get('kind')!='legacy-component-private-capture-v1' or data.get('status') not in ('running','failed','partial','complete')): raise ValueError('Invalid legacy manifest')
+    def flag(value): return value if type(value) is bool else 'unavailable'
+    def count(value):
+        if type(value) is not int or not 0<=value<=2**31-1: raise ValueError('Invalid count')
+        return value
+    def category(value):
+        if value is None:return 'unavailable'
+        if type(value) is not int or not 100<=value<=599:raise ValueError('Invalid HTTP status')
+        return ('ok' if value==200 else 'unauthorized' if value==401 else 'forbidden' if value==403 else 'not-found' if value==404 else 'throttled' if value==429 else 'other-4xx' if 400<=value<=499 else 'server-error' if 500<=value<=599 else 'other')
+    classes={'OSError','ValueError','CaptureError','URLError','HTTPError','TimeoutError','ConnectionError'}
+    failure=data.get('failureClass')
+    failure=failure if isinstance(failure,str) and failure in classes else 'unavailable' if failure is None else 'other'
+    versions=[data.get(key) for key in ('discoveryVersion','versionBefore','versionAfter')]
+    available=[isinstance(value,str) and bool(VERSION.fullmatch(value)) for value in versions]
+    discovery_matches_sentinel=(versions[0]==expected_version) if available[0] and isinstance(expected_version,str) and VERSION.fullmatch(expected_version) else 'unavailable'
+    version_before_matches=(versions[0]==versions[1]) if all(available[:2]) else 'unavailable'
+    version_after_matches=(versions[0]==versions[2]) if available[0] and available[2] else 'unavailable'
+    bracket=flag(data.get('versionBracketMatches'))
+    if type(bracket) is bool and all(available) and bracket != (versions[1]==versions[2]): raise ValueError('Inconsistent version bracket')
+    items=data.get('types');sources=data.get('sources')
+    if not isinstance(items,list) or len(items)>65536 or not isinstance(sources,list) or len(sources)>100000: raise ValueError('Invalid legacy sources')
+    statuses={'unavailable','planned','captured','partial'};object_statuses={'captured','not-returned','source-failed-or-invalid'}
+    types=[];seen=set()
+    for item in items:
+        if not isinstance(item,dict):raise ValueError('Invalid legacy type')
+        code=item.get('componentType')
+        if type(code) is not int or not 0<=code<=65535:raise ValueError('Invalid legacy type')
+        if code not in (62,80):continue
+        if code in seen or item.get('status') not in statuses:raise ValueError('Invalid selected type')
+        seen.add(code);objects=item.get('objects');selected=count(item.get('selectedCount'));invalid=count(item.get('invalidSelectionCount'))
+        if not isinstance(objects,list) or len(objects)>100000:raise ValueError('Invalid selected objects')
+        counts={key:0 for key in sorted(object_statuses)}
+        for obj in objects:
+            if not isinstance(obj,dict) or obj.get('status') not in counts:raise ValueError('Invalid object status')
+            counts[obj['status']]=count(counts[obj['status']]+1)
+        types.append({'componentType':code,'status':item['status'],'selectedCount':selected,'invalidSelectionCount':invalid,'objectStatusCounts':counts})
+    source_counts={};selected_sources=[];complete_by_type={62:0,80:0}
+    for source in sources:
+        if not isinstance(source,dict):raise ValueError('Invalid legacy source')
+        code=source.get('componentType')
+        if code not in (62,80) or type(code) is not int:continue
+        status=source.get('status')
+        if status not in ('complete','failed','invalid-response'):raise ValueError('Invalid source status')
+        if source.get('attemptKind') not in ('initial','single-retry','missing-single-retry') or type(source.get('batchIndex')) is not int or source['batchIndex']<0: raise ValueError('Invalid source attempt')
+        http=category(source.get('httpStatus'))
+        source_class=source.get('failureClass');source_class=source_class if isinstance(source_class,str) and source_class in classes else 'unavailable' if source_class is None else 'other'
+        recovery=source.get('recoveryStatus');recovery=recovery if recovery in ('recovered','unrecovered') else 'not-recorded' if recovery is None else 'other'
+        key=(code,status,http,source_class,recovery);source_counts[key]=count(source_counts.get(key,0)+1)
+        if len(source_counts)>128:raise ValueError('Too many source groups')
+        if status=='complete':complete_by_type[code]+=1
+        selected_sources.append(source)
+    sources_qualified=all(complete_by_type.values())
+    for source in selected_sources:
+        status=source.get('status');http=source.get('httpStatus');recovery=source.get('recoveryStatus')
+        if status=='invalid-response' or recovery not in (None,'recovered') or http in (401,403,404,429):
+            sources_qualified=False;continue
+        if status=='complete' and recovery=='recovered':
+            retries=[item for item in selected_sources if item.get('componentType')==source.get('componentType')
+                     and item.get('attemptKind')=='missing-single-retry' and item.get('parentBatchIndex')==source.get('batchIndex')]
+            if source.get('componentType')!=62 or source.get('attemptKind')!='initial' or not retries or any(item.get('status')!='complete' or item.get('requestedCount')!=1 for item in retries):sources_qualified=False
+        if status=='failed':
+            retryable=(source.get('attemptKind')=='initial' and recovery=='recovered' and
+                       (source.get('failureKind')=='page-size-limit' or http in (500,502,503,504) or
+                        (http is None and source.get('failureClass') in ('OSError','URLError','TimeoutError','ConnectionError'))))
+            retries=[item for item in selected_sources if item.get('componentType')==source.get('componentType')
+                     and item.get('attemptKind')=='single-retry' and item.get('parentBatchIndex')==source.get('batchIndex')]
+            if not retryable or not retries or any(item.get('status')!='complete' or item.get('requestedCount')!=1 for item in retries):sources_qualified=False
+    selection=data.get('selectionScope')
+    if selection not in ('selected-types','retry-missing','all-non-definition-in-use'): selection='unavailable'
+    return {'status':data['status'],'selectionScope':selection,'privateComplete':flag(data.get('privateComplete')),
+            'manifestTypeCount':count(len(items)),'discoveryMatchesSentinel':discovery_matches_sentinel,
+            'failureClass':failure,'versionBeforeMatchesDiscovery':version_before_matches,
+            'versionAfterMatchesDiscovery':version_after_matches,'versionBracketMatches':bracket,
+            'solutionsBeforeMatchesDiscovery':flag(data.get('solutionsBeforeMatchesDiscovery')),
+            'solutionsBracketMatches':flag(data.get('solutionsBracketMatches')),'callerBracket':'not-recorded',
+            'types':sorted(types,key=lambda row:row['componentType']),'sourcesQualified':bool(sources_qualified),
+            'sourceCounts':[{'componentType':code,'status':status,'httpCategory':http,'failureClass':failure,'recoveryStatus':recovery,'count':n} for (code,status,http,failure,recovery),n in sorted(source_counts.items())]}
+
+
+def legacy_probe_complete(summary):
+    types=summary['types']
+    return (summary['status']=='partial' and summary['selectionScope']=='selected-types' and summary['privateComplete'] is False
+            and summary['manifestTypeCount']==2 and summary['discoveryMatchesSentinel'] is True and summary['sourcesQualified'] is True
+            and summary['versionBeforeMatchesDiscovery'] is True
+            and summary['versionAfterMatchesDiscovery'] is True and summary['versionBracketMatches'] is True
+            and summary['solutionsBeforeMatchesDiscovery'] is True and summary['solutionsBracketMatches'] is True
+            and [row['componentType'] for row in types]==[62,80]
+            and all(row['status']=='captured' and row['selectedCount']>0 and row['invalidSelectionCount']==0
+                    and row['objectStatusCounts']['captured']==row['selectedCount']
+                    and row['objectStatusCounts']['not-returned']==0 and row['objectStatusCounts']['source-failed-or-invalid']==0 for row in types))
+
+
 def acquisition_evidence_summary(root):
     """Aggregate bounded facts from optional private reports without emitting their contents."""
     result = {}
@@ -484,7 +579,7 @@ def acquisition_evidence_summary(root):
             if type(value) is not bool: raise ValueError('Invalid qualification')
             return 'qualified' if value else 'unqualified'
         return grouped(data.get('observations'), classify)
-    def stage_bound(stage, path):
+    def stage_bound(stage, path, *, limit=32 * 1024 * 1024):
         report = _strict_json_bytes(_bounded_safe_bytes(root, 'acquisition.json'))
         if (not isinstance(report,dict) or type(report.get('schemaVersion')) is not int
                 or report['schemaVersion'] != 1 or report.get('kind') != 'private-baseline-acquisition-v1'):
@@ -497,9 +592,11 @@ def acquisition_evidence_summary(root):
         if status not in ('complete','partial','failed') or type(code) is not int or code != {'complete':0,'partial':2,'failed':1}[status]: raise ValueError('Invalid stage status')
         expected = matches[0].get('reportSha256')
         if not isinstance(expected,str) or not SHA256.fullmatch(expected): raise ValueError('Invalid stage hash')
-        raw = _bounded_safe_bytes(root,path)
+        raw = _bounded_safe_bytes(root,path,limit=limit)
         if hashlib.sha256(raw).hexdigest() != expected: raise ValueError('Stage hash mismatch')
         return _strict_json_bytes(raw)
+    def legacy_detail(path):
+        return legacy_manifest_summary(stage_bound('legacy-capture',path,limit=64 * 1024 * 1024))
     def nonmaterialization_detail(path):
         data = stage_bound('nonmaterialization',path)
         if not isinstance(data, dict) or type(data.get('schemaVersion')) is not int or data['schemaVersion'] != 1 or data.get('kind') != 'membership-nonmaterialization-v1': raise ValueError('Invalid nonmaterialization')
@@ -620,6 +717,7 @@ def acquisition_evidence_summary(root):
         return {'gates':gates,'diagnosticCounts':safe_counts,
                 'unclassifiedFieldCount':bounded(data.get('uniqueUnclassifiedFieldCount'))}
     for name,path,reader in (
+        ('legacyCapture','legacy/manifest.json',legacy_detail),
         ('preliminaryScope','scope-preflight/scope-ledger.json',scope),
         ('finalScope','projection/scope-ledger.json',scope),
         ('nonmaterialization','nonmaterialization/nonmaterialization.json',nonmaterialization),
@@ -1070,21 +1168,21 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', default='pipeline/config.json'); parser.add_argument('--workdir', required=True)
     parser.add_argument('--producer', help='Optional clean, pinned local producer checkout')
-    parser.add_argument('--mode', choices=['check','run','diagnose','auth-check','metadata-probe'], default='run')
+    parser.add_argument('--mode', choices=['check','run','diagnose','auth-check','metadata-probe','legacy-probe'], default='run')
     args = parser.parse_args(); repo = Path.cwd(); c = config(args.config)
     origin = os.environ.get('SENTINEL_URL', '')
     if not origin: raise Hold('Sentinel is not configured.')
     if execute(['git', 'status', '--porcelain'], cwd=repo).stdout.strip(): raise Hold('Working tree is not clean.')
     branch = execute(['git', 'branch', '--show-current'], cwd=repo).stdout.strip()
     if not branch: raise Hold('An attached publication branch is required.')
-    if args.mode == 'auth-check' and os.environ.get('POWERSPEC_AUTH_MODE') != 'github-oidc': raise Hold('Authentication check requires GitHub OIDC mode.')
+    if args.mode in ('auth-check','legacy-probe') and os.environ.get('POWERSPEC_AUTH_MODE') != 'github-oidc': raise Hold('Authentication check requires GitHub OIDC mode.')
     v = sentinel(origin); tag = 'service/' + v
     print('Observed service version: ' + v)
     if args.mode == 'auth-check':
         oidc_identity_check(origin,v)
         print('OIDC read proof: two token exchanges; application identity matched; four capabilities passed; version bracket matched.')
         return 0
-    if args.mode not in ('diagnose', 'metadata-probe') and existing_tag(repo, tag, c, v): print('Already published and verified.'); return 0
+    if args.mode not in ('diagnose', 'metadata-probe', 'legacy-probe') and existing_tag(repo, tag, c, v): print('Already published and verified.'); return 0
     if args.mode == 'check': print('New sentinel version; publication is not yet established.'); return 0
     if not SHA.fullmatch(c.get('producerCommit') or ''): raise Hold('Producer revision is not configured.')
     instrumentation = instrumentation_arguments() if args.mode == 'run' else []
@@ -1099,6 +1197,21 @@ def main():
         else:
             producer = clone_producer(c, private)
         cli = producer/'tools/PowerSpec.Baseline/baseline.py'
+        if args.mode == 'legacy-probe':
+            oidc_identity_check(origin,v)
+            discovery = private/'probe-discovery'; probe = private/'legacy-probe'
+            print('Stage: legacy probe discovery.', flush=True)
+            result = execute([sys.executable,str(cli),'discover','--environment',origin,'--profile',c['profile'],'--output',str(discovery)],allowed=(0,1,2),phase='Legacy probe discovery')
+            if result.returncode != 0: raise Hold('Legacy probe discovery incomplete; details withheld.')
+            print('Stage: selected legacy capture.', flush=True)
+            result = execute([sys.executable,str(producer/'tools/PowerSpec.Baseline/legacy_capture.py'),'--discovery',str(discovery),'--environment',origin,'--output',str(probe),'--only-type','62','--only-type','80'],allowed=(0,1,2),phase='Legacy probe capture')
+            try: summary=legacy_manifest_summary(_strict_json_bytes(_bounded_safe_bytes(probe,'manifest.json',limit=64*1024*1024)),expected_version=v)
+            except (OSError,ValueError,TypeError,KeyError,Hold,RecursionError): raise Hold('Legacy diagnostics unavailable; details withheld.') from None
+            print('Legacy diagnostics: '+json.dumps(summary,sort_keys=True,separators=(',',':')),flush=True)
+            if result.returncode != 2 or not legacy_probe_complete(summary): raise Hold('Legacy probe incomplete; publication was not attempted.')
+            oidc_identity_check(origin,v)
+            print('Legacy probe application identity matched before and after.', flush=True)
+            return 0
         if args.mode == 'metadata-probe':
             discovery = private/'probe-discovery'; probe = private/'metadata-probe'
             print('Stage: metadata probe discovery.', flush=True)

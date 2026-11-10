@@ -5,12 +5,12 @@ on:
       mode:
         description: Sentinel check, diagnostic discovery, attested capture, or OIDC read proof
         type: choice
-        options: [check, diagnose, run, auth-check, metadata-probe]
+        options: [check, diagnose, run, auth-check, metadata-probe, legacy-probe]
         default: check
         required: true
 permissions: {}
 concurrency:
-  group: ${{ inputs.mode == 'metadata-probe' && 'platform-sentinel-metadata-probe' || 'platform-sentinel-baseline' }}
+  group: ${{ (inputs.mode == 'metadata-probe' || inputs.mode == 'legacy-probe') && 'platform-sentinel-read-probe' || 'platform-sentinel-baseline' }}
   cancel-in-progress: false
 jobs:
   capture:
