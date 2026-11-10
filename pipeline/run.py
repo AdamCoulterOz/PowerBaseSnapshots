@@ -8,6 +8,7 @@ from pathlib import Path, PurePosixPath
 import re
 import signal
 import shutil
+import stat
 import shlex
 import subprocess
 import sys
@@ -50,6 +51,39 @@ def load(path):
             result[key] = value
         return result
     return json.loads(Path(path).read_text(encoding='utf-8'), parse_constant=reject_constant, object_pairs_hook=unique_pairs)
+
+
+def _strict_json_bytes(data):
+    def reject_constant(value): raise ValueError('Nonfinite JSON number')
+    def unique_pairs(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result: raise ValueError('Duplicate JSON key')
+            result[key] = value
+        return result
+    return json.loads(data, parse_constant=reject_constant, object_pairs_hook=unique_pairs)
+
+
+def _bounded_safe_bytes(root, relative, limit=32 * 1024 * 1024):
+    """Read one bounded regular file through non-symlink directory descriptors."""
+    if not isinstance(relative,str) or not relative or '\\' in relative: raise Hold('Unsafe evidence path.')
+    parts = relative.split('/')
+    if any(part in ('','.','..') for part in parts): raise Hold('Unsafe evidence path.')
+    flags = os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW
+    directory = os.open(root, flags)
+    try:
+        for part in parts[:-1]:
+            next_directory = os.open(part, flags, dir_fd=directory)
+            os.close(directory); directory = next_directory
+        fd = os.open(parts[-1], os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK, dir_fd=directory)
+        try:
+            info = os.fstat(fd)
+            if not stat.S_ISREG(info.st_mode) or info.st_size > limit: raise Hold('Invalid evidence size.')
+            with os.fdopen(fd,'rb',closefd=False) as stream: data=stream.read(limit+1)
+            if len(data) > limit: raise Hold('Invalid evidence size.')
+            return data
+        finally: os.close(fd)
+    finally: os.close(directory)
 
 
 def instrumentation_arguments():
@@ -450,6 +484,129 @@ def acquisition_evidence_summary(root):
             if type(value) is not bool: raise ValueError('Invalid qualification')
             return 'qualified' if value else 'unqualified'
         return grouped(data.get('observations'), classify)
+    def stage_bound(stage, path):
+        report = _strict_json_bytes(_bounded_safe_bytes(root, 'acquisition.json'))
+        if (not isinstance(report,dict) or type(report.get('schemaVersion')) is not int
+                or report['schemaVersion'] != 1 or report.get('kind') != 'private-baseline-acquisition-v1'):
+            raise ValueError('Invalid acquisition authority')
+        entries = report.get('stages')
+        if not isinstance(entries,list): raise ValueError('Missing stage binding')
+        matches = [item for item in entries if isinstance(item,dict) and item.get('name') == stage]
+        if len(matches) != 1: raise ValueError('Invalid stage binding')
+        status=matches[0].get('status');code=matches[0].get('exitCode')
+        if status not in ('complete','partial','failed') or type(code) is not int or code != {'complete':0,'partial':2,'failed':1}[status]: raise ValueError('Invalid stage status')
+        expected = matches[0].get('reportSha256')
+        if not isinstance(expected,str) or not SHA256.fullmatch(expected): raise ValueError('Invalid stage hash')
+        raw = _bounded_safe_bytes(root,path)
+        if hashlib.sha256(raw).hexdigest() != expected: raise ValueError('Stage hash mismatch')
+        return _strict_json_bytes(raw)
+    def nonmaterialization_detail(path):
+        data = stage_bound('nonmaterialization',path)
+        if not isinstance(data, dict) or type(data.get('schemaVersion')) is not int or data['schemaVersion'] != 1 or data.get('kind') != 'membership-nonmaterialization-v1': raise ValueError('Invalid nonmaterialization')
+        rows = data.get('observations')
+        if not isinstance(rows, list) or len(rows) > 2000000: raise ValueError('Invalid observations')
+        dispositions = {'empty-qualified-source','access-denied','unsupported-route','request-failed','object-present','object-not-found'}
+        groups = {}
+        for row in rows:
+            if not isinstance(row, dict): raise ValueError('Invalid observation')
+            code = row.get('componentType'); qualified = row.get('qualified'); disp = row.get('disposition')
+            if type(code) is not int or code not in (1,2,17,183,202) or type(qualified) is not bool: raise ValueError('Invalid observation')
+            if not isinstance(disp,str) or disp not in dispositions: disp = 'other'
+            key = (code,qualified,disp); groups[key] = bounded(groups.get(key,0)+1)
+            if len(groups) > 100: raise ValueError('Too many groups')
+        controls = data.get('controls', {})
+        if not isinstance(controls, dict): raise ValueError('Invalid controls')
+        def flag(value): return value if type(value) is bool else 'unavailable'
+        control_flags = {}
+        for code in ('1','2'):
+            item = controls.get(code, {})
+            if not isinstance(item,dict): raise ValueError('Invalid control')
+            control_flags[code] = flag(item.get('matched'))
+        first = controls.get('1', {})
+        control_flags['1EnumerationMatchesDiscovery'] = flag(first.get('enumerationMatchesDiscovery'))
+        responses = data.get('responses', {})
+        if not isinstance(responses,dict): raise ValueError('Invalid responses')
+        privilege = responses.get('privileges', {})
+        if not isinstance(privilege,dict): raise ValueError('Invalid privileges response')
+        status = privilege.get('httpStatus')
+        if status is not None and (type(status) is not int or not 100 <= status <= 599): raise ValueError('Invalid HTTP status')
+        http = ('unavailable' if status is None else 'ok' if status == 200 else
+                'unauthorized' if status == 401 else 'forbidden' if status == 403 else
+                'throttled' if status == 429 else 'other-4xx' if 400 <= status <= 499 else
+                'server-error' if 500 <= status <= 599 else 'other')
+        return {'observations':[{'componentType':code,'qualified':qualified,'disposition':disp,'count':count}
+                                for (code,qualified,disp),count in sorted(groups.items())],
+                'controls':control_flags, 'callerMatches':flag(data.get('callerMatches')),
+                'versionBracketMatches':flag(data.get('versionBracketMatches')), 'privilegeResponse':http}
+    def operational_detail(path):
+        data = stage_bound('operational-scope',path)
+        if not isinstance(data,dict) or type(data.get('schemaVersion')) is not int or data['schemaVersion'] != 1 or data.get('kind') != 'private-operational-scope-capture-v1': raise ValueError('Invalid operational scope')
+        report = data.get('result')
+        if not isinstance(report,dict): raise ValueError('Missing operational result')
+        reasons = {'schedule-payload-or-consumer-unresolved','invalid-consumer-id','active-layer-or-metadata-unresolved',
+                   'declared-export-key-unresolved','creator-unresolved','creator-read-unresolved',
+                   'instrumentation-role-not-proven','schedule-rule-not-proven','datalake-pair-not-proven',
+                   'instrumentation-identity-or-privileges-unproven'}
+        rules = {'verified-instrumentation-role-v1','verified-operational-file-upload-schedule-v1','verified-operational-datalake-pair-v1'}
+        scan_reasons = {'payload-or-metadata-missing','invalid-declaration-metadata','unknown-declaration-lookup-metadata',
+                        'unknown-declaration-attribute','unclassified-declaration-reference','invalid-declaration-reference',
+                        'unknown-lookup-target','lookup-annotation-conflict','lookup-not-readable','lookup-field-omitted',
+                        'invalid-lookup-value','ambiguous-component-identity'}
+        def grouped_fixed(rows, field, allowed):
+            if not isinstance(rows,list) or len(rows)>2000000: raise ValueError('Invalid rows')
+            counts = {}
+            for row in rows:
+                if not isinstance(row,dict): raise ValueError('Invalid row')
+                code=row.get('componentType'); category=row.get(field)
+                if type(code) is not int or not 0 <= code <= 65535: raise ValueError('Invalid type')
+                code = code if code in (1,2,17,20,29,90,91,92,183,201,202,400,401,402,431) else -1
+                category = category if isinstance(category,str) and category in allowed else 'other'
+                key=(code,category);counts[key]=bounded(counts.get(key,0)+1)
+                if len(counts)>256: raise ValueError('Too many groups')
+            return [{'componentType':code if code != -1 else 'other','category':category,'count':count} for (code,category),count in sorted(counts.items())]
+        raw_scan=report.get('requiredLookupScanReasons')
+        if not isinstance(raw_scan,dict) or len(raw_scan)>256: raise ValueError('Invalid scan reasons')
+        scan={};other=0
+        for key,value in raw_scan.items():
+            value=bounded(value)
+            if isinstance(key,str) and key in scan_reasons:scan[key]=value
+            else:other=bounded(other+value)
+        if other:scan['other']=other
+        total=bounded(report.get('requiredLookupScanUnresolvedCount'))
+        if sum(scan.values())!=total: raise ValueError('Scan count mismatch')
+        complete=report.get('complete')
+        if type(complete) is not bool: raise ValueError('Invalid scope result')
+        return {'complete':complete,'candidates':grouped_fixed(report.get('candidates'),'ruleId',rules),
+                'unresolved':grouped_fixed(report.get('unresolved'),'reason',reasons),
+                'requiredLookupScanUnresolvedCount':total,'requiredLookupScanReasons':scan}
+    def projection_issue_detail(path):
+        data = stage_bound('projection-replay',path)
+        if (not isinstance(data,dict) or type(data.get('schemaVersion')) is not int or data['schemaVersion'] != 1
+                or data.get('kind') != 'private-public-projection-candidate-v1'): raise ValueError('Invalid projection')
+        issue = data.get('issueDiagnostics')
+        if not isinstance(issue,dict) or set(issue) != {'schemaVersion','groups'} or type(issue.get('schemaVersion')) is not int or issue['schemaVersion'] != 1: raise ValueError('Invalid issue diagnostics')
+        allowed = {
+            'required-identity-unresolved': {'missing-unit','unqualified-export-identity'},
+            'required-representation-missing': {'direct-record-absent','contained-target-absent','effective-container-unverified','unsupported-disposition'},
+            'typed-reference-unresolved': {'folder-permission','table-search','appmodule-resource','appmodule-descriptor','duplicate-rule','ai-configuration','channel-access','datasource-provider','workflow-form','provider-plugin','typed-lookup'},
+            'unclassified-field': {'unclassified-record-field'},
+        }
+        groups=issue.get('groups');counts=data.get('diagnosticCounts')
+        if not isinstance(groups,dict) or set(groups) != set(allowed) or not isinstance(counts,dict): raise ValueError('Invalid issue groups')
+        result={};bucket_count=0
+        for name in sorted(allowed):
+            rows=groups[name]
+            if not isinstance(rows,list) or len(rows)>256: raise ValueError('Invalid issue rows')
+            seen=set();clean=[];total=0
+            for row in rows:
+                if not isinstance(row,dict) or set(row) != {'componentType','category','count'}: raise ValueError('Invalid issue row')
+                code=row['componentType'];category=row['category'];count=bounded(row['count'])
+                if type(code) is not int or not 0<=code<=65535 or not isinstance(category,str) or category not in allowed[name] or (code,category) in seen: raise ValueError('Invalid issue bucket')
+                seen.add((code,category));total=bounded(total+count);clean.append({'componentType':code,'category':category,'count':count})
+            bucket_count+=len(clean)
+            if bucket_count>512 or total != bounded(counts.get(name,0)): raise ValueError('Issue count mismatch')
+            result[name]=sorted(clean,key=lambda item:(item['componentType'],item['category']))
+        return {'groups':result}
     def projection(path):
         data = _safe_json(root, path)
         if not isinstance(data, dict) or data.get('schemaVersion') != 1 or type(data.get('schemaVersion')) is not int or data.get('kind') != 'private-public-projection-candidate-v1': raise ValueError('Invalid projection')
@@ -466,7 +623,10 @@ def acquisition_evidence_summary(root):
         ('preliminaryScope','scope-preflight/scope-ledger.json',scope),
         ('finalScope','projection/scope-ledger.json',scope),
         ('nonmaterialization','nonmaterialization/nonmaterialization.json',nonmaterialization),
-        ('projection','projection/projection.json',projection)):
+        ('nonmaterializationDetail','nonmaterialization/nonmaterialization.json',nonmaterialization_detail),
+        ('operationalScope','operational-scope/manifest.json',operational_detail),
+        ('projection','projection/projection.json',projection),
+        ('projectionIssueDiagnostics','projection/projection.json',projection_issue_detail)):
         candidate = Path(root)/path
         if not candidate.exists() and not candidate.is_symlink(): continue
         try: result[name] = reader(path)

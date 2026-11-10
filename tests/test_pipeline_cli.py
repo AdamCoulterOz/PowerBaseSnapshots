@@ -730,3 +730,120 @@ class AcquisitionEvidenceSummaryTests(unittest.TestCase):
         r=self.controller.acquisition_evidence_summary(self.root)
         self.assertEqual(r['preliminaryScope'],{'status':'unavailable'});self.assertEqual(r['nonmaterialization'][0]['count'],1)
         self.assertNotIn('PRIVATE',json.dumps(r))
+
+class TerminalTelemetrySafetyTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup);self.root=Path(self.tmp.name)
+        spec=importlib.util.spec_from_file_location('terminal_telemetry',CLI);self.controller=importlib.util.module_from_spec(spec);spec.loader.exec_module(self.controller)
+    def write(self,name,value):
+        p=self.root/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(value))
+    def bind(self,stage,path):
+        report_path=self.root/'acquisition.json'
+        report=json.loads(report_path.read_text()) if report_path.exists() else {'schemaVersion':1,'kind':'private-baseline-acquisition-v1','stages':[]}
+        report['stages'].append({'name':stage,'status':'partial','exitCode':2,'reportSha256':hashlib.sha256((self.root/path).read_bytes()).hexdigest()})
+        report_path.write_text(json.dumps(report))
+    def test_nonmaterialization_aggregates_fixed_facts_without_private_details(self):
+        self.write('nonmaterialization/nonmaterialization.json',{'schemaVersion':1,'kind':'membership-nonmaterialization-v1',
+            'callerMatches':True,'versionBracketMatches':False,'controls':{'1':{'matched':True,'enumerationMatchesDiscovery':False,'objectId':'SECRET'},'2':{'matched':False}},
+            'responses':{'privileges':{'httpStatus':403,'requestPath':'SECRET'}},
+            'observations':[{'componentType':1,'qualified':False,'disposition':'access-denied','objectId':'SECRET'},
+                            {'componentType':2,'qualified':False,'disposition':'SECRET'}]})
+        self.bind('nonmaterialization','nonmaterialization/nonmaterialization.json')
+        result=self.controller.acquisition_evidence_summary(self.root)['nonmaterializationDetail']
+        self.assertEqual(result['privilegeResponse'],'forbidden');self.assertEqual(result['controls']['1'],True)
+        self.assertFalse(result['controls']['1EnumerationMatchesDiscovery']);self.assertFalse(result['versionBracketMatches'])
+        self.assertEqual(result['observations'][0]['disposition'],'access-denied');self.assertEqual(result['observations'][1]['disposition'],'other')
+        self.assertNotIn('SECRET',json.dumps(result))
+    def test_operational_allowlists_and_malformed_are_isolated(self):
+        self.write('operational-scope/manifest.json',{'schemaVersion':1,'kind':'private-operational-scope-capture-v1','result':{
+            'complete':False,'candidates':[{'componentType':20,'ruleId':'verified-instrumentation-role-v1','objectId':'SECRET'}],
+            'unresolved':[{'componentType':92,'reason':'creator-unresolved','objectId':'SECRET'}, {'componentType':65000,'reason':'SECRET'}],
+            'requiredLookupScanUnresolvedCount':3,'requiredLookupScanReasons':{'lookup-not-readable':2,'SECRET':1}}})
+        self.write('nonmaterialization/nonmaterialization.json',{'schemaVersion':1,'kind':'membership-nonmaterialization-v1','observations':[{'componentType':1,'qualified':False}]})
+        self.bind('operational-scope','operational-scope/manifest.json')
+        result=self.controller.acquisition_evidence_summary(self.root)
+        detail=result['operationalScope'];self.assertEqual(detail['candidates'][0]['componentType'],20)
+        self.assertEqual(detail['requiredLookupScanReasons'],{'lookup-not-readable':2,'other':1})
+        self.assertNotIn('SECRET',json.dumps(result))
+        p=self.root/'operational-scope'/'manifest.json';value=json.loads(p.read_text());value['result']['requiredLookupScanUnresolvedCount']=4;p.write_text(json.dumps(value))
+        result=self.controller.acquisition_evidence_summary(self.root)
+        self.assertEqual(result['operationalScope'],{'status':'unavailable'});self.assertEqual(result['nonmaterialization'][0]['count'],1)
+
+    def test_invalid_acquisition_authority_and_changed_bytes_do_not_hide_other_summary(self):
+        path='nonmaterialization/nonmaterialization.json'
+        data={'schemaVersion':1,'kind':'membership-nonmaterialization-v1','observations':[{'componentType':1,'qualified':False,'disposition':'request-failed'}]}
+        self.write(path,data);self.bind('nonmaterialization',path)
+        report_path=self.root/'acquisition.json';report=json.loads(report_path.read_text())
+        for bad in ({'stages':report['stages']},{**report,'schemaVersion':True},{**report,'kind':'SECRET'}, {**report,'stages':[{**report['stages'][0],'exitCode':0}]}):
+            with self.subTest(authority=bad):
+                report_path.write_text(json.dumps(bad));result=self.controller.acquisition_evidence_summary(self.root)
+                self.assertEqual(result['nonmaterializationDetail'],{'status':'unavailable'});self.assertEqual(result['nonmaterialization'][0]['count'],1)
+                self.assertNotIn('SECRET',json.dumps(result))
+        report_path.write_text(json.dumps(report));data['observations'].append({'componentType':1,'qualified':False,'disposition':'request-failed'});self.write(path,data)
+        result=self.controller.acquisition_evidence_summary(self.root)
+        self.assertEqual(result['nonmaterializationDetail'],{'status':'unavailable'});self.assertEqual(result['nonmaterialization'][0]['count'],2)
+
+    @unittest.skipUnless(hasattr(os, 'mkfifo') and hasattr(os, 'O_NONBLOCK'), 'POSIX FIFO support required')
+    def test_fifo_evidence_is_rejected_without_blocking(self):
+        path=self.root/'fifo';os.mkfifo(path)
+        child=("import importlib.util,sys; s=importlib.util.spec_from_file_location('pipeline',sys.argv[1]); "
+               "m=importlib.util.module_from_spec(s);s.loader.exec_module(m); "
+               "\ntry: m._bounded_safe_bytes(sys.argv[2],'fifo')\nexcept m.Hold: sys.exit(0)\nsys.exit(1)")
+        result=subprocess.run([sys.executable,'-c',child,str(CLI),str(self.root)],capture_output=True,text=True,timeout=3)
+        self.assertEqual(result.returncode,0,result.stderr)
+
+    def test_atomic_replacement_after_read_never_summarizes_unbound_bytes(self):
+        path='operational-scope/manifest.json'
+        data={'schemaVersion':1,'kind':'private-operational-scope-capture-v1','result':{'complete':False,'candidates':[],
+              'unresolved':[],'requiredLookupScanUnresolvedCount':1,'requiredLookupScanReasons':{'lookup-not-readable':1}}}
+        self.write(path,data);self.bind('operational-scope',path)
+        original=self.controller._bounded_safe_bytes;calls=[]
+        def replace_after_read(root,relative,*args,**kwargs):
+            raw=original(root,relative,*args,**kwargs)
+            if relative==path:
+                calls.append(relative);data['result']['requiredLookupScanUnresolvedCount']=2;data['result']['requiredLookupScanReasons']['lookup-not-readable']=2
+                replacement=self.root/'operational-scope'/'new.tmp';replacement.write_text(json.dumps(data));os.replace(replacement,self.root/path)
+            return raw
+        with patch.object(self.controller,'_bounded_safe_bytes',side_effect=replace_after_read):
+            result=self.controller.acquisition_evidence_summary(self.root)['operationalScope']
+        self.assertEqual(calls,[path]);self.assertEqual(result['requiredLookupScanUnresolvedCount'],1)
+        self.assertEqual(json.loads((self.root/path).read_text())['result']['requiredLookupScanUnresolvedCount'],2)
+
+    def test_projection_issue_groups_are_hash_bound_and_fixed(self):
+        path='projection/projection.json'
+        groups={'required-identity-unresolved':[{'componentType':1,'category':'missing-unit','count':2}],
+                'required-representation-missing':[],'typed-reference-unresolved':[{'componentType':60,'category':'workflow-form','count':1}],
+                'unclassified-field':[]}
+        data={'schemaVersion':1,'kind':'private-public-projection-candidate-v1','sourceVerified':True,'sourceComplete':False,
+              'contentComplete':False,'fieldPolicyComplete':False,'lossAccountingComplete':True,'reproducible':True,
+              'uniqueUnclassifiedFieldCount':0,'diagnosticCounts':{'required-identity-unresolved':2,'typed-reference-unresolved':1},
+              'issueDiagnostics':{'schemaVersion':1,'groups':groups},'secret':'PRIVATE'}
+        self.write(path,data);self.bind('projection-replay',path)
+        result=self.controller.acquisition_evidence_summary(self.root)
+        self.assertEqual(result['projectionIssueDiagnostics']['groups'],groups)
+        self.assertNotIn('PRIVATE',json.dumps(result))
+        data['issueDiagnostics']['groups']['required-identity-unresolved'][0]['count']=3
+        self.write(path,data)
+        result=self.controller.acquisition_evidence_summary(self.root)
+        self.assertEqual(result['projectionIssueDiagnostics'],{'status':'unavailable'});self.assertEqual(result['projection']['gates']['sourceComplete'],False)
+
+    def test_invalid_bound_projection_issue_buckets_remain_optional(self):
+        import copy
+        path='projection/projection.json'
+        groups={'required-identity-unresolved':[{'componentType':1,'category':'missing-unit','count':1}],
+                'required-representation-missing':[],'typed-reference-unresolved':[],'unclassified-field':[]}
+        base={'schemaVersion':1,'kind':'private-public-projection-candidate-v1','sourceVerified':True,'sourceComplete':False,
+              'contentComplete':False,'fieldPolicyComplete':False,'lossAccountingComplete':True,'reproducible':True,
+              'uniqueUnclassifiedFieldCount':0,'diagnosticCounts':{'required-identity-unresolved':1},'issueDiagnostics':{'schemaVersion':1,'groups':groups}}
+        bad=[]
+        x=copy.deepcopy(base);x['issueDiagnostics']['groups']['required-identity-unresolved'][0]['category']='PRIVATE';bad.append(x)
+        x=copy.deepcopy(base);x['issueDiagnostics']['groups']['required-identity-unresolved'][0]['componentType']=True;bad.append(x)
+        x=copy.deepcopy(base);x['issueDiagnostics']['groups']['required-identity-unresolved'].append(dict(x['issueDiagnostics']['groups']['required-identity-unresolved'][0]));bad.append(x)
+        x=copy.deepcopy(base);x['issueDiagnostics']['groups']['required-identity-unresolved'][0]['count']=2;bad.append(x)
+        x=copy.deepcopy(base);x['issueDiagnostics']['groups']['PRIVATE']=[];bad.append(x)
+        for data in bad:
+            with self.subTest(data=data):
+                self.write(path,data);(self.root/'acquisition.json').unlink(missing_ok=True);self.bind('projection-replay',path)
+                result=self.controller.acquisition_evidence_summary(self.root)
+                self.assertEqual(result['projectionIssueDiagnostics'],{'status':'unavailable'});self.assertFalse(result['projection']['gates']['sourceComplete'])
+                self.assertNotIn('PRIVATE',json.dumps(result))
