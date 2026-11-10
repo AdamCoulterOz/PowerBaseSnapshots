@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "_customapiid_value": {
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "CreateApproval"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "customapi"
+    },
+    "componentstate": 0,
+    "description": "Result of Create Approval",
+    "displayname": "CreateApprovalOutput",
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "logicalentityname": null,
+    "name": "CreateApprovalOutput",
+    "overriddencreatedon": null,
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "type": 10,
+    "uniquename": "CreateApprovalOutput",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "customapiid",
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "CreateApproval"
+        }
+      ],
+      "targetEntity": "customapi",
+      "type": "lookup"
+    },
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "CreateApprovalOutput"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_FlowApprovalsCore",
+      "version": "2.2.17.0"
+    }
+  ],
+  "typeIdentity": "entity:customapiresponseproperty"
+}

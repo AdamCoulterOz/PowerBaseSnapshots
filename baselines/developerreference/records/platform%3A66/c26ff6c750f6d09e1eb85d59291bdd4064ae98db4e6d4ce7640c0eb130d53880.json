@@ -1,0 +1,91 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "PicklistStatusControl",
+        "ControlManifestVersion": "1.0.81",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.FieldControls.PicklistStatusControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_PicklistStatus_Name",
+        "FullName": "MscrmControls.FieldControls.PicklistStatusControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.FieldControls.PicklistStatusControl",
+        "Namespace": "MscrmControls.FieldControls",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "Type": "OptionSet",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "msvcontrol",
+              "LoadOrder": 1,
+              "Name": "msvcontrol",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.FieldControls.PicklistStatusControl_PicklistStatusControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/PicklistStatusControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.FieldControls\" constructor=\"PicklistStatusControl\" version=\"1.0.81\" display-name-key=\"CC_PicklistStatus_Name\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"value\" display-name-key=\"CC_PicklistStatus_value\" description-key=\"CC_PicklistStatus_value_desc\" of-type=\"OptionSet\" usage=\"bound\" required=\"true\" hidden=\"true\" /><resources><library name=\"msvcontrol\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/msvcontrollib-1.0.0.js\" version=\"1.1.12\" /></library><code path=\"PicklistStatusControl.js\" order=\"2\" /><resx path=\"strings/PicklistStatusControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.FieldControls.PicklistStatusControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.81"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.FieldControls.PicklistStatusControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

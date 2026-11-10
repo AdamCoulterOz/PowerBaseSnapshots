@@ -1,0 +1,106 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "HyperlinkControlWithImage",
+        "ControlManifestVersion": "1.0.1",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Activity.HyperlinkControlWithImage"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "Hyper link control with image",
+        "FullName": "MscrmControls.Activity.HyperlinkControlWithImage",
+        "IsVirtual": false,
+        "Name": "MscrmControls.Activity.HyperlinkControlWithImage",
+        "Namespace": "MscrmControls.Activity",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "attributeName",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "webResourceName",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "webResourceName_key",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "button_Icon",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.Activity.HyperlinkControlWithImage_HyperlinkControlWithImage.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "HyperlinkControlWithImage.css",
+              "Type": 1
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.Text",
+    "componentstate": 0,
+    "introducedversion": "9.0.26093.260917001",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Activity\" constructor=\"HyperlinkControlWithImage\" version=\"1.0.1\" display-name-key=\"Hyper link control with image\" description-key=\"A control that allows to convert url field to button \"><property name=\"attributeName\" display-name-key=\"attributeName\" description-key=\"Name of the attribute\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" /><property name=\"webResourceName\" display-name-key=\"webResourceName\" description-key=\"Name of the web reource file\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" /><property name=\"webResourceName_key\" display-name-key=\"webResourceName_key\" description-key=\"Key of the resource string\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" /><property name=\"button_Icon\" display-name-key=\"button_Icon\" description-key=\"Name of the icon web resource\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" /><resources><code path=\"HyperlinkControlWithImage.js\" order=\"2\" /><css path=\"HyperlinkControlWithImage.css\" order=\"3\" /></resources></control></manifest>",
+    "name": "MscrmControls.Activity.HyperlinkControlWithImage",
+    "supportedplatform": "(Model)",
+    "version": "1.0.1"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Activity.HyperlinkControlWithImage"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_ActivitiesPatch",
+      "version": "9.0.26093.260917001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

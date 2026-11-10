@@ -1,0 +1,114 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.11",
+        "Children": [],
+        "ConstructorName": "MailboxNotifications",
+        "ControlManifestVersion": "1.2.6",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "msdyn_PowerAdmin.EnvironmentSettings.Email.MailboxNotifications"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "MailboxNotifications",
+        "FullName": "msdyn_PowerAdmin.EnvironmentSettings.Email.MailboxNotifications",
+        "IsVirtual": true,
+        "Name": "PowerAdmin.EnvironmentSettings.Email.MailboxNotifications",
+        "Namespace": "PowerAdmin.EnvironmentSettings.Email",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "sampleProperty",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "react_16_14_0",
+              "LoadOrder": 0,
+              "Name": "react_16_14_0",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_9_4_0",
+              "LoadOrder": 0,
+              "Name": "fluent_9_4_0",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "PowerAdmin.EnvironmentSettings.Email.MailboxNotifications_bundle.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "Shared.1033.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/MailboxNotifications.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.Text",
+    "componentstate": 0,
+    "introducedversion": "2.2.3552.1",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"PowerAdmin.EnvironmentSettings.Email\" constructor=\"MailboxNotifications\" version=\"1.2.6\" display-name-key=\"MailboxNotifications\" description-key=\"Mailbox Notifications\" control-type=\"virtual\" api-version=\"1.3.11\"><external-service-usage enabled=\"false\" /><property name=\"sampleProperty\" display-name-key=\"Property_Display_Key\" description-key=\"Property_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" /><resources><code path=\"bundle.js\" order=\"1\" /><platform-library name=\"React\" version=\"16.8.6\" /><platform-library name=\"Fluent\" version=\"9.4.0\" /><resx path=\"Shared.1033.resx\" version=\"1.0.0\" /><resx path=\"strings/MailboxNotifications.1033.resx\" version=\"1.0.0\" /></resources><feature-usage><uses-feature name=\"Utility\" required=\"true\" /><uses-feature name=\"WebAPI\" required=\"true\" /></feature-usage><built-by name=\"pac\" version=\"1.30.2\" /></control></manifest>",
+    "name": "msdyn_PowerAdmin.EnvironmentSettings.Email.MailboxNotifications",
+    "supportedplatform": "(Model)",
+    "version": "1.2.6"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "msdyn_PowerAdmin.EnvironmentSettings.Email.MailboxNotifications"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_PowerAdminSettingsEmail",
+      "version": "2.2.3552.1"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

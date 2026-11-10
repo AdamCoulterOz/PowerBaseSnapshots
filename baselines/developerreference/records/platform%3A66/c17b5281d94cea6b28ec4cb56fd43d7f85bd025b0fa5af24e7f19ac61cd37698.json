@@ -1,0 +1,124 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ExportToExcelControl",
+        "ControlManifestVersion": "1.0.12",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.ExportToExcel.ExportToExcelControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_AppCommon_ExportToExcelControl",
+        "FullName": "MscrmControls.AppCommon.ExportToExcel.ExportToExcelControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.ExportToExcel.ExportToExcelControl",
+        "Namespace": "MscrmControls.AppCommon.ExportToExcel",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "typecode",
+              "Required": true,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "fetchxml",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "layoutxml",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "exporttype",
+              "Required": true,
+              "Type": "Whole.None",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "FRECommon",
+              "LoadOrder": 2,
+              "Name": "FRECommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.AppCommon.ExportToExcel.ExportToExcelControl_ExportToExcelControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/ExportToExcelControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.4.0066",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.ExportToExcel\" constructor=\"ExportToExcelControl\" version=\"1.0.12\" display-name-key=\"CC_AppCommon_ExportToExcelControl\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"typecode\" display-name-key=\"ExportToExcel_typeCode\" description-key=\"ExportToExcel_typeCode_desc\" usage=\"input\" of-type=\"Whole.None\" required=\"true\" hidden=\"true\" /><property name=\"fetchxml\" display-name-key=\"ExportToExcel_fetchXml\" description-key=\"ExportToExcel_fetchXml_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"layoutxml\" display-name-key=\"ExportToExcel_layoutxml\" description-key=\"ExportToExcel_layoutxml_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"exporttype\" display-name-key=\"ExportToExcel_exportType\" description-key=\"ExportToExcel_exportType_desc\" usage=\"input\" of-type=\"Whole.None\" required=\"true\" hidden=\"true\" /><resources><library name=\"FRECommon\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/frecommon-lib.js\" version=\"1.0.0\" /></library><code path=\"ExportToExcelControl.js\" order=\"2\" /><resx path=\"locale/ExportToExcelControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.ExportToExcel.ExportToExcelControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.12"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.ExportToExcel.ExportToExcelControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommon",
+      "version": "9.0.4.0066"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch",
+      "version": "9.0.1904.4006"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

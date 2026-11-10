@@ -1,0 +1,179 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.18",
+        "Children": [],
+        "ConstructorName": "AddressInputUCI",
+        "ControlManifestVersion": "1.1.71",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "Microsoft.AddressInputUCI"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "AddressInput_GA_Display_Key",
+        "FullName": "Microsoft.AddressInputUCI",
+        "IsVirtual": false,
+        "Name": "Microsoft.AddressInputUCI",
+        "Namespace": "Microsoft",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": false,
+              "Name": "Device.getCurrentPosition",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "Address",
+              "Required": false,
+              "TypeGroup": "strings",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "Street1",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "Street2",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "Street3",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "City",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "StateOrProvince",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "CountryOrRegion",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "ZipOrPostalCode",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "WriteToPrimaryField",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "AddressFormFormat",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "KeyProvider",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "react_16_14_0",
+              "LoadOrder": 0,
+              "Name": "react_16_14_0",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_8_121_1",
+              "LoadOrder": 0,
+              "Name": "fluent_8_121_1",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "Microsoft.AddressInputUCI_bundle.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/AddressInput.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"Microsoft\" constructor=\"AddressInputUCI\" version=\"1.1.71\" display-name-key=\"AddressInput_GA_Display_Key\" description-key=\"AddressInput_Desc_Key\" control-type=\"standard\" hidden=\"true\" api-version=\"1.3.18\"><type-group name=\"strings\"><type>SingleLine.Text</type><type>Multiple</type></type-group><property name=\"Address\" display-name-key=\"Address_Display_Key\" description-key=\"Address_Desc_Key\" of-type-group=\"strings\" usage=\"bound\" required=\"false\" /><property name=\"Street1\" display-name-key=\"Street1_Display_Key\" description-key=\"Street1_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"Street2\" display-name-key=\"Street2_Display_Key\" description-key=\"Street2_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"Street3\" display-name-key=\"Street3_Display_Key\" description-key=\"Street3_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"City\" display-name-key=\"City_Display_Key\" description-key=\"City_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"StateOrProvince\" display-name-key=\"StateOrProvince_Display_Key\" description-key=\"StateOrProvince_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"CountryOrRegion\" display-name-key=\"CountryOrRegion_Display_Key\" description-key=\"CountryOrRegion_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"ZipOrPostalCode\" display-name-key=\"ZipOrPostalCode_Display_Key\" description-key=\"ZipOrPostalCode_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"WriteToPrimaryField\" display-name-key=\"WriteToPrimaryField_Display_Key\" description-key=\"WritebackToPrimaryField_Desc_Key\" of-type=\"Enum\" usage=\"input\" required=\"false\"><value name=\"True\" display-name-key=\"True_Display_Key\" default=\"true\">True</value><value name=\"False\" display-name-key=\"False_Display_Key\">False</value></property><property name=\"AddressFormFormat\" display-name-key=\"AddressFormFormat_Display_Key\" description-key=\"AddressFormFormat_Desc_Key\" of-type=\"Enum\" usage=\"input\" required=\"false\"><value name=\"LegacyFormat\" display-name-key=\"LegacyFormat_Display_Key\" default=\"true\">LegacyFormat</value><value name=\"UserLocation\" display-name-key=\"UserLocation_Display_Key\">UserLocation</value><value name=\"AF\" display-name-key=\"AF\">AF</value><value name=\"AL\" display-name-key=\"AL\">AL</value><value name=\"DZ\" display-name-key=\"DZ\">DZ</value><value name=\"AO\" display-name-key=\"AO\">AO</value><value name=\"AR\" display-name-key=\"AR\">AR</value><value name=\"AM\" display-name-key=\"AM\">AM</value><value name=\"AU\" display-name-key=\"AU\">AU</value><value name=\"AT\" display-name-key=\"AT\">AT</value><value name=\"AZ\" display-name-key=\"AZ\">AZ</value><value name=\"BS\" display-name-key=\"BS\">BS</value><value name=\"BH\" display-name-key=\"BH\">BH</value><value name=\"BD\" display-name-key=\"BD\">BD</value><value name=\"BB\" display-name-key=\"BB\">BB</value><value name=\"BY\" display-name-key=\"BY\">BY</value><value name=\"BE\" display-name-key=\"BE\">BE</value><value name=\"BZ\" display-name-key=\"BZ\">BZ</value><value name=\"BM\" display-name-key=\"BM\">BM</value><value name=\"BO\" display-name-key=\"BO\">BO</value><value name=\"BA\" display-name-key=\"BA\">BA</value><value name=\"BW\" display-name-key=\"BW\">BW</value><value name=\"BR\" display-name-key=\"BR\">BR</value><value name=\"BN\" display-name-key=\"BN\">BN</value><value name=\"BG\" display-name-key=\"BG\">BG</value><value name=\"CV\" display-name-key=\"CV\">CV</value><value name=\"CM\" display-name-key=\"CM\">CM</value><value name=\"CA\" display-name-key=\"CA\">CA</value><value name=\"KY\" display-name-key=\"KY\">KY</value><value name=\"CL\" display-name-key=\"CL\">CL</value><value name=\"CN_International\" display-name-key=\"CN_International\">CN_International</value><value name=\"CN\" display-name-key=\"CN\">CN</value><value name=\"CO\" display-name-key=\"CO\">CO</value><value name=\"CD\" display-name-key=\"CD\">CD</value><value name=\"CR\" display-name-key=\"CR\">CR</value><value name=\"CI\" display-name-key=\"CI\">CI</value><value name=\"HR\" display-name-key=\"HR\">HR</value><value name=\"CW\" display-name-key=\"CW\">CW</value><value name=\"CY\" display-name-key=\"CY\">CY</value><value name=\"CZ\" display-name-key=\"CZ\">CZ</value><value name=\"DK\" display-name-key=\"DK\">DK</value><value name=\"DO\" display-name-key=\"DO\">DO</value><value name=\"EC\" display-name-key=\"EC\">EC</value><value name=\"EG\" display-name-key=\"EG\">EG</value><value name=\"SV\" display-name-key=\"SV\">SV</value><value name=\"EE\" display-name-key=\"EE\">EE</value><value name=\"ET\" display-name-key=\"ET\">ET</value><value name=\"FO\" display-name-key=\"FO\">FO</value><value name=\"FJ\" display-name-key=\"FJ\">FJ</value><value name=\"FI\" display-name-key=\"FI\">FI</value><value name=\"FR\" display-name-key=\"FR\">FR</value><value name=\"GE\" display-name-key=\"GE\">GE</value><value name=\"DE\" display-name-key=\"DE\">DE</value><value name=\"GH\" display-name-key=\"GH\">GH</value><value name=\"GR\" display-name-key=\"GR\">GR</value><value name=\"GT\" display-name-key=\"GT\">GT</value><value name=\"HN\" display-name-key=\"HN\">HN</value><value name=\"HK_International\" display-name-key=\"HK_International\">HK_International</value><value name=\"HK\" display-name-key=\"HK\">HK</value><value name=\"HU\" display-name-key=\"HU\">HU</value><value name=\"IS\" display-name-key=\"IS\">IS</value><value name=\"IN\" display-name-key=\"IN\">IN</value><value name=\"ID\" display-name-key=\"ID\">ID</value><value name=\"IQ\" display-name-key=\"IQ\">IQ</value><value name=\"IE\" display-name-key=\"IE\">IE</value><value name=\"IL\" display-name-key=\"IL\">IL</value><value name=\"IT\" display-name-key=\"IT\">IT</value><value name=\"JM\" display-name-key=\"JM\">JM</value><value name=\"JP_International\" display-name-key=\"JP_International\">JP_International</value><value name=\"JP\" display-name-key=\"JP\">JP</value><value name=\"JO\" display-name-key=\"JO\">JO</value><value name=\"KZ\" display-name-key=\"KZ\">KZ</value><value name=\"KE\" display-name-key=\"KE\">KE</value><value name=\"KR_International\" display-name-key=\"KR_International\">KR_International</value><value name=\"KR\" display-name-key=\"KR\">KR</value><value name=\"XK\" display-name-key=\"XK\">XK</value><value name=\"KW\" display-name-key=\"KW\">KW</value><value name=\"KG\" display-name-key=\"KG\">KG</value><value name=\"LA_International\" display-name-key=\"LA_International\">LA_International</value><value name=\"LA\" display-name-key=\"LA\">LA</value><value name=\"LV\" display-name-key=\"LV\">LV</value><value name=\"LB\" display-name-key=\"LB\">LB</value><value name=\"LY\" display-name-key=\"LY\">LY</value><value name=\"LI\" display-name-key=\"LI\">LI</value><value name=\"LT\" display-name-key=\"LT\">LT</value><value name=\"LU\" display-name-key=\"LU\">LU</value><value name=\"MY\" display-name-key=\"MY\">MY</value><value name=\"MT\" display-name-key=\"MT\">MT</value><value name=\"MU\" display-name-key=\"MU\">MU</value><value name=\"MX\" display-name-key=\"MX\">MX</value><value name=\"MD\" display-name-key=\"MD\">MD</value><value name=\"MC\" display-name-key=\"MC\">MC</value><value name=\"MN\" display-name-key=\"MN\">MN</value><value name=\"ME\" display-name-key=\"ME\">ME</value><value name=\"MA\" display-name-key=\"MA\">MA</value><value name=\"NA\" display-name-key=\"NA\">NA</value><value name=\"NP\" display-name-key=\"NP\">NP</value><value name=\"NL\" display-name-key=\"NL\">NL</value><value name=\"NZ\" display-name-key=\"NZ\">NZ</value><value name=\"NI\" display-name-key=\"NI\">NI</value><value name=\"NG\" display-name-key=\"NG\">NG</value><value name=\"MK\" display-name-key=\"MK\">MK</value><value name=\"NO\" display-name-key=\"NO\">NO</value><value name=\"OM\" display-name-key=\"OM\">OM</value><value name=\"PK\" display-name-key=\"PK\">PK</value><value name=\"PS\" display-name-key=\"PS\">PS</value><value name=\"PA\" display-name-key=\"PA\">PA</value><value name=\"PY\" display-name-key=\"PY\">PY</value><value name=\"PE\" display-name-key=\"PE\">PE</value><value name=\"PH\" display-name-key=\"PH\">PH</value><value name=\"PL\" display-name-key=\"PL\">PL</value><value name=\"PT\" display-name-key=\"PT\">PT</value><value name=\"PR\" display-name-key=\"PR\">PR</value><value name=\"QA\" display-name-key=\"QA\">QA</value><value name=\"RO\" display-name-key=\"RO\">RO</value><value name=\"RU\" display-name-key=\"RU\">RU</value><value name=\"RW\" display-name-key=\"RW\">RW</value><value name=\"KN\" display-name-key=\"KN\">KN</value><value name=\"SA\" display-name-key=\"SA\">SA</value><value name=\"SN\" display-name-key=\"SN\">SN</value><value name=\"RS\" display-name-key=\"RS\">RS</value><value name=\"SG_International\" display-name-key=\"SG_International\">SG_International</value><value name=\"SG\" display-name-key=\"SG\">SG</value><value name=\"SK\" display-name-key=\"SK\">SK</value><value name=\"SI\" display-name-key=\"SI\">SI</value><value name=\"ZA\" display-name-key=\"ZA\">ZA</value><value name=\"ES\" display-name-key=\"ES\">ES</value><value name=\"LK\" display-name-key=\"LK\">LK</value><value name=\"SE\" display-name-key=\"SE\">SE</value><value name=\"CH\" display-name-key=\"CH\">CH</value><value name=\"TW_International\" display-name-key=\"TW_International\">TW_International</value><value name=\"TW\" display-name-key=\"TW\">TW</value><value name=\"TJ\" display-name-key=\"TJ\">TJ</value><value name=\"TZ\" display-name-key=\"TZ\">TZ</value><value name=\"TH\" display-name-key=\"TH\">TH</value><value name=\"TT\" display-name-key=\"TT\">TT</value><value name=\"TN\" display-name-key=\"TN\">TN</value><value name=\"TR\" display-name-key=\"TR\">TR</value><value name=\"TM\" display-name-key=\"TM\">TM</value><value name=\"VI\" display-name-key=\"VI\">VI</value><value name=\"UG\" display-name-key=\"UG\">UG</value><value name=\"UA\" display-name-key=\"UA\">UA</value><value name=\"AE\" display-name-key=\"AE\">AE</value><value name=\"GB\" display-name-key=\"GB\">GB</value><value name=\"US\" display-name-key=\"US\">US</value><value name=\"UY\" display-name-key=\"UY\">UY</value><value name=\"UZ\" display-name-key=\"UZ\">UZ</value><value name=\"VE\" display-name-key=\"VE\">VE</value><value name=\"VN\" display-name-key=\"VN\">VN</value><value name=\"YE\" display-name-key=\"YE\">YE</value><value name=\"ZM\" display-name-key=\"ZM\">ZM</value><value name=\"ZW\" display-name-key=\"ZW\">ZW</value></property><property name=\"KeyProvider\" display-name-key=\"KeyProvider_Display_Key\" description-key=\"KeyProvider_Desc_Key\" of-type=\"Enum\" usage=\"input\" required=\"false\"><value name=\"OrgSetting\" display-name-key=\"OrganizationSetting_Display_Key\" default=\"true\">OrgSetting</value><value name=\"FS\" display-name-key=\"FieldService_Display_Key\">FS</value><value name=\"Sales\" display-name-key=\"Sales_Display_Key\">Sales</value></property><feature-usage><uses-feature name=\"Device.getCurrentPosition\" required=\"false\" /><uses-feature name=\"WebAPI\" required=\"true\" /></feature-usage><resources><platform-library name=\"React\" version=\"16.14.0\" /><platform-library name=\"Fluent\" version=\"8.121.1\" /><code path=\"bundle.js\" order=\"2\" /><resx path=\"strings/AddressInput.1033.resx\" version=\"1.0.0\" /></resources><built-by name=\"pac\" version=\"1.49.1-alpha-25090500\" /></control></manifest>",
+    "name": "Microsoft.AddressInputUCI",
+    "supportedplatform": "(Model)",
+    "version": "1.1.71"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "Microsoft.AddressInputUCI"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

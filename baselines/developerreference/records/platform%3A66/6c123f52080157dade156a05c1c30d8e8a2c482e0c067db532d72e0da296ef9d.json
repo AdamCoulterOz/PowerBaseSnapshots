@@ -1,0 +1,99 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "WorkHourControl",
+        "ControlManifestVersion": "1.0.8",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.WorkHourControl.WorkHourControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_WorkHourControl",
+        "FullName": "MscrmControls.WorkHourControl.WorkHourControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.WorkHourControl.WorkHourControl",
+        "Namespace": "MscrmControls.WorkHourControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "CalendarId",
+              "Required": true,
+              "TypeGroup": "validTypes",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "WorkHourControlConfig",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "Timezone",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.WorkHourControl.WorkHourControl_WorkHourControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/WorkHourControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.Text,Lookup.Simple",
+    "componentstate": 0,
+    "introducedversion": "9.0.26094.1003",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.WorkHourControl\" constructor=\"WorkHourControl\" version=\"1.0.8\" display-name-key=\"CC_WorkHourControl\"><modes /><type-group name=\"validTypes\"><type>SingleLine.Text</type><type>Lookup.Simple</type></type-group><property name=\"CalendarId\" display-name-key=\"CC_Calendar_Id\" description-key=\"CC_Calendar_Id_Desc\" of-type-group=\"validTypes\" usage=\"bound\" required=\"true\" /><property name=\"WorkHourControlConfig\" display-name-key=\"CC_Work_Hour_Control_Config\" description-key=\"CC_Work_Hour_Control_Config_Desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" /><property name=\"Timezone\" display-name-key=\"CC_Timezone\" description-key=\"CC_Timezone_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><resources><code path=\"WorkHourControl.js\" order=\"1\" /><resx path=\"strings/WorkHourControl.1033.resx\" version=\"1.0.3\" /></resources></control></manifest>",
+    "name": "MscrmControls.WorkHourControl.WorkHourControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.8"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.WorkHourControl.WorkHourControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_UCICalendar",
+      "version": "9.0.26101.2000"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

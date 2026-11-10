@@ -1,0 +1,99 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "OfflineStatusControl",
+        "ControlManifestVersion": "1.0.22",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Offline.OfflineStatusControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_OfflineStatusControl",
+        "FullName": "MscrmControls.Offline.OfflineStatusControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.Offline.OfflineStatusControl",
+        "Namespace": "MscrmControls.Offline",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "OfflineStatus",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "OfflineStatusReason",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "OfflineMetadataSyncRequired",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.Offline.OfflineStatusControl_OfflineStatusControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/OfflineStatusControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Offline\" constructor=\"OfflineStatusControl\" version=\"1.0.22\" display-name-key=\"CC_OfflineStatusControl\" control-type=\"virtual\"><modes></modes><property name=\"OfflineStatus\" display-name-key=\"CC_offlineStatus\" description-key=\"CC_offlineStatus_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"OfflineStatusReason\" display-name-key=\"CC_offlineStatusReason\" description-key=\"CC_offlineStatusReason_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"OfflineMetadataSyncRequired\" display-name-key=\"CC_offlineMetadataSyncRequired\" description-key=\"CC_offlineMetadataSyncRequired_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><resources><code path=\"OfflineStatusControl.js\" order=\"1\" /><resx path=\"strings/OfflineStatusControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.Offline.OfflineStatusControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.22"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Offline.OfflineStatusControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

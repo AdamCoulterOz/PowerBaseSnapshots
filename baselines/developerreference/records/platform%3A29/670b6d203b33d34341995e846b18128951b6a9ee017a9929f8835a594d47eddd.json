@@ -1,0 +1,112 @@
+{
+  "configuration": {
+    "_flowgroup_value": null,
+    "_licensee_value": null,
+    "_licenseentitledby_value": null,
+    "_parentworkflowid_value": null,
+    "_plugintypeid_value": null,
+    "_sdkmessageid_value": null,
+    "asyncautodelete": false,
+    "billingcontext": null,
+    "businessprocesstype": 0,
+    "category": 2,
+    "claims": null,
+    "clientdata": "<clientdata><labels></labels><clientcode><![CDATA[function pbl_fc3a60cd7ddce8118161000d3afd9179(eventContext){try{var v0=(!Mscrm.BusinessRules.Utility.isNull(eventContext) && typeof eventContext.getFormContext === \"function\") ? eventContext.getFormContext().data.entity : Xrm.Page.data.entity;var v1=v0.attributes.get('msdyn_exceptionmessage');if (((v1) == undefined || (v1) == null || (v1) === \"\")){return;}var v2=(v1) ? v1.getValue() : null;if(((v2)) == undefined || ((v2)) == null || ((v2)) === \"\"){v1.controls.forEach(function(c,i){c.setVisible(false);});}}catch (e){Mscrm.BusinessRules.ErrorHandlerFactory.getHandler(e, arguments.callee).handleError();}}]]></clientcode></clientdata>",
+    "clientdataiscompressed": null,
+    "componentstate": 0,
+    "connectionreferences": null,
+    "createmetadata": null,
+    "createstage": null,
+    "credentials": null,
+    "definition": null,
+    "deletestage": null,
+    "dependencies": null,
+    "description": "Click to add description",
+    "desktopflowmodules": null,
+    "dynamicssolutioncontext": null,
+    "entityimage": null,
+    "entityimage_timestamp": null,
+    "entityimage_url": null,
+    "entityimageid": null,
+    "formid": null,
+    "inputparameters": null,
+    "inputs": null,
+    "introducedversion": "1.0.0.3",
+    "iscrmuiworkflow": true,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "iscustomprocessingstepallowedforotherpublishers": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": true
+    },
+    "ismanaged": true,
+    "istransacted": true,
+    "languagecode": null,
+    "metadata": null,
+    "mode": 1,
+    "modernflowtype": null,
+    "modifymetadata": null,
+    "name": "Exception Message Visibility",
+    "ondemand": false,
+    "outputs": null,
+    "planverified": null,
+    "primaryentity": "msdyn_solutionhistory",
+    "processorder": null,
+    "processroleassignment": null,
+    "processtriggerformid": {
+      "key": [
+        {
+          "field": "formid",
+          "type": "Uniqueidentifier",
+          "value": "fdcfdb47-17d5-48ad-b713-7970afda8153"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "systemform"
+    },
+    "processtriggerscope": 1,
+    "rank": null,
+    "rendererobjecttypecode": null,
+    "resourcecontainer": null,
+    "resourceid": null,
+    "runas": 1,
+    "schemaversion": null,
+    "scope": 4,
+    "statecode": 1,
+    "statuscode": 2,
+    "subprocess": false,
+    "suspensionreasondetails": null,
+    "syncworkflowlogonfailure": false,
+    "throttlingbehavior": null,
+    "triggeroncreate": false,
+    "triggerondelete": false,
+    "triggeronupdateattributelist": null,
+    "trustedaccess": null,
+    "type": 1,
+    "uidata": null,
+    "uiflowtype": null,
+    "uniquename": null,
+    "updatestage": null,
+    "workflowid": "fc3a60cd-7ddc-e811-8161-000d3afd9179",
+    "xaml": "<?xml version=\"1.0\" encoding=\"utf-16\"?><Activity x:Class=\"XrmWorkflowfc3a60cd7ddce8118161000d3afd9179\" xmlns=\"http://schemas.microsoft.com/netfx/2009/xaml/activities\" xmlns:mcwc=\"clr-namespace:Microsoft.Crm.Workflow.ClientActivities;assembly=Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" xmlns:mva=\"clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" xmlns:mxs=\"clr-namespace:Microsoft.Xrm.Sdk;assembly=Microsoft.Xrm.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" xmlns:mxsq=\"clr-namespace:Microsoft.Xrm.Sdk.Query;assembly=Microsoft.Xrm.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" xmlns:mxswa=\"clr-namespace:Microsoft.Xrm.Sdk.Workflow.Activities;assembly=Microsoft.Xrm.Sdk.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" xmlns:s=\"clr-namespace:System;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" xmlns:scg=\"clr-namespace:System.Collections.Generic;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" xmlns:sco=\"clr-namespace:System.Collections.ObjectModel;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" xmlns:srs=\"clr-namespace:System.Runtime.Serialization;assembly=System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" xmlns:this=\"clr-namespace:\" xmlns:x=\"http://schemas.microsoft.com/winfx/2006/xaml\"><x:Members><x:Property Name=\"InputEntities\" Type=\"InArgument(scg:IDictionary(x:String, mxs:Entity))\" /><x:Property Name=\"CreatedEntities\" Type=\"InArgument(scg:IDictionary(x:String, mxs:Entity))\" /></x:Members><this:XrmWorkflowfc3a60cd7ddce8118161000d3afd9179.InputEntities><InArgument x:TypeArguments=\"scg:IDictionary(x:String, mxs:Entity)\" /></this:XrmWorkflowfc3a60cd7ddce8118161000d3afd9179.InputEntities><this:XrmWorkflowfc3a60cd7ddce8118161000d3afd9179.CreatedEntities><InArgument x:TypeArguments=\"scg:IDictionary(x:String, mxs:Entity)\" /></this:XrmWorkflowfc3a60cd7ddce8118161000d3afd9179.CreatedEntities><mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings><mxswa:Workflow><mxswa:ActivityReference AssemblyQualifiedName=\"Microsoft.Crm.Workflow.Activities.ConditionSequence, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" DisplayName=\"ConditionStep1\"><mxswa:ActivityReference.Arguments><InArgument x:TypeArguments=\"x:Boolean\" x:Key=\"Wait\">False</InArgument></mxswa:ActivityReference.Arguments><mxswa:ActivityReference.Properties><sco:Collection x:TypeArguments=\"Variable\" x:Key=\"Variables\"><Variable x:TypeArguments=\"x:Boolean\" Default=\"False\" Name=\"ConditionBranchStep2_condition\" /><Variable x:TypeArguments=\"x:Object\" Name=\"ConditionBranchStep2_1\" /></sco:Collection><sco:Collection x:TypeArguments=\"Activity\" x:Key=\"Activities\"><mxswa:GetEntityProperty Attribute=\"msdyn_exceptionmessage\" Entity=\"[InputEntities(&quot;primaryEntity&quot;)]\" EntityName=\"msdyn_solutionhistory\" Value=\"[ConditionBranchStep2_1]\"><mxswa:GetEntityProperty.TargetType><InArgument x:TypeArguments=\"s:Type\"><mxswa:ReferenceLiteral x:TypeArguments=\"s:Type\"><x:Null /></mxswa:ReferenceLiteral></InArgument></mxswa:GetEntityProperty.TargetType></mxswa:GetEntityProperty><mxswa:ActivityReference AssemblyQualifiedName=\"Microsoft.Crm.Workflow.Activities.EvaluateCondition, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" DisplayName=\"EvaluateCondition\"><mxswa:ActivityReference.Arguments><InArgument x:TypeArguments=\"mxsq:ConditionOperator\" x:Key=\"ConditionOperator\">Null</InArgument><x:Null x:Key=\"Parameters\" /><InArgument x:TypeArguments=\"x:Object\" x:Key=\"Operand\">[ConditionBranchStep2_1]</InArgument><OutArgument x:TypeArguments=\"x:Boolean\" x:Key=\"Result\">[ConditionBranchStep2_condition]</OutArgument></mxswa:ActivityReference.Arguments></mxswa:ActivityReference><mxswa:ActivityReference AssemblyQualifiedName=\"Microsoft.Crm.Workflow.Activities.ConditionBranch, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" DisplayName=\"ConditionBranchStep2\"><mxswa:ActivityReference.Arguments><InArgument x:TypeArguments=\"x:Boolean\" x:Key=\"Condition\">[ConditionBranchStep2_condition]</InArgument></mxswa:ActivityReference.Arguments><mxswa:ActivityReference.Properties><mxswa:ActivityReference x:Key=\"Then\" AssemblyQualifiedName=\"Microsoft.Crm.Workflow.Activities.Composite, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" DisplayName=\"ConditionBranchStep2\"><mxswa:ActivityReference.Properties><sco:Collection x:TypeArguments=\"Variable\" x:Key=\"Variables\" /><sco:Collection x:TypeArguments=\"Activity\" x:Key=\"Activities\"><Sequence DisplayName=\"SetVisibilityStep1: New Action\"><mcwc:SetVisibility ControlId=\"msdyn_exceptionmessage\" ControlType=\"standard\" Entity=\"[InputEntities(&quot;primaryEntity&quot;)]\" EntityName=\"msdyn_solutionhistory\" IsVisible=\"False\" /></Sequence></sco:Collection></mxswa:ActivityReference.Properties></mxswa:ActivityReference><x:Null x:Key=\"Else\" /><x:String x:Key=\"Description\">New Condition</x:String></mxswa:ActivityReference.Properties></mxswa:ActivityReference></sco:Collection><x:Boolean x:Key=\"ContainsElseBranch\">False</x:Boolean></mxswa:ActivityReference.Properties></mxswa:ActivityReference></mxswa:Workflow></Activity>"
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "portability": "not-established",
+    "value": "fc3a60cd-7ddc-e811-8161-000d3afd9179"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "SolutionHistoryAPIs",
+      "version": "9.1.0.30"
+    }
+  ],
+  "typeIdentity": "platform:29"
+}

@@ -1,0 +1,133 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "CarouselControl",
+        "ControlManifestVersion": "1.0.1",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.CarouselControl.CarouselControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CarouselControl",
+        "FullName": "MscrmControls.CarouselControl.CarouselControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.CarouselControl.CarouselControl",
+        "Namespace": "MscrmControls.CarouselControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [],
+              "InitialDataSetFetch": true,
+              "Name": "CarouselDataSet",
+              "Type": "Grid"
+            },
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [],
+              "InitialDataSetFetch": true,
+              "Name": "TemplateDataSet",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "GridState",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommonlib",
+              "LoadOrder": 1,
+              "Name": "mscommonlib",
+              "Type": 0
+            },
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 2,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "slick",
+              "LoadOrder": 3,
+              "Name": "slick",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 4,
+              "Name": "MscrmControls.CarouselControl.CarouselControl_CarouselControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 5,
+              "Name": "css/slick.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 6,
+              "Name": "css/slick-theme.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 7,
+              "Name": "css/carousel.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/CarouselControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.CarouselControl\" constructor=\"CarouselControl\" version=\"1.0.1\" display-name-key=\"CarouselControl\" hidden=\"true\"><modes></modes><data-set name=\"CarouselDataSet\" display-name-key=\"CC_Carousel_DSCarousel\" /><data-set name=\"TemplateDataSet\" display-name-key=\"CC_Template_DSGrid\" /><property name=\"GridState\" display-name-key=\"CC_grid_State\" description-key=\"CC_grid_State_Desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"true\" hidden=\"true\" /><resources><library name=\"mscommonlib\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><library name=\"jquery\" version=\"&gt;=2\" order=\"2\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><library name=\"slick\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"libs/slick.min.js\" version=\"1.5.9\" /></library><code path=\"CarouselControl.js\" order=\"4\" /><css path=\"css/slick.css\" order=\"5\" /><css path=\"css/slick-theme.css\" order=\"6\" /><css path=\"css/carousel.css\" order=\"7\" /><resx path=\"strings/CarouselControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.CarouselControl.CarouselControl",
+    "supportedplatform": null,
+    "version": "1.0.1"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.CarouselControl.CarouselControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

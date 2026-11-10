@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "_customapiid_value": {
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "msdyn_create_virtual_table_v2"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "customapi"
+    },
+    "componentstate": 0,
+    "description": "Virtual Table Id",
+    "displayname": "Virtual Table Id",
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "logicalentityname": null,
+    "name": "Virtual Table Id",
+    "overriddencreatedon": null,
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "type": 10,
+    "uniquename": "virtual_table_id",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "customapiid",
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "msdyn_create_virtual_table_v2"
+        }
+      ],
+      "targetEntity": "customapi",
+      "type": "lookup"
+    },
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "virtual_table_id"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msft_ConnectorProvider",
+      "version": "9.1.0.483"
+    }
+  ],
+  "typeIdentity": "entity:customapiresponseproperty"
+}

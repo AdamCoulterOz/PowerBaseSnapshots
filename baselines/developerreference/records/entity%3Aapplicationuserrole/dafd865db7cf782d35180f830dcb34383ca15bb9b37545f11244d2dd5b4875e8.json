@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "applicationuserid": {
+      "key": [
+        {
+          "field": "applicationuserid",
+          "type": "wire-guid",
+          "value": "2abcab48-064b-466d-bd0d-2d6084d15af3"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "applicationuser"
+    },
+    "componentstate": 0,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "roleid": {
+      "key": {
+        "kind": "wire-guid",
+        "portability": "not-established",
+        "value": "527c7b12-e5ac-4408-9f46-ecc762397544"
+      },
+      "kind": "typed-reference",
+      "targetEntity": "role"
+    }
+  },
+  "exportIdentity": [
+    {
+      "field": "applicationuserid",
+      "key": [
+        {
+          "field": "applicationuserid",
+          "type": "wire-guid",
+          "value": "2abcab48-064b-466d-bd0d-2d6084d15af3"
+        }
+      ],
+      "targetEntity": "applicationuser"
+    },
+    {
+      "field": "roleid",
+      "key": {
+        "kind": "wire-guid",
+        "portability": "not-established",
+        "value": "527c7b12-e5ac-4408-9f46-ecc762397544"
+      },
+      "targetEntity": "role"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "MicrosoftS2SApplicationIdentities",
+      "version": "1.0.0.140"
+    }
+  ],
+  "typeIdentity": "entity:applicationuserrole"
+}

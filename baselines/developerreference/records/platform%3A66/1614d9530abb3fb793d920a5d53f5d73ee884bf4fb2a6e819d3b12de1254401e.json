@@ -1,0 +1,98 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "BarCodeScannerControl",
+        "ControlManifestVersion": "1.0.84",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.FieldControls.BarCodeScannerControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_BarcodeScanner_Control",
+        "FullName": "MscrmControls.FieldControls.BarCodeScannerControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.FieldControls.BarCodeScannerControl",
+        "Namespace": "MscrmControls.FieldControls",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "handleManualEdit",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "msvcontrol",
+              "LoadOrder": 1,
+              "Name": "msvcontrol",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.FieldControls.BarCodeScannerControl_BarCodeScannerControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/BarCodeScannerControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.Text",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.FieldControls\" constructor=\"BarCodeScannerControl\" version=\"1.0.84\" display-name-key=\"CC_BarcodeScanner_Control\" control-type=\"virtual\"><modes></modes><property name=\"value\" display-name-key=\"BarCodeScannerControl_value\" description-key=\"BarCodeScannerControl_value_desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"handleManualEdit\" display-name-key=\"BarCodeScannerControl_handleManualEdit\" description-key=\"BarCodeScannerControl_handleManualEdit_desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"yes\" display-name-key=\"BarCodeScannerControl_handleManualEdit_yes_name\" description-key=\"BarCodeScannerControl_handleManualEdit_yes_desc\">yes</value><value name=\"no\" display-name-key=\"BarCodeScannerControl_handleManualEdit_no_name\" description-key=\"BarCodeScannerControl_handleManualEdit_no_desc\" default=\"true\">no</value></property><resources><library name=\"msvcontrol\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/msvcontrollib-1.0.0.js\" version=\"1.1.13\" /></library><code path=\"BarCodeScannerControl.js\" order=\"2\" /><resx path=\"strings/BarCodeScannerControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.FieldControls.BarCodeScannerControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.84"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.FieldControls.BarCodeScannerControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

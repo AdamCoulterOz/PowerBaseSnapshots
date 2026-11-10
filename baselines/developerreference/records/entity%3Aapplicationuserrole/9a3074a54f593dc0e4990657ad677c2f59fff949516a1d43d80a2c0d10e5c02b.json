@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "applicationuserid": {
+      "key": [
+        {
+          "field": "applicationuserid",
+          "type": "wire-guid",
+          "value": "9523de2d-5e6d-49b1-b87e-317d34514a23"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "applicationuser"
+    },
+    "componentstate": 0,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "roleid": {
+      "key": {
+        "kind": "wire-guid",
+        "portability": "not-established",
+        "value": "726d11d6-d9cf-4503-ade9-d6a4be7fa095"
+      },
+      "kind": "typed-reference",
+      "targetEntity": "role"
+    }
+  },
+  "exportIdentity": [
+    {
+      "field": "applicationuserid",
+      "key": [
+        {
+          "field": "applicationuserid",
+          "type": "wire-guid",
+          "value": "9523de2d-5e6d-49b1-b87e-317d34514a23"
+        }
+      ],
+      "targetEntity": "applicationuser"
+    },
+    {
+      "field": "roleid",
+      "key": {
+        "kind": "wire-guid",
+        "portability": "not-established",
+        "value": "726d11d6-d9cf-4503-ade9-d6a4be7fa095"
+      },
+      "targetEntity": "role"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "MicrosoftFlowExtensionsCore",
+      "version": "1.10.22.1"
+    }
+  ],
+  "typeIdentity": "entity:applicationuserrole"
+}

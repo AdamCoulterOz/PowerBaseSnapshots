@@ -1,0 +1,124 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" savedqueryid=\"11998009-5e27-4e92-84e2-63fb0ece44e4\"><entity name=\"languagelocale\"><attribute name=\"name\" /><attribute name=\"code\" /><attribute name=\"localeid\" /><filter><condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /></filter><order attribute=\"name\" descending=\"false\" /></entity></fetch>",
+    "introducedversion": "8.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "title",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "languagelocale"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "name",
+                "RelatedEntityName": "",
+                "Width": 125
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "code",
+                "RelatedEntityName": "",
+                "Width": 125
+              }
+            ],
+            "Id": "languagelocaleid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "languagelocale"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:languagelocale\" jump=\"title\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"result\" id=\"languagelocaleid\"><cell name=\"name\" width=\"125\" /><cell name=\"code\" width=\"125\" /></row></grid>"
+    },
+    "name": "Language Locale Default View for Lookup",
+    "offlinesqlquery": "/*SelectStart*/select  \"languagelocale0\".[name] as \"name\"\r , \"languagelocale0\".[code] as \"code\"\r , \"languagelocale0\".[localeid] as \"localeid\"\r , \"languagelocale0\".[languagelocaleid] as \"languagelocaleid\"/*SelectEnd*/  /*FromStart*/from  LanguageLocale as \"languagelocale0\"/*FromEnd*/  /*WhereStart*/where  (\"languagelocale0\".[statecode] = 0)/*WhereEnd*/  /*OrderByStart*/order by  \"languagelocale0\".[name] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 64,
+    "returnedtypecode": "languagelocale",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "11998009-5e27-4e92-84e2-63fb0ece44e4",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "languagelocale",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "11998009-5e27-4e92-84e2-63fb0ece44e4"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}

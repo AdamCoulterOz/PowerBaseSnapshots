@@ -1,0 +1,73 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "msdyn_appCopilot.topic.DVSummarizeRecord"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponent"
+    },
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 10,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnRecognizedIntent\r\n  id: main\r\n  intent:\r\n    displayName: Resumir el registro de entidad de DV\r\n    triggerQueries:\r\n      - Resumir\r\n      - Generar un resumen\r\n      - Crear un resumen\r\n      - Resumir este registro\r\n      - Resumir el registro\r\n      - Hacer un resumen del registro\r\n      - Darme detalles sobre\r\n      - Deme detalles sobre\r\n      - Darme los puntos principales\r\n      - Deme los puntos principales\r\n      - Darme el resumen\r\n      - Deme el resumen\r\n      - Generar sinopsis\r\n      - Genere sinopsis",
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": 1034,
+    "name": "Registro de resumen de DV (es-ES)",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.DVSummarizeRecord.es-ES",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.DVSummarizeRecord.es-ES"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "_customapiid_value": {
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "msdyn_ensureappcopilotpublished"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "customapi"
+    },
+    "componentstate": 0,
+    "description": "Is App Copilot Provision Triggered",
+    "displayname": "Is App Copilot Provision Triggered",
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "logicalentityname": null,
+    "name": "IsPVAProvisionTriggered",
+    "overriddencreatedon": null,
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "type": 0,
+    "uniquename": "IsPVAProvisionTriggered",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "customapiid",
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "msdyn_ensureappcopilotpublished"
+        }
+      ],
+      "targetEntity": "customapi",
+      "type": "lookup"
+    },
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "IsPVAProvisionTriggered"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_AppCopilotFeatures",
+      "version": "9.2.2026095.260925087"
+    }
+  ],
+  "typeIdentity": "entity:customapiresponseproperty"
+}

@@ -1,0 +1,187 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": "All Email Templates",
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" savedqueryid=\"daf88706-1dad-4810-adc4-1517ed39f575\"><entity name=\"template\"><order attribute=\"title\" descending=\"false\" /><attribute name=\"title\" /><attribute name=\"description\" /><attribute name=\"templatetypecode\" /><attribute name=\"createdby\" /><attribute name=\"ispersonal\" /><attribute name=\"languagecode\" /><attribute name=\"templateid\" /></entity></fetch>",
+    "introducedversion": "5.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "title",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "template"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "title",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "Crm.EmailTemplateGlobal",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "templatetypecode",
+                "RelatedEntityName": "",
+                "Width": 125
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "description",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "createdby",
+                "RelatedEntityName": "",
+                "Width": 125
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "ispersonal",
+                "RelatedEntityName": "",
+                "Width": 125
+              },
+              {
+                "AddedBy": "",
+                "CellType": "Crm.LanguageCodeFormat",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "languagecode",
+                "RelatedEntityName": "",
+                "Width": 100
+              }
+            ],
+            "Id": "templateid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "template"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:template\" jump=\"title\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"result\" id=\"templateid\"><cell name=\"title\" width=\"300\" /><cell name=\"templatetypecode\" width=\"125\" cellType=\"Crm.EmailTemplateGlobal\" /><cell name=\"description\" width=\"300\" /><cell name=\"createdby\" width=\"125\" /><cell name=\"ispersonal\" width=\"125\" /><cell name=\"languagecode\" width=\"100\" cellType=\"Crm.LanguageCodeFormat\" /></row></grid>"
+    },
+    "name": "All Language Email Templates",
+    "offlinesqlquery": "/*SelectStart*/select  \"template0\".[title] as \"title\"\r , \"template0\".[description] as \"description\"\r , \"template0\".[templatetypecode] as \"templatetypecode\"\r , \"template0\".[createdby!id] as \"createdby!id\"\r , \"template0\".[createdby!logicalname] as \"createdby!logicalname\"\r , \"template0\".[createdby!name] as \"createdby!name\"\r , \"template0\".[ispersonal] as \"ispersonal\"\r , \"template0\".[languagecode] as \"languagecode\"\r , \"template0\".[templateid] as \"templateid\"/*SelectEnd*/  /*FromStart*/from  Template as \"template0\"/*FromEnd*/  /*OrderByStart*/order by  \"template0\".[title] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "template",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "daf88706-1dad-4810-adc4-1517ed39f575",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "template",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "daf88706-1dad-4810-adc4-1517ed39f575"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_Activities",
+      "version": "9.0.1.2033"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

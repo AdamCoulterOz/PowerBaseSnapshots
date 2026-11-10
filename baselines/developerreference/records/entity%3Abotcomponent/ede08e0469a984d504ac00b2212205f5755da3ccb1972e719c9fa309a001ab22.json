@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": null,
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 9,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnRedirect\r\n  id: main\r\n  actions:\r\n    - kind: SetVariable\r\n      id: setVariable_3XFTlE\r\n      variable: Topic.appId\r\n      value: =Global.PA_Copilot_Model_SessionContext.appId\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_ypbI0m\r\n      variable: Topic.userAgent\r\n      value: =Global.PA_Copilot_SessionContext.host\r\n\r\n    - kind: HttpRequestAction\r\n      id: cq9KMX\r\n      method: Get\r\n      url: =Concatenate(\"https://dataverse/api/data/v9.1/RetrieveAadUserRoles(DirectoryObjectId=\", System.User.Id, \")?$select=name\")\r\n      headers:\r\n        x-ms-app-id: Topic.appId\r\n        x-ms-user-agent: Topic.userAgent\r\n\r\n      errorHandling:\r\n        kind: ContinueOnErrorBehavior\r\n        statusCode: Topic.callStatusCode\r\n        errorResponseBody: Topic.callError\r\n\r\n      response: Topic.DVResponse\r\n      responseSchema:\r\n        kind: Record\r\n        properties:\r\n          value:\r\n            type:\r\n              kind: Table\r\n              properties:\r\n                name: String\r\n                roleid: String\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_lnXMgT\r\n      variable: Global.PA_Copilot_User_Roles\r\n      value: =Topic.DVResponse.value",
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": 1033,
+    "name": "User Role Request - Dataverse API Request",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.UserRoleRequest",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.UserRoleRequest"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

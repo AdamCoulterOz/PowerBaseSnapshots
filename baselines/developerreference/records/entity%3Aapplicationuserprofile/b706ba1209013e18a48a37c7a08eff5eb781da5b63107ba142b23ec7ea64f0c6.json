@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "applicationuserid": {
+      "key": [
+        {
+          "field": "applicationuserid",
+          "type": "wire-guid",
+          "value": "0370c2f0-8158-4929-a461-c0ec404a6cbb"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "applicationuser"
+    },
+    "componentstate": 0,
+    "fieldsecurityprofileid": {
+      "key": {
+        "kind": "wire-guid",
+        "portability": "not-established",
+        "value": "9257ef5b-5a2b-4bad-b3b2-536322765fc0"
+      },
+      "kind": "typed-reference",
+      "targetEntity": "fieldsecurityprofile"
+    },
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true
+  },
+  "exportIdentity": [
+    {
+      "field": "applicationuserid",
+      "key": [
+        {
+          "field": "applicationuserid",
+          "type": "wire-guid",
+          "value": "0370c2f0-8158-4929-a461-c0ec404a6cbb"
+        }
+      ],
+      "targetEntity": "applicationuser"
+    },
+    {
+      "field": "fieldsecurityprofileid",
+      "key": {
+        "kind": "wire-guid",
+        "portability": "not-established",
+        "value": "9257ef5b-5a2b-4bad-b3b2-536322765fc0"
+      },
+      "targetEntity": "fieldsecurityprofile"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdynce_KnowledgeManagementCommonProd",
+      "version": "9.0.26094.3006"
+    }
+  ],
+  "typeIdentity": "entity:applicationuserprofile"
+}

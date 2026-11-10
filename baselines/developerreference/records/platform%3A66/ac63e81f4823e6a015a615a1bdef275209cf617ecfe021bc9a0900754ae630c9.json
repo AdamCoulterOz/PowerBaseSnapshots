@@ -1,0 +1,91 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "PhoneNumberControl",
+        "ControlManifestVersion": "1.0.78",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.FieldControls.PhoneNumberControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "PhoneNumber_Control",
+        "FullName": "MscrmControls.FieldControls.PhoneNumberControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.FieldControls.PhoneNumberControl",
+        "Namespace": "MscrmControls.FieldControls",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "Type": "SingleLine.Phone",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "msvcontrol",
+              "LoadOrder": 1,
+              "Name": "msvcontrol",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.FieldControls.PhoneNumberControl_PhoneNumberControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/PhoneNumberControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.FieldControls\" constructor=\"PhoneNumberControl\" version=\"1.0.78\" display-name-key=\"PhoneNumber_Control\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"value\" display-name-key=\"PhoneNumberControl_phonevalue\" description-key=\"PhoneNumberControl_phonevalue_desc\" of-type=\"SingleLine.Phone\" usage=\"bound\" required=\"true\" hidden=\"true\" /><resources><library name=\"msvcontrol\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/msvcontrollib-1.0.0.js\" version=\"1.1.14\" /></library><code path=\"PhoneNumberControl.js\" order=\"2\" /><resx path=\"strings/PhoneNumberControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.FieldControls.PhoneNumberControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.78"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.FieldControls.PhoneNumberControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

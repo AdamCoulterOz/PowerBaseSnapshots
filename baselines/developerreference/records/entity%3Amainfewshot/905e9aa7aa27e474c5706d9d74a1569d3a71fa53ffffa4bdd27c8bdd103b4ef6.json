@@ -1,0 +1,44 @@
+{
+  "configuration": {
+    "category": "Default",
+    "comment": "select the statecodename from Opportunity table, count the number of rows with each distinct statecodename value, grouped by statecodename column",
+    "componentstate": 0,
+    "entitytype": 0,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "objectpartitionid": null,
+    "overriddencreatedon": null,
+    "query": "Show me the breakdown of Opportunities by status",
+    "rephrase": "The query will show the count of opportunities grouped by statecodename.",
+    "savedqueryversionnumber": null,
+    "savedqueryviewid": null,
+    "standardsql": "SELECT [statecodename], COUNT(*) AS [opportunityCount] FROM [Opportunity] GROUP BY [statecodename]",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "uniquename": "cds_mainfewshot_uniquename_31b76d04-f119-4fb3-bf27-246449bc9ade",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "cds_mainfewshot_uniquename_31b76d04-f119-4fb3-bf27-246449bc9ade"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_RelevanceSearch_Anchor",
+      "version": "1.0.3581.1"
+    }
+  ],
+  "typeIdentity": "entity:mainfewshot"
+}

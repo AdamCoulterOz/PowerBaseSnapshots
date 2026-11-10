@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": null,
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 9,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnRedirect\r\n  id: main\r\n  actions:\r\n    - kind: SendActivity\r\n      id: sendActivity_3fIFxB\r\n      activity: Some of the questions you ask may require Copilot to use Bing to search resources that are outside of your organization. Please ask an admin to enable Bing Search. [Learn more](https://learn.microsoft.com/power-platform/admin/geographical-availability-copilot).\r\n\r\n    - kind: CancelAllDialogs\r\n      id: IPlWHC",
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": null,
+    "name": "BingSearchFallback",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.BingSearchFallback",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.BingSearchFallback"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

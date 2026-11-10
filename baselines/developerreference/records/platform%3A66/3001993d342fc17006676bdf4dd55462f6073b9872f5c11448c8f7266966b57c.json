@@ -1,0 +1,158 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "SuggestionsControl",
+        "ControlManifestVersion": "1.0.18",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Suggestions.SuggestionsControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "SuggestionsControl",
+        "FullName": "MscrmControls.Suggestions.SuggestionsControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.Suggestions.SuggestionsControl",
+        "Namespace": "MscrmControls.Suggestions",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "Value1",
+              "Required": true,
+              "TypeGroup": "text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "ProductId",
+              "Required": true,
+              "TypeGroup": "text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "PriceLevelId",
+              "Required": true,
+              "TypeGroup": "text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "EntityName",
+              "Required": true,
+              "TypeGroup": "text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "EntityRecordId",
+              "Required": true,
+              "TypeGroup": "text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "ProductName",
+              "Required": true,
+              "TypeGroup": "text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "ChildEntityName",
+              "Required": true,
+              "TypeGroup": "text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "TransactionCurrencyId",
+              "Required": false,
+              "TypeGroup": "text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "ClientUtility",
+              "LoadOrder": 2,
+              "Name": "ClientUtility",
+              "Type": 0
+            },
+            {
+              "LibraryName": "TelemetryLibrary",
+              "LoadOrder": 3,
+              "Name": "TelemetryLibrary",
+              "Type": 0
+            },
+            {
+              "LibraryName": "FeatureTelemetry",
+              "LoadOrder": 4,
+              "Name": "FeatureTelemetry",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.Suggestions.SuggestionsControl_SuggestionsControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/SuggestionsControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.4.0066",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Suggestions\" constructor=\"SuggestionsControl\" version=\"1.0.18\" display-name-key=\"SuggestionsControl\" control-type=\"virtual\" hidden=\"true\"><modes><edit /><read /></modes><type-group name=\"text\"><type>SingleLine.Text</type></type-group><property name=\"Value1\" display-name-key=\"CC_Value1\" description-key=\"CC_Value1_Desc\" of-type-group=\"text\" usage=\"bound\" required=\"true\" hidden=\"false\" /><property name=\"ProductId\" display-name-key=\"CC_ProductId\" description-key=\"CC_value_1_desc\" usage=\"bound\" of-type-group=\"text\" required=\"true\" hidden=\"false\" /><property name=\"PriceLevelId\" display-name-key=\"CC_PriceLevelId\" description-key=\"CC_value_1_desc\" usage=\"bound\" of-type-group=\"text\" required=\"true\" hidden=\"false\" /><property name=\"EntityName\" display-name-key=\"CC_EntityName\" description-key=\"CC_value_1_desc\" usage=\"bound\" of-type-group=\"text\" required=\"true\" hidden=\"false\" /><property name=\"EntityRecordId\" display-name-key=\"CC_EntityRecordId\" description-key=\"CC_value_1_desc\" usage=\"bound\" of-type-group=\"text\" required=\"true\" hidden=\"false\" /><property name=\"ProductName\" display-name-key=\"CC_ProductName\" description-key=\"CC_value_1_desc\" usage=\"bound\" of-type-group=\"text\" required=\"true\" hidden=\"false\" /><property name=\"ChildEntityName\" display-name-key=\"CC_ChildEntityName\" description-key=\"CC_value_1_desc\" usage=\"bound\" of-type-group=\"text\" required=\"true\" hidden=\"false\" /><property name=\"TransactionCurrencyId\" display-name-key=\"CC_TransactionCurrencyId\" description-key=\"CC_TransactionCurrencyId_desc\" usage=\"bound\" of-type-group=\"text\" required=\"false\" hidden=\"false\" /><AvailableOn><phone /><tablet /></AvailableOn><resources><code path=\"SuggestionsControl.js\" order=\"1\" /><resx path=\"strings/SuggestionsControl.1033.resx\" version=\"1.0.0\" /><library name=\"ClientUtility\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"ClientUtility.js\" version=\"1.0.0\" /></library><library name=\"TelemetryLibrary\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"TelemetryLibrary.js\" version=\"1.0.0\" /></library><library name=\"FeatureTelemetry\" version=\"&gt;=1\" order=\"4\"><packaged_library path=\"FeatureTelemetry.js\" version=\"1.0.0\" /></library></resources></control></manifest>",
+    "name": "MscrmControls.Suggestions.SuggestionsControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.18"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Suggestions.SuggestionsControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch",
+      "version": "9.0.1904.4006"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

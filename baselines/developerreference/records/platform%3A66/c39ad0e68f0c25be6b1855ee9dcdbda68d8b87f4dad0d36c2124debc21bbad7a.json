@@ -1,0 +1,80 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ReadOnlyFieldControl",
+        "ControlManifestVersion": "1.0.7",
+        "ControlMode": "Read",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Gallery.ReadOnlyField.ReadOnlyFieldControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "ReadOnlyFieldControl",
+        "FullName": "MscrmControls.Gallery.ReadOnlyField.ReadOnlyFieldControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.Gallery.ReadOnlyField.ReadOnlyFieldControl",
+        "Namespace": "MscrmControls.Gallery.ReadOnlyField",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.Gallery.ReadOnlyField.ReadOnlyFieldControl_ReadOnlyFieldControl.js",
+              "Type": 4
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Gallery.ReadOnlyField\" constructor=\"ReadOnlyFieldControl\" display-name-key=\"ReadOnlyFieldControl\" description-key=\"ReadOnlyFieldControl\" version=\"1.0.7\" hidden=\"true\" control-type=\"virtual\"><modes><read /></modes><type-group name=\"all\"><type>TwoOptions</type><type>DateAndTime.DateOnly</type><type>DateAndTime.DateAndTime</type><type>FP</type><type>Decimal</type><type>Whole.None</type><type>Whole.Duration</type><type>Whole.TimeZone</type><type>Whole.Language</type><type>Lookup.Simple</type><type>Lookup.Customer</type><type>Lookup.Owner</type><type>Lookup.PartyList</type><type>Lookup.Regarding</type><type>Multiple</type><type>Currency</type><type>OptionSet</type><type>SingleLine.Text</type><type>SingleLine.TextArea</type><type>SingleLine.Email</type><type>SingleLine.URL</type><type>SingleLine.Ticker</type><type>SingleLine.Phone</type></type-group><property name=\"value\" display-name-key=\"Value\" description-key=\"CC_Value_Desc\" of-type-group=\"all\" usage=\"bound\" required=\"true\" hidden=\"false\" /><resources><code path=\"ReadOnlyFieldControl.js\" order=\"1\" /></resources><AvailableOn><web classic=\"enable\" /><phone /><tablet /></AvailableOn></control></manifest>",
+    "name": "MscrmControls.Gallery.ReadOnlyField.ReadOnlyFieldControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.7"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Gallery.ReadOnlyField.ReadOnlyFieldControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

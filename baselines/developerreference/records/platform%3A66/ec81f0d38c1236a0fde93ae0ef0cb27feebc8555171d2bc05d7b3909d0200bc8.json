@@ -1,0 +1,94 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [
+          "MscrmControls.FieldControls.DateControl"
+        ],
+        "ConstructorName": "DateTimeControl",
+        "ControlManifestVersion": "1.0.240",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.FieldControls.DateTimeControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_DateTimeControl_Name",
+        "FullName": "MscrmControls.FieldControls.DateTimeControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.FieldControls.DateTimeControl",
+        "Namespace": "MscrmControls.FieldControls",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "TypeGroup": "date",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "useLegacyControl",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.FieldControls.DateTimeControl_DateTimeControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/DateTimeControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.FieldControls\" constructor=\"DateTimeControl\" version=\"1.0.240\" display-name-key=\"CC_DateTimeControl_Name\" control-type=\"virtual\" hidden=\"true\"><modes></modes><type-group name=\"date\"><type>DateAndTime.DateOnly</type><type>DateAndTime.DateAndTime</type></type-group><property name=\"value\" display-name-key=\"DateTimeControl_value\" description-key=\"DateTimeControl_value_desc\" of-type-group=\"date\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"useLegacyControl\" display-name-key=\"DateTimeControl_useLegacy\" description-key=\"DateTimeControl_uselegacy_desc\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"true\" /><resources><code path=\"DateTimeControl.js\" order=\"1\" /><resx path=\"strings/DateTimeControl.1033.resx\" version=\"1.0.0\" /></resources><child><customcontrol name=\"MscrmControls.FieldControls.DateControl\" /></child></control></manifest>",
+    "name": "MscrmControls.FieldControls.DateTimeControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.240"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.FieldControls.DateTimeControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

@@ -1,0 +1,194 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" savedqueryid=\"2734a570-dfec-4bd5-9a60-99fa0f0942cc\"><entity name=\"exchangesyncidmapping\"><attribute name=\"ownerid\" /><attribute name=\"itemsubject\" /><attribute name=\"objectid\" /><attribute name=\"exchangeentryid\" /><attribute name=\"objecttypecode\" /><attribute name=\"lastsyncerroroccurredon\" /><attribute name=\"lastsyncerror\" /><filter type=\"and\"><condition attribute=\"objecttypecode\" operator=\"ne\" value=\"4202\" /><condition attribute=\"retries\" operator=\"gt\" value=\"4\" /></filter><order attribute=\"lastsyncerroroccurredon\" descending=\"true\" /></entity></fetch>",
+    "introducedversion": "8.2.2.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "name",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "exchangesyncidmapping"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "ownerid",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "itemsubject",
+                "RelatedEntityName": "",
+                "Width": 250
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "objecttypecode",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "objectid",
+                "RelatedEntityName": "",
+                "Width": 250
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "exchangeentryid",
+                "RelatedEntityName": "",
+                "Width": 400
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "lastsyncerroroccurredon",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "lastsyncerror",
+                "RelatedEntityName": "",
+                "Width": 225
+              }
+            ],
+            "Id": "exchangesyncidmappingid",
+            "LayoutStyle": "SSSItemErrorsGrid",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "exchangesyncidmapping"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:exchangesyncidmapping\" jump=\"name\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"result\" id=\"exchangesyncidmappingid\" layoutstyle=\"SSSItemErrorsGrid\"><cell name=\"ownerid\" width=\"150\" /><cell name=\"itemsubject\" width=\"250\" /><cell name=\"objecttypecode\" width=\"100\" /><cell name=\"objectid\" width=\"250\" /><cell name=\"exchangeentryid\" width=\"400\" /><cell name=\"lastsyncerroroccurredon\" width=\"200\" /><cell name=\"lastsyncerror\" width=\"225\" /></row></grid>"
+    },
+    "name": "Failed ACTs View",
+    "offlinesqlquery": "/*SelectStart*/select  \"exchangesyncidmapping0\".[ownerid!id] as \"ownerid!id\"\r , \"exchangesyncidmapping0\".[ownerid!logicalname] as \"ownerid!logicalname\"\r , \"exchangesyncidmapping0\".[ownerid!name] as \"ownerid!name\"\r , \"exchangesyncidmapping0\".[itemsubject] as \"itemsubject\"\r , \"exchangesyncidmapping0\".[objectid] as \"objectid\"\r , \"exchangesyncidmapping0\".[exchangeentryid] as \"exchangeentryid\"\r , \"exchangesyncidmapping0\".[objecttypecode] as \"objecttypecode\"\r , \"exchangesyncidmapping0\".[lastsyncerroroccurredon] as \"lastsyncerroroccurredon\"\r , \"exchangesyncidmapping0\".[lastsyncerror] as \"lastsyncerror\"\r , \"exchangesyncidmapping0\".[exchangesyncidmappingid] as \"exchangesyncidmappingid\"/*SelectEnd*/  /*FromStart*/from  ExchangeSyncIdMapping as \"exchangesyncidmapping0\"/*FromEnd*/  /*WhereStart*/where  ((\"exchangesyncidmapping0\".[objecttypecode] != 4202 or \"exchangesyncidmapping0\".[objecttypecode] is null) and \"exchangesyncidmapping0\".[retries] > 4)/*WhereEnd*/  /*OrderByStart*/order by  \"exchangesyncidmapping0\".[lastsyncerroroccurredon] desc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 1,
+    "returnedtypecode": "exchangesyncidmapping",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "2734a570-dfec-4bd5-9a60-99fa0f0942cc",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "exchangesyncidmapping",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "2734a570-dfec-4bd5-9a60-99fa0f0942cc"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}

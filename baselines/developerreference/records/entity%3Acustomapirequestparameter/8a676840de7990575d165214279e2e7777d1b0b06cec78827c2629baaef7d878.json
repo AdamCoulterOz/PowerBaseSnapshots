@@ -1,0 +1,64 @@
+{
+  "configuration": {
+    "_customapiid_value": {
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "searchautocomplete"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "customapi"
+    },
+    "componentstate": 0,
+    "description": "Fuzzy search to aid with misspellings. The default is false.",
+    "displayname": "Use Fuzzy",
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "isoptional": true,
+    "logicalentityname": null,
+    "name": "SearchAutocompleteFuzzy",
+    "overriddencreatedon": null,
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "type": 0,
+    "uniquename": "fuzzy",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "customapiid",
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "searchautocomplete"
+        }
+      ],
+      "targetEntity": "customapi",
+      "type": "lookup"
+    },
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "fuzzy"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdyn_RelevanceSearch",
+      "version": "1.0.3581.1"
+    }
+  ],
+  "typeIdentity": "entity:customapirequestparameter"
+}

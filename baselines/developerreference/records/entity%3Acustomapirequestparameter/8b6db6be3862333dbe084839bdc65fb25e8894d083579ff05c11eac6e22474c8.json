@@ -1,0 +1,64 @@
+{
+  "configuration": {
+    "_customapiid_value": {
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "msdyn_GetFavoriteArticles"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "customapi"
+    },
+    "componentstate": 0,
+    "description": "User ID",
+    "displayname": "User ID",
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "isoptional": false,
+    "logicalentityname": null,
+    "name": "User ID",
+    "overriddencreatedon": null,
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "type": 10,
+    "uniquename": "msdyn_userid",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "customapiid",
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "msdyn_GetFavoriteArticles"
+        }
+      ],
+      "targetEntity": "customapi",
+      "type": "lookup"
+    },
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "msdyn_userid"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdynce_KnowledgeManagementFeatures",
+      "version": "9.0.26094.3006"
+    }
+  ],
+  "typeIdentity": "entity:customapirequestparameter"
+}

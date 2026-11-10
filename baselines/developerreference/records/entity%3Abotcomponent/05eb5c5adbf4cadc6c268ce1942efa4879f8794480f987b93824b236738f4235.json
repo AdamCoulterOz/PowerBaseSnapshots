@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": null,
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 9,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnEventActivity\r\n  id: main\r\n  eventName: Microsoft.PowerApps.Copilot.SetModelNavigationContext\r\n  actions:\r\n    - kind: ParseValue\r\n      id: SQschT\r\n      variable: Global.PA_Copilot_Model_NavigationContext_Version\r\n      valueType: String\r\n      value: =If(!IsBlank(System.Activity.ChannelData.SetModelNavigationContext_Version), Text(System.Activity.ChannelData.SetModelNavigationContext_version), \"-1\")\r\n\r\n    - kind: ParseValue\r\n      id: 7X4OgD\r\n      variable: Topic.NavContext\r\n      valueType:\r\n        kind: Record\r\n        properties:\r\n          siteMapEntries:\r\n            type:\r\n              kind: Table\r\n              properties:\r\n                Description: String\r\n                DisplayName: String\r\n                TargetEntity: String\r\n                EntityDisplayName: String\r\n\r\n      value: =If(!IsBlank(System.Activity.ChannelData.SetModelNavigationContext), System.Activity.ChannelData.SetModelNavigationContext, System.Activity.Value)\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_sZZ7sj\r\n      variable: Global.PA_Copilot_Model_NavigationContext\r\n      value: =Topic.NavContext.siteMapEntries\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_BTVHKS\r\n      variable: Global.PA_Copilot_EntityContext\r\n      value: =Topic.NavContext.siteMapEntries",
+    "dependencies": null,
+    "description": "Triggered on Event received (Microsoft.PowerApps.Copilot.SetModelNavigationContext) to process the Page Context",
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": 1033,
+    "name": "Model App Entity Context - Event Trigger",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.NavagationContext",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.NavagationContext"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

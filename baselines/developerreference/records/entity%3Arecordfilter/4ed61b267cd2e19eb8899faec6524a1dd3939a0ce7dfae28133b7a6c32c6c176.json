@@ -1,0 +1,39 @@
+{
+  "configuration": {
+    "componentstate": 0,
+    "displayname": "Skill Role Filter",
+    "fetchxml": "<fetch distinct=\"true\">\n   <entity name=\"skill\">\n     <attribute name=\"skillid\" />\n     <link-entity name=\"skillrolemapping\" from=\"skillid\" to=\"skillid\" link-type=\"inner\" alias=\"srl\">\n       <link-entity name=\"role\" from=\"roleid\" to=\"roleid\" link-type=\"inner\" alias=\"pr\">\n         <link-entity name=\"role\" from=\"parentrootroleid\" to=\"roleid\" link-type=\"inner\" alias=\"r\">\n           <link-entity name=\"systemuserroles\" from=\"roleid\" to=\"roleid\" intersect=\"true\" link-type=\"outer\" alias=\"ur\" />\n           <link-entity name=\"teamroles\" from=\"roleid\" to=\"roleid\" intersect=\"true\" link-type=\"outer\" alias=\"tr\">\n             <link-entity name=\"teammembership\" from=\"teamid\" to=\"teamid\" intersect=\"true\" link-type=\"outer\" alias=\"tm\" />\n           </link-entity>\n         </link-entity>\n       </link-entity>\n     </link-entity>\n     <filter type=\"or\">\n       <condition entityname=\"ur\" attribute=\"systemuserid\" operator=\"eq-userid\" />\n       <condition entityname=\"tm\" attribute=\"systemuserid\" operator=\"eq-userid\" />\n     </filter>\n   </entity>\n </fetch>",
+    "filterlinkedrecords": true,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "isrolebusinessunitquery": false,
+    "overriddencreatedon": null,
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "uniquename": "SkillRoleFilter",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "SkillRoleFilter"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdyn_RelevanceSearch_Ext",
+      "version": "1.0.3581.1"
+    }
+  ],
+  "typeIdentity": "entity:recordfilter"
+}

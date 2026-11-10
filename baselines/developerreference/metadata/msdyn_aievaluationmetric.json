@@ -1,0 +1,3935 @@
+{
+  "configuration": {
+    "ActivityTypeMask": 0,
+    "Attributes": [
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Lookup",
+        "AttributeTypeName": {
+          "Value": "LookupType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 5,
+        "CreatedOn": "2026-10-29T17:49:40Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": false,
+              "Label": "Unique identifier of the user who created the record.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": false,
+              "Label": "Created By",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "None",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "createdby",
+        "ModifiedOn": "2026-10-29T17:49:40Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "CreatedBy",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "systemuser"
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "createdby",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 10,
+        "CreatedOn": "2026-10-29T17:49:40Z",
+        "DatabaseLength": 200,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "createdbyname",
+        "MaxLength": 100,
+        "ModifiedOn": "2026-10-29T17:49:40Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "CreatedByName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "createdby",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 11,
+        "CreatedOn": "2026-10-29T17:49:40Z",
+        "DatabaseLength": 200,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "createdbyyominame",
+        "MaxLength": 100,
+        "ModifiedOn": "2026-10-29T17:49:40Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "CreatedByYomiName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": "createdbyname"
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexDateTimeAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "DateTime",
+        "AttributeTypeName": {
+          "Value": "DateTimeType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanChangeDateTimeBehavior": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifybehavior",
+          "Value": false
+        },
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 4,
+        "CreatedOn": "2026-10-29T17:49:40Z",
+        "DateTimeBehavior": {
+          "Value": "UserLocal"
+        },
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Date and time when the record was created.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Created On",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "DateAndTime",
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Inactive",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": true,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": true,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "createdon",
+        "ModifiedOn": "2026-10-29T17:49:40Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "CreatedOn",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Lookup",
+        "AttributeTypeName": {
+          "Value": "LookupType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 8,
+        "CreatedOn": "2026-10-29T17:49:40Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": false,
+              "Label": "Unique identifier of the delegate user who created the record.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": false,
+              "Label": "Created By (Delegate)",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "None",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "createdonbehalfby",
+        "ModifiedOn": "2026-10-29T17:49:40Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "CreatedOnBehalfBy",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "systemuser"
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "createdonbehalfby",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 12,
+        "CreatedOn": "2026-10-29T17:49:40Z",
+        "DatabaseLength": 200,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "createdonbehalfbyname",
+        "MaxLength": 100,
+        "ModifiedOn": "2026-10-29T17:49:40Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "CreatedOnBehalfByName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "createdonbehalfby",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 13,
+        "CreatedOn": "2026-10-29T17:49:40Z",
+        "DatabaseLength": 200,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "createdonbehalfbyyominame",
+        "MaxLength": 100,
+        "ModifiedOn": "2026-10-29T17:49:40Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "CreatedOnBehalfByYomiName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": "createdonbehalfbyname"
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexIntegerAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Integer",
+        "AttributeTypeName": {
+          "Value": "IntegerType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 19,
+        "CreatedOn": "2026-10-29T17:49:41Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Sequence number of the import that created this record.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Import Sequence Number",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "None",
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "importsequencenumber",
+        "MaxValue": 2147483647,
+        "MinValue": -2147483648,
+        "ModifiedOn": "2026-10-29T17:49:41Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "ImportSequenceNumber",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Lookup",
+        "AttributeTypeName": {
+          "Value": "LookupType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 7,
+        "CreatedOn": "2026-10-29T17:49:40Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": false,
+              "Label": "Unique identifier of the user who modified the record.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": false,
+              "Label": "Modified By",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "None",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "modifiedby",
+        "ModifiedOn": "2026-10-29T17:49:40Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "ModifiedBy",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "systemuser"
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "modifiedby",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 14,
+        "CreatedOn": "2026-10-29T17:49:40Z",
+        "DatabaseLength": 200,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "modifiedbyname",
+        "MaxLength": 100,
+        "ModifiedOn": "2026-10-29T17:49:40Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "ModifiedByName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "modifiedby",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 15,
+        "CreatedOn": "2026-10-29T17:49:41Z",
+        "DatabaseLength": 200,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "modifiedbyyominame",
+        "MaxLength": 100,
+        "ModifiedOn": "2026-10-29T17:49:41Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "ModifiedByYomiName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": "modifiedbyname"
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexDateTimeAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "DateTime",
+        "AttributeTypeName": {
+          "Value": "DateTimeType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanChangeDateTimeBehavior": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifybehavior",
+          "Value": false
+        },
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 6,
+        "CreatedOn": "2026-10-29T17:49:40Z",
+        "DateTimeBehavior": {
+          "Value": "UserLocal"
+        },
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Date and time when the record was modified.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Modified On",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "DateAndTime",
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Inactive",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": true,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": true,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "modifiedon",
+        "ModifiedOn": "2026-10-29T17:49:40Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "ModifiedOn",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Lookup",
+        "AttributeTypeName": {
+          "Value": "LookupType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 9,
+        "CreatedOn": "2026-10-29T17:49:40Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": false,
+              "Label": "Unique identifier of the delegate user who modified the record.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": false,
+              "Label": "Modified By (Delegate)",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "None",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "modifiedonbehalfby",
+        "ModifiedOn": "2026-10-29T17:49:40Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "ModifiedOnBehalfBy",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "systemuser"
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "modifiedonbehalfby",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 16,
+        "CreatedOn": "2026-10-29T17:49:41Z",
+        "DatabaseLength": 200,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "modifiedonbehalfbyname",
+        "MaxLength": 100,
+        "ModifiedOn": "2026-10-29T17:49:41Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "ModifiedOnBehalfByName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "modifiedonbehalfby",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 17,
+        "CreatedOn": "2026-10-29T17:49:41Z",
+        "DatabaseLength": 200,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "modifiedonbehalfbyyominame",
+        "MaxLength": 100,
+        "ModifiedOn": "2026-10-29T17:49:41Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "ModifiedOnBehalfByYomiName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": "modifiedonbehalfbyname"
+      },
+      {
+        "AttributeOf": null,
+        "AttributeType": "Uniqueidentifier",
+        "AttributeTypeName": {
+          "Value": "UniqueidentifierType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 1,
+        "CreatedOn": "2026-10-29T17:49:40Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Unique identifier for entity instances",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "AI Evaluation Metric",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": true,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": true,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": true,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "msdyn_aievaluationmetricid",
+        "ModifiedOn": "2026-10-29T17:49:40Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "msdyn_AIEvaluationMetricId",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 26,
+        "CreatedOn": "2026-10-29T17:49:41Z",
+        "DatabaseLength": 1000,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Evaluator Name",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "AIEvaluatorName",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "msdyn_aievaluatorname",
+        "MaxLength": 500,
+        "ModifiedOn": "2026-10-29T17:49:41Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "msdyn_AIEvaluatorName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 21,
+        "CreatedOn": "2026-10-29T17:49:41Z",
+        "DatabaseLength": 1700,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Object Id",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "AIObjectId",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": "",
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": true,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": true,
+        "IsRetrievable": true,
+        "IsSearchable": true,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "msdyn_aiobjectid",
+        "MaxLength": 850,
+        "ModifiedOn": "2026-10-29T17:49:41Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "msdyn_AIObjectId",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 29,
+        "CreatedOn": "2026-10-29T17:49:41Z",
+        "DatabaseLength": 400,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Object Type",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "AIObjectType",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "msdyn_aiobjecttype",
+        "MaxLength": 200,
+        "ModifiedOn": "2026-10-29T17:49:41Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "msdyn_AIObjectType",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexDoubleAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Double",
+        "AttributeTypeName": {
+          "Value": "DoubleType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 22,
+        "CreatedOn": "2026-10-29T17:49:41Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Evaluation Average score",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "EvalAvgScore",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "msdyn_evalavgscore",
+        "MaxValue": 1000000000.0,
+        "MinValue": 0.0,
+        "ModifiedOn": "2026-10-29T17:49:41Z",
+        "Precision": 2,
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "msdyn_EvalAvgScore",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexDoubleAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Double",
+        "AttributeTypeName": {
+          "Value": "DoubleType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 23,
+        "CreatedOn": "2026-10-29T17:49:41Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Evaluation P50 score",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "EvalP50Score",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "msdyn_evalp50score",
+        "MaxValue": 1000000000.0,
+        "MinValue": 0.0,
+        "ModifiedOn": "2026-10-29T17:49:41Z",
+        "Precision": 2,
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "msdyn_EvalP50Score",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexDoubleAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Double",
+        "AttributeTypeName": {
+          "Value": "DoubleType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 24,
+        "CreatedOn": "2026-10-29T17:49:41Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Evaluation P75 score",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "EvalP75Score",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "msdyn_evalp75score",
+        "MaxValue": 1000000000.0,
+        "MinValue": 0.0,
+        "ModifiedOn": "2026-10-29T17:49:41Z",
+        "Precision": 2,
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "msdyn_EvalP75Score",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexDoubleAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Double",
+        "AttributeTypeName": {
+          "Value": "DoubleType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 25,
+        "CreatedOn": "2026-10-29T17:49:41Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Evaluation P95 score",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "EvalP95Score",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "msdyn_evalp95score",
+        "MaxValue": 1000000000.0,
+        "MinValue": 0.0,
+        "ModifiedOn": "2026-10-29T17:49:41Z",
+        "Precision": 2,
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "msdyn_EvalP95Score",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexDateTimeAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "DateTime",
+        "AttributeTypeName": {
+          "Value": "DateTimeType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanChangeDateTimeBehavior": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifybehavior",
+          "Value": false
+        },
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 27,
+        "CreatedOn": "2026-10-29T17:49:41Z",
+        "DateTimeBehavior": {
+          "Value": "UserLocal"
+        },
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Last calculated time",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "LastCalculatedAt",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "DateAndTime",
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "msdyn_lastcalculatedat",
+        "ModifiedOn": "2026-10-29T17:49:41Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "msdyn_LastCalculatedAt",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexIntegerAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Integer",
+        "AttributeTypeName": {
+          "Value": "IntegerType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 28,
+        "CreatedOn": "2026-10-29T17:49:41Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Lookback duration in minutes",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "LookBackWindowDurationInMinutes",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "None",
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "msdyn_lookbackwindowdurationinminutes",
+        "MaxValue": 2147483647,
+        "MinValue": -2147483648,
+        "ModifiedOn": "2026-10-29T17:49:41Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "msdyn_LookBackWindowDurationInMinutes",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexDateTimeAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "DateTime",
+        "AttributeTypeName": {
+          "Value": "DateTimeType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanChangeDateTimeBehavior": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifybehavior",
+          "Value": false
+        },
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 20,
+        "CreatedOn": "2026-10-29T17:49:41Z",
+        "DateTimeBehavior": {
+          "Value": "UserLocal"
+        },
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Date and time that the record was migrated.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Record Created On",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "DateOnly",
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Inactive",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "overriddencreatedon",
+        "ModifiedOn": "2026-10-29T17:49:41Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "OverriddenCreatedOn",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 3,
+        "CreatedOn": "2026-10-29T17:49:40Z",
+        "DatabaseLength": 200,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Logical partition id. A logical partition consists of a set of records with same partition id.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Partition Id",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "partitionid",
+        "MaxLength": 100,
+        "ModifiedOn": "2026-10-29T17:49:40Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "PartitionId",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexIntegerAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Integer",
+        "AttributeTypeName": {
+          "Value": "IntegerType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 2,
+        "CreatedOn": "2026-10-29T17:49:40Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Time to live in seconds.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Time to live",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "Format": "None",
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "ttlinseconds",
+        "MaxValue": 2147483647,
+        "MinValue": 1,
+        "ModifiedOn": "2026-10-29T17:49:40Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "TTLInSeconds",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexBigIntAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "BigInt",
+        "AttributeTypeName": {
+          "Value": "BigIntType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 18,
+        "CreatedOn": "2026-10-29T17:49:41Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": false,
+              "Label": "Version Number",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": false,
+              "Label": "Version Number",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": true,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "versionnumber",
+        "MaxValue": 9223372036854775807,
+        "MinValue": -9223372036854775808,
+        "ModifiedOn": "2026-10-29T17:49:41Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "VersionNumber",
+        "Settings": [],
+        "SourceType": null
+      }
+    ],
+    "AutoCreateAccessTeams": false,
+    "AutoReplicateClusterRecords": false,
+    "AutoRouteToOwnerQueue": false,
+    "CanBeInCustomEntityAssociation": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canbeincustomentityassociation",
+      "Value": true
+    },
+    "CanBeInManyToMany": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canbeinmanytomany",
+      "Value": false
+    },
+    "CanBePrimaryEntityInRelationship": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canbeprimaryentityinrelationship",
+      "Value": true
+    },
+    "CanBeRelatedEntityInRelationship": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canberelatedentityinrelationship",
+      "Value": true
+    },
+    "CanChangeClusterMode": true,
+    "CanChangeHierarchicalRelationship": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canchangehierarchicalrelationship",
+      "Value": false
+    },
+    "CanChangeTrackingBeEnabled": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canchangetrackingbeenabled",
+      "Value": false
+    },
+    "CanCreateAttributes": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "cancreateattributes",
+      "Value": false
+    },
+    "CanCreateCharts": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "cancreatecharts",
+      "Value": false
+    },
+    "CanCreateForms": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "cancreateforms",
+      "Value": false
+    },
+    "CanCreateViews": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "cancreateviews",
+      "Value": false
+    },
+    "CanEnableSyncToExternalSearchIndex": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canenablesynctoexternalsearchindex",
+      "Value": false
+    },
+    "CanModifyAdditionalSettings": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+      "Value": false
+    },
+    "CanTriggerWorkflow": false,
+    "ChangeTrackingEnabled": false,
+    "ClusterMode": "Local",
+    "CollectionSchemaName": "msdyn_AIEvaluationMetrics",
+    "CreatedOn": "2026-10-29T17:49:40Z",
+    "DataProviderId": {
+      "componentType": 181,
+      "exportIdentity": {
+        "kind": "wire-guid",
+        "portability": "not-established",
+        "value": "1d9bde74-9ebd-4da9-8ff5-aa74945b9f74"
+      },
+      "kind": "typed-reference"
+    },
+    "DataSourceId": {
+      "componentType": 183,
+      "exportIdentity": {
+        "kind": "wire-guid",
+        "portability": "not-established",
+        "value": "19897b6e-b2c2-461c-8f32-5a2413028030"
+      },
+      "kind": "typed-reference"
+    },
+    "DaysSinceRecordLastModified": 0,
+    "DefaultToLocalPartition": false,
+    "Description": {
+      "LocalizedLabels": [
+        {
+          "HasChanged": null,
+          "IsManaged": true,
+          "Label": "",
+          "LanguageCode": 1033
+        }
+      ],
+      "UserLocalizedLabel": {
+        "kind": "localized-label-reference",
+        "languageCode": 1033
+      }
+    },
+    "DisplayCollectionName": {
+      "LocalizedLabels": [
+        {
+          "HasChanged": null,
+          "IsManaged": true,
+          "Label": "AI Evaluation Metric",
+          "LanguageCode": 1033
+        }
+      ],
+      "UserLocalizedLabel": {
+        "kind": "localized-label-reference",
+        "languageCode": 1033
+      }
+    },
+    "DisplayName": {
+      "LocalizedLabels": [
+        {
+          "HasChanged": null,
+          "IsManaged": true,
+          "Label": "AI Evaluation Metric",
+          "LanguageCode": 1033
+        }
+      ],
+      "UserLocalizedLabel": {
+        "kind": "localized-label-reference",
+        "languageCode": 1033
+      }
+    },
+    "EnforceStateTransitions": false,
+    "EntityColor": "",
+    "EntityHelpUrl": "",
+    "EntityHelpUrlEnabled": false,
+    "EntitySetName": "msdyn_aievaluationmetrics",
+    "ExternalCollectionName": "msdyn_AIEvaluationMetrics",
+    "ExternalName": "msdyn_AIEvaluationMetric",
+    "HasActivities": false,
+    "HasChanged": null,
+    "HasEmailAddresses": false,
+    "HasFeedback": false,
+    "HasNotes": false,
+    "IconLargeName": null,
+    "IconMediumName": null,
+    "IconSmallName": null,
+    "IconVectorName": "",
+    "IntroducedVersion": "1.0",
+    "IsAIRUpdated": false,
+    "IsActivity": false,
+    "IsActivityParty": false,
+    "IsArchivalEnabled": false,
+    "IsAuditEnabled": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyauditsettings",
+      "Value": false
+    },
+    "IsAvailableOffline": false,
+    "IsBPFEntity": false,
+    "IsBusinessProcessEnabled": false,
+    "IsChildEntity": false,
+    "IsConnectionsEnabled": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyconnectionsettings",
+      "Value": false
+    },
+    "IsCustomEntity": true,
+    "IsCustomizable": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "iscustomizable",
+      "Value": false
+    },
+    "IsDocumentManagementEnabled": false,
+    "IsDocumentRecommendationsEnabled": false,
+    "IsDuplicateDetectionEnabled": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyduplicatedetectionsettings",
+      "Value": false
+    },
+    "IsEnabledForCharts": false,
+    "IsEnabledForExternalChannels": false,
+    "IsEnabledForTrace": false,
+    "IsImportable": true,
+    "IsInteractionCentricEnabled": false,
+    "IsIntersect": false,
+    "IsKnowledgeManagementEnabled": false,
+    "IsLogicalEntity": false,
+    "IsMSTeamsIntegrationEnabled": false,
+    "IsMailMergeEnabled": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifymailmergesettings",
+      "Value": false
+    },
+    "IsManaged": true,
+    "IsMappable": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "ismappable",
+      "Value": true
+    },
+    "IsOfflineInMobileClient": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifymobileclientoffline",
+      "Value": false
+    },
+    "IsOneNoteIntegrationEnabled": false,
+    "IsOptimisticConcurrencyEnabled": true,
+    "IsPrivate": false,
+    "IsQuickCreateEnabled": false,
+    "IsReadOnlyInMobileClient": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifymobileclientreadonly",
+      "Value": false
+    },
+    "IsReadingPaneEnabled": false,
+    "IsRenameable": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "isrenameable",
+      "Value": true
+    },
+    "IsRetentionEnabled": false,
+    "IsRetrieveAuditEnabled": false,
+    "IsRetrieveMultipleAuditEnabled": false,
+    "IsSLAEnabled": false,
+    "IsSolutionAware": false,
+    "IsStateModelAware": true,
+    "IsValidForAdvancedFind": true,
+    "IsValidForQueue": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyqueuesettings",
+      "Value": false
+    },
+    "IsVisibleInMobile": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifymobilevisibility",
+      "Value": false
+    },
+    "IsVisibleInMobileClient": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifymobileclientvisibility",
+      "Value": false
+    },
+    "Keys": [
+      {
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": false,
+              "Label": "Entity key for NoSql Entity that contains PrimaryKey and PartitionId attributes",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityKeyIndexStatus": "Active",
+        "EntityLogicalName": "msdyn_aievaluationmetric",
+        "HasChanged": null,
+        "IntroducedVersion": "1.0",
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsExportKey": false,
+        "IsManaged": false,
+        "IsSecondaryKey": false,
+        "IsSynchronous": true,
+        "KeyAttributes": [
+          "msdyn_aievaluationmetricid",
+          "partitionid"
+        ],
+        "LogicalName": "keyfornosqlentitywithpkpartitionid",
+        "SchemaName": "KeyForNoSqlEntityWithPKPartitionId"
+      }
+    ],
+    "LogicalCollectionName": "msdyn_aievaluationmetrics",
+    "LogicalName": "msdyn_aievaluationmetric",
+    "ManyToManyRelationships": [],
+    "ManyToOneRelationships": [
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "NoCascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "1.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": false,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": true,
+        "ReferencedAttribute": "systemuserid",
+        "ReferencedEntity": "systemuser",
+        "ReferencedEntityNavigationPropertyName": "lk_msdyn_aievaluationmetric_createdby",
+        "ReferencingAttribute": "createdby",
+        "ReferencingEntity": "msdyn_aievaluationmetric",
+        "ReferencingEntityNavigationPropertyName": "createdby",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "lk_msdyn_aievaluationmetric_createdby",
+        "SecurityTypes": "None"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "NoCascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "1.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": false,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": true,
+        "ReferencedAttribute": "systemuserid",
+        "ReferencedEntity": "systemuser",
+        "ReferencedEntityNavigationPropertyName": "lk_msdyn_aievaluationmetric_createdonbehalfby",
+        "ReferencingAttribute": "createdonbehalfby",
+        "ReferencingEntity": "msdyn_aievaluationmetric",
+        "ReferencingEntityNavigationPropertyName": "createdonbehalfby",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "lk_msdyn_aievaluationmetric_createdonbehalfby",
+        "SecurityTypes": "None"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "NoCascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "1.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": false,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": true,
+        "ReferencedAttribute": "systemuserid",
+        "ReferencedEntity": "systemuser",
+        "ReferencedEntityNavigationPropertyName": "lk_msdyn_aievaluationmetric_modifiedby",
+        "ReferencingAttribute": "modifiedby",
+        "ReferencingEntity": "msdyn_aievaluationmetric",
+        "ReferencingEntityNavigationPropertyName": "modifiedby",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "lk_msdyn_aievaluationmetric_modifiedby",
+        "SecurityTypes": "None"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "NoCascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "1.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": false,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": true,
+        "ReferencedAttribute": "systemuserid",
+        "ReferencedEntity": "systemuser",
+        "ReferencedEntityNavigationPropertyName": "lk_msdyn_aievaluationmetric_modifiedonbehalfby",
+        "ReferencingAttribute": "modifiedonbehalfby",
+        "ReferencingEntity": "msdyn_aievaluationmetric",
+        "ReferencingEntityNavigationPropertyName": "modifiedonbehalfby",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "lk_msdyn_aievaluationmetric_modifiedonbehalfby",
+        "SecurityTypes": "None"
+      }
+    ],
+    "MobileOfflineFilters": "",
+    "ModifiedOn": "2026-10-29T17:49:40Z",
+    "ObjectTypeCode": 10216,
+    "OneToManyRelationships": [],
+    "OwnerId": null,
+    "OwnerIdType": 8,
+    "OwnershipType": "OrganizationOwned",
+    "OwningBusinessUnit": null,
+    "PrimaryIdAttribute": "msdyn_aievaluationmetricid",
+    "PrimaryImageAttribute": null,
+    "PrimaryKey": [],
+    "PrimaryNameAttribute": "msdyn_aiobjectid",
+    "Privileges": [
+      {
+        "CanBeBasic": false,
+        "CanBeDeep": false,
+        "CanBeEntityReference": false,
+        "CanBeGlobal": true,
+        "CanBeLocal": false,
+        "CanBeParentEntityReference": false,
+        "CanBeRecordFilter": false,
+        "Name": "prvAppendTomsdyn_AIEvaluationMetric",
+        "PrivilegeId": {
+          "componentType": 16,
+          "exportIdentity": {
+            "kind": "role-contained-privilege-name",
+            "value": "prvAppendTomsdyn_AIEvaluationMetric"
+          },
+          "kind": "typed-reference"
+        },
+        "PrivilegeType": "AppendTo"
+      },
+      {
+        "CanBeBasic": false,
+        "CanBeDeep": false,
+        "CanBeEntityReference": false,
+        "CanBeGlobal": true,
+        "CanBeLocal": false,
+        "CanBeParentEntityReference": false,
+        "CanBeRecordFilter": false,
+        "Name": "prvAppendmsdyn_AIEvaluationMetric",
+        "PrivilegeId": {
+          "componentType": 16,
+          "exportIdentity": {
+            "kind": "role-contained-privilege-name",
+            "value": "prvAppendmsdyn_AIEvaluationMetric"
+          },
+          "kind": "typed-reference"
+        },
+        "PrivilegeType": "Append"
+      },
+      {
+        "CanBeBasic": false,
+        "CanBeDeep": false,
+        "CanBeEntityReference": false,
+        "CanBeGlobal": true,
+        "CanBeLocal": false,
+        "CanBeParentEntityReference": false,
+        "CanBeRecordFilter": false,
+        "Name": "prvCreatemsdyn_AIEvaluationMetric",
+        "PrivilegeId": {
+          "componentType": 16,
+          "exportIdentity": {
+            "kind": "role-contained-privilege-name",
+            "value": "prvCreatemsdyn_AIEvaluationMetric"
+          },
+          "kind": "typed-reference"
+        },
+        "PrivilegeType": "Create"
+      },
+      {
+        "CanBeBasic": false,
+        "CanBeDeep": false,
+        "CanBeEntityReference": false,
+        "CanBeGlobal": true,
+        "CanBeLocal": false,
+        "CanBeParentEntityReference": false,
+        "CanBeRecordFilter": false,
+        "Name": "prvDeletemsdyn_AIEvaluationMetric",
+        "PrivilegeId": {
+          "componentType": 16,
+          "exportIdentity": {
+            "kind": "role-contained-privilege-name",
+            "value": "prvDeletemsdyn_AIEvaluationMetric"
+          },
+          "kind": "typed-reference"
+        },
+        "PrivilegeType": "Delete"
+      },
+      {
+        "CanBeBasic": false,
+        "CanBeDeep": false,
+        "CanBeEntityReference": false,
+        "CanBeGlobal": true,
+        "CanBeLocal": false,
+        "CanBeParentEntityReference": false,
+        "CanBeRecordFilter": false,
+        "Name": "prvReadmsdyn_AIEvaluationMetric",
+        "PrivilegeId": {
+          "componentType": 16,
+          "exportIdentity": {
+            "kind": "role-contained-privilege-name",
+            "value": "prvReadmsdyn_AIEvaluationMetric"
+          },
+          "kind": "typed-reference"
+        },
+        "PrivilegeType": "Read"
+      },
+      {
+        "CanBeBasic": false,
+        "CanBeDeep": false,
+        "CanBeEntityReference": false,
+        "CanBeGlobal": true,
+        "CanBeLocal": false,
+        "CanBeParentEntityReference": false,
+        "CanBeRecordFilter": false,
+        "Name": "prvWritemsdyn_AIEvaluationMetric",
+        "PrivilegeId": {
+          "componentType": 16,
+          "exportIdentity": {
+            "kind": "role-contained-privilege-name",
+            "value": "prvWritemsdyn_AIEvaluationMetric"
+          },
+          "kind": "typed-reference"
+        },
+        "PrivilegeType": "Write"
+      }
+    ],
+    "RecurrenceBaseEntityLogicalName": null,
+    "ReportViewName": null,
+    "SchemaName": "msdyn_AIEvaluationMetric",
+    "SettingOf": null,
+    "Settings": [],
+    "SyncToExternalSearchIndex": false,
+    "TableType": "Elastic",
+    "UsesBusinessDataLabelTable": false
+  },
+  "logicalName": "msdyn_aievaluationmetric",
+  "typedReferences": []
+}

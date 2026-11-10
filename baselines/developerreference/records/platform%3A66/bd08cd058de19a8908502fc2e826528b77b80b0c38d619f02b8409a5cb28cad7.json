@@ -1,0 +1,141 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "HierarchicalTreeControl",
+        "ControlManifestVersion": "1.0.8",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.HierarchicalTreeControl.HierarchicalTreeControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_HierarchicalTreeControl",
+        "FullName": "MscrmControls.HierarchicalTreeControl.HierarchicalTreeControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.HierarchicalTreeControl.HierarchicalTreeControl",
+        "Namespace": "MscrmControls.HierarchicalTreeControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "uniqueIdentifier",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "entityLogicalName",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "entitySetName",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "hierarchyAttribute",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "primaryNameAttribute",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "primaryIdAttribute",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "selectedValue",
+              "Required": true,
+              "Type": "Lookup.Simple",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "additionalFilter",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "pageSize",
+              "Required": true,
+              "TypeGroup": "numbers",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.HierarchicalTreeControl.HierarchicalTreeControl_HierarchicalTreeControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/HierarchicalTreeControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "Lookup.Simple",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.HierarchicalTreeControl\" constructor=\"HierarchicalTreeControl\" version=\"1.0.8\" display-name-key=\"CC_HierarchicalTreeControl\" control-type=\"virtual\"><modes></modes><property name=\"uniqueIdentifier\" display-name-key=\"CC_Hierarchy_UniqueIdentifier\" description-key=\"CC_Hierarchy_UniqueIdentifier_Desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"true\" /><property name=\"entityLogicalName\" display-name-key=\"CC_Hierarchy_EntityLogicalName\" description-key=\"CC_Hierarchy_EntityLogicalName_Desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"true\" /><property name=\"entitySetName\" display-name-key=\"CC_Hierarchy_EntitySetName\" description-key=\"CC_Hierarchy_EntitySetName_Desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"true\" /><property name=\"hierarchyAttribute\" display-name-key=\"CC_Hierarchy_HierarchyAttribute\" description-key=\"CC_Hierarchy_HierarchyAttribute_Desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"true\" /><property name=\"primaryNameAttribute\" display-name-key=\"CC_Hierarchy_PrimaryNameAttribute\" description-key=\"CC_Hierarchy_PrimaryNameAttribute_Desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"true\" /><property name=\"primaryIdAttribute\" display-name-key=\"CC_Hierarchy_PrimaryIdAttribute\" description-key=\"CC_Hierarchy_PrimaryIdAttribute_Desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"true\" /><property name=\"selectedValue\" display-name-key=\"CC_Hierarchy_SelectedValue\" description-key=\"CC_Hierarchy_SelectedValue_Desc\" of-type=\"Lookup.Simple\" usage=\"bound\" required=\"true\" /><property name=\"additionalFilter\" display-name-key=\"CC_Hierarchy_AdditionalFilter\" description-key=\"CC_Hierarchy_AdditionalFilter_Desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"true\" /><property name=\"pageSize\" display-name-key=\"CC_Hierarchy_PageSize\" description-key=\"CC_Hierarchy_PageSize_Desc\" of-type-group=\"numbers\" usage=\"input\" required=\"true\" /><resources><resx path=\"strings/HierarchicalTreeControl.1033.resx\" version=\"1.0.0\" /><code path=\"HierarchicalTreeControl.js\" order=\"1\" /></resources></control></manifest>",
+    "name": "MscrmControls.HierarchicalTreeControl.HierarchicalTreeControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.8"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.HierarchicalTreeControl.HierarchicalTreeControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

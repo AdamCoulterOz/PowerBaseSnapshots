@@ -1,0 +1,4484 @@
+{
+  "configuration": {
+    "ActivityTypeMask": 0,
+    "Attributes": [
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Lookup",
+        "AttributeTypeName": {
+          "Value": "LookupType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 3,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": "5.0.0.0",
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Unique identifier of the activity with which the attachment is associated.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Regarding",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "Format": "None",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "activityid",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "ActivityId",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "activitypointer"
+        ]
+      },
+      {
+        "AttributeOf": null,
+        "AttributeType": "Uniqueidentifier",
+        "AttributeTypeName": {
+          "Value": "UniqueidentifierType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 2,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Unique identifier of the attachment.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Activity Mime Attachment",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": true,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": true,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": true,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "activitymimeattachmentid",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "ActivityMimeAttachmentId",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "AttributeOf": null,
+        "AttributeType": "Uniqueidentifier",
+        "AttributeTypeName": {
+          "Value": "UniqueidentifierType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 55,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "For internal use only.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "activitymimeattachmentidunique",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "ActivityMimeAttachmentIdUnique",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 62,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DatabaseLength": 400,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Descriptive subject for the activity.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "ActivitySubject",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "8.2.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": true,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "activitysubject",
+        "MaxLength": 2000,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "ActivitySubject",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 61,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DatabaseLength": 4000,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "anonymous link",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "For internal use only.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "8.2.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "anonymouslink",
+        "MaxLength": 2000,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "AnonymousLink",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 58,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DatabaseLength": 500,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "For internal use only",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Content Id",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "attachmentcontentid",
+        "MaxLength": 250,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "AttachmentContentId",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Lookup",
+        "AttributeTypeName": {
+          "Value": "LookupType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 41,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Unique identifier of the attachment with which this activitymimeattachment is associated.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Attachment",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "Format": "None",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "attachmentid",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "ApplicationRequired"
+        },
+        "SchemaName": "AttachmentId",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "attachment"
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexIntegerAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Integer",
+        "AttributeTypeName": {
+          "Value": "IntegerType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 1,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Number of the attachment.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Attachment Number",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "Format": "None",
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "attachmentnumber",
+        "MaxValue": 1000000000,
+        "MinValue": 0,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "AttachmentNumber",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 4,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DatabaseLength": -1,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Contents of the attachment.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Body",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "Format": "TextArea",
+        "FormatName": {
+          "Value": "TextArea"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": true,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "body",
+        "MaxLength": 1073741823,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "Body",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexPicklistAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Picklist",
+        "AttributeTypeName": {
+          "Value": "PicklistType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ChildPicklistLogicalNames": [],
+        "ColumnNumber": 51,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DefaultFormValue": -1,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "For internal use only.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Component State",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "componentstate",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "OptionSet": {
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "The state of this component.",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "Component State",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "ExternalTypeName": null,
+          "HasChanged": null,
+          "IntroducedVersion": "5.0.0.0",
+          "IsCustomOptionSet": false,
+          "IsCustomizable": {
+            "CanBeChanged": false,
+            "ManagedPropertyLogicalName": "iscustomizable",
+            "Value": false
+          },
+          "IsGlobal": true,
+          "IsManaged": true,
+          "Name": "componentstate",
+          "OptionSetType": "Picklist",
+          "Options": [
+            {
+              "Color": null,
+              "Description": {
+                "LocalizedLabels": [],
+                "UserLocalizedLabel": null
+              },
+              "ExternalValue": null,
+              "HasChanged": null,
+              "IsHidden": false,
+              "IsManaged": true,
+              "Label": {
+                "LocalizedLabels": [
+                  {
+                    "HasChanged": null,
+                    "IsManaged": true,
+                    "Label": "Published",
+                    "LanguageCode": 1033
+                  }
+                ],
+                "UserLocalizedLabel": {
+                  "kind": "localized-label-reference",
+                  "languageCode": 1033
+                }
+              },
+              "MetadataId": null,
+              "ParentValues": [],
+              "Tag": null,
+              "Value": 0
+            },
+            {
+              "Color": null,
+              "Description": {
+                "LocalizedLabels": [],
+                "UserLocalizedLabel": null
+              },
+              "ExternalValue": null,
+              "HasChanged": null,
+              "IsHidden": false,
+              "IsManaged": true,
+              "Label": {
+                "LocalizedLabels": [
+                  {
+                    "HasChanged": null,
+                    "IsManaged": true,
+                    "Label": "Unpublished",
+                    "LanguageCode": 1033
+                  }
+                ],
+                "UserLocalizedLabel": {
+                  "kind": "localized-label-reference",
+                  "languageCode": 1033
+                }
+              },
+              "MetadataId": null,
+              "ParentValues": [],
+              "Tag": null,
+              "Value": 1
+            },
+            {
+              "Color": null,
+              "Description": {
+                "LocalizedLabels": [],
+                "UserLocalizedLabel": null
+              },
+              "ExternalValue": null,
+              "HasChanged": null,
+              "IsHidden": false,
+              "IsManaged": true,
+              "Label": {
+                "LocalizedLabels": [
+                  {
+                    "HasChanged": null,
+                    "IsManaged": true,
+                    "Label": "Deleted",
+                    "LanguageCode": 1033
+                  }
+                ],
+                "UserLocalizedLabel": {
+                  "kind": "localized-label-reference",
+                  "languageCode": 1033
+                }
+              },
+              "MetadataId": null,
+              "ParentValues": [],
+              "Tag": null,
+              "Value": 2
+            },
+            {
+              "Color": null,
+              "Description": {
+                "LocalizedLabels": [],
+                "UserLocalizedLabel": null
+              },
+              "ExternalValue": null,
+              "HasChanged": null,
+              "IsHidden": false,
+              "IsManaged": true,
+              "Label": {
+                "LocalizedLabels": [
+                  {
+                    "HasChanged": null,
+                    "IsManaged": true,
+                    "Label": "Deleted Unpublished",
+                    "LanguageCode": 1033
+                  }
+                ],
+                "UserLocalizedLabel": {
+                  "kind": "localized-label-reference",
+                  "languageCode": 1033
+                }
+              },
+              "MetadataId": null,
+              "ParentValues": [],
+              "Tag": null,
+              "Value": 3
+            }
+          ],
+          "ParentOptionSetName": null
+        },
+        "ParentPicklistLogicalName": null,
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "ComponentState",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 8,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DatabaseLength": 510,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "File name of the attachment.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "File Name",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": true,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": true,
+        "IsSearchable": true,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "filename",
+        "MaxLength": 255,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "FileName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexIntegerAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Integer",
+        "AttributeTypeName": {
+          "Value": "IntegerType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 6,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "File size of the attachment.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "File Size (Bytes)",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "Format": "None",
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "filesize",
+        "MaxValue": 1000000000,
+        "MinValue": 0,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "FileSize",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexBooleanAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Boolean",
+        "AttributeTypeName": {
+          "Value": "BooleanType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 59,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DefaultValue": false,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Indicates if this attachment is followed.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Followed",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "8.2.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "isfollowed",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "OptionSet": {
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "Describes whether attachment is followed or not",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "Followed",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "ExternalTypeName": null,
+          "FalseOption": {
+            "Color": null,
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            },
+            "ExternalValue": null,
+            "HasChanged": null,
+            "IsHidden": false,
+            "IsManaged": true,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "HasChanged": null,
+                  "IsManaged": true,
+                  "Label": "No",
+                  "LanguageCode": 1033
+                }
+              ],
+              "UserLocalizedLabel": {
+                "kind": "localized-label-reference",
+                "languageCode": 1033
+              }
+            },
+            "MetadataId": null,
+            "ParentValues": [],
+            "Tag": null,
+            "Value": 0
+          },
+          "HasChanged": null,
+          "IntroducedVersion": "8.2.0.0",
+          "IsCustomOptionSet": false,
+          "IsCustomizable": {
+            "CanBeChanged": false,
+            "ManagedPropertyLogicalName": "iscustomizable",
+            "Value": false
+          },
+          "IsGlobal": false,
+          "IsManaged": true,
+          "Name": "activitymimeattachment_isfollowed",
+          "OptionSetType": "Boolean",
+          "TrueOption": {
+            "Color": null,
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            },
+            "ExternalValue": null,
+            "HasChanged": null,
+            "IsHidden": false,
+            "IsManaged": true,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "HasChanged": null,
+                  "IsManaged": true,
+                  "Label": "Yes",
+                  "LanguageCode": 1033
+                }
+              ],
+              "UserLocalizedLabel": {
+                "kind": "localized-label-reference",
+                "languageCode": 1033
+              }
+            },
+            "MetadataId": null,
+            "ParentValues": [],
+            "Tag": null,
+            "Value": 1
+          }
+        },
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "IsFollowed",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "AttributeOf": "isfollowed",
+        "AttributeType": "Virtual",
+        "AttributeTypeName": {
+          "Value": "VirtualType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 60,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "8.2.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "isfollowedname",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "IsFollowedName",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexBooleanAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Boolean",
+        "AttributeTypeName": {
+          "Value": "BooleanType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 56,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DefaultValue": false,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Indicates whether the solution component is part of a managed solution.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Is Managed",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "ismanaged",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "OptionSet": {
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "Information about whether the current component is managed.",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "Is Component Managed",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "ExternalTypeName": null,
+          "FalseOption": {
+            "Color": null,
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            },
+            "ExternalValue": null,
+            "HasChanged": null,
+            "IsHidden": false,
+            "IsManaged": true,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "HasChanged": null,
+                  "IsManaged": true,
+                  "Label": "Unmanaged",
+                  "LanguageCode": 1033
+                }
+              ],
+              "UserLocalizedLabel": {
+                "kind": "localized-label-reference",
+                "languageCode": 1033
+              }
+            },
+            "MetadataId": null,
+            "ParentValues": [],
+            "Tag": null,
+            "Value": 0
+          },
+          "HasChanged": null,
+          "IntroducedVersion": "5.0.0.0",
+          "IsCustomOptionSet": false,
+          "IsCustomizable": {
+            "CanBeChanged": false,
+            "ManagedPropertyLogicalName": "iscustomizable",
+            "Value": false
+          },
+          "IsGlobal": true,
+          "IsManaged": true,
+          "Name": "ismanaged",
+          "OptionSetType": "Boolean",
+          "TrueOption": {
+            "Color": null,
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            },
+            "ExternalValue": null,
+            "HasChanged": null,
+            "IsHidden": false,
+            "IsManaged": true,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "HasChanged": null,
+                  "IsManaged": true,
+                  "Label": "Managed",
+                  "LanguageCode": 1033
+                }
+              ],
+              "UserLocalizedLabel": {
+                "kind": "localized-label-reference",
+                "languageCode": 1033
+              }
+            },
+            "MetadataId": null,
+            "ParentValues": [],
+            "Tag": null,
+            "Value": 1
+          }
+        },
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "IsManaged",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "AttributeOf": "ismanaged",
+        "AttributeType": "Virtual",
+        "AttributeTypeName": {
+          "Value": "VirtualType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 57,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "ismanagedname",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "IsManagedName",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 7,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DatabaseLength": 512,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "MIME type of the attachment.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Mime Type",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": true,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "mimetype",
+        "MaxLength": 256,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "MimeType",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Lookup",
+        "AttributeTypeName": {
+          "Value": "LookupType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 49,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Unique identifier of the record with which the attachment is associated",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Item",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "Format": "Regarding",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": true,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": true,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "objectid",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "ObjectId",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "activitypointer",
+          "template"
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexEntityNameAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "EntityName",
+        "AttributeTypeName": {
+          "Value": "EntityNameType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 50,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DefaultFormValue": null,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Object Type Code of the entity that is associated with the attachment.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Entity",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsEntityReferenceStored": true,
+        "IsFilterable": true,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": true,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "objecttypecode",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "OptionSet": {
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "Type of entity with which the attachment is associated.",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "Object Type ",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "ExternalTypeName": null,
+          "HasChanged": null,
+          "IntroducedVersion": "5.0.0.0",
+          "IsCustomOptionSet": false,
+          "IsCustomizable": {
+            "CanBeChanged": false,
+            "ManagedPropertyLogicalName": "iscustomizable",
+            "Value": true
+          },
+          "IsGlobal": false,
+          "IsManaged": true,
+          "Name": "activitymimeattachment_objecttypecode",
+          "OptionSetType": "Picklist",
+          "Options": [
+            {
+              "Color": null,
+              "Description": {
+                "LocalizedLabels": [],
+                "UserLocalizedLabel": null
+              },
+              "ExternalValue": null,
+              "HasChanged": null,
+              "IsHidden": false,
+              "IsManaged": true,
+              "Label": {
+                "LocalizedLabels": [
+                  {
+                    "HasChanged": null,
+                    "IsManaged": true,
+                    "Label": "Email Template",
+                    "LanguageCode": 1033
+                  }
+                ],
+                "UserLocalizedLabel": {
+                  "kind": "localized-label-reference",
+                  "languageCode": 1033
+                }
+              },
+              "MetadataId": null,
+              "ParentValues": [],
+              "Tag": "template",
+              "Value": 2010
+            },
+            {
+              "Color": null,
+              "Description": {
+                "LocalizedLabels": [],
+                "UserLocalizedLabel": null
+              },
+              "ExternalValue": null,
+              "HasChanged": null,
+              "IsHidden": false,
+              "IsManaged": true,
+              "Label": {
+                "LocalizedLabels": [
+                  {
+                    "HasChanged": null,
+                    "IsManaged": true,
+                    "Label": "Email Activity",
+                    "LanguageCode": 1033
+                  }
+                ],
+                "UserLocalizedLabel": {
+                  "kind": "localized-label-reference",
+                  "languageCode": 1033
+                }
+              },
+              "MetadataId": null,
+              "ParentValues": [],
+              "Tag": "activitypointer",
+              "Value": 4200
+            }
+          ],
+          "ParentOptionSetName": null
+        },
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "ObjectTypeCode",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexDateTimeAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "DateTime",
+        "AttributeTypeName": {
+          "Value": "DateTimeType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanChangeDateTimeBehavior": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifybehavior",
+          "Value": false
+        },
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 52,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DateTimeBehavior": {
+          "Value": "UserLocal"
+        },
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "For internal use only.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Record Overwrite Time",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "Format": "DateOnly",
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Inactive",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "overwritetime",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "OverwriteTime",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Owner",
+        "AttributeTypeName": {
+          "Value": "OwnerType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 13,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Unique identifier of the user or team who owns the activity_mime_attachment.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Owner",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "Format": "None",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": true,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "ownerid",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "ApplicationRequired"
+        },
+        "SchemaName": "OwnerId",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "systemuser",
+          "team"
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "ownerid",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 63,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DatabaseLength": 320,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "8.2.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "owneridname",
+        "MaxLength": 100,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "OwnerIdName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexEntityNameAttributeMetadata",
+        "AttributeOf": "ownerid",
+        "AttributeType": "EntityName",
+        "AttributeTypeName": {
+          "Value": "EntityNameType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 12,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DefaultFormValue": null,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsEntityReferenceStored": true,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "owneridtype",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "OptionSet": null,
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "OwnerIdType",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Lookup",
+        "AttributeTypeName": {
+          "Value": "LookupType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 11,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Unique identifier of the business unit that owns the activity mime attachment.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Owning Business Unit",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "Format": "None",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": true,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "owningbusinessunit",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "OwningBusinessUnit",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "businessunit"
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Lookup",
+        "AttributeTypeName": {
+          "Value": "LookupType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 9,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Unique identifier of the user who owns the activity mime attachment.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Owner",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "Format": "None",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "owninguser",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "OwningUser",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "systemuser"
+        ]
+      },
+      {
+        "AttributeOf": null,
+        "AttributeType": "Uniqueidentifier",
+        "AttributeTypeName": {
+          "Value": "UniqueidentifierType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 53,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Unique identifier of the associated solution.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Solution",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "solutionid",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "SolutionId",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 5,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DatabaseLength": 4000,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Descriptive subject for the attachment.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Subject",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "subject",
+        "MaxLength": 2000,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "Subject",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "AttributeOf": null,
+        "AttributeType": "Uniqueidentifier",
+        "AttributeTypeName": {
+          "Value": "UniqueidentifierType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 54,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "For internal use only.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Solution",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": true,
+        "IsValidForRead": false,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "supportingsolutionid",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "SupportingSolutionId",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexBigIntAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "BigInt",
+        "AttributeTypeName": {
+          "Value": "BigIntType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 10,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Version number of the activity mime attachment.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Version Number",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "activitymimeattachment",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": true,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "versionnumber",
+        "MaxValue": 9223372036854775807,
+        "MinValue": -9223372036854775808,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "VersionNumber",
+        "Settings": [],
+        "SourceType": null
+      }
+    ],
+    "AutoCreateAccessTeams": false,
+    "AutoReplicateClusterRecords": false,
+    "AutoRouteToOwnerQueue": false,
+    "CanBeInCustomEntityAssociation": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canbeincustomentityassociation",
+      "Value": false
+    },
+    "CanBeInManyToMany": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canbeinmanytomany",
+      "Value": false
+    },
+    "CanBePrimaryEntityInRelationship": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canbeprimaryentityinrelationship",
+      "Value": false
+    },
+    "CanBeRelatedEntityInRelationship": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canberelatedentityinrelationship",
+      "Value": false
+    },
+    "CanChangeClusterMode": true,
+    "CanChangeHierarchicalRelationship": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canchangehierarchicalrelationship",
+      "Value": false
+    },
+    "CanChangeTrackingBeEnabled": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canchangetrackingbeenabled",
+      "Value": true
+    },
+    "CanCreateAttributes": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "cancreateattributes",
+      "Value": false
+    },
+    "CanCreateCharts": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "cancreatecharts",
+      "Value": false
+    },
+    "CanCreateForms": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "cancreateforms",
+      "Value": false
+    },
+    "CanCreateViews": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "cancreateviews",
+      "Value": false
+    },
+    "CanEnableSyncToExternalSearchIndex": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canenablesynctoexternalsearchindex",
+      "Value": true
+    },
+    "CanModifyAdditionalSettings": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+      "Value": true
+    },
+    "CanTriggerWorkflow": false,
+    "ChangeTrackingEnabled": true,
+    "ClusterMode": "Local",
+    "CollectionSchemaName": "ActivityMimeAttachments",
+    "CreatedOn": "1900-01-01T00:00:00Z",
+    "DataProviderId": null,
+    "DataSourceId": null,
+    "DaysSinceRecordLastModified": 0,
+    "DefaultToLocalPartition": false,
+    "Description": {
+      "LocalizedLabels": [
+        {
+          "HasChanged": null,
+          "IsManaged": true,
+          "Label": "MIME attachment for an activity.",
+          "LanguageCode": 1033
+        }
+      ],
+      "UserLocalizedLabel": {
+        "kind": "localized-label-reference",
+        "languageCode": 1033
+      }
+    },
+    "DisplayCollectionName": {
+      "LocalizedLabels": [
+        {
+          "HasChanged": null,
+          "IsManaged": true,
+          "Label": "Attachments",
+          "LanguageCode": 1033
+        }
+      ],
+      "UserLocalizedLabel": {
+        "kind": "localized-label-reference",
+        "languageCode": 1033
+      }
+    },
+    "DisplayName": {
+      "LocalizedLabels": [
+        {
+          "HasChanged": null,
+          "IsManaged": true,
+          "Label": "Attachment",
+          "LanguageCode": 1033
+        }
+      ],
+      "UserLocalizedLabel": {
+        "kind": "localized-label-reference",
+        "languageCode": 1033
+      }
+    },
+    "EnforceStateTransitions": false,
+    "EntityColor": null,
+    "EntityHelpUrl": null,
+    "EntityHelpUrlEnabled": false,
+    "EntitySetName": "activitymimeattachments",
+    "ExternalCollectionName": null,
+    "ExternalName": null,
+    "HasActivities": false,
+    "HasChanged": null,
+    "HasEmailAddresses": false,
+    "HasFeedback": false,
+    "HasNotes": false,
+    "IconLargeName": null,
+    "IconMediumName": null,
+    "IconSmallName": null,
+    "IconVectorName": null,
+    "IntroducedVersion": "5.0.0.0",
+    "IsAIRUpdated": false,
+    "IsActivity": false,
+    "IsActivityParty": false,
+    "IsArchivalEnabled": false,
+    "IsAuditEnabled": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyauditsettings",
+      "Value": false
+    },
+    "IsAvailableOffline": true,
+    "IsBPFEntity": false,
+    "IsBusinessProcessEnabled": false,
+    "IsChildEntity": false,
+    "IsConnectionsEnabled": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyconnectionsettings",
+      "Value": false
+    },
+    "IsCustomEntity": false,
+    "IsCustomizable": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "iscustomizable",
+      "Value": true
+    },
+    "IsDocumentManagementEnabled": false,
+    "IsDocumentRecommendationsEnabled": false,
+    "IsDuplicateDetectionEnabled": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyduplicatedetectionsettings",
+      "Value": false
+    },
+    "IsEnabledForCharts": false,
+    "IsEnabledForExternalChannels": false,
+    "IsEnabledForTrace": false,
+    "IsImportable": false,
+    "IsInteractionCentricEnabled": false,
+    "IsIntersect": false,
+    "IsKnowledgeManagementEnabled": false,
+    "IsLogicalEntity": false,
+    "IsMSTeamsIntegrationEnabled": false,
+    "IsMailMergeEnabled": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifymailmergesettings",
+      "Value": false
+    },
+    "IsManaged": true,
+    "IsMappable": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "ismappable",
+      "Value": false
+    },
+    "IsOfflineInMobileClient": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifymobileclientoffline",
+      "Value": true
+    },
+    "IsOneNoteIntegrationEnabled": false,
+    "IsOptimisticConcurrencyEnabled": true,
+    "IsPrivate": false,
+    "IsQuickCreateEnabled": false,
+    "IsReadOnlyInMobileClient": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifymobileclientreadonly",
+      "Value": true
+    },
+    "IsReadingPaneEnabled": true,
+    "IsRenameable": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "isrenameable",
+      "Value": false
+    },
+    "IsRetentionEnabled": false,
+    "IsRetrieveAuditEnabled": false,
+    "IsRetrieveMultipleAuditEnabled": false,
+    "IsSLAEnabled": false,
+    "IsSolutionAware": true,
+    "IsStateModelAware": false,
+    "IsValidForAdvancedFind": false,
+    "IsValidForQueue": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyqueuesettings",
+      "Value": false
+    },
+    "IsVisibleInMobile": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifymobilevisibility",
+      "Value": false
+    },
+    "IsVisibleInMobileClient": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifymobileclientvisibility",
+      "Value": true
+    },
+    "Keys": [],
+    "LogicalCollectionName": "activitymimeattachments",
+    "LogicalName": "activitymimeattachment",
+    "ManyToManyRelationships": [],
+    "ManyToOneRelationships": [
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "Cascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": true,
+        "ReferencedAttribute": "activityid",
+        "ReferencedEntity": "activitypointer",
+        "ReferencedEntityNavigationPropertyName": "activity_pointer_activity_mime_attachment",
+        "ReferencingAttribute": "objectid",
+        "ReferencingEntity": "activitymimeattachment",
+        "ReferencingEntityNavigationPropertyName": "objectid_activitypointer",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "activity_pointer_activity_mime_attachment",
+        "SecurityTypes": "None"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "Cascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "7.0.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": true,
+        "ReferencedAttribute": "activityid",
+        "ReferencedEntity": "appointment",
+        "ReferencedEntityNavigationPropertyName": "appointment_activity_mime_attachment",
+        "ReferencingAttribute": "objectid",
+        "ReferencingEntity": "activitymimeattachment",
+        "ReferencingEntityNavigationPropertyName": "objectid_appointment",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "appointment_activity_mime_attachment",
+        "SecurityTypes": "None"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "Restrict",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": true,
+        "ReferencedAttribute": "attachmentid",
+        "ReferencedEntity": "attachment",
+        "ReferencedEntityNavigationPropertyName": "attachment_activity_mime_attachments",
+        "ReferencingAttribute": "attachmentid",
+        "ReferencingEntity": "activitymimeattachment",
+        "ReferencingEntityNavigationPropertyName": "attachmentid",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "attachment_activity_mime_attachments",
+        "SecurityTypes": "None"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "Cascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": true,
+        "ReferencedAttribute": "activityid",
+        "ReferencedEntity": "email",
+        "ReferencedEntityNavigationPropertyName": "email_activity_mime_attachment",
+        "ReferencingAttribute": "objectid",
+        "ReferencingEntity": "activitymimeattachment",
+        "ReferencingEntityNavigationPropertyName": "objectid_email",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "email_activity_mime_attachment",
+        "SecurityTypes": "None"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "Cascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": true,
+        "ReferencedAttribute": "templateid",
+        "ReferencedEntity": "template",
+        "ReferencedEntityNavigationPropertyName": "template_activity_mime_attachments",
+        "ReferencingAttribute": "objectid",
+        "ReferencingEntity": "activitymimeattachment",
+        "ReferencingEntityNavigationPropertyName": "objectid_template",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "template_activity_mime_attachments",
+        "SecurityTypes": "None"
+      }
+    ],
+    "MobileOfflineFilters": "",
+    "ModifiedOn": "1900-01-01T00:00:00Z",
+    "ObjectTypeCode": 1001,
+    "OneToManyRelationships": [
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "NoCascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": true,
+        "ReferencedAttribute": "activitymimeattachmentid",
+        "ReferencedEntity": "activitymimeattachment",
+        "ReferencedEntityNavigationPropertyName": "ActivityMimeAttachment_AsyncOperations",
+        "ReferencingAttribute": "regardingobjectid",
+        "ReferencingEntity": "asyncoperation",
+        "ReferencingEntityNavigationPropertyName": "regardingobjectid_activitymimeattachment",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "ActivityMimeAttachment_AsyncOperations",
+        "SecurityTypes": "None"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "Cascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": false,
+        "ReferencedAttribute": "activitymimeattachmentid",
+        "ReferencedEntity": "activitymimeattachment",
+        "ReferencedEntityNavigationPropertyName": "ActivityMimeAttachment_BulkDeleteFailures",
+        "ReferencingAttribute": "regardingobjectid",
+        "ReferencingEntity": "bulkdeletefailure",
+        "ReferencingEntityNavigationPropertyName": "regardingobjectid_activitymimeattachment",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "ActivityMimeAttachment_BulkDeleteFailures",
+        "SecurityTypes": "None"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "Cascade",
+          "Delete": "Cascade",
+          "Merge": "Cascade",
+          "Reparent": "Cascade",
+          "RollupView": "NoCascade",
+          "Share": "Cascade",
+          "Unshare": "Cascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "8.1.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": true,
+        "ReferencedAttribute": "activitymimeattachmentid",
+        "ReferencedEntity": "activitymimeattachment",
+        "ReferencedEntityNavigationPropertyName": "ActivityMimeAttachment_SyncErrors",
+        "ReferencingAttribute": "regardingobjectid",
+        "ReferencingEntity": "syncerror",
+        "ReferencingEntityNavigationPropertyName": "regardingobjectid_activitymimeattachment_syncerror",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 1,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "ActivityMimeAttachment_SyncErrors",
+        "SecurityTypes": "Append"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "Cascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": false,
+        "ReferencedAttribute": "activitymimeattachmentid",
+        "ReferencedEntity": "activitymimeattachment",
+        "ReferencedEntityNavigationPropertyName": "userentityinstancedata_activitymimeattachment",
+        "ReferencingAttribute": "objectid",
+        "ReferencingEntity": "userentityinstancedata",
+        "ReferencingEntityNavigationPropertyName": "objectid_activitymimeattachment",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "userentityinstancedata_activitymimeattachment",
+        "SecurityTypes": "None"
+      }
+    ],
+    "OwnerId": null,
+    "OwnerIdType": 8,
+    "OwnershipType": "None",
+    "OwningBusinessUnit": null,
+    "PrimaryIdAttribute": "activitymimeattachmentid",
+    "PrimaryImageAttribute": null,
+    "PrimaryKey": [],
+    "PrimaryNameAttribute": "filename",
+    "Privileges": [],
+    "RecurrenceBaseEntityLogicalName": null,
+    "ReportViewName": "FilteredActivityMimeAttachment",
+    "SchemaName": "ActivityMimeAttachment",
+    "SettingOf": null,
+    "Settings": [],
+    "SyncToExternalSearchIndex": true,
+    "TableType": "Standard",
+    "UsesBusinessDataLabelTable": false
+  },
+  "logicalName": "activitymimeattachment",
+  "typedReferences": []
+}

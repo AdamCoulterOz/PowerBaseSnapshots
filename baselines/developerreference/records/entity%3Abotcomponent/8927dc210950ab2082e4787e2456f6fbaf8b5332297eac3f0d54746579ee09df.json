@@ -1,0 +1,73 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "msdyn_appCopilot.topic.DefaultPlatformSparkContent"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponent"
+    },
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 10,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnEventActivity\r\n  id: main\r\n  actions:\r\n    - kind: ConditionGroup\r\n      id: conditionGroup_3LXuJg\r\n      conditions:\r\n        - id: conditionItem_EJuABh\r\n          actions:\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_zYoM08\r\n              value: ดำเนินการ\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_9BuDTP\r\n              value: วิเคราะห์\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_EkrPi4\r\n              value: ถาม\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_xa3sQu\r\n              value: นำทางไปยัง [ชื่อตาราง]\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_hxAu6L\r\n              value: มี [ชื่อตาราง] จำนวนเท่าไหร่\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_Bw9lQz\r\n              value: มี [ชื่อตาราง] เท่าไหร่ที่ [ใส่เงื่อนไข]\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_fbkHRn\r\n              value: มี [ชื่อตาราง] อะไรบ้างที่ฉันสร้างเมื่อสัปดาห์ที่ผ่านมา\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_eFjQXY\r\n              value: มีการกำหนด [ชื่อเรกคอร์ด] ให้แก่ใคร\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_IIRGvt\r\n              value: มี [ชื่อตาราง] อะไรบ้างที่กำหนดให้แก่ [บุคคล]\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_FWjnVw\r\n              value: [ชื่อตาราง] ของฉันมีอะไรบ้าง\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_qwKkPs\r\n              value: ผู้ติดต่อของฉันมีใครบ้าง\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_BBCLi0\r\n              value: ผู้ติดต่อรายใดบ้างที่ไม่มีที่อยู่อีเมล\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_A2gsy5\r\n              value: ผู้ติดต่อรายใดบ้างที่ไม่มีหมายเลขโทรศัพท์ธุรกิจ\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_3saXSn\r\n              value: โอกาสทางการขายรายใดบ้างที่ปิดการขายในช่วง 30 วันที่ผ่านมา\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_b2NE88\r\n              value: โอกาสทางการขายรายใดบ้างที่มีรายได้โดยประมาณสูงสุด\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_4wQDfG\r\n              value: โอกาสทางการขายของฉันที่ยังไม่มีการปิดการขายมีใครบ้าง\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_ugohCY\r\n              value: ลูกค้าเป้าหมายรายใดบ้างที่ปิดการขายในช่วง 30 วันที่ผ่านมา\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_g1WVnq\r\n              value: ลูกค้าเป้าหมายของฉันที่ยังไม่มีการปิดการขายมีใครบ้าง\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_XAsvzk\r\n              value: บัญชี 10 อันดับแรกที่มีรายได้สูงสุดมีอะไรบ้าง\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_tMqHg9\r\n              value: รับข่าวสารล่าสุดสำหรับ AdventureWorks ของลูกค้าองค์กร\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_ogSkT5\r\n              value: บัญชีใดบ้างที่ไม่มีผู้ติดต่อ",
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": 1054,
+    "name": "เนื้อหาแพลตฟอร์มเริ่มต้นของ Sparks (th-TH)",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.DefaultPlatformSparkContent.th-TH",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.DefaultPlatformSparkContent.th-TH"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

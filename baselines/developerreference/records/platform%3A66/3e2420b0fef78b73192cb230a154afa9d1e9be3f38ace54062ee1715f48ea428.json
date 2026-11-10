@@ -1,0 +1,99 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "GlobalFilterControl",
+        "ControlManifestVersion": "1.1.105",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.GlobalFilter.GlobalFilterControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_GlobalFilterControl_Name",
+        "FullName": "MscrmControls.GlobalFilter.GlobalFilterControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.GlobalFilter.GlobalFilterControl",
+        "Namespace": "MscrmControls.GlobalFilter",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "Type": "GlobalFilter",
+              "Usage": 0
+            },
+            {
+              "DefaultValue": "1",
+              "Hidden": true,
+              "Name": "FeatureSet",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "DateRangeFilter",
+              "LoadOrder": 1,
+              "Name": "DateRangeFilter",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.GlobalFilter.GlobalFilterControl_GlobalFilterControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/GlobalFilterControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.GlobalFilter\" constructor=\"GlobalFilterControl\" version=\"1.1.105\" display-name-key=\"CC_GlobalFilterControl_Name\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"value\" required=\"true\" display-name-key=\"CC_GlobalFilterControl_Value\" description-key=\"CC_GlobalFilterControl_Value_Desc\" usage=\"bound\" of-type=\"GlobalFilter\" /><property name=\"FeatureSet\" display-name-key=\"CC_GlobalFilterControl_FeatureSet\" description-key=\"CC_GlobalFilterControl_FeatureSet_Desc\" usage=\"input\" of-type=\"Enum\" default-value=\"1\" required=\"false\" hidden=\"true\"><value name=\"BatchBoundDashboardMetadata\" display-name-key=\"CC_GlobalFilterControl_FeatureSet_BatchBoundDashboardMetadata\" description-key=\"CC_GlobalFilterControl_FeatureSet_BatchBoundDashboardMetadata_Desc\">1</value></property><resources><library name=\"DateRangeFilter\" version=\"&gt;=1.0.66\" order=\"1\"><packaged_library path=\"libs/DateRangeFilterControl.js\" version=\"1.0.66\" /></library><code path=\"GlobalFilterControl.js\" order=\"1\" /><resx path=\"strings/GlobalFilterControl.1033.resx\" version=\"1.1.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.GlobalFilter.GlobalFilterControl",
+    "supportedplatform": "(Model)",
+    "version": "1.1.105"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.GlobalFilter.GlobalFilterControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

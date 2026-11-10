@@ -1,0 +1,121 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ConfigureSIControl",
+        "ControlManifestVersion": "1.0.5",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.ConfigureSIControl.ConfigureSIControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "ConfigureSIControl",
+        "FullName": "MscrmControls.ConfigureSIControl.ConfigureSIControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.ConfigureSIControl.ConfigureSIControl",
+        "Namespace": "MscrmControls.ConfigureSIControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "baseUrl",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "topicId",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "widgetName",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 2,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 5,
+              "Name": "MscrmControls.ConfigureSIControl.ConfigureSIControl_ConfigureSIControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 6,
+              "Name": "css/ConfigureSIControl.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 7,
+              "Name": "css/ProgressBar.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SocialInsightsControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.Text",
+    "componentstate": 0,
+    "introducedversion": "9.0.26092.10001",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.ConfigureSIControl\" constructor=\"ConfigureSIControl\" display-name-key=\"ConfigureSIControl\" description-key=\"ConfigureSIControl\" version=\"1.0.5\"><property name=\"baseUrl\" display-name-key=\"CC_SocialInsightsBaseUrl\" description-key=\"CC_SocialInsightsBaseUrl_Desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"true\" /><property name=\"topicId\" display-name-key=\"CC_SocialInsightsTopicId\" description-key=\"CC_SocialInsightsTopicId_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" /><property name=\"widgetName\" display-name-key=\"CC_SocialInsightsWidgetName\" description-key=\"CC_SocialInsightsWidgetName_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" /><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><library name=\"mscommon\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.0.0\" /></library><code path=\"ConfigureSIControl.js\" order=\"5\" /><css path=\"css/ConfigureSIControl.css\" order=\"6\" /><css path=\"css/ProgressBar.css\" order=\"7\" /><resx path=\"locale/SocialInsightsControl.1033.resx\" version=\"1.0.2\" /></resources></control></manifest>",
+    "name": "MscrmControls.ConfigureSIControl.ConfigureSIControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.5"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.ConfigureSIControl.ConfigureSIControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_ClientUtilityPatch",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

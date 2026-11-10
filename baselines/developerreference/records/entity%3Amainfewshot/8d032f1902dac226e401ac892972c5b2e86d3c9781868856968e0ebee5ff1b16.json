@@ -1,0 +1,44 @@
+{
+  "configuration": {
+    "category": "Default",
+    "comment": null,
+    "componentstate": 0,
+    "entitytype": 0,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "objectpartitionid": null,
+    "overriddencreatedon": null,
+    "query": "How many accounts are located outside of the US",
+    "rephrase": "The query will count the number of accounts whose address1_country is not the US.",
+    "savedqueryversionnumber": null,
+    "savedqueryviewid": null,
+    "standardsql": "SELECT COUNT(*) AS accountCount FROM [account] WHERE ([address1_country] <> 'US')",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "uniquename": "cds_mainfewshot_uniquename_69c4a29e-af7c-4c9b-8916-6a2cfdbea63f",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "cds_mainfewshot_uniquename_69c4a29e-af7c-4c9b-8916-6a2cfdbea63f"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_RelevanceSearch_Anchor",
+      "version": "1.0.3581.1"
+    }
+  ],
+  "typeIdentity": "entity:mainfewshot"
+}

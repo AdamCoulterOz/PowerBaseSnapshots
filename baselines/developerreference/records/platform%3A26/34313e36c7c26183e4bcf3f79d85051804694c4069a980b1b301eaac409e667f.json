@@ -1,0 +1,130 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" savedqueryid=\"4df83e9b-7627-455f-ad93-da9caee77662\"><entity name=\"environmentvariablevalue\"><attribute name=\"environmentvariablevalueid\" /><attribute name=\"value\" /><attribute name=\"createdon\" /><order attribute=\"createdon\" descending=\"true\" /><filter type=\"and\"><condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /></filter></entity></fetch>",
+    "introducedversion": "1.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "value",
+        "Name": "",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "environmentvariablevalue"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "value",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "createdon",
+                "RelatedEntityName": "",
+                "Width": 125
+              }
+            ],
+            "Id": "environmentvariablevalueid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "environmentvariablevalue"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "environmentvariablevalue"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"\" jump=\"value\" select=\"1\" icon=\"1\" preview=\"1\" object=\"logical:environmentvariablevalue\"><row name=\"environmentvariablevalue\" id=\"environmentvariablevalueid\"><cell name=\"value\" width=\"300\" /><cell name=\"createdon\" width=\"125\" /></row></grid>"
+    },
+    "name": "Environment Variable Value Associated View",
+    "offlinesqlquery": "/*SelectStart*/select  \"environmentvariablevalue0\".[environmentvariablevalueid] as \"environmentvariablevalueid\"\r , \"environmentvariablevalue0\".[value] as \"value\"\r , \"environmentvariablevalue0\".[createdon] as \"createdon\"/*SelectEnd*/  /*FromStart*/from  EnvironmentVariableValue as \"environmentvariablevalue0\"/*FromEnd*/  /*WhereStart*/where  (\"environmentvariablevalue0\".[statecode] = 0)/*WhereEnd*/  /*OrderByStart*/order by  \"environmentvariablevalue0\".[createdon] desc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 2,
+    "returnedtypecode": "environmentvariablevalue",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "4df83e9b-7627-455f-ad93-da9caee77662",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "environmentvariablevalue",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "4df83e9b-7627-455f-ad93-da9caee77662"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "EnvironmentVariablesV2",
+      "version": "1.0.2408.1"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

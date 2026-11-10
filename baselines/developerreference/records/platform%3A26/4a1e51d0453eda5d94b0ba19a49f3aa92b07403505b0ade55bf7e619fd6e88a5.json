@@ -1,0 +1,256 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": "Displays information about all SLA Items.",
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch distinct=\"false\" mapping=\"logical\" savedqueryid=\"75da3dff-bf9c-46e5-bffd-b9eea82c861f\"><entity name=\"slaitem\"><attribute name=\"name\" /><attribute name=\"warnafter\" /><attribute name=\"failureafter\" /><attribute name=\"msdyn_slakpiid\" /><attribute name=\"slaitemid\" /><attribute name=\"sequencenumber\" /><attribute name=\"createdon\" /><attribute name=\"modifiedon\" /><attribute name=\"applicablewhenxml\" /><attribute name=\"successconditionsxml\" /><attribute name=\"slaid\" /><order attribute=\"sequencenumber\" descending=\"false\" /></entity></fetch>",
+    "introducedversion": "9.1.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "title",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "slaitem"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": true,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "name",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": true,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "msdyn_slakpiid",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": true,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "warnafter",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": true,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "failureafter",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": true,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "createdon",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": true,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "modifiedon",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "slaitemid",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "sequencenumber",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "applicablewhenxml",
+                "RelatedEntityName": "",
+                "Width": 0
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "successconditionsxml",
+                "RelatedEntityName": "",
+                "Width": 0
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "slaid",
+                "RelatedEntityName": "",
+                "Width": 0
+              }
+            ],
+            "Id": "slaitemid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "objecttypecode",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "slaitem"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:slaitem\" jump=\"title\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"result\" id=\"slaitemid\" multiobjectidfield=\"objecttypecode\"><cell name=\"name\" width=\"150\" disableSorting=\"1\" /><cell name=\"msdyn_slakpiid\" width=\"150\" disableSorting=\"1\" /><cell name=\"warnafter\" width=\"150\" disableSorting=\"1\" /><cell name=\"failureafter\" width=\"150\" disableSorting=\"1\" /><cell name=\"createdon\" width=\"150\" ishidden=\"1\" disableSorting=\"1\" /><cell name=\"modifiedon\" width=\"150\" ishidden=\"1\" disableSorting=\"1\" /><cell name=\"slaitemid\" width=\"100\" ishidden=\"1\" /><cell name=\"sequencenumber\" ishidden=\"1\" width=\"100\" /><cell name=\"applicablewhenxml\" width=\"0\" ishidden=\"1\" /><cell name=\"successconditionsxml\" width=\"0\" ishidden=\"1\" /><cell name=\"slaid\" width=\"0\" ishidden=\"1\" /></row></grid>"
+    },
+    "name": "All SLA Items View",
+    "offlinesqlquery": null,
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "slaitem",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "75da3dff-bf9c-46e5-bffd-b9eea82c861f",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "slaitem",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "75da3dff-bf9c-46e5-bffd-b9eea82c861f"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_ServiceLevelAgreement",
+      "version": "9.0.26094.1002"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

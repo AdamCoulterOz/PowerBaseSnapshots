@@ -1,0 +1,206 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" savedqueryid=\"6274af9a-c35c-4329-85fb-61c3dcac689e\"><entity name=\"knowledgearticle\"><attribute name=\"articlepublicnumber\" /><attribute name=\"knowledgearticleid\" /><attribute name=\"title\" /><attribute name=\"languagelocaleid\" /><attribute name=\"modifiedon\" /><attribute name=\"majorversionnumber\" /><attribute name=\"minorversionnumber\" /><attribute name=\"statecode\" /><attribute name=\"statuscode\" /><attribute name=\"knowledgearticleviews\" /><order attribute=\"title\" descending=\"false\" /><filter type=\"and\"><condition attribute=\"statecode\" operator=\"eq\" value=\"1\" /><condition attribute=\"isrootarticle\" operator=\"eq\" value=\"0\" /></filter></entity></fetch>",
+    "introducedversion": "8.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "title",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "knowledgearticle"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "articlepublicnumber",
+                "RelatedEntityName": "",
+                "Width": 125
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "title",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "majorversionnumber",
+                "RelatedEntityName": "",
+                "Width": 125
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "minorversionnumber",
+                "RelatedEntityName": "",
+                "Width": 125
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "query.{3cd90632-a200-e511-80d2-00155d217c03}.cell.knowledgearticleview.label",
+                "Name": "knowledgearticleviews",
+                "RelatedEntityName": "",
+                "Width": 125
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "modifiedon",
+                "RelatedEntityName": "",
+                "Width": 125
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "languagelocaleid",
+                "RelatedEntityName": "",
+                "Width": 125
+              }
+            ],
+            "Id": "knowledgearticleid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "knowledgearticle"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:knowledgearticle\" jump=\"title\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"result\" id=\"knowledgearticleid\"><cell name=\"articlepublicnumber\" width=\"125\" /><cell name=\"title\" width=\"300\" /><cell name=\"majorversionnumber\" width=\"125\" /><cell name=\"minorversionnumber\" width=\"125\" /><cell name=\"knowledgearticleviews\" width=\"125\" LabelId=\"query.{3cd90632-a200-e511-80d2-00155d217c03}.cell.knowledgearticleview.label\" /><cell name=\"modifiedon\" width=\"125\" /><cell name=\"languagelocaleid\" width=\"125\" /></row></grid>"
+    },
+    "name": "Approved Articles",
+    "offlinesqlquery": "/*SelectStart*/select  \"knowledgearticle0\".[articlepublicnumber] as \"articlepublicnumber\"\r , \"knowledgearticle0\".[knowledgearticleid] as \"knowledgearticleid\"\r , \"knowledgearticle0\".[title] as \"title\"\r , \"knowledgearticle0\".[languagelocaleid!id] as \"languagelocaleid!id\"\r , \"knowledgearticle0\".[languagelocaleid!logicalname] as \"languagelocaleid!logicalname\"\r , \"knowledgearticle0\".[languagelocaleid!name] as \"languagelocaleid!name\"\r , \"knowledgearticle0\".[modifiedon] as \"modifiedon\"\r , \"knowledgearticle0\".[majorversionnumber] as \"majorversionnumber\"\r , \"knowledgearticle0\".[minorversionnumber] as \"minorversionnumber\"\r , \"knowledgearticle0\".[statecode] as \"statecode\"\r , \"knowledgearticle0\".[statuscode] as \"statuscode\"\r , \"knowledgearticle0\".[knowledgearticleviews] as \"knowledgearticleviews\"/*SelectEnd*/  /*FromStart*/from  KnowledgeArticle as \"knowledgearticle0\"/*FromEnd*/  /*WhereStart*/where  (\"knowledgearticle0\".[statecode] = 1 and \"knowledgearticle0\".[isrootarticle] = 0)/*WhereEnd*/  /*OrderByStart*/order by  \"knowledgearticle0\".[title] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "knowledgearticle",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "6274af9a-c35c-4329-85fb-61c3dcac689e",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "knowledgearticle",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "6274af9a-c35c-4329-85fb-61c3dcac689e"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "System",
+      "version": "5.0"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_KnowledgeManagementPatch",
+      "version": "9.0.26094.3006"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

@@ -1,0 +1,64 @@
+{
+  "configuration": {
+    "_customapiid_value": {
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "msdyn_UCIClientAuthAction"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "customapi"
+    },
+    "componentstate": 0,
+    "description": "Connector API id, e.g. /providers/Microsoft.PowerApps/apis/shared_sharepointonline. Identifies which connector's published runtime URL an absolute connector endpoint must match.",
+    "displayname": "Input Connector Api Id",
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "isoptional": true,
+    "logicalentityname": null,
+    "name": "ConnectorApiId",
+    "overriddencreatedon": null,
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "type": 10,
+    "uniquename": "ConnectorApiId",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "customapiid",
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "msdyn_UCIClientAuthAction"
+        }
+      ],
+      "targetEntity": "customapi",
+      "type": "lookup"
+    },
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "ConnectorApiId"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msft_UCIClientAuth",
+      "version": "1.0.0.22"
+    }
+  ],
+  "typeIdentity": "entity:customapirequestparameter"
+}

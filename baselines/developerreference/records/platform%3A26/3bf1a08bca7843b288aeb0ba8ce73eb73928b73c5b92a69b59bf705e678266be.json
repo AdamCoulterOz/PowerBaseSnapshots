@@ -1,0 +1,187 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": true
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" datasource=\"bin\" savedqueryid=\"407db676-60af-44c2-bd71-282ea4098a82\"><entity name=\"deleteditemreference\"><attribute name=\"name\" /><attribute name=\"regardingobjectid\" /><attribute name=\"deletedobject\" /><attribute name=\"createdon\" /><attribute name=\"createdonbehalfby\" /><attribute name=\"createdby\" /><order attribute=\"name\" descending=\"false\" /><attribute name=\"deleteditemreferenceid\" /></entity></fetch>",
+    "introducedversion": "1.0",
+    "iscustom": true,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "name",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "deleteditemreference"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "name",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "regardingobjectid",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "deletedobject",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "createdby",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "createdonbehalfby",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "createdon",
+                "RelatedEntityName": "",
+                "Width": 100
+              }
+            ],
+            "Id": "deleteditemreferenceid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "deleteditemreference"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" jump=\"name\" select=\"1\" preview=\"1\" icon=\"1\" object=\"logical:deleteditemreference\"><row name=\"result\" id=\"deleteditemreferenceid\"><cell name=\"name\" width=\"150\" /><cell name=\"regardingobjectid\" width=\"150\" /><cell name=\"deletedobject\" width=\"150\" /><cell name=\"createdby\" width=\"100\" /><cell name=\"createdonbehalfby\" width=\"100\" /><cell name=\"createdon\" width=\"100\" /></row></grid>"
+    },
+    "name": "All Deleted Records",
+    "offlinesqlquery": "/*SelectStart*/select  \"deleteditemreference0\".[name] as \"name\"\r , \"deleteditemreference0\".[regardingobjectid!id] as \"regardingobjectid!id\"\r , \"deleteditemreference0\".[regardingobjectid!logicalname] as \"regardingobjectid!logicalname\"\r , \"deleteditemreference0\".[regardingobjectid!name] as \"regardingobjectid!name\"\r , \"deleteditemreference0\".[deletedobject!id] as \"deletedobject!id\"\r , \"deleteditemreference0\".[deletedobject!logicalname] as \"deletedobject!logicalname\"\r , \"deleteditemreference0\".[deletedobject!name] as \"deletedobject!name\"\r , \"deleteditemreference0\".[createdon] as \"createdon\"\r , \"deleteditemreference0\".[createdonbehalfby!id] as \"createdonbehalfby!id\"\r , \"deleteditemreference0\".[createdonbehalfby!logicalname] as \"createdonbehalfby!logicalname\"\r , \"deleteditemreference0\".[createdonbehalfby!name] as \"createdonbehalfby!name\"\r , \"deleteditemreference0\".[createdby!id] as \"createdby!id\"\r , \"deleteditemreference0\".[createdby!logicalname] as \"createdby!logicalname\"\r , \"deleteditemreference0\".[createdby!name] as \"createdby!name\"\r , \"deleteditemreference0\".[deleteditemreferenceid] as \"deleteditemreferenceid\"/*SelectEnd*/  /*FromStart*/from  DeletedItemReference as \"deleteditemreference0\"/*FromEnd*/  /*OrderByStart*/order by  \"deleteditemreference0\".[name] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "deleteditemreference",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "407db676-60af-44c2-bd71-282ea4098a82",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "deleteditemreference",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "407db676-60af-44c2-bd71-282ea4098a82"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_PowerAdminSettingsDataManagementSolution",
+      "version": "2.2.3552.1"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

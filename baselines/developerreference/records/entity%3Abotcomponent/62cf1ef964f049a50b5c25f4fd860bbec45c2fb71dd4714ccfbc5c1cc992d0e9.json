@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": null,
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 9,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnEventActivity\r\n  id: main\r\n  eventName: Microsoft.PowerApps.Copilot.RecordSummaryCard\r\n  actions:\r\n    - kind: ParseValue\r\n      id: NJNh97\r\n      variable: Topic.EntityLogicalName\r\n      valueType: String\r\n      value: =System.Activity.Value.entityLogicalName\r\n\r\n    - kind: ParseValue\r\n      id: akbvjB\r\n      variable: Topic.EntityId\r\n      valueType: String\r\n      value: =System.Activity.Value.id\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_uzSdnM\r\n      variable: Topic.DataverseInfo\r\n      value: |-\r\n        ={\r\n            host: \"https://dataverse\",\r\n            apiPath: \"/api/data/v9.2\",\r\n            correlationId: If(!IsBlank(System.Activity.ChannelData.correlationId),\r\n                Text(System.Activity.ChannelData.correlationId),\r\n                Text(GUID())),\r\n            clientRequestId: If(!IsBlank(System.Activity.ChannelData.clientRequestId),\r\n                Text(System.Activity.ChannelData.clientRequestId),\r\n                Text(GUID())),\r\n            clientSessionId: If(!IsBlank(System.Activity.ChannelData.clientSessionId),\r\n                Text(System.Activity.ChannelData.clientSessionId),\r\n                Text(GUID()))\r\n        }\r\n\r\n    - kind: HttpRequestAction\r\n      id: F6TO8K\r\n      method: Post\r\n      url: |-\r\n        =Concatenate(\r\n            Topic.DataverseInfo.host,\r\n            Topic.DataverseInfo.apiPath,\r\n            \"/AISummarizeRecord\")\r\n      headers:\r\n        X-Ms-Client-Request-Id: =Topic.DataverseInfo.clientRequestId\r\n        X-Ms-Client-Session-Id: =Topic.DataverseInfo.clientSessionId\r\n        X-Ms-Correlation-Id: =Topic.DataverseInfo.correlationId\r\n\r\n      body:\r\n        kind: JsonRequestContent\r\n        content: |-\r\n          ={\r\n              EntityLogicalName: Topic.EntityLogicalName,\r\n              Id: Topic.EntityId,\r\n              IsMergedCatchupAndSummary: false\r\n          }\r\n\r\n      response: Topic.AISummarizeRecordResponse\r\n      responseSchema: Any\r\n\r\n    - kind: SendActivity\r\n      id: sendActivity_asdfas\r\n      activity:\r\n        kind: EventActivity\r\n        value: |-\r\n          ={\r\n            controlName: \"SummaryCard\",\r\n            dataBinding: {\r\n              summary: Concatenate(Topic.AISummarizeRecordResponse.   SummarizedText),\r\n              title: \"Summary by Copilot\",\r\n              actionButtons:[\r\n                {\r\n                  actionOnClick: \"{\"\"type\"\":\"\"OpenCopilotPane\"\", \"\"properties\"\":{\"\"input\"\":\"\"sumarize this\"\"}}\",\r\n                  label: \"See more\"\r\n                },\r\n                {\r\n                  actionOnClick: \"{\"\"type\"\":\"\"Copy\"\",\"\"properties\"\":{\"\"contentName\"\":\"\"summary text\"\"}}\",\r\n                  label: \"Copy\"\r\n                }\r\n              ]\r\n            },\r\n            error: \"\"\r\n          }\r\n        name: MS.PA.RecordSummaryCard",
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": null,
+    "name": "Record Summary Card",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.RecordSummaryCard",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.RecordSummaryCard"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

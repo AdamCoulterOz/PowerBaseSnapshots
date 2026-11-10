@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": null,
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 9,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnRedirect\r\n  id: main\r\n  actions:\r\n    - kind: SetVariable\r\n      id: setVariable_Kwd4HF\r\n      variable: Topic.HasFeatureSettings\r\n      value: =Not(IsBlank(Global.PA_Copilot_FeatureSettings))\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_a0peoE\r\n      variable: Topic.TargetSetting\r\n      value: |-\r\n        =Filter(\r\n            Global.PA_Copilot_FeatureSettings, \r\n            Trim(Lower(Name)) = Trim(Lower(Topic.FeatureSetting))\r\n        )\r\n\r\n    - kind: ConditionGroup\r\n      id: conditionGroup_CFChd0\r\n      conditions:\r\n        - id: conditionItem_buK6xk\r\n          condition: =Topic.HasFeatureSettings && Not(IsBlank(Topic.TargetSetting)) && CountRows(Topic.TargetSetting) = 1\r\n          actions:\r\n            - kind: SetVariable\r\n              id: setVariable_EKRw3W\r\n              variable: Topic.FeatureValue\r\n              value: =First(Topic.TargetSetting).Value\r\n\r\n      elseActions:\r\n        - kind: ConditionGroup\r\n          id: conditionGroup_j5651f\r\n          conditions:\r\n            - id: conditionItem_k8DG1C\r\n              condition: =!IsBlank(Topic.DefaultSettingValue)\r\n              actions:\r\n                - kind: SetVariable\r\n                  id: setVariable_plwkmp\r\n                  variable: Topic.FeatureValue\r\n                  value: =Topic.DefaultSettingValue\r\n\r\n          elseActions:\r\n            - kind: SetVariable\r\n              id: setVariable_eZQSme\r\n              variable: Topic.FeatureValue\r\n              value: false\r\n\r\ninputType:\r\n  properties:\r\n    DefaultSettingValue:\r\n      displayName: DefaultSettingValue\r\n      description: Default value true or false\r\n      type: Boolean\r\n\r\n    FeatureSetting:\r\n      displayName: FeatureSetting\r\n      type: String\r\n\r\noutputType:\r\n  properties:\r\n    FeatureValue:\r\n      displayName: FeatureValue\r\n      description: Feature setting value\r\n      type: Boolean",
+    "dependencies": null,
+    "description": "Utility topic to get the value of a feature setting",
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": 1033,
+    "name": "AppCopilot.GetFeatureSetting",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.AppCopilotGetFeatureSetting",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.AppCopilotGetFeatureSetting"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

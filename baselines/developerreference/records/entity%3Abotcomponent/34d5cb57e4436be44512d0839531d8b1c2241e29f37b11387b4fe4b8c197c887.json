@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": null,
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 9,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnEventActivity\r\n  id: main\r\n  eventName: Microsoft.PowerApps.Copilot.SetModelAppUniqueNameContext\r\n  actions:\r\n    - kind: ParseValue\r\n      id: slMr2F\r\n      variable: Global.PA_Copilot_Model_SessionContext_Version\r\n      valueType: String\r\n      value: =If(!IsBlank(System.Activity.ChannelData.SetModelAppUniqueNameContext_Version), Text(System.Activity.ChannelData.SetModelAppUniqueNameContext_Version), \"-1\")\r\n\r\n    - kind: ParseValue\r\n      id: r6ZsTS\r\n      variable: Global.PA_Copilot_Model_SessionContext\r\n      valueType:\r\n        kind: Record\r\n        properties:\r\n          appId: String\r\n          appUniqueName: String\r\n          generativeAnswersSettings:\r\n            type:\r\n              kind: Record\r\n              properties:\r\n                bing_configuration_id: String\r\n                public_websites:\r\n                  type:\r\n                    kind: Table\r\n                    properties:\r\n                      Value: String\r\n\r\n                search_context: String\r\n                search_type: String\r\n\r\n          hostMode: String\r\n          url: String\r\n          userLocaleId: Number\r\n          userId: String\r\n\r\n      value: =If(!IsBlank(System.Activity.ChannelData.SetModelAppUniqueNameContext), System.Activity.ChannelData.SetModelAppUniqueNameContext, System.Activity.Value)\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_7jxtSE\r\n      variable: System.User.Language\r\n      value: |-\r\n        =Switch(Global.PA_Copilot_Model_SessionContext.userLocaleId,\r\n          1033, Locale.English,\r\n          1030, Locale.Danish,\r\n          1043, Locale.Dutch,\r\n          1036, Locale.French,\r\n          1031, Locale.German,\r\n          1040, Locale.Italian,\r\n          1041, Locale.Japanese,\r\n          1046, Locale.Portuguese_Brazilian,\r\n          1034, Locale.Spanish,\r\n          2052, Locale.Chinese_Simplified,\r\n          1029, Locale.Czech,\r\n          1035, Locale.Finnish,\r\n          1032, Locale.Greek,\r\n          1042, Locale.Korean,\r\n          1044, Locale.Norwegian,\r\n          1045, Locale.Polish,\r\n          1049, Locale.Russian,\r\n          1053, Locale.Swedish,\r\n          1054, Locale.Thai,\r\n          1055, Locale.Turkish,\r\n          3082, Locale.Spanish,\r\n          1025, Locale.Arabic,\r\n          1037, Locale.Hebrew,\r\n          Locale.English\r\n        )",
+    "dependencies": null,
+    "description": "Triggered on Event received (Microsoft.PowerApps.Copilot.SetModelAppUniqueNameContext) to process the SessionContext",
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": 1033,
+    "name": "Model App Session Context - Event Trigger",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.SessionContext",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.SessionContext"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

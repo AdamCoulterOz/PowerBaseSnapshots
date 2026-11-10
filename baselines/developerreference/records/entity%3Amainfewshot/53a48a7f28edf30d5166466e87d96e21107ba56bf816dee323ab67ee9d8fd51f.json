@@ -1,0 +1,44 @@
+{
+  "configuration": {
+    "category": "Default",
+    "comment": null,
+    "componentstate": 0,
+    "entitytype": 0,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "objectpartitionid": null,
+    "overriddencreatedon": null,
+    "query": "Show names, accounts and contacts (name, phone) of opportunities containing terms like printer and electronics",
+    "rephrase": "The query will join opportunity, account and contact tables, get the Opportunity name, Account name, Contact fullName, Contact telephone1, Contact address1_telephone1 where the opportunity name contain the terms 'printer' or 'electronics'",
+    "savedqueryversionnumber": null,
+    "savedqueryviewid": null,
+    "standardsql": "SELECT [Opportunity].[name] AS [opportunityName], [Account].[name] AS [accountName], [Contact].[fullName] AS [contactName], [Contact].[address1_telephone1] AS [contactMainPhone], [Contact].[telephone1] AS [contactBussinessPhone] FROM [Opportunity] JOIN [Account] ON [Opportunity].[parentAccountId] = [Account].[accountId] JOIN [Contact] ON [Opportunity].[parentContactId] = [Contact].[contactId] WHERE [Opportunity].[name] LIKE '%printer%' OR [Opportunity].[name] LIKE '%electronics%'",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "uniquename": "cds_mainfewshot_uniquename_b77df17f-3f48-4a54-b209-948a83cd1e82",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "cds_mainfewshot_uniquename_b77df17f-3f48-4a54-b209-948a83cd1e82"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_RelevanceSearch_Anchor",
+      "version": "1.0.3581.1"
+    }
+  ],
+  "typeIdentity": "entity:mainfewshot"
+}

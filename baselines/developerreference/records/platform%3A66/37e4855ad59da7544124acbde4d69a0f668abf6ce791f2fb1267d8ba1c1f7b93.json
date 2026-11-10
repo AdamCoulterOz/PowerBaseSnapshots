@@ -1,0 +1,120 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "DualListSelectionControl",
+        "ControlManifestVersion": "1.0.6",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.DualListSelection.DualListSelectionControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_DualListSelection_Name",
+        "FullName": "MscrmControls.DualListSelection.DualListSelectionControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.DualListSelection.DualListSelectionControl",
+        "Namespace": "MscrmControls.DualListSelection",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "Selection",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "ShouldFocusOnAvailableList",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "DefaultValue": "0",
+              "Hidden": false,
+              "Name": "SelectionOrderBy",
+              "Required": true,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "JsonOptions",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "OptionSet",
+              "Required": true,
+              "Type": "OptionSet",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.DualListSelection.DualListSelectionControl_DualListSelectionControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/DualListSelectionControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.DualListSelection\" constructor=\"DualListSelectionControl\" version=\"1.0.6\" display-name-key=\"CC_DualListSelection_Name\" control-type=\"virtual\" hidden=\"true\"><modes></modes><AvailableOn><web classic=\"enable\" /><phone /><tablet /></AvailableOn><property name=\"Selection\" display-name-key=\"CC_DualListSelection_Selection\" description-key=\"CC_DualListSelection_Selection_Desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"ShouldFocusOnAvailableList\" display-name-key=\"CC_DualListSelection_IsFocusAvailableList\" description-key=\"CC_DualListSelection_IsFocusAvailableList_Desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"false\" /><groups name=\"OptionInputType\" display-name-key=\"CC_DualListSelection_OptionInputType\" description-key=\"CC_DualListSelection_OptionInputType_Desc\" required=\"true\"><group name=\"InputJson\" display-name-key=\"CC_DualListSelection_InputJson\"><property name=\"JsonOptions\" display-name-key=\"CC_DualListSelection_JsonOptions\" description-key=\"CC_DualListSelection_JsonOptions_Desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /></group><group name=\"InputOptionSet\" display-name-key=\"CC_DualListSelection_InputOptionSet\"><property name=\"OptionSet\" display-name-key=\"CC_DualListSelection_OptionSet\" description-key=\"CC_DualListSelection_OptionSet_Desc\" usage=\"bound\" of-type=\"OptionSet\" required=\"true\" hidden=\"false\" /></group></groups><property name=\"SelectionOrderBy\" display-name-key=\"CC_DualListSelection_SelectionOrderBy\" description-key=\"CC_DualListSelection_SelectionOrderBy_Desc\" usage=\"input\" of-type=\"Enum\" required=\"true\" hidden=\"false\" default-value=\"0\"><value name=\"OrderBySelection\" display-name-key=\"CC_DualListSelection_OrderBySelection\" description-key=\"CC_DualListSelection_OrderBySelection_Desc\">0</value><value name=\"OrderByID\" display-name-key=\"CC_DualListSelection_OrderByID\" description-key=\"CC_DualListSelection_OrderByID_Desc\">1</value><value name=\"OrderByDisplayName\" display-name-key=\"CC_DualListSelection_OrderByDisplayName\" description-key=\"CC_DualListSelection_OrderByDisplayName_Desc\">2</value><value name=\"OrderByManual\" display-name-key=\"CC_DualListSelection_OrderByManual\" description-key=\"CC_DualListSelection_OrderByManual_Desc\">3</value></property><resources><library name=\"mscommon\" version=\"&gt;=1.2.0\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><code path=\"DualListSelectionControl.js\" order=\"2\" /><resx path=\"strings/DualListSelectionControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.DualListSelection.DualListSelectionControl",
+    "supportedplatform": null,
+    "version": "1.0.6"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.DualListSelection.DualListSelectionControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

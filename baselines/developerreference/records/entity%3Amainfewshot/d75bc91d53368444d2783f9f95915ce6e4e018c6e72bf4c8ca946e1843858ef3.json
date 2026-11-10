@@ -1,0 +1,44 @@
+{
+  "configuration": {
+    "category": "Default",
+    "comment": "select all columns from opportunity table, filtered by [estimatedclosedate] equal to this quarter and [estimatedvalue] greater than two million.",
+    "componentstate": 0,
+    "entitytype": 0,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "objectpartitionid": null,
+    "overriddencreatedon": null,
+    "query": "What opportunities are expected to close this quarter with an estimated revenue of over two million.",
+    "rephrase": "The query will list out all opportunities where estimatedclosedate is in this quarter and estimatedvalue is over two million.",
+    "savedqueryversionnumber": null,
+    "savedqueryviewid": null,
+    "standardsql": "SELECT * FROM [Opportunity] WHERE ([estimatedclosedate] = 'this quarter') AND ([estimatedvalue] > 2000000)",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "uniquename": "cds_mainfewshot_uniquename_f61c18d5-fd6a-4031-83e1-41f28af1fffa",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "cds_mainfewshot_uniquename_f61c18d5-fd6a-4031-83e1-41f28af1fffa"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_RelevanceSearch_Anchor",
+      "version": "1.0.3581.1"
+    }
+  ],
+  "typeIdentity": "entity:mainfewshot"
+}

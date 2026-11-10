@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": null,
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 9,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnEventActivity\r\n  id: main\r\n  priority: 1\r\n  eventName: Microsoft.PowerApps.Copilot.KnowledgeSourcesEvent\r\n  actions:\r\n    - kind: ParseValue\r\n      id: SIrogC\r\n      variable: Topic.UserQuestion\r\n      valueType: String\r\n      value: =System.Activity.Value.UserQuestion\r\n\r\n    - kind: ParseValue\r\n      id: ZbEO3u\r\n      variable: Topic.Version\r\n      valueType: String\r\n      value: =System.Activity.Value.Version\r\n\r\n    - kind: ConditionGroup\r\n      id: conditionGroup_Dd6vAZ\r\n      conditions:\r\n        - id: conditionItem_9YYmwc\r\n          condition: =Topic.Version = \"1.1\"\r\n          actions:\r\n            - kind: SearchAndSummarizeContent\r\n              id: SearchAndSummarize_FullResponse\r\n              userInput: =Topic.UserQuestion\r\n              autoSend: false\r\n              variable: Topic.Answer\r\n              moderationLevel: Maximum\r\n              applyModelKnowledgeSetting: false\r\n              responseCaptureType: FullResponse\r\n\r\n            - kind: ConditionGroup\r\n              id: conditionGroup_AnswerResponse\r\n              conditions:\r\n                - id: conditionItem_AnswerNotBlank\r\n                  condition: =!IsBlank(Topic.Answer)\r\n                  actions:\r\n                    - kind: SetVariable\r\n                      id: setVariable_hf42k1\r\n                      variable: Topic.AdaptiveCardActions\r\n                      value: =[]\r\n\r\n                    - kind: Foreach\r\n                      id: foreach_b90FMh\r\n                      items: =Topic.Answer.Text.CitationSources\r\n                      value: init:Topic.CitationValue\r\n                      index: init:Topic.CitationIndex\r\n                      actions:\r\n                        - kind: SetVariable\r\n                          id: setVariable_K3QHL8\r\n                          variable: Topic.ActionTitle\r\n                          value: =If(!IsBlank(Topic.CitationValue.Id), Concatenate(\"[\", Topic.CitationValue.Id, \"] \", Topic.CitationValue.Name), Topic.CitationValue.Name)\r\n\r\n                        - kind: EditTableV2\r\n                          id: editTableV2_DS4xM0\r\n                          itemsVariable: Topic.AdaptiveCardActions\r\n                          changeType:\r\n                            kind: AddItemOperation\r\n                            value: \"=If(IsBlank(Topic.CitationValue.Url), {type:\\\"Action.Submit\\\", title: Topic.ActionTitle, tooltip: Topic.CitationValue.Name, role: \\\"Button\\\", data: {sparkType: \\\"ClientEvent\\\", scenario: \\\"OpenDialog\\\", value: {text: Topic.CitationValue.Text, title: Topic.CitationValue.Name}}}, {type:\\\"Action.OpenUrl\\\", title: Topic.ActionTitle, tooltip: Topic.CitationValue.Name, role: \\\"Button\\\", url: Topic.CitationValue.Url})\"\r\n\r\n                    - kind: SendActivity\r\n                      id: sendActivity_b0BLtR\r\n                      activity:\r\n                        attachments:\r\n                          - kind: AdaptiveCardTemplate\r\n                            cardContent: |-\r\n                              ={\r\n                                type: \"AdaptiveCard\",\r\n                                body: [\r\n                                  {\r\n                                    type: \"TextBlock\",\r\n                                    text: Topic.Answer.Text.Content,\r\n                                    wrap: true\r\n                                  },\r\n                                  {\r\n                                    type: \"ActionSet\",\r\n                                    actions: Topic.AdaptiveCardActions\r\n                                  }\r\n                                ],\r\n                                '$schema': \"http://adaptivecards.io/schemas/adaptive-card.json\",\r\n                                version: \"1.6\"\r\n                              }\r\n\r\n              elseActions:\r\n                - kind: SendActivity\r\n                  id: sendActivity_Apology\r\n                  activity:\r\n                    kind: EventActivity\r\n                    value: \"=\\\"{\\\"\\\"ApologySource\\\"\\\": \\\"\\\"KnowledgeSources\\\"\\\", \\\"\\\"ApologyReason\\\"\\\": \\\"\\\"Data Sources did not return an answer.\\\"\\\"}\\\"\"\r\n                    name: MS.PA.Apology\r\n\r\n      elseActions:\r\n        - kind: SearchAndSummarizeContent\r\n          id: SearchAndSummarize_TextOnlyResponse\r\n          userInput: =Topic.UserQuestion\r\n          variable: Topic.AnswerText\r\n          moderationLevel: Maximum\r\n          applyModelKnowledgeSetting: false\r\n\r\n        - kind: ConditionGroup\r\n          id: conditionGroup_AnswerTextResponse\r\n          conditions:\r\n            - id: conditionItem_AnswerTextNotBlank\r\n              condition: =!IsBlank(Topic.AnswerText)\r\n              actions:\r\n                - kind: EndDialog\r\n                  id: lfhFEI\r\n                  clearTopicQueue: true\r\n\r\n          elseActions:\r\n            - kind: SendActivity\r\n              id: sendActivity_Apology1\r\n              activity:\r\n                kind: EventActivity\r\n                value: \"=\\\"{\\\"\\\"ApologySource\\\"\\\": \\\"\\\"KnowledgeSources\\\"\\\", \\\"\\\"ApologyReason\\\"\\\": \\\"\\\"Data Sources did not return an answer.\\\"\\\"}\\\"\"\r\n                name: MS.PA.Apology",
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": 1033,
+    "name": "Conversational boosting",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.ConversationalBoosting",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.ConversationalBoosting"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

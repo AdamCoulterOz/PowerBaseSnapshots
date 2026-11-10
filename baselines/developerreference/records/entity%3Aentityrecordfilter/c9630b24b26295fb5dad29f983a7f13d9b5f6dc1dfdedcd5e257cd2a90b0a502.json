@@ -1,0 +1,59 @@
+{
+  "configuration": {
+    "_recordfilterid_value": {
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "SkillRoleFilter"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "recordfilter"
+    },
+    "componentstate": 0,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "name": "Skill Role Entity Record Filter",
+    "objecttypecode": "skill",
+    "overriddencreatedon": null,
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "objecttypecode",
+      "type": "EntityName",
+      "value": "skill"
+    },
+    {
+      "field": "recordfilterid",
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "SkillRoleFilter"
+        }
+      ],
+      "targetEntity": "recordfilter",
+      "type": "lookup"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdyn_RelevanceSearch_Ext",
+      "version": "1.0.3581.1"
+    }
+  ],
+  "typeIdentity": "entity:entityrecordfilter"
+}

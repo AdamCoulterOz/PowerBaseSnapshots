@@ -1,0 +1,44 @@
+{
+  "configuration": {
+    "category": "Default",
+    "comment": null,
+    "componentstate": 0,
+    "entitytype": 0,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "objectpartitionid": null,
+    "overriddencreatedon": null,
+    "query": "Which city has the highest total estimated revenue in deals this year?",
+    "rephrase": "The query will find out all customer deals where deal date is in this year, then calculate the total estimated revenue of each city, and keep the highest one.",
+    "savedqueryversionnumber": null,
+    "savedqueryviewid": null,
+    "standardsql": "SELECT TOP 1 [cr696_addresscity], SUM([cr696_estimatedrevenue]) AS [totalEstimatedRevenue] FROM [cr696_customerdeal] WHERE [cr696_dealdate] = 'this year' GROUP BY [cr696_addresscity] ORDER BY [totalEstimatedRevenue] DESC",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "uniquename": "cds_mainfewshot_uniquename_d01e7584-5b2f-42ee-82d1-f0bd4fe2e95f",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "cds_mainfewshot_uniquename_d01e7584-5b2f-42ee-82d1-f0bd4fe2e95f"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_RelevanceSearch_Anchor",
+      "version": "1.0.3581.1"
+    }
+  ],
+  "typeIdentity": "entity:mainfewshot"
+}

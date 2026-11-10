@@ -1,0 +1,149 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "EditPropertiesControl",
+        "ControlManifestVersion": "1.0.20",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.EditProperties.EditPropertiesControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "EditPropertiesControl",
+        "FullName": "MscrmControls.EditProperties.EditPropertiesControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.EditProperties.EditPropertiesControl",
+        "Namespace": "MscrmControls.EditProperties",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "Value1",
+              "Required": false,
+              "TypeGroup": "text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "ProductId",
+              "Required": false,
+              "TypeGroup": "text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "ProductName",
+              "Required": false,
+              "TypeGroup": "text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "EntityName",
+              "Required": false,
+              "TypeGroup": "text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "GridEntityName",
+              "Required": false,
+              "TypeGroup": "text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "IsFormEditPropertiesInlineSaveEnabled",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "ClientUtility",
+              "LoadOrder": 2,
+              "Name": "ClientUtility",
+              "Type": 0
+            },
+            {
+              "LibraryName": "TelemetryLibrary",
+              "LoadOrder": 3,
+              "Name": "TelemetryLibrary",
+              "Type": 0
+            },
+            {
+              "LibraryName": "FeatureTelemetry",
+              "LoadOrder": 4,
+              "Name": "FeatureTelemetry",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.EditProperties.EditPropertiesControl_EditPropertiesControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 10,
+              "Name": "css/EditPropertiesControlStyles.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/EditPropertiesControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.4.0066",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.EditProperties\" constructor=\"EditPropertiesControl\" version=\"1.0.20\" display-name-key=\"EditPropertiesControl\" control-type=\"virtual\" hidden=\"true\"><modes><read /><edit /></modes><type-group name=\"text\"><type>SingleLine.Text</type></type-group><property name=\"Value1\" display-name-key=\"CC_Value1\" description-key=\"CC_value_1_desc\" usage=\"bound\" of-type-group=\"text\" required=\"false\" hidden=\"false\" /><property name=\"ProductId\" display-name-key=\"CC_ProductId\" description-key=\"CC_productid_desc\" usage=\"bound\" of-type-group=\"text\" required=\"false\" hidden=\"false\" /><property name=\"ProductName\" display-name-key=\"CC_ProductName\" description-key=\"CC_productname_dec\" usage=\"bound\" of-type-group=\"text\" required=\"false\" hidden=\"false\" /><property name=\"EntityName\" display-name-key=\"CC_EntityName\" description-key=\"CC_entityname_desc\" usage=\"bound\" of-type-group=\"text\" required=\"false\" hidden=\"false\" /><property name=\"GridEntityName\" display-name-key=\"CC_EntityName\" description-key=\"CC_gridentityname_desc\" usage=\"bound\" of-type-group=\"text\" required=\"false\" hidden=\"false\" /><property name=\"IsFormEditPropertiesInlineSaveEnabled\" display-name-key=\"CC_IsFormEditPropertiesInlineSaveEnabled_Key\" description-key=\"CC_IsFormEditPropertiesInlineSaveEnabled_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"Yes\" display-name-key=\"CC_FormEditPropertiesInlineSaveEnabled_Key\" description-key=\"CC_FormEditPropertiesInlineSaveEnabled_Desc\">yes</value><value name=\"No\" display-name-key=\"CC_FormEditPropertiesInlineSaveDisabled_Key\" description-key=\"CC_FormEditPropertiesInlineSaveDisabled_Desc\" default=\"true\">no</value></property><AvailableOn><phone /><tablet /></AvailableOn><resources><code path=\"EditPropertiesControl.js\" order=\"1\" /><css path=\"css/EditPropertiesControlStyles.css\" order=\"10\" /><resx path=\"strings/EditPropertiesControl.1033.resx\" version=\"1.0.0\" /><library name=\"ClientUtility\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"ClientUtility.js\" version=\"1.0.0\" /></library><library name=\"TelemetryLibrary\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"TelemetryLibrary.js\" version=\"1.0.0\" /></library><library name=\"FeatureTelemetry\" version=\"&gt;=1\" order=\"4\"><packaged_library path=\"FeatureTelemetry.js\" version=\"1.0.0\" /></library></resources></control></manifest>",
+    "name": "MscrmControls.EditProperties.EditPropertiesControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.20"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.EditProperties.EditPropertiesControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch",
+      "version": "9.0.1904.4006"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

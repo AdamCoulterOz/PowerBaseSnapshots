@@ -1,0 +1,73 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "msdyn_appCopilot.topic.PlatformZeroPrompt"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponent"
+    },
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 10,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnEventActivity\r\n  id: main\r\n  actions:\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_VlokaN\r\n      value: Hvor mange **[tabelnavn]** er der?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_uV3wX4\r\n      value: Hvor mange **[tabelnavn]** er **[indsæt betingelse]**?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_yZ9aB0\r\n      value: Hvad er mit **[tabelnavn]**?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_Io9bC2\r\n      value: Hvad er det **[tabelnavn]**, jeg oprettede i sidste uge?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_eF5gH6\r\n      value: Hvem er **[postnavn]** tildelt til?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_5SJyoX\r\n      value: Hvad er det **[tabelnavn]**, der er tildelt til **[personen]**?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_idomBQ\r\n      value: Naviger til **[tabelnavn]**\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_37E1vC\r\n      value: Hvem er mine kontakter?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_Uas3OS\r\n      value: Hvilke kontakter har ikke mailadresser?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_JuCn0S\r\n      value: Hvilke kontakter har ikke firmatelefonnumre?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_11AcHh\r\n      value: Hvad er mine åbne salgsmuligheder?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_zam4HV\r\n      value: Hvilke salgsmuligheder er afsluttet inden for de seneste 30 dage?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_ZQXbcV\r\n      value: Hvilke salgsmuligheder har den højeste anslåede omsætning?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_wrd6MX\r\n      value: Hvilke kundeemner er lukket inden for de sidste 30 dage?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_5Gt8UG\r\n      value: Hvad er mine åbne kundeemner?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_FsmPEP\r\n      value: Hvad er de 10 bedste konti med den højeste omsætning?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_kwqK9K\r\n      value: Hvilke konti har ikke en kontakt?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_yZ5aB6\r\n      value: Hej\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_cD7eF8\r\n      value: Er du klar til at udforske? Vælg et af forslagene herunder for at komme i gang...\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_gH9iJ0\r\n      value: \"Du kan stille spørgsmål om denne tabel og dens poster:\"\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_VAMKDV\r\n      value: \"Du kan stille spørgsmål om denne tabel og dens poster:\"\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_sT5uV6\r\n      value: Analyse\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_wX7yZ8\r\n      value: Reager\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_F1eG2\r\n      value: Spørg\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_BqXH5F\r\n      value: Vis mere\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_VEZrkd\r\n      value: Vis færre",
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": 1030,
+    "name": "Prompt om platform nul (da-DK)",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.PlatformZeroPrompt.da-DK",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.PlatformZeroPrompt.da-DK"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

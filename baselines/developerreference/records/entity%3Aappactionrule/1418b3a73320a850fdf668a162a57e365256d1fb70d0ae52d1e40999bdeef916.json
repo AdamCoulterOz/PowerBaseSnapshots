@@ -1,0 +1,41 @@
+{
+  "configuration": {
+    "_contextentity_value": null,
+    "componentstate": 0,
+    "context": 0,
+    "contextvalue": null,
+    "definition": "{\"Id\":\"Mscrm.CheckBulkEditSupportForEntity\",\"Rules\":[{\"__type\":\"JavaScriptRulePart:#Microsoft.Crm.Application.SharedObjects.Ribbon\",\"DefaultValue\":true,\"InvertResult\":true,\"RuleType\":4,\"FunctionName\":\"XrmCore.InternalUtilities.DialogUtilities.isMobileCompanionApp\",\"Library\":\"$webresource:Main_system_library.js\",\"Parameters\":[]},{\"__type\":\"OrBlockRulePart:#Microsoft.Crm.Application.SharedObjects.Ribbon\",\"DefaultValue\":true,\"InvertResult\":false,\"RuleType\":2,\"OrGroups\":[{\"Rules\":[{\"__type\":\"SelectionCountRulePart:#Microsoft.Crm.Application.SharedObjects.Ribbon\",\"DefaultValue\":true,\"InvertResult\":false,\"RuleType\":5,\"AppliesTo\":2,\"Maximum\":1,\"Minimum\":1}]},{\"Rules\":[{\"__type\":\"SelectionCountRulePart:#Microsoft.Crm.Application.SharedObjects.Ribbon\",\"DefaultValue\":true,\"InvertResult\":false,\"RuleType\":5,\"AppliesTo\":2,\"Maximum\":-1,\"Minimum\":2},{\"__type\":\"JavaScriptRulePart:#Microsoft.Crm.Application.SharedObjects.Ribbon\",\"DefaultValue\":true,\"InvertResult\":false,\"RuleType\":4,\"FunctionName\":\"XrmCore.Commands.BulkEdit.isBulkEditEnabledForEntity\",\"Library\":\"$webresource:Main_system_library.js\",\"Parameters\":[{\"Name\":\"CrmParameter\",\"ParameterName\":null,\"ParameterType\":8,\"Value\":null}]}]}]}]}",
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "name": "Mscrm.CheckBulkEditSupportForEntity",
+    "overriddencreatedon": null,
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "type": 0,
+    "uniquename": "msdyn_Mscrm.CheckBulkEditSupportForEntity!0",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "msdyn_Mscrm.CheckBulkEditSupportForEntity!0"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdyn_SystemAppActions",
+      "version": "9.1.0.57"
+    }
+  ],
+  "typeIdentity": "entity:appactionrule"
+}

@@ -1,0 +1,297 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "BusinessCardReader",
+        "ControlManifestVersion": "1.0.116",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "Intelligence.BusinessCardReaderControl.BusinessCardReader"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "BusinessCardReader",
+        "FullName": "Intelligence.BusinessCardReaderControl.BusinessCardReader",
+        "IsVirtual": true,
+        "Name": "Intelligence.BusinessCardReaderControl.BusinessCardReader",
+        "Namespace": "Intelligence.BusinessCardReaderControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "TypeGroup": "allText",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "FullName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "FirstName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "LastName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "JobTitle",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "Phone1",
+              "Required": false,
+              "Type": "SingleLine.Phone",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "Phone2",
+              "Required": false,
+              "Type": "SingleLine.Phone",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "Phone3",
+              "Required": false,
+              "Type": "SingleLine.Phone",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "MobilePhone",
+              "Required": false,
+              "Type": "SingleLine.Phone",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "BusinessPhone",
+              "Required": false,
+              "Type": "SingleLine.Phone",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "Fax",
+              "Required": false,
+              "TypeGroup": "fax",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "Email",
+              "Required": false,
+              "Type": "SingleLine.Email",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "CompanyName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "Website",
+              "Required": false,
+              "Type": "SingleLine.URL",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "Department",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "FullAddress",
+              "Required": false,
+              "TypeGroup": "address",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "AddressStreet",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "AddressCity",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "AddressPostalCode",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "AddressCountry",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "AddressCountryRegion",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "AddressState",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "AddressPostOfficeBox",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "CleanedImage",
+              "Required": false,
+              "Type": "Multiple",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "OriginalImage",
+              "Required": false,
+              "Type": "Multiple",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "DefaultImage",
+              "Required": false,
+              "Type": "Multiple",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "AdvancedCustomization",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "exif",
+              "LoadOrder": 2,
+              "Name": "exif",
+              "Type": 0
+            },
+            {
+              "LibraryName": "pdf-worker",
+              "LoadOrder": 3,
+              "Name": "pdf-worker",
+              "Type": 0
+            },
+            {
+              "LibraryName": "react-pdf",
+              "LoadOrder": 5,
+              "Name": "react-pdf",
+              "Type": 0
+            },
+            {
+              "LibraryName": "react_16_14_0",
+              "LoadOrder": 0,
+              "Name": "react_16_14_0",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_8_121_1",
+              "LoadOrder": 0,
+              "Name": "fluent_8_121_1",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 6,
+              "Name": "Intelligence.BusinessCardReaderControl.BusinessCardReader_BusinessCardReader.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/BusinessCardReaderControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.Text,Multiple",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"Intelligence.BusinessCardReaderControl\" constructor=\"BusinessCardReader\" version=\"1.0.116\" display-name-key=\"BusinessCardReader\" description-key=\"CC_BusinessCard_Description\" control-type=\"virtual\" preview-image=\"img/preview.png\"><modes><read /><edit /></modes><property name=\"value\" display-name-key=\"Value_Property_Name\" description-key=\"Value_Property_Description\" of-type-group=\"allText\" usage=\"bound\" required=\"true\" /><property name=\"FullName\" display-name-key=\"FullName_Property_Name\" description-key=\"FullName_Property_Description\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"FirstName\" display-name-key=\"FirstName_Property_Name\" description-key=\"FirstName_Property_Description\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"LastName\" display-name-key=\"LastName_Property_Name\" description-key=\"LastName_Property_Description\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"JobTitle\" display-name-key=\"JobTitle_Property_Name\" description-key=\"JobTitle_Property_Description\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><!-- Phone1, Phone2 and Phone3 properties are deprecated and hidden for backward compatibility, they should be replaced by MobilePhone, BusinessPhone and Fax--><property name=\"Phone1\" display-name-key=\"Phone1_Property_Name\" description-key=\"Phone1_Property_Description\" of-type=\"SingleLine.Phone\" usage=\"bound\" required=\"false\" hidden=\"true\" /><property name=\"Phone2\" display-name-key=\"Phone2_Property_Name\" description-key=\"Phone2_Property_Description\" of-type=\"SingleLine.Phone\" usage=\"bound\" required=\"false\" hidden=\"true\" /><property name=\"Phone3\" display-name-key=\"Phone3_Property_Name\" description-key=\"Phone3_Property_Description\" of-type=\"SingleLine.Phone\" usage=\"bound\" required=\"false\" hidden=\"true\" /><property name=\"MobilePhone\" display-name-key=\"MobilePhone_Property_Name\" description-key=\"MobilePhone_Property_Description\" of-type=\"SingleLine.Phone\" usage=\"bound\" required=\"false\" /><property name=\"BusinessPhone\" display-name-key=\"BusinessPhone_Property_Name\" description-key=\"BusinessPhone_Property_Description\" of-type=\"SingleLine.Phone\" usage=\"bound\" required=\"false\" /><property name=\"Fax\" display-name-key=\"Fax_Property_Name\" description-key=\"Fax_Property_Description\" of-type-group=\"fax\" usage=\"bound\" required=\"false\" /><property name=\"Email\" display-name-key=\"Email_Property_Name\" description-key=\"Email_Property_Description\" of-type=\"SingleLine.Email\" usage=\"bound\" required=\"false\" /><property name=\"CompanyName\" display-name-key=\"CompanyName_Property_Name\" description-key=\"CompanyName_Property_Description\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"Website\" display-name-key=\"Website_Property_Name\" description-key=\"Website_Property_Description\" of-type=\"SingleLine.URL\" usage=\"bound\" required=\"false\" /><property name=\"Department\" display-name-key=\"Department_Property_Name\" description-key=\"Department_Property_Description\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"FullAddress\" display-name-key=\"FullAddress_Property_Name\" description-key=\"FullAddress_Property_Description\" of-type-group=\"address\" usage=\"bound\" required=\"false\" /><property name=\"AddressStreet\" display-name-key=\"AddressStreet_Property_Name\" description-key=\"AddressStreet_Property_Description\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"AddressCity\" display-name-key=\"AddressCity_Property_Name\" description-key=\"AddressCity_Property_Description\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"AddressPostalCode\" display-name-key=\"AddressPostalCode_Property_Name\" description-key=\"AddressPostalCode_Property_Description\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><!-- AddressCountry property is deprecated and hidden for backward compatibility, they should be replaced by AddressCountryRegion--><property name=\"AddressCountry\" display-name-key=\"AddressCountryRegion_Property_Name\" description-key=\"AddressCountryRegion_Property_Description\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" hidden=\"true\" /><property name=\"AddressCountryRegion\" display-name-key=\"AddressCountryRegion_Property_Name\" description-key=\"AddressCountryRegion_Property_Description\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"AddressState\" display-name-key=\"AddressState_Property_Name\" description-key=\"AddressState_Property_Description\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"AddressPostOfficeBox\" display-name-key=\"AddressPostOfficeBox_Property_Name\" description-key=\"AddressPostOfficeBox_Property_Description\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"CleanedImage\" display-name-key=\"CleanedImage_Property_Name\" description-key=\"CleanedImage_Property_Description\" of-type=\"Multiple\" usage=\"bound\" required=\"false\" /><property name=\"OriginalImage\" display-name-key=\"OriginalImage_Property_Name\" description-key=\"OriginalImage_Property_Description\" of-type=\"Multiple\" usage=\"bound\" required=\"false\" hidden=\"true\" /><property name=\"DefaultImage\" display-name-key=\"DefaultImage_Property_Name\" description-key=\"DefaultImage_Property_Description\" of-type=\"Multiple\" usage=\"input\" required=\"false\" /><property name=\"AdvancedCustomization\" display-name-key=\"AdvancedCustomization_Property_Name\" description-key=\"AdvancedCustomization_Property_Description\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" hidden=\"true\" /><type-group name=\"address\"><type>SingleLine.TextArea</type><type>Multiple</type></type-group><type-group name=\"allText\"><type>SingleLine.Text</type><type>Multiple</type></type-group><type-group name=\"fax\"><type>SingleLine.Text</type><type>SingleLine.Phone</type></type-group><resources><platform-library name=\"React\" version=\"16.14.0\" /><platform-library name=\"Fluent\" version=\"8.121.1\" /><library name=\"exif\" version=\"&gt;=2\" order=\"2\"><packaged_library path=\"libs/exif.js\" version=\"2.3.0\" /></library><library name=\"pdf-worker\" version=\"&gt;=4\" order=\"3\"><packaged_library path=\"libs/PDF/pdf.worker.js\" version=\"4.4.168\" /></library><library name=\"react-pdf\" version=\"&gt;=9\" order=\"5\"><packaged_library path=\"libs/PDF/react-pdf.js\" version=\"9.1.0\" /></library><resx path=\"strings/BusinessCardReaderControl.1033.resx\" version=\"1.0.0\" /><code path=\"BusinessCardReader.js\" order=\"6\" /></resources></control></manifest>",
+    "name": "Intelligence.BusinessCardReaderControl.BusinessCardReader",
+    "supportedplatform": "(Model)",
+    "version": "1.0.116"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "Intelligence.BusinessCardReaderControl.BusinessCardReader"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

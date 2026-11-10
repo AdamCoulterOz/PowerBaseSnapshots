@@ -1,0 +1,53 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": null,
+    "_parentbotcomponentid_value": null,
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 0,
+    "content": "{\r\n  \"intents\": [\r\n    {\r\n      \"dialogId\": \"msdyn_topic_9688398bfc794abe90edab4943d1893f\",\r\n      \"isTriggeringEnabled\": true,\r\n      \"id\": \"msdyn_topic_9688398bfc794abe90edab4943d1893f\",\r\n      \"displayName\": \"Search knowledge article private topic\"\r\n    }\r\n  ],\r\n  \"dialogs\": [\r\n    {\r\n      \"rootNodeId\": \"2af0bcc7-7c45-4ed7-b4ca-966edac13ded\",\r\n      \"actionNodes\": [\r\n        {\r\n          \"contextVariableId\": \"fc949849-2c70-4b1f-a974-310bc040159f\",\r\n          \"nodeType\": \"ActionNode\",\r\n          \"inputParameterVariableIdMap\": {\r\n            \"text\": \"{msdyn_variable_0cc7c97715094ae5a7bb3e1707d5bc8d_80662b68906141ab8926e8966a0a4d06}\",\r\n            \"text_1\": \"{msdyn_variable_0cc7c97715094ae5a7bb3e1707d5bc8d_418e5634a2184f0994cfe785deea2f93}\"\r\n          },\r\n          \"outputExpressionVariableIds\": [\r\n            \"msdyn_variable_0cc7c97715094ae5a7bb3e1707d5bc8d_ac27f404103e4c48ac0752c61fe2fd35\",\r\n            \"msdyn_variable_0cc7c97715094ae5a7bb3e1707d5bc8d_fdf543f5899b42feae660c1e318ca03b\",\r\n            \"msdyn_variable_0cc7c97715094ae5a7bb3e1707d5bc8d_f18cba1a6e8f4beb87f49c14a38d6ab6\"\r\n          ],\r\n          \"id\": \"2af0bcc7-7c45-4ed7-b4ca-966edac13ded\"\r\n        }\r\n      ],\r\n      \"id\": \"msdyn_topic_9688398bfc794abe90edab4943d1893f\",\r\n      \"displayName\": \"msdyn_searchknowledgearticleprivatetopic\"\r\n    }\r\n  ],\r\n  \"actionDefinitions\": [\r\n    {\r\n      \"timeoutInSeconds\": 60,\r\n      \"retryCount\": 1,\r\n      \"method\": 2,\r\n      \"headers\": {\r\n        \"accept\": \"application/json\"\r\n      },\r\n      \"bodyContent\": \"{\\\"text\\\":\\\"{msdyn_variable_0cc7c97715094ae5a7bb3e1707d5bc8d_80662b68906141ab8926e8966a0a4d06}\\\",\\\"text_1\\\":\\\"{msdyn_variable_0cc7c97715094ae5a7bb3e1707d5bc8d_418e5634a2184f0994cfe785deea2f93}\\\"}\",\r\n      \"actionType\": \"Flow\",\r\n      \"flowMetadata\": {\r\n        \"id\": \"87023c69-962c-ec11-b6e6-000d3a574957\",\r\n        \"title\": \"Search knowledge article flow\",\r\n        \"description\": \"\",\r\n        \"httpMethod\": 2,\r\n        \"inputParameters\": [\r\n          {\r\n            \"name\": \"Search Text\",\r\n            \"id\": \"text\",\r\n            \"type\": \"String\",\r\n            \"optional\": false\r\n          },\r\n          {\r\n            \"name\": \"Filter\",\r\n            \"id\": \"text_1\",\r\n            \"type\": \"String\",\r\n            \"optional\": false\r\n          }\r\n        ],\r\n        \"outputParameters\": [\r\n          {\r\n            \"name\": \"jsonResult\",\r\n            \"id\": \"jsonresult\",\r\n            \"type\": \"String\",\r\n            \"optional\": true\r\n          },\r\n          {\r\n            \"name\": \"textResult\",\r\n            \"id\": \"textresult\",\r\n            \"type\": \"String\",\r\n            \"optional\": true\r\n          },\r\n          {\r\n            \"name\": \"articleCount\",\r\n            \"id\": \"articlecount\",\r\n            \"type\": \"Number\",\r\n            \"optional\": true\r\n          }\r\n        ],\r\n        \"outputSchemaType\": \"Json\",\r\n        \"triggerType\": \"Standard\",\r\n        \"createdTime\": \"2021-10-14T02:28:29Z\",\r\n        \"isEnabled\": true,\r\n        \"lastModifiedTime\": \"2021-10-14T02:30:22Z\",\r\n        \"versionNumber\": 1927475,\r\n        \"secureInputs\": false,\r\n        \"secureOutputs\": false,\r\n        \"usesAsyncResponse\": false\r\n      },\r\n      \"id\": \"d97d316a-0bc0-4853-a2f7-906ed597d30c\",\r\n      \"displayName\": \"Search knowledge article flow\",\r\n      \"description\": \"\"\r\n    }\r\n  ],\r\n  \"contextVariables\": [\r\n    {\r\n      \"customTypeId\": \"81554956-f062-41db-9931-cc72a654fdd9\",\r\n      \"initializerType\": \"Action\",\r\n      \"scope\": \"Dialog\",\r\n      \"greedySlotFillingEnabled\": false,\r\n      \"isInput\": false,\r\n      \"externalInitializationAllowed\": false,\r\n      \"actionId\": \"d97d316a-0bc0-4853-a2f7-906ed597d30c\",\r\n      \"isGlobal\": false,\r\n      \"id\": \"fc949849-2c70-4b1f-a974-310bc040159f\",\r\n      \"displayName\": \"\"\r\n    }\r\n  ],\r\n  \"jsonTypes\": [\r\n    {\r\n      \"customTypeSchema\": \"Json\",\r\n      \"id\": \"81554956-f062-41db-9931-cc72a654fdd9\",\r\n      \"displayName\": \"Response Json Type for Flow - Search knowledge article flow\"\r\n    }\r\n  ]\r\n}",
+    "data": null,
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": null,
+    "name": "Search knowledge article private topic",
+    "overriddencreatedon": null,
+    "reusepolicy": 1,
+    "schemaname": "msdyn_topic_9688398bfc794abe90edab4943d1893f",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_topic_9688398bfc794abe90edab4943d1893f"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdynce_KnowledgeManagementOnlineExtension",
+      "version": "9.0.26094.3006"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

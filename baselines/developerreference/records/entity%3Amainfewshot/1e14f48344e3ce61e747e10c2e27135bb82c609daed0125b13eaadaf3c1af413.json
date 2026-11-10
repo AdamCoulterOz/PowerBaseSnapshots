@@ -1,0 +1,44 @@
+{
+  "configuration": {
+    "category": "Default",
+    "comment": null,
+    "componentstate": 0,
+    "entitytype": 0,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "objectpartitionid": null,
+    "overriddencreatedon": null,
+    "query": "What are the top 3 unresolved tickets labeled high priority from this week that are related to shipboard health and safety?",
+    "rephrase": "The query will list out top 3 open tickets with high priority, related to shipboard health or shipboard safety, created this week, order by ticket created on desc",
+    "savedqueryversionnumber": null,
+    "savedqueryviewid": null,
+    "standardsql": "SELECT TOP 3 * FROM [supportticket] WHERE [cr884_category] IN ('Shipboard Safety', 'Shipboard Health') AND [cr884_priority] = 'High' AND [cr884_ticketstatus] = 'Open' AND [cr884_ticketcreatedon] = 'this week' ORDER BY [cr884_ticketcreatedon] DESC",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "uniquename": "cds_mainfewshot_uniquename_6c178947-cb06-4104-a50e-9cbf35e65133",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "cds_mainfewshot_uniquename_6c178947-cb06-4104-a50e-9cbf35e65133"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_RelevanceSearch_Anchor",
+      "version": "1.0.3581.1"
+    }
+  ],
+  "typeIdentity": "entity:mainfewshot"
+}

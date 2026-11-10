@@ -1,0 +1,100 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "AdvancedClickToCallSetup",
+        "ControlManifestVersion": "1.0.0",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.ClickToCallSetup.AdvancedClickToCallSetup"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_AppCommon_ClickToCall_Setup",
+        "FullName": "MscrmControls.AppCommon.ClickToCallSetup.AdvancedClickToCallSetup",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.ClickToCallSetup.AdvancedClickToCallSetup",
+        "Namespace": "MscrmControls.AppCommon.ClickToCallSetup",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "FREShell",
+              "LoadOrder": 2,
+              "Name": "FREShell",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 11,
+              "Name": "MscrmControls.AppCommon.ClickToCallSetup.AdvancedClickToCallSetup_ClickToCall.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 12,
+              "Name": "css/ClickToCallSetup.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/clicktocall.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.4.0066",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.ClickToCallSetup\" constructor=\"AdvancedClickToCallSetup\" version=\"1.0.0\" display-name-key=\"CC_AppCommon_ClickToCall_Setup\" control-type=\"virtual\" hidden=\"true\"><modes /><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><library name=\"FREShell\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/FREShell.js\" version=\"1.0.0\" /></library><code path=\"ClickToCall.js\" order=\"11\" /><css path=\"css/ClickToCallSetup.css\" order=\"12\" /><resx path=\"locale/clicktocall.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.ClickToCallSetup.AdvancedClickToCallSetup",
+    "supportedplatform": "(Model)",
+    "version": "1.0.0"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.ClickToCallSetup.AdvancedClickToCallSetup"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommon",
+      "version": "9.0.4.0066"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

@@ -1,0 +1,324 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.18",
+        "Children": [],
+        "ConstructorName": "PreviewGalleryControl",
+        "ControlManifestVersion": "1.0.243",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Gallery.PreviewGallery.PreviewGalleryControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "PreviewGalleryControl",
+        "FullName": "MscrmControls.Gallery.PreviewGallery.PreviewGalleryControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.Gallery.PreviewGallery.PreviewGalleryControl",
+        "Namespace": "MscrmControls.Gallery.PreviewGallery",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [
+                {
+                  "Hidden": false,
+                  "Name": "Title",
+                  "Required": true,
+                  "Type": "SingleLine.Text",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "Html",
+                  "Required": false,
+                  "TypeGroup": "strings",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "BackupHtml",
+                  "Required": false,
+                  "TypeGroup": "strings",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "Label",
+                  "Required": false,
+                  "Type": "OptionSet",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "Description",
+                  "Required": false,
+                  "TypeGroup": "strings",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "ThumbnailUrl",
+                  "Required": false,
+                  "TypeGroup": "strings",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "Tags",
+                  "Required": false,
+                  "TypeGroup": "strings",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "Category",
+                  "Required": false,
+                  "Type": "OptionSet",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "Subcategory",
+                  "Required": false,
+                  "Type": "OptionSet",
+                  "Usage": 0
+                }
+              ],
+              "InitialDataSetFetch": false,
+              "Name": "Dataset",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI.retrieveRecord",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI.retrieveMultipleRecords",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI.createRecord",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "FilterFormId",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "FilterControlDescriptor",
+              "Required": false,
+              "TypeGroup": "strings",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ExtendedSearchFields",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "PropertiesFormId",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "PropertiesControlDescriptor",
+              "Required": false,
+              "TypeGroup": "strings",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "DefaultLanguageFilterAttribute",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "DefaultFilterExpression",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "IsMultiSelect",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "Action",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "IsSearchAvailable",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "IsPreviewPaneAvailable",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "IsViewSelectorAvailable",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "PreventSelectOnStart",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "DefaultView",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ThumbnailAttribute",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "IsFavoritesAvailable",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "UseUiVersion2",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "IsFullPageMode",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "CopilotControlDescriptor",
+              "Required": false,
+              "TypeGroup": "strings",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "HtmlAttribute",
+              "Required": false,
+              "TypeGroup": "strings",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "BackupHtmlAttribute",
+              "Required": false,
+              "TypeGroup": "strings",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.Gallery.PreviewGallery.PreviewGalleryControl_PreviewGalleryControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/PreviewGalleryControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "Grid",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Gallery.PreviewGallery\" constructor=\"PreviewGalleryControl\" display-name-key=\"PreviewGalleryControl\" description-key=\"PreviewGalleryControl\" version=\"1.0.243\" hidden=\"false\" api-version=\"1.3.18\"><modes><read /><edit /></modes><type-group name=\"strings\"><type>SingleLine.Text</type><type>Multiple</type></type-group><data-set name=\"Dataset\" display-name-key=\"GalleryDataset\" initial-data-set-fetch=\"false\"><property-set name=\"Title\" required=\"true\" display-name-key=\"GalleryDatasetTitleName\" description-key=\"GalleryDatasetTitleDescription\" usage=\"bound\" of-type=\"SingleLine.Text\" /><property-set name=\"Html\" required=\"false\" display-name-key=\"GalleryDatasetHtmlName\" description-key=\"GalleryDatasetHtmlDescription\" usage=\"bound\" of-type-group=\"strings\" /><property-set name=\"BackupHtml\" required=\"false\" display-name-key=\"GalleryDatasetBackupHtmlName\" description-key=\"GalleryDatasetBackupHtmlDescription\" usage=\"bound\" of-type-group=\"strings\" /><property-set name=\"Label\" required=\"false\" display-name-key=\"GalleryDatasetLabelName\" description-key=\"GalleryDatasetLabelDescription\" usage=\"bound\" of-type=\"OptionSet\" /><property-set name=\"Description\" required=\"false\" display-name-key=\"GalleryDatasetDescriptionName\" description-key=\"GalleryDatasetDescriptionDescription\" usage=\"bound\" of-type-group=\"strings\" /><property-set name=\"ThumbnailUrl\" required=\"false\" display-name-key=\"GalleryDatasetThumbnailUrlName\" description-key=\"GalleryDatasetThumbnailUrlDescription\" usage=\"bound\" of-type-group=\"strings\" /><property-set name=\"Tags\" required=\"false\" display-name-key=\"GalleryDatasetTagsName\" description-key=\"GalleryDatasetTagsDescription\" usage=\"bound\" of-type-group=\"strings\" /><property-set name=\"Category\" required=\"false\" display-name-key=\"GalleryDatasetCategoryName\" description-key=\"GalleryDatasetCategoryDescription\" usage=\"bound\" of-type=\"OptionSet\" /><property-set name=\"Subcategory\" required=\"false\" display-name-key=\"GalleryDatasetSubcategoryName\" description-key=\"GalleryDatasetSubcategoryDescription\" usage=\"bound\" of-type=\"OptionSet\" /></data-set><property name=\"FilterFormId\" display-name-key=\"FilterFormId\" description-key=\"FilterFormIdDesc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"false\" /><property name=\"FilterControlDescriptor\" display-name-key=\"FilterControlDescriptor\" description-key=\"FilterControlDescriptorDesc\" of-type-group=\"strings\" usage=\"input\" required=\"false\" hidden=\"false\" /><property name=\"ExtendedSearchFields\" display-name-key=\"ExtendedSearchFieldAttribute\" description-key=\"ExtendedSearchFieldAttributeDesc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"false\" /><property name=\"PropertiesFormId\" display-name-key=\"PropertiesFormId\" description-key=\"PropertiesFormIdDesc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"false\" /><property name=\"PropertiesControlDescriptor\" display-name-key=\"PropertiesControlDescriptor\" description-key=\"PropertiesControlDescriptorDesc\" of-type-group=\"strings\" usage=\"input\" required=\"false\" hidden=\"false\" /><property name=\"DefaultLanguageFilterAttribute\" display-name-key=\"DefaultLanguageFilterAttribute\" description-key=\"DefaultLanguageFilterAttributeDesc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"false\" /><property name=\"DefaultFilterExpression\" display-name-key=\"DefaultFilterExpression\" description-key=\"DefaultFilterExpression\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"false\" /><property name=\"IsMultiSelect\" display-name-key=\"IsMultiSelectName\" description-key=\"MultiSelectDescription\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"yes\" display-name-key=\"IsMultiSelectYesName\" description-key=\"IsMultiSelectYesDescription\" default=\"true\">true</value><value name=\"no\" display-name-key=\"IsMultiSelectNoName\" description-key=\"IsMultiSelectNoDescription\">false</value></property><property name=\"Action\" display-name-key=\"ActionName\" description-key=\"ActionDescription\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"open\" display-name-key=\"ActionOpenName\" description-key=\"ActionOpenDescription\" default=\"true\">open</value><value name=\"none\" display-name-key=\"ActionNoneName\" description-key=\"ActionNoneDescription\">none</value></property><property name=\"IsSearchAvailable\" display-name-key=\"IsSearchAvailable\" description-key=\"IsSearchAvailableDescription\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"yes\" display-name-key=\"IsSearchAvailableYesName\" description-key=\"IsSearchAvailableYesDescription\">true</value><value name=\"no\" display-name-key=\"IsSearchAvailableNoName\" description-key=\"IsSearchAvailableNoDescription\" default=\"true\">false</value></property><property name=\"IsPreviewPaneAvailable\" display-name-key=\"IsPreviewPaneAvailable\" description-key=\"IsPreviewPaneAvailableDescription\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"yes\" display-name-key=\"IsPreviewPaneAvailableYesName\" description-key=\"IsPreviewPaneAvailableYesDescription\" default=\"true\">true</value><value name=\"no\" display-name-key=\"IsPreviewPaneAvailableNoName\" description-key=\"IsPreviewPaneAvailableNoDescription\">false</value></property><property name=\"IsViewSelectorAvailable\" display-name-key=\"IsViewSelectorAvailable\" description-key=\"IsViewSelectorAvailableDescription\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"yes\" display-name-key=\"IsViewSelectorAvailableYesName\" description-key=\"IsViewSelectorAvailableYesDescription\" default=\"true\">true</value><value name=\"no\" display-name-key=\"IsViewSelectorAvailableNoName\" description-key=\"IsViewSelectorAvailableNoDescription\">false</value></property><property name=\"PreventSelectOnStart\" display-name-key=\"PreventSelectOnStart_Name\" description-key=\"PreventSelectOnStartDescription\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"false\" /><property name=\"DefaultView\" display-name-key=\"DefaultView\" description-key=\"DefaultView\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"grid\" display-name-key=\"DefaultViewGridName\" description-key=\"DefaultViewGridDescription\">grid</value><value name=\"tiles\" display-name-key=\"DefaultViewTilesName\" description-key=\"DefaultViewTilesDescription\">tiles</value><value name=\"list\" display-name-key=\"DefaultViewListName\" description-key=\"DefaultViewListDescription\" default=\"true\">list</value></property><property name=\"ThumbnailAttribute\" display-name-key=\"ThumbnailAttributeName\" description-key=\"ThumbnailAttributeNameDesc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"false\" /><property name=\"IsFavoritesAvailable\" display-name-key=\"IsFavoritesAvailable\" description-key=\"IsFavoritesAvailableDescription\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"yes\" display-name-key=\"IsFavoritesAvailableYesName\" description-key=\"IsFavoritesAvailableYesDescription\">true</value><value name=\"no\" display-name-key=\"IsFavoritesAvailableNoName\" description-key=\"IsFavoritesAvailableNoDescription\" default=\"true\">false</value></property><property name=\"UseUiVersion2\" display-name-key=\"UseUiVersion2\" description-key=\"UseUiVersion2Description\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"yes\" display-name-key=\"UseUiVersion2YesName\" description-key=\"UseUiVersion2YesDescription\">true</value><value name=\"no\" display-name-key=\"UseUiVersion2NoName\" description-key=\"UseUiVersion2NoDescription\" default=\"true\">false</value></property><property name=\"IsFullPageMode\" display-name-key=\"IsFullPageMode\" description-key=\"IsFullPageModeDescription\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"yes\" display-name-key=\"IsFullPageModeYesName\" description-key=\"IsFullPageModeYesDescription\">true</value><value name=\"no\" display-name-key=\"IsFullPageModeNoName\" description-key=\"IsFullPageModeNoDescription\" default=\"true\">false</value></property><property name=\"CopilotControlDescriptor\" display-name-key=\"CopilotControlDescriptor\" description-key=\"CopilotControlDescriptor\" of-type-group=\"strings\" usage=\"input\" required=\"false\" hidden=\"false\" /><property name=\"HtmlAttribute\" display-name-key=\"HtmlAttributeName\" description-key=\"HtmlAttributeNameDesc\" of-type-group=\"strings\" usage=\"input\" required=\"false\" hidden=\"false\" /><property name=\"BackupHtmlAttribute\" display-name-key=\"BackupHtmlAttributeName\" description-key=\"BackupHtmlAttributeNameDesc\" of-type-group=\"strings\" usage=\"input\" required=\"false\" hidden=\"false\" /><resources><code path=\"PreviewGalleryControl.js\" order=\"1\" /><resx path=\"strings/PreviewGalleryControl.1033.resx\" version=\"1.0.0\" /></resources><AvailableOn><web classic=\"enable\" /><phone /><tablet /></AvailableOn><feature-usage><uses-feature name=\"Utility\" required=\"true\" /><uses-feature name=\"WebAPI\" required=\"true\" /><uses-feature name=\"WebAPI.retrieveRecord\" required=\"true\" /><uses-feature name=\"WebAPI.retrieveMultipleRecords\" required=\"true\" /><uses-feature name=\"WebAPI.createRecord\" required=\"true\" /></feature-usage><built-by name=\"pac\" version=\"1.49.1-alpha-25090500\" /></control></manifest>",
+    "name": "MscrmControls.Gallery.PreviewGallery.PreviewGalleryControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.243"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Gallery.PreviewGallery.PreviewGalleryControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

@@ -1,0 +1,130 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" savedqueryid=\"dea89ba4-eed0-41fe-adfc-35aa73456462\"><entity name=\"team\"><attribute name=\"name\" /><attribute name=\"businessunitid\" /><attribute name=\"teamid\" /><attribute name=\"teamtype\" /><filter type=\"and\"><condition attribute=\"teamtype\" operator=\"eq\" value=\"2\" /></filter><order attribute=\"name\" descending=\"false\" /></entity></fetch>",
+    "introducedversion": "9.1.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "name",
+        "Name": "teams",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "team"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "name",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "businessunitid",
+                "RelatedEntityName": "",
+                "Width": 100
+              }
+            ],
+            "Id": "teamid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "team"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "team"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"teams\" object=\"logical:team\" jump=\"name\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"team\" id=\"teamid\"><cell name=\"name\" width=\"300\" /><cell name=\"businessunitid\" width=\"100\" /></row></grid>"
+    },
+    "name": "All Security Group Teams",
+    "offlinesqlquery": "/*SelectStart*/select  \"team0\".[name] as \"name\"\r , \"team0\".[businessunitid!id] as \"businessunitid!id\"\r , \"team0\".[businessunitid!logicalname] as \"businessunitid!logicalname\"\r , \"team0\".[businessunitid!name] as \"businessunitid!name\"\r , \"team0\".[teamid] as \"teamid\"\r , \"team0\".[teamtype] as \"teamtype\"/*SelectEnd*/  /*FromStart*/from  Team as \"team0\"/*FromEnd*/  /*WhereStart*/where  (\"team0\".[teamtype] = 2)/*WhereEnd*/  /*OrderByStart*/order by  \"team0\".[name] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "team",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "dea89ba4-eed0-41fe-adfc-35aa73456462",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "team",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "dea89ba4-eed0-41fe-adfc-35aa73456462"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "System",
+      "version": "5.0"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

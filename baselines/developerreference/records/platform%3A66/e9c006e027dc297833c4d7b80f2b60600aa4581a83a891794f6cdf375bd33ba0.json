@@ -1,0 +1,205 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ChartControl",
+        "ControlManifestVersion": "1.26092.0",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Chart.ChartControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_ChartControl_Name",
+        "FullName": "MscrmControls.Chart.ChartControl",
+        "IsVirtual": false,
+        "MappingFileName": "design-maps/map.*.xml",
+        "Name": "MscrmControls.Chart.ChartControl",
+        "Namespace": "MscrmControls.Chart",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [],
+              "InitialDataSetFetch": true,
+              "Name": "ChartDataSet",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "Parent",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "ChartSelectorMode",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "ViewSelectorMode",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "CommandMode",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "EnableExpandButton",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "EnableCloseButton",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "IsChartOnTheRightSide",
+              "Required": false,
+              "Type": "Boolean",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "IsEmbeddedInTeams",
+              "Required": false,
+              "Type": "Boolean",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "fluentui-react",
+              "LoadOrder": 1,
+              "Name": "fluentui-react",
+              "Type": 0
+            },
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 2,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.Chart.ChartControl_ChartControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "img/colchart01.gif",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "img/colchart02.gif",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "img/barchart01.gif",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "img/barchart02.gif",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "img/linechart01.gif",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "img/linechart02.gif",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "img/piechart01.gif",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "img/areachart01.gif",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "img/areachart02.gif",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "img/funnelchart01.gif",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/ChartControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Chart\" constructor=\"ChartControl\" version=\"1.26092.0\" display-name-key=\"CC_ChartControl_Name\" description-key=\"CC_ChartControl_Desc\" hidden=\"true\" design-mapping-file=\"design-maps/map.*.xml\"><modes></modes><data-set name=\"ChartDataSet\" display-name-key=\"CC_Chart_DSChart\"></data-set><property name=\"Parent\" display-name-key=\"CC_ChartControl_Parent\" description-key=\"Parent\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"ChartSelectorMode\" display-name-key=\"CC_ChartSelectorMode\" description-key=\"CC_ChartSelectorMode_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"true\"><value name=\"ChartSelector\" display-name-key=\"CC_ChartSelectorMode_ChartSelector\" description-key=\"CC_ChartSelectorMode_ChartSelector_Desc\">ChartSelector</value><value name=\"ChartTitle\" display-name-key=\"CC_ChartSelectorMode_ChartTitle\" description-key=\"CC_ChartSelectorMode_ChartTitle_Desc\">ChartTitle</value><value name=\"No\" display-name-key=\"CC_ChartSelectorMode_Disabled\" description-key=\"CC_ChartSelectorMode_Disabled_Desc\" default=\"true\">No</value></property><property name=\"ViewSelectorMode\" display-name-key=\"CC_ViewSelectorMode\" description-key=\"CC_ViewSelectorMode_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"true\"><value name=\"ViewSelector\" display-name-key=\"CC_ViewSelectorMode_ViewSelector\" description-key=\"CC_ViewSelectorMode_ViewSelector_Desc\">ViewSelector</value><value name=\"ViewTitle\" display-name-key=\"CC_ViewSelectorMode_ViewTitle\" description-key=\"CC_ViewSelectorMode_ViewTitle_Desc\">ViewTitle</value><value name=\"No\" display-name-key=\"CC_ViewSelectorMode_Disabled\" description-key=\"CC_ViewSelectorMode_Disabled_Desc\" default=\"true\">No</value></property><property name=\"CommandMode\" display-name-key=\"CC_CommandMode\" description-key=\"CC_CommandMode_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"true\"><value name=\"FormChartCommand\" display-name-key=\"CC_CommandMode_FormChartCommand\" description-key=\"CC_CommandMode_FormChartCommand_Desc\">FormChartCommand</value><value name=\"GridChartCommand\" display-name-key=\"CC_CommandMode_GridChartCommand\" description-key=\"CC_CommandMode_GridChartCommand_Desc\">GridChartCommand</value><value name=\"No\" display-name-key=\"CC_CommandMode_Disabled\" description-key=\"CC_CommandMode_Disabled_Desc\" default=\"true\">No</value></property><property name=\"EnableExpandButton\" display-name-key=\"CC_EnableExpandButton\" description-key=\"CC_EnableExpandButton_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"true\"><value name=\"Yes\" display-name-key=\"CC_Enable_ExpandButton\" description-key=\"CC_Enable_ExpandButton_Desc\">Yes</value><value name=\"No\" display-name-key=\"CC_Disable_ExpandButton\" description-key=\"CC_Disable_ExpandButton_Desc\" default=\"true\">No</value></property><property name=\"EnableCloseButton\" display-name-key=\"CC_EnableCloseButton\" description-key=\"CC_EnableCloseButton_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"true\"><value name=\"Yes\" display-name-key=\"CC_Enable_CloseButton\" description-key=\"CC_Enable_CloseButton_Desc\">Yes</value><value name=\"No\" display-name-key=\"CC_Disable_CloseButton\" description-key=\"CC_Disable_CloseButton_Desc\" default=\"true\">No</value></property><property name=\"IsChartOnTheRightSide\" display-name-key=\"CC_IsChartOnTheRightSide\" description-key=\"CC_IsChartOnTheRightSide_Desc\" usage=\"input\" of-type=\"Boolean\" required=\"false\" hidden=\"true\" /><property name=\"IsEmbeddedInTeams\" display-name-key=\"CC_IsEmbeddedInTeams\" description-key=\"CC_IsEmbeddedInTeams_Desc\" usage=\"input\" of-type=\"Boolean\" required=\"false\" hidden=\"true\" /><resources><library name=\"fluentui-react\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/fluentui-react.js\" version=\"8.121.1\" /></library><library name=\"jquery\" version=\"&gt;=2\" order=\"2\"><packaged_library path=\"libs/jquery-3.6.0.js\" version=\"3.6.0\" /></library><code path=\"ChartControl.js\" order=\"2\" /><resx path=\"strings/ChartControl.1033.resx\" version=\"1.0.0\" /><img path=\"img/colchart01.gif\" /><img path=\"img/colchart02.gif\" /><img path=\"img/barchart01.gif\" /><img path=\"img/barchart02.gif\" /><img path=\"img/linechart01.gif\" /><img path=\"img/linechart02.gif\" /><img path=\"img/piechart01.gif\" /><img path=\"img/areachart01.gif\" /><img path=\"img/areachart02.gif\" /><img path=\"img/funnelchart01.gif\" /></resources></control></manifest>",
+    "name": "MscrmControls.Chart.ChartControl",
+    "supportedplatform": "(Model)",
+    "version": "1.26092.0"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Chart.ChartControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

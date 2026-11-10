@@ -1,0 +1,302 @@
+{
+  "configuration": {
+    "authoringmanifest": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<authoring-manifest schema-version=\"1.0\">\r\n  <group>\r\n    <section>\r\n      <property name=\"Items\" />\r\n    </section>\r\n    <section>\r\n      <property name=\"Transparency\" />\r\n    </section>\r\n    <section>\r\n      <property name=\"Visible\"/>\r\n      <property-group name=\"Position\">\r\n        <property name=\"X\" />\r\n        <property name=\"Y\" />\r\n      </property-group>\r\n      <property-group name=\"Size\">\r\n        <property name=\"Width\" />\r\n        <property name=\"Height\" />\r\n      </property-group>\r\n    </section>\r\n    <!-- Add back this comment if we decide to take the BYOK approach. Need to also change the ControlManifest.Input.xml, index.ts and MapIInputs.ts\r\n    <section>\r\n      <property name=\"AzureMapsKey\" />\r\n    </section>\r\n    -->\r\n    <section>\r\n      <property name=\"DefaultLocation\"/>\r\n      <property name=\"DefaultLatitude\" />\r\n      <property name=\"DefaultLongitude\" />\r\n      <property name=\"DefaultZoomLevel\" />\r\n    </section>\r\n    <section>\r\n      <property name=\"CurrentLocation\" />\r\n      <property name=\"CurrentLocationLatitude\" />\r\n      <property name=\"CurrentLocationLongitude\" />\r\n    </section>\r\n    <section>\r\n      <property name=\"MapStyle\" />\r\n      <property name=\"SatelliteView\" />\r\n      <property name=\"Clustering\" />\r\n      <property name=\"Zoom\" />\r\n      <property name=\"Compass\" />\r\n      <property name=\"Pitch\" />\r\n      <property name=\"InfoCards\" />\r\n      <property name=\"PinColor\" complex-type=\"Color\" helper-ui=\"color\" />\r\n    </section>\r\n    <section>\r\n      <property name=\"ShowShapes\" />\r\n      <property name=\"ShowShapeLabels\" />\r\n      <property name=\"ShapeDrawing\" />\r\n      <property name=\"ShapeEditingDeleting\" />\r\n    </section>\r\n    <section>\r\n      <property name=\"BorderRadius\" />\r\n      <property-group name=\"Border\">\r\n        <property name=\"BorderStyle\" complex-type=\"BorderStyle\" />\r\n        <property name=\"BorderThickness\" />\r\n        <property name=\"BorderColor\" complex-type=\"Color\" helper-ui=\"color\" />\r\n      </property-group>\r\n    </section>\r\n    <section>\r\n      <property name=\"TabIndex\" />\r\n    </section>\r\n    <section>\r\n      <!-- <property name=\"TrafficIncidents\" />\r\n      <property name=\"TrafficFlowTypes\" />\r\n      <property name=\"RefreshExpiredTiles\" /> -->\r\n      <property name=\"RouteWaypoints_Items\" />\r\n      <property name=\"UseRouting\" />\r\n      <property name=\"RouteMaintainOrder\" />\r\n      <!-- <property name=\"RouteMaintainFirst\" />\r\n      <property name=\"RouteMaintainLast\" /> -->\r\n      <property name=\"RouteOptimization\" />\r\n      <property name=\"RouteTravelMode\" />\r\n      <!-- <property name=\"RouteAvoidance\" /> -->\r\n      <property name=\"ShowRoutePins\" />\r\n    </section>\r\n  </group>\r\n  <group>\r\n    <section name=\"Design\">\r\n      <property name=\"Visible\" />\r\n      <property name=\"X\" />\r\n      <property name=\"Y\" />\r\n      <property name=\"Width\" />\r\n      <property name=\"Height\" />\r\n      <property name=\"BorderRadius\" />\r\n      <property name=\"BorderStyle\" />\r\n      <property name=\"BorderThickness\" />\r\n      <property name=\"BorderColor\" />\r\n    </section>\r\n  </group>\r\n</authoring-manifest>",
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.18",
+        "Children": [],
+        "ConstructorName": "Map",
+        "ControlManifestVersion": "1.5.49",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "Microsoft.Map"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "Map_Display_Key",
+        "FullName": "Microsoft.Map",
+        "IsVirtual": false,
+        "Name": "Microsoft.Map",
+        "Namespace": "Microsoft",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [
+                {
+                  "Hidden": false,
+                  "Name": "ItemsLabels",
+                  "Required": false,
+                  "Type": "SingleLine.Text",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "ItemsAddresses",
+                  "Required": false,
+                  "Type": "SingleLine.Text",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "ItemsLongitudes",
+                  "Required": false,
+                  "Type": "FP",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "ItemsLatitudes",
+                  "Required": false,
+                  "Type": "FP",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "ItemsColors",
+                  "Required": false,
+                  "Type": "SingleLine.Text",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "ItemsIcons",
+                  "Required": false,
+                  "Type": "SingleLine.Text",
+                  "Usage": 0
+                }
+              ],
+              "InitialDataSetFetch": true,
+              "Name": "Items",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Device.getCurrentPosition",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "DefaultLocation",
+              "Required": true,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "-122.126801",
+              "Hidden": false,
+              "Name": "DefaultLongitude",
+              "Required": false,
+              "Type": "FP",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "47.642967",
+              "Hidden": false,
+              "Name": "DefaultLatitude",
+              "Required": false,
+              "Type": "FP",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "16",
+              "Hidden": false,
+              "Name": "DefaultZoomLevel",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "CurrentLocation",
+              "Required": true,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "MapStyle",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "SatelliteView",
+              "Required": true,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "Clustering",
+              "Required": true,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnableCurrentLocationControl",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "Compass",
+              "Required": true,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "Zoom",
+              "Required": true,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "Pitch",
+              "Required": true,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "0",
+              "Hidden": false,
+              "Name": "TabIndex",
+              "Required": true,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "InfoCards",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "#1D72A9",
+              "Hidden": false,
+              "Name": "PinColor",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ShowDirections",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mapPolyfill",
+              "LoadOrder": 2,
+              "Name": "mapPolyfill",
+              "Type": 0
+            },
+            {
+              "LibraryName": "atlas",
+              "LoadOrder": 3,
+              "Name": "atlas",
+              "Type": 0
+            },
+            {
+              "LibraryName": "react_16_14_0",
+              "LoadOrder": 0,
+              "Name": "react_16_14_0",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_8_121_1",
+              "LoadOrder": 0,
+              "Name": "fluent_8_121_1",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 4,
+              "Name": "Microsoft.Map_bundle.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 5,
+              "Name": "AzureMaps.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 6,
+              "Name": "atlas.min.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 7,
+              "Name": "atlas-drawing.min.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/Map.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"Microsoft\" constructor=\"Map\" version=\"1.5.49\" display-name-key=\"Map_Display_Key\" description-key=\"Map_Desc_Key\" authoring-manifest=\"Map_manifest.authoring.xml\" control-type=\"standard\" hidden=\"true\" api-version=\"1.3.18\"><data-set name=\"Items\" display-name-key=\"Items_Display_Key\" description-key=\"Items_Desc_Key\"><property-set name=\"ItemsLabels\" display-name-key=\"ItemsLabels_Display_Key\" description-key=\"ItemsLabels_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property-set name=\"ItemsAddresses\" display-name-key=\"ItemsAddresses_Display_Key\" description-key=\"ItemsAddresses_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property-set name=\"ItemsLongitudes\" display-name-key=\"ItemsLongitudes_Display_Key\" description-key=\"ItemsLongitudes_Desc_Key\" of-type=\"FP\" usage=\"bound\" required=\"false\" /><property-set name=\"ItemsLatitudes\" display-name-key=\"ItemsLatitudes_Display_Key\" description-key=\"ItemsLatitudes_Desc_Key\" of-type=\"FP\" usage=\"bound\" required=\"false\" /><property-set name=\"ItemsColors\" display-name-key=\"ItemsColors_Display_Key\" description-key=\"ItemsColors_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property-set name=\"ItemsIcons\" display-name-key=\"ItemsIcons_Display_Key\" description-key=\"ItemsIcons_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /></data-set><property name=\"DefaultLocation\" display-name-key=\"DefaultLocation_Display_Key\" description-key=\"DefaultLocation_Desc_Key\" of-type=\"Enum\" usage=\"input\" required=\"true\"><value name=\"True\" display-name-key=\"True_Display_Key\">True</value><value name=\"False\" display-name-key=\"False_Display_Key\" default=\"true\">False</value></property><property name=\"DefaultLongitude\" display-name-key=\"DefaultLongitude_Display_Key\" description-key=\"DefaultLongitude_Desc_Key\" of-type=\"FP\" usage=\"input\" required=\"false\" default-value=\"-122.126801\" /><property name=\"DefaultLatitude\" display-name-key=\"DefaultLatitude_Display_Key\" description-key=\"DefaultLatitude_Desc_Key\" of-type=\"FP\" usage=\"input\" required=\"false\" default-value=\"47.642967\" /><property name=\"DefaultZoomLevel\" display-name-key=\"DefaultZoomLevel_Display_Key\" description-key=\"DefaultZoomLevel_Desc_Key\" of-type=\"Whole.None\" usage=\"input\" required=\"false\" default-value=\"16\" /><property name=\"CurrentLocation\" display-name-key=\"CurrentLocation_Display_Key\" description-key=\"CurrentLocation_Desc_Key\" of-type=\"Enum\" usage=\"input\" required=\"true\"><value name=\"True\" display-name-key=\"True_Display_Key\">True</value><value name=\"False\" display-name-key=\"False_Display_Key\" default=\"true\">False</value></property><property name=\"MapStyle\" display-name-key=\"MapStyle_Display_Key\" description-key=\"MapStyle_Desc_Key\" of-type=\"Enum\" usage=\"input\" required=\"false\"><value name=\"Road\" display-name-key=\"MapStyle_Road_Display_Key\" default=\"true\">Road</value><value name=\"Satellite\" display-name-key=\"MapStyle_Satellite_Display_Key\">Satellite</value><value name=\"SatelliteRoadLabels\" display-name-key=\"MapStyle_SatelliteRoadLabels_Display_Key\">SatelliteRoadLabels</value><value name=\"GrayscaleDark\" display-name-key=\"MapStyle_GrayscaleDark_Display_Key\">GrayscaleDark</value><value name=\"GrayscaleLight\" display-name-key=\"MapStyle_GrayscaleLight_Display_Key\">GrayscaleLight</value><value name=\"Night\" display-name-key=\"MapStyle_Night_Display_Key\">Night</value><value name=\"RoadShadedRelief\" display-name-key=\"MapStyle_RoadShadedRelief_Display_Key\">RoadShadedRelief</value><value name=\"HighContrastDark\" display-name-key=\"MapStyle_HighContrastDark_Display_Key\">HighContrastDark</value><value name=\"HighContrastLight\" display-name-key=\"MapStyle_HighContrastLight_Display_Key\">HighContrastLight</value></property><property name=\"SatelliteView\" display-name-key=\"SatelliteView_Display_Key\" description-key=\"SatelliteView_Desc_Key\" of-type=\"Enum\" usage=\"input\" required=\"true\"><value name=\"True\" display-name-key=\"True_Display_Key\">True</value><value name=\"False\" display-name-key=\"False_Display_Key\" default=\"true\">False</value></property><property name=\"Clustering\" display-name-key=\"Clustering_Display_Key\" description-key=\"Clustering_Desc_Key\" of-type=\"Enum\" usage=\"input\" required=\"true\"><value name=\"True\" display-name-key=\"True_Display_Key\" default=\"true\">True</value><value name=\"False\" display-name-key=\"False_Display_Key\">False</value></property><property name=\"EnableCurrentLocationControl\" display-name-key=\"EnableCurrentLocationControl_Display_Key\" description-key=\"EnableCurrentLocationControl_Desc_Key\" of-type=\"Enum\" usage=\"input\" required=\"false\"><value name=\"True\" display-name-key=\"True_Display_Key\" default=\"true\">True</value><value name=\"False\" display-name-key=\"False_Display_Key\">False</value></property><property name=\"Compass\" display-name-key=\"Compass_Display_Key\" description-key=\"Compass_Desc_Key\" of-type=\"Enum\" usage=\"input\" required=\"true\"><value name=\"True\" display-name-key=\"True_Display_Key\" default=\"true\">True</value><value name=\"False\" display-name-key=\"False_Display_Key\">False</value></property><property name=\"Zoom\" display-name-key=\"Zoom_Display_Key\" description-key=\"Zoom_Desc_Key\" of-type=\"Enum\" usage=\"input\" required=\"true\"><value name=\"True\" display-name-key=\"True_Display_Key\" default=\"true\">True</value><value name=\"False\" display-name-key=\"False_Display_Key\">False</value></property><property name=\"Pitch\" display-name-key=\"Pitch_Display_Key\" description-key=\"Pitch_Desc_Key\" of-type=\"Enum\" usage=\"input\" required=\"true\"><value name=\"True\" display-name-key=\"True_Display_Key\" default=\"true\">True</value><value name=\"False\" display-name-key=\"False_Display_Key\">False</value></property><property name=\"TabIndex\" display-name-key=\"TabIndex_Display_Key\" description-key=\"TabIndex_Desc_Key\" of-type=\"Whole.None\" usage=\"input\" required=\"true\" default-value=\"0\" /><property name=\"InfoCards\" display-name-key=\"InfoCards_Display_Key\" description-key=\"InfoCards_Desc_Key\" of-type=\"Enum\" usage=\"input\" required=\"false\"><value name=\"None\" display-name-key=\"InfoCards_None_Display_Key\" default=\"true\">None</value><value name=\"OnClick\" display-name-key=\"InfoCards_OnClick_Display_Key\">OnClick</value><value name=\"OnHover\" display-name-key=\"InfoCards_OnHover_Display_Key\">OnHover</value></property><property name=\"PinColor\" display-name-key=\"PinColor_Display_Key\" description-key=\"PinColor_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"true\" default-value=\"#1D72A9\" /><property name=\"ShowDirections\" display-name-key=\"ShowDirections_Display_Key\" description-key=\"ShowDirections_Desc_Key\" of-type=\"Enum\" usage=\"input\" required=\"false\"><value name=\"True\" display-name-key=\"True_Display_Key\" default=\"true\">True</value><value name=\"False\" display-name-key=\"False_Display_Key\">False</value></property><feature-usage><uses-feature name=\"Device.getCurrentPosition\" required=\"true\" /><uses-feature name=\"WebAPI\" required=\"true\" /><uses-feature name=\"Utility\" required=\"true\" /></feature-usage><resources><platform-library name=\"React\" version=\"16.14.0\" /><platform-library name=\"Fluent\" version=\"8.121.1\" /><library name=\"mapPolyfill\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/mapPolyfill.js\" version=\"1.0\" /></library><library name=\"atlas\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"libs/atlas.js\" version=\"2.2.7\" /></library><code path=\"bundle.js\" order=\"4\" /><css path=\"AzureMaps.css\" order=\"5\" /><css path=\"atlas.min.css\" order=\"6\" /><css path=\"atlas-drawing.min.css\" order=\"7\" /><resx path=\"strings/Map.1033.resx\" version=\"1.0.0\" /></resources><built-by name=\"pac\" version=\"1.49.1-alpha-25090500\" /></control></manifest>",
+    "name": "Microsoft.Map",
+    "supportedplatform": "(Model)",
+    "version": "1.5.49"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "Microsoft.Map"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

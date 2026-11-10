@@ -1,0 +1,104 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "WorkHourControlV2",
+        "ControlManifestVersion": "1.0.0",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.WorkHourControlV2.WorkHourControlV2"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_WorkHourControl",
+        "FullName": "MscrmControls.WorkHourControlV2.WorkHourControlV2",
+        "IsVirtual": false,
+        "Name": "MscrmControls.WorkHourControlV2.WorkHourControlV2",
+        "Namespace": "MscrmControls.WorkHourControlV2",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "CalendarId",
+              "Required": true,
+              "TypeGroup": "validTypes",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "WorkHourControlConfig",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "Timezone",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.WorkHourControlV2.WorkHourControlV2_WorkHourControlV2.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/WorkHourControlV2.1033.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/WorkHourControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.Text,Lookup.Simple",
+    "componentstate": 0,
+    "introducedversion": "9.0.26094.1003",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.WorkHourControlV2\" constructor=\"WorkHourControlV2\" version=\"1.0.0\" display-name-key=\"CC_WorkHourControl\"><modes /><type-group name=\"validTypes\"><type>SingleLine.Text</type><type>Lookup.Simple</type></type-group><property name=\"CalendarId\" display-name-key=\"CC_Calendar_Id\" description-key=\"CC_Calendar_Id_Desc\" of-type-group=\"validTypes\" usage=\"bound\" required=\"true\" /><property name=\"WorkHourControlConfig\" display-name-key=\"CC_Work_Hour_Control_Config\" description-key=\"CC_Work_Hour_Control_Config_Desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" /><property name=\"Timezone\" display-name-key=\"CC_Timezone\" description-key=\"CC_Timezone_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><resources><code path=\"WorkHourControlV2.js\" order=\"1\" /><resx path=\"strings/WorkHourControlV2.1033.resx\" version=\"1.0.0\" /><resx path=\"strings/WorkHourControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.WorkHourControlV2.WorkHourControlV2",
+    "supportedplatform": "(Model)",
+    "version": "1.0.0"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.WorkHourControlV2.WorkHourControlV2"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_UCICalendar",
+      "version": "9.0.26101.2000"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

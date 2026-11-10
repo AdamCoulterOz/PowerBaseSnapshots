@@ -1,0 +1,107 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.18",
+        "Children": [],
+        "ConstructorName": "EnhanceReadOnlyFieldControl",
+        "ControlManifestVersion": "1.0.27",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.EnhanceReadOnlyField.EnhanceReadOnlyFieldControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "EnhanceReadOnlyFieldControl",
+        "FullName": "MscrmControls.EnhanceReadOnlyField.EnhanceReadOnlyFieldControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.EnhanceReadOnlyField.EnhanceReadOnlyFieldControl",
+        "Namespace": "MscrmControls.EnhanceReadOnlyField",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI.retrieveRecord",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI.retrieveMultipleRecords",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI.createRecord",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.EnhanceReadOnlyField.EnhanceReadOnlyFieldControl_bundle.js",
+              "Type": 4
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.EnhanceReadOnlyField\" constructor=\"EnhanceReadOnlyFieldControl\" display-name-key=\"EnhanceReadOnlyFieldControl\" description-key=\"EnhanceReadOnlyFieldControl\" version=\"1.0.27\" hidden=\"true\" control-type=\"virtual\" api-version=\"1.3.18\"><type-group name=\"all\"><type>TwoOptions</type><type>DateAndTime.DateOnly</type><type>DateAndTime.DateAndTime</type><type>FP</type><type>Decimal</type><type>Whole.None</type><type>Whole.Duration</type><type>Whole.TimeZone</type><type>Whole.Language</type><type>Lookup.Simple</type><type>Lookup.Customer</type><type>Lookup.Owner</type><type>Lookup.PartyList</type><type>Lookup.Regarding</type><type>Multiple</type><type>Currency</type><type>OptionSet</type><type>SingleLine.Text</type><type>SingleLine.TextArea</type><type>SingleLine.Email</type><type>SingleLine.URL</type><type>SingleLine.Ticker</type><type>SingleLine.Phone</type></type-group><property name=\"value\" display-name-key=\"Value\" description-key=\"CC_Value_Desc\" of-type-group=\"all\" usage=\"bound\" required=\"true\" hidden=\"false\" /><resources><code path=\"bundle.js\" order=\"1\" /></resources><feature-usage><uses-feature name=\"Utility\" required=\"true\" /><uses-feature name=\"WebAPI\" required=\"true\" /><uses-feature name=\"WebAPI.retrieveRecord\" required=\"true\" /><uses-feature name=\"WebAPI.retrieveMultipleRecords\" required=\"true\" /><uses-feature name=\"WebAPI.createRecord\" required=\"true\" /></feature-usage><built-by name=\"pac\" version=\"1.49.1-alpha-25090500\" /></control></manifest>",
+    "name": "MscrmControls.EnhanceReadOnlyField.EnhanceReadOnlyFieldControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.27"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.EnhanceReadOnlyField.EnhanceReadOnlyFieldControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

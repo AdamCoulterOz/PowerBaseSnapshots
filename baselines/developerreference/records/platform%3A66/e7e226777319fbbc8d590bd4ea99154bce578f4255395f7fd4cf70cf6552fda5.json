@@ -1,0 +1,107 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "EmailConsentDialogControl",
+        "ControlManifestVersion": "1.0.1",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Appcommon.EmailConsentDialog.EmailConsentDialogControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_AppCommon_EmailConsentDialogControl",
+        "FullName": "MscrmControls.Appcommon.EmailConsentDialog.EmailConsentDialogControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.Appcommon.EmailConsentDialog.EmailConsentDialogControl",
+        "Namespace": "MscrmControls.Appcommon.EmailConsentDialog",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "header_label",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "ok_button_label",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "cancel_button_label",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "html_page_url",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 11,
+              "Name": "MscrmControls.Appcommon.EmailConsentDialog.EmailConsentDialogControl_EmailConsentDialogControl.js",
+              "Type": 4
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.4.0066",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Appcommon.EmailConsentDialog\" constructor=\"EmailConsentDialogControl\" version=\"1.0.1\" display-name-key=\"CC_AppCommon_EmailConsentDialogControl\" control-type=\"virtual\" hidden=\"true\"><modes></modes><type-group name=\"all\"><type>SingleLine.Text</type></type-group><property name=\"header_label\" display-name-key=\"CC_header_label\" description-key=\"Header Label for EmailConsentDialog\" of-type-group=\"all\" usage=\"input\" required=\"true\" hidden=\"true\" /><property name=\"ok_button_label\" display-name-key=\"CC_ok_button_label\" description-key=\"OK button label for EmailConsentDialog\" of-type-group=\"all\" usage=\"input\" required=\"true\" hidden=\"true\" /><property name=\"cancel_button_label\" display-name-key=\"CC_cancel_button_label\" description-key=\"Cancel Button label EmailConsentDialog\" of-type-group=\"all\" usage=\"input\" required=\"true\" hidden=\"true\" /><property name=\"html_page_url\" display-name-key=\"CC_html_page_url\" description-key=\"HTML resource URL for EmailConsentDialog\" of-type-group=\"all\" usage=\"input\" required=\"true\" hidden=\"true\" /><resources><code path=\"EmailConsentDialogControl.js\" order=\"11\" /></resources></control></manifest>",
+    "name": "MscrmControls.Appcommon.EmailConsentDialog.EmailConsentDialogControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.1"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Appcommon.EmailConsentDialog.EmailConsentDialogControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommon",
+      "version": "9.0.4.0066"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

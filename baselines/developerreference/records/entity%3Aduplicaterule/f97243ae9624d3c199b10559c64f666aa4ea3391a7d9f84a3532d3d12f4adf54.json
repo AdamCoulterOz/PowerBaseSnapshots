@@ -1,0 +1,54 @@
+{
+  "configuration": {
+    "baseentityname": "account",
+    "baseentitytypecode": {
+      "key": [
+        {
+          "field": "LogicalName",
+          "type": "String",
+          "value": "account"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "entity"
+    },
+    "componentstate": 0,
+    "description": "Detects account records that have the same value in the Website field.",
+    "excludeinactiverecords": false,
+    "iscasesensitive": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": false,
+    "matchingentityname": "account",
+    "matchingentitytypecode": {
+      "key": [
+        {
+          "field": "LogicalName",
+          "type": "String",
+          "value": "account"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "entity"
+    },
+    "name": "Accounts with the same website",
+    "statecode": 1,
+    "statuscode": 2,
+    "timezoneruleversionnumber": null,
+    "uniquename": "drc8fac087118125bed96b9302be703ea582a4afdf58f07361ad0a53c0e57df750",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "drc8fac087118125bed96b9302be703ea582a4afdf58f07361ad0a53c0e57df750"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "entity:duplicaterule"
+}

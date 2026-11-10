@@ -1,0 +1,44 @@
+{
+  "configuration": {
+    "category": "Default",
+    "comment": "you should use [contact].[fullname] instead of [contact].[msevtmgt_contactidname],  select [contact].[fullname] and [contact].[jobtitle] from [contact] table and join with [account] table and filtered by [account].[name]",
+    "componentstate": 0,
+    "entitytype": 0,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "objectpartitionid": null,
+    "overriddencreatedon": null,
+    "query": " Show contacts (name, title) for Adventure Works",
+    "rephrase": "The query will join the contact and account table, and return all the contact name and jobtitle who are the primary contact of accounts named 'Adventure Work'",
+    "savedqueryversionnumber": null,
+    "savedqueryviewid": null,
+    "standardsql": "SELECT [Contact].[fullname], [Contact].[jobtitle] FROM [Contact] JOIN [Account] ON [Contact].[contactId] = [Account].[primaryContactId] WHERE ([Account].[name] = 'Adventure Works')",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "uniquename": "cds_mainfewshot_uniquename_098a07e8-55e5-45fe-a74c-1b9c39e5a844",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "cds_mainfewshot_uniquename_098a07e8-55e5-45fe-a74c-1b9c39e5a844"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_RelevanceSearch_Anchor",
+      "version": "1.0.3581.1"
+    }
+  ],
+  "typeIdentity": "entity:mainfewshot"
+}

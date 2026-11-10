@@ -1,0 +1,96 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "TimerControl",
+        "ControlManifestVersion": "1.0.3",
+        "ControlMode": "Read",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.FieldControls.TimerControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_Timer_Control",
+        "FullName": "MscrmControls.FieldControls.TimerControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.FieldControls.TimerControl",
+        "Namespace": "MscrmControls.FieldControls",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "Type": "Timer",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "msvcontrol",
+              "LoadOrder": 2,
+              "Name": "msvcontrol",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 4,
+              "Name": "MscrmControls.FieldControls.TimerControl_ccTimerControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "css/TimerIcon.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/TimerControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.FieldControls\" constructor=\"TimerControl\" version=\"1.0.3\" display-name-key=\"CC_Timer_Control\" control-type=\"virtual\" hidden=\"true\"><modes><read /></modes><property name=\"value\" display-name-key=\"TimerControl_value\" description-key=\"TimerControl_value_desc\" of-type=\"Timer\" usage=\"bound\" required=\"true\" hidden=\"true\" /><resources><css path=\"css/TimerIcon.css\" order=\"1\" /><resx path=\"strings/TimerControl.1033.resx\" version=\"1.0.0\" /><library name=\"msvcontrol\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/msvcontrollib-1.0.0.js\" version=\"1.0.0\" /></library><code path=\"ccTimerControl.js\" order=\"4\" /></resources></control></manifest>",
+    "name": "MscrmControls.FieldControls.TimerControl",
+    "supportedplatform": null,
+    "version": "1.0.3"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.FieldControls.TimerControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

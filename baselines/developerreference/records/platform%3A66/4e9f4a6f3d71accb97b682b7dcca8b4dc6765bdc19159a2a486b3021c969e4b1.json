@@ -1,0 +1,105 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "KPIEntitySelectControl",
+        "ControlManifestVersion": "1.9.6",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.FieldControls.KPIEntitySelectControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_SLA_KPIEntitySelectControl_Name",
+        "FullName": "MscrmControls.FieldControls.KPIEntitySelectControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.FieldControls.KPIEntitySelectControl",
+        "Namespace": "MscrmControls.FieldControls",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "IsWriteOTC",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "FilterByKPI",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.FieldControls.KPIEntitySelectControl_KPIEntitySelectControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/KPIEntitySelectControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.Text",
+    "componentstate": 0,
+    "introducedversion": "9.0.26094.1001",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.FieldControls\" constructor=\"KPIEntitySelectControl\" version=\"1.9.6\" display-name-key=\"CC_SLA_KPIEntitySelectControl_Name\" control-type=\"virtual\"><modes></modes><property name=\"value\" display-name-key=\"CC_KPIEntity_Control_value\" description-key=\"CC_KPIEntity_Control_value_desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"IsWriteOTC\" display-name-key=\"CC_KPIEntity_Control_IsWriteOTC\" description-key=\"CC_KPIEntity_Control_IsWriteOTC_desc\" of-type=\"SingleLine.Text\" usage=\"input\" hidden=\"true\" /><property name=\"FilterByKPI\" display-name-key=\"CC_KPIEntity_Control_FilterByKPI\" description-key=\"CC_KPIEntity_Control_FilterByKPI_desc\" of-type=\"SingleLine.Text\" usage=\"input\" hidden=\"true\" /><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.13\" /></library><code path=\"KPIEntitySelectControl.js\" order=\"2\" /><resx path=\"locale/KPIEntitySelectControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.FieldControls.KPIEntitySelectControl",
+    "supportedplatform": "(Model)",
+    "version": "1.9.6"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.FieldControls.KPIEntitySelectControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdynce_ServiceLevelAgreementExtension",
+      "version": "9.0.26094.1002"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

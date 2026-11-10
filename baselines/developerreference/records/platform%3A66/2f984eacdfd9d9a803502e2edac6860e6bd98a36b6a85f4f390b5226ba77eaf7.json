@@ -1,0 +1,120 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "FlipSwitchControl",
+        "ControlManifestVersion": "1.0.10",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.FlipSwitch.FlipSwitchControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_FlipSwitch_Name",
+        "FullName": "MscrmControls.FlipSwitch.FlipSwitchControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.FlipSwitch.FlipSwitchControl",
+        "Namespace": "MscrmControls.FlipSwitch",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "Type": "TwoOptions",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "jqm-init",
+              "LoadOrder": 2,
+              "Name": "jqm-init",
+              "Type": 0
+            },
+            {
+              "LibraryName": "jqm-flipswitch",
+              "LoadOrder": 3,
+              "Name": "jqm-flipswitch",
+              "Type": 0
+            },
+            {
+              "LibraryName": "jqm-flipswitch-patch",
+              "LoadOrder": 4,
+              "Name": "jqm-flipswitch-patch",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 5,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 6,
+              "Name": "MscrmControls.FlipSwitch.FlipSwitchControl_FlipSwitchControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 7,
+              "Name": "css/jquery.mobile.flipswitch.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/FlipSwitchControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.FlipSwitch\" constructor=\"FlipSwitchControl\" hidden=\"true\" version=\"1.0.10\" display-name-key=\"CC_FlipSwitch_Name\" description-key=\"CC_FlipSwitch_Desc\" preview-image=\"img/preview.png\"><modes><read /><edit /></modes><property name=\"value\" display-name-key=\"CC_Field\" description-key=\"CC_Field_Desc\" of-type=\"TwoOptions\" usage=\"bound\" required=\"true\" hidden=\"true\" /><AvailableOn><web classic=\"enable\" /><phone /><tablet /></AvailableOn><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><library name=\"jqm-init\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/jquerymobile.init.js\" version=\"1.0.0\" /></library><library name=\"jqm-flipswitch\" version=\"&gt;=1.4\" order=\"3\"><packaged_library path=\"libs/jquery.mobile.flipswitch.js\" version=\"1.4.2\" /></library><library name=\"jqm-flipswitch-patch\" version=\"&gt;=1.4\" order=\"4\"><packaged_library path=\"libs/jquery.mobile.flipswitch.patch.js\" version=\"1.4.2\" /></library><library name=\"mscommon\" version=\"&gt;=1\" order=\"5\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><code path=\"FlipSwitchControl.js\" order=\"6\" /><css path=\"css/jquery.mobile.flipswitch.css\" order=\"7\" /><resx path=\"strings/FlipSwitchControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.FlipSwitch.FlipSwitchControl",
+    "supportedplatform": null,
+    "version": "1.0.10"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.FlipSwitch.FlipSwitchControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

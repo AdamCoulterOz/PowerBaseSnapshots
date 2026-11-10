@@ -1,0 +1,126 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "CanvasListControl",
+        "ControlManifestVersion": "1.71.1",
+        "ControlMode": "Read",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Canvas.CanvasListControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "Canvas_List_Control_Name",
+        "FullName": "MscrmControls.Canvas.CanvasListControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.Canvas.CanvasListControl",
+        "Namespace": "MscrmControls.Canvas",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [],
+              "InitialDataSetFetch": true,
+              "Name": "entityData",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "entityName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "schema",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "appName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "appId",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "webPlayer",
+              "LoadOrder": 1,
+              "Name": "webPlayer",
+              "Type": 0
+            },
+            {
+              "LibraryName": "polyfill",
+              "LoadOrder": 1,
+              "Name": "polyfill",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.Canvas.CanvasListControl_CanvasListControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/CanvasListControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Canvas\" constructor=\"CanvasListControl\" version=\"1.71.1\" display-name-key=\"Canvas_List_Control_Name\" description-key=\"Canvas_List_Control_Desc\" preview-image=\"img/CanvasAppLogo.svg\" hidden=\"true\"><data-set name=\"entityData\" display-name-key=\"entityData_name\" description-key=\"entityData_desc\"></data-set><property name=\"entityName\" display-name-key=\"entityName_name\" description-key=\"entityName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" /><property name=\"schema\" display-name-key=\"schema_name\" usage=\"input\" of-type=\"SingleLine.Text\" hidden=\"true\" /><property name=\"appName\" display-name-key=\"appName_name\" description-key=\"appName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" /><property name=\"appId\" display-name-key=\"appId_name\" description-key=\"appId_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" /><modes><read /></modes><AvailableOn><web /></AvailableOn><resources><library name=\"webPlayer\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/WebPlayer.SdkWithOrchestrator.js\" version=\"1.3.58\" /></library><library name=\"polyfill\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/IECustomEventPolyfill.js\" version=\"1.0.0\" /></library><code path=\"CanvasListControl.js\" order=\"2\" /><resx path=\"strings/CanvasListControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.Canvas.CanvasListControl",
+    "supportedplatform": "(Model)",
+    "version": "1.71.1"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Canvas.CanvasListControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

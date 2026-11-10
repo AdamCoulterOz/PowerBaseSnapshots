@@ -1,0 +1,94 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "SvcConfigSettingsControl",
+        "ControlManifestVersion": "1.0.0",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.SvcConfigSettings.SvcConfigSettingsControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_SvcConfigSettingsControl",
+        "FullName": "MscrmControls.AppCommon.SvcConfigSettings.SvcConfigSettingsControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.SvcConfigSettings.SvcConfigSettingsControl",
+        "Namespace": "MscrmControls.AppCommon.SvcConfigSettings",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [],
+          "Resources": [
+            {
+              "LibraryName": "FREShell",
+              "LoadOrder": 1,
+              "Name": "FREShell",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.AppCommon.SvcConfigSettings.SvcConfigSettingsControl_SvcConfigSettingsControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "css/SvcConfigSettingsStyle.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SvcConfigSettingsControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.1904.4006",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.SvcConfigSettings\" constructor=\"SvcConfigSettingsControl\" version=\"1.0.0\" display-name-key=\"CC_SvcConfigSettingsControl\" control-type=\"virtual\"><modes></modes><resources><library name=\"FREShell\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/FREShell.js\" version=\"1.0.0\" /></library><code path=\"SvcConfigSettingsControl.js\" order=\"2\" /><css path=\"css/SvcConfigSettingsStyle.css\" order=\"3\" /><resx path=\"locale/SvcConfigSettingsControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.SvcConfigSettings.SvcConfigSettingsControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.0"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.SvcConfigSettings.SvcConfigSettingsControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch",
+      "version": "9.0.1904.4006"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

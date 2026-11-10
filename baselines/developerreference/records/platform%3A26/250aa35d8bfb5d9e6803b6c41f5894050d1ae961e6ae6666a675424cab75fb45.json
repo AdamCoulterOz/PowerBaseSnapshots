@@ -1,0 +1,158 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": true
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": "Shows all Owner Teams in the organization",
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" savedqueryid=\"e89c1160-4c80-4186-a7f1-5e682f17874b\"><entity name=\"team\"><attribute name=\"name\" /><filter type=\"and\"><condition attribute=\"teamtype\" operator=\"eq\" value=\"0\" /></filter><order attribute=\"name\" descending=\"false\" /><attribute name=\"administratorid\" /><attribute name=\"description\" /><attribute name=\"teamid\" /><attribute name=\"teamtype\" /></entity></fetch>",
+    "introducedversion": "9.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "name",
+        "Name": "teams",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "team"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "name",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "administratorid",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "description",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "teamtype",
+                "RelatedEntityName": "",
+                "Width": 0
+              }
+            ],
+            "Id": "teamid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "team"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "team"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"teams\" jump=\"name\" select=\"1\" icon=\"1\" preview=\"1\" object=\"logical:team\"><row name=\"team\" id=\"teamid\"><cell name=\"name\" width=\"200\" /><cell name=\"administratorid\" width=\"300\" /><cell name=\"description\" width=\"300\" /><cell name=\"teamtype\" ishidden=\"1\" /></row></grid>"
+    },
+    "name": "All User Owner Teams",
+    "offlinesqlquery": "",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 2048,
+    "returnedtypecode": "team",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "e89c1160-4c80-4186-a7f1-5e682f17874b",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "team",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "e89c1160-4c80-4186-a7f1-5e682f17874b"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommon",
+      "version": "9.0.4.0066"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

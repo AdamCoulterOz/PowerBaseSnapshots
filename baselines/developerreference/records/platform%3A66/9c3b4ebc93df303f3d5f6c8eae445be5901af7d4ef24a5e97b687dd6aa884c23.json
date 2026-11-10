@@ -1,0 +1,104 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "BreadcrumbControl",
+        "ControlManifestVersion": "1.0.7",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.SharePointControls.BreadcrumbControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_Bread_Crumb_Control_Name",
+        "FullName": "MscrmControls.SharePointControls.BreadcrumbControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.SharePointControls.BreadcrumbControl",
+        "Namespace": "MscrmControls.SharePointControls",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [],
+              "InitialDataSetFetch": true,
+              "Name": "SharePointBreadcrumbDataSetControl",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "gridState",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.SharePointControls.BreadcrumbControl_SharePointBreadcrumbControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "css/Reflow.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/SharePointBreadcrumbControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.SharePointControls\" constructor=\"BreadcrumbControl\" version=\"1.0.7\" display-name-key=\"CC_Bread_Crumb_Control_Name\" control-type=\"virtual\" hidden=\"true\"><modes><read /><edit /></modes><data-set name=\"SharePointBreadcrumbDataSetControl\" display-name-key=\"CC_SharePoint_Breadcrumb_DataSet\"></data-set><property name=\"gridState\" display-name-key=\"CC_grid_State\" description-key=\"CC_grid_State_Desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"true\" hidden=\"true\" /><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><code path=\"SharePointBreadcrumbControl.js\" order=\"2\" /><css path=\"css/Reflow.css\" order=\"3\" /><resx path=\"strings/SharePointBreadcrumbControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.SharePointControls.BreadcrumbControl",
+    "supportedplatform": null,
+    "version": "1.0.7"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.SharePointControls.BreadcrumbControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

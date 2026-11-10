@@ -1,0 +1,39 @@
+{
+  "configuration": {
+    "componentstate": 0,
+    "description": "Matches email addresses of this form: name@provider.domain and hides the name and provider.",
+    "displayname": "Email Hide Name",
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "maskedcharacter": "*",
+    "maskedrichtestdata": null,
+    "maskedtestdata": null,
+    "name": "Email_HideName",
+    "regularexpression": ".(?=.*@)|(?<=@.*)(?<!@.*\\..*)[^\\.]",
+    "richtestdata": null,
+    "testdata": null,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "Email_HideName"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msft_ColumnLevelSecurityData",
+      "version": "1.3.0.0"
+    }
+  ],
+  "typeIdentity": "entity:maskingrule"
+}

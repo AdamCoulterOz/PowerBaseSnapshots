@@ -1,0 +1,103 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.4",
+        "Children": [],
+        "ConstructorName": "StructuredTemplatesControl",
+        "ControlManifestVersion": "1.26091.1",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.RichTextEditor.StructuredTemplatesControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "StructuredTemplatesControl_Name",
+        "FullName": "MscrmControls.RichTextEditor.StructuredTemplatesControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.RichTextEditor.StructuredTemplatesControl",
+        "Namespace": "MscrmControls.RichTextEditor",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "settingType",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "fluentui-react",
+              "LoadOrder": 1,
+              "Name": "fluentui-react",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.RichTextEditor.StructuredTemplatesControl_bundle.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/StructuredTemplatesControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.26094.1003",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.RichTextEditor\" constructor=\"StructuredTemplatesControl\" version=\"1.26091.1\" display-name-key=\"StructuredTemplatesControl_Name\" description-key=\"StructuredTemplatesControl_Description\" control-type=\"virtual\" api-version=\"1.3.4\"><external-service-usage enabled=\"false\" /><property name=\"settingType\" display-name-key=\"StructuredTemplatesControl_SettingType\" description-key=\"StructuredTemplatesControl_SettingType_Desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" /><resources><code path=\"bundle.js\" order=\"1\" /><resx path=\"strings/StructuredTemplatesControl.1033.resx\" version=\"1.0.0\" /><library name=\"fluentui-react\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/fluentui-react.js\" version=\"8.103.2\" /></library></resources><feature-usage><uses-feature name=\"Utility\" required=\"true\" /><uses-feature name=\"WebAPI\" required=\"true\" /></feature-usage><built-by name=\"pac\" version=\"1.19.4\" /></control></manifest>",
+    "name": "MscrmControls.RichTextEditor.StructuredTemplatesControl",
+    "supportedplatform": "(Model)",
+    "version": "1.26091.1"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.RichTextEditor.StructuredTemplatesControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_RichTextEditor",
+      "version": "9.0.26101.2000"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

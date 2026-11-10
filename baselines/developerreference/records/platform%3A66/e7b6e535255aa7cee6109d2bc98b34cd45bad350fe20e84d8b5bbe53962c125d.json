@@ -1,0 +1,92 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "DualListWrapperControl",
+        "ControlManifestVersion": "1.0.0",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.DualListWrapper.DualListWrapperControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_DualListWrapper",
+        "FullName": "MscrmControls.AppCommon.DualListWrapper.DualListWrapperControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.DualListWrapper.DualListWrapperControl",
+        "Namespace": "MscrmControls.AppCommon.DualListWrapper",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "Selection",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "FREShell",
+              "LoadOrder": 1,
+              "Name": "FREShell",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.AppCommon.DualListWrapper.DualListWrapperControl_DualListWrapper.js",
+              "Type": 4
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.Text",
+    "componentstate": 0,
+    "introducedversion": "9.0.1904.4006",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.DualListWrapper\" constructor=\"DualListWrapperControl\" version=\"1.0.0\" display-name-key=\"CC_DualListWrapper\" control-type=\"virtual\"><modes></modes><property name=\"Selection\" display-name-key=\"cc_availableValues_id\" description-key=\"CC_DualListSelection_Selection_Desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><resources><code path=\"DualListWrapper.js\" order=\"1\" /><library name=\"FREShell\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/FREShell.js\" version=\"1.0.0\" /></library></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.DualListWrapper.DualListWrapperControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.0"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.DualListWrapper.DualListWrapperControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch",
+      "version": "9.0.1904.4006"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

@@ -1,0 +1,206 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "CalendarControl",
+        "ControlManifestVersion": "1.2.25",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Calendar.CalendarControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_Calendar_Name",
+        "FullName": "MscrmControls.Calendar.CalendarControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.Calendar.CalendarControl",
+        "Namespace": "MscrmControls.Calendar",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "displayCommandBar:true",
+              "Columns": [
+                {
+                  "Hidden": false,
+                  "Name": "StartDate",
+                  "Required": true,
+                  "TypeGroup": "Dates",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "Description",
+                  "Required": true,
+                  "TypeGroup": "AllTypes",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "EndDate",
+                  "Required": false,
+                  "TypeGroup": "Dates",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "Duration",
+                  "Required": false,
+                  "Type": "Whole.Duration",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "Color",
+                  "Required": false,
+                  "Type": "OptionSet",
+                  "Usage": 0
+                }
+              ],
+              "InitialDataSetFetch": true,
+              "Name": "Calendar",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "DisplayMode",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "30",
+              "Hidden": false,
+              "Name": "MinimumDuration",
+              "Required": false,
+              "Type": "Whole.Duration",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ExtraDescriptionFormat",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ColorFallbackBehavior",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "dhtmlxscheduler",
+              "LoadOrder": 2,
+              "Name": "dhtmlxscheduler",
+              "Type": 0
+            },
+            {
+              "LibraryName": "dhtmlxscheduler_limit",
+              "LoadOrder": 3,
+              "Name": "dhtmlxscheduler_limit",
+              "Type": 0
+            },
+            {
+              "LibraryName": "webix",
+              "LoadOrder": 4,
+              "Name": "webix",
+              "Type": 0
+            },
+            {
+              "LibraryName": "webix_scheduler",
+              "LoadOrder": 6,
+              "Name": "webix_scheduler",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 5,
+              "Name": "MscrmControls.Calendar.CalendarControl_Calendar.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 7,
+              "Name": "libs/dhtmlx/dhtmlxscheduler.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 8,
+              "Name": "libs/webix/scheduler/scheduler.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 9,
+              "Name": "libs/webix/webix.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 10,
+              "Name": "css/calendar-theme.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 11,
+              "Name": "css/advanced-calendar-theme.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/Calendar.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Calendar\" constructor=\"CalendarControl\" hidden=\"true\" version=\"1.2.25\" display-name-key=\"CC_Calendar_Name\" description-key=\"CC_Calendar_Desc\" preview-image=\"img/preview.png\"><modes><read /><edit /></modes><type-group name=\"Dates\"><type>DateAndTime.DateAndTime</type><type>DateAndTime.DateOnly</type></type-group><type-group name=\"AllTypes\"><type>Whole.None</type><type>Whole.Duration</type><type>Whole.TimeZone</type><type>Whole.Language</type><type>TwoOptions</type><type>DateAndTime.DateOnly</type><type>DateAndTime.DateAndTime</type><type>Decimal</type><type>Enum</type><type>FP</type><type>Lookup.Simple</type><type>Lookup.Customer</type><type>Lookup.Owner</type><type>Lookup.PartyList</type><type>Lookup.Regarding</type><type>Multiple</type><type>Currency</type><type>OptionSet</type><type>SingleLine.Email</type><type>SingleLine.Text</type><type>SingleLine.TextArea</type><type>SingleLine.URL</type><type>SingleLine.Ticker</type><type>SingleLine.Phone</type></type-group><AvailableOn><web classic=\"disable\" /><phone /><tablet /></AvailableOn><!--\n\t\t\tIMPORTANT: \n\t\t\tAny change to the manifest may need to be reflected in:\n\n\t\t\t1) out-of-box customization at ClientBuildTasks. \n\t\t\t\ta. Update \\src\\client\\public\\ext\\src\\ClientBuildTasks\\CustomContolsSolution\\CustomControlsDefaultConfigManager.cs and related\n\t\t\t\tb. Rebuild and update Crm.ClientBuildTasks nuget package\n\t\t\t2) solution export script for downgrade compatibility\n\t\t\t\ta. Update \\src\\Core\\ObjectModel\\ImportExportPublish\\ExportAs\\CustomControls\\CalendarControlExportAsHandler.cs\n\t\t--><data-set name=\"Calendar\" display-name-key=\"CC_Calendar_DSCalendar\" cds-data-set-options=\"displayCommandBar:true\"><property-set name=\"StartDate\" required=\"true\" display-name-key=\"CC_Calendar_StartDate\" description-key=\"CC_Calendar_StartDate_Desc\" usage=\"bound\" of-type-group=\"Dates\" /><property-set name=\"Description\" required=\"true\" display-name-key=\"CC_Calendar_Description\" description-key=\"CC_Calendar_Description_Desc\" usage=\"bound\" of-type-group=\"AllTypes\" /><property-set name=\"EndDate\" required=\"false\" display-name-key=\"CC_Calendar_EndDate\" description-key=\"CC_Calendar_EndDate_Desc\" usage=\"bound\" of-type-group=\"Dates\" /><property-set name=\"Duration\" required=\"false\" display-name-key=\"CC_Calendar_Duration\" description-key=\"CC_Calendar_Duration_Desc\" usage=\"bound\" of-type=\"Whole.Duration\" /><property-set name=\"Color\" required=\"false\" display-name-key=\"CC_AdvancedCalendar_Color\" description-key=\"CC_AdvancedCalendar_Color_Desc\" usage=\"bound\" of-type=\"OptionSet\" /></data-set><property name=\"DisplayMode\" display-name-key=\"CC_AdvancedCalendar_DisplayMode\" description-key=\"CC_AdvancedCalendar_DisplayMode_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"StackedWithoutTimeline\" display-name-key=\"CC_AdvancedCalendar_StackedWithoutTimeline\" description-key=\"CC_AdvancedCalendar_StackedWithoutTimeline_Desc\">stackedwithouttimeline</value><value name=\"AnchoredWithHoursOfTheDayTimeline\" display-name-key=\"CC_AdvancedCalendar_AnchoredWithHoursOfTheDayTimeline\" description-key=\"CC_AdvancedCalendar_AnchoredWithHoursOfTheDayTimeline_Desc\" default=\"true\">anchoredwithhoursofthedaytimeline</value><value name=\"StackedWithDurationTimeline\" display-name-key=\"CC_AdvancedCalendar_StackedWithDurationTimeline\" description-key=\"CC_AdvancedCalendar_StackedWithDurationTimeline_Desc\">stackedwithdurationtimeline</value></property><property name=\"MinimumDuration\" display-name-key=\"CC_AdvancedCalendar_MinimumDuration\" description-key=\"CC_AdvancedCalendar_MinimumDuration_Desc\" usage=\"input\" of-type=\"Whole.Duration\" required=\"false\" hidden=\"false\" default-value=\"30\" /><property name=\"ExtraDescriptionFormat\" display-name-key=\"CC_AdvancedCalendar_ExtraDescriptionFormat\" description-key=\"CC_AdvancedCalendar_ExtraDescriptionFormat_Desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"false\" /><property name=\"ColorFallbackBehavior\" display-name-key=\"CC_AdvancedCalendar_ColorFallbackBehavior\" description-key=\"CC_AdvancedCalendar_ColorFallbackBehavior_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"ColorFromEntity\" display-name-key=\"CC_AdvancedCalendar_ColorFromEntity\" description-key=\"CC_AdvancedCalendar_ColorFromEntity_Desc\" default=\"true\">colorfromentity</value><value name=\"ColorFromFirstOptionSet\" display-name-key=\"CC_AdvancedCalendar_ColorFromFirstOptionSet\" description-key=\"CC_AdvancedCalendar_ColorFromFirstOptionSet_Desc\">colorfromfirstoptionset</value></property><resources><library name=\"mscommon\" version=\"&gt;=1.1.0\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.2\" /></library><library name=\"dhtmlxscheduler\" version=\"&gt;=4\" order=\"2\"><packaged_library path=\"libs/dhtmlx/dhtmlxscheduler.js\" version=\"4.0.2\" /></library><library name=\"dhtmlxscheduler_limit\" version=\"&gt;=4\" order=\"3\"><packaged_library path=\"libs/dhtmlx/ext/dhtmlxscheduler_limit.js\" version=\"4.0.1\" /></library><library name=\"webix\" version=\"&gt;=4\" order=\"4\"><packaged_library path=\"libs/webix/webix.js\" version=\"4.1.7\" /></library><code path=\"Calendar.js\" order=\"5\" /><library name=\"webix_scheduler\" version=\"&gt;=4\" order=\"6\"><packaged_library path=\"libs/webix/scheduler/scheduler.js\" version=\"4.1.5\" /></library><css path=\"libs/dhtmlx/dhtmlxscheduler.css\" order=\"7\" /><css path=\"libs/webix/scheduler/scheduler.css\" order=\"8\" /><css path=\"libs/webix/webix.css\" order=\"9\" /><css path=\"css/calendar-theme.css\" order=\"10\" /><css path=\"css/advanced-calendar-theme.css\" order=\"11\" /><resx path=\"strings/Calendar.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.Calendar.CalendarControl",
+    "supportedplatform": null,
+    "version": "1.2.25"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Calendar.CalendarControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

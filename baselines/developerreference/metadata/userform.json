@@ -1,0 +1,4840 @@
+{
+  "configuration": {
+    "ActivityTypeMask": 0,
+    "Attributes": [
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Lookup",
+        "AttributeTypeName": {
+          "Value": "LookupType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 1,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Shows who created the record.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Created By",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "None",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "createdby",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "CreatedBy",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "systemuser"
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "createdby",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 2,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DatabaseLength": 320,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "createdbyname",
+        "MaxLength": 100,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "CreatedByName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "createdby",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 3,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DatabaseLength": 320,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "createdbyyominame",
+        "MaxLength": 100,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "CreatedByYomiName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": "createdbyname"
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexDateTimeAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "DateTime",
+        "AttributeTypeName": {
+          "Value": "DateTimeType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanChangeDateTimeBehavior": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifybehavior",
+          "Value": false
+        },
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 4,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DateTimeBehavior": {
+          "Value": "UserLocal"
+        },
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Created On",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "DateAndTime",
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Inactive",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "createdon",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "CreatedOn",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Lookup",
+        "AttributeTypeName": {
+          "Value": "LookupType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 28,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Shows who created the record on behalf of another user.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Created By (Delegate)",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "None",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "createdonbehalfby",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "CreatedOnBehalfBy",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "systemuser"
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "createdonbehalfby",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 30,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DatabaseLength": 320,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "createdonbehalfbyname",
+        "MaxLength": 100,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "CreatedOnBehalfByName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "createdonbehalfby",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 31,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DatabaseLength": 320,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "createdonbehalfbyyominame",
+        "MaxLength": 100,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "CreatedOnBehalfByYomiName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": "createdonbehalfbyname"
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexMemoAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Memo",
+        "AttributeTypeName": {
+          "Value": "MemoType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 5,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Type additional information to describe the form or dashboard, such as the filter criteria or intended audience.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Description",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "description",
+        "MaxLength": 2000,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "Description",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexMemoAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Memo",
+        "AttributeTypeName": {
+          "Value": "MemoType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": false
+        },
+        "ColumnNumber": 37,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Json representation of the form layout.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Json representation of the form layout.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "TextArea",
+        "FormatName": {
+          "Value": "TextArea"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "9.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "formjson",
+        "MaxLength": 1073741823,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "FormJson",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexMemoAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Memo",
+        "AttributeTypeName": {
+          "Value": "MemoType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 6,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Shows the XML representation of the layout of the form or dashboard.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "TextArea",
+        "FormatName": {
+          "Value": "TextArea"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "formxml",
+        "MaxLength": 1073741823,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "FormXml",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexBooleanAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Boolean",
+        "AttributeTypeName": {
+          "Value": "BooleanType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 33,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DefaultValue": false,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Information that specifies whether the dashboard is enabled for tablet.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Is Tablet Enabled",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "7.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "istabletenabled",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "OptionSet": {
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "Indicates the system wide default for a particular form type.",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "State",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "ExternalTypeName": null,
+          "FalseOption": {
+            "Color": null,
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            },
+            "ExternalValue": null,
+            "HasChanged": null,
+            "IsHidden": false,
+            "IsManaged": true,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "HasChanged": null,
+                  "IsManaged": true,
+                  "Label": "No",
+                  "LanguageCode": 1033
+                }
+              ],
+              "UserLocalizedLabel": {
+                "kind": "localized-label-reference",
+                "languageCode": 1033
+              }
+            },
+            "MetadataId": null,
+            "ParentValues": [],
+            "Tag": null,
+            "Value": 0
+          },
+          "HasChanged": null,
+          "IntroducedVersion": "7.0.0.0",
+          "IsCustomOptionSet": false,
+          "IsCustomizable": {
+            "CanBeChanged": false,
+            "ManagedPropertyLogicalName": "iscustomizable",
+            "Value": false
+          },
+          "IsGlobal": false,
+          "IsManaged": true,
+          "Name": "userform_istabletenabled",
+          "OptionSetType": "Boolean",
+          "TrueOption": {
+            "Color": null,
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            },
+            "ExternalValue": null,
+            "HasChanged": null,
+            "IsHidden": false,
+            "IsManaged": true,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "HasChanged": null,
+                  "IsManaged": true,
+                  "Label": "Yes",
+                  "LanguageCode": 1033
+                }
+              ],
+              "UserLocalizedLabel": {
+                "kind": "localized-label-reference",
+                "languageCode": 1033
+              }
+            },
+            "MetadataId": null,
+            "ParentValues": [],
+            "Tag": null,
+            "Value": 1
+          }
+        },
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "IsTabletEnabled",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Lookup",
+        "AttributeTypeName": {
+          "Value": "LookupType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 7,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Shows who last updated the record.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Modified By",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "None",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "modifiedby",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "ModifiedBy",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "systemuser"
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "modifiedby",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 8,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DatabaseLength": 320,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "modifiedbyname",
+        "MaxLength": 100,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "ModifiedByName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "modifiedby",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 9,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DatabaseLength": 320,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "modifiedbyyominame",
+        "MaxLength": 100,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "ModifiedByYomiName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": "modifiedbyname"
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexDateTimeAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "DateTime",
+        "AttributeTypeName": {
+          "Value": "DateTimeType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanChangeDateTimeBehavior": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifybehavior",
+          "Value": false
+        },
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 10,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DateTimeBehavior": {
+          "Value": "UserLocal"
+        },
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Modified On",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "DateAndTime",
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Inactive",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "modifiedon",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "ModifiedOn",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Lookup",
+        "AttributeTypeName": {
+          "Value": "LookupType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 24,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Shows who created the record on behalf of another user.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Created By (Delegate)",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "None",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "modifiedonbehalfby",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "ModifiedOnBehalfBy",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "systemuser"
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "modifiedonbehalfby",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 26,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DatabaseLength": 320,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "modifiedonbehalfbyname",
+        "MaxLength": 100,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "ModifiedOnBehalfByName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "modifiedonbehalfby",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 27,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DatabaseLength": 320,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "modifiedonbehalfbyyominame",
+        "MaxLength": 100,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "ModifiedOnBehalfByYomiName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": "modifiedonbehalfbyname"
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 11,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DatabaseLength": 200,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Type a descriptive name for the form or dashboard.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Name",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": true,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "name",
+        "MaxLength": 100,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "Name",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexEntityNameAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "EntityName",
+        "AttributeTypeName": {
+          "Value": "EntityNameType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 12,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DefaultFormValue": -1,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Shows the record type (entity) code that the form applies to.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsEntityReferenceStored": true,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "objecttypecode",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "OptionSet": {
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "Code that represents the record type.",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "DisplayName": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "ExternalTypeName": null,
+          "HasChanged": null,
+          "IntroducedVersion": "5.0.0.0",
+          "IsCustomOptionSet": false,
+          "IsCustomizable": {
+            "CanBeChanged": false,
+            "ManagedPropertyLogicalName": "iscustomizable",
+            "Value": false
+          },
+          "IsGlobal": false,
+          "IsManaged": true,
+          "Name": "userform_objecttypecode",
+          "OptionSetType": "Picklist",
+          "Options": [],
+          "ParentOptionSetName": null
+        },
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "ObjectTypeCode",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "AttributeOf": "objecttypecode",
+        "AttributeType": "Virtual",
+        "AttributeTypeName": {
+          "Value": "VirtualType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 13,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "For internal use only.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "objecttypecodename",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "ObjectTypeCodeName",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Owner",
+        "AttributeTypeName": {
+          "Value": "OwnerType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 14,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Enter the user or team who is assigned to manage the record. This field is updated every time the record is assigned to a different user.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Owner",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "None",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": true,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "ownerid",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "OwnerId",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "systemuser",
+          "team"
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "ownerid",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 15,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DatabaseLength": 320,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "owneridname",
+        "MaxLength": 100,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "OwnerIdName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexEntityNameAttributeMetadata",
+        "AttributeOf": "ownerid",
+        "AttributeType": "EntityName",
+        "AttributeTypeName": {
+          "Value": "EntityNameType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 16,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DefaultFormValue": null,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsEntityReferenceStored": true,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "owneridtype",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "OptionSet": null,
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "OwnerIdType",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "ownerid",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 17,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DatabaseLength": 320,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "owneridyominame",
+        "MaxLength": 100,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "OwnerIdYomiName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": "owneridname"
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Lookup",
+        "AttributeTypeName": {
+          "Value": "LookupType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 18,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Shows the business unit that the record owner belongs to.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Owning Business Unit",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "None",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": true,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "owningbusinessunit",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "OwningBusinessUnit",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "businessunit"
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "owningbusinessunit",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 10000,
+        "CreatedOn": "2026-10-29T14:46:57Z",
+        "DatabaseLength": 320,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "owningbusinessunitname",
+        "MaxLength": 160,
+        "ModifiedOn": "2026-10-29T14:46:57Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "OwningBusinessUnitName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Lookup",
+        "AttributeTypeName": {
+          "Value": "LookupType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 32,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Unique identifier of the team who owns the dashboard.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Owning Team",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "None",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "owningteam",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "OwningTeam",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "team"
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Lookup",
+        "AttributeTypeName": {
+          "Value": "LookupType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 19,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Unique identifier of the user who owns the dashboard.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Owning User",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "Format": "None",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "owninguser",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "OwningUser",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "systemuser"
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexPicklistAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Picklist",
+        "AttributeTypeName": {
+          "Value": "PicklistType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ChildPicklistLogicalNames": [],
+        "ColumnNumber": 20,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DefaultFormValue": -1,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Select the form type.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Form Type",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "FormulaDefinition": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "type",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "OptionSet": {
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "Identifies the form type.",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "Type",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "ExternalTypeName": null,
+          "HasChanged": null,
+          "IntroducedVersion": "5.0.0.0",
+          "IsCustomOptionSet": false,
+          "IsCustomizable": {
+            "CanBeChanged": false,
+            "ManagedPropertyLogicalName": "iscustomizable",
+            "Value": false
+          },
+          "IsGlobal": false,
+          "IsManaged": true,
+          "Name": "userform_type",
+          "OptionSetType": "Picklist",
+          "Options": [
+            {
+              "Color": null,
+              "Description": {
+                "LocalizedLabels": [],
+                "UserLocalizedLabel": null
+              },
+              "ExternalValue": null,
+              "HasChanged": null,
+              "IsHidden": false,
+              "IsManaged": true,
+              "Label": {
+                "LocalizedLabels": [
+                  {
+                    "HasChanged": null,
+                    "IsManaged": true,
+                    "Label": "Dashboard",
+                    "LanguageCode": 1033
+                  }
+                ],
+                "UserLocalizedLabel": {
+                  "kind": "localized-label-reference",
+                  "languageCode": 1033
+                }
+              },
+              "MetadataId": null,
+              "ParentValues": [],
+              "Tag": null,
+              "Value": 0
+            },
+            {
+              "Color": null,
+              "Description": {
+                "LocalizedLabels": [],
+                "UserLocalizedLabel": null
+              },
+              "ExternalValue": null,
+              "HasChanged": null,
+              "IsHidden": false,
+              "IsManaged": true,
+              "Label": {
+                "LocalizedLabels": [
+                  {
+                    "HasChanged": null,
+                    "IsManaged": true,
+                    "Label": "Power BI Dashboard",
+                    "LanguageCode": 1033
+                  }
+                ],
+                "UserLocalizedLabel": {
+                  "kind": "localized-label-reference",
+                  "languageCode": 1033
+                }
+              },
+              "MetadataId": null,
+              "ParentValues": [],
+              "Tag": null,
+              "Value": 103
+            }
+          ],
+          "ParentOptionSetName": null
+        },
+        "ParentPicklistLogicalName": null,
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "Type",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "AttributeOf": "type",
+        "AttributeType": "Virtual",
+        "AttributeTypeName": {
+          "Value": "VirtualType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 21,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": true,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "typename",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "TypeName",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "AttributeOf": null,
+        "AttributeType": "Uniqueidentifier",
+        "AttributeTypeName": {
+          "Value": "UniqueidentifierType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 22,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Unique identifier of the user dashboard.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "User Dashboard",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": true,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "userformid",
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "UserFormId",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexBigIntAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "BigInt",
+        "AttributeTypeName": {
+          "Value": "BigIntType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 23,
+        "CreatedOn": "1900-01-01T00:00:00Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "userform",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": false
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "versionnumber",
+        "MaxValue": 9223372036854775807,
+        "MinValue": -9223372036854775808,
+        "ModifiedOn": "1900-01-01T00:00:00Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "VersionNumber",
+        "Settings": [],
+        "SourceType": null
+      }
+    ],
+    "AutoCreateAccessTeams": false,
+    "AutoReplicateClusterRecords": false,
+    "AutoRouteToOwnerQueue": false,
+    "CanBeInCustomEntityAssociation": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canbeincustomentityassociation",
+      "Value": false
+    },
+    "CanBeInManyToMany": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canbeinmanytomany",
+      "Value": false
+    },
+    "CanBePrimaryEntityInRelationship": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canbeprimaryentityinrelationship",
+      "Value": false
+    },
+    "CanBeRelatedEntityInRelationship": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canberelatedentityinrelationship",
+      "Value": false
+    },
+    "CanChangeClusterMode": true,
+    "CanChangeHierarchicalRelationship": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canchangehierarchicalrelationship",
+      "Value": false
+    },
+    "CanChangeTrackingBeEnabled": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canchangetrackingbeenabled",
+      "Value": false
+    },
+    "CanCreateAttributes": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "cancreateattributes",
+      "Value": false
+    },
+    "CanCreateCharts": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "cancreatecharts",
+      "Value": false
+    },
+    "CanCreateForms": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "cancreateforms",
+      "Value": false
+    },
+    "CanCreateViews": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "cancreateviews",
+      "Value": false
+    },
+    "CanEnableSyncToExternalSearchIndex": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canenablesynctoexternalsearchindex",
+      "Value": false
+    },
+    "CanModifyAdditionalSettings": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+      "Value": false
+    },
+    "CanTriggerWorkflow": false,
+    "ChangeTrackingEnabled": false,
+    "ClusterMode": "Local",
+    "CollectionSchemaName": "UserForms",
+    "CreatedOn": "1900-01-01T00:00:00Z",
+    "DataProviderId": null,
+    "DataSourceId": null,
+    "DaysSinceRecordLastModified": 0,
+    "DefaultToLocalPartition": false,
+    "Description": {
+      "LocalizedLabels": [
+        {
+          "HasChanged": null,
+          "IsManaged": true,
+          "Label": "User-owned dashboards.",
+          "LanguageCode": 1033
+        }
+      ],
+      "UserLocalizedLabel": {
+        "kind": "localized-label-reference",
+        "languageCode": 1033
+      }
+    },
+    "DisplayCollectionName": {
+      "LocalizedLabels": [
+        {
+          "HasChanged": null,
+          "IsManaged": true,
+          "Label": "User Dashboards",
+          "LanguageCode": 1033
+        }
+      ],
+      "UserLocalizedLabel": {
+        "kind": "localized-label-reference",
+        "languageCode": 1033
+      }
+    },
+    "DisplayName": {
+      "LocalizedLabels": [
+        {
+          "HasChanged": null,
+          "IsManaged": true,
+          "Label": "User Dashboard",
+          "LanguageCode": 1033
+        }
+      ],
+      "UserLocalizedLabel": {
+        "kind": "localized-label-reference",
+        "languageCode": 1033
+      }
+    },
+    "EnforceStateTransitions": false,
+    "EntityColor": null,
+    "EntityHelpUrl": null,
+    "EntityHelpUrlEnabled": false,
+    "EntitySetName": "userforms",
+    "ExternalCollectionName": null,
+    "ExternalName": null,
+    "HasActivities": false,
+    "HasChanged": null,
+    "HasEmailAddresses": false,
+    "HasFeedback": false,
+    "HasNotes": false,
+    "IconLargeName": null,
+    "IconMediumName": null,
+    "IconSmallName": null,
+    "IconVectorName": null,
+    "IntroducedVersion": "5.0.0.0",
+    "IsAIRUpdated": false,
+    "IsActivity": false,
+    "IsActivityParty": false,
+    "IsArchivalEnabled": false,
+    "IsAuditEnabled": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyauditsettings",
+      "Value": false
+    },
+    "IsAvailableOffline": true,
+    "IsBPFEntity": false,
+    "IsBusinessProcessEnabled": false,
+    "IsChildEntity": false,
+    "IsConnectionsEnabled": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyconnectionsettings",
+      "Value": false
+    },
+    "IsCustomEntity": false,
+    "IsCustomizable": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "iscustomizable",
+      "Value": false
+    },
+    "IsDocumentManagementEnabled": false,
+    "IsDocumentRecommendationsEnabled": false,
+    "IsDuplicateDetectionEnabled": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyduplicatedetectionsettings",
+      "Value": false
+    },
+    "IsEnabledForCharts": false,
+    "IsEnabledForExternalChannels": false,
+    "IsEnabledForTrace": false,
+    "IsImportable": false,
+    "IsInteractionCentricEnabled": false,
+    "IsIntersect": false,
+    "IsKnowledgeManagementEnabled": false,
+    "IsLogicalEntity": false,
+    "IsMSTeamsIntegrationEnabled": false,
+    "IsMailMergeEnabled": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifymailmergesettings",
+      "Value": false
+    },
+    "IsManaged": true,
+    "IsMappable": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "ismappable",
+      "Value": false
+    },
+    "IsOfflineInMobileClient": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifymobileclientoffline",
+      "Value": false
+    },
+    "IsOneNoteIntegrationEnabled": false,
+    "IsOptimisticConcurrencyEnabled": true,
+    "IsPrivate": false,
+    "IsQuickCreateEnabled": false,
+    "IsReadOnlyInMobileClient": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifymobileclientreadonly",
+      "Value": false
+    },
+    "IsReadingPaneEnabled": true,
+    "IsRenameable": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "isrenameable",
+      "Value": false
+    },
+    "IsRetentionEnabled": false,
+    "IsRetrieveAuditEnabled": false,
+    "IsRetrieveMultipleAuditEnabled": false,
+    "IsSLAEnabled": false,
+    "IsSolutionAware": false,
+    "IsStateModelAware": false,
+    "IsValidForAdvancedFind": false,
+    "IsValidForQueue": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyqueuesettings",
+      "Value": false
+    },
+    "IsVisibleInMobile": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifymobilevisibility",
+      "Value": false
+    },
+    "IsVisibleInMobileClient": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifymobileclientvisibility",
+      "Value": false
+    },
+    "Keys": [],
+    "LogicalCollectionName": "userforms",
+    "LogicalName": "userform",
+    "ManyToManyRelationships": [],
+    "ManyToOneRelationships": [
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "NoCascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": false,
+        "ReferencedAttribute": "businessunitid",
+        "ReferencedEntity": "businessunit",
+        "ReferencedEntityNavigationPropertyName": "business_unit_userform",
+        "ReferencingAttribute": "owningbusinessunit",
+        "ReferencingEntity": "userform",
+        "ReferencingEntityNavigationPropertyName": "owningbusinessunit",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "business_unit_userform",
+        "SecurityTypes": "None"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "NoCascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": false,
+        "ReferencedAttribute": "systemuserid",
+        "ReferencedEntity": "systemuser",
+        "ReferencedEntityNavigationPropertyName": "lk_userform_createdby",
+        "ReferencingAttribute": "createdby",
+        "ReferencingEntity": "userform",
+        "ReferencingEntityNavigationPropertyName": "createdby",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "lk_userform_createdby",
+        "SecurityTypes": "None"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "NoCascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": false,
+        "ReferencedAttribute": "systemuserid",
+        "ReferencedEntity": "systemuser",
+        "ReferencedEntityNavigationPropertyName": "lk_userform_modifiedby",
+        "ReferencingAttribute": "modifiedby",
+        "ReferencingEntity": "userform",
+        "ReferencingEntityNavigationPropertyName": "modifiedby",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "lk_userform_modifiedby",
+        "SecurityTypes": "None"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "NoCascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": true,
+        "ReferencedAttribute": "systemuserid",
+        "ReferencedEntity": "systemuser",
+        "ReferencedEntityNavigationPropertyName": "lk_userformbase_createdonbehalfby",
+        "ReferencingAttribute": "createdonbehalfby",
+        "ReferencingEntity": "userform",
+        "ReferencingEntityNavigationPropertyName": "createdonbehalfby",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "lk_userformbase_createdonbehalfby",
+        "SecurityTypes": "None"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "NoCascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": true,
+        "ReferencedAttribute": "systemuserid",
+        "ReferencedEntity": "systemuser",
+        "ReferencedEntityNavigationPropertyName": "lk_userformbase_modifiedonbehalfby",
+        "ReferencingAttribute": "modifiedonbehalfby",
+        "ReferencingEntity": "userform",
+        "ReferencingEntityNavigationPropertyName": "modifiedonbehalfby",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "lk_userformbase_modifiedonbehalfby",
+        "SecurityTypes": "None"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "NoCascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": false,
+        "ReferencedAttribute": "ownerid",
+        "ReferencedEntity": "owner",
+        "ReferencedEntityNavigationPropertyName": "owner_userform",
+        "ReferencingAttribute": "ownerid",
+        "ReferencingEntity": "userform",
+        "ReferencingEntityNavigationPropertyName": "ownerid",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "owner_userform",
+        "SecurityTypes": "None"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "NoCascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": false,
+        "ReferencedAttribute": "teamid",
+        "ReferencedEntity": "team",
+        "ReferencedEntityNavigationPropertyName": "team_userform",
+        "ReferencingAttribute": "owningteam",
+        "ReferencingEntity": "userform",
+        "ReferencingEntityNavigationPropertyName": "owningteam",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "team_userform",
+        "SecurityTypes": "None"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "NoCascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": false,
+        "ReferencedAttribute": "systemuserid",
+        "ReferencedEntity": "systemuser",
+        "ReferencedEntityNavigationPropertyName": "user_userform",
+        "ReferencingAttribute": "owninguser",
+        "ReferencingEntity": "userform",
+        "ReferencingEntityNavigationPropertyName": "owninguser",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "user_userform",
+        "SecurityTypes": "None"
+      }
+    ],
+    "MobileOfflineFilters": "",
+    "ModifiedOn": "2026-10-29T14:39:05Z",
+    "ObjectTypeCode": 1031,
+    "OneToManyRelationships": [
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "NoCascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": false,
+        "ReferencedAttribute": "userformid",
+        "ReferencedEntity": "userform",
+        "ReferencedEntityNavigationPropertyName": "UserForm_AsyncOperations",
+        "ReferencingAttribute": "regardingobjectid",
+        "ReferencingEntity": "asyncoperation",
+        "ReferencingEntityNavigationPropertyName": "regardingobjectid_userform",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "UserForm_AsyncOperations",
+        "SecurityTypes": "None"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "Cascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": false,
+        "ReferencedAttribute": "userformid",
+        "ReferencedEntity": "userform",
+        "ReferencedEntityNavigationPropertyName": "UserForm_BulkDeleteFailures",
+        "ReferencingAttribute": "regardingobjectid",
+        "ReferencingEntity": "bulkdeletefailure",
+        "ReferencingEntityNavigationPropertyName": "regardingobjectid_userform",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "UserForm_BulkDeleteFailures",
+        "SecurityTypes": "None"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "Cascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "6.1.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": true,
+        "ReferencedAttribute": "userformid",
+        "ReferencedEntity": "userform",
+        "ReferencedEntityNavigationPropertyName": "socialinsightsconfiguration_userform",
+        "ReferencingAttribute": "formid",
+        "ReferencingEntity": "socialinsightsconfiguration",
+        "ReferencingEntityNavigationPropertyName": "formid_userform",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 1,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "socialinsightsconfiguration_userform",
+        "SecurityTypes": "Append"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": false,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": null,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "Cascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "5.0.0.0",
+        "IsCustomRelationship": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": false,
+        "ReferencedAttribute": "userformid",
+        "ReferencedEntity": "userform",
+        "ReferencedEntityNavigationPropertyName": "userentityinstancedata_userform",
+        "ReferencingAttribute": "objectid",
+        "ReferencingEntity": "userentityinstancedata",
+        "ReferencingEntityNavigationPropertyName": "objectid_userform",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 0,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "userentityinstancedata_userform",
+        "SecurityTypes": "None"
+      }
+    ],
+    "OwnerId": null,
+    "OwnerIdType": 8,
+    "OwnershipType": "UserOwned",
+    "OwningBusinessUnit": null,
+    "PrimaryIdAttribute": "userformid",
+    "PrimaryImageAttribute": null,
+    "PrimaryKey": [],
+    "PrimaryNameAttribute": "name",
+    "Privileges": [
+      {
+        "CanBeBasic": true,
+        "CanBeDeep": false,
+        "CanBeEntityReference": false,
+        "CanBeGlobal": true,
+        "CanBeLocal": false,
+        "CanBeParentEntityReference": false,
+        "CanBeRecordFilter": false,
+        "Name": "prvAssignUserForm",
+        "PrivilegeId": {
+          "componentType": 16,
+          "exportIdentity": {
+            "kind": "role-contained-privilege-name",
+            "portability": "not-established",
+            "value": "prvAssignUserForm"
+          },
+          "kind": "typed-reference"
+        },
+        "PrivilegeType": "Assign"
+      },
+      {
+        "CanBeBasic": true,
+        "CanBeDeep": false,
+        "CanBeEntityReference": false,
+        "CanBeGlobal": false,
+        "CanBeLocal": false,
+        "CanBeParentEntityReference": false,
+        "CanBeRecordFilter": false,
+        "Name": "prvCreateUserForm",
+        "PrivilegeId": {
+          "componentType": 16,
+          "exportIdentity": {
+            "kind": "role-contained-privilege-name",
+            "portability": "not-established",
+            "value": "prvCreateUserForm"
+          },
+          "kind": "typed-reference"
+        },
+        "PrivilegeType": "Create"
+      },
+      {
+        "CanBeBasic": true,
+        "CanBeDeep": false,
+        "CanBeEntityReference": false,
+        "CanBeGlobal": false,
+        "CanBeLocal": false,
+        "CanBeParentEntityReference": false,
+        "CanBeRecordFilter": false,
+        "Name": "prvDeleteUserForm",
+        "PrivilegeId": {
+          "componentType": 16,
+          "exportIdentity": {
+            "kind": "role-contained-privilege-name",
+            "portability": "not-established",
+            "value": "prvDeleteUserForm"
+          },
+          "kind": "typed-reference"
+        },
+        "PrivilegeType": "Delete"
+      },
+      {
+        "CanBeBasic": true,
+        "CanBeDeep": false,
+        "CanBeEntityReference": false,
+        "CanBeGlobal": false,
+        "CanBeLocal": false,
+        "CanBeParentEntityReference": false,
+        "CanBeRecordFilter": false,
+        "Name": "prvReadUserForm",
+        "PrivilegeId": {
+          "componentType": 16,
+          "exportIdentity": {
+            "kind": "role-contained-privilege-name",
+            "portability": "not-established",
+            "value": "prvReadUserForm"
+          },
+          "kind": "typed-reference"
+        },
+        "PrivilegeType": "Read"
+      },
+      {
+        "CanBeBasic": true,
+        "CanBeDeep": false,
+        "CanBeEntityReference": false,
+        "CanBeGlobal": false,
+        "CanBeLocal": false,
+        "CanBeParentEntityReference": false,
+        "CanBeRecordFilter": false,
+        "Name": "prvShareUserForm",
+        "PrivilegeId": {
+          "componentType": 16,
+          "exportIdentity": {
+            "kind": "role-contained-privilege-name",
+            "portability": "not-established",
+            "value": "prvShareUserForm"
+          },
+          "kind": "typed-reference"
+        },
+        "PrivilegeType": "Share"
+      },
+      {
+        "CanBeBasic": true,
+        "CanBeDeep": false,
+        "CanBeEntityReference": false,
+        "CanBeGlobal": false,
+        "CanBeLocal": false,
+        "CanBeParentEntityReference": false,
+        "CanBeRecordFilter": false,
+        "Name": "prvWriteUserForm",
+        "PrivilegeId": {
+          "componentType": 16,
+          "exportIdentity": {
+            "kind": "role-contained-privilege-name",
+            "portability": "not-established",
+            "value": "prvWriteUserForm"
+          },
+          "kind": "typed-reference"
+        },
+        "PrivilegeType": "Write"
+      }
+    ],
+    "RecurrenceBaseEntityLogicalName": null,
+    "ReportViewName": null,
+    "SchemaName": "UserForm",
+    "SettingOf": null,
+    "Settings": [],
+    "SyncToExternalSearchIndex": false,
+    "TableType": "Standard",
+    "UsesBusinessDataLabelTable": false
+  },
+  "logicalName": "userform",
+  "typedReferences": []
+}

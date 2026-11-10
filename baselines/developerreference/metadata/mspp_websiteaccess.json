@@ -1,0 +1,3811 @@
+{
+  "configuration": {
+    "ActivityTypeMask": 0,
+    "Attributes": [
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Lookup",
+        "AttributeTypeName": {
+          "Value": "LookupType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 7,
+        "CreatedOn": "2026-10-30T00:01:37Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Shows who created the record.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Created By",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": "createdby",
+        "Format": "None",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": true,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "mspp_createdby",
+        "ModifiedOn": "2026-10-30T00:02:17Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "mspp_createdby",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "systemuser"
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "mspp_createdby",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 20,
+        "CreatedOn": "2026-10-30T00:02:17Z",
+        "DatabaseLength": 513,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": "createdbyname",
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": true,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "mspp_createdbyname",
+        "MaxLength": 200,
+        "ModifiedOn": "2026-10-30T00:02:17Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "mspp_createdbyName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "mspp_createdby",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 21,
+        "CreatedOn": "2026-10-30T00:02:17Z",
+        "DatabaseLength": 513,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": "createdbyyominame",
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": true,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "mspp_createdbyyominame",
+        "MaxLength": 200,
+        "ModifiedOn": "2026-10-30T00:02:17Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "mspp_createdbyYomiName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": "mspp_createdbyname"
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexDateTimeAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "DateTime",
+        "AttributeTypeName": {
+          "Value": "DateTimeType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanChangeDateTimeBehavior": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifybehavior",
+          "Value": true
+        },
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 8,
+        "CreatedOn": "2026-10-30T00:01:37Z",
+        "DateTimeBehavior": {
+          "Value": "UserLocal"
+        },
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Shows the date and time when the record was created.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Created On",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": "",
+        "Format": "DateAndTime",
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Inactive",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": true,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "mspp_createdon",
+        "ModifiedOn": "2026-10-30T00:01:37Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "mspp_createdon",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexBooleanAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Boolean",
+        "AttributeTypeName": {
+          "Value": "BooleanType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 9,
+        "CreatedOn": "2026-10-30T00:01:37Z",
+        "DefaultValue": false,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Manage Content Snippets",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": null,
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": true,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "mspp_managecontentsnippets",
+        "ModifiedOn": "2026-10-30T00:01:37Z",
+        "OptionSet": {
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "Manage Content Snippets",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "ExternalTypeName": null,
+          "FalseOption": {
+            "Color": "#0000ff",
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            },
+            "ExternalValue": null,
+            "HasChanged": null,
+            "IsHidden": false,
+            "IsManaged": true,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "HasChanged": null,
+                  "IsManaged": true,
+                  "Label": "No",
+                  "LanguageCode": 1033
+                }
+              ],
+              "UserLocalizedLabel": {
+                "kind": "localized-label-reference",
+                "languageCode": 1033
+              }
+            },
+            "MetadataId": null,
+            "ParentValues": [],
+            "Tag": null,
+            "Value": 0
+          },
+          "HasChanged": null,
+          "IntroducedVersion": "1.0.0.0",
+          "IsCustomOptionSet": true,
+          "IsCustomizable": {
+            "CanBeChanged": false,
+            "ManagedPropertyLogicalName": "iscustomizable",
+            "Value": false
+          },
+          "IsGlobal": false,
+          "IsManaged": true,
+          "Name": "mspp_websiteaccess_mspp_managecontentsnippets",
+          "OptionSetType": "Boolean",
+          "TrueOption": {
+            "Color": "#0000ff",
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            },
+            "ExternalValue": null,
+            "HasChanged": null,
+            "IsHidden": false,
+            "IsManaged": true,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "HasChanged": null,
+                  "IsManaged": true,
+                  "Label": "Yes",
+                  "LanguageCode": 1033
+                }
+              ],
+              "UserLocalizedLabel": {
+                "kind": "localized-label-reference",
+                "languageCode": 1033
+              }
+            },
+            "MetadataId": null,
+            "ParentValues": [],
+            "Tag": null,
+            "Value": 1
+          }
+        },
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "mspp_managecontentsnippets",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "AttributeOf": "mspp_managecontentsnippets",
+        "AttributeType": "Virtual",
+        "AttributeTypeName": {
+          "Value": "VirtualType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 10,
+        "CreatedOn": "2026-10-30T00:01:37Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": true,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": true,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "mspp_managecontentsnippetsname",
+        "ModifiedOn": "2026-10-30T00:01:37Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "mspp_managecontentsnippetsName",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexBooleanAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Boolean",
+        "AttributeTypeName": {
+          "Value": "BooleanType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 11,
+        "CreatedOn": "2026-10-30T00:01:37Z",
+        "DefaultValue": false,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Manage Site Markers",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": null,
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": true,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "mspp_managesitemarkers",
+        "ModifiedOn": "2026-10-30T00:01:37Z",
+        "OptionSet": {
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "Manage Site Markers",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "ExternalTypeName": null,
+          "FalseOption": {
+            "Color": "#0000ff",
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            },
+            "ExternalValue": null,
+            "HasChanged": null,
+            "IsHidden": false,
+            "IsManaged": true,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "HasChanged": null,
+                  "IsManaged": true,
+                  "Label": "No",
+                  "LanguageCode": 1033
+                }
+              ],
+              "UserLocalizedLabel": {
+                "kind": "localized-label-reference",
+                "languageCode": 1033
+              }
+            },
+            "MetadataId": null,
+            "ParentValues": [],
+            "Tag": null,
+            "Value": 0
+          },
+          "HasChanged": null,
+          "IntroducedVersion": "1.0.0.0",
+          "IsCustomOptionSet": true,
+          "IsCustomizable": {
+            "CanBeChanged": false,
+            "ManagedPropertyLogicalName": "iscustomizable",
+            "Value": false
+          },
+          "IsGlobal": false,
+          "IsManaged": true,
+          "Name": "mspp_websiteaccess_mspp_managesitemarkers",
+          "OptionSetType": "Boolean",
+          "TrueOption": {
+            "Color": "#0000ff",
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            },
+            "ExternalValue": null,
+            "HasChanged": null,
+            "IsHidden": false,
+            "IsManaged": true,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "HasChanged": null,
+                  "IsManaged": true,
+                  "Label": "Yes",
+                  "LanguageCode": 1033
+                }
+              ],
+              "UserLocalizedLabel": {
+                "kind": "localized-label-reference",
+                "languageCode": 1033
+              }
+            },
+            "MetadataId": null,
+            "ParentValues": [],
+            "Tag": null,
+            "Value": 1
+          }
+        },
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "mspp_managesitemarkers",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "AttributeOf": "mspp_managesitemarkers",
+        "AttributeType": "Virtual",
+        "AttributeTypeName": {
+          "Value": "VirtualType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 12,
+        "CreatedOn": "2026-10-30T00:01:37Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": true,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": true,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "mspp_managesitemarkersname",
+        "ModifiedOn": "2026-10-30T00:01:37Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "mspp_managesitemarkersName",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexBooleanAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Boolean",
+        "AttributeTypeName": {
+          "Value": "BooleanType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 13,
+        "CreatedOn": "2026-10-30T00:01:37Z",
+        "DefaultValue": false,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Manage Web Link Sets",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": null,
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": true,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "mspp_manageweblinksets",
+        "ModifiedOn": "2026-10-30T00:01:37Z",
+        "OptionSet": {
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "Manage Web Link Sets",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "ExternalTypeName": null,
+          "FalseOption": {
+            "Color": "#0000ff",
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            },
+            "ExternalValue": null,
+            "HasChanged": null,
+            "IsHidden": false,
+            "IsManaged": true,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "HasChanged": null,
+                  "IsManaged": true,
+                  "Label": "No",
+                  "LanguageCode": 1033
+                }
+              ],
+              "UserLocalizedLabel": {
+                "kind": "localized-label-reference",
+                "languageCode": 1033
+              }
+            },
+            "MetadataId": null,
+            "ParentValues": [],
+            "Tag": null,
+            "Value": 0
+          },
+          "HasChanged": null,
+          "IntroducedVersion": "1.0.0.0",
+          "IsCustomOptionSet": true,
+          "IsCustomizable": {
+            "CanBeChanged": false,
+            "ManagedPropertyLogicalName": "iscustomizable",
+            "Value": false
+          },
+          "IsGlobal": false,
+          "IsManaged": true,
+          "Name": "mspp_websiteaccess_mspp_manageweblinksets",
+          "OptionSetType": "Boolean",
+          "TrueOption": {
+            "Color": "#0000ff",
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            },
+            "ExternalValue": null,
+            "HasChanged": null,
+            "IsHidden": false,
+            "IsManaged": true,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "HasChanged": null,
+                  "IsManaged": true,
+                  "Label": "Yes",
+                  "LanguageCode": 1033
+                }
+              ],
+              "UserLocalizedLabel": {
+                "kind": "localized-label-reference",
+                "languageCode": 1033
+              }
+            },
+            "MetadataId": null,
+            "ParentValues": [],
+            "Tag": null,
+            "Value": 1
+          }
+        },
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "mspp_manageweblinksets",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "AttributeOf": "mspp_manageweblinksets",
+        "AttributeType": "Virtual",
+        "AttributeTypeName": {
+          "Value": "VirtualType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 14,
+        "CreatedOn": "2026-10-30T00:01:37Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": true,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": true,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "mspp_manageweblinksetsname",
+        "ModifiedOn": "2026-10-30T00:01:37Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "mspp_manageweblinksetsName",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Lookup",
+        "AttributeTypeName": {
+          "Value": "LookupType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 15,
+        "CreatedOn": "2026-10-30T00:01:37Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Shows who last updated the record.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Modified By",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": "modifiedby",
+        "Format": "None",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": true,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "mspp_modifiedby",
+        "ModifiedOn": "2026-10-30T00:02:17Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "mspp_modifiedby",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "systemuser"
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "mspp_modifiedby",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 22,
+        "CreatedOn": "2026-10-30T00:02:17Z",
+        "DatabaseLength": 513,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": "modifiedbyname",
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": true,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "mspp_modifiedbyname",
+        "MaxLength": 200,
+        "ModifiedOn": "2026-10-30T00:02:17Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "mspp_modifiedbyName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "mspp_modifiedby",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 23,
+        "CreatedOn": "2026-10-30T00:02:17Z",
+        "DatabaseLength": 513,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": "modifiedbyyominame",
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": true,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "mspp_modifiedbyyominame",
+        "MaxLength": 200,
+        "ModifiedOn": "2026-10-30T00:02:17Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "mspp_modifiedbyYomiName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": "mspp_modifiedbyname"
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexDateTimeAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "DateTime",
+        "AttributeTypeName": {
+          "Value": "DateTimeType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanChangeDateTimeBehavior": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifybehavior",
+          "Value": true
+        },
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 16,
+        "CreatedOn": "2026-10-30T00:01:37Z",
+        "DateTimeBehavior": {
+          "Value": "UserLocal"
+        },
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Shows the date and time when the record was modified.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Modified On",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": "",
+        "Format": "DateAndTime",
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Inactive",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": true,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "mspp_modifiedon",
+        "ModifiedOn": "2026-10-30T00:01:37Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "mspp_modifiedon",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 6,
+        "CreatedOn": "2026-10-30T00:01:37Z",
+        "DatabaseLength": 200,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "The name of the custom entity.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Name",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": null,
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": true,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": true,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": true,
+        "IsRetrievable": true,
+        "IsSearchable": true,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "mspp_name",
+        "MaxLength": 100,
+        "ModifiedOn": "2026-10-30T00:01:37Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "ApplicationRequired"
+        },
+        "SchemaName": "mspp_name",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexBooleanAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Boolean",
+        "AttributeTypeName": {
+          "Value": "BooleanType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 17,
+        "CreatedOn": "2026-10-30T00:01:37Z",
+        "DefaultValue": false,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Preview Unpublished Entities",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": null,
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": true,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "mspp_previewunpublishedentities",
+        "ModifiedOn": "2026-10-30T00:01:37Z",
+        "OptionSet": {
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "Preview Unpublished Entities",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "ExternalTypeName": null,
+          "FalseOption": {
+            "Color": "#0000ff",
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            },
+            "ExternalValue": null,
+            "HasChanged": null,
+            "IsHidden": false,
+            "IsManaged": true,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "HasChanged": null,
+                  "IsManaged": true,
+                  "Label": "No",
+                  "LanguageCode": 1033
+                }
+              ],
+              "UserLocalizedLabel": {
+                "kind": "localized-label-reference",
+                "languageCode": 1033
+              }
+            },
+            "MetadataId": null,
+            "ParentValues": [],
+            "Tag": null,
+            "Value": 0
+          },
+          "HasChanged": null,
+          "IntroducedVersion": "1.0.0.0",
+          "IsCustomOptionSet": true,
+          "IsCustomizable": {
+            "CanBeChanged": false,
+            "ManagedPropertyLogicalName": "iscustomizable",
+            "Value": false
+          },
+          "IsGlobal": false,
+          "IsManaged": true,
+          "Name": "mspp_websiteaccess_mspp_previewunpublishedentities",
+          "OptionSetType": "Boolean",
+          "TrueOption": {
+            "Color": "#0000ff",
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            },
+            "ExternalValue": null,
+            "HasChanged": null,
+            "IsHidden": false,
+            "IsManaged": true,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "HasChanged": null,
+                  "IsManaged": true,
+                  "Label": "Yes",
+                  "LanguageCode": 1033
+                }
+              ],
+              "UserLocalizedLabel": {
+                "kind": "localized-label-reference",
+                "languageCode": 1033
+              }
+            },
+            "MetadataId": null,
+            "ParentValues": [],
+            "Tag": null,
+            "Value": 1
+          }
+        },
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "mspp_previewunpublishedentities",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0
+      },
+      {
+        "AttributeOf": "mspp_previewunpublishedentities",
+        "AttributeType": "Virtual",
+        "AttributeTypeName": {
+          "Value": "VirtualType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 18,
+        "CreatedOn": "2026-10-30T00:01:37Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": true,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": true,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "mspp_previewunpublishedentitiesname",
+        "ModifiedOn": "2026-10-30T00:01:37Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "mspp_previewunpublishedentitiesName",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "AttributeOf": null,
+        "AttributeType": "Uniqueidentifier",
+        "AttributeTypeName": {
+          "Value": "UniqueidentifierType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 1,
+        "CreatedOn": "2026-10-30T00:01:37Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Unique identifier for entity instances",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Website Access",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": true,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": true,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": true,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "mspp_websiteaccessid",
+        "ModifiedOn": "2026-10-30T00:01:37Z",
+        "RequiredLevel": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "mspp_websiteaccessId",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Lookup",
+        "AttributeTypeName": {
+          "Value": "LookupType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 19,
+        "CreatedOn": "2026-10-30T00:01:37Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Unique identifier for Website associated with Website Access.",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Website",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": "content",
+        "Format": "None",
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": true,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "mspp_websiteid",
+        "ModifiedOn": "2026-10-30T00:02:33Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "ApplicationRequired"
+        },
+        "SchemaName": "mspp_websiteid",
+        "Settings": [],
+        "SourceType": null,
+        "Targets": [
+          "mspp_website"
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata",
+        "AttributeOf": "mspp_websiteid",
+        "AttributeType": "String",
+        "AttributeTypeName": {
+          "Value": "StringType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 24,
+        "CreatedOn": "2026-10-30T00:02:33Z",
+        "DatabaseLength": 600,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": "contentname",
+        "Format": "Text",
+        "FormatName": {
+          "Value": "Text"
+        },
+        "FormulaDefinition": "",
+        "HasChanged": null,
+        "ImeMode": "Auto",
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": true,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLocalizable": false,
+        "IsLogical": true,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "mspp_websiteidname",
+        "MaxLength": 300,
+        "ModifiedOn": "2026-10-30T00:02:33Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "mspp_websiteidName",
+        "Settings": [],
+        "SourceType": 0,
+        "SourceTypeMask": 0,
+        "YomiOf": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStateAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "State",
+        "AttributeTypeName": {
+          "Value": "StateType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 2,
+        "CreatedOn": "2026-10-30T00:01:37Z",
+        "DefaultFormValue": null,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Status of the Website Access",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Status",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": true,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "statecode",
+        "ModifiedOn": "2026-10-30T00:01:37Z",
+        "OptionSet": {
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "Status of the Website Access",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "Status",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "ExternalTypeName": null,
+          "HasChanged": null,
+          "IntroducedVersion": "1.0.0.0",
+          "IsCustomOptionSet": true,
+          "IsCustomizable": {
+            "CanBeChanged": false,
+            "ManagedPropertyLogicalName": "iscustomizable",
+            "Value": true
+          },
+          "IsGlobal": false,
+          "IsManaged": true,
+          "Name": "mspp_websiteaccess_statecode",
+          "OptionSetType": "State",
+          "Options": [
+            {
+              "@odata.type": "#Microsoft.Dynamics.CRM.StateOptionMetadata",
+              "Color": null,
+              "DefaultStatus": 1,
+              "Description": {
+                "LocalizedLabels": [],
+                "UserLocalizedLabel": null
+              },
+              "ExternalValue": null,
+              "HasChanged": null,
+              "InvariantName": "Active",
+              "IsHidden": false,
+              "IsManaged": true,
+              "Label": {
+                "LocalizedLabels": [
+                  {
+                    "HasChanged": null,
+                    "IsManaged": true,
+                    "Label": "Active",
+                    "LanguageCode": 1033
+                  }
+                ],
+                "UserLocalizedLabel": {
+                  "kind": "localized-label-reference",
+                  "languageCode": 1033
+                }
+              },
+              "MetadataId": null,
+              "ParentValues": [],
+              "Tag": null,
+              "Value": 0
+            },
+            {
+              "@odata.type": "#Microsoft.Dynamics.CRM.StateOptionMetadata",
+              "Color": null,
+              "DefaultStatus": 2,
+              "Description": {
+                "LocalizedLabels": [],
+                "UserLocalizedLabel": null
+              },
+              "ExternalValue": null,
+              "HasChanged": null,
+              "InvariantName": "Inactive",
+              "IsHidden": false,
+              "IsManaged": true,
+              "Label": {
+                "LocalizedLabels": [
+                  {
+                    "HasChanged": null,
+                    "IsManaged": true,
+                    "Label": "Inactive",
+                    "LanguageCode": 1033
+                  }
+                ],
+                "UserLocalizedLabel": {
+                  "kind": "localized-label-reference",
+                  "languageCode": 1033
+                }
+              },
+              "MetadataId": null,
+              "ParentValues": [],
+              "Tag": null,
+              "Value": 1
+            }
+          ],
+          "ParentOptionSetName": null
+        },
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "SystemRequired"
+        },
+        "SchemaName": "statecode",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "AttributeOf": "statecode",
+        "AttributeType": "Virtual",
+        "AttributeTypeName": {
+          "Value": "VirtualType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 3,
+        "CreatedOn": "2026-10-30T00:01:37Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": true,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "statecodename",
+        "ModifiedOn": "2026-10-30T00:01:37Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "statecodeName",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.ComplexStatusAttributeMetadata",
+        "AttributeOf": null,
+        "AttributeType": "Status",
+        "AttributeTypeName": {
+          "Value": "StatusType"
+        },
+        "AutoNumberFormat": "",
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 4,
+        "CreatedOn": "2026-10-30T00:01:37Z",
+        "DefaultFormValue": null,
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Reason for the status of the Website Access",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "HasChanged": null,
+              "IsManaged": true,
+              "Label": "Status Reason",
+              "LanguageCode": 1033
+            }
+          ],
+          "UserLocalizedLabel": {
+            "kind": "localized-label-reference",
+            "languageCode": 1033
+          }
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": true
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": false,
+        "IsManaged": true,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": true
+        },
+        "IsValidForCreate": true,
+        "IsValidForForm": true,
+        "IsValidForGrid": true,
+        "IsValidForRead": true,
+        "IsValidForUpdate": true,
+        "IsValidODataAttribute": true,
+        "LinkedAttributeId": null,
+        "LogicalName": "statuscode",
+        "ModifiedOn": "2026-10-30T00:01:37Z",
+        "OptionSet": {
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "Reason for the status of the Website Access",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "Status Reason",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "ExternalTypeName": null,
+          "HasChanged": null,
+          "IntroducedVersion": "1.0.0.0",
+          "IsCustomOptionSet": true,
+          "IsCustomizable": {
+            "CanBeChanged": false,
+            "ManagedPropertyLogicalName": "iscustomizable",
+            "Value": true
+          },
+          "IsGlobal": false,
+          "IsManaged": true,
+          "Name": "mspp_websiteaccess_statuscode",
+          "OptionSetType": "Status",
+          "Options": [
+            {
+              "@odata.type": "#Microsoft.Dynamics.CRM.StatusOptionMetadata",
+              "Color": null,
+              "Description": {
+                "LocalizedLabels": [],
+                "UserLocalizedLabel": null
+              },
+              "ExternalValue": null,
+              "HasChanged": null,
+              "IsHidden": false,
+              "IsManaged": true,
+              "Label": {
+                "LocalizedLabels": [
+                  {
+                    "HasChanged": null,
+                    "IsManaged": true,
+                    "Label": "Active",
+                    "LanguageCode": 1033
+                  }
+                ],
+                "UserLocalizedLabel": {
+                  "kind": "localized-label-reference",
+                  "languageCode": 1033
+                }
+              },
+              "MetadataId": null,
+              "ParentValues": [],
+              "State": 0,
+              "Tag": null,
+              "TransitionData": null,
+              "Value": 1
+            },
+            {
+              "@odata.type": "#Microsoft.Dynamics.CRM.StatusOptionMetadata",
+              "Color": null,
+              "Description": {
+                "LocalizedLabels": [],
+                "UserLocalizedLabel": null
+              },
+              "ExternalValue": null,
+              "HasChanged": null,
+              "IsHidden": false,
+              "IsManaged": true,
+              "Label": {
+                "LocalizedLabels": [
+                  {
+                    "HasChanged": null,
+                    "IsManaged": true,
+                    "Label": "Inactive",
+                    "LanguageCode": 1033
+                  }
+                ],
+                "UserLocalizedLabel": {
+                  "kind": "localized-label-reference",
+                  "languageCode": 1033
+                }
+              },
+              "MetadataId": null,
+              "ParentValues": [],
+              "State": 1,
+              "Tag": null,
+              "TransitionData": null,
+              "Value": 2
+            }
+          ],
+          "ParentOptionSetName": null
+        },
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "statuscode",
+        "Settings": [],
+        "SourceType": null
+      },
+      {
+        "AttributeOf": "statuscode",
+        "AttributeType": "Virtual",
+        "AttributeTypeName": {
+          "Value": "VirtualType"
+        },
+        "AutoNumberFormat": null,
+        "CanBeSecuredForCreate": false,
+        "CanBeSecuredForRead": false,
+        "CanBeSecuredForUpdate": false,
+        "CanModifyAdditionalSettings": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+          "Value": true
+        },
+        "ColumnNumber": 5,
+        "CreatedOn": "2026-10-30T00:01:37Z",
+        "DeprecatedVersion": null,
+        "Description": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+          "LocalizedLabels": [],
+          "UserLocalizedLabel": null
+        },
+        "EntityLogicalName": "mspp_websiteaccess",
+        "ExternalName": null,
+        "HasChanged": null,
+        "InheritsFrom": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsAuditEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyauditsettings",
+          "Value": false
+        },
+        "IsCustomAttribute": false,
+        "IsCustomizable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": true
+        },
+        "IsDataSourceSecret": false,
+        "IsFilterable": false,
+        "IsGlobalFilterEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings",
+          "Value": false
+        },
+        "IsLogical": true,
+        "IsManaged": false,
+        "IsPrimaryId": false,
+        "IsPrimaryName": false,
+        "IsRenameable": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "isrenameable",
+          "Value": true
+        },
+        "IsRequiredForForm": false,
+        "IsRetrievable": false,
+        "IsSearchable": false,
+        "IsSecured": false,
+        "IsSortableEnabled": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyissortablesettings",
+          "Value": false
+        },
+        "IsValidForAdvancedFind": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifysearchsettings",
+          "Value": false
+        },
+        "IsValidForCreate": false,
+        "IsValidForForm": false,
+        "IsValidForGrid": false,
+        "IsValidForRead": true,
+        "IsValidForUpdate": false,
+        "IsValidODataAttribute": false,
+        "LinkedAttributeId": null,
+        "LogicalName": "statuscodename",
+        "ModifiedOn": "2026-10-30T00:01:37Z",
+        "RequiredLevel": {
+          "CanBeChanged": true,
+          "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings",
+          "Value": "None"
+        },
+        "SchemaName": "statuscodeName",
+        "Settings": [],
+        "SourceType": null
+      }
+    ],
+    "AutoCreateAccessTeams": false,
+    "AutoReplicateClusterRecords": false,
+    "AutoRouteToOwnerQueue": false,
+    "CanBeInCustomEntityAssociation": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canbeincustomentityassociation",
+      "Value": true
+    },
+    "CanBeInManyToMany": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canbeinmanytomany",
+      "Value": true
+    },
+    "CanBePrimaryEntityInRelationship": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canbeprimaryentityinrelationship",
+      "Value": true
+    },
+    "CanBeRelatedEntityInRelationship": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canberelatedentityinrelationship",
+      "Value": true
+    },
+    "CanChangeClusterMode": true,
+    "CanChangeHierarchicalRelationship": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canchangehierarchicalrelationship",
+      "Value": true
+    },
+    "CanChangeTrackingBeEnabled": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canchangetrackingbeenabled",
+      "Value": false
+    },
+    "CanCreateAttributes": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "cancreateattributes",
+      "Value": true
+    },
+    "CanCreateCharts": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "cancreatecharts",
+      "Value": false
+    },
+    "CanCreateForms": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "cancreateforms",
+      "Value": true
+    },
+    "CanCreateViews": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "cancreateviews",
+      "Value": true
+    },
+    "CanEnableSyncToExternalSearchIndex": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canenablesynctoexternalsearchindex",
+      "Value": true
+    },
+    "CanModifyAdditionalSettings": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyadditionalsettings",
+      "Value": true
+    },
+    "CanTriggerWorkflow": false,
+    "ChangeTrackingEnabled": false,
+    "ClusterMode": "Local",
+    "CollectionSchemaName": "mspp_websiteaccesses",
+    "CreatedOn": "2026-10-30T00:01:37Z",
+    "DataProviderId": {
+      "componentType": 181,
+      "exportIdentity": {
+        "kind": "wire-guid",
+        "portability": "not-established",
+        "value": "17485619-1cdd-ec11-a7b6-0022482ae716"
+      },
+      "kind": "typed-reference"
+    },
+    "DataSourceId": {
+      "componentType": 183,
+      "exportIdentity": {
+        "kind": "wire-guid",
+        "portability": "not-established",
+        "value": "f8f73e9a-1cdd-ec11-a7b6-0022482ae716"
+      },
+      "kind": "typed-reference"
+    },
+    "DaysSinceRecordLastModified": 0,
+    "DefaultToLocalPartition": false,
+    "Description": {
+      "LocalizedLabels": [
+        {
+          "HasChanged": null,
+          "IsManaged": true,
+          "Label": "",
+          "LanguageCode": 1033
+        }
+      ],
+      "UserLocalizedLabel": {
+        "kind": "localized-label-reference",
+        "languageCode": 1033
+      }
+    },
+    "DisplayCollectionName": {
+      "LocalizedLabels": [
+        {
+          "HasChanged": null,
+          "IsManaged": true,
+          "Label": "Website Access Permissions",
+          "LanguageCode": 1033
+        }
+      ],
+      "UserLocalizedLabel": {
+        "kind": "localized-label-reference",
+        "languageCode": 1033
+      }
+    },
+    "DisplayName": {
+      "LocalizedLabels": [
+        {
+          "HasChanged": null,
+          "IsManaged": true,
+          "Label": "Website Access",
+          "LanguageCode": 1033
+        }
+      ],
+      "UserLocalizedLabel": {
+        "kind": "localized-label-reference",
+        "languageCode": 1033
+      }
+    },
+    "EnforceStateTransitions": false,
+    "EntityColor": "",
+    "EntityHelpUrl": null,
+    "EntityHelpUrlEnabled": false,
+    "EntitySetName": "mspp_websiteaccesses",
+    "ExternalCollectionName": "websiteaccesspermissions",
+    "ExternalName": "websiteaccess",
+    "HasActivities": false,
+    "HasChanged": null,
+    "HasEmailAddresses": false,
+    "HasFeedback": false,
+    "HasNotes": false,
+    "IconLargeName": null,
+    "IconMediumName": null,
+    "IconSmallName": null,
+    "IconVectorName": "mspp_website_access.svg",
+    "IntroducedVersion": "1.0.0.0",
+    "IsAIRUpdated": false,
+    "IsActivity": false,
+    "IsActivityParty": false,
+    "IsArchivalEnabled": false,
+    "IsAuditEnabled": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyauditsettings",
+      "Value": false
+    },
+    "IsAvailableOffline": false,
+    "IsBPFEntity": false,
+    "IsBusinessProcessEnabled": false,
+    "IsChildEntity": false,
+    "IsConnectionsEnabled": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyconnectionsettings",
+      "Value": false
+    },
+    "IsCustomEntity": true,
+    "IsCustomizable": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "iscustomizable",
+      "Value": false
+    },
+    "IsDocumentManagementEnabled": false,
+    "IsDocumentRecommendationsEnabled": false,
+    "IsDuplicateDetectionEnabled": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyduplicatedetectionsettings",
+      "Value": false
+    },
+    "IsEnabledForCharts": false,
+    "IsEnabledForExternalChannels": false,
+    "IsEnabledForTrace": false,
+    "IsImportable": true,
+    "IsInteractionCentricEnabled": false,
+    "IsIntersect": false,
+    "IsKnowledgeManagementEnabled": false,
+    "IsLogicalEntity": false,
+    "IsMSTeamsIntegrationEnabled": false,
+    "IsMailMergeEnabled": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifymailmergesettings",
+      "Value": true
+    },
+    "IsManaged": true,
+    "IsMappable": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "ismappable",
+      "Value": true
+    },
+    "IsOfflineInMobileClient": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifymobileclientoffline",
+      "Value": false
+    },
+    "IsOneNoteIntegrationEnabled": false,
+    "IsOptimisticConcurrencyEnabled": true,
+    "IsPrivate": false,
+    "IsQuickCreateEnabled": false,
+    "IsReadOnlyInMobileClient": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifymobileclientreadonly",
+      "Value": false
+    },
+    "IsReadingPaneEnabled": false,
+    "IsRenameable": {
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "isrenameable",
+      "Value": true
+    },
+    "IsRetentionEnabled": false,
+    "IsRetrieveAuditEnabled": false,
+    "IsRetrieveMultipleAuditEnabled": false,
+    "IsSLAEnabled": false,
+    "IsSolutionAware": false,
+    "IsStateModelAware": true,
+    "IsValidForAdvancedFind": true,
+    "IsValidForQueue": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyqueuesettings",
+      "Value": false
+    },
+    "IsVisibleInMobile": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifymobilevisibility",
+      "Value": false
+    },
+    "IsVisibleInMobileClient": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifymobileclientvisibility",
+      "Value": false
+    },
+    "Keys": [],
+    "LogicalCollectionName": "mspp_websiteaccesses",
+    "LogicalName": "mspp_websiteaccess",
+    "ManyToManyRelationships": [
+      {
+        "Entity1AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": true,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": 10000,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "Entity1IntersectAttribute": "mspp_websiteaccessid",
+        "Entity1LogicalName": "mspp_websiteaccess",
+        "Entity1NavigationPropertyName": "mspp_websiteaccess_webrole",
+        "Entity2AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "DoNotDisplay",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": true,
+          "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+          },
+          "MenuId": null,
+          "Order": 10000,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "Entity2IntersectAttribute": "mspp_webroleid",
+        "Entity2LogicalName": "mspp_webrole",
+        "Entity2NavigationPropertyName": "mspp_websiteaccess_webrole",
+        "HasChanged": null,
+        "IntersectEntityName": "mspp_websiteaccess_webrole",
+        "IntroducedVersion": "1.0.0.0",
+        "IsCustomRelationship": true,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsManaged": true,
+        "IsValidForAdvancedFind": true,
+        "RelationshipType": "ManyToManyRelationship",
+        "SchemaName": "mspp_websiteaccess_webrole",
+        "SecurityTypes": "None"
+      }
+    ],
+    "ManyToOneRelationships": [
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "UseCollectionName",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": true,
+          "Label": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "MenuId": null,
+          "Order": 10000,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "NoCascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsCustomRelationship": true,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": true,
+        "ReferencedAttribute": "systemuserid",
+        "ReferencedEntity": "systemuser",
+        "ReferencedEntityNavigationPropertyName": "mspp_systemuser_mspp_websiteaccess_createdby",
+        "ReferencingAttribute": "mspp_createdby",
+        "ReferencingEntity": "mspp_websiteaccess",
+        "ReferencingEntityNavigationPropertyName": "mspp_createdby",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 1,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "mspp_systemuser_mspp_websiteaccess_createdby",
+        "SecurityTypes": "Append"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "UseCollectionName",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": true,
+          "Label": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "MenuId": null,
+          "Order": 10000,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "NoCascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsCustomRelationship": true,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": true,
+        "ReferencedAttribute": "systemuserid",
+        "ReferencedEntity": "systemuser",
+        "ReferencedEntityNavigationPropertyName": "mspp_systemuser_mspp_websiteaccess_modifiedby",
+        "ReferencingAttribute": "mspp_modifiedby",
+        "ReferencingEntity": "mspp_websiteaccess",
+        "ReferencingEntityNavigationPropertyName": "mspp_modifiedby",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 1,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "mspp_systemuser_mspp_websiteaccess_modifiedby",
+        "SecurityTypes": "Append"
+      },
+      {
+        "AssociatedMenuConfiguration": {
+          "AvailableOffline": true,
+          "Behavior": "UseCollectionName",
+          "Group": "Details",
+          "Icon": null,
+          "IsCustomizable": true,
+          "Label": {
+            "LocalizedLabels": [
+              {
+                "HasChanged": null,
+                "IsManaged": true,
+                "Label": "",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "kind": "localized-label-reference",
+              "languageCode": 1033
+            }
+          },
+          "MenuId": null,
+          "Order": 103700,
+          "QueryApi": null,
+          "ViewId": "00000000-0000-0000-0000-000000000000"
+        },
+        "CascadeConfiguration": {
+          "Archive": "NoCascade",
+          "Assign": "NoCascade",
+          "Delete": "NoCascade",
+          "Merge": "NoCascade",
+          "Reparent": "NoCascade",
+          "RollupView": "NoCascade",
+          "Share": "NoCascade",
+          "Unshare": "NoCascade"
+        },
+        "DenormalizedAttributeName": null,
+        "EntityKey": null,
+        "HasChanged": null,
+        "IntroducedVersion": "1.0.0.0",
+        "IsCustomRelationship": true,
+        "IsCustomizable": {
+          "CanBeChanged": false,
+          "ManagedPropertyLogicalName": "iscustomizable",
+          "Value": false
+        },
+        "IsDenormalizedLookup": null,
+        "IsHierarchical": false,
+        "IsManaged": true,
+        "IsRelationshipAttributeDenormalized": false,
+        "IsValidForAdvancedFind": true,
+        "ReferencedAttribute": "mspp_websiteid",
+        "ReferencedEntity": "mspp_website",
+        "ReferencedEntityNavigationPropertyName": "mspp_website_websiteaccess",
+        "ReferencingAttribute": "mspp_websiteid",
+        "ReferencingEntity": "mspp_websiteaccess",
+        "ReferencingEntityNavigationPropertyName": "mspp_websiteid",
+        "RelationshipAttributes": [],
+        "RelationshipBehavior": 1,
+        "RelationshipType": "OneToManyRelationship",
+        "SchemaName": "mspp_website_websiteaccess",
+        "SecurityTypes": "Append"
+      }
+    ],
+    "MobileOfflineFilters": "",
+    "ModifiedOn": "2026-10-30T00:01:37Z",
+    "ObjectTypeCode": 10485,
+    "OneToManyRelationships": [],
+    "OwnerId": null,
+    "OwnerIdType": 8,
+    "OwnershipType": "OrganizationOwned",
+    "OwningBusinessUnit": null,
+    "PrimaryIdAttribute": "mspp_websiteaccessid",
+    "PrimaryImageAttribute": null,
+    "PrimaryKey": [],
+    "PrimaryNameAttribute": "mspp_name",
+    "Privileges": [
+      {
+        "CanBeBasic": false,
+        "CanBeDeep": false,
+        "CanBeEntityReference": false,
+        "CanBeGlobal": true,
+        "CanBeLocal": false,
+        "CanBeParentEntityReference": false,
+        "CanBeRecordFilter": false,
+        "Name": "prvAppendTomspp_websiteaccess",
+        "PrivilegeId": {
+          "componentType": 16,
+          "exportIdentity": {
+            "kind": "role-contained-privilege-name",
+            "value": "prvAppendTomspp_websiteaccess"
+          },
+          "kind": "typed-reference"
+        },
+        "PrivilegeType": "AppendTo"
+      },
+      {
+        "CanBeBasic": false,
+        "CanBeDeep": false,
+        "CanBeEntityReference": false,
+        "CanBeGlobal": true,
+        "CanBeLocal": false,
+        "CanBeParentEntityReference": false,
+        "CanBeRecordFilter": false,
+        "Name": "prvAppendmspp_websiteaccess",
+        "PrivilegeId": {
+          "componentType": 16,
+          "exportIdentity": {
+            "kind": "role-contained-privilege-name",
+            "value": "prvAppendmspp_websiteaccess"
+          },
+          "kind": "typed-reference"
+        },
+        "PrivilegeType": "Append"
+      },
+      {
+        "CanBeBasic": false,
+        "CanBeDeep": false,
+        "CanBeEntityReference": false,
+        "CanBeGlobal": true,
+        "CanBeLocal": false,
+        "CanBeParentEntityReference": false,
+        "CanBeRecordFilter": false,
+        "Name": "prvCreatemspp_websiteaccess",
+        "PrivilegeId": {
+          "componentType": 16,
+          "exportIdentity": {
+            "kind": "role-contained-privilege-name",
+            "value": "prvCreatemspp_websiteaccess"
+          },
+          "kind": "typed-reference"
+        },
+        "PrivilegeType": "Create"
+      },
+      {
+        "CanBeBasic": false,
+        "CanBeDeep": false,
+        "CanBeEntityReference": false,
+        "CanBeGlobal": true,
+        "CanBeLocal": false,
+        "CanBeParentEntityReference": false,
+        "CanBeRecordFilter": false,
+        "Name": "prvDeletemspp_websiteaccess",
+        "PrivilegeId": {
+          "componentType": 16,
+          "exportIdentity": {
+            "kind": "role-contained-privilege-name",
+            "value": "prvDeletemspp_websiteaccess"
+          },
+          "kind": "typed-reference"
+        },
+        "PrivilegeType": "Delete"
+      },
+      {
+        "CanBeBasic": false,
+        "CanBeDeep": false,
+        "CanBeEntityReference": false,
+        "CanBeGlobal": true,
+        "CanBeLocal": false,
+        "CanBeParentEntityReference": false,
+        "CanBeRecordFilter": false,
+        "Name": "prvReadmspp_websiteaccess",
+        "PrivilegeId": {
+          "componentType": 16,
+          "exportIdentity": {
+            "kind": "role-contained-privilege-name",
+            "value": "prvReadmspp_websiteaccess"
+          },
+          "kind": "typed-reference"
+        },
+        "PrivilegeType": "Read"
+      },
+      {
+        "CanBeBasic": false,
+        "CanBeDeep": false,
+        "CanBeEntityReference": false,
+        "CanBeGlobal": true,
+        "CanBeLocal": false,
+        "CanBeParentEntityReference": false,
+        "CanBeRecordFilter": false,
+        "Name": "prvWritemspp_websiteaccess",
+        "PrivilegeId": {
+          "componentType": 16,
+          "exportIdentity": {
+            "kind": "role-contained-privilege-name",
+            "value": "prvWritemspp_websiteaccess"
+          },
+          "kind": "typed-reference"
+        },
+        "PrivilegeType": "Write"
+      }
+    ],
+    "RecurrenceBaseEntityLogicalName": null,
+    "ReportViewName": "Filteredmspp_websiteaccess",
+    "SchemaName": "mspp_websiteaccess",
+    "SettingOf": null,
+    "Settings": [],
+    "SyncToExternalSearchIndex": false,
+    "TableType": "Virtual",
+    "UsesBusinessDataLabelTable": false
+  },
+  "logicalName": "mspp_websiteaccess",
+  "typedReferences": []
+}

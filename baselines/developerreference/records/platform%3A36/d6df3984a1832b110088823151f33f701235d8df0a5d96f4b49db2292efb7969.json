@@ -1,0 +1,52 @@
+{
+  "configuration": {
+    "body": "<?xml version=\"1.0\" ?><xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"1.0\"><xsl:output method=\"text\" indent=\"no\"/><xsl:template match=\"/data\"><![CDATA[<P>Dear ]]><xsl:choose><xsl:when test=\"contact/fullname\"><xsl:value-of select=\"contact/fullname\" /></xsl:when><xsl:otherwise>Valued Customer</xsl:otherwise></xsl:choose><![CDATA[,</P> <P>We are excited to inform you that our company will be attending the Industry Expo in ]]><xsl:choose><xsl:when test=\"contact/address1_city\"><xsl:value-of select=\"contact/address1_city\" /></xsl:when><xsl:otherwise>a city near you</xsl:otherwise></xsl:choose><![CDATA[. This is a great opportunity for you to see our new products in action, and you will receive a 25% discount on any order placed during this event.</P> <P>We look forward to seeing you there.</P> <P>Thank you.</P>]]></xsl:template></xsl:stylesheet>",
+    "componentstate": 0,
+    "description": "Use this template to notify your customers of an upcoming trade show or event that your organization or business unit will be attending.",
+    "entityimage": null,
+    "entityimage_timestamp": null,
+    "entityimage_url": null,
+    "entityimageid": null,
+    "generationtypecode": 0,
+    "importsequencenumber": null,
+    "introducedversion": "5.0",
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "ispersonal": false,
+    "isrecommended": false,
+    "languagecode": 1033,
+    "mimetype": "",
+    "opencount": null,
+    "openrate": null,
+    "presentationxml": "<template><text><![CDATA[<P>Dear ]]></text><slugs><slug><entity>contact</entity><attribute>fullname</attribute></slug><default>Valued Customer</default></slugs><text><![CDATA[,</P> <P>We are excited to inform you that our company will be attending the Industry Expo in ]]></text><slugs><slug><entity>contact</entity><attribute>address1_city</attribute></slug><default>a city near you</default></slugs><text><![CDATA[. This is a great opportunity for you to see our new products in action, and you will receive a 25% discount on any order placed during this event.</P> <P>We look forward to seeing you there.</P> <P>Thank you.</P>]]></text></template>",
+    "replycount": null,
+    "replyrate": null,
+    "safehtml": "<div>\n<p>Dear <span class=\"dataslug\" id=\"TemplateEditor0\" data-value=\"{!contact:fullname;Valued Customer}\" contenteditable=\"false\" style=\"background-color: #E7EFFF;\">{!Contact:Full Name;Valued Customer}</span>,</p>\n<p>We are excited to inform you that our company will be attending the Industry Expo in\n<span class=\"dataslug\" id=\"TemplateEditor1\" data-value=\"{!contact:address1_city;a city near you}\" contenteditable=\"false\" style=\"background-color: #E7EFFF;\">{!Contact:Address 1: City;a city near you}</span>. This is a great opportunity for you to see our new products in action, and you will receive a 25% discount\n on any order placed during this event.</p>\n<p>We look forward to seeing you there.</p>\n<p>Thank you.</p>\n</div>\n",
+    "subject": "<?xml version=\"1.0\" ?><xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"1.0\"><xsl:output method=\"text\" indent=\"no\" /><xsl:template match=\"/data\"><![CDATA[Upcoming industry event]]></xsl:template></xsl:stylesheet>",
+    "subjectpresentationxml": "<template><text><![CDATA[Upcoming industry event]]></text></template>",
+    "subjectsafehtml": "Upcoming industry event",
+    "templateid": "9bdfd720-030e-4bf7-a94f-6183b527f84c",
+    "templatetypecode": "contact",
+    "title": "Marketing Event Notification",
+    "usedcount": null
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "portability": "not-established",
+    "value": "9bdfd720-030e-4bf7-a94f-6183b527f84c"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "System",
+      "version": "5.0"
+    }
+  ],
+  "typeIdentity": "platform:36"
+}

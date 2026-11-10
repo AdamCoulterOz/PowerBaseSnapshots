@@ -1,0 +1,204 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.18",
+        "Children": [],
+        "ConstructorName": "ViewIn3D",
+        "ControlManifestVersion": "1.2.36",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "Microsoft.ViewIn3D"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "PCF_3DViewer",
+        "FullName": "Microsoft.ViewIn3D",
+        "IsVirtual": false,
+        "Name": "Microsoft.ViewIn3D",
+        "Namespace": "Microsoft",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [
+                {
+                  "Hidden": false,
+                  "Name": "PinsX",
+                  "Required": false,
+                  "Type": "Decimal",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "PinsY",
+                  "Required": false,
+                  "Type": "Decimal",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "PinsZ",
+                  "Required": false,
+                  "Type": "Decimal",
+                  "Usage": 0
+                }
+              ],
+              "InitialDataSetFetch": true,
+              "Name": "Pins",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "WebAPI",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "DefaultValue": "https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/default_cube.glb",
+              "Hidden": false,
+              "Name": "Source",
+              "Required": true,
+              "TypeGroup": "sources",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "ObjectWidth",
+              "Required": false,
+              "Type": "Decimal",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "ObjectHeight",
+              "Required": false,
+              "Type": "Decimal",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "ObjectDepth",
+              "Required": false,
+              "Type": "Decimal",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "Units",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "Default_Value_AltText",
+              "Hidden": false,
+              "Name": "AltText",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ShowReset",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ShowPins",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "1000",
+              "Hidden": false,
+              "Name": "MaxPins",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "babylonjs",
+              "LoadOrder": 1,
+              "Name": "babylonjs",
+              "Type": 0
+            },
+            {
+              "LibraryName": "react_16_14_0",
+              "LoadOrder": 0,
+              "Name": "react_16_14_0",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_8_121_1",
+              "LoadOrder": 0,
+              "Name": "fluent_8_121_1",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "Microsoft.ViewIn3D_bundle.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/3DViewer.1033.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/ViewIn3DBase.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.URL,File,Multiple",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"Microsoft\" constructor=\"ViewIn3D\" version=\"1.2.36\" display-name-key=\"PCF_3DViewer\" description-key=\"PCF_3DViewer_description\" control-type=\"standard\" hidden=\"false\" api-version=\"1.3.18\"><type-group name=\"sources\"><type>SingleLine.URL</type><type>File</type><type>Multiple</type></type-group><property name=\"Source\" default-value=\"https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/default_cube.glb\" display-name-key=\"PCF_3DViewer_Src_Name\" description-key=\"PCF_3DViewer_Src_Description\" of-type-group=\"sources\" usage=\"bound\" required=\"true\" /><property name=\"ObjectWidth\" display-name-key=\"PCF_3DViewer_Width\" description-key=\"PCF_3DViewer_Width_Description\" of-type=\"Decimal\" usage=\"bound\" /><property name=\"ObjectHeight\" display-name-key=\"PCF_3DViewer_Height\" description-key=\"PCF_3DViewer_Height_Description\" of-type=\"Decimal\" usage=\"bound\" /><property name=\"ObjectDepth\" display-name-key=\"PCF_3DViewer_Length\" description-key=\"PCF_3DViewer_Length_Description\" of-type=\"Decimal\" usage=\"bound\" /><property name=\"Units\" display-name-key=\"PCF_Units\" description-key=\"PCF_Units_Description\" of-type=\"Enum\" usage=\"input\"><value name=\"3DViewer_Meters\" display-name-key=\"Units_Meters\" description-key=\"Units_Meters_Description\" default=\"true\">Meters</value><value name=\"3DViewer_Centimeters\" display-name-key=\"Units_Centimeters\" description-key=\"Units_Centimeters_Description\">Centimeters</value><value name=\"3DViewer_Feet\" display-name-key=\"Units_Feet\" description-key=\"Units_Feet_Description\">Feet</value><value name=\"3DViewer_Inches\" display-name-key=\"Units_Inches\" description-key=\"Units_Inches_Description\">Inches</value></property><property name=\"AltText\" default-value=\"Default_Value_AltText\" display-name-key=\"PCF_3DViewer_AltText_Name\" description-key=\"PCF_3DViewer_AltText_Description\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" /><property name=\"ShowReset\" display-name-key=\"PCF_3DViewer_ShowReset\" description-key=\"PCF_3DViewer_ShowReset_Description\" of-type=\"Enum\" usage=\"input\" required=\"false\"><value name=\"True\" display-name-key=\"True_Display_Key\" default=\"true\">True</value><value name=\"False\" display-name-key=\"False_Display_Key\">False</value></property><property name=\"ShowPins\" display-name-key=\"PCF_3DViewer_ShowPins\" description-key=\"PCF_3DViewer_ShowPins_Description\" of-type=\"Enum\" usage=\"input\" required=\"false\"><value name=\"True\" display-name-key=\"True_Display_Key\" default=\"true\">True</value><value name=\"False\" display-name-key=\"False_Display_Key\">False</value></property><property name=\"MaxPins\" display-name-key=\"MaxPins_Display_Key\" description-key=\"MaxPins_Desc_Key\" of-type=\"Whole.None\" usage=\"input\" required=\"false\" default-value=\"1000\" /><data-set name=\"Pins\" display-name-key=\"PCF_3DViewer_Pins\" description-key=\"PCF_3DViewer_Pins_Desc\"><property-set name=\"PinsX\" display-name-key=\"PCF_3DViewer_PinsX\" description-key=\"PCF_3DViewer_PinsX_Desc\" of-type=\"Decimal\" usage=\"bound\" required=\"false\" /><property-set name=\"PinsY\" display-name-key=\"PCF_3DViewer_PinsY\" description-key=\"PCF_3DViewer_PinsY_Desc\" of-type=\"Decimal\" usage=\"bound\" required=\"false\" /><property-set name=\"PinsZ\" display-name-key=\"PCF_3DViewer_PinsZ\" description-key=\"PCF_3DViewer_PinsZ_Desc\" of-type=\"Decimal\" usage=\"bound\" required=\"false\" /></data-set><resources><resx path=\"strings/3DViewer.1033.resx\" version=\"1.0.0\" /><resx path=\"strings/ViewIn3DBase.1033.resx\" version=\"1.0.0\" /><platform-library name=\"React\" version=\"16.14.0\" /><platform-library name=\"Fluent\" version=\"8.121.1\" /><library name=\"babylonjs\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/babylon.js\" version=\"5.0.1\" /></library><code path=\"bundle.js\" order=\"2\" /></resources><feature-usage><uses-feature name=\"WebAPI\" required=\"true\" /></feature-usage><built-by name=\"pac\" version=\"1.49.1-alpha-25090500\" /></control></manifest>",
+    "name": "Microsoft.ViewIn3D",
+    "supportedplatform": "(Model)",
+    "version": "1.2.36"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "Microsoft.ViewIn3D"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

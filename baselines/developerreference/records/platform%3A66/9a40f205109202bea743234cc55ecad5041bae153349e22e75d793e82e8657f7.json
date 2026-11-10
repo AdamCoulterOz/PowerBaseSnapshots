@@ -1,0 +1,112 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "SwitchProcessGridControl",
+        "ControlManifestVersion": "1.0.35",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Containers.SwitchProcessGridControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_SwitchProcess_GridControl_Name",
+        "FullName": "MscrmControls.Containers.SwitchProcessGridControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.Containers.SwitchProcessGridControl",
+        "Namespace": "MscrmControls.Containers",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "EntityId",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EntityLogicalName",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "ProcessId",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "ProcessInstanceId",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.Containers.SwitchProcessGridControl_SwitchProcessGridControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/SwitchProcessGridResource.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Containers\" constructor=\"SwitchProcessGridControl\" version=\"1.0.35\" display-name-key=\"CC_SwitchProcess_GridControl_Name\" control-type=\"virtual\" hidden=\"true\"><modes><read /><edit /></modes><property name=\"EntityId\" display-name-key=\"CC_entityId\" description-key=\"CC_entityId_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"EntityLogicalName\" display-name-key=\"CC_entityLogicalName\" description-key=\"CC_entityLogicalName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"ProcessId\" display-name-key=\"CC_ProcessId\" description-key=\"CC_ProcessId_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"ProcessInstanceId\" display-name-key=\"CC_ProcessInstanceId\" description-key=\"CC_ProcessInstanceId_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.14\" /></library><resx path=\"strings/SwitchProcessGridResource.1033.resx\" version=\"1.0.0\" /><code path=\"SwitchProcessGridControl.js\" order=\"2\" /></resources></control></manifest>",
+    "name": "MscrmControls.Containers.SwitchProcessGridControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.35"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Containers.SwitchProcessGridControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

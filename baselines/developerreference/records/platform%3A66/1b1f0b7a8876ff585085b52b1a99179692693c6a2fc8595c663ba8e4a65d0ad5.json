@@ -1,0 +1,125 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "PDFParentControl",
+        "ControlManifestVersion": "1.0.19",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.PDFParent.PDFParentControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_AppCommon_PDFParentControl",
+        "FullName": "MscrmControls.AppCommon.PDFParent.PDFParentControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.PDFParent.PDFParentControl",
+        "Namespace": "MscrmControls.AppCommon.PDFParent",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "entityId",
+              "Required": true,
+              "TypeGroup": "text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "entityType",
+              "Required": true,
+              "TypeGroup": "text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "entityTypeCode",
+              "Required": true,
+              "TypeGroup": "text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "templateType",
+              "Required": true,
+              "TypeGroup": "text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "documentType",
+              "Required": true,
+              "TypeGroup": "text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "office-ui-fabric-react-pdfparent",
+              "LoadOrder": 2,
+              "Name": "office-ui-fabric-react-pdfparent",
+              "Type": 0
+            },
+            {
+              "LibraryName": "ClientUtility",
+              "LoadOrder": 3,
+              "Name": "ClientUtility",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 4,
+              "Name": "MscrmControls.AppCommon.PDFParent.PDFParentControl_PDFParentControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/PDFParentControlStrings.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.26092.10001",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.PDFParent\" constructor=\"PDFParentControl\" version=\"1.0.19\" display-name-key=\"CC_AppCommon_PDFParentControl\" control-type=\"virtual\" hidden=\"true\"><modes></modes><type-group name=\"text\"><type>SingleLine.Text</type></type-group><property name=\"entityId\" display-name-key=\"cc_entityId_id\" description-key=\"CC_entityId_Desc\" of-type-group=\"text\" usage=\"input\" required=\"true\" hidden=\"false\" /><property name=\"entityType\" display-name-key=\"cc_entityType_id\" description-key=\"CC_entityType_Desc\" of-type-group=\"text\" usage=\"input\" required=\"true\" hidden=\"false\" /><property name=\"entityTypeCode\" display-name-key=\"cc_entityTypeCode_id\" description-key=\"CC_entityTypeCode_Desc\" of-type-group=\"text\" usage=\"input\" required=\"true\" hidden=\"false\" /><property name=\"templateType\" display-name-key=\"cc_templateType_id\" description-key=\"CC_templateType_Desc\" of-type-group=\"text\" usage=\"input\" required=\"true\" hidden=\"false\" /><property name=\"documentType\" display-name-key=\"cc_documentType_id\" description-key=\"CC_documentType_Desc\" of-type-group=\"text\" usage=\"input\" required=\"true\" hidden=\"false\" /><resources><library name=\"office-ui-fabric-react-pdfparent\" version=\"&gt;=7.117.4\" order=\"2\"><packaged_library path=\"libs/office-ui-fabric-react.min.js\" version=\"7.117.4\" /></library><library name=\"ClientUtility\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"ClientUtility.js\" version=\"1.0.0\" /></library><code path=\"PDFParentControl.js\" order=\"4\" /><resx path=\"strings/PDFParentControlStrings.1033.resx\" version=\"1.0.6\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.PDFParent.PDFParentControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.19"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.PDFParent.PDFParentControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

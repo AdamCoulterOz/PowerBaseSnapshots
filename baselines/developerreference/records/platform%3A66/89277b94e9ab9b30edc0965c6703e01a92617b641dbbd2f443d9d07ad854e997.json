@@ -1,0 +1,143 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "MergeControl",
+        "ControlManifestVersion": "1.0.90",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.MergeControlContainer.MergeControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_MergeControl",
+        "FullName": "MscrmControls.MergeControlContainer.MergeControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.MergeControlContainer.MergeControl",
+        "Namespace": "MscrmControls.MergeControlContainer",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "Entity1",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "Entity2",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "EntityType",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "MergeFlag",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "UpdatedContentList",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 2
+            },
+            {
+              "Hidden": true,
+              "Name": "MasterRecord",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "fluentui-react",
+              "LoadOrder": 1,
+              "Name": "fluentui-react",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 2,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "SIClientUtilityLogger",
+              "LoadOrder": 3,
+              "Name": "SIClientUtilityLogger",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 6,
+              "Name": "MscrmControls.MergeControlContainer.MergeControl_MergeControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 4,
+              "Name": "css/MergeControl.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/MergeControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.MergeControlContainer\" constructor=\"MergeControl\" version=\"1.0.90\" display-name-key=\"CC_MergeControl\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"Entity1\" display-name-key=\"CC_entity_record1\" description-key=\"CC_entity_record1_Desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"Entity2\" display-name-key=\"CC_entity_record1\" description-key=\"CC_entity_record1_Desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"false\" /><property name=\"EntityType\" display-name-key=\"CC_entity_type\" description-key=\"CC_entity_type_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"MergeFlag\" display-name-key=\"CC_Merge_update_Flag\" description-key=\"CC_Merge_update_Flag_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"UpdatedContentList\" display-name-key=\"CC_UpdatedContentList\" description-key=\"CC_UpdatedContentList_Desc\" of-type=\"SingleLine.Text\" usage=\"output\" required=\"false\" hidden=\"true\" /><property name=\"MasterRecord\" display-name-key=\"CC_MasterRecord\" description-key=\"CC_MasterRecord_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" hidden=\"true\" /><resources><library name=\"fluentui-react\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/fluentui-react.js\" version=\"8.121.1\" /></library><library name=\"mscommon\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.22\" /></library><library name=\"SIClientUtilityLogger\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"libs/SIClientUtilityLogger.js\" version=\"1.2.2\" /></library><resx path=\"strings/MergeControl.1033.resx\" version=\"1.0.0\" /><css path=\"css/MergeControl.css\" order=\"4\" /><code path=\"MergeControl.js\" order=\"6\" /></resources></control></manifest>",
+    "name": "MscrmControls.MergeControlContainer.MergeControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.90"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.MergeControlContainer.MergeControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

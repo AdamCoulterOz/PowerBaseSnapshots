@@ -1,0 +1,46 @@
+{
+  "configuration": {
+    "componentstate": 0,
+    "importsequencenumber": null,
+    "introducedversion": "202608.1.4.1",
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "msdyn_aitemplateid": "ff2278b1-11aa-4a60-9755-34eaa6097657",
+    "msdyn_databinding": null,
+    "msdyn_defaultrunschedulingoptions": null,
+    "msdyn_istrainable": true,
+    "msdyn_modelaction": null,
+    "msdyn_resourceinfo": "{\"ResourceType\":\"CognitiveService\",\"CognitiveInfo\":{\"CognitiveType\":\"PersonalizerInternal\"}, \"ModelStorageType\":\"Reference\"}",
+    "msdyn_runconfigschema": null,
+    "msdyn_rundataspecification": "\n        {\n          \"schemaVersion\": 2,\n          \"input\": {\n            \"attributes\": [\n              {\n                \"specificationName\": \"eventId\",\n                \"displayName\": \"Event Id\",\n                \"dataType\": \"String\",\n                \"requiredLevel\": \"Recommended\"\n              },\n              {\n                \"specificationName\": \"deferActivation\",\n                \"displayName\": \"Defer Activation\",\n                \"dataType\": \"Boolean\",\n                \"requiredLevel\": \"Recommended\"\n              }\n            ],\n            \"embeddedObjects\": [\n              {\n                \"isCollection\": true,\n                \"specificationName\": \"contextFeatures\",\n                \"requiredLevel\": \"ApplicationRequired\",\n                \"embeddedObjects\": [\n                  {\n                    \"isCollection\": false,\n                    \"specificationName\": \"user\",\n                    \"attributes\": [\n                      {\n                        \"specificationName\": \"profileType\",\n                        \"displayName\": \"Profile Type\",\n                        \"dataType\": \"String\",\n                        \"requiredLevel\": \"Recommended\"\n                      },\n                      {\n                        \"specificationName\": \"latLong\",\n                        \"displayName\": \"Coordinates\",\n                        \"dataType\": \"String\",\n                        \"requiredLevel\": \"Recommended\"\n                      }\n                    ]\n                  },\n                  {\n                    \"isCollection\": false,\n                    \"specificationName\": \"environment\",\n                    \"attributes\": [\n                      {\n                        \"specificationName\": \"dayOfMonth\",\n                        \"displayName\": \"Day of the Month\",\n                        \"dataType\": \"String\",\n                        \"requiredLevel\": \"Recommended\"\n                      },\n                      {\n                        \"specificationName\": \"monthOfYear\",\n                        \"displayName\": \"Month of the Year\",\n                        \"dataType\": \"String\",\n                        \"requiredLevel\": \"Recommended\"\n                      },\n                      {\n                        \"specificationName\": \"weather\",\n                        \"displayName\": \"Weather\",\n                        \"dataType\": \"String\",\n                        \"requiredLevel\": \"Recommended\"\n                      }\n                    ]\n                  }\n                ]\n              },\n              {\n                \"isCollection\": true,\n                \"specificationName\": \"actions\",\n                \"requiredLevel\": \"ApplicationRequired\",\n                \"attributes\": [\n                  {\n                    \"specificationName\": \"id\",\n                    \"displayName\": \"Action Id\",\n                    \"dataType\": \"String\",\n                    \"requiredLevel\": \"Required\"\n                  }\n                ],\n                \"embeddedObjects\": [\n                  {\n                    \"isCollection\": true,\n                    \"specificationName\": \"features\",\n                    \"attributes\": [\n                      {\n                        \"specificationName\": \"type\",\n                        \"displayName\": \"Type\",\n                        \"dataType\": \"String\",\n                        \"requiredLevel\": \"Recommended\"\n                      }\n                    ]\n                  }\n                ]\n              },\n              {\n                \"isCollection\": true,\n                \"specificationName\": \"excludedActions\",\n                \"requiredLevel\": \"Recommended\",\n                \"attributes\": [\n                  {\n                    \"specificationName\": \"id\",\n                    \"displayName\": \"Id\",\n                    \"dataType\": \"String\",\n                    \"requiredLevel\": \"Recommended\"\n                  }\n                ]\n              }\n            ]\n          },\n          \"output\": {\n            \"attributes\": [\n              {\n                \"specificationName\": \"eventId\",\n                \"dataType\": \"String\"\n              },\n              {\n                \"specificationName\": \"rewardActionId\",\n                \"dataType\": \"String\"\n              },\n              {\n                \"specificationName\": \"ranking\",\n                \"dataType\": \"String\"\n              }\n            ]\n          }\n        }\n      ",
+    "msdyn_templateversion": 1,
+    "msdyn_trainingconfigschema": null,
+    "msdyn_trainingdataspecification": "\n        {\n          \"schemaVersion\": 2,\n          \"input\": {\n            \"attributes\": [\n              {\n                \"specificationName\": \"rewardWaitTime\",\n                \"displayName\": \"Reward Wait Time\",\n                \"dataType\": \"String\"\n              }\n            ]\n          },\n          \"output\": {}\n        }\n      ",
+    "msdyn_uniquename": "PersonalizerInternal",
+    "msdyn_uxconfiguration": null,
+    "overriddencreatedon": null,
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "portability": "not-established",
+    "value": "ff2278b1-11aa-4a60-9755-34eaa6097657"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_AISolutionDefaultTemplates",
+      "version": "202608.1.4.1"
+    }
+  ],
+  "typeIdentity": "platform:400"
+}

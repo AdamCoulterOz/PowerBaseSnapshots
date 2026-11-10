@@ -1,0 +1,186 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": true
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": "Displays information about all your business mailboxes",
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" savedqueryid=\"3231f3e9-2ff4-e611-80d3-00155d0c1809\"><entity name=\"mailbox\"><attribute name=\"name\" /><order attribute=\"name\" descending=\"false\" /><attribute name=\"outgoingemailstatus\" /><attribute name=\"incomingemailstatus\" /><attribute name=\"actstatus\" /><attribute name=\"emailaddress\" /><attribute name=\"regardingobjectid\" /><filter type=\"and\"><condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /></filter><attribute name=\"mailboxid\" /></entity></fetch>",
+    "introducedversion": "9.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "name",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "mailbox"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "name",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "emailaddress",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "regardingobjectid",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "incomingemailstatus",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "outgoingemailstatus",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "actstatus",
+                "RelatedEntityName": "",
+                "Width": 100
+              }
+            ],
+            "Id": "mailboxid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "mailbox"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" jump=\"name\" select=\"1\" preview=\"1\" icon=\"1\" object=\"logical:mailbox\"><row name=\"result\" id=\"mailboxid\"><cell name=\"name\" width=\"150\" /><cell name=\"emailaddress\" width=\"100\" /><cell name=\"regardingobjectid\" width=\"100\" /><cell name=\"incomingemailstatus\" width=\"100\" /><cell name=\"outgoingemailstatus\" width=\"100\" /><cell name=\"actstatus\" width=\"100\" /></row></grid>"
+    },
+    "name": "All Mailboxes",
+    "offlinesqlquery": "/*SelectStart*/select  \"mailbox0\".[name] as \"name\"\r , \"mailbox0\".[outgoingemailstatus] as \"outgoingemailstatus\"\r , \"mailbox0\".[incomingemailstatus] as \"incomingemailstatus\"\r , \"mailbox0\".[actstatus] as \"actstatus\"\r , \"mailbox0\".[emailaddress] as \"emailaddress\"\r , \"mailbox0\".[regardingobjectid!id] as \"regardingobjectid!id\"\r , \"mailbox0\".[regardingobjectid!logicalname] as \"regardingobjectid!logicalname\"\r , \"mailbox0\".[regardingobjectid!name] as \"regardingobjectid!name\"\r , \"mailbox0\".[mailboxid] as \"mailboxid\"/*SelectEnd*/  /*FromStart*/from  Mailbox as \"mailbox0\"/*FromEnd*/  /*WhereStart*/where  (\"mailbox0\".[statecode] = 0)/*WhereEnd*/  /*OrderByStart*/order by  \"mailbox0\".[name] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "mailbox",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "3231f3e9-2ff4-e611-80d3-00155d0c1809",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "mailbox",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "3231f3e9-2ff4-e611-80d3-00155d0c1809"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommon",
+      "version": "9.0.4.0066"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

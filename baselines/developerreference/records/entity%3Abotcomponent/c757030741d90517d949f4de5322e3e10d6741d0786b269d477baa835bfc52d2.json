@@ -1,0 +1,73 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "msdyn_appCopilot.topic.DefaultPlatformSparkContent"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponent"
+    },
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 10,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnEventActivity\r\n  id: main\r\n  actions:\r\n    - kind: ConditionGroup\r\n      id: conditionGroup_3LXuJg\r\n      conditions:\r\n        - id: conditionItem_EJuABh\r\n          actions:\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_zYoM08\r\n              value: Agir\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_9BuDTP\r\n              value: Analisar\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_EkrPi4\r\n              value: Perguntar\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_xa3sQu\r\n              value: Navegar até [nome de tabela]\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_hxAu6L\r\n              value: Há quantos(as) [nome de tabela]?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_Bw9lQz\r\n              value: Quantos(as) [nome de tabela] estão [inserir condição]?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_fbkHRn\r\n              value: Quais são os(as) [nome de tabela] que eu criei na semana passada?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_eFjQXY\r\n              value: A quem [nome de registro] foi atribuído(a)?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_IIRGvt\r\n              value: Quais são os(as) [nome de tabela] atribuídos(as) a [pessoa]?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_FWjnVw\r\n              value: Quais são os meus(inhas) [nome de tabela]?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_qwKkPs\r\n              value: Quem são os meus contatos?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_BBCLi0\r\n              value: Quais contatos não têm endereços de email?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_A2gsy5\r\n              value: Quais contatos não possuem números de telefone comerciais?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_3saXSn\r\n              value: Quais oportunidades foram fechadas nos últimos 30 dias?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_b2NE88\r\n              value: Quais oportunidades têm a receita estimada mais alta?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_4wQDfG\r\n              value: Quais são minhas oportunidades em aberto?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_ugohCY\r\n              value: Quais clientes potenciais foram fechados nos últimos 30 dias?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_g1WVnq\r\n              value: Quais são meus clientes potenciais em aberto?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_XAsvzk\r\n              value: Quais são as 10 principais contas com maior receita?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_tMqHg9\r\n              value: Obter as últimas notícias da conta da AdventureWorks\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_ogSkT5\r\n              value: Quais contas não possuem um contato?",
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": 1046,
+    "name": "Conteúdo de Plataforma Padrão do Sparks (pt-BR)",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.DefaultPlatformSparkContent.pt-BR",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.DefaultPlatformSparkContent.pt-BR"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

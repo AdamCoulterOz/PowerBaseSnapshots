@@ -1,0 +1,104 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ImportLogsControl",
+        "ControlManifestVersion": "1.0.211",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.ImportExport.ImportLogsControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "ImportLogs",
+        "FullName": "MscrmControls.ImportExport.ImportLogsControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.ImportExport.ImportLogsControl",
+        "Namespace": "MscrmControls.ImportExport",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": false,
+              "Type": "Decimal",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "targetentityname",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 2,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.ImportExport.ImportLogsControl_ImportLogsControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/ImportLogs.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.ImportExport\" constructor=\"ImportLogsControl\" version=\"1.0.211\" display-name-key=\"ImportLogs\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"value\" display-name-key=\"CC_value\" description-key=\"CC_value_desc\" usage=\"input\" of-type=\"Decimal\" required=\"false\" hidden=\"false\" /><property name=\"targetentityname\" display-name-key=\"CC_targetentityname\" description-key=\"CC_targetentityname_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-3.6.0.js\" version=\"3.6.0\" /></library><library name=\"mscommon\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.13\" /></library><code path=\"ImportLogsControl.js\" order=\"3\" /><resx path=\"strings/ImportLogs.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.ImportExport.ImportLogsControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.211"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.ImportExport.ImportLogsControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

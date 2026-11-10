@@ -1,0 +1,152 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "KbSearchControl",
+        "ControlManifestVersion": "1.26094.3006",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.KbSearchControl.KbSearchControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "KbSearchControl_Name",
+        "FullName": "MscrmControls.KbSearchControl.KbSearchControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.KbSearchControl.KbSearchControl",
+        "Namespace": "MscrmControls.KbSearchControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "Type": "SearchWidget",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "AutoSuggestionField",
+              "Required": false,
+              "TypeGroup": "all",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "WrapperContext",
+              "Required": false,
+              "TypeGroup": "all",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "moment",
+              "LoadOrder": 2,
+              "Name": "moment",
+              "Type": 0
+            },
+            {
+              "LibraryName": "KbCommonUtils",
+              "LoadOrder": 2,
+              "Name": "KbCommonUtils",
+              "Type": 0
+            },
+            {
+              "LibraryName": "DOMPurify",
+              "LoadOrder": 2,
+              "Name": "DOMPurify",
+              "Type": 0
+            },
+            {
+              "LibraryName": "KnowledgeArticleAttachment",
+              "LoadOrder": 2,
+              "Name": "KnowledgeArticleAttachment",
+              "Type": 0
+            },
+            {
+              "LibraryName": "KbArticleControl",
+              "LoadOrder": 4,
+              "Name": "KbArticleControl",
+              "Type": 0
+            },
+            {
+              "LibraryName": "KbContentControl",
+              "LoadOrder": 5,
+              "Name": "KbContentControl",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.KbSearchControl.KbSearchControl_KbSearchControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 4,
+              "Name": "css/KbSearchControl.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/KbSearchControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.KbSearchControl\" constructor=\"KbSearchControl\" version=\"1.26094.3006\" display-name-key=\"KbSearchControl_Name\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"value\" required=\"true\" display-name-key=\"KbSearchControl_Value\" description-key=\"KbSearchControl_Value_Desc\" usage=\"bound\" of-type=\"SearchWidget\" /><property name=\"AutoSuggestionField\" display-name-key=\"AutoSuggestions_Field\" of-type-group=\"all\" usage=\"bound\" required=\"false\" hidden=\"true\" /><property name=\"WrapperContext\" display-name-key=\"WrapperContext_Field\" of-type-group=\"all\" usage=\"bound\" required=\"false\" hidden=\"true\" /><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.22\" /></library><library name=\"moment\" version=\"&gt;=2.29.4\" order=\"2\"><packaged_library path=\"libs/moment.min.js\" version=\"2.29.4\" /></library><library name=\"KbCommonUtils\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/KbCommonUtils.js\" version=\"1.26094.3006\" /></library><library name=\"DOMPurify\" version=\"&gt;=3.4.17\" order=\"2\"><packaged_library path=\"libs/purify.min.js\" version=\"3.4.17\" /></library><library name=\"KnowledgeArticleAttachment\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/KnowledgeArticleAttachment.js\" version=\"1.26094.3006\" /></library><library name=\"KbArticleControl\" version=\"&gt;=1\" order=\"4\"><packaged_library path=\"libs/KbArticleControl.js\" version=\"1.26094.3006\" /></library><library name=\"KbContentControl\" version=\"&gt;=1\" order=\"5\"><packaged_library path=\"libs/KbContentControl.js\" version=\"1.26094.3006\" /></library><code path=\"KbSearchControl.js\" order=\"3\" /><css path=\"css/KbSearchControl.css\" order=\"4\" /><resx path=\"strings/KbSearchControl.1033.resx\" version=\"1.26094.3006\" /></resources></control></manifest>",
+    "name": "MscrmControls.KbSearchControl.KbSearchControl",
+    "supportedplatform": "(Model)",
+    "version": "1.26094.3006"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.KbSearchControl.KbSearchControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    },
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdynce_KnowledgeManagementFeatures",
+      "version": "9.0.26094.3006"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

@@ -1,0 +1,99 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "DashboardControl",
+        "ControlManifestVersion": "1.1.80",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Containers.DashboardControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_DashboardControl_Name",
+        "FullName": "MscrmControls.Containers.DashboardControl",
+        "IsVirtual": true,
+        "MappingFileName": "design-maps/map.*.xml",
+        "Name": "MscrmControls.Containers.DashboardControl",
+        "Namespace": "MscrmControls.Containers",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [
+            {
+              "ActionType": 0
+            }
+          ],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "Type": "Dashboard",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "ForbiddenControlIdList",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "DashboardCore",
+              "LoadOrder": 1,
+              "Name": "DashboardCore",
+              "Type": 0
+            },
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Containers\" constructor=\"DashboardControl\" version=\"1.1.80\" display-name-key=\"CC_DashboardControl_Name\" control-type=\"virtual\" hidden=\"true\" design-mapping-file=\"design-maps/map.*.xml\"><modes></modes><property name=\"value\" required=\"true\" display-name-key=\"CC_DashboardControl_Value\" description-key=\"CC_DashboardControl_Value_Desc\" usage=\"bound\" of-type=\"Dashboard\" /><property name=\"ForbiddenControlIdList\" display-name-key=\"CC_DashboardControl_ForbiddenControlIdList\" description-key=\"ForbiddenControlIdList\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><resources><library name=\"DashboardCore\" version=\"&gt;=2.0.78\" order=\"1\"><packaged_library path=\"DashboardControl.js\" version=\"2.0.78\" /></library><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-3.6.0.js\" version=\"3.6.0\" /></library></resources><platform-action action-type=\"afterPageLoad\" /></control></manifest>",
+    "name": "MscrmControls.Containers.DashboardControl",
+    "supportedplatform": "(Model)",
+    "version": "1.1.80"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Containers.DashboardControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

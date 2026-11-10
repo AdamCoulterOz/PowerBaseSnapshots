@@ -1,0 +1,108 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "SignatureControl",
+        "ControlManifestVersion": "1.0.7",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Signature.SignatureControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_Signature_Name",
+        "FullName": "MscrmControls.Signature.SignatureControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.Signature.SignatureControl",
+        "Namespace": "MscrmControls.Signature",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "Type": "Multiple",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 2,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "appmagic",
+              "LoadOrder": 3,
+              "Name": "appmagic",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 4,
+              "Name": "MscrmControls.Signature.SignatureControl_Signature.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 5,
+              "Name": "css/Ink.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/Signature.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "Multiple",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Signature\" constructor=\"SignatureControl\" version=\"1.0.7\" display-name-key=\"CC_Signature_Name\" description-key=\"CC_Signature_Desc\" preview-image=\"img/preview.png\"><modes><read /><edit /></modes><property name=\"value\" display-name-key=\"CC_Field\" description-key=\"CC_Field_Desc\" of-type=\"Multiple\" usage=\"bound\" required=\"true\" hidden=\"true\" /><AvailableOn><web classic=\"disable\" /><phone /><tablet /></AvailableOn><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><library name=\"mscommon\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><library name=\"appmagic\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"libs/appmagiccommonlib-1.0.0.js\" version=\"1.0.0\" /></library><code path=\"Signature.js\" order=\"4\" /><css path=\"css/Ink.css\" order=\"5\" /><resx path=\"strings/Signature.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.Signature.SignatureControl",
+    "supportedplatform": null,
+    "version": "1.0.7"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Signature.SignatureControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

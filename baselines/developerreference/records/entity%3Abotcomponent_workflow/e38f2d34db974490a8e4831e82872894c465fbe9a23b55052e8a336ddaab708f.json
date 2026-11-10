@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "botcomponentid": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "msdyn_topic_9688398bfc794abe90edab4943d1893f"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponent"
+    },
+    "componentstate": 0,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "workflowid": {
+      "key": {
+        "kind": "wire-guid",
+        "portability": "not-established",
+        "value": "87023c69-962c-ec11-b6e6-000d3a574957"
+      },
+      "kind": "typed-reference",
+      "targetEntity": "workflow"
+    }
+  },
+  "exportIdentity": [
+    {
+      "field": "botcomponentid",
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "msdyn_topic_9688398bfc794abe90edab4943d1893f"
+        }
+      ],
+      "targetEntity": "botcomponent"
+    },
+    {
+      "field": "workflowid",
+      "key": {
+        "kind": "wire-guid",
+        "portability": "not-established",
+        "value": "87023c69-962c-ec11-b6e6-000d3a574957"
+      },
+      "targetEntity": "workflow"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdynce_KnowledgeManagementOnlineExtension",
+      "version": "9.0.26094.3006"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent_workflow"
+}

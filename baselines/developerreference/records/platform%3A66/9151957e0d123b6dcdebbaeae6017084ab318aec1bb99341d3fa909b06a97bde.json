@@ -1,0 +1,118 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.18",
+        "Children": [],
+        "ConstructorName": "GrantAccessControl",
+        "ControlManifestVersion": "1.24075.0",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Collaboration.GrantAccessControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "GrantAccessControl_Display_Key",
+        "FullName": "MscrmControls.Collaboration.GrantAccessControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.Collaboration.GrantAccessControl",
+        "Namespace": "MscrmControls.Collaboration",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "userList",
+              "Required": false,
+              "Type": "Object",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "entityId",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "entityType",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "react_16_14_0",
+              "LoadOrder": 0,
+              "Name": "react_16_14_0",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_9_4_0",
+              "LoadOrder": 0,
+              "Name": "fluent_9_4_0",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.Collaboration.GrantAccessControl_bundle.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/GrantAccessControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Collaboration\" constructor=\"GrantAccessControl\" version=\"1.24075.0\" display-name-key=\"GrantAccessControl_Display_Key\" description-key=\"GrantAccessControl_Desc_Key\" control-type=\"virtual\" hidden=\"true\" api-version=\"1.3.18\"><external-service-usage enabled=\"false\" /><property name=\"userList\" display-name-key=\"UserList_Display_Key\" description-key=\"UserList_Desc_Key\" of-type=\"Object\" usage=\"bound\" required=\"false\" hidden=\"true\" /><property name=\"entityId\" display-name-key=\"EntityId_Display_Key\" description-key=\"EntityId_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" hidden=\"true\" /><property name=\"entityType\" display-name-key=\"EntityType_Display_Key\" description-key=\"EntityType_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" hidden=\"true\" /><resources><platform-library name=\"React\" version=\"16.8.6\" /><platform-library name=\"Fluent\" version=\"9.4.0\" /><code path=\"bundle.js\" order=\"1\" /><resx path=\"strings/GrantAccessControl.1033.resx\" version=\"1.0.0\" /></resources><feature-usage><uses-feature name=\"Utility\" required=\"true\" /></feature-usage><built-by name=\"pac\" version=\"1.49.1-alpha-25090500\" /><subscribed-functionalities><subscribed-functionality name=\"sharedTemplate\" value=\"false\" /></subscribed-functionalities></control></manifest>",
+    "name": "MscrmControls.Collaboration.GrantAccessControl",
+    "supportedplatform": "(Model)",
+    "version": "1.24075.0"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Collaboration.GrantAccessControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

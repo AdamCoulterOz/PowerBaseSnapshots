@@ -1,0 +1,73 @@
+{
+  "configuration": {
+    "_parentappmoduleid_value": {
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "PowerPlatformEnvironmentSettings"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "appmodule"
+    },
+    "_settingdefinitionid_value": {
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "AppChannel"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "settingdefinition"
+    },
+    "componentstate": 0,
+    "description": null,
+    "displayname": "App channel",
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "overriddencreatedon": null,
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "uniquename": null,
+    "utcconversiontimezonecode": null,
+    "value": "1"
+  },
+  "exportIdentity": [
+    {
+      "field": "parentappmoduleid",
+      "key": "PowerPlatformEnvironmentSettings",
+      "targetEntity": "appmodule",
+      "type": "lookup"
+    },
+    {
+      "field": "settingdefinitionid",
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "AppChannel"
+        }
+      ],
+      "targetEntity": "settingdefinition",
+      "type": "lookup"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "PowerPlatformEnvironmentSettings",
+      "version": "2.2.3552.1"
+    }
+  ],
+  "typeIdentity": "entity:appsetting"
+}

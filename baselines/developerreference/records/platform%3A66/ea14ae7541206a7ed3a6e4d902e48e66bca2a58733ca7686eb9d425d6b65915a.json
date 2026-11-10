@@ -1,0 +1,106 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "SharepointControl",
+        "ControlManifestVersion": "1.0.28",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.SharepointAssociatedGrid.SharepointControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "SharePointAssociatedGrid_Control",
+        "FullName": "MscrmControls.SharepointAssociatedGrid.SharepointControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.SharepointAssociatedGrid.SharepointControl",
+        "Namespace": "MscrmControls.SharepointAssociatedGrid",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "displayQuickFind:false;displayCommandBar:true;displayViewSelector:true",
+              "Columns": [
+                {
+                  "Hidden": false,
+                  "Name": "SearchKey1",
+                  "Required": true,
+                  "Type": "SingleLine.Text",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "SearchKey2",
+                  "Required": false,
+                  "Type": "SingleLine.Text",
+                  "Usage": 0
+                }
+              ],
+              "InitialDataSetFetch": true,
+              "Name": "Grid",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 3,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.SharepointAssociatedGrid.SharepointControl_SharepointAssociatedGridControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/SharepointAssociatedGridControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.SharepointAssociatedGrid\" constructor=\"SharepointControl\" version=\"1.0.28\" display-name-key=\"SharePointAssociatedGrid_Control\" control-type=\"virtual\" hidden=\"true\"><modes><container /></modes><!-- displayCommandBar and displayViewSelector values are only dummy values. The actual parameter is guided by formXML and grid properties.  --><data-set name=\"Grid\" display-name-key=\"SharePoint_DataSet_Control\" cds-data-set-options=\"displayQuickFind:false;displayCommandBar:true;displayViewSelector:true\"><property-set name=\"SearchKey1\" display-name-key=\"CC_SearchKey1\" description-key=\"CC_SearchKey1\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" /><property-set name=\"SearchKey2\" display-name-key=\"CC_SearchKey2\" description-key=\"CC_SearchKey2\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /></data-set><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><code path=\"SharepointAssociatedGridControl.js\" order=\"1\" /><resx path=\"strings/SharepointAssociatedGridControl.1033.resx\" version=\"1.0.1\" /></resources></control></manifest>",
+    "name": "MscrmControls.SharepointAssociatedGrid.SharepointControl",
+    "supportedplatform": null,
+    "version": "1.0.28"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.SharepointAssociatedGrid.SharepointControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

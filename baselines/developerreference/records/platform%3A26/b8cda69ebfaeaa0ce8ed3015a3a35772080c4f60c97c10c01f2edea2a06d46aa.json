@@ -1,0 +1,124 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" savedqueryid=\"30ce6879-6b7a-e211-8976-00155d89ac0c\"><entity name=\"systemuser\"><order attribute=\"fullname\" descending=\"false\" /><attribute name=\"businessunitid\" /><attribute name=\"fullname\" /><attribute name=\"systemuserid\" /><filter type=\"and\"><condition attribute=\"fullname\" operator=\"ne\" value=\"SYSTEM\" /><condition attribute=\"fullname\" operator=\"ne\" value=\"INTEGRATION\" /><condition attribute=\"systemmanagedusertype\" operator=\"eq\" value=\"0\" /></filter></entity></fetch>",
+    "introducedversion": "6.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "fullname",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "systemuser"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "fullname",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "businessunitid",
+                "RelatedEntityName": "",
+                "Width": 150
+              }
+            ],
+            "Id": "systemuserid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "systemuser"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:systemuser\" jump=\"fullname\" select=\"1\" preview=\"1\" icon=\"1\"><row name=\"result\" id=\"systemuserid\"><cell name=\"fullname\" width=\"150\" /><cell name=\"businessunitid\" width=\"150\" /></row></grid>"
+    },
+    "name": "Team members",
+    "offlinesqlquery": "/*SelectStart*/select  \"systemuser0\".[businessunitid!id] as \"businessunitid!id\"\r , \"systemuser0\".[businessunitid!logicalname] as \"businessunitid!logicalname\"\r , \"systemuser0\".[businessunitid!name] as \"businessunitid!name\"\r , \"systemuser0\".[fullname] as \"fullname\"\r , \"systemuser0\".[systemuserid] as \"systemuserid\"/*SelectEnd*/  /*FromStart*/from  SystemUser as \"systemuser0\"/*FromEnd*/  /*WhereStart*/where  ((\"systemuser0\".[fullname] !=  'SYSTEM' or \"systemuser0\".[fullname] is null) and (\"systemuser0\".[fullname] !=  'INTEGRATION' or \"systemuser0\".[fullname] is null) and \"systemuser0\".[systemmanagedusertype] = 0)/*WhereEnd*/  /*OrderByStart*/order by  \"systemuser0\".[fullname] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "systemuser",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "30ce6879-6b7a-e211-8976-00155d89ac0c",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "systemuser",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "30ce6879-6b7a-e211-8976-00155d89ac0c"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}

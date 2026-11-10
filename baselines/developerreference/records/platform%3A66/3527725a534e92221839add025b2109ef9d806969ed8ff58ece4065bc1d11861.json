@@ -1,0 +1,229 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.18",
+        "Children": [],
+        "ConstructorName": "PCFGridControl",
+        "ControlManifestVersion": "1.1.264",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Grid.PCFGridControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "PCFGridControl_Name",
+        "FullName": "MscrmControls.Grid.PCFGridControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.Grid.PCFGridControl",
+        "Namespace": "MscrmControls.Grid",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [],
+              "InitialDataSetFetch": true,
+              "Name": "Items",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "ColumnResizing",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "ColumnMoving",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "ColumnPinning",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "RowStyle",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "RowSelection",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "SelectionColumn",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "JumpBar",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "Footer",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ReflowBehavior",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnableFiltering",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnableRangeSelection",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "NavigationTypesAllowed",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "42",
+              "Hidden": true,
+              "Name": "RowHeight",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "72",
+              "Hidden": true,
+              "Name": "RowHeightMobile",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "42",
+              "Hidden": true,
+              "Name": "HeaderHeight",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "32",
+              "Hidden": true,
+              "Name": "GridInnerLeftPadding",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "32",
+              "Hidden": true,
+              "Name": "GridInnerRightPadding",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "react_16_14_0",
+              "LoadOrder": 0,
+              "Name": "react_16_14_0",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_8_121_1",
+              "LoadOrder": 0,
+              "Name": "fluent_8_121_1",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.Grid.PCFGridControl_PCFGridControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/PCFGridControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "Grid",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Grid\" constructor=\"PCFGridControl\" version=\"1.1.264\" display-name-key=\"PCFGridControl_Name\" description-key=\"PCFGridControl_Desc\" control-type=\"virtual\" api-version=\"1.3.18\"><data-set name=\"Items\" display-name-key=\"PCFGridControl_Items_Name\" description-key=\"PCFGridControl_Items_Desc\" /><property name=\"ColumnResizing\" display-name-key=\"PCFGridControl_ColumnResizing_Name\" description-key=\"PCFGridControl_ColumnResizing_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"true\"><value name=\"Enable\" display-name-key=\"PCFGridControl_ColumnResizing_Enable_Name\" description-key=\"PCFGridControl_ColumnResizing_Enable_Desc\" default=\"true\">Enable</value><value name=\"Disable\" display-name-key=\"PCFGridControl_ColumnResizing_Disable_Name\" description-key=\"PCFGridControl_ColumnResizing_Disable_Desc\">Disable</value></property><property name=\"ColumnMoving\" display-name-key=\"PCFGridControl_ColumnMoving_Name\" description-key=\"PCFGridControl_ColumnMoving_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"true\"><value name=\"Enable\" display-name-key=\"PCFGridControl_ColumnMoving_Enable_Name\" description-key=\"PCFGridControl_ColumnMoving_Enable_Desc\">Enable</value><value name=\"Disable\" display-name-key=\"PCFGridControl_ColumnMoving_Disable_Name\" description-key=\"PCFGridControl_ColumnMoving_Disable_Desc\" default=\"true\">Disable</value></property><property name=\"ColumnPinning\" display-name-key=\"PCFGridControl_ColumnPinning_Name\" description-key=\"PCFGridControl_ColumnPinning_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"true\"><value name=\"Enable\" display-name-key=\"PCFGridControl_ColumnPinning_Enable_Name\" description-key=\"PCFGridControl_ColumnPinning_Enable_Desc\">Enable</value><value name=\"Disable\" display-name-key=\"PCFGridControl_ColumnPinning_Disable_Name\" description-key=\"PCFGridControl_ColumnPinning_Disable_Desc\" default=\"true\">Disable</value></property><property name=\"RowStyle\" display-name-key=\"PCFGridControl_RowStyle_Name\" description-key=\"PCFGridControl_RowStyle_Desc\" usage=\"input\" of-type=\"Enum\" hidden=\"true\"><value name=\"Flat\" display-name-key=\"PCFGridControl_RowStyle_Flat_Name\" description-key=\"PCFGridControl_RowStyle_Flat_Desc\" default=\"true\">Flat</value><value name=\"Zebra\" display-name-key=\"PCFGridControl_RowStyle_Zebra_Name\" description-key=\"PCFGridControl_RowStyle_Zebra_Desc\">Zebra</value></property><property name=\"RowSelection\" display-name-key=\"PCFGridControl_RowSelection_Name\" description-key=\"PCFGridControl_RowSelection_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"true\"><value name=\"Single\" display-name-key=\"PCFGridControl_RowSelection_Single_Name\" description-key=\"PCFGridControl_RowSelection_Single_Desc\">Single</value><value name=\"Multiple\" display-name-key=\"PCFGridControl_RowSelection_Multiple_Name\" description-key=\"PCFGridControl_RowSelection_Multiple_Desc\" default=\"true\">Multiple</value></property><property name=\"SelectionColumn\" display-name-key=\"PCFGridControl_SelectionColumn_Name\" description-key=\"PCFGridControl_SelectionColumn_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"true\"><value name=\"Enable\" display-name-key=\"PCFGridControl_SelectionColumn_Enable_Name\" description-key=\"PCFGridControl_SelectionColumn_Enable_Desc\" default=\"true\">Enable</value><value name=\"Disable\" display-name-key=\"PCFGridControl_SelectionColumn_Disable_Name\" description-key=\"PCFGridControl_SelectionColumn_Disable_Desc\">Disable</value></property><property name=\"JumpBar\" display-name-key=\"PCFGridControl_JumpBar_Name\" description-key=\"PCFGridControl_JumpBar_Desc\" of-type=\"Enum\" usage=\"input\"><value name=\"Enable\" display-name-key=\"PCFGridControl_JumpBar_Enable_Name\" description-key=\"PCFGridControl_JumpBar_Enable_Desc\">Enable</value><value name=\"Auto\" display-name-key=\"PCFGridControl_JumpBar_Auto_Name\" description-key=\"PCFGridControl_JumpBar_Auto_Desc\">Auto</value><value name=\"Disable\" display-name-key=\"PCFGridControl_JumpBar_Disable_Name\" description-key=\"PCFGridControl_JumpBar_Disable_Desc\" default=\"true\">Disable</value></property><property name=\"Footer\" display-name-key=\"PCFGridControl_Footer_Name\" description-key=\"PCFGridControl_Footer_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"true\"><value name=\"Enable\" display-name-key=\"PCFGridControl_Footer_Enable_Name\" description-key=\"PCFGridControl_Footer_Enable_Desc\" default=\"true\">Enable</value><value name=\"Disable\" display-name-key=\"PCFGridControl_Footer_Disable_Name\" description-key=\"PCFGridControl_Footer_Disable_Desc\">Disable</value></property><property name=\"ReflowBehavior\" display-name-key=\"PCFGridControl_ReflowBehavior_Name\" description-key=\"PCFGridControl_ReflowBehavior_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\"><value name=\"Reflow\" display-name-key=\"PCFGridControl_ReflowBehavior_Reflow_Name\" description-key=\"PCFGridControl_ReflowBehavior_Reflow_Desc\" default=\"true\">Reflow</value><value name=\"GridOnly\" display-name-key=\"PCFGridControl_ReflowBehavior_GridOnly_Name\" description-key=\"PCFGridControl_ReflowBehavior_GridOnly_Desc\">GridOnly</value><value name=\"ListOnly\" display-name-key=\"PCFGridControl_ReflowBehavior_ListOnly_Name\" description-key=\"PCFGridControl_ReflowBehavior_ListOnly_Desc\">ListOnly</value></property><property name=\"EnableFiltering\" display-name-key=\"PCFGridControl_EnableFiltering_Name\" description-key=\"PCFGridControl_EnableFiltering_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PCFGridControl_EnableFiltering_Enable_Name\" description-key=\"PCFGridControl_EnableFiltering_Enable_Desc\" default=\"true\">Enable</value><value name=\"Disable\" display-name-key=\"PCFGridControl_EnableFiltering_Disable_Name\" description-key=\"PCFGridControl_EnableFiltering_Disable_Desc\">Disable</value></property><property name=\"EnableRangeSelection\" display-name-key=\"PCFGridControl_EnableRangeSelection_Name\" description-key=\"PCFGridControl_EnableRangeSelection_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PCFGridControl_EnableRangeSelection_Enable_Name\" description-key=\"PCFGridControl_EnableRangeSelection_Enable_Desc\" default=\"true\">yes</value><value name=\"Disable\" display-name-key=\"PCFGridControl_EnableRangeSelection_Disable_Name\" description-key=\"PCFGridControl_EnableRangeSelection_Disable_Desc\">no</value></property><property name=\"NavigationTypesAllowed\" display-name-key=\"PCFGridControl_NavigationTypesAllowed_Name\" description-key=\"PCFGridControl_NavigationTypesAllowed_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"All\" display-name-key=\"PCFGridControl_NavigationTypesAllowed_All_Name\" description-key=\"PCFGridControl_NavigationTypesAllowed_All_Desc\" default=\"true\">all</value><value name=\"PrimaryOnly\" display-name-key=\"PCFGridControl_NavigationTypesAllowed_PrimaryOnly_Name\" description-key=\"PCFGridControl_NavigationTypesAllowed_PrimaryOnly_Desc\">primaryOnly</value></property><property name=\"RowHeight\" display-name-key=\"PCFGridControl_RowHeight_Name\" description-key=\"PCFGridControl_RowHeight_Desc\" of-type=\"Whole.None\" usage=\"input\" required=\"false\" default-value=\"42\" hidden=\"true\" /><property name=\"RowHeightMobile\" display-name-key=\"PCFGridControl_RowHeightMobile_Name\" description-key=\"PCFGridControl_RowHeightMobile_Desc\" of-type=\"Whole.None\" usage=\"input\" default-value=\"72\" hidden=\"true\" /><property name=\"HeaderHeight\" display-name-key=\"PCFGridControl_HeaderHeight_Name\" description-key=\"PCFGridControl_HeaderHeight_Desc\" of-type=\"Whole.None\" usage=\"input\" default-value=\"42\" hidden=\"true\" /><property name=\"GridInnerLeftPadding\" display-name-key=\"PCFGridControl_GridInnerLeftPadding_Name\" description-key=\"PCFGridControl_GridInnerLeftPadding_Desc\" of-type=\"Whole.None\" usage=\"input\" default-value=\"32\" hidden=\"true\" /><property name=\"GridInnerRightPadding\" display-name-key=\"PCFGridControl_GridInnerRightPadding_Name\" description-key=\"PCFGridControl_GridInnerRightPadding_Desc\" of-type=\"Whole.None\" usage=\"input\" default-value=\"32\" hidden=\"true\" /><resources><platform-library name=\"React\" version=\"16.14.0\" /><platform-library name=\"Fluent\" version=\"8.121.1\" /><code path=\"PCFGridControl.js\" order=\"2\" /><resx path=\"strings/PCFGridControl.1033.resx\" version=\"1.0.0\" /></resources><feature-usage><uses-feature name=\"Utility\" required=\"true\" /></feature-usage><built-by name=\"pac\" version=\"1.49.1-alpha-25090500\" /></control></manifest>",
+    "name": "MscrmControls.Grid.PCFGridControl",
+    "supportedplatform": "(Model)",
+    "version": "1.1.264"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Grid.PCFGridControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": null,
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 9,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnRecognizedIntent\r\n  id: main\r\n  intent: {}\r\n  actions:\r\n    - kind: BeginDialog\r\n      id: Zao64N\r\n      input:\r\n        binding:\r\n          DefaultSettingValue: false\r\n          FeatureSetting: \"=\\\"IsBingSearchEnabled\\\"\"\r\n\r\n      dialog: msdyn_appCopilot.topic.AppCopilotGetFeatureSetting\r\n      output:\r\n        binding:\r\n          FeatureValue: Topic.FeatureValue\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_57dD2a\r\n      variable: Topic.UserQuestion\r\n      value: =If(IsBlank(Topic.OutsideQuestion), System.Activity.Text, Topic.OutsideQuestion)\r\n\r\n    - kind: ConditionGroup\r\n      id: conditionGroup_oqFc43\r\n      conditions:\r\n        - id: conditionItem_Foe7l4\r\n          condition: =!IsBlank(Global.PA_Copilot_Model_SessionContext.generativeAnswersSettings)\r\n          actions:\r\n            - kind: ConditionGroup\r\n              id: conditionGroup_5nkeqX\r\n              conditions:\r\n                - id: conditionItem_icwZuP\r\n                  condition: =Topic.FeatureValue = false\r\n                  actions:\r\n                    - kind: BeginDialog\r\n                      id: p8Fx8g\r\n                      dialog: msdyn_appCopilot.topic.BingSearchFallback\r\n\r\n            - kind: ConditionGroup\r\n              id: conditionGroup_ocBTyV\r\n              conditions:\r\n                - id: conditionItem_UafIzd\r\n                  condition: =If(Global.PA_Copilot_Model_SessionContext.generativeAnswersSettings.search_type = \"SearchWithBingIndex\", true, false)\r\n                  actions:\r\n                    - kind: SearchAndSummarizeContent\r\n                      id: searchAndSummarizeContent_LZFfGe\r\n                      userInput: =If(!IsBlank(Global.PA_Copilot_Model_SessionContext.generativeAnswersSettings.search_context), Concatenate(Global.PA_Copilot_Model_SessionContext.generativeAnswersSettings.search_context,Topic.UserQuestion ), Topic.UserQuestion)\r\n                      variable: Topic.Answer\r\n                      publicDataSource:\r\n                        kind: BingCustomSearchDataSource\r\n                        customConfigurationId: =Global.PA_Copilot_Model_SessionContext.generativeAnswersSettings.bing_configuration_id\r\n\r\n                      sharePointSearchDataSource: {}\r\n                      customDataSource: {}\r\n\r\n                    - kind: ConditionGroup\r\n                      id: conditionGroup_w0iTf7\r\n                      conditions:\r\n                        - id: conditionItem_ZccR1D\r\n                          condition: =!IsBlank(Topic.Answer)\r\n                          actions:\r\n                            - kind: CancelAllDialogs\r\n                              id: arFnKl\r\n\r\n                      elseActions:\r\n                        - kind: SendActivity\r\n                          id: sendActivity_Z7Gnz1\r\n                          activity:\r\n                            kind: EventActivity\r\n                            value: \"=\\\"{\\\"\\\"ApologySource\\\"\\\": \\\"\\\"GenerativeAnswers\\\"\\\", \\\"\\\"ApologyReason\\\"\\\": \\\"\\\"Data Sources did not return an answer.\\\"\\\"}\\\"\"\r\n                            name: MS.PA.Apology\r\n\r\n              elseActions:\r\n                - kind: SearchAndSummarizeContent\r\n                  id: searchAndSummarizeContent_zppqEg\r\n                  userInput: =If(!IsBlank(Global.PA_Copilot_Model_SessionContext.generativeAnswersSettings.search_context), Concatenate(Topic.UserQuestion, Global.PA_Copilot_Model_SessionContext.generativeAnswersSettings.search_context), Topic.UserQuestion)\r\n                  autoSend: true\r\n                  variable: Topic.Answer\r\n                  publicDataSource:\r\n                    kind: PublicSiteSearchDataSource\r\n                    sites: |-\r\n                      =Filter(\r\n                        Split(\r\n                          If(!IsEmpty(Global.PA_Copilot_Model_SessionContext.generativeAnswersSettings.public_websites),\r\n                            Concat(Global.PA_Copilot_Model_SessionContext.generativeAnswersSettings.public_websites, Value, \"|\"),\r\n                            \"\") & \r\n                            \"|\" &\r\n                            Text(System.Activity.ChannelData.answersUrl1) & \r\n                            \"|\" &\r\n                            Text(System.Activity.ChannelData.answersUrl2)& \r\n                            \"|\" &\r\n                            Text(System.Activity.ChannelData.answersUrl3)& \r\n                            \"|\" &\r\n                            Text(System.Activity.ChannelData.answersUrl4),\r\n                          \"|\"\r\n                        ),\r\n                        (Value <> \"\")\r\n                      )\r\n\r\n                  sharePointSearchDataSource: {}\r\n                  customDataSource: {}\r\n\r\n      elseActions:\r\n        - kind: EndDialog\r\n          id: OLb9xS\r\n\r\ninputType:\r\n  properties:\r\n    OutsideQuestion:\r\n      displayName: OutsideQuestion\r\n      type: String",
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": 1033,
+    "name": "Generative Answers",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.GenerativeAnswers",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.GenerativeAnswers"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

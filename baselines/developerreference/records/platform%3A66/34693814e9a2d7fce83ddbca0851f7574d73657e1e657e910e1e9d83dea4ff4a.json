@@ -1,0 +1,139 @@
+{
+  "configuration": {
+    "authoringmanifest": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<authoring-manifest schema-version=\"1.0\">\r\n  <group>\r\n    <section>\r\n      <property name=\"Payload\" />\r\n      <property name=\"Data\" />\r\n    </section>\r\n    <section>\r\n      <property name=\"Visible\" />\r\n    </section>\r\n    <section>\r\n      <property-group name=\"Position\">\r\n        <property name=\"X\" />\r\n        <property name=\"Y\" />\r\n      </property-group>\r\n      <property-group name=\"Size\">\r\n        <property name=\"Width\" />\r\n        <property name=\"Height\" />\r\n      </property-group>\r\n    </section>\r\n  </group>\r\n</authoring-manifest>",
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.18",
+        "Children": [],
+        "ConstructorName": "Card",
+        "ControlManifestVersion": "1.0.184",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "PowerApps.CoreControls.Card"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "Card",
+        "FullName": "PowerApps.CoreControls.Card",
+        "IsVirtual": true,
+        "Name": "PowerApps.CoreControls.Card",
+        "Namespace": "PowerApps.CoreControls",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [
+            {
+              "Description": "Card_OnExecuteAction_Desc",
+              "DisplayName": "Card_OnExecuteAction_Name",
+              "Hidden": false,
+              "Name": "OnExecuteAction"
+            }
+          ],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "ExplicitCommonEvents",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "Payload",
+              "Required": true,
+              "Type": "Multiple",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "Data",
+              "Required": false,
+              "Type": "Multiple",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "IsEmbedded",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "UseHighCharts",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "LastActionExecuted",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 2
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "react_16_14_0",
+              "LoadOrder": 0,
+              "Name": "react_16_14_0",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_9_4_0",
+              "LoadOrder": 0,
+              "Name": "fluent_9_4_0",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "PowerApps.CoreControls.Card_Card.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/Card.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"PowerApps.CoreControls\" constructor=\"Card\" version=\"1.0.184\" authoring-manifest=\"Card_manifest.authoring.xml\" display-name-key=\"Card\" description-key=\"Card_Desc\" control-type=\"virtual\" api-version=\"1.3.18\"><property name=\"Payload\" display-name-key=\"Card_Payload\" description-key=\"Card_Payload_Desc\" of-type=\"Multiple\" usage=\"input\" required=\"true\" /><property name=\"Data\" display-name-key=\"Card_Data\" description-key=\"Card_Data_Desc\" of-type=\"Multiple\" usage=\"input\" /><property name=\"IsEmbedded\" display-name-key=\"Card_IsEmbedded\" description-key=\"Card_IsEmbedded_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"true\"><value name=\"Yes\" display-name-key=\"Card_IsEmbedded_Yes_Name\" description-key=\"Card_IsEmbedded_Yes_Desc\">yes</value><value name=\"No\" display-name-key=\"Card_IsEmbedded_No_Name\" description-key=\"Card_IsEmbedded_No_Desc\" default=\"true\">no</value></property><property name=\"UseHighCharts\" display-name-key=\"Card_UseHighCharts\" description-key=\"Card_UseHighCharts_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"true\"><value name=\"Yes\" display-name-key=\"Card_UseHighCharts_Yes_Name\" description-key=\"Card_UseHighCharts_Yes_Desc\" default=\"true\">yes</value><value name=\"No\" display-name-key=\"Card_UseHighCharts_No_Name\" description-key=\"Card_UseHighCharts_No_Desc\">no</value></property><property name=\"LastActionExecuted\" display-name-key=\"LastActionExecuted_Display_Key\" description-key=\"LastActionExecuted_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"output\" required=\"false\" /><common-property name=\"Height\" default-value=\"675\" /><common-property name=\"Width\" default-value=\"320\" /><event name=\"OnExecuteAction\" display-name-key=\"Card_OnExecuteAction_Name\" description-key=\"Card_OnExecuteAction_Desc\" /><feature-usage><uses-feature name=\"ExplicitCommonEvents\" required=\"true\" /></feature-usage><resources><code path=\"Card.js\" order=\"1\" /><resx path=\"strings/Card.1033.resx\" version=\"1.0.0\" /><platform-library name=\"React\" version=\"16.8.6\" /><platform-library name=\"Fluent\" version=\"9.4.0\" /></resources><supported-platforms><supported-platform name=\"Model\" /><supported-platform name=\"Canvas\" /></supported-platforms><conversion from=\"1.0.166\" to=\"1.0.167\"><action name=\"IsEmbedded\" type=\"add\" /><action name=\"UseHighCharts\" type=\"add\" /></conversion><built-by name=\"pac\" version=\"1.49.1-alpha-25090500\" /></control></manifest>",
+    "name": "PowerApps.CoreControls.Card",
+    "supportedplatform": "(Model),(Canvas)",
+    "version": "1.0.184"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "PowerApps.CoreControls.Card"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

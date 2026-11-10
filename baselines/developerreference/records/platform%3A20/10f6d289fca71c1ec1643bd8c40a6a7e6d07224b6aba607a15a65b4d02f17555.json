@@ -1,0 +1,59 @@
+{
+  "configuration": {
+    "_parentroleid_value": null,
+    "_parentrootroleid_value": {
+      "key": {
+        "kind": "wire-guid",
+        "portability": "not-established",
+        "value": "979144c2-989b-41a5-a146-6b3ea4130e8c"
+      },
+      "kind": "typed-reference",
+      "targetEntity": "role"
+    },
+    "_roletemplateid_value": null,
+    "applicationid": null,
+    "appliesto": "All Users",
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": true
+    },
+    "componentstate": 0,
+    "description": "Has minimum privileges for common tasks. This role is primarily used as a template to create a custom security role for model-driven apps. It doesn't have any privileges to the core business tables, such as Account, Contact, and Activity. However, it has Organization-level read access to system tables, such as Process, to support reading system-supplied workflows. Note that this security role is used when a new, custom security role is created.",
+    "importsequencenumber": null,
+    "isautoassigned": 0,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "isinherited": 1,
+    "ismanaged": true,
+    "issytemgenerated": false,
+    "name": "App Opener",
+    "overriddencreatedon": null,
+    "roleid": "979144c2-989b-41a5-a146-6b3ea4130e8c",
+    "summaryofcoretablepermissions": null
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "portability": "not-established",
+    "value": "979144c2-989b-41a5-a146-6b3ea4130e8c"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "AuthorizationCore",
+      "version": "1.134.0.0"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msft_AuthorizationData",
+      "version": "1.0.4.0"
+    }
+  ],
+  "typeIdentity": "platform:20"
+}

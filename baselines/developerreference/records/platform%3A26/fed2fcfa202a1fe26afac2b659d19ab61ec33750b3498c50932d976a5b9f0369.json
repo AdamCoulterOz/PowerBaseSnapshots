@@ -1,0 +1,145 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" savedqueryid=\"270de234-e469-4806-9c7e-8d94901cd521\"><entity name=\"activitymimeattachment\"><attribute name=\"filename\" /><attribute name=\"filesize\" /><attribute name=\"activitymimeattachmentid\" /><attribute name=\"mimetype\" /><order attribute=\"filename\" descending=\"false\" /></entity></fetch>",
+    "introducedversion": "9.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "filename",
+        "Name": "activitymimeattachments",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "activitymimeattachment"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": false,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "filename",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "filesize",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "mimetype",
+                "RelatedEntityName": "",
+                "Width": 100
+              }
+            ],
+            "Id": "activitymimeattachmentid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "activitymimeattachment"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "activitymimeattachment"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"activitymimeattachments\" object=\"logical:activitymimeattachment\" jump=\"filename\" select=\"1\" icon=\"1\" preview=\"0\"><row name=\"activitymimeattachment\" id=\"activitymimeattachmentid\"><cell name=\"filename\" width=\"300\" /><cell name=\"filesize\" width=\"150\" /><cell name=\"mimetype\" ishidden=\"1\" width=\"100\" /></row></grid>"
+    },
+    "name": "Activity Attachment View",
+    "offlinesqlquery": "/*SelectStart*/select  \"activitymimeattachment0\".[filename] as \"filename\"\r , \"activitymimeattachment0\".[filesize] as \"filesize\"\r , \"activitymimeattachment0\".[activitymimeattachmentid] as \"activitymimeattachmentid\"\r , \"activitymimeattachment0\".[mimetype] as \"mimetype\"/*SelectEnd*/  /*FromStart*/from  ActivityAttachment as \"activitymimeattachment0\"/*FromEnd*/  /*OrderByStart*/order by  \"activitymimeattachment0\".[filename] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "activitymimeattachment",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "270de234-e469-4806-9c7e-8d94901cd521",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "activitymimeattachment",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "270de234-e469-4806-9c7e-8d94901cd521"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_ActivitiesPatch",
+      "version": "9.0.26093.260917001"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": null,
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 9,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnEventActivity\r\n  id: main\r\n  priority: 0\r\n  eventName: Microsoft.PowerApps.Copilot.RequestNextAction\r\n  actions:\r\n    - kind: ParseValue\r\n      id: rQwsAA\r\n      variable: Global.PA_Copilot_NextAction\r\n      valueType:\r\n        kind: Record\r\n        properties:\r\n          sparkGroups:\r\n            type:\r\n              kind: Table\r\n              properties:\r\n                displayName: String\r\n                displaySubtitle: String\r\n                iconName: String\r\n                sparks:\r\n                  type:\r\n                    kind: Table\r\n                    properties:\r\n                      displayName: String\r\n                      eventName: String\r\n                      iconName: String\r\n                      payload: String\r\n                      type: String\r\n\r\n          sparks:\r\n            type:\r\n              kind: Table\r\n              properties:\r\n                displayName: String\r\n                eventName: String\r\n                iconName: String\r\n                payload: String\r\n                type: String\r\n\r\n      value: \"{ \\\"sparkGroups\\\": [],     \\\"sparks\\\": [] }\"",
+    "dependencies": null,
+    "description": "Resets the next actions global variable",
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": 1033,
+    "name": "Next Action - Clear",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.ClearNextAction",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.ClearNextAction"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

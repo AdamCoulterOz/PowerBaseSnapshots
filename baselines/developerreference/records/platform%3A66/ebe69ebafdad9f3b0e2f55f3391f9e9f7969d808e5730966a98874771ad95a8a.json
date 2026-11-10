@@ -1,0 +1,209 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "KnowledgeControl",
+        "ControlManifestVersion": "1.26094.3006",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.KnowledgeControl.KnowledgeControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "KnowledgeControl_Name",
+        "FullName": "MscrmControls.KnowledgeControl.KnowledgeControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.KnowledgeControl.KnowledgeControl",
+        "Namespace": "MscrmControls.KnowledgeControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [],
+              "InitialDataSetFetch": false,
+              "Name": "dataSetKnowledgeControl",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "DialogUniqueName",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "OutputParameter",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "IsMultipleSelectionEnabled",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "KnowledgeArticleId",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ShowControl",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ActionList",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EntityTypeName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EntityId",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EntityDisplayName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "RelationshipName",
+              "Required": false,
+              "Type": "Multiple",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "KbCommonUtils",
+              "LoadOrder": 2,
+              "Name": "KbCommonUtils",
+              "Type": 0
+            },
+            {
+              "LibraryName": "DOMPurify",
+              "LoadOrder": 2,
+              "Name": "DOMPurify",
+              "Type": 0
+            },
+            {
+              "LibraryName": "KnowledgeArticleAttachment",
+              "LoadOrder": 2,
+              "Name": "KnowledgeArticleAttachment",
+              "Type": 0
+            },
+            {
+              "LibraryName": "moment",
+              "LoadOrder": 2,
+              "Name": "moment",
+              "Type": 0
+            },
+            {
+              "LibraryName": "KbArticleControl",
+              "LoadOrder": 3,
+              "Name": "KbArticleControl",
+              "Type": 0
+            },
+            {
+              "LibraryName": "KbContentControl",
+              "LoadOrder": 4,
+              "Name": "KbContentControl",
+              "Type": 0
+            },
+            {
+              "LibraryName": "KbSearchControl",
+              "LoadOrder": 5,
+              "Name": "KbSearchControl",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 6,
+              "Name": "MscrmControls.KnowledgeControl.KnowledgeControl_KnowledgeControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 6,
+              "Name": "css/KbSearchControl.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/KbSearchControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.26094.3005",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.KnowledgeControl\" constructor=\"KnowledgeControl\" version=\"1.26094.3006\" display-name-key=\"KnowledgeControl_Name\" control-type=\"virtual\" hidden=\"true\"><modes></modes><data-set name=\"dataSetKnowledgeControl\" display-name-key=\"dataSetKnowledgeControl_Display_Key\" initial-data-set-fetch=\"false\" /><property name=\"DialogUniqueName\" required=\"true\" display-name-key=\"CC_DialogUniqueName\" description-key=\"CC_DialogUniqueName_Desc\" usage=\"bound\" of-type=\"SingleLine.Text\" /><property name=\"OutputParameter\" display-name-key=\"CC_OutputParameter\" description-key=\"CC_OutputParameter_Desc\" usage=\"bound\" of-type=\"SingleLine.Text\" /><property name=\"IsMultipleSelectionEnabled\" display-name-key=\"CC_IsMultipleSelectionEnabled\" description-key=\"CC_IsMultipleSelectionEnabled_Desc\" usage=\"bound\" of-type=\"SingleLine.Text\" /><property name=\"KnowledgeArticleId\" display-name-key=\"CC_KnowledgeArticleId\" description-key=\"CC_KnowledgeArticleId_Desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" /><property name=\"ShowControl\" display-name-key=\"CC_ShowControl\" description-key=\"CC_ShowControl_Desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" /><property name=\"ActionList\" display-name-key=\"CC_ActionList\" description-key=\"CC_ActionList_Desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" /><property name=\"EntityTypeName\" display-name-key=\"CC_EntityTypeName\" description-key=\"CC_EntityTypeName_Desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" /><property name=\"EntityId\" display-name-key=\"CC_EntityId\" description-key=\"CC_EntityId_Desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" /><property name=\"EntityDisplayName\" display-name-key=\"CC_EntityDisplayName\" description-key=\"CC_EntityDisplayName_Desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" /><property name=\"RelationshipName\" display-name-key=\"CC_RelationshipName\" description-key=\"CC_RelationshipName_Desc\" usage=\"input\" of-type=\"Multiple\" required=\"false\" /><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.22\" /></library><library name=\"KbCommonUtils\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/KbCommonUtils.js\" version=\"1.26094.3006\" /></library><library name=\"DOMPurify\" version=\"&gt;=3.4.17\" order=\"2\"><packaged_library path=\"libs/purify.min.js\" version=\"3.4.17\" /></library><library name=\"KnowledgeArticleAttachment\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/KnowledgeArticleAttachment.js\" version=\"1.26094.3006\" /></library><library name=\"moment\" version=\"&gt;=2.29.4\" order=\"2\"><packaged_library path=\"libs/moment.min.js\" version=\"2.29.4\" /></library><library name=\"KbArticleControl\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"libs/KbArticleControl.js\" version=\"1.26094.3006\" /></library><library name=\"KbContentControl\" version=\"&gt;=1\" order=\"4\"><packaged_library path=\"libs/KbContentControl.js\" version=\"1.26094.3006\" /></library><library name=\"KbSearchControl\" version=\"&gt;=1\" order=\"5\"><packaged_library path=\"libs/KbSearchControl.js\" version=\"1.26094.3006\" /></library><code path=\"KnowledgeControl.js\" order=\"6\" /><css path=\"css/KbSearchControl.css\" order=\"6\" /><resx path=\"strings/KbSearchControl.1033.resx\" version=\"1.26094.3006\" /></resources></control></manifest>",
+    "name": "MscrmControls.KnowledgeControl.KnowledgeControl",
+    "supportedplatform": "(Model)",
+    "version": "1.26094.3006"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.KnowledgeControl.KnowledgeControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdynce_KnowledgeManagementFeatures",
+      "version": "9.0.26094.3006"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

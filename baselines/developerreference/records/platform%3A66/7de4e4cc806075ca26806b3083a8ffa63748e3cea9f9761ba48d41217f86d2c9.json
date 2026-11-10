@@ -1,0 +1,93 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "AppliedFilters",
+        "ControlManifestVersion": "1.0.44",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppliedFilters.AppliedFilters"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_AppliedFilters_Name",
+        "FullName": "MscrmControls.AppliedFilters.AppliedFilters",
+        "IsVirtual": true,
+        "MappingFileName": "design-maps/map.*.xml",
+        "Name": "MscrmControls.AppliedFilters.AppliedFilters",
+        "Namespace": "MscrmControls.AppliedFilters",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "Type": "AppliedFilter",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "GlobalFilterInput",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.AppliedFilters.AppliedFilters_AppliedFiltersControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/AppliedFiltersControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppliedFilters\" constructor=\"AppliedFilters\" version=\"1.0.44\" display-name-key=\"CC_AppliedFilters_Name\" control-type=\"virtual\" hidden=\"true\" design-mapping-file=\"design-maps/map.*.xml\"><modes></modes><property name=\"value\" required=\"true\" display-name-key=\"CC_AppliedFilterControl_Value\" description-key=\"CC_AppliedFilterControl_Value_Desc\" usage=\"bound\" of-type=\"AppliedFilter\" /><property name=\"GlobalFilterInput\" display-name-key=\"CC_DummyControl_GlobalFilterInput\" description-key=\"GlobalFilterInput\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><resources><code path=\"AppliedFiltersControl.js\" order=\"1\" /><resx path=\"strings/AppliedFiltersControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppliedFilters.AppliedFilters",
+    "supportedplatform": "(Model)",
+    "version": "1.0.44"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppliedFilters.AppliedFilters"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

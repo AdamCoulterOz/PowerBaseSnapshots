@@ -1,0 +1,338 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" savedqueryid=\"2d48cd9a-9289-4373-b615-3bd5cdacfa8a\"><entity name=\"knowledgearticle\"><attribute name=\"articlepublicnumber\" /><attribute name=\"knowledgearticleid\" /><attribute name=\"createdon\" /><attribute name=\"majorversionnumber\" /><attribute name=\"minorversionnumber\" /><attribute name=\"content\" /><attribute name=\"modifiedon\" /><attribute name=\"description\" /><attribute name=\"islatestversion\" /><attribute name=\"keywords\" /><attribute name=\"knowledgearticleviews\" /><attribute name=\"languagelocaleid\" /><attribute name=\"title\" /><attribute name=\"isprimary\" /><attribute name=\"statuscode\" /><attribute name=\"statecode\" /><attribute name=\"rating\" /><attribute name=\"isrootarticle\" /><attribute name=\"isinternal\" /><attribute name=\"msdyn_isingestedarticle\" /><attribute name=\"msdyn_ingestedarticleurl\" /><attribute name=\"msdyn_contentstore\" /><attribute name=\"msdyn_integratedsearchproviderid\" /><order attribute=\"articlepublicnumber\" descending=\"false\" /><filter type=\"and\"><condition attribute=\"isrootarticle\" operator=\"eq\" value=\"0\" /><condition attribute=\"islatestversion\" operator=\"eq\" value=\"1\" /><condition attribute=\"statecode\" operator=\"ne\" value=\"5\" /><condition attribute=\"statecode\" operator=\"ne\" value=\"6\" /><condition attribute=\"statecode\" operator=\"ne\" value=\"4\" /></filter><filter type=\"or\" isquickfindfields=\"1\"><condition attribute=\"content\" operator=\"like\" value=\"{0}\" /><condition attribute=\"description\" operator=\"like\" value=\"{0}\" /><condition attribute=\"keywords\" operator=\"like\" value=\"{0}\" /><condition attribute=\"title\" operator=\"like\" value=\"{0}\" /></filter></entity></fetch>",
+    "introducedversion": "8.0.0.0",
+    "iscustom": true,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": true,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "title",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "knowledgearticle"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "articlepublicnumber",
+                "RelatedEntityName": "",
+                "Width": 50
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "title",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "languagelocaleid",
+                "RelatedEntityName": "",
+                "Width": 50
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "statecode",
+                "RelatedEntityName": "",
+                "Width": 50
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "majorversionnumber",
+                "RelatedEntityName": "",
+                "Width": 50
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "minorversionnumber",
+                "RelatedEntityName": "",
+                "Width": 50
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "knowledgearticleviews",
+                "RelatedEntityName": "",
+                "Width": 50
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "rating",
+                "RelatedEntityName": "",
+                "Width": 50
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "keywords",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "createdon",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "modifiedon",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "msdyn_isingestedarticle",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "msdyn_ingestedarticleurl",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "content",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "isinternal",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "msdyn_integratedsearchproviderid",
+                "RelatedEntityName": "",
+                "Width": 100
+              }
+            ],
+            "Id": "knowledgearticleid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "knowledgearticle"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:knowledgearticle\" jump=\"title\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"result\" id=\"knowledgearticleid\"><cell name=\"articlepublicnumber\" width=\"50\" /><cell name=\"title\" width=\"300\" /><cell name=\"languagelocaleid\" width=\"50\" /><cell name=\"statecode\" width=\"50\" /><cell name=\"majorversionnumber\" width=\"50\" /><cell name=\"minorversionnumber\" width=\"50\" /><cell name=\"knowledgearticleviews\" width=\"50\" /><cell name=\"rating\" width=\"50\" /><cell name=\"keywords\" width=\"150\" /><cell name=\"createdon\" width=\"100\" /><cell name=\"modifiedon\" width=\"100\" /><cell name=\"msdyn_isingestedarticle\" width=\"100\" ishidden=\"1\" /><cell name=\"msdyn_ingestedarticleurl\" width=\"100\" ishidden=\"1\" /><cell name=\"content\" width=\"100\" ishidden=\"1\" /><cell name=\"isinternal\" width=\"100\" ishidden=\"1\" /><cell name=\"msdyn_integratedsearchproviderid\" width=\"100\" /></row></grid>"
+    },
+    "name": "Quick Find Active Knowledge Articles",
+    "offlinesqlquery": "/*CTEStart*/WITH __QuickFind__ as (select [knowledgearticleid] from (/*QuickFindStart*/\r SELECT \"knowledgearticle0\".[knowledgearticleid] AS [knowledgearticleid] FROM [KnowledgeArticle] AS \"knowledgearticle0\" \r  where (\"knowledgearticle0\".[content] like {0}) OR (\"knowledgearticle0\".[description] like {0}) OR (\"knowledgearticle0\".[keywords] like {0}) OR (\"knowledgearticle0\".[title] like {0}) LIMIT 10001/*QuickFindEnd*/) as [__QuickFindInternal__])/*CTEEnd*//*SelectStart*/select  \"knowledgearticle0\".[articlepublicnumber] as \"articlepublicnumber\"\r , \"knowledgearticle0\".[knowledgearticleid] as \"knowledgearticleid\"\r , \"knowledgearticle0\".[createdon] as \"createdon\"\r , \"knowledgearticle0\".[majorversionnumber] as \"majorversionnumber\"\r , \"knowledgearticle0\".[minorversionnumber] as \"minorversionnumber\"\r , \"knowledgearticle0\".[content] as \"content\"\r , \"knowledgearticle0\".[modifiedon] as \"modifiedon\"\r , \"knowledgearticle0\".[description] as \"description\"\r , \"knowledgearticle0\".[islatestversion] as \"islatestversion\"\r , \"knowledgearticle0\".[keywords] as \"keywords\"\r , \"knowledgearticle0\".[knowledgearticleviews] as \"knowledgearticleviews\"\r , \"knowledgearticle0\".[languagelocaleid!id] as \"languagelocaleid!id\"\r , \"knowledgearticle0\".[languagelocaleid!logicalname] as \"languagelocaleid!logicalname\"\r , \"knowledgearticle0\".[languagelocaleid!name] as \"languagelocaleid!name\"\r , \"knowledgearticle0\".[title] as \"title\"\r , \"knowledgearticle0\".[isprimary] as \"isprimary\"\r , \"knowledgearticle0\".[statuscode] as \"statuscode\"\r , \"knowledgearticle0\".[statecode] as \"statecode\"\r , \"knowledgearticle0\".[rating] as \"rating\"\r , \"knowledgearticle0\".[isrootarticle] as \"isrootarticle\"\r , \"knowledgearticle0\".[isinternal] as \"isinternal\"\r , \"knowledgearticle0\".[msdyn_isingestedarticle] as \"msdyn_isingestedarticle\"\r , \"knowledgearticle0\".[msdyn_ingestedarticleurl] as \"msdyn_ingestedarticleurl\"\r , \"knowledgearticle0\".[msdyn_contentstore] as \"msdyn_contentstore\"\r , \"knowledgearticle0\".[msdyn_integratedsearchproviderid!id] as \"msdyn_integratedsearchproviderid!id\"\r , \"knowledgearticle0\".[msdyn_integratedsearchproviderid!logicalname] as \"msdyn_integratedsearchproviderid!logicalname\"\r , \"knowledgearticle0\".[msdyn_integratedsearchproviderid!name] as \"msdyn_integratedsearchproviderid!name\"/*SelectEnd*/  /*FromStart*/from  KnowledgeArticle as \"knowledgearticle0\"/*FromEnd*/  /*WhereStart*/where  [knowledgearticle0].[knowledgearticleid] in (select [knowledgearticleid] from [__QuickFind__]) and ((\"knowledgearticle0\".[isrootarticle] = 0 and \"knowledgearticle0\".[islatestversion] = 1 and (\"knowledgearticle0\".[statecode] != 5 or \"knowledgearticle0\".[statecode] is null) and (\"knowledgearticle0\".[statecode] != 6 or \"knowledgearticle0\".[statecode] is null) and (\"knowledgearticle0\".[statecode] != 4 or \"knowledgearticle0\".[statecode] is null)))/*WhereEnd*/  /*OrderByStart*/order by  \"knowledgearticle0\".[articlepublicnumber] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 4,
+    "returnedtypecode": "knowledgearticle",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "2d48cd9a-9289-4373-b615-3bd5cdacfa8a",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "knowledgearticle",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "2d48cd9a-9289-4373-b615-3bd5cdacfa8a"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "System",
+      "version": "5.0"
+    },
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdynce_KnowledgeManagementOnlineFeatures",
+      "version": "9.0.26094.3006"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_KnowledgeManagementPatch",
+      "version": "9.0.26094.3006"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

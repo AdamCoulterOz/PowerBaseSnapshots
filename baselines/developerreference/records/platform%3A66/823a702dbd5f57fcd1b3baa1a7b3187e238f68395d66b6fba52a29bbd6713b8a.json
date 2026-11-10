@@ -1,0 +1,131 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "RecordSelectorControl",
+        "ControlManifestVersion": "1.0.31",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.RecordSelector.RecordSelectorControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_RecordSelector",
+        "FullName": "MscrmControls.RecordSelector.RecordSelectorControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.RecordSelector.RecordSelectorControl",
+        "Namespace": "MscrmControls.RecordSelector",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "SelectedRecord",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "EntityName",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "Sections",
+              "Required": true,
+              "Type": "Multiple",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ColumnMapping",
+              "Required": true,
+              "Type": "Multiple",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "RecentItemsConfigs",
+              "Required": false,
+              "Type": "Multiple",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "Config",
+              "Required": false,
+              "Type": "Multiple",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "fluent_8_121_1",
+              "LoadOrder": 0,
+              "Name": "fluent_8_121_1",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.RecordSelector.RecordSelectorControl_RecordSelector.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "css/RecordSelectorControl.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RecordSelectorControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.RecordSelector\" constructor=\"RecordSelectorControl\" version=\"1.0.31\" display-name-key=\"CC_RecordSelector\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"SelectedRecord\" display-name-key=\"CC_RecordSelector_SelectedRecord\" description-key=\"CC_RecordSelector_SelectedRecord_Desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"EntityName\" display-name-key=\"CC_RecordSelector_EntityName\" description-key=\"CC_RecordSelector_EntityName_Desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"Sections\" display-name-key=\"CC_RecordSelector_Sections\" description-key=\"CC_RecordSelector_Sections_Desc\" usage=\"input\" of-type=\"Multiple\" required=\"true\" hidden=\"false\" /><property name=\"ColumnMapping\" display-name-key=\"CC_RecordSelector_ColumnMapping\" description-key=\"CC_RecordSelector_ColumnMapping_Desc\" usage=\"input\" of-type=\"Multiple\" required=\"true\" hidden=\"false\" /><property name=\"RecentItemsConfigs\" display-name-key=\"CC_RecordSelector_RecentItemsConfigs\" description-key=\"CC_RecordSelector_RecentItemsConfigs_Desc\" usage=\"input\" of-type=\"Multiple\" required=\"false\" hidden=\"false\" /><property name=\"Config\" display-name-key=\"CC_RecordSelector_LineItemConfig\" description-key=\"CC_RecordSelector_LineItemConfig_Desc\" usage=\"input\" of-type=\"Multiple\" required=\"false\" hidden=\"false\" /><resources><platform-library name=\"Fluent\" version=\"8.121.1\" /><css path=\"css/RecordSelectorControl.css\" order=\"2\" /><resx path=\"strings/RecordSelectorControl.1033.resx\" version=\"1.0.4\" /><code path=\"RecordSelector.js\" order=\"3\" /></resources></control></manifest>",
+    "name": "MscrmControls.RecordSelector.RecordSelectorControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.31"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.RecordSelector.RecordSelectorControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

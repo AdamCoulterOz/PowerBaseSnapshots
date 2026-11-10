@@ -1,0 +1,166 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" savedqueryid=\"55b9f4fc-6785-47df-854d-49de8e50e387\"><entity name=\"convertrule\"><attribute name=\"name\" /><attribute name=\"statecode\" /><attribute name=\"sourcechanneltypecode\" /><attribute name=\"queueid\" /><attribute name=\"createdon\" /><attribute name=\"ownerid\" /><attribute name=\"convertruleid\" /><order attribute=\"name\" descending=\"false\" /><link-entity name=\"queue\" from=\"queueid\" to=\"queueid\" alias=\"queue\" /></entity></fetch>",
+    "introducedversion": "7.1.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "name",
+        "Name": "convertrule",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "convertrule"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "name",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "statecode",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "sourcechanneltypecode",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "createdon",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "ownerid",
+                "RelatedEntityName": "",
+                "Width": 200
+              }
+            ],
+            "Id": "convertruleid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "convertrule"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "convertrule"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"convertrule\" object=\"logical:convertrule\" jump=\"name\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"convertrule\" id=\"convertruleid\"><cell name=\"name\" width=\"300\" /><cell name=\"statecode\" width=\"200\" /><cell name=\"sourcechanneltypecode\" width=\"100\" /><cell name=\"createdon\" width=\"200\" /><cell name=\"ownerid\" width=\"200\" /></row></grid>"
+    },
+    "name": "Record creation and Update Rule Set View",
+    "offlinesqlquery": "/*SelectStart*/select  \"convertrule0\".[name] as \"name\"\r , \"convertrule0\".[statecode] as \"statecode\"\r , \"convertrule0\".[sourcechanneltypecode] as \"sourcechanneltypecode\"\r , \"convertrule0\".[queueid!id] as \"queueid!id\"\r , \"convertrule0\".[queueid!logicalname] as \"queueid!logicalname\"\r , \"convertrule0\".[queueid!name] as \"queueid!name\"\r , \"convertrule0\".[createdon] as \"createdon\"\r , \"convertrule0\".[ownerid!id] as \"ownerid!id\"\r , \"convertrule0\".[ownerid!logicalname] as \"ownerid!logicalname\"\r , \"convertrule0\".[ownerid!name] as \"ownerid!name\"\r , \"convertrule0\".[convertruleid] as \"convertruleid\"/*SelectEnd*/  /*FromStart*/from  ConvertRule as \"convertrule0\" \t/*JoinStart*/ join Queue as \"queue\" on (\"convertrule0\".[queueid!id]  =  \"queue\".[queueid])/*JoinEnd*//*FromEnd*/  /*OrderByStart*/order by  \"convertrule0\".[name] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 2,
+    "returnedtypecode": "convertrule",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "55b9f4fc-6785-47df-854d-49de8e50e387",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "convertrule",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "55b9f4fc-6785-47df-854d-49de8e50e387"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}

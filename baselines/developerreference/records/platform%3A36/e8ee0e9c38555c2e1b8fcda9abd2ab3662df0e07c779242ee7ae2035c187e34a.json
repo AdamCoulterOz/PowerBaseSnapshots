@@ -1,0 +1,52 @@
+{
+  "configuration": {
+    "body": "<?xml version=\"1.0\" ?><xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"1.0\"><xsl:output method=\"text\" indent=\"no\"/><xsl:template match=\"/data\"><![CDATA[<P>Dear ]]><xsl:choose><xsl:when test=\"contact/fullname\"><xsl:value-of select=\"contact/fullname\" /></xsl:when><xsl:otherwise>Valued Customer</xsl:otherwise></xsl:choose><![CDATA[,</P> <P>We have not heard from you for a while. We wanted to check in and make sure that you are still having a great experience using our product(s). We have asked ]]><xsl:choose><xsl:when test=\"contact/ownerid/@name\"><xsl:value-of select=\"contact/ownerid/@name\" /></xsl:when><xsl:otherwise>a customer service representative</xsl:otherwise></xsl:choose><![CDATA[ to contact you next week to get your feedback on the product(s) you are currently using and to give you details about our upcoming products.</P> <P>Thank you.</P>]]></xsl:template></xsl:stylesheet>",
+    "componentstate": 0,
+    "description": "Use this template to reopen the lines of communication with a customer you have not been in contact with for a while.",
+    "entityimage": null,
+    "entityimage_timestamp": null,
+    "entityimage_url": null,
+    "entityimageid": null,
+    "generationtypecode": 0,
+    "importsequencenumber": null,
+    "introducedversion": "5.0",
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "ispersonal": false,
+    "isrecommended": false,
+    "languagecode": 1033,
+    "mimetype": "",
+    "opencount": null,
+    "openrate": null,
+    "presentationxml": "<template><text><![CDATA[<P>Dear ]]></text><slugs><slug><entity>contact</entity><attribute>fullname</attribute></slug><default>Valued Customer</default></slugs><text><![CDATA[,</P> <P>We have not heard from you for a while. We wanted to check in and make sure that you are still having a great experience using our product(s). We have asked ]]></text><slugs><slug><entity>contact</entity><attribute>ownerid/@name</attribute></slug><default>a customer service representative</default></slugs><text><![CDATA[ to contact you next week to get your feedback on the product(s) you are currently using and to give you details about our upcoming products.</P> <P>Thank you.</P>]]></text></template>",
+    "replycount": null,
+    "replyrate": null,
+    "safehtml": "<div>\n<p>Dear <span class=\"dataslug\" id=\"TemplateEditor0\" data-value=\"{!contact:fullname;Valued Customer}\" contenteditable=\"false\" style=\"background-color: #E7EFFF;\">{!Contact:Full Name;Valued Customer}</span>,</p>\n<p>We have not heard from you for a while. We wanted to check in and make sure that you are still having a great experience using our product(s). We have asked\n<span class=\"dataslug\" id=\"TemplateEditor1\" data-value=\"{!contact:ownerid/@name;a customer service representative}\" contenteditable=\"false\" style=\"background-color: #E7EFFF;\">{!Contact:Owner;a customer service representative}</span> to contact you next week to get your feedback on the product(s) you are currently\n using and to give you details about our upcoming products.</p>\n<p>Thank you.</p>\n</div>\n",
+    "subject": "<?xml version=\"1.0\" ?><xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"1.0\"><xsl:output method=\"text\" indent=\"no\" /><xsl:template match=\"/data\"><![CDATA[We haven't heard from you...]]></xsl:template></xsl:stylesheet>",
+    "subjectpresentationxml": "<template><text><![CDATA[We haven't heard from you...]]></text></template>",
+    "subjectsafehtml": "We haven't heard from you...",
+    "templateid": "07b94c1d-c85f-492f-b120-f0a743c540e6",
+    "templatetypecode": "contact",
+    "title": "Contact Reconnect",
+    "usedcount": null
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "portability": "not-established",
+    "value": "07b94c1d-c85f-492f-b120-f0a743c540e6"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "System",
+      "version": "5.0"
+    }
+  ],
+  "typeIdentity": "platform:36"
+}

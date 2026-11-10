@@ -1,0 +1,115 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "HierarchyFolderViewControl",
+        "ControlManifestVersion": "1.0.21",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.HierarchyFolderView.HierarchyFolderViewControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_HierarchyFolderView",
+        "FullName": "MscrmControls.HierarchyFolderView.HierarchyFolderViewControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.HierarchyFolderView.HierarchyFolderViewControl",
+        "Namespace": "MscrmControls.HierarchyFolderView",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "treeData",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "hierarchyState",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "stateCallBack",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.HierarchyFolderView.HierarchyFolderViewControl_HierarchyFolderView.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "css/treeControlStyle.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "css/style.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/HierarchyFolderView.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.HierarchyFolderView\" constructor=\"HierarchyFolderViewControl\" version=\"1.0.21\" display-name-key=\"CC_HierarchyFolderView\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"treeData\" display-name-key=\"treedata_value\" description-key=\"treedata_value_desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"true\" /><property name=\"hierarchyState\" display-name-key=\"hierarchyState_value\" description-key=\"hierarchyState_value_desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"true\" /><property name=\"stateCallBack\" display-name-key=\"StateCallBack_value\" description-key=\"StateCallBack_value_desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"true\" /><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.14\" /></library><code path=\"HierarchyFolderView.js\" order=\"1\" /><css path=\"css/treeControlStyle.css\" order=\"2\" /><css path=\"css/style.css\" order=\"3\" /><resx path=\"strings/HierarchyFolderView.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.HierarchyFolderView.HierarchyFolderViewControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.21"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.HierarchyFolderView.HierarchyFolderViewControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

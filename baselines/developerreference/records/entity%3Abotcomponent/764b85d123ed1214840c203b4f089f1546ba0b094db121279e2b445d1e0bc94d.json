@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": null,
+    "_parentbotcomponentid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "msdyn_bot_0cc7c97715094ae5a7bb3e1707d5bc8d.Searchknowledgearticles.dialog"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponent"
+    },
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 8,
+    "content": null,
+    "data": "{\r\n  \"$schema\": \"https://schemas.botframework.com/schemas/component/v1.0/component.schema\",\r\n  \"$role\": \"implements(Microsoft.IDialog)\",\r\n  \"title\": \"Searchknowledgearticles\",\r\n  \"type\": \"object\",\r\n  \"properties\": {\r\n    \"searchText\": {\r\n      \"$ref\": \"https://schemas.botframework.com/schemas/component/v1.0/component.schema#/definitions/stringExpression\",\r\n      \"title\": \"Search Text\"\r\n    },\r\n    \"filter\": {\r\n      \"$ref\": \"https://schemas.botframework.com/schemas/component/v1.0/component.schema#/definitions/stringExpression\",\r\n      \"title\": \"Filter\"\r\n    }\r\n  },\r\n  \"$result\": {\r\n    \"type\": \"object\",\r\n    \"properties\": {\r\n      \"textResult\": {\r\n        \"type\": \"string\",\r\n        \"title\": \"Text Result\"\r\n      },\r\n      \"jsonResult\": {\r\n        \"type\": \"string\",\r\n        \"title\": \"Json Result\"\r\n      },\r\n      \"articleCount\": {\r\n        \"type\": \"number\",\r\n        \"title\": \"Article Count\"\r\n      }\r\n    }\r\n  }\r\n}\r\n",
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": null,
+    "name": "Search knowledge articles (dialog interface)",
+    "overriddencreatedon": null,
+    "reusepolicy": 2,
+    "schemaname": "msdyn_bot_0cc7c97715094ae5a7bb3e1707d5bc8d.Searchknowledgearticles.dialog.schema",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_bot_0cc7c97715094ae5a7bb3e1707d5bc8d.Searchknowledgearticles.dialog.schema"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdynce_KnowledgeManagementOnlineExtension",
+      "version": "9.0.26094.3006"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

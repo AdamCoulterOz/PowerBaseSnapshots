@@ -1,0 +1,112 @@
+{
+  "configuration": {
+    "_flowgroup_value": null,
+    "_licensee_value": null,
+    "_licenseentitledby_value": null,
+    "_parentworkflowid_value": null,
+    "_plugintypeid_value": null,
+    "_sdkmessageid_value": {
+      "key": [
+        {
+          "field": "sdkmessageid",
+          "type": "Uniqueidentifier",
+          "value": "50377b31-f368-e911-8196-000d3a6df425"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "sdkmessage"
+    },
+    "asyncautodelete": false,
+    "billingcontext": null,
+    "businessprocesstype": null,
+    "category": 3,
+    "claims": null,
+    "clientdata": null,
+    "clientdataiscompressed": null,
+    "componentstate": 0,
+    "connectionreferences": null,
+    "createmetadata": null,
+    "createstage": 40,
+    "credentials": null,
+    "definition": null,
+    "deletestage": null,
+    "dependencies": null,
+    "description": null,
+    "desktopflowmodules": null,
+    "dynamicssolutioncontext": null,
+    "entityimage": null,
+    "entityimage_timestamp": null,
+    "entityimage_url": null,
+    "entityimageid": null,
+    "formid": "00000000-0000-0000-0000-000000000000",
+    "inputparameters": null,
+    "inputs": null,
+    "introducedversion": "1.0.0.0",
+    "iscrmuiworkflow": true,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "iscustomprocessingstepallowedforotherpublishers": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": true
+    },
+    "ismanaged": true,
+    "istransacted": true,
+    "languagecode": null,
+    "metadata": null,
+    "mode": 0,
+    "modernflowtype": 0,
+    "modifymetadata": null,
+    "name": "IsPaiEnabled",
+    "ondemand": false,
+    "outputs": null,
+    "planverified": null,
+    "primaryentity": "none",
+    "processorder": null,
+    "processroleassignment": null,
+    "processtriggerformid": null,
+    "processtriggerscope": null,
+    "rank": null,
+    "rendererobjecttypecode": null,
+    "resourcecontainer": null,
+    "resourceid": null,
+    "runas": 1,
+    "schemaversion": null,
+    "scope": 4,
+    "statecode": 1,
+    "statuscode": 2,
+    "subprocess": false,
+    "suspensionreasondetails": null,
+    "syncworkflowlogonfailure": true,
+    "throttlingbehavior": null,
+    "triggeroncreate": false,
+    "triggerondelete": false,
+    "triggeronupdateattributelist": null,
+    "trustedaccess": null,
+    "type": 1,
+    "uidata": null,
+    "uiflowtype": null,
+    "uniquename": "IsPaiEnabled",
+    "updatestage": null,
+    "workflowid": "36f4eda8-a1e3-4fdd-a86e-9dc148ace423",
+    "xaml": "<?xml version=\"1.0\" encoding=\"utf-16\"?><Activity x:Class=\"XrmWorkflow36f4eda8a1e34fdda86e9dc148ace423\" xmlns=\"http://schemas.microsoft.com/netfx/2009/xaml/activities\" xmlns:mva=\"clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" xmlns:mxs=\"clr-namespace:Microsoft.Xrm.Sdk;assembly=Microsoft.Xrm.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" xmlns:mxsw=\"clr-namespace:Microsoft.Xrm.Sdk.Workflow;assembly=Microsoft.Xrm.Sdk.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" xmlns:mxswa=\"clr-namespace:Microsoft.Xrm.Sdk.Workflow.Activities;assembly=Microsoft.Xrm.Sdk.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" xmlns:scg=\"clr-namespace:System.Collections.Generic;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" xmlns:srs=\"clr-namespace:System.Runtime.Serialization;assembly=System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" xmlns:this=\"clr-namespace:\" xmlns:x=\"http://schemas.microsoft.com/winfx/2006/xaml\"><x:Members><x:Property Name=\"InputEntities\" Type=\"InArgument(scg:IDictionary(x:String, mxs:Entity))\" /><x:Property Name=\"CreatedEntities\" Type=\"InArgument(scg:IDictionary(x:String, mxs:Entity))\" /><x:Property Name=\"ispaienabled\" Type=\"OutArgument(x:Boolean)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"False\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"Is PAI enabled. Possible return values: null if the region is not supported, false if PAI is not enabled in the organization and true otherwise.\" /><mxsw:ArgumentDirectionAttribute Value=\"Output\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property><x:Property Name=\"templates\" Type=\"OutArgument(x:String)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"False\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"List of templates with the name and flag of preview. Possible values are null when no template is enabled or preview or live, or else it wil have the list of template with preview or live.\" /><mxsw:ArgumentDirectionAttribute Value=\"Output\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property><x:Property Name=\"arePreviewScenarioEnabled\" Type=\"OutArgument(x:Boolean)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"False\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"Are Preview Scenario Enabled. Possible return values: true when preview feature are enabled, false when preview feature are disabled.\" /><mxsw:ArgumentDirectionAttribute Value=\"Output\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property><x:Property Name=\"paigastatus\" Type=\"OutArgument(x:Boolean)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"False\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"Power AI GA Status values: true when at least one GA template available else false, null when no templates are available.\" /><mxsw:ArgumentDirectionAttribute Value=\"Output\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property><x:Property Name=\"isdatamodelv2enabled\" Type=\"OutArgument(x:Boolean)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"False\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"Is data model enabled Status values: true when Data model V2 FCB is true else false.\" /><mxsw:ArgumentDirectionAttribute Value=\"Output\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property></x:Members><this:XrmWorkflow36f4eda8a1e34fdda86e9dc148ace423.InputEntities><InArgument x:TypeArguments=\"scg:IDictionary(x:String, mxs:Entity)\" /></this:XrmWorkflow36f4eda8a1e34fdda86e9dc148ace423.InputEntities><this:XrmWorkflow36f4eda8a1e34fdda86e9dc148ace423.CreatedEntities><InArgument x:TypeArguments=\"scg:IDictionary(x:String, mxs:Entity)\" /></this:XrmWorkflow36f4eda8a1e34fdda86e9dc148ace423.CreatedEntities><mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings><mxswa:Workflow /></Activity>"
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "portability": "not-established",
+    "value": "36f4eda8-a1e3-4fdd-a86e-9dc148ace423"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdyn_AISolution",
+      "version": "202608.1.4.1"
+    }
+  ],
+  "typeIdentity": "platform:29"
+}

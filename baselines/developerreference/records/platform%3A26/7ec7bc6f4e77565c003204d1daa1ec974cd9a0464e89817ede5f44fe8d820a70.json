@@ -1,0 +1,158 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" savedqueryid=\"27793551-980a-446c-a30f-4bdc7b0a7174\"><entity name=\"workflow\"><attribute name=\"workflowid\" /><attribute name=\"name\" /><attribute name=\"createdon\" /><attribute name=\"modifiedon\" /><attribute name=\"ownerid\" /><filter type=\"and\"><condition attribute=\"statecode\" operator=\"eq\" value=\"1\" /><condition attribute=\"category\" operator=\"eq\" value=\"5\" /></filter></entity></fetch>",
+    "introducedversion": "9.1.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "name",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "workflow"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": false,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "name",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "createdon",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "modifiedon",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "ownerid",
+                "RelatedEntityName": "",
+                "Width": 100
+              }
+            ],
+            "Id": "workflowid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "workflow"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:workflow\" jump=\"name\" select=\"1\" icon=\"1\" preview=\"0\"><row name=\"result\" id=\"workflowid\"><cell name=\"name\" width=\"200\" /><cell name=\"createdon\" width=\"100\" /><cell name=\"modifiedon\" width=\"100\" /><cell name=\"ownerid\" width=\"100\" /></row></grid>"
+    },
+    "name": "Activated Modern Flows",
+    "offlinesqlquery": "/*SelectStart*/select  \"workflow0\".[workflowid] as \"workflowid\"\r , coalesce(\"LL0\".Label,\"workflow0\".[name] ) as \"name\"\r , \"workflow0\".[createdon] as \"createdon\"\r , \"workflow0\".[modifiedon] as \"modifiedon\"\r , \"workflow0\".[ownerid!id] as \"ownerid!id\"\r , \"workflow0\".[ownerid!logicalname] as \"ownerid!logicalname\"\r , \"workflow0\".[ownerid!name] as \"ownerid!name\"/*SelectEnd*/  /*FromStart*/from  Workflow as \"workflow0\"  left outer join LocalizedLabelView as \"LL0\" WITH(NOLOCK)  on (\"LL0\".ObjectId = \"workflow0\".WorkflowId and \"LL0\".LanguageId = @LanguageId0 and \"LL0\".ObjectColumnName = @ObjectColumnName0 )/*FromEnd*/  /*WhereStart*/where  (\"workflow0\".[statecode] = 1 and \"workflow0\".[category] = 5)/*WhereEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 64,
+    "returnedtypecode": "workflow",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "27793551-980a-446c-a30f-4bdc7b0a7174",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "workflow",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "27793551-980a-446c-a30f-4bdc7b0a7174"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "System",
+      "version": "5.0"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

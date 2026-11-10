@@ -1,0 +1,186 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": true
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": "All Users view",
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" savedqueryid=\"5aecef10-d691-4cee-a86f-7bd0fd161f79\"><entity name=\"systemuser\"><attribute name=\"fullname\" /><order attribute=\"fullname\" descending=\"false\" /><attribute name=\"domainname\" /><attribute name=\"title\" /><attribute name=\"address1_telephone1\" /><attribute name=\"isdisabled\" /><attribute name=\"systemuserid\" /><attribute name=\"parentsystemuserid\" /><filter type=\"and\"><condition entityname=\"systemuser\" attribute=\"fullname\" operator=\"ne\" value=\"SYSTEM\" /><condition entityname=\"systemuser\" attribute=\"fullname\" operator=\"ne\" value=\"INTEGRATION\" /><condition attribute=\"accessmode\" operator=\"ne\" value=\"3\" /><condition attribute=\"accessmode\" operator=\"ne\" value=\"5\" /></filter></entity></fetch>",
+    "introducedversion": "9.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "fullname",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "systemuser"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "fullname",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "domainname",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "title",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "address1_telephone1",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "isdisabled",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "parentsystemuserid",
+                "RelatedEntityName": "",
+                "Width": 200
+              }
+            ],
+            "Id": "systemuserid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "systemuser"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" jump=\"fullname\" select=\"1\" icon=\"1\" preview=\"1\" object=\"logical:systemuser\"><row name=\"result\" id=\"systemuserid\"><cell name=\"fullname\" width=\"200\" /><cell name=\"domainname\" width=\"200\" /><cell name=\"title\" width=\"100\" /><cell name=\"address1_telephone1\" width=\"150\" /><cell name=\"isdisabled\" width=\"100\" /><cell name=\"parentsystemuserid\" width=\"200\" /></row></grid>"
+    },
+    "name": "All Users",
+    "offlinesqlquery": "",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 2048,
+    "returnedtypecode": "systemuser",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "5aecef10-d691-4cee-a86f-7bd0fd161f79",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "systemuser",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "5aecef10-d691-4cee-a86f-7bd0fd161f79"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommon",
+      "version": "9.0.4.0066"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

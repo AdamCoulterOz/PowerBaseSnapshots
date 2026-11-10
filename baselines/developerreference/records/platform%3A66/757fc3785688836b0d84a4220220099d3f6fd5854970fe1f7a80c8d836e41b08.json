@@ -1,0 +1,111 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "HierarchyTreeView",
+        "ControlManifestVersion": "1.0.21",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Hierarchy.HierarchyTreeView"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_HierarchyTreeView_Name",
+        "FullName": "MscrmControls.Hierarchy.HierarchyTreeView",
+        "IsVirtual": true,
+        "Name": "MscrmControls.Hierarchy.HierarchyTreeView",
+        "Namespace": "MscrmControls.Hierarchy",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "renderableTree",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "hierarchyState",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "stateCallBack",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "quickFormID",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.Hierarchy.HierarchyTreeView_HierarchyTreeView.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "css/HierarchyStyle.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/HierarchyTreeView.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Hierarchy\" constructor=\"HierarchyTreeView\" version=\"1.0.21\" display-name-key=\"CC_HierarchyTreeView_Name\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"renderableTree\" display-name-key=\"treedata_value\" description-key=\"treedata_value_desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"true\" /><property name=\"hierarchyState\" display-name-key=\"hierarchyState_value\" description-key=\"hierarchyState_value_desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"true\" /><property name=\"stateCallBack\" display-name-key=\"stateCallBack_value\" description-key=\"stateCallBack_value_desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"true\" /><property name=\"quickFormID\" display-name-key=\"quickFormID_value\" description-key=\"quickFormID_value_desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"true\" /><resources><code path=\"HierarchyTreeView.js\" order=\"2\" /><css path=\"css/HierarchyStyle.css\" order=\"1\" /><resx path=\"strings/HierarchyTreeView.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.Hierarchy.HierarchyTreeView",
+    "supportedplatform": "(Model)",
+    "version": "1.0.21"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Hierarchy.HierarchyTreeView"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

@@ -1,0 +1,91 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "SuggestionControl",
+        "ControlManifestVersion": "1.26094.3006",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.KbSuggestKeywordsDescControl.SuggestionControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "KbSuggestKeywordsDescControl_Name",
+        "FullName": "MscrmControls.KbSuggestKeywordsDescControl.SuggestionControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.KbSuggestKeywordsDescControl.SuggestionControl",
+        "Namespace": "MscrmControls.KbSuggestKeywordsDescControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "KbCommonUtils",
+              "LoadOrder": 2,
+              "Name": "KbCommonUtils",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.KbSuggestKeywordsDescControl.SuggestionControl_KbSuggestKeywordsDescControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/KbSuggestKeywordsDescControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.26094.3005",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.KbSuggestKeywordsDescControl\" constructor=\"SuggestionControl\" version=\"1.26094.3006\" display-name-key=\"KbSuggestKeywordsDescControl_Name\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"value\" display-name-key=\"KbSuggestKeywordsDescControl_value\" description-key=\"KbSuggestKeywordsDescControl_value_desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" hidden=\"true\" /><resources><library name=\"KbCommonUtils\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/KbCommonUtils.js\" version=\"1.26094.3006\" /></library><code path=\"KbSuggestKeywordsDescControl.js\" order=\"3\" /><resx path=\"strings/KbSuggestKeywordsDescControl.1033.resx\" version=\"1.26094.3006\" /></resources></control></manifest>",
+    "name": "MscrmControls.KbSuggestKeywordsDescControl.SuggestionControl",
+    "supportedplatform": "(Model)",
+    "version": "1.26094.3006"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.KbSuggestKeywordsDescControl.SuggestionControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdynce_KnowledgeManagementFeatures",
+      "version": "9.0.26094.3006"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

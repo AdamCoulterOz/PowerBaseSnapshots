@@ -1,0 +1,77 @@
+{
+  "configuration": {
+    "_catalogid_value": {
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "activitytables"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "catalog"
+    },
+    "_object_value": {
+      "key": [
+        {
+          "field": "LogicalName",
+          "type": "String",
+          "value": "email"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "entity"
+    },
+    "componentstate": 0,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "name": null,
+    "overriddencreatedon": null,
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "catalogid",
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "activitytables"
+        }
+      ],
+      "targetEntity": "catalog",
+      "type": "lookup"
+    },
+    {
+      "field": "object",
+      "key": "email",
+      "targetEntity": "entity",
+      "type": "lookup"
+    },
+    {
+      "annotationEvidence": "captured-payload",
+      "derivedFrom": "typed-lookup-annotation:_object_value",
+      "field": "objectidtype",
+      "type": "EntityName",
+      "value": "entity"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msft_ActivitiesInfra_Extensions",
+      "version": "9.2.0.81"
+    }
+  ],
+  "typeIdentity": "entity:catalogassignment"
+}

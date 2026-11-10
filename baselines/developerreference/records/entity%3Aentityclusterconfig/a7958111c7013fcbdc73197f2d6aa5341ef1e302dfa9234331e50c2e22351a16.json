@@ -1,0 +1,50 @@
+{
+  "configuration": {
+    "_extensionofrecordid_value": {
+      "key": [
+        {
+          "field": "LogicalName",
+          "type": "String",
+          "value": "privilege"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "entity"
+    },
+    "clustermode": 1,
+    "componentstate": 0,
+    "defaulttolocalpartition": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "name": "privilege",
+    "overriddencreatedon": null,
+    "shouldautoreplicate": false,
+    "statecode": 1,
+    "statuscode": 2,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "extensionofrecordid",
+      "key": "privilege",
+      "targetEntity": "entity",
+      "type": "lookup"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "AuthorizationCore",
+      "version": "1.134.0.0"
+    }
+  ],
+  "typeIdentity": "entity:entityclusterconfig"
+}

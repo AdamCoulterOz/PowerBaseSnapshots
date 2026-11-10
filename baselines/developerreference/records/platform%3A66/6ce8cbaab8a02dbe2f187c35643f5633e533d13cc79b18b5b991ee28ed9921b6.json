@@ -1,0 +1,355 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.4",
+        "Children": [],
+        "ConstructorName": "LookupControl",
+        "ControlManifestVersion": "0.0.3",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "PPMA.CustomControls.LookupControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "Lookup_Control_Display_Key",
+        "FullName": "PPMA.CustomControls.LookupControl",
+        "IsVirtual": true,
+        "Name": "PPMA.CustomControls.LookupControl",
+        "Namespace": "PPMA.CustomControls",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Navigation",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "selectedRecord",
+              "Required": true,
+              "Type": "Lookup.Simple",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "relatedVirtualEntity",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "virtualEntityLookupViewId",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "dependentAttributeName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "react_16_14_0",
+              "LoadOrder": 0,
+              "Name": "react_16_14_0",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_8_29_0",
+              "LoadOrder": 0,
+              "Name": "fluent_8_29_0",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "PPMA.CustomControls.LookupControl_bundle.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1025.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1026.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1027.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1028.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1029.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1030.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1031.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1032.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1033.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1035.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1036.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1037.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1038.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1040.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1041.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1042.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1043.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1044.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1045.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1046.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1048.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1049.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1050.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1051.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1053.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1054.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1055.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1057.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1058.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1060.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1061.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1062.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1063.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1066.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1069.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1081.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1086.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1087.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.1110.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.2052.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.2070.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.2074.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.3076.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.3082.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LookupControl.3098.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "Lookup.Simple",
+    "componentstate": 0,
+    "introducedversion": "1.0.2609.6",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"PPMA.CustomControls\" constructor=\"LookupControl\" version=\"0.0.3\" display-name-key=\"Lookup_Control_Display_Key\" description-key=\"Lookup_Control_Desc_Key\" control-type=\"virtual\" api-version=\"1.3.4\"><external-service-usage enabled=\"false\" /><property name=\"selectedRecord\" display-name-key=\"Selected_Record_Display_Key\" description-key=\"Selected_Record_Desc_Key\" of-type=\"Lookup.Simple\" usage=\"bound\" required=\"true\" /><property name=\"relatedVirtualEntity\" display-name-key=\"Related_Virtual_Entity_Display_Key\" description-key=\"Related_Virtual_Entity_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"true\" /><property name=\"virtualEntityLookupViewId\" display-name-key=\"Virtual_Entity_Lookup_View_Id_Display_Key\" description-key=\"Virtual_Entity_Lookup_View_Id_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"true\" /><property name=\"dependentAttributeName\" display-name-key=\"Dependent_Attribute_Name_Display_Key\" description-key=\"Dependent_Attribute_Name_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" /><resources><code path=\"bundle.js\" order=\"1\" /><platform-library name=\"React\" version=\"16.8.6\" /><platform-library name=\"Fluent\" version=\"8.29.0\" /><resx path=\"strings/LookupControl.1025.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1026.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1027.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1028.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1029.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1030.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1031.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1032.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1033.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1035.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1036.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1037.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1038.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1040.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1041.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1042.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1043.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1044.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1045.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1046.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1048.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1049.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1050.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1051.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1053.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1054.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1055.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1057.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1058.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1060.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1061.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1062.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1063.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1066.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1069.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1081.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1086.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1087.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.1110.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.2052.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.2070.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.2074.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.3076.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.3082.resx\" version=\"1.0.0\" /><resx path=\"strings/LookupControl.3098.resx\" version=\"1.0.0\" /></resources><feature-usage><uses-feature name=\"Navigation\" required=\"true\" /><uses-feature name=\"Utility\" required=\"true\" /><uses-feature name=\"WebAPI\" required=\"true\" /></feature-usage><built-by name=\"pac\" version=\"1.20.3\" /></control></manifest>",
+    "name": "PPMA.CustomControls.LookupControl",
+    "supportedplatform": "(Model)",
+    "version": "0.0.3"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "PPMA.CustomControls.LookupControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "PowerPages_Apps",
+      "version": "1.0.2609.6"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

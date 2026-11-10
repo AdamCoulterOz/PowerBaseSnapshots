@@ -1,0 +1,154 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ImportMappingControl",
+        "ControlManifestVersion": "1.0.18",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.ImportExport.ImportMappingControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_ImportMappingControl_Name",
+        "FullName": "MscrmControls.ImportExport.ImportMappingControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.ImportExport.ImportMappingControl",
+        "Namespace": "MscrmControls.ImportExport",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "MapXml",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "ImportFileName",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ImportFileType",
+              "Required": true,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ImportFileSize",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ImportId",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ImportFileId",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ImportMapName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "EntityLogicalName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "IsMandatoryFieldValid",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "EntityKeyAttributes",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 8,
+              "Name": "MscrmControls.ImportExport.ImportMappingControl_ImportMapping.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/ImportMapping.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.ImportExport\" constructor=\"ImportMappingControl\" version=\"1.0.18\" display-name-key=\"CC_ImportMappingControl_Name\" control-type=\"virtual\" hidden=\"true\"><modes><container /></modes><property name=\"MapXml\" display-name-key=\"CC_mapXml\" description-key=\"CC_mapXml_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"ImportFileName\" display-name-key=\"CC_importFileName\" description-key=\"CC_importFileName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"ImportFileType\" display-name-key=\"CC_importFileType\" description-key=\"CC_importFileType_desc\" usage=\"input\" of-type=\"Whole.None\" required=\"true\" hidden=\"false\" /><property name=\"ImportFileSize\" display-name-key=\"CC_importFileSize\" description-key=\"CC_importFileSize_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"ImportId\" display-name-key=\"CC_importid\" description-key=\"CC_ImportId_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"ImportFileId\" display-name-key=\"CC_importfileid\" description-key=\"CC_ImportFileId_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"ImportMapName\" display-name-key=\"CC_importMapName\" description-key=\"CC_importMapName_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" hidden=\"false\" /><property name=\"EntityLogicalName\" display-name-key=\"CC_entityLogicalName\" description-key=\"CC_entityLogicalName_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" hidden=\"false\" /><property name=\"IsMandatoryFieldValid\" display-name-key=\"CC_isMandatoryFieldValid\" description-key=\"CC_isMandatoryFieldValid_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" hidden=\"false\" /><property name=\"EntityKeyAttributes\" display-name-key=\"CC_entityKeyAttributes\" description-key=\"CC_entityKeyAttributes_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><code path=\"ImportMapping.js\" order=\"8\" /><resx path=\"strings/ImportMapping.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.ImportExport.ImportMappingControl",
+    "supportedplatform": null,
+    "version": "1.0.18"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.ImportExport.ImportMappingControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

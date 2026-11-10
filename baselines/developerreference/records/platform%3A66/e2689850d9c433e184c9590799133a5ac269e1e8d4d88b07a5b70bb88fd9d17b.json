@@ -1,0 +1,195 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "TimelineControl",
+        "ControlManifestVersion": "1.0.1",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Timeline.TimelineControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_Timeline",
+        "FullName": "MscrmControls.Timeline.TimelineControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.Timeline.TimelineControl",
+        "Namespace": "MscrmControls.Timeline",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [
+                {
+                  "Hidden": false,
+                  "Name": "title",
+                  "Required": true,
+                  "Type": "SingleLine.Text",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "label1",
+                  "Required": false,
+                  "Type": "SingleLine.Text",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "label2",
+                  "Required": false,
+                  "Type": "SingleLine.Text",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "label3",
+                  "Required": false,
+                  "Type": "SingleLine.Text",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "label4",
+                  "Required": false,
+                  "Type": "SingleLine.Text",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "label5",
+                  "Required": false,
+                  "Type": "SingleLine.Text",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "timestamp",
+                  "Required": true,
+                  "Type": "DateAndTime.DateAndTime",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "group",
+                  "Required": true,
+                  "Type": "SingleLine.Text",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "groupOrder",
+                  "Required": true,
+                  "Type": "Whole.None",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "url",
+                  "Required": false,
+                  "TypeGroup": "URLs",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "thumbnailUrl",
+                  "Required": false,
+                  "Type": "SingleLine.URL",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "filter",
+                  "Required": true,
+                  "Type": "SingleLine.Text",
+                  "Usage": 0
+                }
+              ],
+              "InitialDataSetFetch": true,
+              "Name": "items",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "footerUrl",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 2,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.Timeline.TimelineControl_TimelineControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "css/TimelineControl.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/TimelineControlResources.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "Grid",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Timeline\" constructor=\"TimelineControl\" version=\"1.0.1\" display-name-key=\"CC_Timeline\" description-key=\"CC_Timeline_Desc\" preview-image=\"img/preview.png\"><modes><read /><edit /></modes><type-group name=\"URLs\"><type>SingleLine.Text</type><type>SingleLine.URL</type></type-group><data-set name=\"items\" display-name-key=\"CC_Timeline_Items\"><property-set name=\"title\" display-name-key=\"CC_Timeline_Title\" description-key=\"CC_Timeline_Title_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" /><property-set name=\"label1\" display-name-key=\"CC_Timeline_Label1\" description-key=\"CC_Timeline_Label1_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" /><property-set name=\"label2\" display-name-key=\"CC_Timeline_Label2\" description-key=\"CC_Timeline_Label2_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" /><property-set name=\"label3\" display-name-key=\"CC_Timeline_Label3\" description-key=\"CC_Timeline_Label3_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" /><property-set name=\"label4\" display-name-key=\"CC_Timeline_Label4\" description-key=\"CC_Timeline_Label4_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" /><property-set name=\"label5\" display-name-key=\"CC_Timeline_Label5\" description-key=\"CC_Timeline_Label5_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" /><property-set name=\"timestamp\" display-name-key=\"CC_Timeline_Timestamp\" description-key=\"CC_Timeline_Timestamp_Desc\" of-type=\"DateAndTime.DateAndTime\" usage=\"bound\" required=\"true\" /><property-set name=\"group\" display-name-key=\"CC_Timeline_Group\" description-key=\"CC_Timeline_Group_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" /><property-set name=\"groupOrder\" display-name-key=\"CC_Timeline_GroupOrder\" description-key=\"CC_Timeline_GroupOrder_Desc\" of-type=\"Whole.None\" usage=\"bound\" required=\"true\" /><property-set name=\"url\" display-name-key=\"CC_Timeline_URL\" description-key=\"CC_Timeline_URL_Desc\" of-type-group=\"URLs\" usage=\"bound\" /><property-set name=\"thumbnailUrl\" display-name-key=\"CC_Timeline_ThumbnailURL\" description-key=\"CC_Timeline_ThumnailURL_Desc\" of-type=\"SingleLine.URL\" usage=\"bound\" /><property-set name=\"filter\" display-name-key=\"CC_Timeline_Filter\" description-key=\"CC_Timeline_Filter_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" /></data-set><property name=\"footerUrl\" display-name-key=\"CC_Timeline_Footer\" description-key=\"CC_Timeline_Footer_Desc\" of-type=\"SingleLine.Text\" usage=\"input\" /><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><library name=\"mscommon\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><code path=\"TimelineControl.js\" order=\"3\" /><css path=\"css/TimelineControl.css\" /><resx path=\"strings/TimelineControlResources.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.Timeline.TimelineControl",
+    "supportedplatform": null,
+    "version": "1.0.1"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Timeline.TimelineControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

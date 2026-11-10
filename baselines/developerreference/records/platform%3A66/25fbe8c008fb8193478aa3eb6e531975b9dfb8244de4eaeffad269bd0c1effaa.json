@@ -1,0 +1,109 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "BulkEmailSendLaterControl",
+        "ControlManifestVersion": "1.0.5",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.BulkEmailSendLater.BulkEmailSendLaterControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_AppCommon_BulkEmailSendLaterControl",
+        "FullName": "MscrmControls.AppCommon.BulkEmailSendLater.BulkEmailSendLaterControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.BulkEmailSendLater.BulkEmailSendLaterControl",
+        "Namespace": "MscrmControls.AppCommon.BulkEmailSendLater",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "scheduledate",
+              "Required": false,
+              "Type": "Date",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "scheduletime",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "fluentui-react.min.js",
+              "LoadOrder": 2,
+              "Name": "fluentui-react.min.js",
+              "Type": 0
+            },
+            {
+              "LibraryName": "SIClientUtilityLogger",
+              "LoadOrder": 3,
+              "Name": "SIClientUtilityLogger",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 10,
+              "Name": "MscrmControls.AppCommon.BulkEmailSendLater.BulkEmailSendLaterControl_BulkEmailSendLaterControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "css/BulkEmailSendLater.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/BulkEmailSendLater.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.26092.10001",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.BulkEmailSendLater\" constructor=\"BulkEmailSendLaterControl\" version=\"1.0.5\" display-name-key=\"CC_AppCommon_BulkEmailSendLaterControl\" control-type=\"virtual\" hidden=\"true\"><property name=\"scheduledate\" display-name-key=\"CC_scheduleDate\" description-key=\"ScheduleDate for bulk email\" of-type=\"Date\" usage=\"bound\" required=\"false\" /><property name=\"scheduletime\" display-name-key=\"CC_scheduleTime\" description-key=\"ScheduleTime for bulk email\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><resources><css path=\"css/BulkEmailSendLater.css\" order=\"1\" /><library name=\"fluentui-react.min.js\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/fluentui-react.min.js\" version=\"1.0.1\" /></library><library name=\"SIClientUtilityLogger\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"libs/SIClientUtilityLogger.js\" version=\"1.0.0\" /></library><code path=\"BulkEmailSendLaterControl.js\" order=\"10\" /><resx path=\"locale/BulkEmailSendLater.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.BulkEmailSendLater.BulkEmailSendLaterControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.5"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.BulkEmailSendLater.BulkEmailSendLaterControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

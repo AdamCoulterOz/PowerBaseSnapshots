@@ -1,0 +1,97 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "EditUserControl",
+        "ControlManifestVersion": "1.0.0",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.EditUser.EditUserControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_AppCommon_EditUserControl",
+        "FullName": "MscrmControls.AppCommon.EditUser.EditUserControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.EditUser.EditUserControl",
+        "Namespace": "MscrmControls.AppCommon.EditUser",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "user_id",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "FRECommon",
+              "LoadOrder": 1,
+              "Name": "FRECommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 11,
+              "Name": "MscrmControls.AppCommon.EditUser.EditUserControl_EditUserControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/edituser.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.4.0066",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.EditUser\" constructor=\"EditUserControl\" version=\"1.0.0\" display-name-key=\"CC_AppCommon_EditUserControl\" control-type=\"virtual\" hidden=\"true\"><modes></modes><type-group name=\"all\"><type>SingleLine.Text</type></type-group><property name=\"user_id\" display-name-key=\"CC_userId\" description-key=\"UserId for EditUser Control\" of-type-group=\"all\" usage=\"input\" required=\"true\" hidden=\"true\" /><resources><library name=\"FRECommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/frecommon-lib.js\" version=\"1.0.0\" /></library><code path=\"EditUserControl.js\" order=\"11\" /><resx path=\"locale/edituser.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.EditUser.EditUserControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.0"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.EditUser.EditUserControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommon",
+      "version": "9.0.4.0066"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

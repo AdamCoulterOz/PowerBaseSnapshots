@@ -1,0 +1,98 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "CheckboxControl",
+        "ControlManifestVersion": "1.1.86",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.FieldControls.CheckboxControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_Checkbox_Name",
+        "FullName": "MscrmControls.FieldControls.CheckboxControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.FieldControls.CheckboxControl",
+        "Namespace": "MscrmControls.FieldControls",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "Type": "TwoOptions",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "twoOptionRenderParam",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "msvcontrol",
+              "LoadOrder": 2,
+              "Name": "msvcontrol",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.FieldControls.CheckboxControl_CheckboxControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/CheckboxControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.FieldControls\" constructor=\"CheckboxControl\" version=\"1.1.86\" display-name-key=\"CC_Checkbox_Name\" description-key=\"CC_Checkbox_Desc\" preview-image=\"img/preview.png\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"value\" display-name-key=\"CC_Checkbox_Value\" description-key=\"CC_Checkbox_Value_Desc\" of-type=\"TwoOptions\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"twoOptionRenderParam\" display-name-key=\"CheckboxControl_twoOptionRenderParam\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"true\" /><resources><library name=\"msvcontrol\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/msvcontrollib-1.0.0.js\" version=\"1.1.12\" /></library><code path=\"CheckboxControl.js\" order=\"3\" /><resx path=\"strings/CheckboxControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.FieldControls.CheckboxControl",
+    "supportedplatform": "(Model)",
+    "version": "1.1.86"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.FieldControls.CheckboxControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

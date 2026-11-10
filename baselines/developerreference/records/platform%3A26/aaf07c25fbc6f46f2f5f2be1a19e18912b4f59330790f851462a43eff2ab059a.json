@@ -1,0 +1,278 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": "Displays information about related SLA items for an SLA in the detailed form for any associated entity record.",
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch distinct=\"false\" mapping=\"logical\" savedqueryid=\"007b9527-1cd8-4f1e-9f5b-5e5fea2f828a\"><entity name=\"slaitem\"><attribute name=\"name\" /><attribute name=\"warnafter\" /><attribute name=\"failureafter\" /><attribute name=\"msdyn_slakpiid\" /><attribute name=\"slaitemid\" /><attribute name=\"sequencenumber\" /><attribute name=\"createdon\" /><attribute name=\"modifiedon\" /><attribute name=\"applicablewhenxml\" /><attribute name=\"successconditionsxml\" /><attribute name=\"slaid\" /><order attribute=\"sequencenumber\" descending=\"false\" /><link-entity alias=\"a_74e2964a49d0ea11a81c000d3abea085\" name=\"sla\" from=\"slaid\" to=\"slaid\" link-type=\"outer\" visible=\"false\"><attribute name=\"name\" /><attribute name=\"statecode\" /><attribute name=\"statuscode\" /></link-entity></entity></fetch>",
+    "introducedversion": "9.1.0.0",
+    "iscustom": true,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "title",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "slaitem"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": true,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "name",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "slaid",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": true,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "msdyn_slakpiid",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": true,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "warnafter",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": true,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "failureafter",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": true,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "createdon",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": true,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "modifiedon",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "slaitemid",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "sequencenumber",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "applicablewhenxml",
+                "RelatedEntityName": "",
+                "Width": 0
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "successconditionsxml",
+                "RelatedEntityName": "",
+                "Width": 0
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": true,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "a_74e2964a49d0ea11a81c000d3abea085.statecode",
+                "RelatedEntityName": "sla",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": true,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "a_74e2964a49d0ea11a81c000d3abea085.statuscode",
+                "RelatedEntityName": "sla",
+                "Width": 100
+              }
+            ],
+            "Id": "slaitemid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "objecttypecode",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "slaitem"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:slaitem\" jump=\"title\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"result\" id=\"slaitemid\" multiobjectidfield=\"objecttypecode\"><cell name=\"name\" width=\"150\" disableSorting=\"1\" /><cell name=\"slaid\" width=\"150\" ishidden=\"0\" /><cell name=\"msdyn_slakpiid\" width=\"150\" disableSorting=\"1\" /><cell name=\"warnafter\" width=\"100\" disableSorting=\"1\" /><cell name=\"failureafter\" width=\"100\" disableSorting=\"1\" /><cell name=\"createdon\" width=\"100\" ishidden=\"1\" disableSorting=\"1\" /><cell name=\"modifiedon\" width=\"100\" ishidden=\"1\" disableSorting=\"1\" /><cell name=\"slaitemid\" width=\"100\" ishidden=\"1\" /><cell name=\"sequencenumber\" ishidden=\"1\" width=\"100\" /><cell name=\"applicablewhenxml\" width=\"0\" ishidden=\"1\" /><cell name=\"successconditionsxml\" width=\"0\" ishidden=\"1\" /><cell name=\"a_74e2964a49d0ea11a81c000d3abea085.statecode\" width=\"100\" disableSorting=\"1\" /><cell name=\"a_74e2964a49d0ea11a81c000d3abea085.statuscode\" width=\"100\" disableSorting=\"1\" /></row></grid>"
+    },
+    "name": "SLA items associated with SLA",
+    "offlinesqlquery": "/*SelectStart*/select  \"slaitem0\".[name] as \"name\"\r , \"slaitem0\".[warnafter] as \"warnafter\"\r , \"slaitem0\".[failureafter] as \"failureafter\"\r , \"slaitem0\".[msdyn_slakpiid!id] as \"msdyn_slakpiid!id\"\r , \"slaitem0\".[msdyn_slakpiid!logicalname] as \"msdyn_slakpiid!logicalname\"\r , \"slaitem0\".[msdyn_slakpiid!name] as \"msdyn_slakpiid!name\"\r , \"slaitem0\".[slaitemid] as \"slaitemid\"\r , \"slaitem0\".[sequencenumber] as \"sequencenumber\"\r , \"slaitem0\".[createdon] as \"createdon\"\r , \"slaitem0\".[modifiedon] as \"modifiedon\"\r , \"slaitem0\".[applicablewhenxml] as \"applicablewhenxml\"\r , \"slaitem0\".[successconditionsxml] as \"successconditionsxml\"\r , \"slaitem0\".[slaid!id] as \"slaid!id\"\r , \"slaitem0\".[slaid!logicalname] as \"slaid!logicalname\"\r , \"slaitem0\".[slaid!name] as \"slaid!name\"\r , \"a_74e2964a49d0ea11a81c000d3abea085\".[name] as \"a_74e2964a49d0ea11a81c000d3abea085.name\"\r , \"a_74e2964a49d0ea11a81c000d3abea085\".[statecode] as \"a_74e2964a49d0ea11a81c000d3abea085.statecode\"\r , \"a_74e2964a49d0ea11a81c000d3abea085\".[statuscode] as \"a_74e2964a49d0ea11a81c000d3abea085.statuscode\"/*SelectEnd*/  /*FromStart*/from  SLAItem as \"slaitem0\" \t/*JoinStart*/ left outer join SLA as \"a_74e2964a49d0ea11a81c000d3abea085\" on (\"slaitem0\".[slaid!id]  =  \"a_74e2964a49d0ea11a81c000d3abea085\".[slaid])/*JoinEnd*//*FromEnd*/  /*OrderByStart*/order by  \"slaitem0\".[sequencenumber] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 2,
+    "returnedtypecode": "slaitem",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "007b9527-1cd8-4f1e-9f5b-5e5fea2f828a",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "slaitem",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "007b9527-1cd8-4f1e-9f5b-5e5fea2f828a"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}

@@ -1,0 +1,112 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "TemplateSelectionControl",
+        "ControlManifestVersion": "1.4.11",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.TemplateSelection.TemplateSelectionControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_AppCommon_TemplateSelectionControl",
+        "FullName": "MscrmControls.AppCommon.TemplateSelection.TemplateSelectionControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.TemplateSelection.TemplateSelectionControl",
+        "Namespace": "MscrmControls.AppCommon.TemplateSelection",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "entityTypeCode",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "documentType",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "templateType",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "templatesList",
+              "Required": false,
+              "TypeGroup": "all",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "office-ui-fabric-react-templateselection",
+              "LoadOrder": 2,
+              "Name": "office-ui-fabric-react-templateselection",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.AppCommon.TemplateSelection.TemplateSelectionControl_TemplateSelectionControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/TemplateSelectionControlStrings.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.26092.10001",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.TemplateSelection\" constructor=\"TemplateSelectionControl\" version=\"1.4.11\" display-name-key=\"CC_AppCommon_TemplateSelectionControl\" control-type=\"virtual\" hidden=\"true\"><modes></modes><type-group name=\"all\"><type>SingleLine.Text</type></type-group><property name=\"entityTypeCode\" display-name-key=\"cc_entityTypeCode_id\" description-key=\"CC_entityTypeCode_Desc\" of-type-group=\"all\" usage=\"input\" required=\"true\" hidden=\"false\" /><property name=\"documentType\" display-name-key=\"cc_documentType_id\" description-key=\"CC_documentType_Desc\" of-type-group=\"all\" usage=\"input\" required=\"true\" hidden=\"false\" /><property name=\"templateType\" display-name-key=\"cc_templateType_id\" description-key=\"CC_templateType_Desc\" of-type-group=\"all\" usage=\"input\" required=\"true\" hidden=\"false\" /><property name=\"templatesList\" display-name-key=\"cc_templatesList_id\" description-key=\"CC_templatesList_Desc\" of-type-group=\"all\" usage=\"bound\" required=\"false\" hidden=\"false\" /><resources><library name=\"office-ui-fabric-react-templateselection\" version=\"&gt;=7.117.4\" order=\"2\"><packaged_library path=\"libs/office-ui-fabric-react.min.js\" version=\"7.117.4\" /></library><code path=\"TemplateSelectionControl.js\" order=\"3\" /><resx path=\"strings/TemplateSelectionControlStrings.1033.resx\" version=\"1.0.1\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.TemplateSelection.TemplateSelectionControl",
+    "supportedplatform": "(Model)",
+    "version": "1.4.11"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.TemplateSelection.TemplateSelectionControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

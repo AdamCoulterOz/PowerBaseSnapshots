@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "applicationuserid": {
+      "key": [
+        {
+          "field": "applicationuserid",
+          "type": "wire-guid",
+          "value": "0b63dd49-3762-44fc-8c61-8796449819cc"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "applicationuser"
+    },
+    "componentstate": 0,
+    "fieldsecurityprofileid": {
+      "key": {
+        "kind": "wire-guid",
+        "portability": "not-established",
+        "value": "572329c1-a042-4e22-be47-367c6374ea45"
+      },
+      "kind": "typed-reference",
+      "targetEntity": "fieldsecurityprofile"
+    },
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true
+  },
+  "exportIdentity": [
+    {
+      "field": "applicationuserid",
+      "key": [
+        {
+          "field": "applicationuserid",
+          "type": "wire-guid",
+          "value": "0b63dd49-3762-44fc-8c61-8796449819cc"
+        }
+      ],
+      "targetEntity": "applicationuser"
+    },
+    {
+      "field": "fieldsecurityprofileid",
+      "key": {
+        "kind": "wire-guid",
+        "portability": "not-established",
+        "value": "572329c1-a042-4e22-be47-367c6374ea45"
+      },
+      "targetEntity": "fieldsecurityprofile"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "PowerPages_DataRuntimeS2SAppIdentities_prod",
+      "version": "1.0.2609.1"
+    }
+  ],
+  "typeIdentity": "entity:applicationuserprofile"
+}

@@ -1,0 +1,96 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "CalendarShareControl",
+        "ControlManifestVersion": "1.0.2",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.CustomerServiceSchedule.CalendarShareControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_WeeklyScheduleControl_Name",
+        "FullName": "MscrmControls.AppCommon.CustomerServiceSchedule.CalendarShareControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.CustomerServiceSchedule.CalendarShareControl",
+        "Namespace": "MscrmControls.AppCommon.CustomerServiceSchedule",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "calendarShareControlInput",
+              "Required": true,
+              "TypeGroup": "Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 5,
+              "Name": "MscrmControls.AppCommon.CustomerServiceSchedule.CalendarShareControl_CalendarShareControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 6,
+              "Name": "css/CalendarShare.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/CalendarShare.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.Text",
+    "componentstate": 0,
+    "introducedversion": "9.0.1904.4006",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.CustomerServiceSchedule\" constructor=\"CalendarShareControl\" version=\"1.0.2\" display-name-key=\"CC_WeeklyScheduleControl_Name\" control-type=\"virtual\"><modes></modes><type-group name=\"Text\"><type>SingleLine.Text</type></type-group><property name=\"calendarShareControlInput\" display-name-key=\"CC_WeeklyScheduleControlInput\" description-key=\"Input data of calendar share entities required by control\" of-type-group=\"Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><resources><code path=\"CalendarShareControl.js\" order=\"5\" /><css path=\"css/CalendarShare.css\" order=\"6\" /><resx path=\"locale/CalendarShare.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.CustomerServiceSchedule.CalendarShareControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.2"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.CustomerServiceSchedule.CalendarShareControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch",
+      "version": "9.0.1904.4006"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

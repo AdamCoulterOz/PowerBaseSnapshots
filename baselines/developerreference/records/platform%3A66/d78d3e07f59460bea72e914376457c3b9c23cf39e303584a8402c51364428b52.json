@@ -1,0 +1,121 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "StarRatingControl",
+        "ControlManifestVersion": "1.0.5",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Rating.StarRatingControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_StarRating_Name",
+        "FullName": "MscrmControls.Rating.StarRatingControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.Rating.StarRatingControl",
+        "Namespace": "MscrmControls.Rating",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "Type": "Whole.None",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "max",
+              "Required": true,
+              "Type": "Enum",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "winjsbase",
+              "LoadOrder": 2,
+              "Name": "winjsbase",
+              "Type": 0
+            },
+            {
+              "LibraryName": "winjsui",
+              "LoadOrder": 3,
+              "Name": "winjsui",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 4,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 5,
+              "Name": "MscrmControls.Rating.StarRatingControl_StarRatingControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 6,
+              "Name": "css/rating.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/StarRatingControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Rating\" constructor=\"StarRatingControl\" hidden=\"true\" version=\"1.0.5\" display-name-key=\"CC_StarRating_Name\" description-key=\"CC_StarRating_Desc\" preview-image=\"img/preview.png\"><modes><read /><edit /></modes><property name=\"value\" display-name-key=\"CC_Value\" description-key=\"CC_Value_Desc\" usage=\"bound\" of-type=\"Whole.None\" required=\"true\" hidden=\"true\" /><property name=\"max\" display-name-key=\"CC_StarRating_Max\" description-key=\"CC_StarRating_DropDown_Max_Desc\" usage=\"input\" of-type=\"Enum\" required=\"true\" hidden=\"false\"><value name=\"option-a\" display-name-key=\"CC_StarRating_Option_2\" description-key=\"CC_StarRating_Option_2_Desc\">2</value><value name=\"option-b\" display-name-key=\"CC_StarRating_Option_3\" description-key=\"CC_StarRating_Option_3_Desc\">3</value><value name=\"option-c\" display-name-key=\"CC_StarRating_Option_4\" description-key=\"CC_StarRating_Option_4_Desc\">4</value><value name=\"option-d\" display-name-key=\"CC_StarRating_Option_5\" description-key=\"CC_StarRating_Option_5_Desc\" default=\"true\">5</value></property><AvailableOn><web classic=\"disable\" /><phone /><tablet /></AvailableOn><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><library name=\"winjsbase\" version=\"&gt;=3\" order=\"2\"><packaged_library path=\"libs/base.js\" version=\"3.0.1\" /></library><library name=\"winjsui\" version=\"&gt;=3\" order=\"3\"><packaged_library path=\"libs/ui.js\" version=\"3.0.1\" /></library><library name=\"mscommon\" version=\"&gt;=1\" order=\"4\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><code path=\"StarRatingControl.js\" order=\"5\" /><css path=\"css/rating.css\" order=\"6\" /><resx path=\"strings/StarRatingControl.1033.resx\" version=\"1.0.1\" /></resources></control></manifest>",
+    "name": "MscrmControls.Rating.StarRatingControl",
+    "supportedplatform": null,
+    "version": "1.0.5"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Rating.StarRatingControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

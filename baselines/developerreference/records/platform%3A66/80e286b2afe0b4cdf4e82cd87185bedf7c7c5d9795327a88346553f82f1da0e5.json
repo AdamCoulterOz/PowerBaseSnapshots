@@ -1,0 +1,146 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "LinearGaugeControl",
+        "ControlManifestVersion": "1.0.7",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.LinearGauge.LinearGaugeControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_LinearGauge_Name",
+        "FullName": "MscrmControls.LinearGauge.LinearGaugeControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.LinearGauge.LinearGaugeControl",
+        "Namespace": "MscrmControls.LinearGauge",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "TypeGroup": "numbers",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "min",
+              "Required": true,
+              "TypeGroup": "numbers",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "max",
+              "Required": true,
+              "TypeGroup": "numbers",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "step",
+              "Required": true,
+              "TypeGroup": "numbers",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 2,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "jqm-init",
+              "LoadOrder": 3,
+              "Name": "jqm-init",
+              "Type": 0
+            },
+            {
+              "LibraryName": "jqm-slider",
+              "LoadOrder": 4,
+              "Name": "jqm-slider",
+              "Type": 0
+            },
+            {
+              "LibraryName": "jqm-slider-patch",
+              "LoadOrder": 5,
+              "Name": "jqm-slider-patch",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 6,
+              "Name": "MscrmControls.LinearGauge.LinearGaugeControl_LinearGaugeControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 7,
+              "Name": "css/jquery.mobile.slider.structure.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 8,
+              "Name": "css/jquery.mobile.slider.custom.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LinearGaugeControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.LinearGauge\" constructor=\"LinearGaugeControl\" hidden=\"true\" version=\"1.0.7\" display-name-key=\"CC_LinearGauge_Name\" description-key=\"CC_NumericInterval_Desc\" preview-image=\"img/preview.png\"><modes><read /><edit /></modes><type-group name=\"numbers\"><type>Whole.None</type><type>Currency</type><type>FP</type><type>Decimal</type></type-group><property name=\"value\" display-name-key=\"CC_Value\" description-key=\"CC_Value_Desc\" of-type-group=\"numbers\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"min\" display-name-key=\"CC_Min\" description-key=\"CC_Min_Desc\" usage=\"input\" of-type-group=\"numbers\" required=\"true\" hidden=\"false\" /><property name=\"max\" display-name-key=\"CC_Max\" description-key=\"CC_Max_Desc\" usage=\"input\" of-type-group=\"numbers\" required=\"true\" hidden=\"false\" /><property name=\"step\" display-name-key=\"CC_Step\" description-key=\"CC_Step_Desc\" of-type-group=\"numbers\" usage=\"input\" required=\"true\" hidden=\"false\" /><AvailableOn><web classic=\"disable\" /><phone /><tablet /></AvailableOn><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><library name=\"mscommon\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><library name=\"jqm-init\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"libs/jquerymobile.init.js\" version=\"1.1.8\" /></library><library name=\"jqm-slider\" version=\"&gt;=1.10\" order=\"4\"><packaged_library path=\"libs/jquery.mobile.slider.js\" version=\"1.1.9\" /></library><library name=\"jqm-slider-patch\" version=\"&gt;=2\" order=\"5\"><packaged_library path=\"libs/jquery.mobile.slider.patch.js\" version=\"2.3.3\" /></library><code path=\"LinearGaugeControl.js\" order=\"6\" /><css path=\"css/jquery.mobile.slider.structure.css\" order=\"7\" /><css path=\"css/jquery.mobile.slider.custom.css\" order=\"8\" /><resx path=\"strings/LinearGaugeControl.1033.resx\" version=\"1.0.1\" /></resources></control></manifest>",
+    "name": "MscrmControls.LinearGauge.LinearGaugeControl",
+    "supportedplatform": null,
+    "version": "1.0.7"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.LinearGauge.LinearGaugeControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

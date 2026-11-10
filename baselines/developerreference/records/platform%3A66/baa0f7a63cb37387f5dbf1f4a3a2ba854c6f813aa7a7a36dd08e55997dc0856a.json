@@ -1,0 +1,206 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ReceiptProcessor",
+        "ControlManifestVersion": "1.0.114",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "Intelligence.ReceiptProcessorControl.ReceiptProcessor"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "ReceiptProcessor",
+        "FullName": "Intelligence.ReceiptProcessorControl.ReceiptProcessor",
+        "IsVirtual": true,
+        "Name": "Intelligence.ReceiptProcessorControl.ReceiptProcessor",
+        "Namespace": "Intelligence.ReceiptProcessorControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "TypeGroup": "allText",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "MerchantName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 2
+            },
+            {
+              "Hidden": false,
+              "Name": "MerchantPhone",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 2
+            },
+            {
+              "Hidden": false,
+              "Name": "MerchantAddress",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 2
+            },
+            {
+              "Hidden": false,
+              "Name": "TransactionDate",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 2
+            },
+            {
+              "Hidden": false,
+              "Name": "TransactionTime",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 2
+            },
+            {
+              "Hidden": false,
+              "Name": "Total",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 2
+            },
+            {
+              "Hidden": false,
+              "Name": "Subtotal",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 2
+            },
+            {
+              "Hidden": false,
+              "Name": "Tax",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 2
+            },
+            {
+              "Hidden": false,
+              "Name": "Tip",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 2
+            },
+            {
+              "Hidden": false,
+              "Name": "Items",
+              "Required": false,
+              "Type": "Multiple",
+              "Usage": 2
+            },
+            {
+              "Hidden": true,
+              "Name": "OriginalImage",
+              "Required": false,
+              "Type": "Multiple",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "DefaultImage",
+              "Required": false,
+              "Type": "Multiple",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "AdvancedCustomization",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "exif",
+              "LoadOrder": 2,
+              "Name": "exif",
+              "Type": 0
+            },
+            {
+              "LibraryName": "pdf-worker",
+              "LoadOrder": 3,
+              "Name": "pdf-worker",
+              "Type": 0
+            },
+            {
+              "LibraryName": "react-pdf",
+              "LoadOrder": 5,
+              "Name": "react-pdf",
+              "Type": 0
+            },
+            {
+              "LibraryName": "react_16_14_0",
+              "LoadOrder": 0,
+              "Name": "react_16_14_0",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_8_121_1",
+              "LoadOrder": 0,
+              "Name": "fluent_8_121_1",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 6,
+              "Name": "Intelligence.ReceiptProcessorControl.ReceiptProcessor_ReceiptProcessor.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/ReceiptProcessorControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"Intelligence.ReceiptProcessorControl\" constructor=\"ReceiptProcessor\" version=\"1.0.114\" display-name-key=\"ReceiptProcessor\" description-key=\"CC_ReceiptProcessor_Description\" control-type=\"virtual\" hidden=\"true\"><modes><read /><edit /></modes><property name=\"value\" display-name-key=\"Value_Property_Name\" description-key=\"Value_Property_Description\" of-type-group=\"allText\" usage=\"bound\" required=\"true\" /><property name=\"MerchantName\" display-name-key=\"MerchantName_Property_Name\" description-key=\"MerchantName_Property_Description\" of-type=\"SingleLine.Text\" usage=\"output\" required=\"false\" hidden=\"false\" /><property name=\"MerchantPhone\" display-name-key=\"MerchantPhone_Property_Name\" description-key=\"MerchantPhone_Property_Description\" of-type=\"SingleLine.Text\" usage=\"output\" required=\"false\" hidden=\"false\" /><property name=\"MerchantAddress\" display-name-key=\"MerchantAddress_Property_Name\" description-key=\"MerchantAddress_Property_Description\" of-type=\"SingleLine.Text\" usage=\"output\" required=\"false\" hidden=\"false\" /><property name=\"TransactionDate\" display-name-key=\"TransactionDate_Property_Name\" description-key=\"TransactionDate_Property_Description\" of-type=\"SingleLine.Text\" usage=\"output\" required=\"false\" hidden=\"false\" /><property name=\"TransactionTime\" display-name-key=\"TransactionTime_Property_Name\" description-key=\"TransactionTime_Property_Description\" of-type=\"SingleLine.Text\" usage=\"output\" required=\"false\" hidden=\"false\" /><property name=\"Total\" display-name-key=\"Total_Property_Name\" description-key=\"Total_Property_Description\" of-type=\"SingleLine.Text\" usage=\"output\" required=\"false\" hidden=\"false\" /><property name=\"Subtotal\" display-name-key=\"Subtotal_Property_Name\" description-key=\"Subtotal_Property_Description\" of-type=\"SingleLine.Text\" usage=\"output\" required=\"false\" hidden=\"false\" /><property name=\"Tax\" display-name-key=\"Tax_Property_Name\" description-key=\"Tax_Property_Description\" of-type=\"SingleLine.Text\" usage=\"output\" required=\"false\" hidden=\"false\" /><property name=\"Tip\" display-name-key=\"Tip_Property_Name\" description-key=\"Tip_Property_Description\" of-type=\"SingleLine.Text\" usage=\"output\" required=\"false\" hidden=\"false\" /><property name=\"Items\" display-name-key=\"Items_Property_Name\" description-key=\"Items_Property_Description\" of-type=\"Multiple\" usage=\"output\" required=\"false\" hidden=\"false\" /><property name=\"OriginalImage\" display-name-key=\"OriginalImage_Property_Name\" description-key=\"OriginalImage_Property_Description\" of-type=\"Multiple\" usage=\"bound\" required=\"false\" hidden=\"true\" /><property name=\"DefaultImage\" display-name-key=\"DefaultImage_Property_Name\" description-key=\"DefaultImage_Property_Description\" of-type=\"Multiple\" usage=\"input\" required=\"false\" /><property name=\"AdvancedCustomization\" display-name-key=\"AdvancedCustomization_Property_Name\" description-key=\"AdvancedCustomization_Property_Description\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" hidden=\"true\" /><resources><platform-library name=\"React\" version=\"16.14.0\" /><platform-library name=\"Fluent\" version=\"8.121.1\" /><library name=\"exif\" version=\"&gt;=2\" order=\"2\"><packaged_library path=\"libs/exif.js\" version=\"2.3.0\" /></library><library name=\"pdf-worker\" version=\"&gt;=4\" order=\"3\"><packaged_library path=\"libs/PDF/pdf.worker.js\" version=\"4.4.168\" /></library><library name=\"react-pdf\" version=\"&gt;=9\" order=\"5\"><packaged_library path=\"libs/PDF/react-pdf.js\" version=\"9.1.0\" /></library><resx path=\"strings/ReceiptProcessorControl.1033.resx\" version=\"1.0.0\" /><code path=\"ReceiptProcessor.js\" order=\"6\" /></resources></control></manifest>",
+    "name": "Intelligence.ReceiptProcessorControl.ReceiptProcessor",
+    "supportedplatform": "(Model)",
+    "version": "1.0.114"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "Intelligence.ReceiptProcessorControl.ReceiptProcessor"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

@@ -1,0 +1,99 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "RecordPickerControl",
+        "ControlManifestVersion": "1.26072.1",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.RecordPicker.RecordPickerControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_RecordPicker",
+        "FullName": "MscrmControls.RecordPicker.RecordPickerControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.RecordPicker.RecordPickerControl",
+        "Namespace": "MscrmControls.RecordPicker",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "Records",
+              "Required": true,
+              "Type": "Multiple",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "Config",
+              "Required": true,
+              "Type": "Multiple",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "Output",
+              "Required": false,
+              "Type": "Multiple",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.RecordPicker.RecordPickerControl_RecordPickerControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "css/RecordPickerControl.css",
+              "Type": 1
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.RecordPicker\" constructor=\"RecordPickerControl\" version=\"1.26072.1\" display-name-key=\"CC_RecordPicker\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"Records\" display-name-key=\"CC_RecordPicker_Records\" description-key=\"CC_RecordPickerControl_Records_Desc\" usage=\"input\" of-type=\"Multiple\" required=\"true\" hidden=\"false\" /><property name=\"Config\" display-name-key=\"CC_RecordPicker_Config\" description-key=\"CC_RecordPickerControl_Config_Desc\" usage=\"input\" of-type=\"Multiple\" required=\"true\" hidden=\"false\" /><property name=\"Output\" display-name-key=\"CC_RecordPicker_Output\" description-key=\"CC_RecordPickerControl_Output_Desc\" of-type=\"Multiple\" usage=\"bound\" required=\"false\" hidden=\"true\" /><resources><css path=\"css/RecordPickerControl.css\" order=\"1\" /><code path=\"RecordPickerControl.js\" order=\"2\" /></resources></control></manifest>",
+    "name": "MscrmControls.RecordPicker.RecordPickerControl",
+    "supportedplatform": "(Model)",
+    "version": "1.26072.1"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.RecordPicker.RecordPickerControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

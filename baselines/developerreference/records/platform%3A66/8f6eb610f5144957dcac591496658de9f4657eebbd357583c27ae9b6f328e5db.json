@@ -1,0 +1,102 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "NLSearchControl",
+        "ControlManifestVersion": "1.0.37",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.NLSearch.NLSearchControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_NLSearch_Control",
+        "FullName": "MscrmControls.NLSearch.NLSearchControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.NLSearch.NLSearchControl",
+        "Namespace": "MscrmControls.NLSearch",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluentui-react",
+              "LoadOrder": 1,
+              "Name": "fluentui-react",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.NLSearch.NLSearchControl_NLSearchControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "css/NLSearchControl.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/NLSearchControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.NLSearch\" constructor=\"NLSearchControl\" version=\"1.0.37\" display-name-key=\"CC_NLSearch_Control\" control-type=\"virtual\"><modes></modes><property name=\"value\" required=\"true\" display-name-key=\"CC_NLSearch_Control_Value\" description-key=\"CC_NLSearch_Control_Value_Desc\" usage=\"input\" of-type=\"SingleLine.Text\" /><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.7\" /></library><library name=\"fluentui-react\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/fluentui-react.js\" version=\"8.121.1\" /></library><css path=\"css/NLSearchControl.css\" order=\"2\" /><code path=\"NLSearchControl.js\" order=\"3\" /><resx path=\"strings/NLSearchControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.NLSearch.NLSearchControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.37"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.NLSearch.NLSearchControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

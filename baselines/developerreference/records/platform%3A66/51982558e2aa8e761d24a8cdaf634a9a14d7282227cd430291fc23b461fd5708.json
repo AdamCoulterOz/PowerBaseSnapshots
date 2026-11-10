@@ -1,0 +1,92 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "WorkHourForm",
+        "ControlManifestVersion": "1.0.5",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.WorkHourControl.WorkHourForm"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_WorkHourForm",
+        "FullName": "MscrmControls.WorkHourControl.WorkHourForm",
+        "IsVirtual": false,
+        "Name": "MscrmControls.WorkHourControl.WorkHourForm",
+        "Namespace": "MscrmControls.WorkHourControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "workHourFormInput",
+              "Required": true,
+              "TypeGroup": "Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "workHourFormOutput",
+              "Required": true,
+              "TypeGroup": "Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.WorkHourControl.WorkHourForm_WorkHourForm.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/WorkHourForm.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.Text",
+    "componentstate": 0,
+    "introducedversion": "9.0.26094.1003",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.WorkHourControl\" constructor=\"WorkHourForm\" version=\"1.0.5\" display-name-key=\"CC_WorkHourForm\"><modes /><type-group name=\"Text\"><type>SingleLine.Text</type></type-group><property name=\"workHourFormInput\" display-name-key=\"CC_WorkHourFormInput\" description-key=\"Input data\" of-type-group=\"Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"workHourFormOutput\" display-name-key=\"CC_WorkHourFormOutput\" description-key=\"Output data\" of-type-group=\"Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><resources><code path=\"WorkHourForm.js\" order=\"1\" /><resx path=\"strings/WorkHourForm.1033.resx\" version=\"1.0.4\" /></resources></control></manifest>",
+    "name": "MscrmControls.WorkHourControl.WorkHourForm",
+    "supportedplatform": "(Model)",
+    "version": "1.0.5"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.WorkHourControl.WorkHourForm"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_UCICalendar",
+      "version": "9.0.26101.2000"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

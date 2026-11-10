@@ -1,0 +1,44 @@
+{
+  "configuration": {
+    "category": "Default",
+    "comment": null,
+    "componentstate": 0,
+    "entitytype": 0,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "objectpartitionid": null,
+    "overriddencreatedon": null,
+    "query": "Show opportunities (account, name, contact, amount) with actual close date before estimated",
+    "rephrase": "The query will join opportunity, contact, and account, list out all opportunities with their name, account name, contact fullname, and actual value. The opportunities are selected based on the condition that their actualclosedate is earlier than their estimatedclosedate.",
+    "savedqueryversionnumber": null,
+    "savedqueryviewid": null,
+    "standardsql": "SELECT [Opportunity].[name] AS [opportunityName], [Account].[name] AS [accountName], [Contact].[fullname] AS [contactName], [Opportunity].[actualValue] AS [opportunityActualValue] FROM [Opportunity] JOIN [Account] ON [Opportunity].[parentAccountId] = [Account].[accountId] JOIN [Contact] ON [Opportunity].[parentContactId] = [Contact].[contactId] WHERE [Opportunity].[actualclosedate] < [Opportunity].[estimatedclosedate]",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "uniquename": "cds_mainfewshot_uniquename_f0c8aa33-f4e8-42ea-a309-b6bc272e8a82",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "cds_mainfewshot_uniquename_f0c8aa33-f4e8-42ea-a309-b6bc272e8a82"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_RelevanceSearch_Anchor",
+      "version": "1.0.3581.1"
+    }
+  ],
+  "typeIdentity": "entity:mainfewshot"
+}

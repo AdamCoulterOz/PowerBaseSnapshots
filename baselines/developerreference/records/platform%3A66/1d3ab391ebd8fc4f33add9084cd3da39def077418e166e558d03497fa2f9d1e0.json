@@ -1,0 +1,127 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "PartyListWrapper",
+        "ControlManifestVersion": "1.0.4",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.PartyListWrapper"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_PartyListWrapper",
+        "FullName": "MscrmControls.AppCommon.PartyListWrapper",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.PartyListWrapper",
+        "Namespace": "MscrmControls.AppCommon",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "targetEntities",
+              "Required": true,
+              "TypeGroup": "Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "selectedEntities",
+              "Required": true,
+              "TypeGroup": "Lookups",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "isDisabled",
+              "Required": false,
+              "TypeGroup": "Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "extraFilters",
+              "Required": false,
+              "TypeGroup": "Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "disableMru",
+              "Required": false,
+              "TypeGroup": "Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "customLabel",
+              "Required": false,
+              "TypeGroup": "Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.AppCommon.PartyListWrapper_PartyListWrapper.js",
+              "Type": 4
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.4.0066",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon\" constructor=\"PartyListWrapper\" version=\"1.0.4\" display-name-key=\"CC_PartyListWrapper\" control-type=\"virtual\" hidden=\"true\"><modes></modes><type-group name=\"Text\"><type>SingleLine.Text</type></type-group><type-group name=\"Lookups\"><type>Lookup.PartyList</type><type>Lookup.Simple</type></type-group><property name=\"targetEntities\" display-name-key=\"CC_targetEntities\" description-key=\"CC_targetEntities_Desc\" of-type-group=\"Text\" usage=\"input\" required=\"true\" hidden=\"true\" /><property name=\"selectedEntities\" display-name-key=\"CC_selectedEntities\" description-key=\"CC_selectedEntities_Desc\" of-type-group=\"Lookups\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"isDisabled\" display-name-key=\"CC_isDisabled\" description-key=\"CC_isDisabled_Desc\" of-type-group=\"Text\" usage=\"input\" required=\"false\" hidden=\"true\" /><property name=\"extraFilters\" display-name-key=\"CC_extraFilters\" description-key=\"CC_extraFilters_Desc\" of-type-group=\"Text\" usage=\"input\" required=\"false\" hidden=\"true\" /><property name=\"disableMru\" display-name-key=\"CC_disableMru\" description-key=\"CC_disableMru_Desc\" of-type-group=\"Text\" usage=\"input\" required=\"false\" hidden=\"true\" /><property name=\"customLabel\" display-name-key=\"CC_customLabel\" description-key=\"CC_customLabel_Desc\" of-type-group=\"Text\" usage=\"input\" required=\"false\" hidden=\"true\" /><resources><code path=\"PartyListWrapper.js\" order=\"1\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.PartyListWrapper",
+    "supportedplatform": "(Model)",
+    "version": "1.0.4"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.PartyListWrapper"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommon",
+      "version": "9.0.4.0066"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch",
+      "version": "9.0.1904.4006"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

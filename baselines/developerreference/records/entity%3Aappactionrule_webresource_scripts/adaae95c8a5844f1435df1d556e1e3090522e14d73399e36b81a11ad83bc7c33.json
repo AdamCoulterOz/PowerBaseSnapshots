@@ -1,0 +1,59 @@
+{
+  "configuration": {
+    "appactionruleid": {
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "msdyn_Mscrm.CanEnableEditSeries!0!appointment"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "appactionrule"
+    },
+    "componentstate": 0,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "webresourceid": {
+      "key": {
+        "kind": "wire-guid",
+        "portability": "not-established",
+        "value": "56fab417-d49a-4912-b801-63a5a3df523c"
+      },
+      "kind": "typed-reference",
+      "targetEntity": "webresource"
+    }
+  },
+  "exportIdentity": [
+    {
+      "field": "appactionruleid",
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "msdyn_Mscrm.CanEnableEditSeries!0!appointment"
+        }
+      ],
+      "targetEntity": "appactionrule"
+    },
+    {
+      "field": "webresourceid",
+      "key": "Appointment_main_system_library.js",
+      "targetEntity": "webresource"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdyn_SystemAppActions",
+      "version": "9.1.0.57"
+    }
+  ],
+  "typeIdentity": "entity:appactionrule_webresource_scripts"
+}

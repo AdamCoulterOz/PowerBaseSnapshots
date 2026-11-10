@@ -1,0 +1,114 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "KPICardControl",
+        "ControlManifestVersion": "1.1.15",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.KPICard.KPICardControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_KPICardControl_Name",
+        "FullName": "MscrmControls.KPICard.KPICardControl",
+        "IsVirtual": true,
+        "MappingFileName": "design-maps/map.*.xml",
+        "Name": "MscrmControls.KPICard.KPICardControl",
+        "Namespace": "MscrmControls.KPICard",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [],
+              "InitialDataSetFetch": true,
+              "Name": "cardDataSet",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "PaddingStyle",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "IsFiltered",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "DeviceWidth",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.KPICard.KPICardControl_KPICardControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/KPICardControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.KPICard\" constructor=\"KPICardControl\" version=\"1.1.15\" display-name-key=\"CC_KPICardControl_Name\" control-type=\"virtual\" hidden=\"true\" design-mapping-file=\"design-maps/map.*.xml\"><modes></modes><data-set name=\"cardDataSet\" display-name-key=\"CC_CardDataSet_name\"></data-set><property name=\"PaddingStyle\" display-name-key=\"cc_paddingStyle\" description-key=\"cc_paddingStyle_Desc\" of-type=\"Whole.None\" usage=\"input\" required=\"false\" hidden=\"false\" /><property name=\"IsFiltered\" display-name-key=\"cc_isfiltered\" description-key=\"cc_isfiltered\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"true\" /><property name=\"DeviceWidth\" display-name-key=\"cc_deviceWidth\" description-key=\"cc_deviceWidth_Desc\" of-type=\"Whole.None\" usage=\"input\" required=\"false\" hidden=\"false\" /><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-3.6.0.js\" version=\"3.6.0\" /></library><code path=\"KPICardControl.js\" order=\"1\" /><resx path=\"strings/KPICardControl.1033.resx\" version=\"1.0.1\" /></resources></control></manifest>",
+    "name": "MscrmControls.KPICard.KPICardControl",
+    "supportedplatform": "(Model)",
+    "version": "1.1.15"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.KPICard.KPICardControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

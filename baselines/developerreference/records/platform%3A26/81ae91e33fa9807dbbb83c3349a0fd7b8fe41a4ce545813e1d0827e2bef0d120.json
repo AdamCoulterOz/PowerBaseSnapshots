@@ -1,0 +1,172 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": "All email signatures in the user's current language",
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" savedqueryid=\"c7ef19c2-1335-4405-8e46-6105de8d11e2\"><entity name=\"emailsignature\"><order attribute=\"title\" descending=\"false\" /><attribute name=\"title\" /><attribute name=\"ownerid\" /><attribute name=\"isdefault\" /><attribute name=\"ispersonal\" /><attribute name=\"emailsignatureid\" /><attribute name=\"languagecode\" /><filter type=\"and\"><condition attribute=\"languagecode\" operator=\"eq-userlanguage\" /></filter></entity></fetch>",
+    "introducedversion": "9.1.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "title",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "emailsignature"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "title",
+                "RelatedEntityName": "",
+                "Width": 425
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "isdefault",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "ispersonal",
+                "RelatedEntityName": "",
+                "Width": 125
+              },
+              {
+                "AddedBy": "",
+                "CellType": "Crm.LanguageCodeFormat",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "languagecode",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "ownerid",
+                "RelatedEntityName": "",
+                "Width": 125
+              }
+            ],
+            "Id": "emailsignatureid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "emailsignature"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:emailsignature\" jump=\"title\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"result\" id=\"emailsignatureid\"><cell name=\"title\" width=\"425\" /><cell name=\"isdefault\" width=\"100\" /><cell name=\"ispersonal\" width=\"125\" /><cell name=\"languagecode\" width=\"100\" cellType=\"Crm.LanguageCodeFormat\" /><cell name=\"ownerid\" width=\"125\" /></row></grid>"
+    },
+    "name": "All Email Signatures",
+    "offlinesqlquery": "/*SelectStart*/select  \"emailsignature0\".[title] as \"title\"\r , \"emailsignature0\".[ownerid!id] as \"ownerid!id\"\r , \"emailsignature0\".[ownerid!logicalname] as \"ownerid!logicalname\"\r , \"emailsignature0\".[ownerid!name] as \"ownerid!name\"\r , \"emailsignature0\".[isdefault] as \"isdefault\"\r , \"emailsignature0\".[ispersonal] as \"ispersonal\"\r , \"emailsignature0\".[emailsignatureid] as \"emailsignatureid\"\r , \"emailsignature0\".[languagecode] as \"languagecode\"/*SelectEnd*/  /*FromStart*/from  EmailSignature as \"emailsignature0\"/*FromEnd*/  /*OrderByStart*/order by  \"emailsignature0\".[title] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "emailsignature",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "c7ef19c2-1335-4405-8e46-6105de8d11e2",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "emailsignature",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "c7ef19c2-1335-4405-8e46-6105de8d11e2"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_ActivitiesPatch",
+      "version": "9.0.26093.260917001"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

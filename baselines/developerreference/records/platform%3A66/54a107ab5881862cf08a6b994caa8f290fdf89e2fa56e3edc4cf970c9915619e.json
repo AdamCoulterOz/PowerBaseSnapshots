@@ -1,0 +1,85 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "MultimediaPlayerControl",
+        "ControlManifestVersion": "1.1.0",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Multimedia.MultimediaPlayerControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_Multimedia_Name",
+        "FullName": "MscrmControls.Multimedia.MultimediaPlayerControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.Multimedia.MultimediaPlayerControl",
+        "Namespace": "MscrmControls.Multimedia",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "url",
+              "Required": true,
+              "Type": "SingleLine.URL",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.Multimedia.MultimediaPlayerControl_MultimediaPlayerControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/MultimediaPlayerControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Multimedia\" constructor=\"MultimediaPlayerControl\" hidden=\"true\" version=\"1.1.0\" display-name-key=\"CC_Multimedia_Name\" description-key=\"CC_Multimedia_Desc\" preview-image=\"img/preview.png\"><modes><read /><edit /></modes><dependencies><dependency name=\"MscrmControls.FieldControls.UrlControl\" /></dependencies><property name=\"url\" display-name-key=\"CC_Media_URL\" description-key=\"CC_Media_URL_Desc\" of-type=\"SingleLine.URL\" usage=\"bound\" required=\"true\" hidden=\"true\" /><AvailableOn><web classic=\"disable\" /><phone /><tablet /></AvailableOn><resources><code path=\"MultimediaPlayerControl.js\" order=\"1\" /><resx path=\"strings/MultimediaPlayerControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.Multimedia.MultimediaPlayerControl",
+    "supportedplatform": null,
+    "version": "1.1.0"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Multimedia.MultimediaPlayerControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

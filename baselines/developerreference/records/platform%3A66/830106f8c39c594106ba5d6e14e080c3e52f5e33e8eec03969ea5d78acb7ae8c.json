@@ -1,0 +1,114 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "SubjectTreeConfigControl",
+        "ControlManifestVersion": "1.0.4",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.SubjectTreeConfig.SubjectTreeConfigControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_SubjectTreeConfig_Name",
+        "FullName": "MscrmControls.AppCommon.SubjectTreeConfig.SubjectTreeConfigControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.SubjectTreeConfig.SubjectTreeConfigControl",
+        "Namespace": "MscrmControls.AppCommon.SubjectTreeConfig",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "selectedSubject",
+              "Required": true,
+              "TypeGroup": "Lookups",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "FRECommon",
+              "LoadOrder": 2,
+              "Name": "FRECommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "FREShell",
+              "LoadOrder": 3,
+              "Name": "FREShell",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 4,
+              "Name": "MscrmControls.AppCommon.SubjectTreeConfig.SubjectTreeConfigControl_SubjectTreeConfigControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 5,
+              "Name": "css/SubjectTreeConfigControl.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "Locale/SubjectTreeConfigControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "Lookup.Simple",
+    "componentstate": 0,
+    "introducedversion": "9.0.1904.4006",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.SubjectTreeConfig\" constructor=\"SubjectTreeConfigControl\" version=\"1.0.4\" display-name-key=\"CC_SubjectTreeConfig_Name\" control-type=\"virtual\"><modes></modes><type-group name=\"Lookups\"><type>Lookup.Simple</type></type-group><property name=\"selectedSubject\" display-name-key=\"CC_selectedEntities\" description-key=\"CC_selectedEntities_Desc\" of-type-group=\"Lookups\" usage=\"bound\" required=\"true\" hidden=\"true\" /><resources><library name=\"mscommon\" version=\"&gt;=1.2.0\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.0\" /></library><library name=\"FRECommon\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/frecommon-lib.js\" version=\"1.0.0\" /></library><library name=\"FREShell\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"libs/FREShell.js\" version=\"1.0.0\" /></library><code path=\"SubjectTreeConfigControl.js\" order=\"4\" /><css path=\"css/SubjectTreeConfigControl.css\" order=\"5\" /><resx path=\"Locale/SubjectTreeConfigControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.SubjectTreeConfig.SubjectTreeConfigControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.4"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.SubjectTreeConfig.SubjectTreeConfigControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch",
+      "version": "9.0.1904.4006"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

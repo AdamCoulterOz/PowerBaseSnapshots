@@ -1,0 +1,152 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" savedqueryid=\"62984379-5ad3-eb11-b1b5-000d3afedc61\"><entity name=\"msdyn_kbattachment\"><attribute name=\"msdyn_filename\" /><order attribute=\"msdyn_filename\" descending=\"false\" /><attribute name=\"msdyn_filesize\" /><attribute name=\"msdyn_kbattachmentid\" /><attribute name=\"msdyn_filetype\" /></entity></fetch>",
+    "introducedversion": "1.0",
+    "iscustom": true,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "msdyn_filename",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "msdyn_kbattachment"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": false,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "KnowledgeManagement.KnowledgeArticleAttachmentService.DownloadActionInstance.setThumbnailImage",
+                "ImageProviderWebresource": "$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/KnowledgeArticleAttachment/KnowledgeArticleAttachment.js",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "msdyn_filename",
+                "RelatedEntityName": "",
+                "Width": 250
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "msdyn_filesize",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "msdyn_kbattachmentid",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "msdyn_filetype",
+                "RelatedEntityName": "",
+                "Width": 100
+              }
+            ],
+            "Id": "msdyn_kbattachmentid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "msdyn_kbattachment"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" jump=\"msdyn_filename\" select=\"1\" preview=\"0\" icon=\"1\" object=\"logical:msdyn_kbattachment\"><row name=\"result\" id=\"msdyn_kbattachmentid\"><cell name=\"msdyn_filename\" width=\"250\" imageproviderfunctionname=\"KnowledgeManagement.KnowledgeArticleAttachmentService.DownloadActionInstance.setThumbnailImage\" imageproviderwebresource=\"$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/KnowledgeArticleAttachment/KnowledgeArticleAttachment.js\" /><cell name=\"msdyn_filesize\" width=\"100\" /><cell name=\"msdyn_kbattachmentid\" ishidden=\"1\" width=\"100\" /><cell name=\"msdyn_filetype\" ishidden=\"1\" width=\"100\" /></row></grid>"
+    },
+    "name": "Attachment View for Knowledge Article",
+    "offlinesqlquery": "/*SelectStart*/select  \"msdyn_kbattachment0\".[msdyn_filename] as \"msdyn_filename\"\r , \"msdyn_kbattachment0\".[msdyn_filesize] as \"msdyn_filesize\"\r , \"msdyn_kbattachment0\".[msdyn_kbattachmentid] as \"msdyn_kbattachmentid\"\r , \"msdyn_kbattachment0\".[msdyn_filetype] as \"msdyn_filetype\"/*SelectEnd*/  /*FromStart*/from  msdyn_kbattachment as \"msdyn_kbattachment0\"/*FromEnd*/  /*OrderByStart*/order by  \"msdyn_kbattachment0\".[msdyn_filename] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "msdyn_kbattachment",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "62984379-5ad3-eb11-b1b5-000d3afedc61",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "msdyn_kbattachment",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "62984379-5ad3-eb11-b1b5-000d3afedc61"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}

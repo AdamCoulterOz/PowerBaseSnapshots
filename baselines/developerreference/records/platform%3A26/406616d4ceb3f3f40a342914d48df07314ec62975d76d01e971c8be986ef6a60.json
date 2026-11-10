@@ -1,0 +1,180 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": "Knowledge Article Images enabled for offline viewing from associated articles sub grid",
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" savedqueryid=\"f9736a16-6fda-4a5d-bc98-019ece2da7e7\"><entity name=\"msdyn_knowledgearticleimage\"><attribute name=\"msdyn_filename\" /><attribute name=\"msdyn_blobfile_name\" /><attribute name=\"msdyn_blobfile\" /><link-entity name=\"fileattachment\" from=\"fileattachmentid\" to=\"msdyn_blobfile\" link-type=\"outer\" alias=\"filefield1\"><attribute name=\"fileattachmentid\" /><attribute name=\"filename\" /><attribute name=\"regardingfieldname\" /></link-entity></entity></fetch>",
+    "introducedversion": "1.0",
+    "iscustom": true,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "msdyn_knowledgearticleimagename",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "msdyn_knowledgearticleimage"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "msdyn_filename",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "msdyn_blobfile_name",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "msdyn_blobfile",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "filefield1.fileattachmentid",
+                "RelatedEntityName": "fileattachment",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "filefield1.filename",
+                "RelatedEntityName": "fileattachment",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "filefield1.regardingfieldname",
+                "RelatedEntityName": "fileattachment",
+                "Width": 100
+              }
+            ],
+            "Id": "msdyn_knowledgearticleimageid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "msdyn_knowledgearticleimage"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" jump=\"msdyn_knowledgearticleimagename\" object=\"logical:msdyn_knowledgearticleimage\" select=\"1\" preview=\"1\" icon=\"1\"><row name=\"result\" id=\"msdyn_knowledgearticleimageid\"><cell name=\"msdyn_filename\" width=\"100\" /><cell name=\"msdyn_blobfile_name\" width=\"100\" /><cell name=\"msdyn_blobfile\" width=\"100\" /><cell name=\"filefield1.fileattachmentid\" width=\"100\" /><cell name=\"filefield1.filename\" width=\"100\" /><cell name=\"filefield1.regardingfieldname\" width=\"100\" /></row></grid>"
+    },
+    "name": "Knowledge Article Image Offline Support Query",
+    "offlinesqlquery": "/*SelectStart*/select  \"msdyn_knowledgearticleimage0\".[msdyn_filename] as \"msdyn_filename\"\r , \"msdyn_knowledgearticleimage0\".[msdyn_blobfile] as \"msdyn_blobfile\"\r , \"msdyn_knowledgearticleimage0\".[msdyn_knowledgearticleimageid] as \"msdyn_knowledgearticleimageid\"\r , \"msdyn_knowledgearticleimage0\".[msdyn_blobfile_name] as \"msdyn_blobfile_name\"\r , \"filefield1\".[fileattachmentid] as \"filefield1.fileattachmentid\"\r , \"filefield1\".[filename] as \"filefield1.filename\"\r , \"filefield1\".[regardingfieldname] as \"filefield1.regardingfieldname\"/*SelectEnd*/  /*FromStart*/from  msdyn_knowledgearticleimage as \"msdyn_knowledgearticleimage0\" \t/*JoinStart*/ left outer join FileAttachment as \"filefield1\" on (\"msdyn_knowledgearticleimage0\".[msdyn_blobfile]  =  \"filefield1\".[fileattachmentid])/*JoinEnd*//*FromEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "msdyn_knowledgearticleimage",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "f9736a16-6fda-4a5d-bc98-019ece2da7e7",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "msdyn_knowledgearticleimage",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "f9736a16-6fda-4a5d-bc98-019ece2da7e7"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}

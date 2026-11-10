@@ -1,0 +1,186 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": "Shows all the service level agreements created in unified interface",
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"false\" savedqueryid=\"2913e0ff-292e-ea11-a81c-000d3aa978b4\"><entity name=\"sla\"><attribute name=\"name\" /><attribute name=\"statecode\" /><attribute name=\"description\" /><attribute name=\"ownerid\" /><attribute name=\"objecttypecode\" /><attribute name=\"isdefault\" /><attribute name=\"createdon\" /><order attribute=\"name\" descending=\"false\" /><filter type=\"and\"><condition attribute=\"slaversion\" operator=\"eq\" value=\"100000001\" /></filter><attribute name=\"slaid\" /></entity></fetch>",
+    "introducedversion": "9.1.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "name",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "sla"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "name",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "description",
+                "RelatedEntityName": "",
+                "Width": 125
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "Object_Singular_Entity",
+                "Name": "objecttypecode",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "statecode",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "isdefault",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "ownerid",
+                "RelatedEntityName": "",
+                "Width": 100
+              }
+            ],
+            "Id": "slaid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "sla"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" jump=\"name\" select=\"1\" preview=\"1\" icon=\"1\" object=\"logical:sla\"><row name=\"result\" id=\"slaid\"><cell name=\"name\" width=\"150\" /><cell name=\"description\" width=\"125\" /><cell name=\"objecttypecode\" width=\"100\" LabelId=\"Object_Singular_Entity\" /><cell name=\"statecode\" width=\"100\" /><cell name=\"isdefault\" width=\"100\" /><cell name=\"ownerid\" width=\"100\" /></row></grid>"
+    },
+    "name": "All Service Level Agreements from Unified Interface",
+    "offlinesqlquery": "/*SelectStart*/select  \"sla0\".[name] as \"name\"\r , \"sla0\".[statecode] as \"statecode\"\r , \"sla0\".[description] as \"description\"\r , \"sla0\".[ownerid!id] as \"ownerid!id\"\r , \"sla0\".[ownerid!logicalname] as \"ownerid!logicalname\"\r , \"sla0\".[ownerid!name] as \"ownerid!name\"\r , \"sla0\".[objecttypecode] as \"objecttypecode\"\r , \"sla0\".[isdefault] as \"isdefault\"\r , \"sla0\".[createdon] as \"createdon\"\r , \"sla0\".[slaid] as \"slaid\"/*SelectEnd*/  /*FromStart*/from  SLA as \"sla0\"/*FromEnd*/  /*WhereStart*/where  (\"sla0\".[slaversion] = 100000001)/*WhereEnd*/  /*OrderByStart*/order by  \"sla0\".[name] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "sla",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "2913e0ff-292e-ea11-a81c-000d3aa978b4",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "sla",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "2913e0ff-292e-ea11-a81c-000d3aa978b4"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_ServiceLevelAgreement",
+      "version": "9.0.26094.1002"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

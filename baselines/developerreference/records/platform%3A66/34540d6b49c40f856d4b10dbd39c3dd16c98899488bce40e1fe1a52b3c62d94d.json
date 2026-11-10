@@ -1,0 +1,104 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "AccessCheckerControl",
+        "ControlManifestVersion": "1.0.209",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AccessChecker.AccessCheckerControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "AccessCheckerControl",
+        "FullName": "MscrmControls.AccessChecker.AccessCheckerControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.AccessChecker.AccessCheckerControl",
+        "Namespace": "MscrmControls.AccessChecker",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "WebAPI",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "objectId",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "entityName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "fluentui-react",
+              "LoadOrder": 1,
+              "Name": "fluentui-react",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.AccessChecker.AccessCheckerControl_AccessCheckerControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/AccessCheckerControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AccessChecker\" constructor=\"AccessCheckerControl\" version=\"1.0.209\" display-name-key=\"AccessCheckerControl\" description-key=\"AccessCheckerControl\" control-type=\"standard\"><modes></modes><!-- property node identifies a specific, configurable piece of data that the control expects from CDS --><property name=\"objectId\" display-name-key=\"objectIds_Display_Key\" description-key=\"objectIds_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" /><property name=\"entityName\" display-name-key=\"entityName_Display_Key\" description-key=\"entityName_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" /><resources><library name=\"fluentui-react\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/fluentui-react.js\" version=\"8.121.1\" /></library><code path=\"AccessCheckerControl.js\" order=\"3\" /><resx path=\"strings/AccessCheckerControl.1033.resx\" version=\"1.0.0\" /></resources><feature-usage><uses-feature name=\"WebAPI\" required=\"true\" /></feature-usage></control></manifest>",
+    "name": "MscrmControls.AccessChecker.AccessCheckerControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.209"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AccessChecker.AccessCheckerControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

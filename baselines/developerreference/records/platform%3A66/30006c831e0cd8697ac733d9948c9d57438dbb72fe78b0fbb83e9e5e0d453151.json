@@ -1,0 +1,194 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "SimpleLookupControl",
+        "ControlManifestVersion": "1.0.526",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.FieldControls.SimpleLookupControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "SimpleLookupControl",
+        "FullName": "MscrmControls.FieldControls.SimpleLookupControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.FieldControls.SimpleLookupControl",
+        "Namespace": "MscrmControls.FieldControls",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "TypeGroup": "lookups",
+              "Usage": 0
+            },
+            {
+              "DefaultValue": "0",
+              "Hidden": true,
+              "Name": "deviceSizeMode",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "0",
+              "Hidden": true,
+              "Name": "viewportSizeMode",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "0",
+              "Hidden": true,
+              "Name": "displayMode",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "3",
+              "Hidden": true,
+              "Name": "defaultFlyoutDirection",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "false",
+              "Hidden": true,
+              "Name": "hideButtonPanel",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "false",
+              "Hidden": true,
+              "Name": "hidePlaceholderText",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "false",
+              "Hidden": true,
+              "Name": "hideSelectedValues",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "false",
+              "Hidden": true,
+              "Name": "hideSelectedValue",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "false",
+              "Hidden": true,
+              "Name": "alwaysShowCreateButton",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "false",
+              "Hidden": true,
+              "Name": "alwaysShowSearchButton",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "placeholderText",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "false",
+              "Hidden": true,
+              "Name": "customStyle",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "0",
+              "Hidden": false,
+              "Name": "disableLookupClickthrough",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "fluentui-react",
+              "LoadOrder": 1,
+              "Name": "fluentui-react",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.FieldControls.SimpleLookupControl_SimpleLookupControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/SimpleLookupControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "Lookup.Customer,Lookup.Owner,Lookup.PartyList,Lookup.Regarding,Lookup.Simple",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.FieldControls\" constructor=\"SimpleLookupControl\" version=\"1.0.526\" control-type=\"virtual\" display-name-key=\"SimpleLookupControl\" description-key=\"CC_SimpleLookupControl_Desc\" hidden=\"false\"><modes><edit /><read /></modes><type-group name=\"lookups\"><type>Lookup.Customer</type><type>Lookup.Owner</type><type>Lookup.PartyList</type><type>Lookup.Regarding</type><type>Lookup.Simple</type></type-group><property name=\"value\" display-name-key=\"CC_SimpleLookupControl\" description-key=\"CC_SimpleLookupControl_Desc\" of-type-group=\"lookups\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"deviceSizeMode\" display-name-key=\"CC_Control_Size_Mode\" description-key=\"CC_ControlSizeMode_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"true\" default-value=\"0\"><value name=\"Fullmode\" display-name-key=\"CC_ControlSizeMode_Fullmode\" description-key=\"CC_ControlSizeMode_Fullmode_Desc\">0</value><value name=\"Sbreakpoint\" display-name-key=\"CC_ControlSizeMode_Sbreakpoint\" description-key=\"CC_ControlSizeMode_Sbreakpoin_Desc\">1</value><value name=\"Mbreakpoint\" display-name-key=\"CC_ControlSizeMode_Mbreakpoint\" description-key=\"CC_ControlSizeMode_Mbreakpoin_Desc\">2</value></property><property name=\"viewportSizeMode\" display-name-key=\"CC_Viewport_Size_Mode\" description-key=\"CC_ViewportSizeMode_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"true\" default-value=\"0\"><value name=\"Fullmode\" display-name-key=\"CC_ViewportSizeMode_Fullmode\" description-key=\"CC_ViewportSizeMode_Fullmode_Desc\">0</value><value name=\"Sbreakpoint\" display-name-key=\"CC_ViewportSizeMode_Sbreakpoint\" description-key=\"CC_ViewportSizeMode_Sbreakpoin_Desc\">1</value><value name=\"Mbreakpoint\" display-name-key=\"CC_ViewportSizeMode_Mbreakpoint\" description-key=\"CC_ViewportSizeMode_Mbreakpoin_Desc\">2</value></property><property name=\"displayMode\" display-name-key=\"CC_Display_Mode\" description-key=\"CC_Display_Mode_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"true\" default-value=\"0\"><value name=\"Normal\" display-name-key=\"CC_DisplayMode_Normal\" description-key=\"CC_DisplayMode_Normal_Desc\">0</value><value name=\"Inline\" display-name-key=\"CC_DisplayMode_Inline\" description-key=\"CC_DisplayMode_Inline_Desc\">1</value></property><property name=\"defaultFlyoutDirection\" display-name-key=\"CC_Default_Flyout_Direction\" description-key=\"CC_Default_Flyout_Direction_Desc\" usage=\"input\" of-type=\"Whole.None\" required=\"false\" hidden=\"true\" default-value=\"3\" /><property name=\"hideButtonPanel\" display-name-key=\"CC_Hide_Button_Panel\" description-key=\"CC_Hide_Button_Panel_Desc\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"true\" default-value=\"false\" /><property name=\"hidePlaceholderText\" display-name-key=\"CC_Hide_Placeholder_Text\" description-key=\"CC_Hide_Placeholder_Text_Desc\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"true\" default-value=\"false\" /><property name=\"hideSelectedValues\" display-name-key=\"CC_Hide_Selected_Values\" description-key=\"CC_Hide_Selected_Values_Desc\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"true\" default-value=\"false\" /><property name=\"hideSelectedValue\" display-name-key=\"CC_Hide_Selected_Value\" description-key=\"CC_Hide_Selected_Value_Desc\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"true\" default-value=\"false\" /><property name=\"alwaysShowCreateButton\" display-name-key=\"CC_Always_Show_Create_Button\" description-key=\"CC_Always_Show_Create_Button_Desc\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"true\" default-value=\"false\" /><property name=\"alwaysShowSearchButton\" display-name-key=\"CC_Always_Show_Search_Button\" description-key=\"CC_Always_Show_Search_Button_Desc\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"true\" default-value=\"false\" /><property name=\"placeholderText\" display-name-key=\"CC_Placeholder_Text\" description-key=\"CC_Placeholder_Text_Desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"customStyle\" display-name-key=\"CC_CustomStyle\" description-key=\"CC_Custom_Style_Desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" default-value=\"false\" /><property name=\"disableLookupClickthrough\" display-name-key=\"CC_Disable_Lookup_Clickthrough\" description-key=\"CC_Disable_Lookup_Clickthrough_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\" default-value=\"0\"><value name=\"false\" display-name-key=\"CC_Disable_Lookup_Clickthrough_false\" description-key=\"CC_Disable_Lookup_Clickthrough_false_Desc\">0</value><value name=\"true\" display-name-key=\"CC_Disable_Lookup_Clickthrough_true\" description-key=\"CC_Disable_Lookup_Clickthrough_true_Desc\">1</value></property><resources><library name=\"fluentui-react\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/fluentui-react.js\" version=\"8.121.1\" /></library><code path=\"SimpleLookupControl.js\" order=\"2\" /><resx path=\"strings/SimpleLookupControl.1033.resx\" version=\"1.0.1\" /></resources></control></manifest>",
+    "name": "MscrmControls.FieldControls.SimpleLookupControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.526"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.FieldControls.SimpleLookupControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

@@ -1,0 +1,109 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.18",
+        "Children": [],
+        "ConstructorName": "FileControl",
+        "ControlManifestVersion": "1.1.50",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.FieldControls.FileControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_FileControl_Name",
+        "FullName": "MscrmControls.FieldControls.FileControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.FieldControls.FileControl",
+        "Namespace": "MscrmControls.FieldControls",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Device.pickFile",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "Type": "File",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "react_16_14_0",
+              "LoadOrder": 0,
+              "Name": "react_16_14_0",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_9_4_0",
+              "LoadOrder": 0,
+              "Name": "fluent_9_4_0",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.FieldControls.FileControl_FileControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/FileControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "File",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.FieldControls\" constructor=\"FileControl\" version=\"1.1.50\" display-name-key=\"CC_FileControl_Name\" description-key=\"CC_FileControl_Desc\" preview-image=\"img/preview.png\" control-type=\"virtual\" api-version=\"1.3.18\"><property name=\"value\" display-name-key=\"CC_Field\" description-key=\"CC_Field_Desc\" of-type=\"File\" usage=\"bound\" required=\"true\" /><resources><platform-library name=\"React\" version=\"16.8.6\" /><platform-library name=\"Fluent\" version=\"9.4.0\" /><resx path=\"strings/FileControl.1033.resx\" version=\"1.0.0\" /><code path=\"FileControl.js\" order=\"1\" /></resources><feature-usage><uses-feature name=\"Device.pickFile\" required=\"true\" /><uses-feature name=\"Utility\" required=\"true\" /></feature-usage><built-by name=\"pac\" version=\"1.49.1-alpha-25090500\" /></control></manifest>",
+    "name": "MscrmControls.FieldControls.FileControl",
+    "supportedplatform": "(Model)",
+    "version": "1.1.50"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.FieldControls.FileControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

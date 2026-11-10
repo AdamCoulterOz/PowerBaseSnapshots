@@ -1,0 +1,46 @@
+{
+  "configuration": {
+    "componentstate": 0,
+    "importsequencenumber": null,
+    "introducedversion": "202608.1.4.1",
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "msdyn_aitemplateid": "7a6b3272-e091-4179-8e7b-3b748fb18c61",
+    "msdyn_databinding": "\n        {\n          \"SchemaVersion\": 2,\n          \"Input\": {\n            \"Cardinality\": \"OneToMany\",\n            \"SchemaName\": \"msdyn_aibdatasetrecord\",\n            \"SpecificationName\": \"record\",\n              \"EmbeddedObjects\": [\n                {\n                  \"SpecificationName\": \"sentence\",\n                  \"SchemaName\": \"msdyn_data\",\n                  \"IsCollection\": false,\n                  \"Attributes\": [\n                    {\n                      \"SpecificationName\": \"sentence\",\n                      \"SchemaName\": \"sentence\"\n                    }\n                  ],\n                  \"EmbeddedObjects\": [\n                    {\n                      \"SpecificationName\": \"entities\",\n                      \"SchemaName\": \"entities\",\n                      \"IsCollection\": true,\n                      \"Attributes\": [\n                        {\n                          \"SpecificationName\": \"type\",\n                          \"SchemaName\": \"type\"\n                        },\n                        {\n                          \"SpecificationName\": \"startIndex\",\n                          \"SchemaName\": \"startIndex\"\n                        },\n                        {\n                          \"SpecificationName\": \"length\",\n                          \"SchemaName\": \"length\"\n                        }\n                      ]\n                    }\n                  ]\n                }\n              ]\n            }\n          }\n        }\n      ",
+    "msdyn_defaultrunschedulingoptions": null,
+    "msdyn_istrainable": true,
+    "msdyn_modelaction": "[{\n  \"apiName\": \"Microsoft.Dynamics.CRM.msdyn_PrettyPredict\",\n  \"actionName\": \"Predict\",\n  \"dataSpecification\": {\n    \"schemaVersion\": 2,\n    \"input\": {\n      \"attributes\": [\n        {\n          \"specificationName\": \"text\",\n          \"displayName\": \"Text\",\n          \"requiredLevel\": \"ApplicationRequired\",\n          \"dataType\": \"String\"\n        },\n        {\n          \"specificationName\": \"language\",\n          \"displayName\": \"Language\",\n          \"requiredLevel\": \"Recommended\",\n          \"dataType\": \"String\"\n        }\n      ]\n    },\n    \"output\": {\n      \"displayName\": \"\",\n      \"embeddedObjects\": [\n        {\n          \"specificationName\": \"Entities\",\n          \"displayName\": \"Entities\",\n          \"isCollection\": true,\n          \"attributes\": [\n            {\n              \"specificationName\": \"Type\",\n              \"displayName\": \"\",\n              \"dataType\": \"String\"\n            },\n            {\n              \"specificationName\": \"Value\",\n              \"displayName\": \"\",\n              \"dataType\": \"String\"\n            },\n            {\n              \"specificationName\": \"StartIndex\",\n              \"displayName\": \"\",\n              \"dataType\": \"Integer\"\n            },\n            {\n              \"specificationName\": \"Length\",\n              \"displayName\": \"\",\n              \"dataType\": \"Integer\"\n            },\n            {\n              \"specificationName\": \"Confidence\",\n              \"displayName\": \"\",\n              \"dataType\": \"Double\"\n            }\n          ]\n        }\n      ]\n    }\n  }\n}]",
+    "msdyn_resourceinfo": "{\"ResourceType\":\"CognitiveService\",\"CognitiveInfo\":{\"CognitiveType\":\"EntityExtraction\"}, \"ModelStorageType\":\"Value\"}",
+    "msdyn_runconfigschema": null,
+    "msdyn_rundataspecification": "\n        {\n          \"SchemaVersion\": 2,\n          \"Input\": {\n            \"Attributes\": [\n              {\n                \"SpecificationName\": \"text\",\n                \"DisplayName\": \"Text\",\n                \"RequiredLevel\": \"ApplicationRequired\",\n                \"DataType\": \"String\"\n              },\n              {\n                \"SpecificationName\": \"language\",\n                \"DisplayName\": \"Language\",\n                \"RequiredLevel\": \"ApplicationRequired\",\n                \"DataType\": \"String\"\n              }\n            ]\n          },\n          \"Output\": {\n            \"DisplayName\": \"Response\",\n            \"EmbeddedObjects\": [\n              {\n                \"SpecificationName\": \"result\",\n                \"DisplayName\": \"result\",\n                \"IsCollection\": false,\n                \"EmbeddedObjects\": [\n                  {\n                    \"SpecificationName\": \"entities\",\n                    \"DisplayName\": \"Entities\",\n                    \"IsCollection\": true,\n                    \"Attributes\": [\n                      {\n                        \"SpecificationName\": \"type\",\n                        \"DataType\": \"String\"\n                      },\n                      {\n                        \"SpecificationName\": \"value\",\n                        \"DataType\": \"String\"\n                      },\n                      {\n                        \"SpecificationName\": \"startIndex\",\n                        \"DataType\": \"Integer\"\n                      },\n                      {\n                        \"SpecificationName\": \"length\",\n                        \"DataType\": \"Integer\"\n                      },\n                      {\n                        \"SpecificationName\": \"score\",\n                        \"DataType\": \"Double\"\n                      }\n                    ]\n                  }\n                ]\n              }\n            ]\n          }\n        }\n      ",
+    "msdyn_templateversion": 1,
+    "msdyn_trainingconfigschema": null,
+    "msdyn_trainingdataspecification": "\n        {\n          \"SchemaVersion\": 2,\n          \"Input\": {\n            \"SpecificationName\": \"record\",\n                \"EmbeddedObjects\": [\n                    {\n                      \"Attributes\": [\n                        {\n                          \"SpecificationName\": \"sentence\",\n                          \"DataType\": \"String\"\n                        }\n                      ],\n                      \"EmbeddedObjects\": [\n                        {\n                          \"SpecificationName\": \"entities\",\n                          \"IsCollection\": true,\n                          \"Attributes\": [\n                            {\n                              \"SpecificationName\": \"type\",\n                              \"DataType\": \"String\"\n                            },\n                            {\n                              \"SpecificationName\": \"startIndex\",\n                              \"DataType\": \"Integer\"\n                            },\n                            {\n                              \"SpecificationName\": \"length\",\n                              \"DataType\": \"Integer\"\n                            }\n                          ]\n                        }\n                      ]\n                  }\n              ]\n           }\n        }\n      ",
+    "msdyn_uniquename": "EntityExtraction",
+    "msdyn_uxconfiguration": null,
+    "overriddencreatedon": null,
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "portability": "not-established",
+    "value": "7a6b3272-e091-4179-8e7b-3b748fb18c61"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_AISolutionDefaultTemplates",
+      "version": "202608.1.4.1"
+    }
+  ],
+  "typeIdentity": "platform:400"
+}

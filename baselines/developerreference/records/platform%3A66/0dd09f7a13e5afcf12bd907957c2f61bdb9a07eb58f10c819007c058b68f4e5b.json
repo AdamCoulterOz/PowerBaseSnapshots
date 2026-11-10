@@ -1,0 +1,146 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "AttachmentControl",
+        "ControlManifestVersion": "1.1.7",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AttachmentControl.AttachmentControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_AttachmentControl",
+        "FullName": "MscrmControls.AttachmentControl.AttachmentControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AttachmentControl.AttachmentControl",
+        "Namespace": "MscrmControls.AttachmentControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "fileName",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "fileType",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "fileSize",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "mode",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "content",
+              "Required": true,
+              "Type": "Multiple",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "attachmentId",
+              "Required": true,
+              "Type": "Multiple",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "entityName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "showRemoveIcon",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 2,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.AttachmentControl.AttachmentControl_AttachmentControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/AttachmentControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AttachmentControl\" constructor=\"AttachmentControl\" version=\"1.1.7\" display-name-key=\"CC_AttachmentControl\" control-type=\"virtual\" hidden=\"true\"><modes><container /></modes><property name=\"fileName\" display-name-key=\"AttachmentControl_fileName\" description-key=\"AttachmentControl_fileName_desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" hidden=\"false\" /><property name=\"fileType\" display-name-key=\"AttachmentControl_fileType\" description-key=\"AttachmentControl_fileType_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"fileSize\" display-name-key=\"AttachmentControl_fileSize\" description-key=\"AttachmentControl_fileSize_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"mode\" display-name-key=\"AttachmentControl_mode\" description-key=\"AttachmentControl_mode_desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"content\" display-name-key=\"AttachmentControl_content\" description-key=\"AttachmentControl_content_desc\" of-type=\"Multiple\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"attachmentId\" display-name-key=\"AttachmentControl_attachmentId\" description-key=\"AttachmentControl_attachmentId_desc\" of-type=\"Multiple\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"entityName\" display-name-key=\"AttachmentControl_entityName\" description-key=\"AttachmentControl_entityName_desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"true\" /><property name=\"showRemoveIcon\" display-name-key=\"AttachmentControl_showRemoveIcon\" description-key=\"AttachmentControl_showRemoveIcon_desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"true\" /><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><library name=\"mscommon\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><code path=\"AttachmentControl.js\" order=\"3\" /><resx path=\"strings/AttachmentControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.AttachmentControl.AttachmentControl",
+    "supportedplatform": null,
+    "version": "1.1.7"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AttachmentControl.AttachmentControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

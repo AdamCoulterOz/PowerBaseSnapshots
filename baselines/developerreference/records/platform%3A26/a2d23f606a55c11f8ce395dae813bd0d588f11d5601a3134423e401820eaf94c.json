@@ -1,0 +1,194 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" savedqueryid=\"e88ca999-0b16-4ae9-b6a9-9edc840d42d8\"><entity name=\"systemuser\"><attribute name=\"fullname\" /><attribute name=\"address1_telephone1\" /><attribute name=\"businessunitid\" /><attribute name=\"title\" /><attribute name=\"internalemailaddress\" /><attribute name=\"systemuserid\" /><attribute name=\"address1_fax\" /><attribute name=\"positionid\" /><order attribute=\"fullname\" descending=\"false\" /><filter type=\"and\"><condition attribute=\"accessmode\" operator=\"ne\" value=\"3\" /><condition attribute=\"isdisabled\" value=\"0\" operator=\"eq\" /><condition attribute=\"accessmode\" operator=\"ne\" value=\"5\" /><condition attribute=\"systemmanagedusertype\" operator=\"eq\" value=\"0\" /></filter></entity></fetch>",
+    "introducedversion": "5.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "fullname",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "systemuser"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": false,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "fullname",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "positionid",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "address1_telephone1",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "businessunitid",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "title",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "internalemailaddress",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "address1_fax",
+                "RelatedEntityName": "",
+                "Width": 100
+              }
+            ],
+            "Id": "systemuserid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "systemuser"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:systemuser\" jump=\"fullname\" select=\"1\" preview=\"0\" icon=\"1\"><row name=\"result\" id=\"systemuserid\"><cell name=\"fullname\" width=\"150\" /><cell name=\"positionid\" width=\"100\" /><cell name=\"address1_telephone1\" width=\"100\" /><cell name=\"businessunitid\" width=\"150\" /><cell name=\"title\" width=\"100\" /><cell name=\"internalemailaddress\" width=\"200\" /><cell name=\"address1_fax\" ishidden=\"1\" width=\"100\" /></row></grid>"
+    },
+    "name": "User Lookup View",
+    "offlinesqlquery": "/*SelectStart*/select  \"systemuser0\".[fullname] as \"fullname\"\r , \"systemuser0\".[address1_telephone1] as \"address1_telephone1\"\r , \"systemuser0\".[businessunitid!id] as \"businessunitid!id\"\r , \"systemuser0\".[businessunitid!logicalname] as \"businessunitid!logicalname\"\r , \"systemuser0\".[businessunitid!name] as \"businessunitid!name\"\r , \"systemuser0\".[title] as \"title\"\r , \"systemuser0\".[internalemailaddress] as \"internalemailaddress\"\r , \"systemuser0\".[systemuserid] as \"systemuserid\"\r , \"systemuser0\".[address1_fax] as \"address1_fax\"\r , \"systemuser0\".[positionid!id] as \"positionid!id\"\r , \"systemuser0\".[positionid!logicalname] as \"positionid!logicalname\"\r , \"systemuser0\".[positionid!name] as \"positionid!name\"/*SelectEnd*/  /*FromStart*/from  SystemUser as \"systemuser0\"/*FromEnd*/  /*WhereStart*/where  ((\"systemuser0\".[accessmode] != 3 or \"systemuser0\".[accessmode] is null) and \"systemuser0\".[isdisabled] = 0 and (\"systemuser0\".[accessmode] != 5 or \"systemuser0\".[accessmode] is null) and \"systemuser0\".[systemmanagedusertype] = 0)/*WhereEnd*/  /*OrderByStart*/order by  \"systemuser0\".[fullname] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 64,
+    "returnedtypecode": "systemuser",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "e88ca999-0b16-4ae9-b6a9-9edc840d42d8",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "systemuser",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "e88ca999-0b16-4ae9-b6a9-9edc840d42d8"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}

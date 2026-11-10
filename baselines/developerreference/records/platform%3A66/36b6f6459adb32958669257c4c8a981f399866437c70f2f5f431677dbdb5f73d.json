@@ -1,0 +1,133 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "BoundDashboardControl",
+        "ControlManifestVersion": "1.26092.1",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Containers.BoundDashboardControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_DashboardControl_Name",
+        "FullName": "MscrmControls.Containers.BoundDashboardControl",
+        "IsVirtual": true,
+        "MappingFileName": "design-maps/map.*.xml",
+        "Name": "MscrmControls.Containers.BoundDashboardControl",
+        "Namespace": "MscrmControls.Containers",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "Type": "Dashboard",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "DateRangeCondition",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "DateRangeTimeFrame",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "ForbiddenControlIdList",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "AppliedFilter",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 2,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "DashboardCore",
+              "LoadOrder": 2,
+              "Name": "DashboardCore",
+              "Type": 0
+            },
+            {
+              "LibraryName": "DateRangeFilter",
+              "LoadOrder": 2,
+              "Name": "DateRangeFilter",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.Containers.BoundDashboardControl_BoundDashboardControl.js",
+              "Type": 4
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Containers\" constructor=\"BoundDashboardControl\" version=\"1.26092.1\" display-name-key=\"CC_DashboardControl_Name\" control-type=\"virtual\" hidden=\"true\" design-mapping-file=\"design-maps/map.*.xml\"><modes></modes><property name=\"value\" required=\"true\" display-name-key=\"CC_DashboardControl_Value\" description-key=\"CC_DashboardControl_Value_Desc\" usage=\"bound\" of-type=\"Dashboard\" /><property name=\"DateRangeCondition\" display-name-key=\"CC_DashboardControl_DateRangeCondition\" description-key=\"DateRangeCondition\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"DateRangeTimeFrame\" display-name-key=\"CC_DashboardControl_DateRangeTimeFrame\" description-key=\"DateRangeTimeFrame\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"ForbiddenControlIdList\" display-name-key=\"CC_DashboardControl_ForbiddenControlIdList\" description-key=\"ForbiddenControlIdList\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"AppliedFilter\" display-name-key=\"CC_DashboardControl_AppliedFilter\" description-key=\"AppliedFilter\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.8\" /></library><library name=\"jquery\" version=\"&gt;=2\" order=\"2\"><packaged_library path=\"libs/jquery-3.6.0.js\" version=\"3.6.0\" /></library><library name=\"DashboardCore\" version=\"&gt;=2.0.78\" order=\"2\"><packaged_library path=\"libs/DashboardControl.js\" version=\"2.0.78\" /></library><library name=\"DateRangeFilter\" version=\"&gt;=1.0.66\" order=\"2\"><packaged_library path=\"libs/DateRangeFilterControl.js\" version=\"1.0.66\" /></library><code path=\"BoundDashboardControl.js\" order=\"2\" /></resources></control></manifest>",
+    "name": "MscrmControls.Containers.BoundDashboardControl",
+    "supportedplatform": "(Model)",
+    "version": "1.26092.1"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Containers.BoundDashboardControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

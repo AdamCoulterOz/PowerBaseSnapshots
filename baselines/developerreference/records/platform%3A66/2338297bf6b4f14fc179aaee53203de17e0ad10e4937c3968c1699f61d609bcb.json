@@ -1,0 +1,150 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.18",
+        "Children": [],
+        "ConstructorName": "ShareLinkControl",
+        "ControlManifestVersion": "0.0.57",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Collabration.ShareLinkControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "ShareLinkControl",
+        "FullName": "MscrmControls.Collabration.ShareLinkControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.Collabration.ShareLinkControl",
+        "Namespace": "MscrmControls.Collabration",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "entityName",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "pageType",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "shareAccess",
+              "Required": true,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "entityId",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "accessType",
+              "Required": true,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "primaryAttributeValue",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "UrlToCopy",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "fluentui-react",
+              "LoadOrder": 1,
+              "Name": "fluentui-react",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.Collabration.ShareLinkControl_bundle.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "css/ShareLinkControl.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/ShareLinkControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Collabration\" constructor=\"ShareLinkControl\" version=\"0.0.57\" display-name-key=\"ShareLinkControl\" description-key=\"ShareLinkControl_description\" control-type=\"virtual\" hidden=\"true\" api-version=\"1.3.18\"><external-service-usage enabled=\"false\" /><property name=\"entityName\" display-name-key=\"EntityName\" description-key=\"EntityName_description\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"true\" /><property name=\"pageType\" display-name-key=\"pageType\" description-key=\"pageType_description\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"true\" /><property name=\"shareAccess\" display-name-key=\"shareAccess\" description-key=\"shareAccess_description\" of-type=\"TwoOptions\" usage=\"input\" required=\"true\" /><property name=\"entityId\" display-name-key=\"entityId\" description-key=\"entityId_description\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"true\" /><property name=\"accessType\" display-name-key=\"accessType\" description-key=\"accessType_description\" of-type=\"Enum\" usage=\"input\" required=\"true\"><value name=\"anyone\" display-name-key=\"anyone_Display_Key\">1</value><value name=\"peopleInOrg\" display-name-key=\"peopleInOrg_Display_Key\" default=\"true\">2</value><value name=\"peopleWithAccess\" display-name-key=\"peopleWithAccess_Display_Key\" default=\"true\">3</value><value name=\"specificPeople\" display-name-key=\"specificPeople_Display_Key\" default=\"true\">4</value></property><property name=\"primaryAttributeValue\" display-name-key=\"primaryAttributeValue\" description-key=\"primaryAttributeValue_description\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" /><property name=\"UrlToCopy\" display-name-key=\"UrlToCopy\" description-key=\"UrlToCopy_description\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" /><resources><library name=\"fluentui-react\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"fluentui-react.js\" version=\"8.121.1\" /></library><code path=\"bundle.js\" order=\"2\" /><css path=\"css/ShareLinkControl.css\" order=\"3\" /><resx path=\"strings/ShareLinkControl.1033.resx\" version=\"1.0.0\" /></resources><feature-usage><uses-feature name=\"Utility\" required=\"true\" /><uses-feature name=\"WebAPI\" required=\"true\" /></feature-usage><built-by name=\"pac\" version=\"1.49.1-alpha-25090500\" /></control></manifest>",
+    "name": "MscrmControls.Collabration.ShareLinkControl",
+    "supportedplatform": "(Model)",
+    "version": "0.0.57"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Collabration.ShareLinkControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

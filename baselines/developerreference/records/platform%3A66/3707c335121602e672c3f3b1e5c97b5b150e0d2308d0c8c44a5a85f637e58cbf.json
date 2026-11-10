@@ -1,0 +1,108 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "KbEditorControl",
+        "ControlManifestVersion": "1.26094.3006",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.KbEditorControl.KbEditorControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "KbEditorControl",
+        "FullName": "MscrmControls.KbEditorControl.KbEditorControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.KbEditorControl.KbEditorControl",
+        "Namespace": "MscrmControls.KbEditorControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "TypeGroup": "strings",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "KbCommonUtils",
+              "LoadOrder": 2,
+              "Name": "KbCommonUtils",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.KbEditorControl.KbEditorControl_libs/CommonBundle.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.KbEditorControl.KbEditorControl_KbEditorControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 4,
+              "Name": "libs/Preview/browserPreivewFrame.html",
+              "Type": 3
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.KbEditorControl\" constructor=\"KbEditorControl\" hidden=\"true\" version=\"1.26094.3006\" display-name-key=\"KbEditorControl\" description-key=\"KbEditorControl\"><modes><read /><edit /></modes><type-group name=\"strings\"><type>SingleLine.Text</type><type>SingleLine.TextArea</type><type>Multiple</type></type-group><property name=\"value\" display-name-key=\"CC_Field\" description-key=\"CC_Field_Desc\" of-type-group=\"strings\" usage=\"bound\" required=\"true\" hidden=\"true\" /><AvailableOn><web classic=\"enable\" /><phone /><tablet /></AvailableOn><resources><code path=\"libs/CommonBundle.js\" order=\"1\" /><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.22\" /></library><library name=\"KbCommonUtils\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/KbCommonUtils.js\" version=\"1.26094.3006\" /></library><code path=\"KbEditorControl.js\" order=\"3\" /><html path=\"libs/Preview/browserPreivewFrame.html\" order=\"4\" /></resources></control></manifest>",
+    "name": "MscrmControls.KbEditorControl.KbEditorControl",
+    "supportedplatform": "(Model)",
+    "version": "1.26094.3006"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.KbEditorControl.KbEditorControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    },
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdynce_KnowledgeManagementFeatures",
+      "version": "9.0.26094.3006"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

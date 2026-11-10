@@ -1,0 +1,124 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ConditionBuilderControl",
+        "ControlManifestVersion": "1.0.53",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.ConditionBuilder.ConditionBuilderControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_ConditionBuilderControl_Name",
+        "FullName": "MscrmControls.ConditionBuilder.ConditionBuilderControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.ConditionBuilder.ConditionBuilderControl",
+        "Namespace": "MscrmControls.ConditionBuilder",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "entitylogicalname",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "fetchxml",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "depthLimit",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "isvalid",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "validationerrormessage",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "cds-expression-builder",
+              "LoadOrder": 1,
+              "Name": "cds-expression-builder",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.ConditionBuilder.ConditionBuilderControl_ConditionBuilder.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "css/ConditionBuilderControl.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/ConditionBuilder.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.ConditionBuilder\" constructor=\"ConditionBuilderControl\" version=\"1.0.53\" display-name-key=\"CC_ConditionBuilderControl_Name\" control-type=\"standard\" hidden=\"true\"><modes></modes><property name=\"entitylogicalname\" display-name-key=\"ConditionBuilder_entitylogicalname\" description-key=\"ConditionBuilder_entitylogicalname_desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"true\" hidden=\"true\" /><property name=\"fetchxml\" display-name-key=\"ConditionBuilder_fetchxml\" description-key=\"ConditionBuilder_fetchxml_desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"depthLimit\" display-name-key=\"ConditionBuilder_depthLimit\" description-key=\"ConditionBuilder_depthLimit_desc\" of-type=\"Whole.None\" usage=\"bound\" required=\"false\" hidden=\"true\" /><property name=\"isvalid\" display-name-key=\"ConditionBuilder_isvalid\" description-key=\"ConditionBuilder_isvalid_desc\" of-type=\"TwoOptions\" usage=\"bound\" required=\"false\" hidden=\"true\" /><property name=\"validationerrormessage\" display-name-key=\"ConditionBuilder_validationerrormessage\" description-key=\"ConditionBuilder_validationerrormessage_desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" hidden=\"true\" /><resources><css path=\"css/ConditionBuilderControl.css\" order=\"1\" /><library name=\"cds-expression-builder\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/cds-expression-builder.js\" version=\"1.0.226\" /></library><code path=\"ConditionBuilder.js\" order=\"2\" /><resx path=\"strings/ConditionBuilder.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.ConditionBuilder.ConditionBuilderControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.53"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.ConditionBuilder.ConditionBuilderControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

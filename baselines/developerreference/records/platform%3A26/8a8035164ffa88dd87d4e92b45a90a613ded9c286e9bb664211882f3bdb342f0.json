@@ -1,0 +1,186 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": "",
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"false\" savedqueryid=\"f957cd62-6b44-4675-99d8-052f319eb314\"><entity name=\"feedback\"><attribute name=\"statuscode\" /><attribute name=\"source\" /><attribute name=\"rating\" /><attribute name=\"ownerid\" /><attribute name=\"modifiedon\" /><attribute name=\"comments\" /><order attribute=\"rating\" descending=\"false\" /><filter type=\"and\"><condition attribute=\"comments\" operator=\"not-null\" /><condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /></filter><attribute name=\"feedbackid\" /></entity></fetch>",
+    "introducedversion": "1.0.0.0",
+    "iscustom": true,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "title",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "feedback"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "rating",
+                "RelatedEntityName": "",
+                "Width": 80
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "comments",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "source",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "ownerid",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "statuscode",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "modifiedon",
+                "RelatedEntityName": "",
+                "Width": 150
+              }
+            ],
+            "Id": "feedbackid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "feedback"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" jump=\"title\" select=\"1\" preview=\"1\" icon=\"1\" object=\"logical:feedback\"><row name=\"result\" id=\"feedbackid\"><cell name=\"rating\" width=\"80\" /><cell name=\"comments\" width=\"200\" /><cell name=\"source\" width=\"150\" /><cell name=\"ownerid\" width=\"150\" /><cell name=\"statuscode\" width=\"150\" /><cell name=\"modifiedon\" width=\"150\" /></row></grid>"
+    },
+    "name": "Comments",
+    "offlinesqlquery": "/*SelectStart*/select  \"feedback0\".[statuscode] as \"statuscode\"\r , \"feedback0\".[source] as \"source\"\r , \"feedback0\".[rating] as \"rating\"\r , \"feedback0\".[ownerid!id] as \"ownerid!id\"\r , \"feedback0\".[ownerid!logicalname] as \"ownerid!logicalname\"\r , \"feedback0\".[ownerid!name] as \"ownerid!name\"\r , \"feedback0\".[modifiedon] as \"modifiedon\"\r , \"feedback0\".[comments] as \"comments\"\r , \"feedback0\".[feedbackid] as \"feedbackid\"/*SelectEnd*/  /*FromStart*/from  Feedback as \"feedback0\"/*FromEnd*/  /*WhereStart*/where  (\"feedback0\".[comments] is not null and \"feedback0\".[statecode] = 0)/*WhereEnd*/  /*OrderByStart*/order by  \"feedback0\".[rating] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "feedback",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "f957cd62-6b44-4675-99d8-052f319eb314",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "feedback",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "f957cd62-6b44-4675-99d8-052f319eb314"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "adxstudio",
+      "uniqueName": "PowerPages_RuntimeCore",
+      "version": "1.0.2609.1"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

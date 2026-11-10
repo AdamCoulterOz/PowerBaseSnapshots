@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": null,
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 9,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnEventActivity\r\n  id: main\r\n  eventName: Microsoft.PowerApps.Copilot.GenerateChartCard\r\n\r\n  actions:\r\n    - kind: SetVariable\r\n      id: setVariable_mnO8IW\r\n      variable: Topic.encodedFetchXML\r\n      value: =Text(System.Activity.Value.encodedFetchXML)\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_1NM17O\r\n      variable: Topic.dvEntity\r\n      value: =Text(System.Activity.Value.dvEntitySetName)\r\n\r\n    - kind: ConditionGroup\r\n      id: conditionGroup_nwnCNh\r\n      conditions:\r\n        - id: conditionItem_59Hplg\r\n          condition: =!IsBlank(Topic.dvEntity) && !IsBlank(Topic.encodedFetchXML)\r\n\r\n      elseActions:\r\n        - kind: SendActivity\r\n          id: sendActivity_gsKBBM\r\n          activity:\r\n            kind: EventActivity\r\n            value: =Concatenate(\"Either FetchXML or DV entity set name is empty\", \"FetchXML:\", Topic.encodedFetchXML, \"DV Entity set name:\", Topic.dvEntity)\r\n            name: MS.PA.GenerateChartCard\r\n\r\n        - kind: LogCustomTelemetryEvent\r\n          id: YOFfRj\r\n          eventName: GenerateChartCard.PageContextError\r\n          properties: =Concatenate(\"Either FetchXML or DV entity set name is empty\", \"FetchXML:\", Topic.encodedFetchXML, \"DV Entity set name:\", Topic.dvEntity)\r\n\r\n        - kind: EndDialog\r\n          id: r4FRHW\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_IHTYas\r\n      variable: Topic.correlationId\r\n      value: =If(!IsBlank(System.Activity.ChannelData.correlationId), Text(System.Activity.ChannelData.correlationId), Text(GUID()))\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_CAdKNQ\r\n      variable: Topic.clientRequestId\r\n      value: =If(!IsBlank(System.Activity.ChannelData.clientRequestId), Text(System.Activity.ChannelData.clientRequestId), Text(GUID()))\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_Hs8YaN\r\n      variable: Topic.clientSessionId\r\n      value: =If(!IsBlank(System.Activity.ChannelData.clientSessionId), Text(System.Activity.ChannelData.clientSessionId), Text(GUID()))\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_n8I370\r\n      variable: Topic.requestFetchXMLToTSql\r\n      value: =Concatenate(\"https://dataverse/api/data/v9.2/FetchXMLToSQL(FetchXml=@p1)?@p1=\", \"%27\", Topic.encodedFetchXML, \"%27\")\r\n\r\n    - kind: HttpRequestAction\r\n      id: oG7rXI\r\n      method: Get\r\n      url: =Topic.requestFetchXMLToTSql\r\n      headers:\r\n        X-Ms-Client-Request-Id: =Topic.clientRequestId\r\n        X-Ms-Client-Session-Id: =Topic.clientSessionId\r\n        X-Ms-Correlation-Id: =Topic.correlationId\r\n\r\n      errorHandling:\r\n        kind: ContinueOnErrorBehavior\r\n        statusCode: Topic.callStatusCode\r\n        errorResponseBody: Topic.callError\r\n\r\n      response: Topic.FetchXMLToSqlResponse\r\n      responseSchema: Any\r\n\r\n    - kind: ConditionGroup\r\n      id: conditionGroup_EmmEE3\r\n      conditions:\r\n        - id: conditionItem_doLuyS\r\n          condition: =!IsBlank(Topic.FetchXMLToSqlResponse)\r\n\r\n      elseActions:\r\n        - kind: LogCustomTelemetryEvent\r\n          id: e82kEb\r\n          eventName: GenerateChartCard.DataverseFetcXMLToSQLError\r\n          properties: =Concatenate(\"Error converting fetchXML to SQL\", \"Error Code:\", Topic.callStatusCode, \"ErrorResponse\", Topic.callError)\r\n\r\n        - kind: EndDialog\r\n          id: fxkEEx\r\n\r\n    - kind: ParseValue\r\n      id: vrgaIZ\r\n      variable: Topic.ParsedFetchXMLToSQLResponse\r\n      valueType:\r\n        kind: Record\r\n        properties:\r\n          Response: String\r\n\r\n      value: =Topic.FetchXMLToSqlResponse\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_ebKYcT\r\n      variable: Topic.TSql\r\n      value: =Topic.ParsedFetchXMLToSQLResponse.Response\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_Y8nb6o\r\n      variable: Topic.RequestSampleData\r\n      value: =Concatenate(\"https://dataverse/api/data/v9.2/\",Topic.dvEntity,\"?fetchXml=\", Topic.encodedFetchXML)\r\n\r\n    - kind: HttpRequestAction\r\n      id: 3AbFhu\r\n      url: =Topic.RequestSampleData\r\n      headers:\r\n        X-Ms-Client-Request-Id: =Topic.clientRequestId\r\n        X-Ms-Client-Session-Id: =Topic.clientSessionId\r\n        X-Ms-Correlation-Id: =Topic.correlationId\r\n\r\n      errorHandling:\r\n        kind: ContinueOnErrorBehavior\r\n        statusCode: Topic.callStatusCode\r\n        errorResponseBody: Topic.callError\r\n\r\n      response: Topic.sampleDataResponse\r\n      responseSchema: Any\r\n\r\n    - kind: ConditionGroup\r\n      id: conditionGroup_fMIcQu\r\n      conditions:\r\n        - id: conditionItem_Gbjeap\r\n          condition: =!IsBlank(Topic.sampleDataResponse)\r\n\r\n      elseActions:\r\n        - kind: SendActivity\r\n          id: sendActivity_wLF9IO\r\n          activity:\r\n            kind: EventActivity\r\n            value: =Concatenate(\"Error getting sample data\", \"Error Code:\", Topic.callStatusCode, \"ErrorResponse\", Topic.callError)\r\n            name: MS.PA.GenerateChartCard\r\n\r\n        - kind: LogCustomTelemetryEvent\r\n          id: wMHa2k\r\n          eventName: GenerateChartCard.DataverseSampleDataError\r\n          properties: =Concatenate(\"Error getting sample data\", \"Error Code:\", Topic.callStatusCode, \"ErrorResponse\", Topic.callError)\r\n\r\n        - kind: EndDialog\r\n          id: dglH2e\r\n\r\n    - kind: HttpRequestAction\r\n      id: 5oO0lS\r\n      method: Post\r\n      url: https://ppapi.env/cards/generate/template?api-version=2022-03-01-preview\r\n      headers:\r\n        Content-Type: application/json\r\n        X-Ms-Client-Request-Id: =Topic.clientRequestId\r\n        X-Ms-Client-Session-Id: =Topic.clientSessionId\r\n        X-Ms-Correlation-Id: =Topic.correlationId\r\n\r\n      body:\r\n        kind: JsonRequestContent\r\n        content:\r\n          kind: ValueExpression\r\n          literalValue:\r\n            cardType: chart\r\n\r\n      errorHandling:\r\n        kind: ContinueOnErrorBehavior\r\n        statusCode: Topic.callStatusCode\r\n        errorResponseBody: Topic.callError\r\n\r\n      response: Topic.supportedChartTypeSchemaResponse\r\n      responseSchema: Any\r\n\r\n    - kind: ConditionGroup\r\n      id: conditionGroup_1Z8Wiu\r\n      conditions:\r\n        - id: conditionItem_vkattU\r\n          condition: =!IsBlank(Topic.supportedChartTypeSchemaResponse)\r\n\r\n      elseActions:\r\n        - kind: SendActivity\r\n          id: sendActivity_gaxjDX\r\n          activity:\r\n            kind: EventActivity\r\n            value: =Concatenate(\"Error getting chart templates\", \"Error Code:\", Topic.callStatusCode, \"ErrorResponse\", Topic.callError)\r\n            name: MS.PA.GenerateChartCard\r\n\r\n        - kind: LogCustomTelemetryEvent\r\n          id: 1QAh9i\r\n          eventName: GenerateChartCard.PowerCardServiceError\r\n          properties: =Concatenate(\"Error getting chart templates\", \"Error Code:\", Topic.callStatusCode, \"ErrorResponse\", Topic.callError)\r\n\r\n        - kind: EndDialog\r\n          id: 2u2ayB\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_W8oTYA\r\n      variable: Topic.requestBody\r\n      value: |-\r\n        ={\r\n            supportedChartTypeSchemas: Topic.supportedChartTypeSchemaResponse,\r\n            tSQl: Topic.TSql,\r\n            sampleData: Topic.sampleDataResponse\r\n        }\r\n\r\n    - kind: HttpRequestAction\r\n      id: ZzADc6\r\n      method: Post\r\n      url: https://ppapi.env/intelligenceservice/GenerateChartQuery?api-version=2022-03-01-preview\r\n      headers:\r\n        Content-Type: application/json\r\n        X-Ms-Client-Request-Id: =Topic.clientRequestId\r\n        X-Ms-Client-Session-Id: =Topic.clientSessionId\r\n        X-Ms-Correlation-Id: =Topic.correlationId\r\n\r\n      body:\r\n        kind: JsonRequestContent\r\n        content: =Topic.requestBody\r\n\r\n      errorHandling:\r\n        kind: ContinueOnErrorBehavior\r\n        statusCode: Topic.callStatusCode\r\n        errorResponseBody: Topic.callError\r\n\r\n      requestTimeoutInMilliseconds: 120000\r\n      response: Topic.GenerateChartQueryResponse\r\n      responseSchema: Any\r\n\r\n    - kind: ConditionGroup\r\n      id: conditionGroup_EVlGsm\r\n      conditions:\r\n        - id: conditionItem_V8M0bw\r\n          condition: =!IsBlank(Topic.GenerateChartQueryResponse)\r\n\r\n      elseActions:\r\n        - kind: SendActivity\r\n          id: sendActivity_xp53mq\r\n          activity:\r\n            kind: EventActivity\r\n            value: =Concatenate(\"Failed to get successful response from Intelligence service.\", \"Error Code:\", Topic.callStatusCode, \"ErrorResponse\", Topic.callError)\r\n            name: MS.PA.GenerateChartCard\r\n\r\n        - kind: LogCustomTelemetryEvent\r\n          id: wDxmjL\r\n          eventName: GenerateChartCard.IntelligenceServiceError\r\n          properties: =Concatenate(\"Failed to get successful response from Intelligence service.\", \"Error Code:\", Topic.callStatusCode, \"ErrorResponse\", Topic.callError)\r\n\r\n        - kind: EndDialog\r\n          id: NeZU8z\r\n\r\n    - kind: HttpRequestAction\r\n      id: RQZBlC\r\n      method: Post\r\n      url: https://ppapi.env/cards/generate/card?api-version=2022-03-01-preview\r\n      headers:\r\n        Content-Type: application/json\r\n        X-Ms-Client-Request-Id: =Topic.clientRequestId\r\n        X-Ms-Client-Session-Id: =Topic.clientSessionId\r\n        X-Ms-Correlation-Id: =Topic.correlationId\r\n\r\n      body:\r\n        kind: JsonRequestContent\r\n        content: =Topic.GenerateChartQueryResponse\r\n\r\n      errorHandling:\r\n        kind: ContinueOnErrorBehavior\r\n        statusCode: Topic.callStatusCode\r\n        errorResponseBody: Topic.callError\r\n\r\n      response: Topic.GenerateChartCardResponse\r\n      responseSchema: Any\r\n\r\n    - kind: LogCustomTelemetryEvent\r\n      id: QNcPLg\r\n      eventName: GenerateChartCard CorrelationId\r\n      properties: =Topic.correlationId\r\n\r\n    - kind: LogCustomTelemetryEvent\r\n      id: GxNIAb\r\n      eventName: GenerateChartCard ClientSessionId\r\n      properties: =Topic.clientSessionId\r\n\r\n    - kind: LogCustomTelemetryEvent\r\n      id: dBS2RZ\r\n      eventName: GenerateChartCard ClientRequestId\r\n      properties: =Topic.clientRequestId\r\n\r\n    - kind: SendActivity\r\n      id: sendActivity_5Fm4fI\r\n      activity:\r\n        kind: EventActivity\r\n        value: =Topic.GenerateChartCardResponse\r\n        name: MS.PA.GenerateChartCard",
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": null,
+    "name": "Generate Chart Card",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.GenerateChartCard",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.GenerateChartCard"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

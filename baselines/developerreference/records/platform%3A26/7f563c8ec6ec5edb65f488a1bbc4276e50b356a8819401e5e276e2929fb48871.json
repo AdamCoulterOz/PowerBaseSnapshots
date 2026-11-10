@@ -1,0 +1,138 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" savedqueryid=\"80ae85a6-eab4-434f-b5b2-370a4e46db75\"><entity name=\"connectionrole\"><attribute name=\"category\" /><attribute name=\"name\" /><attribute name=\"statecode\" /><filter type=\"and\"><condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /></filter><order attribute=\"category\" descending=\"false\" /><attribute name=\"connectionroleid\" /></entity></fetch>",
+    "introducedversion": "5.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "name",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "connectionrole"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": false,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "name",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "category",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "statecode",
+                "RelatedEntityName": "",
+                "Width": 150
+              }
+            ],
+            "Id": "connectionroleid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "connectionrole"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:connectionrole\" jump=\"name\" select=\"1\" icon=\"1\" preview=\"0\"><row name=\"result\" id=\"connectionroleid\"><cell name=\"name\" width=\"300\" /><cell name=\"category\" width=\"150\" /><cell name=\"statecode\" width=\"150\" /></row></grid>"
+    },
+    "name": "Connection Role Associated View",
+    "offlinesqlquery": "/*SelectStart*/select  \"connectionrole0\".[category] as \"category\"\r , \"connectionrole0\".[name] as \"name\"\r , \"connectionrole0\".[statecode] as \"statecode\"\r , \"connectionrole0\".[connectionroleid] as \"connectionroleid\"/*SelectEnd*/  /*FromStart*/from  ConnectionRole as \"connectionrole0\"/*FromEnd*/  /*WhereStart*/where  (\"connectionrole0\".[statecode] = 0)/*WhereEnd*/  /*OrderByStart*/order by  case \"connectionrole0\".[category] when 1 then  'Business' when 2 then  'Family' when 3 then  'Social' when 4 then  'Sales' when 5 then  'Other' when 1000 then  'Stakeholder' when 1001 then  'Sales Team' when 1002 then  'Service' else null end  asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 2,
+    "returnedtypecode": "connectionrole",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "80ae85a6-eab4-434f-b5b2-370a4e46db75",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "connectionrole",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "80ae85a6-eab4-434f-b5b2-370a4e46db75"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}

@@ -1,0 +1,202 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" savedqueryid=\"c5193353-7dbd-419c-9429-83dbe37585dc\"><entity name=\"publisher\"><attribute name=\"publisherid\" /><attribute name=\"friendlyname\" /><attribute name=\"uniquename\" /><attribute name=\"description\" /><attribute name=\"address1_telephone1\" /><attribute name=\"emailaddress\" /><attribute name=\"supportingwebsiteurl\" /><filter type=\"and\"><condition attribute=\"publisherid\" operator=\"ne\" value=\"{d21aab70-79e7-11dd-8874-00188b01e34f}\" /><condition attribute=\"publisherid\" operator=\"ne\" value=\"{d21aab72-79e7-11dd-8874-00188b01e34f}\" /><condition attribute=\"isreadonly\" operator=\"eq\" value=\"0\" /></filter></entity></fetch>",
+    "introducedversion": "5.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "friendlyname",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "publisher"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": false,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "friendlyname",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "uniquename",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "description",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "address1_telephone1",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "emailaddress",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "supportingwebsiteurl",
+                "RelatedEntityName": "",
+                "Width": 150
+              }
+            ],
+            "Id": "publisherid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "publisher"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:publisher\" jump=\"friendlyname\" select=\"1\" icon=\"1\" preview=\"0\"><row name=\"result\" id=\"publisherid\"><cell name=\"friendlyname\" width=\"200\" /><cell name=\"uniquename\" width=\"200\" /><cell name=\"description\" width=\"300\" /><cell name=\"address1_telephone1\" width=\"150\" /><cell name=\"emailaddress\" width=\"150\" /><cell name=\"supportingwebsiteurl\" width=\"150\" /></row></grid>"
+    },
+    "name": "Publisher Lookup View",
+    "offlinesqlquery": "/*SelectStart*/select  \"publisher0\".[publisherid] as \"publisherid\"\r , coalesce(\"LL0\".Label,\"publisher0\".[friendlyname] ) as \"friendlyname\"\r , \"publisher0\".[uniquename] as \"uniquename\"\r , coalesce(\"LL1\".Label,\"publisher0\".[description] ) as \"description\"\r , \"publisher0\".[address1_telephone1] as \"address1_telephone1\"\r , \"publisher0\".[emailaddress] as \"emailaddress\"\r , \"publisher0\".[supportingwebsiteurl] as \"supportingwebsiteurl\"/*SelectEnd*/  /*FromStart*/from  Publisher as \"publisher0\"  left outer join LocalizedLabelView as \"LL0\" on (\"LL0\".ObjectId = \"publisher0\".PublisherId and \"LL0\".LanguageId = @LanguageId0 and \"LL0\".ObjectColumnName = @ObjectColumnName0 )  left outer join LocalizedLabelView as \"LL1\" on (\"LL1\".ObjectId = \"publisher0\".PublisherId and \"LL1\".LanguageId = @LanguageId1 and \"LL1\".ObjectColumnName = @ObjectColumnName1 )/*FromEnd*/  /*WhereStart*/where  ((\"publisher0\".[publisherid] !=  'D21AAB70-79E7-11DD-8874-00188B01E34F' or \"publisher0\".[publisherid] is null) and (\"publisher0\".[publisherid] !=  'D21AAB72-79E7-11DD-8874-00188B01E34F' or \"publisher0\".[publisherid] is null) and \"publisher0\".[isreadonly] = 0)/*WhereEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 64,
+    "returnedtypecode": "publisher",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "c5193353-7dbd-419c-9429-83dbe37585dc",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "publisher",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "c5193353-7dbd-419c-9429-83dbe37585dc"
+  },
+  "opaqueAssets": [],
+  "referenceDiagnostics": [
+    {
+      "field": "fetchxml",
+      "location": "/fetch/entity/filter/condition/@value",
+      "publisherUniqueName": "MicrosoftCorporation",
+      "selector": "d21aab70-79e7-11dd-8874-00188b01e34f",
+      "status": "declared-publisher-reference"
+    },
+    {
+      "field": "fetchxml",
+      "location": "/fetch/entity/filter/condition/@value",
+      "publisherUniqueName": "microsoftfirstparty",
+      "selector": "d21aab72-79e7-11dd-8874-00188b01e34f",
+      "status": "declared-publisher-reference"
+    }
+  ],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_SolutionsFrameworkMetadata",
+      "version": "9.1.128.5"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

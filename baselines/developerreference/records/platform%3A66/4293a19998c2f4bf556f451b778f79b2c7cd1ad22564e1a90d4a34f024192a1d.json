@@ -1,0 +1,187 @@
+{
+  "configuration": {
+    "authoringmanifest": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<authoring-manifest schema-version=\"1.0\">\r\n  <!-- Properties tab -->\r\n  <group>\r\n    <section>\r\n      <property name=\"Items\" />\r\n      <property name=\"DataDescription\" />\r\n    </section>\r\n    <section>\r\n      <property name=\"ExternalWebsiteSource1\" />\r\n      <property name=\"ExternalWebsiteSource2\" />\r\n      <property name=\"ExternalWebsiteSource3\" />\r\n      <property name=\"ExternalWebsiteSource4\" />\r\n    </section>\r\n    <section>\r\n      <wizard-property-group>\r\n        <wizard-step label=\"EditInPVA_DisplayName\" panelTitle=\"EditInPVA_PaneTitle\" linkedLocation=\"EditInPVAPane\" propertyInvariantName=\"BotSchemaName\" />\r\n      </wizard-property-group>\r\n    </section>\r\n    <section>\r\n      <property-group name=\"Position\">\r\n        <property name=\"X\" />\r\n        <property name=\"Y\" />\r\n      </property-group>\r\n      <property-group name=\"Size\">\r\n        <property name=\"Width\" />\r\n        <property name=\"Height\" />\r\n      </property-group>\r\n      <property name=\"Visible\"/>\r\n    </section>\r\n  </group>\r\n</authoring-manifest>",
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.18",
+        "Children": [],
+        "ConstructorName": "Copilot",
+        "ControlManifestVersion": "0.0.767",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "PowerApps.Copilot"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CopilotControl_Display_Key",
+        "FullName": "PowerApps.Copilot",
+        "IsVirtual": true,
+        "Name": "PowerApps.Copilot",
+        "Namespace": "PowerApps",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [],
+              "InitialDataSetFetch": true,
+              "Name": "inputDataSet",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebApi",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebApi.execute",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "DataDescription",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "ExternalWebsiteSource1",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "ExternalWebsiteSource2",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "ExternalWebsiteSource3",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "ExternalWebsiteSource4",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "DefaultValue": "",
+              "Hidden": false,
+              "Name": "BotSchemaName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "DefaultValue": "false",
+              "Hidden": true,
+              "Name": "UseModelAppProvider",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "UserName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "TabIndex",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "Tooltip",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "react_16_14_0",
+              "LoadOrder": 0,
+              "Name": "react_16_14_0",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_9_4_0",
+              "LoadOrder": 0,
+              "Name": "fluent_9_4_0",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "PowerApps.Copilot_bundle.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/Copilot.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"PowerApps\" constructor=\"Copilot\" version=\"0.0.767\" display-name-key=\"CopilotControl_Display_Key\" description-key=\"CopilotControl_Desc_Key\" authoring-manifest=\"Copilot_manifest.authoring.xml\" control-type=\"virtual\" hidden=\"true\" api-version=\"1.3.18\"><external-service-usage enabled=\"false\" /><property name=\"DataDescription\" display-name-key=\"DataDescription_Display_Key\" description-key=\"DataDescription_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"ExternalWebsiteSource1\" display-name-key=\"ExternalWebsiteSource1_Display_Key\" description-key=\"ExternalWebsiteSources_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"ExternalWebsiteSource2\" display-name-key=\"ExternalWebsiteSource2_Display_Key\" description-key=\"ExternalWebsiteSources_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"ExternalWebsiteSource3\" display-name-key=\"ExternalWebsiteSource3_Display_Key\" description-key=\"ExternalWebsiteSources_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"ExternalWebsiteSource4\" display-name-key=\"ExternalWebsiteSource4_Display_Key\" description-key=\"ExternalWebsiteSources_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"BotSchemaName\" default-value=\"\" display-name-key=\"EditInPVA_DisplayName\" description-key=\"EditInPVA_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"UseModelAppProvider\" display-name-key=\"UseModelAppProvider_Display_Key\" description-key=\"UseModelAppProvider_Desc_Key\" of-type=\"TwoOptions\" usage=\"input\" required=\"false\" default-value=\"false\" hidden=\"true\" /><property name=\"UserName\" pfx-default-value=\"User().FullName\" display-name-key=\"UserName_Display_Key\" description-key=\"UserName_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" /><property name=\"TabIndex\" hidden=\"true\" display-name-key=\"NA\" description-key=\"NA\" of-type=\"Whole.None\" usage=\"input\" required=\"false\" /><property name=\"Tooltip\" hidden=\"true\" display-name-key=\"NA\" description-key=\"NA\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" /><data-set name=\"inputDataSet\" display-name-key=\"InputDataSet_Display_Key\" description-key=\"InputDataSet_Desc_Key\" /><common-property name=\"Height\" default-value=\"675\" /><common-property name=\"Width\" default-value=\"320\" /><overrides><template name=\"Canvas\"><property name=\"ExternalWebsiteSource1\" hidden=\"true\" /><property name=\"ExternalWebsiteSource2\" hidden=\"true\" /><property name=\"ExternalWebsiteSource3\" hidden=\"true\" /><property name=\"ExternalWebsiteSource4\" hidden=\"true\" /></template></overrides><property-overrides><property-override template=\"Canvas\"><property name=\"ExternalWebsiteSource1\" hidden=\"true\" /><property name=\"ExternalWebsiteSource2\" hidden=\"true\" /><property name=\"ExternalWebsiteSource3\" hidden=\"true\" /><property name=\"ExternalWebsiteSource4\" hidden=\"true\" /></property-override></property-overrides><resources><code path=\"bundle.js\" order=\"1\" /><resx path=\"strings/Copilot.1033.resx\" version=\"1.0.0\" /><platform-library name=\"React\" version=\"16.8.6\" /><platform-library name=\"Fluent\" version=\"9.4.0\" /></resources><supported-platforms><supported-platform name=\"Canvas\" /><supported-platform name=\"Model\" /><supported-platform name=\"CustomPage\" /></supported-platforms><conversion from=\"0.0.112\" to=\"0.0.113\"><action name=\"IntroMessage\" type=\"add\" /></conversion><conversion from=\"0.0.123\" to=\"0.0.124\"><action name=\"DataSummary\" new-name=\"DataDescription\" type=\"rename\" /></conversion><conversion from=\"0.0.161\" to=\"0.0.162\"><action name=\"ExternalWebsiteSource1\" type=\"add\" /><action name=\"ExternalWebsiteSource2\" type=\"add\" /><action name=\"ExternalWebsiteSource3\" type=\"add\" /><action name=\"ExternalWebsiteSource4\" type=\"add\" /></conversion><conversion from=\"0.0.178\" to=\"0.0.179\"><action name=\"BotSchemaName\" type=\"add\" /></conversion><conversion from=\"0.0.266\" to=\"0.0.267\"><action name=\"IntroMessage\" type=\"remove\" /><action name=\"Title\" type=\"remove\" /><action name=\"PlaceholderText\" type=\"remove\" /></conversion><conversion from=\"0.0.281\" to=\"0.0.282\"><action name=\"UserName\" type=\"add\" /></conversion><feature-usage><uses-feature name=\"Utility\" required=\"true\" /><uses-feature name=\"WebApi\" required=\"true\" /><uses-feature name=\"WebApi.execute\" required=\"true\" /></feature-usage><built-by name=\"pac\" version=\"1.49.1-alpha-25090500\" /></control></manifest>",
+    "name": "PowerApps.Copilot",
+    "supportedplatform": "(Canvas),(Model),(CustomPage)",
+    "version": "0.0.767"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "PowerApps.Copilot"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

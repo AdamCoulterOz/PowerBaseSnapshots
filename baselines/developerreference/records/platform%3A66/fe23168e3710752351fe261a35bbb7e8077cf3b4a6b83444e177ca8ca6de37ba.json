@@ -1,0 +1,98 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "SetWorkHourControl",
+        "ControlManifestVersion": "1.0.11",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.SetWorkHour.SetWorkHourControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_SetWorkHourControl",
+        "FullName": "MscrmControls.AppCommon.SetWorkHour.SetWorkHourControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.SetWorkHour.SetWorkHourControl",
+        "Namespace": "MscrmControls.AppCommon.SetWorkHour",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "setWorkHourControlInput",
+              "Required": true,
+              "TypeGroup": "Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "setWorkHourControlOutput",
+              "Required": true,
+              "TypeGroup": "Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.AppCommon.SetWorkHour.SetWorkHourControl_SetWorkHourControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SetWorkHourControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.Text",
+    "componentstate": 0,
+    "introducedversion": "9.0.1904.4006",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.SetWorkHour\" constructor=\"SetWorkHourControl\" version=\"1.0.11\" display-name-key=\"CC_SetWorkHourControl\" control-type=\"virtual\"><modes></modes><type-group name=\"Text\"><type>SingleLine.Text</type></type-group><property name=\"setWorkHourControlInput\" display-name-key=\"CC_SetWorkHourControlInput\" description-key=\"Input data of calendarid/innercalendar entities required by control\" of-type-group=\"Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"setWorkHourControlOutput\" display-name-key=\"CC_SetWorkHourControlOutput\" description-key=\"Output data of SetWorkHourControl\" of-type-group=\"Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><resources><code path=\"SetWorkHourControl.js\" order=\"1\" /><resx path=\"locale/SetWorkHourControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.SetWorkHour.SetWorkHourControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.11"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.SetWorkHour.SetWorkHourControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch",
+      "version": "9.0.1904.4006"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

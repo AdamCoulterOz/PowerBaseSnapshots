@@ -1,0 +1,76 @@
+{
+  "configuration": {
+    "body": {
+      "bindings": [
+        {
+          "kind": "dataverse-source-origin"
+        }
+      ],
+      "content": "<?xml version=\"1.0\"?>\n<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"1.0\">\n\t<xsl:output method=\"text\" indent=\"no\" />\n\t<xsl:template match=\"/data\"><![CDATA[<p>This Microsoft Dynamics CRM duplication-detection task completed successfully.</p>\n\t\t\t\t\t<p>Name: ]]>\n\t\t<xsl:choose>\n\t\t\t<xsl:when test=\"asyncoperation/name\">\n\t\t\t\t<xsl:value-of select=\"asyncoperation/name\" />\n\t\t\t</xsl:when>\n\t\t\t<xsl:otherwise>[Duplicate Detection task]</xsl:otherwise>\n\t\t</xsl:choose><![CDATA[</p>\n\t\t\t\t\t<p>Started: ]]>\n\t\t<xsl:choose>\n\t\t\t<xsl:when test=\"asyncoperation/createdon\">\n\t\t\t\t<xsl:value-of select=\"asyncoperation/createdon\" />\n\t\t\t</xsl:when>\n\t\t\t<xsl:otherwise></xsl:otherwise>\n\t\t</xsl:choose><![CDATA[</p>\n\t\t\t\t\t<p>To view and manage duplicates, do one of the following:</p>\n\t\t\t\t\t<p>Click <a name=\"slugAnchorTag\"  href=\"#\">https://dataverse.invalid/main.aspx?pagetype=entityrecord&etn=asyncoperation&formid=e0166470-55ac-4793-b4ef-e86c956ead83&id=]]>\n\t\t<xsl:choose>\n\t\t\t<xsl:when test=\"asyncoperation/asyncoperationid\">\n\t\t\t\t<xsl:value-of select=\"asyncoperation/asyncoperationid\" />\n\t\t\t</xsl:when>\n\t\t\t<xsl:otherwise></xsl:otherwise>\n\t\t</xsl:choose><![CDATA[</a></p>\n\t\t\t\t\t<p>or</p>\n\t\t\t\t\t<p>Log on to Microsoft Dynamics CRM and navigate to Duplicate Detection page and double-click the name of the task.</p>\n\t\t\t\t\t<p></p>]]>\n\t</xsl:template>\n</xsl:stylesheet>",
+      "kind": "normalized-document-v1"
+    },
+    "componentstate": 0,
+    "description": null,
+    "entityimage": null,
+    "entityimage_timestamp": null,
+    "entityimage_url": null,
+    "entityimageid": null,
+    "generationtypecode": 0,
+    "importsequencenumber": null,
+    "introducedversion": "1.0",
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "ispersonal": false,
+    "isrecommended": false,
+    "languagecode": 1033,
+    "mimetype": null,
+    "opencount": null,
+    "openrate": null,
+    "presentationxml": {
+      "bindings": [
+        {
+          "kind": "dataverse-source-origin"
+        }
+      ],
+      "content": "<template>\n\t<text><![CDATA[<p>This Microsoft Dynamics CRM duplication-detection task completed successfully.</p>\n\t\t\t\t\t<p>Name: ]]></text>\n\t<slugs>\n\t\t<slug>\n\t\t\t<entity>asyncoperation</entity>\n\t\t\t<attribute>name</attribute>\n\t\t</slug>\n\t\t<default>[Duplicate Detection task]</default>\n\t</slugs>\n\t<text><![CDATA[</p>\n\t\t\t\t\t<p>Started: ]]></text>\n\t<slugs>\n\t\t<slug>\n\t\t\t<entity>asyncoperation</entity>\n\t\t\t<attribute>createdon</attribute>\n\t\t</slug>\n\t\t<default />\n\t</slugs>\n\t<text><![CDATA[</p>\n\t\t\t\t\t<p>To view and manage duplicates, do one of the following:</p>\n\t\t\t\t\t<p>Click <a name=\"slugAnchorTag\"  href=\"#\" >https://dataverse.invalid/main.aspx?pagetype=entityrecord&etn=asyncoperation&formid=e0166470-55ac-4793-b4ef-e86c956ead83&id=]]></text>\n\t<slugs>\n\t\t<slug>\n\t\t\t<entity>asyncoperation</entity>\n\t\t\t<attribute>asyncoperationid</attribute>\n\t\t</slug>\n\t\t<default />\n\t</slugs>\n\t<text><![CDATA[</a></p>\n\t\t\t\t\t<p>or</p>\n\t\t\t\t\t<p>Log on to Microsoft Dynamics CRM and navigate to Duplicate Detection page and double-click the name of the task.</p>\n\t\t\t\t\t<p></p>]]></text>\n</template>",
+      "kind": "normalized-document-v1"
+    },
+    "replycount": null,
+    "replyrate": null,
+    "safehtml": {
+      "bindings": [
+        {
+          "kind": "dataverse-source-origin"
+        }
+      ],
+      "content": "<div>\n<p>This Microsoft Dynamics CRM duplication-detection task completed successfully.</p>\n<p>Name: <span class=\"dataslug\" id=\"TemplateEditor0\" data-value=\"{!asyncoperation:name;[Duplicate Detection task]}\" contenteditable=\"false\" style=\"background-color: #E7EFFF;\">{!System Job:System Job Name;[Duplicate Detection task]}</span></p>\n<p>Started: <span class=\"dataslug\" id=\"TemplateEditor1\" data-value=\"{!asyncoperation:createdon;}\" contenteditable=\"false\" style=\"background-color: #E7EFFF;\">{!System Job:Created On;}</span></p>\n<p>To view and manage duplicates, do one of the following:</p>\n<p>Click <a name=\"slugAnchorTag\" href=\"\">https://dataverse.invalid/main.aspx?pagetype=entityrecord&amp;etn=asyncoperation&amp;formid=e0166470-55ac-4793-b4ef-e86c956ead83&amp;id=<span class=\"dataslug\" id=\"TemplateEditor2\" data-value=\"{!asyncoperation:asyncoperationid;}\" contenteditable=\"false\" style=\"background-color: #E7EFFF;\">{!System\n Job:System Job;}</span></a></p>\n<p>or</p>\n<p>Log on to Microsoft Dynamics CRM and navigate to Duplicate Detection page and double-click the name of the task.</p>\n<p></p>\n</div>\n",
+      "kind": "normalized-document-v1"
+    },
+    "subject": "<?xml version=\"1.0\"?>\n<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"1.0\">\n  <xsl:output method=\"text\" indent=\"no\" />\n  <xsl:template match=\"/data\"><![CDATA[Microsoft Dynamics CRM: ]]>\n    <xsl:choose>\n      <xsl:when test=\"asyncoperation/name\">\n        <xsl:value-of select=\"asyncoperation/name\" />\n      </xsl:when>\n      <xsl:otherwise>Duplicate Detection task</xsl:otherwise>\n    </xsl:choose><![CDATA[ is complete]]>\n  </xsl:template>\n</xsl:stylesheet>",
+    "subjectpresentationxml": "<template>\n  <text><![CDATA[Microsoft Dynamics CRM: ]]></text>\n  <slugs>\n    <slug>\n      <entity>asyncoperation</entity>\n      <attribute>name</attribute>\n    </slug>\n    <default>Duplicate Detection task</default>\n  </slugs>\n  <text><![CDATA[ is complete]]></text>\n</template>",
+    "subjectsafehtml": "Microsoft Dynamics CRM: <span class=\"dataslug\" id=\"TemplateEditor0\" data-value=\"{!asyncoperation:name;Duplicate Detection task}\" contenteditable=\"false\" style=\"background-color: #E7EFFF;\">{!System Job:System Job Name;Duplicate Detection task}</span> is complete",
+    "templateid": "35249025-91fa-43c1-8c38-1f6bc14221c3",
+    "templatetypecode": "asyncoperation",
+    "title": "Modern Duplicate Detection Task Completion Template",
+    "usedcount": null
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "portability": "not-established",
+    "value": "35249025-91fa-43c1-8c38-1f6bc14221c3"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_PowerAdminSettingsDataManagementSolution",
+      "version": "2.2.3552.1"
+    }
+  ],
+  "typeIdentity": "platform:36"
+}

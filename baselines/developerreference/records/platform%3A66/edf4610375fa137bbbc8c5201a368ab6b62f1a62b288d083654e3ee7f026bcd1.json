@@ -1,0 +1,86 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "RelationshipSelectorControl",
+        "ControlManifestVersion": "1.0.0",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.RelationshipSelector.RelationshipSelectorControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "RelationshipSelectorControl",
+        "FullName": "MscrmControls.AppCommon.RelationshipSelector.RelationshipSelectorControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.RelationshipSelector.RelationshipSelectorControl",
+        "Namespace": "MscrmControls.AppCommon.RelationshipSelector",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "templateInfo",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.AppCommon.RelationshipSelector.RelationshipSelectorControl_RelationshipSelector.js",
+              "Type": 4
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.4.0066",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.RelationshipSelector\" constructor=\"RelationshipSelectorControl\" version=\"1.0.0\" display-name-key=\"RelationshipSelectorControl\" control-type=\"virtual\" hidden=\"true\"><modes></modes><type-group name=\"all\"><type>SingleLine.Text</type></type-group><property name=\"templateInfo\" display-name-key=\"CC_templateInfo\" description-key=\"CC_templateInfo_Desc\" of-type-group=\"all\" usage=\"input\" required=\"true\" hidden=\"true\" /><resources><code path=\"RelationshipSelector.js\" order=\"3\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.RelationshipSelector.RelationshipSelectorControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.0"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.RelationshipSelector.RelationshipSelectorControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommon",
+      "version": "9.0.4.0066"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

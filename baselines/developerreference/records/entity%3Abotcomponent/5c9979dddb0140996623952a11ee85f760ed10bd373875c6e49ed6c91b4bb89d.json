@@ -1,0 +1,73 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "msdyn_appCopilot.topic.PlatformZeroPrompt"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponent"
+    },
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 10,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnEventActivity\r\n  id: main\r\n  actions:\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_VlokaN\r\n      value: **[테이블 이름]**의 개수가 몇 개입니까?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_uV3wX4\r\n      value: **[조건 삽입]**인 **[테이블 이름]**의 개수가 몇 개입니까?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_yZ9aB0\r\n      value: 무엇이 내 **[테이블 이름]**입니까?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_Io9bC2\r\n      value: 지난주에 내가 만든 **[테이블 이름]** 테이블은 무엇입니까?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_eF5gH6\r\n      value: **[레코드 이름]** 레코드가 누구에게 할당되었습니까?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_5SJyoX\r\n      value: **[사람]**에게 할당된 **[테이블 이름]** 테이블은 무엇입니까?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_idomBQ\r\n      value: 이동할 **[테이블 이름]**\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_37E1vC\r\n      value: 내 연락처는 누구입니까?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_Uas3OS\r\n      value: 이메일 주소가 없는 연락처는 무엇입니까?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_JuCn0S\r\n      value: 근무처 전화번호가 없는 연락처는 무엇입니까?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_11AcHh\r\n      value: 내 공개 영업 기회는 무엇입니까?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_zam4HV\r\n      value: 지난 30일 동안 어떤 영업 기회가 마감되었습니까?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_ZQXbcV\r\n      value: 예상 수익이 가장 높은 영업 기회는 무엇입니까?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_wrd6MX\r\n      value: 지난 30일 동안 어떤 잠재 고객이 마감되었습니까?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_5Gt8UG\r\n      value: 내 공개 잠재 고객은 무엇입니까?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_FsmPEP\r\n      value: 수익이 가장 높은 상위 10개 계정은 무엇입니까?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_kwqK9K\r\n      value: 연락처가 없는 계정은 무엇입니까?\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_yZ5aB6\r\n      value: 반가워요\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_cD7eF8\r\n      value: 탐색할 준비가 되었습니까? 시작하려면 아래 제안 중 하나를 선택하세요...\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_gH9iJ0\r\n      value: 이 테이블과 해당 기록에 대해 질문할 수 있습니다.\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_VAMKDV\r\n      value: 이 테이블과 해당 기록에 대해 질문할 수 있습니다.\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_sT5uV6\r\n      value: 분석\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_wX7yZ8\r\n      value: 작업\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_F1eG2\r\n      value: 문의\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_BqXH5F\r\n      value: 많이 표시\r\n\r\n    - kind: SetTextVariable\r\n      id: setTextVariable_VEZrkd\r\n      value: 적게 표시",
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": 1042,
+    "name": "플랫폼 제로 프롬프트 (ko-KR)",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.PlatformZeroPrompt.ko-KR",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.PlatformZeroPrompt.ko-KR"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

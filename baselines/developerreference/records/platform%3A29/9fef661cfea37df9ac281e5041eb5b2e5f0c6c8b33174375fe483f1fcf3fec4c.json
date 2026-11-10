@@ -1,0 +1,112 @@
+{
+  "configuration": {
+    "_flowgroup_value": null,
+    "_licensee_value": null,
+    "_licenseentitledby_value": null,
+    "_parentworkflowid_value": null,
+    "_plugintypeid_value": null,
+    "_sdkmessageid_value": {
+      "key": [
+        {
+          "field": "sdkmessageid",
+          "type": "Uniqueidentifier",
+          "value": "85e4d421-0781-4c24-9064-4cabfd63623f"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "sdkmessage"
+    },
+    "asyncautodelete": false,
+    "billingcontext": null,
+    "businessprocesstype": null,
+    "category": 3,
+    "claims": null,
+    "clientdata": null,
+    "clientdataiscompressed": null,
+    "componentstate": 0,
+    "connectionreferences": null,
+    "createmetadata": null,
+    "createstage": 40,
+    "credentials": null,
+    "definition": null,
+    "deletestage": null,
+    "dependencies": null,
+    "description": null,
+    "desktopflowmodules": null,
+    "dynamicssolutioncontext": null,
+    "entityimage": null,
+    "entityimage_timestamp": null,
+    "entityimage_url": null,
+    "entityimageid": null,
+    "formid": "00000000-0000-0000-0000-000000000000",
+    "inputparameters": null,
+    "inputs": null,
+    "introducedversion": "9.1.0.0",
+    "iscrmuiworkflow": true,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "iscustomprocessingstepallowedforotherpublishers": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": true
+    },
+    "ismanaged": true,
+    "istransacted": true,
+    "languagecode": null,
+    "metadata": null,
+    "mode": 0,
+    "modernflowtype": 0,
+    "modifymetadata": null,
+    "name": "Convert legacy xml to fetchxml format and vice versa",
+    "ondemand": false,
+    "outputs": null,
+    "planverified": null,
+    "primaryentity": "none",
+    "processorder": null,
+    "processroleassignment": null,
+    "processtriggerformid": null,
+    "processtriggerscope": null,
+    "rank": null,
+    "rendererobjecttypecode": null,
+    "resourcecontainer": null,
+    "resourceid": null,
+    "runas": 1,
+    "schemaversion": null,
+    "scope": 4,
+    "statecode": 1,
+    "statuscode": 2,
+    "subprocess": false,
+    "suspensionreasondetails": null,
+    "syncworkflowlogonfailure": true,
+    "throttlingbehavior": null,
+    "triggeroncreate": false,
+    "triggerondelete": false,
+    "triggeronupdateattributelist": null,
+    "trustedaccess": null,
+    "type": 1,
+    "uidata": null,
+    "uiflowtype": null,
+    "uniquename": "ConditionXmlConversion",
+    "updatestage": null,
+    "workflowid": "5bcce885-ead0-4a23-ac15-1c77175ff2d0",
+    "xaml": "<?xml version=\"1.0\" encoding=\"utf-16\"?><Activity x:Class=\"XrmWorkflow5bcce885ead04a23ac151c77175ff2d0\" xmlns=\"http://schemas.microsoft.com/netfx/2009/xaml/activities\" xmlns:mva=\"clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" xmlns:mxs=\"clr-namespace:Microsoft.Xrm.Sdk;assembly=Microsoft.Xrm.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" xmlns:mxsw=\"clr-namespace:Microsoft.Xrm.Sdk.Workflow;assembly=Microsoft.Xrm.Sdk.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" xmlns:mxswa=\"clr-namespace:Microsoft.Xrm.Sdk.Workflow.Activities;assembly=Microsoft.Xrm.Sdk.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" xmlns:scg=\"clr-namespace:System.Collections.Generic;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" xmlns:srs=\"clr-namespace:System.Runtime.Serialization;assembly=System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" xmlns:this=\"clr-namespace:\" xmlns:x=\"http://schemas.microsoft.com/winfx/2006/xaml\"><x:Members><x:Property Name=\"InputEntities\" Type=\"InArgument(scg:IDictionary(x:String, mxs:Entity))\" /><x:Property Name=\"CreatedEntities\" Type=\"InArgument(scg:IDictionary(x:String, mxs:Entity))\" /><x:Property Name=\"InputType\" Type=\"InArgument(x:String)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"True\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"InputType can be xml or fetchXml\" /><mxsw:ArgumentDirectionAttribute Value=\"Input\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property><x:Property Name=\"OutputType\" Type=\"InArgument(x:String)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"True\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"OutputType can be xml or fetchXml\" /><mxsw:ArgumentDirectionAttribute Value=\"Input\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property><x:Property Name=\"InputString\" Type=\"InArgument(x:String)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"True\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"fetchXml or xml input string\" /><mxsw:ArgumentDirectionAttribute Value=\"Input\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property><x:Property Name=\"EntityName\" Type=\"InArgument(x:String)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"True\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"entityName on which condition is applied\" /><mxsw:ArgumentDirectionAttribute Value=\"Input\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property><x:Property Name=\"EnableUnderNotUnderSupport\" Type=\"InArgument(x:Boolean)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"False\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"Enable Under Not Under Support In Condition Control\" /><mxsw:ArgumentDirectionAttribute Value=\"Input\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property><x:Property Name=\"OutputString\" Type=\"OutArgument(x:String)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"False\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"fetchXml or Xml output string\" /><mxsw:ArgumentDirectionAttribute Value=\"Output\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property><x:Property Name=\"Exception\" Type=\"OutArgument(x:String)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"False\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"exception\" /><mxsw:ArgumentDirectionAttribute Value=\"Output\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property></x:Members><this:XrmWorkflow5bcce885ead04a23ac151c77175ff2d0.InputEntities><InArgument x:TypeArguments=\"scg:IDictionary(x:String, mxs:Entity)\" /></this:XrmWorkflow5bcce885ead04a23ac151c77175ff2d0.InputEntities><this:XrmWorkflow5bcce885ead04a23ac151c77175ff2d0.CreatedEntities><InArgument x:TypeArguments=\"scg:IDictionary(x:String, mxs:Entity)\" /></this:XrmWorkflow5bcce885ead04a23ac151c77175ff2d0.CreatedEntities><mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings><mxswa:Workflow /></Activity>"
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "portability": "not-established",
+    "value": "5bcce885-ead0-4a23-ac15-1c77175ff2d0"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdynce_ServiceManagementControlsExtension",
+      "version": "9.1.26093.1002"
+    }
+  ],
+  "typeIdentity": "platform:29"
+}

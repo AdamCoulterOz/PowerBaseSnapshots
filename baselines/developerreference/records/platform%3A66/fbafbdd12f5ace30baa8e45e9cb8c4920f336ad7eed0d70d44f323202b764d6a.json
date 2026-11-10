@@ -1,0 +1,86 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "KbEnvironmentSelector",
+        "ControlManifestVersion": "1.26094.3006",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.KbEnvironmentSelector.KbEnvironmentSelector"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "KbEnvironmentSelector",
+        "FullName": "MscrmControls.KbEnvironmentSelector.KbEnvironmentSelector",
+        "IsVirtual": true,
+        "Name": "MscrmControls.KbEnvironmentSelector.KbEnvironmentSelector",
+        "Namespace": "MscrmControls.KbEnvironmentSelector",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "KbCommonUtils",
+              "LoadOrder": 1,
+              "Name": "KbCommonUtils",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.KbEnvironmentSelector.KbEnvironmentSelector_KbEnvironmentSelector.js",
+              "Type": 4
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.Text",
+    "componentstate": 0,
+    "introducedversion": "9.0.26094.3005",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.KbEnvironmentSelector\" constructor=\"KbEnvironmentSelector\" version=\"1.26094.3006\" display-name-key=\"KbEnvironmentSelector\" control-type=\"virtual\"><modes></modes><property name=\"value\" display-name-key=\"KbEnvironmentSelector_Name\" description-key=\"KbEnvironmentSelector_Name_desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><resources><library name=\"KbCommonUtils\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/KbCommonUtils.js\" version=\"1.26094.3006\" /></library><code path=\"KbEnvironmentSelector.js\" order=\"2\" /></resources></control></manifest>",
+    "name": "MscrmControls.KbEnvironmentSelector.KbEnvironmentSelector",
+    "supportedplatform": "(Model)",
+    "version": "1.26094.3006"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.KbEnvironmentSelector.KbEnvironmentSelector"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_KnowledgeManagementPatch",
+      "version": "9.0.26094.3006"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

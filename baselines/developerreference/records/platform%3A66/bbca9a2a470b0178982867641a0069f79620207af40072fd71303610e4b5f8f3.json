@@ -1,0 +1,116 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "KbContentControl",
+        "ControlManifestVersion": "1.26094.3006",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.KbContentControl.KbContentControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "KbContentControl_Name",
+        "FullName": "MscrmControls.KbContentControl.KbContentControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.KbContentControl.KbContentControl",
+        "Namespace": "MscrmControls.KbContentControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "record",
+              "Required": true,
+              "Type": "KbContent",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "quickview",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "DOMPurify",
+              "LoadOrder": 2,
+              "Name": "DOMPurify",
+              "Type": 0
+            },
+            {
+              "LibraryName": "KbCommonUtils",
+              "LoadOrder": 3,
+              "Name": "KbCommonUtils",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 4,
+              "Name": "MscrmControls.KbContentControl.KbContentControl_KbContentControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/KbContentControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.KbContentControl\" constructor=\"KbContentControl\" version=\"1.26094.3006\" display-name-key=\"KbContentControl_Name\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"record\" required=\"true\" display-name-key=\"KbContentControl_Value\" description-key=\"KbContentControl_Value_Desc\" usage=\"bound\" of-type=\"KbContent\" /><property name=\"quickview\" required=\"false\" display-name-key=\"KbContentControl_Quickview\" description-key=\"KbContentControl_Quickview_Desc\" usage=\"bound\" of-type=\"SingleLine.Text\" /><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.22\" /></library><library name=\"DOMPurify\" version=\"&gt;=3.4.17\" order=\"2\"><packaged_library path=\"libs/purify.min.js\" version=\"3.4.17\" /></library><library name=\"KbCommonUtils\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"libs/KbCommonUtils.js\" version=\"1.26094.3006\" /></library><code path=\"KbContentControl.js\" order=\"4\" /><resx path=\"strings/KbContentControl.1033.resx\" version=\"1.26094.3006\" /></resources></control></manifest>",
+    "name": "MscrmControls.KbContentControl.KbContentControl",
+    "supportedplatform": "(Model)",
+    "version": "1.26094.3006"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.KbContentControl.KbContentControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    },
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdynce_KnowledgeManagementFeatures",
+      "version": "9.0.26094.3006"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

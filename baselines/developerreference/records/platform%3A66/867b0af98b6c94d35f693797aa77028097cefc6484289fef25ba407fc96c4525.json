@@ -1,0 +1,108 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "TemplateSelectionScreen",
+        "ControlManifestVersion": "1.0.0",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.ExcelWordTemplate.TemplateSelectionScreen"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_Mock_Name",
+        "FullName": "MscrmControls.AppCommon.ExcelWordTemplate.TemplateSelectionScreen",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.ExcelWordTemplate.TemplateSelectionScreen",
+        "Namespace": "MscrmControls.AppCommon.ExcelWordTemplate",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "templateType",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "FRECommon",
+              "LoadOrder": 1,
+              "Name": "FRECommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "FREShell",
+              "LoadOrder": 2,
+              "Name": "FREShell",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 21,
+              "Name": "MscrmControls.AppCommon.ExcelWordTemplate.TemplateSelectionScreen_TemplateSelectionScreen.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 11,
+              "Name": "css/TemplateSelectionScreen.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/templateselection.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.4.0066",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.ExcelWordTemplate\" constructor=\"TemplateSelectionScreen\" version=\"1.0.0\" display-name-key=\"CC_Mock_Name\" control-type=\"virtual\" hidden=\"true\"><modes></modes><type-group name=\"all\"><type>SingleLine.Text</type><type>SingleLine.TextArea</type></type-group><property name=\"templateType\" display-name-key=\"CC_template_type\" description-key=\"CC_template_type_Desc\" of-type-group=\"all\" usage=\"bound\" required=\"true\" hidden=\"true\" /><resources><library name=\"FRECommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/frecommon-lib.js\" version=\"1.0.0\" /></library><library name=\"FREShell\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/FREShell.js\" version=\"1.0.0\" /></library><css path=\"css/TemplateSelectionScreen.css\" order=\"11\" /><code path=\"TemplateSelectionScreen.js\" order=\"21\" /><resx path=\"locale/templateselection.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.ExcelWordTemplate.TemplateSelectionScreen",
+    "supportedplatform": "(Model)",
+    "version": "1.0.0"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.ExcelWordTemplate.TemplateSelectionScreen"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommon",
+      "version": "9.0.4.0066"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

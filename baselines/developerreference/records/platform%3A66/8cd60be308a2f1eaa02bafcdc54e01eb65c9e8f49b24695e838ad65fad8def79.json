@@ -1,0 +1,126 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ActivityCalendarControl",
+        "ControlManifestVersion": "1.0.10",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.ActivityCalendarControl.ActivityCalendarControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "Calendar_Control_V2",
+        "FullName": "MscrmControls.ActivityCalendarControl.ActivityCalendarControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.ActivityCalendarControl.ActivityCalendarControl",
+        "Namespace": "MscrmControls.ActivityCalendarControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "displayCommandBar:true",
+              "Columns": [
+                {
+                  "Hidden": false,
+                  "Name": "StartDate",
+                  "Required": true,
+                  "TypeGroup": "Dates",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "Description",
+                  "Required": true,
+                  "TypeGroup": "DescriptionTypes",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "EndDate",
+                  "Required": true,
+                  "TypeGroup": "Dates",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "Duration",
+                  "Required": false,
+                  "Type": "Whole.Duration",
+                  "Usage": 0
+                },
+                {
+                  "Hidden": false,
+                  "Name": "Color",
+                  "Required": false,
+                  "Type": "OptionSet",
+                  "Usage": 0
+                }
+              ],
+              "InitialDataSetFetch": true,
+              "Name": "Calendar",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.ActivityCalendarControl.ActivityCalendarControl_ActivityCalendarControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "res/CalendarPreview.png",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/ActivityCalendarControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "Grid",
+    "componentstate": 0,
+    "introducedversion": "9.0.26094.1003",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.ActivityCalendarControl\" constructor=\"ActivityCalendarControl\" version=\"1.0.10\" display-name-key=\"Calendar_Control_V2\" preview-image=\"res/CalendarPreview.png\"><type-group name=\"Dates\"><type>DateAndTime.DateAndTime</type><type>DateAndTime.DateOnly</type></type-group><type-group name=\"DescriptionTypes\"><type>SingleLine.Text</type><type>Lookup.Simple</type><type>Lookup.Customer</type><type>Lookup.Owner</type><type>Lookup.Regarding</type></type-group><type-group name=\"AllTypes\"><type>Whole.None</type><type>Whole.Duration</type><type>Whole.TimeZone</type><type>Whole.Language</type><type>TwoOptions</type><type>DateAndTime.DateOnly</type><type>DateAndTime.DateAndTime</type><type>Decimal</type><type>Enum</type><type>FP</type><type>Lookup.Simple</type><type>Lookup.Customer</type><type>Lookup.Owner</type><type>Lookup.PartyList</type><type>Lookup.Regarding</type><type>Multiple</type><type>Currency</type><type>OptionSet</type><type>SingleLine.Email</type><type>SingleLine.Text</type><type>SingleLine.TextArea</type><type>SingleLine.URL</type><type>SingleLine.Ticker</type><type>SingleLine.Phone</type></type-group><data-set name=\"Calendar\" display-name-key=\"CC_Calendar_DSCalendar\" cds-data-set-options=\"displayCommandBar:true\"><property-set name=\"StartDate\" required=\"true\" display-name-key=\"CC_Calendar_StartDate\" description-key=\"CC_Calendar_StartDate_Desc\" usage=\"bound\" of-type-group=\"Dates\" /><property-set name=\"Description\" required=\"true\" display-name-key=\"CC_Calendar_Description\" description-key=\"CC_Calendar_Description_Desc\" usage=\"bound\" of-type-group=\"DescriptionTypes\" /><property-set name=\"EndDate\" required=\"true\" display-name-key=\"CC_Calendar_EndDate\" description-key=\"CC_Calendar_EndDate_Desc\" usage=\"bound\" of-type-group=\"Dates\" /><property-set name=\"Duration\" required=\"false\" display-name-key=\"CC_Calendar_Duration\" description-key=\"CC_Calendar_Duration_Desc\" usage=\"bound\" of-type=\"Whole.Duration\" /><property-set name=\"Color\" required=\"false\" display-name-key=\"CC_AdvancedCalendar_Color\" description-key=\"CC_AdvancedCalendar_Color_Desc\" usage=\"bound\" of-type=\"OptionSet\" /></data-set><resources><code path=\"ActivityCalendarControl.js\" order=\"1\" /><resx path=\"strings/ActivityCalendarControl.1033.resx\" version=\"1.0.2\" /><img path=\"res/CalendarPreview.png\" /></resources></control></manifest>",
+    "name": "MscrmControls.ActivityCalendarControl.ActivityCalendarControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.10"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.ActivityCalendarControl.ActivityCalendarControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_UCICalendar",
+      "version": "9.0.26101.2000"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

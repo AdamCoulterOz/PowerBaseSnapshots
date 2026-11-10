@@ -1,0 +1,36 @@
+{
+  "configuration": {
+    "componentstate": 0,
+    "description": "Use this template to provide general information about a subject.",
+    "formatxml": "<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" xmlns:msxsl=\"urn:schemas-microsoft-com:xslt\" version=\"1.0\"><xsl:output method=\"html\" indent=\"no\"/><xsl:param name=\"title\"/><xsl:param name=\"number\"/><xsl:template match=\"*\"><html><head><base target=\"_blank\"/><style>BODY, TD{<xsl:for-each select=\"//kbarticle/stylesheet/article/style\"><xsl:value-of select=\"@name\"/><xsl:text>:</xsl:text><xsl:value-of select=\"@value\"/><xsl:text>;</xsl:text></xsl:for-each>}</style></head><body><table cellspacing=\"2\" cellpadding=\"4\" width=\"100%\" height=\"100%\"><xsl:for-each select=\"kbarticle/sections/section\"><xsl:choose><xsl:when test=\"@type = 'docprop'\"><tr><td><xsl:choose><xsl:when test=\"@name = 'title'\"><xsl:call-template name=\"applyStyles\"><xsl:with-param name=\"class\" select=\"//kbarticle/stylesheet/title\"/></xsl:call-template><xsl:value-of select=\"$title\"/></xsl:when><xsl:when test=\"@name = 'number'\"><xsl:call-template name=\"applyStyles\"><xsl:with-param name=\"class\" select=\"//kbarticle/stylesheet/number\"/></xsl:call-template><xsl:value-of select=\"$number\"/></xsl:when></xsl:choose></td></tr></xsl:when><xsl:otherwise><tr><td><xsl:call-template name=\"applyStyles\"><xsl:with-param name=\"class\" select=\"//kbarticle/stylesheet/heading\"/></xsl:call-template><xsl:value-of select=\"text()\"/></td></tr><tr><td><xsl:value-of disable-output-escaping=\"yes\" select=\"//articledata/section[@id=current()/@id]/content\"/></td></tr></xsl:otherwise></xsl:choose></xsl:for-each><tr height=\"100%\"><td><br/></td></tr></table></body></html></xsl:template><xsl:template name=\"applyStyles\"><xsl:param name=\"class\"/><xsl:attribute name=\"style\"><xsl:for-each select=\"$class/style\"><xsl:value-of select=\"@name\"/><xsl:text>:</xsl:text><xsl:value-of select=\"@value\"/><xsl:text>;</xsl:text></xsl:for-each></xsl:attribute></xsl:template></xsl:stylesheet>",
+    "importsequencenumber": null,
+    "introducedversion": "5.0",
+    "isactive": true,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "kbarticletemplateid": "c3f93721-91b6-475a-acd0-0a68aa1cb842",
+    "languagecode": 1033,
+    "overriddencreatedon": null,
+    "structurexml": "<kbarticle><sections><section type=\"docprop\" name=\"title\"/><section type=\"docprop\" name=\"number\"/><section type=\"edit\" id=\"0\"><![CDATA[Summary]]></section><section type=\"edit\" id=\"1\"><![CDATA[Additional Comments]]></section></sections><stylesheet><article><style name=\"background-color\" value=\"#ffffff\"/><style name=\"font-family\" value=\"verdana\"/><style name=\"font-size\" value=\"10pt\"/></article><title><style name=\"font-family\" value=\"verdana\"/><style name=\"font-size\" value=\"16pt\"/></title><number><style name=\"color\" value=\"#666666\"/><style name=\"font-size\" value=\"9pt\"/></number><heading><style name=\"font-size\" value=\"10pt\"/><style name=\"font-weight\" value=\"bold\"/><style name=\"color\" value=\"#000066\"/><style name=\"border-bottom\" value=\"1px solid #999999\"/></heading></stylesheet></kbarticle>",
+    "title": "Standard KB Article"
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "portability": "not-established",
+    "value": "c3f93721-91b6-475a-acd0-0a68aa1cb842"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "System",
+      "version": "5.0"
+    }
+  ],
+  "typeIdentity": "platform:38"
+}

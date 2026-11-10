@@ -1,0 +1,73 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "msdyn_appCopilot.topic.DefaultPlatformSparkContent"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponent"
+    },
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 10,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnEventActivity\r\n  id: main\r\n  actions:\r\n    - kind: ConditionGroup\r\n      id: conditionGroup_3LXuJg\r\n      conditions:\r\n        - id: conditionItem_EJuABh\r\n          actions:\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_zYoM08\r\n              value: 작업\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_9BuDTP\r\n              value: 분석\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_EkrPi4\r\n              value: 문의\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_xa3sQu\r\n              value: 이동할 [테이블 이름]\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_hxAu6L\r\n              value: [테이블 이름]의 개수가 몇 개입니까?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_Bw9lQz\r\n              value: [조건 삽입]인 [테이블 이름]의 개수가 몇 개입니까?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_fbkHRn\r\n              value: 지난주에 내가 만든 [테이블 이름] 테이블은 무엇입니까?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_eFjQXY\r\n              value: [레코드 이름] 레코드가 누구에게 할당되었습니까?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_IIRGvt\r\n              value: [사람]에게 할당된 [테이블 이름] 테이블은 무엇입니까?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_FWjnVw\r\n              value: 무엇이 내 [테이블 이름]입니까?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_qwKkPs\r\n              value: 내 연락처는 누구입니까?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_BBCLi0\r\n              value: 이메일 주소가 없는 연락처는 무엇입니까?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_A2gsy5\r\n              value: 근무처 전화번호가 없는 연락처는 무엇입니까?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_3saXSn\r\n              value: 지난 30일 동안 어떤 영업 기회가 마감되었습니까?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_b2NE88\r\n              value: 예상 수익이 가장 높은 영업 기회는 무엇입니까?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_4wQDfG\r\n              value: 내 공개 영업 기회는 무엇입니까?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_ugohCY\r\n              value: 지난 30일 동안 어떤 잠재 고객이 마감되었습니까?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_g1WVnq\r\n              value: 내 공개 잠재 고객은 무엇입니까?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_XAsvzk\r\n              value: 수익이 가장 높은 상위 10개 계정은 무엇입니까?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_tMqHg9\r\n              value: 거래처 Adventure Works에 대한 최신 뉴스 가져오기\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_ogSkT5\r\n              value: 연락처가 없는 계정은 무엇입니까?",
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": 1042,
+    "name": "Sparks 기본 플랫폼 콘텐츠 (ko-KR)",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.DefaultPlatformSparkContent.ko-KR",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.DefaultPlatformSparkContent.ko-KR"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

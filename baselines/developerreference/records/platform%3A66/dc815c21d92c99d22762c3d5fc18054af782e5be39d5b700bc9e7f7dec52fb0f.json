@@ -1,0 +1,167 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.18",
+        "Children": [],
+        "ConstructorName": "RecipientsControlWrapper",
+        "ControlManifestVersion": "1.0.52",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.FieldControl.RecipientsControlWrapper"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "RecipientsControlWrapper_Display_Key",
+        "FullName": "MscrmControls.FieldControl.RecipientsControlWrapper",
+        "IsVirtual": true,
+        "Name": "MscrmControls.FieldControl.RecipientsControlWrapper",
+        "Namespace": "MscrmControls.FieldControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "GraphApi",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [
+            {
+              "ActionType": 0
+            }
+          ],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "from",
+              "Required": true,
+              "TypeGroup": "lookups",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "to",
+              "Required": true,
+              "TypeGroup": "lookups",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "cc",
+              "Required": true,
+              "TypeGroup": "lookups",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "bcc",
+              "Required": true,
+              "TypeGroup": "lookups",
+              "Usage": 0
+            },
+            {
+              "DefaultValue": "false",
+              "Hidden": false,
+              "Name": "showEmailAddress",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "false",
+              "Hidden": false,
+              "Name": "showOOFStatus",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "false",
+              "Hidden": false,
+              "Name": "showSendEmail",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "false",
+              "Hidden": false,
+              "Name": "showExternalTag",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "false",
+              "Hidden": false,
+              "Name": "defaultExpandedMode",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.FieldControl.RecipientsControlWrapper_bundle.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RecipientsControlWrapper.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "Lookup.PartyList",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.FieldControl\" constructor=\"RecipientsControlWrapper\" version=\"1.0.52\" display-name-key=\"RecipientsControlWrapper_Display_Key\" description-key=\"RecipientsControlWrapper_Desc_Key\" control-type=\"virtual\" api-version=\"1.3.18\"><external-service-usage enabled=\"false\" /><type-group name=\"lookups\"><type>Lookup.PartyList</type></type-group><property name=\"from\" display-name-key=\"from_Display_Key\" description-key=\"from_Desc_Key\" of-type-group=\"lookups\" usage=\"bound\" required=\"true\" /><property name=\"to\" display-name-key=\"to_Display_Key\" description-key=\"to_Desc_Key\" of-type-group=\"lookups\" usage=\"bound\" required=\"true\" /><property name=\"cc\" display-name-key=\"cc_Display_Key\" description-key=\"cc_Desc_Key\" of-type-group=\"lookups\" usage=\"bound\" required=\"true\" /><property name=\"bcc\" display-name-key=\"bcc_Display_Key\" description-key=\"bcc_Desc_Key\" of-type-group=\"lookups\" usage=\"bound\" required=\"true\" /><property name=\"showEmailAddress\" display-name-key=\"showEmailAddress_Display_Key\" description-key=\"showEmailAddress_Desc_Key\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"false\" default-value=\"false\" /><property name=\"showOOFStatus\" display-name-key=\"showOOFStatus_Display_Key\" description-key=\"showOOFStatus_Desc_Key\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"false\" default-value=\"false\" /><property name=\"showSendEmail\" display-name-key=\"showSendEmail_Display_Key\" description-key=\"showSendEmail_Desc_Key\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"false\" default-value=\"false\" /><property name=\"showExternalTag\" display-name-key=\"showExternalTag_Display_Key\" description-key=\"showExternalTag_Desc_Key\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"false\" default-value=\"false\" /><property name=\"defaultExpandedMode\" display-name-key=\"defaultExpandedMode_Display_Key\" description-key=\"defaultExpandedMode_Desc_Key\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"false\" default-value=\"false\" /><resources><code path=\"bundle.js\" order=\"1\" /><resx path=\"strings/RecipientsControlWrapper.1033.resx\" version=\"1.0.0\" /></resources><feature-usage><uses-feature name=\"GraphApi\" required=\"true\" /><uses-feature name=\"Utility\" required=\"true\" /><uses-feature name=\"WebAPI\" required=\"true\" /></feature-usage><platform-action action-type=\"afterPageLoad\" /><built-by name=\"pac\" version=\"1.49.1-alpha-25090500\" /></control></manifest>",
+    "name": "MscrmControls.FieldControl.RecipientsControlWrapper",
+    "supportedplatform": "(Model)",
+    "version": "1.0.52"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.FieldControl.RecipientsControlWrapper"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

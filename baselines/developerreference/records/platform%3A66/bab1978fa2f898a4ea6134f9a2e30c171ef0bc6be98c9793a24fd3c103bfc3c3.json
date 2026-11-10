@@ -1,0 +1,106 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "DuplicateDetectionControl",
+        "ControlManifestVersion": "1.0.0",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.DuplicateDetection.DuplicateDetectionControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_AppCommon_DuplicateDetection",
+        "FullName": "MscrmControls.AppCommon.DuplicateDetection.DuplicateDetectionControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.DuplicateDetection.DuplicateDetectionControl",
+        "Namespace": "MscrmControls.AppCommon.DuplicateDetection",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "FRECommon",
+              "LoadOrder": 2,
+              "Name": "FRECommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "FREShell",
+              "LoadOrder": 3,
+              "Name": "FREShell",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 11,
+              "Name": "MscrmControls.AppCommon.DuplicateDetection.DuplicateDetectionControl_DuplicateDetection.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 22,
+              "Name": "css/DuplicateDetection.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/duplicatedetection.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.4.0066",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.DuplicateDetection\" constructor=\"DuplicateDetectionControl\" version=\"1.0.0\" display-name-key=\"CC_AppCommon_DuplicateDetection\" control-type=\"virtual\" hidden=\"true\"><modes></modes><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><library name=\"FRECommon\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/frecommon-lib.js\" version=\"1.0.0\" /></library><library name=\"FREShell\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"libs/FREShell.js\" version=\"1.0.0\" /></library><code path=\"DuplicateDetection.js\" order=\"11\" /><css path=\"css/DuplicateDetection.css\" order=\"22\" /><resx path=\"locale/duplicatedetection.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.DuplicateDetection.DuplicateDetectionControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.0"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.DuplicateDetection.DuplicateDetectionControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommon",
+      "version": "9.0.4.0066"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

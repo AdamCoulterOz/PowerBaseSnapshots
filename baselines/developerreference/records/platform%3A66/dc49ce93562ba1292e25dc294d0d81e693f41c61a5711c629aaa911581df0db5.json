@@ -1,0 +1,103 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "SummarySectionControl",
+        "ControlManifestVersion": "1.0.1",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.ExcelWordTemplate.SummarySectionControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_Mock_Name",
+        "FullName": "MscrmControls.AppCommon.ExcelWordTemplate.SummarySectionControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.ExcelWordTemplate.SummarySectionControl",
+        "Namespace": "MscrmControls.AppCommon.ExcelWordTemplate",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "uploaded_template_id",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.AppCommon.ExcelWordTemplate.SummarySectionControl_SummarySection.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/summarysection.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.4.0066",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.ExcelWordTemplate\" constructor=\"SummarySectionControl\" version=\"1.0.1\" display-name-key=\"CC_Mock_Name\" control-type=\"virtual\" hidden=\"true\"><modes></modes><type-group name=\"all\"><type>SingleLine.Text</type></type-group><property name=\"uploaded_template_id\" display-name-key=\"CC_uploaded_template_id\" description-key=\"CC_uploaded_template_id_Desc\" of-type-group=\"all\" usage=\"input\" required=\"true\" hidden=\"true\" /><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><code path=\"SummarySection.js\" order=\"3\" /><resx path=\"locale/summarysection.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.ExcelWordTemplate.SummarySectionControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.1"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.ExcelWordTemplate.SummarySectionControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommon",
+      "version": "9.0.4.0066"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch",
+      "version": "9.0.1904.4006"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

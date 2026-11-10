@@ -1,0 +1,142 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "DateRangeFilterControl",
+        "ControlManifestVersion": "1.0.68",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.DateRangeControl.DateRangeFilterControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_DateRangeFilterControl",
+        "FullName": "MscrmControls.DateRangeControl.DateRangeFilterControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.DateRangeControl.DateRangeFilterControl",
+        "Namespace": "MscrmControls.DateRangeControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "Type": "DateRange",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "DateRangeAttribute",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "DateRangeTimeframe",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "CustomTimeFrameStartDate",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "CustomTimeFrameEndDate",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "DashboardColumns",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "DashboardWidth",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "DateRangeOutput",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 2
+            },
+            {
+              "Hidden": true,
+              "Name": "TimeFrameOutput",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 2
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "DateRangeFilter",
+              "LoadOrder": 1,
+              "Name": "DateRangeFilter",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/DateRangeFilterControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.DateRangeControl\" constructor=\"DateRangeFilterControl\" version=\"1.0.68\" display-name-key=\"CC_DateRangeFilterControl\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"value\" required=\"true\" display-name-key=\"CC_DateRangeControl_Value\" description-key=\"CC_DateRangeControl_Value_Desc\" usage=\"bound\" of-type=\"DateRange\" /><property name=\"DateRangeAttribute\" display-name-key=\"CC_DateRangeControl_DateRangeAttribute\" description-key=\"DateRangeAttribute\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"DateRangeTimeframe\" display-name-key=\"CC_DateRangeControl_DateRangeTimeframe\" description-key=\"DateRangeTimeframe\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"CustomTimeFrameStartDate\" display-name-key=\"CC_DateRangeControl_CustomTimeFrameStartDate\" description-key=\"CustomTimeFrameStartDate\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"CustomTimeFrameEndDate\" display-name-key=\"CC_DateRangeControl_CustomTimeFrameEndDate\" description-key=\"CustomTimeFrameEndDate\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"DashboardColumns\" display-name-key=\"CC_DateRangeControl_DashboardColumns\" description-key=\"DashboardColumns\" usage=\"input\" of-type=\"Whole.None\" required=\"false\" hidden=\"true\" /><property name=\"DashboardWidth\" display-name-key=\"CC_DateRangeControl_DashboardWidth\" description-key=\"DashboardWidth\" usage=\"input\" of-type=\"Whole.None\" required=\"false\" hidden=\"true\" /><property name=\"DateRangeOutput\" display-name-key=\"CC_DateRangeControl_DateRangeOutput\" description-key=\"DateRangeOutput\" usage=\"output\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"TimeFrameOutput\" display-name-key=\"CC_DateRangeControl_TimeFrameOutput\" description-key=\"TimeFrameOutput\" usage=\"output\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><resources><library name=\"DateRangeFilter\" version=\"&gt;=1.0.68\" order=\"1\"><packaged_library path=\"DateRangeFilterControl.js\" version=\"1.0.68\" /></library><resx path=\"strings/DateRangeFilterControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.DateRangeControl.DateRangeFilterControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.68"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.DateRangeControl.DateRangeFilterControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

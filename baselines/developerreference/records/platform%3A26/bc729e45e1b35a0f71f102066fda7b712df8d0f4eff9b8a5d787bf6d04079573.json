@@ -1,0 +1,172 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"true\" savedqueryid=\"b65900d5-7d55-4ac9-bc6a-33c24b458b05\"><entity name=\"phonecall\"><attribute name=\"subject\" /><attribute name=\"regardingobjectid\" /><attribute name=\"activityid\" /><attribute name=\"actualend\" /><attribute name=\"from\" /><attribute name=\"to\" /><order attribute=\"actualend\" descending=\"true\" /><filter type=\"and\"><condition attribute=\"statecode\" operator=\"eq\" value=\"1\" /></filter><link-entity name=\"activityparty\" from=\"activityid\" to=\"activityid\" alias=\"aa\"><filter type=\"and\"><condition attribute=\"participationtypemask\" operator=\"in\"><value>2</value><value>1</value><value>9</value></condition><condition attribute=\"partyid\" operator=\"eq-userid\" /></filter></link-entity></entity></fetch>",
+    "introducedversion": "5.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "subject",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "phonecall"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "from",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "to",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "subject",
+                "RelatedEntityName": "",
+                "Width": 250
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "regardingobjectid",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "actualend",
+                "RelatedEntityName": "",
+                "Width": 100
+              }
+            ],
+            "Id": "activityid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "phonecall"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:phonecall\" jump=\"subject\" select=\"1\" preview=\"1\" icon=\"1\"><row name=\"result\" id=\"activityid\"><cell name=\"from\" width=\"100\" /><cell name=\"to\" width=\"100\" /><cell name=\"subject\" width=\"250\" /><cell name=\"regardingobjectid\" width=\"100\" /><cell name=\"actualend\" width=\"100\" /></row></grid>"
+    },
+    "name": "My Completed Phone Calls",
+    "offlinesqlquery": "/*SelectStart*/select   DISTINCT  \"phonecall0\".[subject] as \"subject\"\r , \"phonecall0\".[regardingobjectid!id] as \"regardingobjectid!id\"\r , \"phonecall0\".[regardingobjectid!logicalname] as \"regardingobjectid!logicalname\"\r , \"phonecall0\".[regardingobjectid!name] as \"regardingobjectid!name\"\r , \"phonecall0\".[activityid] as \"activityid\"\r , \"phonecall0\".[actualend] as \"actualend\"\r , \"phonecall0\".[from] as \"from\"\r , \"phonecall0\".[to] as \"to\"/*SelectEnd*/  /*FromStart*/from  PhoneCall as \"phonecall0\" \t/*JoinStart*/ join ActivityParty as \"aa\" on (\"phonecall0\".[activityid]  =  \"aa\".[activityid!id] and ((\"aa\".[participationtypemask] in (2\r , 1\r , 9)) and \"aa\".[partyid!id] = \"!eq-userid!\"))/*JoinEnd*//*FromEnd*/  /*WhereStart*/where  (\"phonecall0\".[statecode] = 1)/*WhereEnd*/  /*OrderByStart*/order by  \"phonecall0\".[actualend] desc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "phonecall",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "b65900d5-7d55-4ac9-bc6a-33c24b458b05",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "phonecall",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "b65900d5-7d55-4ac9-bc6a-33c24b458b05"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "System",
+      "version": "5.0"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

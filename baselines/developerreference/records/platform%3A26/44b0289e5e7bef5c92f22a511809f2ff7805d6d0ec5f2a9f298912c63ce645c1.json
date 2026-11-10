@@ -1,0 +1,124 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": true
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": "",
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" savedqueryid=\"735de4f0-c287-42eb-b5e6-2f01a75a40fb\"><entity name=\"mspp_webrole\"><attribute name=\"mspp_name\" /><order attribute=\"mspp_name\" descending=\"false\" /><filter type=\"and\"><condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /></filter><attribute name=\"mspp_websiteid\" /><attribute name=\"mspp_webroleid\" /></entity></fetch>",
+    "introducedversion": "1.0.0.0",
+    "iscustom": true,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "mspp_name",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "mspp_webrole"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "mspp_name",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "mspp_websiteid",
+                "RelatedEntityName": "",
+                "Width": 150
+              }
+            ],
+            "Id": "mspp_webroleid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "mspp_webrole"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" jump=\"mspp_name\" select=\"1\" icon=\"1\" preview=\"1\" object=\"logical:mspp_webrole\"><row name=\"result\" id=\"mspp_webroleid\"><cell name=\"mspp_name\" width=\"300\" /><cell name=\"mspp_websiteid\" width=\"150\" /></row></grid>"
+    },
+    "name": "Active Web Roles",
+    "offlinesqlquery": "/*SelectStart*/select  \"mspp_webrole0\".[mspp_name] as \"mspp_name\"\r , \"mspp_webrole0\".[mspp_websiteid!id] as \"mspp_websiteid!id\"\r , \"mspp_webrole0\".[mspp_websiteid!logicalname] as \"mspp_websiteid!logicalname\"\r , \"mspp_webrole0\".[mspp_websiteid!name] as \"mspp_websiteid!name\"\r , \"mspp_webrole0\".[mspp_webroleid] as \"mspp_webroleid\"/*SelectEnd*/  /*FromStart*/from  mspp_webrole as \"mspp_webrole0\"/*FromEnd*/  /*WhereStart*/where  (\"mspp_webrole0\".[statecode] = 0)/*WhereEnd*/  /*OrderByStart*/order by  \"mspp_webrole0\".[mspp_name] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "mspp_webrole",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "735de4f0-c287-42eb-b5e6-2f01a75a40fb",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "mspp_webrole",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "735de4f0-c287-42eb-b5e6-2f01a75a40fb"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}

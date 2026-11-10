@@ -1,0 +1,91 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ReferencePanelControl",
+        "ControlManifestVersion": "1.0.53",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Containers.ReferencePanelControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_Reference_Panel",
+        "FullName": "MscrmControls.Containers.ReferencePanelControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.Containers.ReferencePanelControl",
+        "Namespace": "MscrmControls.Containers",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "Type": "ReferencePanel",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.Containers.ReferencePanelControl_ReferencePanel.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/ReferencePanel.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Containers\" constructor=\"ReferencePanelControl\" version=\"1.0.53\" display-name-key=\"CC_Reference_Panel\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"value\" required=\"true\" display-name-key=\"CC_Reference_Panel_Value\" description-key=\"CC_Reference_Panel_Desc\" usage=\"bound\" of-type=\"ReferencePanel\" /><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.14\" /></library><code path=\"ReferencePanel.js\" order=\"2\" /><resx path=\"strings/ReferencePanel.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.Containers.ReferencePanelControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.53"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Containers.ReferencePanelControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

@@ -1,0 +1,106 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "PersonalSettingsControl",
+        "ControlManifestVersion": "1.0.1",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.PersonalSettings.PersonalSettingsControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_AppCommon_PersonalSettings",
+        "FullName": "MscrmControls.AppCommon.PersonalSettings.PersonalSettingsControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.PersonalSettings.PersonalSettingsControl",
+        "Namespace": "MscrmControls.AppCommon.PersonalSettings",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [],
+          "Resources": [
+            {
+              "LibraryName": "FREShell",
+              "LoadOrder": 1,
+              "Name": "FREShell",
+              "Type": 0
+            },
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 2,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.AppCommon.PersonalSettings.PersonalSettingsControl_PersonalSettings.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 5,
+              "Name": "css/PersonalSettings.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/personalsettings.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.4.0066",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.PersonalSettings\" constructor=\"PersonalSettingsControl\" version=\"1.0.1\" display-name-key=\"CC_AppCommon_PersonalSettings\" control-type=\"virtual\" hidden=\"true\"><modes></modes><resources><library name=\"FREShell\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/FREShell.js\" version=\"1.0.0\" /></library><library name=\"jquery\" version=\"&gt;=2\" order=\"2\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><code path=\"PersonalSettings.js\" order=\"3\" /><css path=\"css/PersonalSettings.css\" order=\"5\" /><resx path=\"locale/personalsettings.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.PersonalSettings.PersonalSettingsControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.1"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.PersonalSettings.PersonalSettingsControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommon",
+      "version": "9.0.4.0066"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch",
+      "version": "9.0.1904.4006"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

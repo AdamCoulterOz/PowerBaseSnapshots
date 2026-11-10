@@ -1,0 +1,172 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": "Displays information about all routing rule item.",
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch distinct=\"false\" mapping=\"logical\" savedqueryid=\"fcb861ee-3d42-4e02-9b5f-d5aff1d26e15\"><entity name=\"routingruleitem\"><attribute name=\"name\" /><attribute name=\"routedqueueid\" /><attribute name=\"assignobjectid\" /><attribute name=\"routingruleid\" /><attribute name=\"sequencenumber\" /><order attribute=\"sequencenumber\" descending=\"false\" /></entity></fetch>",
+    "introducedversion": "9.1.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "title",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "routingruleitem"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "name",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "routingruleid",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "sequencenumber",
+                "RelatedEntityName": "",
+                "Width": 30
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "routedqueueid",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "assignobjectid",
+                "RelatedEntityName": "",
+                "Width": 100
+              }
+            ],
+            "Id": "routingruleitemid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "objecttypecode",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "routingruleitem"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:routingruleitem\" jump=\"title\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"result\" id=\"routingruleitemid\" multiobjectidfield=\"objecttypecode\"><cell name=\"name\" width=\"100\" /><cell name=\"routingruleid\" width=\"100\" /><cell name=\"sequencenumber\" width=\"30\" /><cell name=\"routedqueueid\" width=\"100\" /><cell name=\"assignobjectid\" width=\"100\" /></row></grid>"
+    },
+    "name": "All RuleItem View",
+    "offlinesqlquery": "/*SelectStart*/select  \"routingruleitem0\".[name] as \"name\"\r , \"routingruleitem0\".[routedqueueid!id] as \"routedqueueid!id\"\r , \"routingruleitem0\".[routedqueueid!logicalname] as \"routedqueueid!logicalname\"\r , \"routingruleitem0\".[routedqueueid!name] as \"routedqueueid!name\"\r , \"routingruleitem0\".[assignobjectid!id] as \"assignobjectid!id\"\r , \"routingruleitem0\".[assignobjectid!logicalname] as \"assignobjectid!logicalname\"\r , \"routingruleitem0\".[assignobjectid!name] as \"assignobjectid!name\"\r , \"routingruleitem0\".[routingruleid!id] as \"routingruleid!id\"\r , \"routingruleitem0\".[routingruleid!logicalname] as \"routingruleid!logicalname\"\r , \"routingruleitem0\".[routingruleid!name] as \"routingruleid!name\"\r , \"routingruleitem0\".[sequencenumber] as \"sequencenumber\"\r , \"routingruleitem0\".[routingruleitemid] as \"routingruleitemid\"/*SelectEnd*/  /*FromStart*/from  RoutingRuleItem as \"routingruleitem0\"/*FromEnd*/  /*OrderByStart*/order by  \"routingruleitem0\".[sequencenumber] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "routingruleitem",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "fcb861ee-3d42-4e02-9b5f-d5aff1d26e15",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "routingruleitem",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "fcb861ee-3d42-4e02-9b5f-d5aff1d26e15"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "System",
+      "version": "5.0"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

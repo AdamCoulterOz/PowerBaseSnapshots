@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": null,
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 9,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnEventActivity\r\n  id: main\r\n  eventName: Microsoft.PowerApps.Copilot.FeatureContextProvider\r\n  actions:\r\n    - kind: ParseValue\r\n      id: tVuxGh\r\n      variable: Global.PA_Copilot_FeatureSettings_Version\r\n      valueType: String\r\n      value: =If(!IsBlank(System.Activity.ChannelData.FeatureContextProvider_Version), Text(System.Activity.ChannelData.FeatureContextProvider_Version), \"-1\")\r\n\r\n    - kind: ParseValue\r\n      id: Iy6mll\r\n      variable: Global.PA_Copilot_FeatureSettings\r\n      valueType:\r\n        kind: Table\r\n        properties:\r\n          Name: String\r\n          Value: Boolean\r\n\r\n      value: =If(!IsBlank(System.Activity.ChannelData.FeatureContextProvider), System.Activity.ChannelData.FeatureContextProvider, System.Activity.Value)",
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": 1033,
+    "name": "Feature Settings Context - Event Trigger",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.AppCopilotFeatureSettings",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.AppCopilotFeatureSettings"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

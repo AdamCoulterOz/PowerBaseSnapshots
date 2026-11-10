@@ -1,0 +1,113 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "LinearRangeSliderControl",
+        "ControlManifestVersion": "1.2.13",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Slider.LinearRangeSliderControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_LinearRangeSlider_Name",
+        "FullName": "MscrmControls.Slider.LinearRangeSliderControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.Slider.LinearRangeSliderControl",
+        "Namespace": "MscrmControls.Slider",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "valueMin",
+              "Required": true,
+              "TypeGroup": "numbers",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "valueMax",
+              "Required": true,
+              "TypeGroup": "numbers",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "min",
+              "Required": true,
+              "TypeGroup": "numbers",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "max",
+              "Required": true,
+              "TypeGroup": "numbers",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "step",
+              "Required": true,
+              "TypeGroup": "numbers",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.Slider.LinearRangeSliderControl_LinearRangeSliderControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/LinearRangeSliderControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Slider\" constructor=\"LinearRangeSliderControl\" version=\"1.2.13\" display-name-key=\"CC_LinearRangeSlider_Name\" hidden=\"true\" description-key=\"CC_NumericInterval_Desc\"><modes></modes><type-group name=\"numbers\"><type>Whole.None</type><type>Currency</type><type>FP</type><type>Decimal</type></type-group><property name=\"valueMin\" display-name-key=\"CC_Value\" description-key=\"CC_LinearSlider_Value_Desc\" of-type-group=\"numbers\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"valueMax\" display-name-key=\"CC_Value\" description-key=\"CC_LinearSlider_Value_Desc\" of-type-group=\"numbers\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"min\" display-name-key=\"CC_Min\" description-key=\"CC_LinearSlider_Min_Desc\" usage=\"input\" of-type-group=\"numbers\" required=\"true\" hidden=\"false\" /><property name=\"max\" display-name-key=\"CC_Max\" description-key=\"CC_LinearSlider_Max_Desc\" usage=\"input\" of-type-group=\"numbers\" required=\"true\" hidden=\"false\" /><property name=\"step\" display-name-key=\"CC_Step\" description-key=\"CC_Step_Desc\" of-type-group=\"numbers\" usage=\"input\" required=\"true\" hidden=\"false\" /><resources><code path=\"LinearRangeSliderControl.js\" order=\"1\" /><resx path=\"strings/LinearRangeSliderControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.Slider.LinearRangeSliderControl",
+    "supportedplatform": "(Model)",
+    "version": "1.2.13"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Slider.LinearRangeSliderControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

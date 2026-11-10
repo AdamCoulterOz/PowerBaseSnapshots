@@ -1,0 +1,125 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "PostLoadPicklistControl",
+        "ControlManifestVersion": "1.0.63",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.FieldControls.PostLoadPicklistControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "PostLoad Picklist Control",
+        "FullName": "MscrmControls.FieldControls.PostLoadPicklistControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.FieldControls.PostLoadPicklistControl",
+        "Namespace": "MscrmControls.FieldControls",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "TypeGroup": "PostLoadType",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "goalMetricId",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "sourceEntityField",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "sourceStateAttribute",
+              "Required": true,
+              "Type": "Whole.None",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "dateEntityAttribute",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 2,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.FieldControls.PostLoadPicklistControl_PostLoadPicklistControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/PostLoadPicklistControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "Whole.None,SingleLine.Text,OptionSet",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.FieldControls\" constructor=\"PostLoadPicklistControl\" version=\"1.0.63\" display-name-key=\"PostLoad Picklist Control\" control-type=\"virtual\"><modes></modes><type-group name=\"PostLoadType\"><type>Whole.None</type><type>SingleLine.Text</type><type>OptionSet</type></type-group><property name=\"value\" display-name-key=\"CC_PostLoadPicklist_value\" description-key=\"CC_PostLoadPicklist_value_desc\" of-type-group=\"PostLoadType\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"goalMetricId\" display-name-key=\"CC_PostLoadPicklist_goalMetricId\" description-key=\"CC_PostLoadPicklist_GoalMetric_desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" hidden=\"true\" /><property name=\"sourceEntityField\" display-name-key=\"CC_PostLoadPicklist_source_entity\" description-key=\"CC_PostLoadPicklist_source_entity_desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><groups name=\"AttributeFieldSwitch\" display-name-key=\"CC_Attribute_Field\" description-key=\"CC_Attribute_Field_Desc\" required=\"true\"><group name=\"SourceAttributeField\" display-name-key=\"CC_Source_Attribute\"></group><group name=\"SourceStateField\" display-name-key=\"CC_Source_State\"></group><group name=\"DateEntityField\" display-name-key=\"CC_Date_Entity\"></group><group name=\"SourceStatusField\" display-name-key=\"CC_Source_Status\"><property name=\"sourceStateAttribute\" display-name-key=\"CC_Source_State_Attribute\" description-key=\"CC_Source_State_Attribute_Desc\" of-type=\"Whole.None\" usage=\"bound\" required=\"true\" /></group><group name=\"DateAttributeField\" display-name-key=\"CC_Date_Attribute\"><property name=\"dateEntityAttribute\" display-name-key=\"CC_Date_Entity_Attribute\" description-key=\"CC_Date_Entity_Attribute_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" /></group></groups><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-3.6.0.js\" version=\"3.6.0\" /></library><library name=\"mscommon\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.17\" /></library><code path=\"PostLoadPicklistControl.js\" order=\"3\" /><resx path=\"strings/PostLoadPicklistControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.FieldControls.PostLoadPicklistControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.63"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.FieldControls.PostLoadPicklistControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

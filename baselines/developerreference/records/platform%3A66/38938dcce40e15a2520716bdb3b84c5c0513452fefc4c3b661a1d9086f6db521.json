@@ -1,0 +1,128 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "GalleryGridControl",
+        "ControlManifestVersion": "1.0.26",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Gallery.GridControl.GalleryGridControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "GalleryGridControl",
+        "FullName": "MscrmControls.Gallery.GridControl.GalleryGridControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.Gallery.GridControl.GalleryGridControl",
+        "Namespace": "MscrmControls.Gallery.GridControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [],
+              "InitialDataSetFetch": true,
+              "Name": "grid",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "selectMultiple",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "enableSelection",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "selectFirstByDefault",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "labelOptionsetMetadata",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "tagsColumn",
+              "Required": false,
+              "TypeGroup": "strings",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "titleColumn",
+              "Required": false,
+              "TypeGroup": "strings",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.Gallery.GridControl.GalleryGridControl_GalleryGridControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/GalleryGridControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Gallery.GridControl\" constructor=\"GalleryGridControl\" control-type=\"virtual\" display-name-key=\"GalleryGridControl\" description-key=\"GalleryGridControl\" version=\"1.0.26\" hidden=\"true\"><modes><read /><edit /></modes><type-group name=\"strings\"><type>SingleLine.Text</type><type>Multiple</type></type-group><data-set name=\"grid\" display-name-key=\"CC_GalleryGridControl_Grid\"></data-set><property name=\"selectMultiple\" display-name-key=\"CC_GalleryGridControl_SelectMultiple\" description-key=\"CC_GalleryGridControl_DescSelectMultiple\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"true\"><value name=\"yes\" display-name-key=\"CC_GalleryGridControl_SelectMultiple_True\" description-key=\"CC_GalleryGridControl_SelectMultiple_DescTrue\">yes</value><value name=\"no\" display-name-key=\"CC_GalleryGridControl_SelectMultiple_False\" description-key=\"CC_GalleryGridControl_SelectMultiple_DescFalse\" default=\"true\">no</value></property><property name=\"enableSelection\" display-name-key=\"CC_GalleryGridControl_EnableSelection\" description-key=\"CC_GalleryGridControl_DescEnableSelection\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"true\"><value name=\"yes\" display-name-key=\"CC_GalleryGridControl_EnableSelection_True\" description-key=\"CC_GalleryGridControl_EnableSelection_DescTrue\">yes</value><value name=\"no\" display-name-key=\"CC_GalleryGridControl_EnableSelection_False\" description-key=\"CC_GalleryGridControl_EnableSelection_DescFalse\" default=\"true\">no</value></property><property name=\"selectFirstByDefault\" display-name-key=\"CC_GalleryGridControl_SelectFirstByDefault\" description-key=\"CC_GalleryGridControl_DescSelectFirstByDefault\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"true\"><value name=\"yes\" display-name-key=\"CC_GalleryGridControl_SelectFirstByDefault_True\" description-key=\"CC_GalleryGridControl_SelectFirstByDefault_DescTrue\">yes</value><value name=\"no\" display-name-key=\"CC_GalleryGridControl_SelectFirstByDefault_False\" description-key=\"CC_GalleryGridControl_SelectFirstByDefault_DescFalse\" default=\"true\">no</value></property><property name=\"labelOptionsetMetadata\" required=\"false\" display-name-key=\"CC_GalleryGridControl_LabelOptionsetMetadata\" description-key=\"CC_GalleryGridControl_LabelOptionsetMetadata\" usage=\"bound\" of-type=\"SingleLine.Text\" /><property name=\"tagsColumn\" required=\"false\" display-name-key=\"CC_GalleryGridControl_TagsName\" description-key=\"CC_GalleryGridControl_TagsDescription\" usage=\"bound\" of-type-group=\"strings\" /><property name=\"titleColumn\" required=\"false\" display-name-key=\"CC_GalleryGridControl_TitleColumn\" description-key=\"CC_GalleryGridControl_TitleDescription\" usage=\"bound\" of-type-group=\"strings\" /><resources><code path=\"GalleryGridControl.js\" order=\"1\" /><resx path=\"strings/GalleryGridControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.Gallery.GridControl.GalleryGridControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.26"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Gallery.GridControl.GalleryGridControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

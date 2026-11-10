@@ -1,0 +1,76 @@
+{
+  "configuration": {
+    "body": {
+      "bindings": [
+        {
+          "kind": "dataverse-source-origin"
+        }
+      ],
+      "content": "<?xml version=\"1.0\" ?><xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"1.0\"><xsl:output method=\"text\" indent=\"no\"/><xsl:template match=\"/data\"><![CDATA[<p>This Microsoft Dynamics CRM bulk deletion system job completed successfully.</p><p>Name: ]]><xsl:choose><xsl:when test=\"asyncoperation/name\"><xsl:value-of select=\"asyncoperation/name\" /></xsl:when><xsl:otherwise>[Bulk Deletion task]</xsl:otherwise></xsl:choose><![CDATA[</p><p>Started: ]]><xsl:choose><xsl:when test=\"asyncoperation/createdon\"><xsl:value-of select=\"asyncoperation/createdon\" /></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose><![CDATA[</p><p>To view the status of this job, either:</p><p>Click <A name=\"slugAnchorTag\"  href=\"#\" >https://dataverse.invalid/tools/asyncoperation/edit.aspx?id=]]><xsl:choose><xsl:when test=\"asyncoperation/asyncoperationid\"><xsl:value-of select=\"asyncoperation/asyncoperationid\" /></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose><![CDATA[</A></p><p>or</p>\n\t\t\t\t\t<p>Log on to Microsoft Dynamics CRM. click settings, click Data Management, and then click Bulk Record Deletion.</p><p> </p>]]></xsl:template></xsl:stylesheet>\n\t\t\t\t",
+      "kind": "normalized-document-v1"
+    },
+    "componentstate": 0,
+    "description": "Use this e-mail template for sending notification to system users on successful completion of bulk deletion task.",
+    "entityimage": null,
+    "entityimage_timestamp": null,
+    "entityimage_url": null,
+    "entityimageid": null,
+    "generationtypecode": 2,
+    "importsequencenumber": null,
+    "introducedversion": "5.0",
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "ispersonal": false,
+    "isrecommended": false,
+    "languagecode": 1033,
+    "mimetype": "",
+    "opencount": null,
+    "openrate": null,
+    "presentationxml": {
+      "bindings": [
+        {
+          "kind": "dataverse-source-origin"
+        }
+      ],
+      "content": "<template><text><![CDATA[<p>This Microsoft Dynamics CRM bulk deletion task completed successfully.</p>\n\t\t\t\t\t<p>Name: ]]></text><slugs><slug><entity>asyncoperation</entity><attribute>name</attribute></slug><default>[Bulk Deletion task]</default></slugs><text><![CDATA[</p><p>Started: ]]></text><slugs><slug><entity>asyncoperation</entity><attribute>createdon</attribute></slug><default /></slugs><text><![CDATA[</p><p>To view the status of this job, either:</p><p>Click <A name=\"slugAnchorTag\"  href=\"#\" >https://dataverse.invalid/tools/asyncoperation/edit.aspx?id=]]></text><slugs><slug><entity>asyncoperation</entity><attribute>asyncoperationid</attribute></slug><default /></slugs><text><![CDATA[</A></p><p>or</p><p>Log on to Microsoft Dynamics CRM. click settings, click Data Management, and then click Bulk Record Deletion.</p><p> </p>]]></text></template>\n\t\t\t\t",
+      "kind": "normalized-document-v1"
+    },
+    "replycount": null,
+    "replyrate": null,
+    "safehtml": {
+      "bindings": [
+        {
+          "kind": "dataverse-source-origin"
+        }
+      ],
+      "content": "<div>\n<p>This Microsoft Dynamics CRM bulk deletion task completed successfully.</p>\n<p>Name: <span class=\"dataslug\" id=\"TemplateEditor0\" data-value=\"{!asyncoperation:name;[Bulk Deletion task]}\" contenteditable=\"false\" style=\"background-color: #E7EFFF;\">{!System Job:System Job Name;[Bulk Deletion task]}</span></p>\n<p>Started: <span class=\"dataslug\" id=\"TemplateEditor1\" data-value=\"{!asyncoperation:createdon;}\" contenteditable=\"false\" style=\"background-color: #E7EFFF;\">{!System Job:Created On;}</span></p>\n<p>To view the status of this job, either:</p>\n<p>Click <a name=\"slugAnchorTag\" href=\"\">https://dataverse.invalid/tools/asyncoperation/edit.aspx?id=<span class=\"dataslug\" id=\"TemplateEditor2\" data-value=\"{!asyncoperation:asyncoperationid;}\" contenteditable=\"false\" style=\"background-color: #E7EFFF;\">{!System Job:System Job;}</span></a></p>\n<p>or</p>\n<p>Log on to Microsoft Dynamics CRM. click settings, click Data Management, and then click Bulk Record Deletion.</p>\n<p>&nbsp;</p>\n</div>\n",
+      "kind": "normalized-document-v1"
+    },
+    "subject": "<?xml version=\"1.0\" ?><xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"1.0\"><xsl:output method=\"text\" indent=\"no\"/><xsl:template match=\"/data\"><![CDATA[Microsoft Dynamics CRM: ]]><xsl:choose><xsl:when test=\"asyncoperation/name\"><xsl:value-of select=\"asyncoperation/name\" /></xsl:when><xsl:otherwise>Bulk Deletion task</xsl:otherwise></xsl:choose><![CDATA[ is complete]]></xsl:template></xsl:stylesheet>",
+    "subjectpresentationxml": "<template><text><![CDATA[Microsoft Dynamics CRM: ]]></text><slugs><slug><entity>asyncoperation</entity><attribute>name</attribute></slug><default>Bulk Deletion task</default></slugs><text><![CDATA[ is complete]]></text></template>",
+    "subjectsafehtml": "Microsoft Dynamics CRM: <span class=\"dataslug\" id=\"TemplateEditor0\" data-value=\"{!asyncoperation:name;Bulk Deletion task}\" contenteditable=\"false\" style=\"background-color: #E7EFFF;\">{!System Job:System Job Name;Bulk Deletion task}</span> is complete",
+    "templateid": "5351049b-c2a4-4335-8789-e4fa8b8b319e",
+    "templatetypecode": "asyncoperation",
+    "title": "Bulk Deletion Task Completion Template",
+    "usedcount": null
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "portability": "not-established",
+    "value": "5351049b-c2a4-4335-8789-e4fa8b8b319e"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "System",
+      "version": "5.0"
+    }
+  ],
+  "typeIdentity": "platform:36"
+}

@@ -1,0 +1,138 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" savedqueryid=\"02b21ce4-7f77-4451-bfb2-db300236c56c\"><entity name=\"convertruleitem\"><attribute name=\"name\" /><attribute name=\"modifiedby\" /><attribute name=\"convertruleitemid\" /><attribute name=\"sequencenumber\" /><attribute name=\"conditionxml\" /><order attribute=\"sequencenumber\" descending=\"false\" /></entity></fetch>",
+    "introducedversion": "6.1.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "name",
+        "Name": "convertruleitem",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "convertruleitem"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": true,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "name",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "sequencenumber",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "conditionxml",
+                "RelatedEntityName": "",
+                "Width": 0
+              }
+            ],
+            "Id": "convertruleitemid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "convertruleitem"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "convertruleitem"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"convertruleitem\" object=\"logical:convertruleitem\" jump=\"name\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"convertruleitem\" id=\"convertruleitemid\"><cell name=\"name\" width=\"150\" disableSorting=\"1\" /><cell name=\"sequencenumber\" ishidden=\"1\" width=\"100\" /><cell name=\"conditionxml\" width=\"0\" ishidden=\"1\" /></row></grid>"
+    },
+    "name": "All Case Creation Rule Items",
+    "offlinesqlquery": "/*SelectStart*/select  \"convertruleitem0\".[name] as \"name\"\r , \"convertruleitem0\".[modifiedby!id] as \"modifiedby!id\"\r , \"convertruleitem0\".[modifiedby!logicalname] as \"modifiedby!logicalname\"\r , \"convertruleitem0\".[modifiedby!name] as \"modifiedby!name\"\r , \"convertruleitem0\".[convertruleitemid] as \"convertruleitemid\"\r , \"convertruleitem0\".[sequencenumber] as \"sequencenumber\"\r , \"convertruleitem0\".[conditionxml] as \"conditionxml\"/*SelectEnd*/  /*FromStart*/from  ConvertRuleItem as \"convertruleitem0\"/*FromEnd*/  /*OrderByStart*/order by  \"convertruleitem0\".[sequencenumber] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "convertruleitem",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "02b21ce4-7f77-4451-bfb2-db300236c56c",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "convertruleitem",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "02b21ce4-7f77-4451-bfb2-db300236c56c"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}

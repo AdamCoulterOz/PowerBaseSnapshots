@@ -1,0 +1,130 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.18",
+        "Children": [],
+        "ConstructorName": "QuickFormCardControl",
+        "ControlManifestVersion": "1.0.45",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Containers.QuickFormCardControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_Quick_Form_Card",
+        "FullName": "MscrmControls.Containers.QuickFormCardControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.Containers.QuickFormCardControl",
+        "Namespace": "MscrmControls.Containers",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "Type": "Form.QuickForm",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "hideImage",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "preserveLegacyMode",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluentui-react",
+              "LoadOrder": 2,
+              "Name": "fluentui-react",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_9_4_0",
+              "LoadOrder": 0,
+              "Name": "fluent_9_4_0",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.Containers.QuickFormCardControl_QuickFormCardControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/QuickFormCardControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Containers\" constructor=\"QuickFormCardControl\" version=\"1.0.45\" display-name-key=\"CC_Quick_Form_Card\" control-type=\"virtual\" hidden=\"true\" api-version=\"1.3.18\"><modes></modes><property name=\"value\" required=\"true\" display-name-key=\"CC_Quick_Form_Card_Value\" description-key=\"CC_Quick_Form_Card_Value_Desc\" usage=\"bound\" of-type=\"Form.QuickForm\" /><property name=\"hideImage\" required=\"false\" display-name-key=\"CC_Quick_Form_Card_Hide_Image\" description-key=\"CC_Quick_Form_Card_Hide_Image_Desc\" usage=\"input\" of-type=\"Whole.None\" hidden=\"true\" /><property name=\"preserveLegacyMode\" required=\"false\" display-name-key=\"CC_Quick_Form_Card_Alternate_Mode\" description-key=\"CC_Quick_Form_Card_Alternate_Mode_Desc\" usage=\"input\" of-type=\"TwoOptions\" hidden=\"true\" /><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><library name=\"fluentui-react\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/fluentui-react.js\" version=\"8.121.1\" /></library><code path=\"QuickFormCardControl.js\" order=\"3\" /><resx path=\"strings/QuickFormCardControl.1033.resx\" version=\"1.0.0\" /><platform-library name=\"Fluent\" version=\"9.4.0\" /></resources><feature-usage><uses-feature name=\"Utility\" required=\"true\" /></feature-usage><built-by name=\"pac\" version=\"1.49.1-alpha-25090500\" /></control></manifest>",
+    "name": "MscrmControls.Containers.QuickFormCardControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.45"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Containers.QuickFormCardControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    },
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

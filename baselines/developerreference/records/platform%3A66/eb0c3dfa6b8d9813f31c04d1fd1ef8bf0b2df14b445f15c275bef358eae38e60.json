@@ -1,0 +1,121 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.18",
+        "Children": [],
+        "ConstructorName": "TimeControl",
+        "ControlManifestVersion": "1.0.138",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.FieldControls.TimeControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_TimeControl_Name",
+        "FullName": "MscrmControls.FieldControls.TimeControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.FieldControls.TimeControl",
+        "Namespace": "MscrmControls.FieldControls",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "Type": "DateAndTime.DateAndTime",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "msvcontrol",
+              "LoadOrder": 1,
+              "Name": "msvcontrol",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluentui-react",
+              "LoadOrder": 1,
+              "Name": "fluentui-react",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_9_4_0",
+              "LoadOrder": 0,
+              "Name": "fluent_9_4_0",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.FieldControls.TimeControl_bundle.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "css/TimeControlStyles.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/TimeControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.FieldControls\" constructor=\"TimeControl\" version=\"1.0.138\" display-name-key=\"CC_TimeControl_Name\" control-type=\"virtual\" hidden=\"true\" api-version=\"1.3.18\"><modes></modes><property name=\"value\" display-name-key=\"TimeControl_value\" description-key=\"TimeControl_value_desc\" of-type=\"DateAndTime.DateAndTime\" usage=\"bound\" required=\"true\" hidden=\"false\" /><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.7\" /></library><library name=\"msvcontrol\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/msvcontrollib-1.0.0.js\" version=\"1.1.12\" /></library><library name=\"fluentui-react\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/fluentui-react.js\" version=\"8.121.1\" /></library><resx path=\"strings/TimeControl.1033.resx\" version=\"1.0.0\" /><code path=\"bundle.js\" order=\"2\" /><css path=\"css/TimeControlStyles.css\" order=\"3\" /><platform-library name=\"Fluent\" version=\"9.4.0\" /></resources><feature-usage><uses-feature name=\"Utility\" required=\"true\" /></feature-usage><built-by name=\"pac\" version=\"1.49.1-alpha-25090500\" /></control></manifest>",
+    "name": "MscrmControls.FieldControls.TimeControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.138"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.FieldControls.TimeControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

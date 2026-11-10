@@ -1,0 +1,202 @@
+{
+  "configuration": {
+    "authoringmanifest": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<authoring-manifest schema-version=\"1.0\">\r\n  <group>\r\n    <section>\r\n      <property name=\"FetchXMLSql\" static-only=\"true\" />\r\n    </section>\r\n  </group>\r\n</authoring-manifest>",
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.18",
+        "Children": [],
+        "ConstructorName": "PowerBIPCFControl",
+        "ControlManifestVersion": "1.0.28",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.PowerBIPCFControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "PowerBIPCFControl_DisplayName_Key",
+        "FullName": "MscrmControls.PowerBIPCFControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.PowerBIPCFControl",
+        "Namespace": "MscrmControls",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "FetchXMLSql",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "ViewName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "GridColumnInfo",
+              "Required": false,
+              "Type": "Object",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "PowerBIReport",
+              "Required": true,
+              "Type": "PowerBI.Report",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "TEMP_EmbedUrl",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "false",
+              "Hidden": false,
+              "Name": "FilterPaneVisible",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "false",
+              "Hidden": false,
+              "Name": "FilterPaneExpanded",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "false",
+              "Hidden": false,
+              "Name": "PersistentFiltersEnabled",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "false",
+              "Hidden": false,
+              "Name": "ActionBarVisible",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "false",
+              "Hidden": false,
+              "Name": "BookmarksVisible",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "false",
+              "Hidden": false,
+              "Name": "PageNavigationVisible",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "1",
+              "Hidden": false,
+              "Name": "PageNavigationPosition",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "0",
+              "Hidden": false,
+              "Name": "Background",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "PowerBIFilter",
+              "Required": false,
+              "Type": "SingleLine.TextArea",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "fluentui-react",
+              "LoadOrder": 1,
+              "Name": "fluentui-react",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.PowerBIPCFControl_bundle.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "images/powerbi_icon.svg",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/PowerBIPCFControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls\" constructor=\"PowerBIPCFControl\" version=\"1.0.28\" display-name-key=\"PowerBIPCFControl_DisplayName_Key\" description-key=\"PowerBIPCFControl_Desc_Key\" control-type=\"standard\" preview-image=\"images/preview.png\" authoring-manifest=\"PowerBIPCFControl_manifest.authoring.xml\" api-version=\"1.3.18\"><property name=\"FetchXMLSql\" display-name-key=\"FetchXMLSql_Display_Key\" description-key=\"FetchXMLSql_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"true\" /><property name=\"ViewName\" display-name-key=\"ViewName_Display_Key\" description-key=\"ViewName_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"true\" /><property name=\"GridColumnInfo\" display-name-key=\"GridColumnInfo_Display_Key\" description-key=\"GridColumnInfo_Desc_Key\" of-type=\"Object\" usage=\"input\" required=\"false\" hidden=\"true\" /><property name=\"PowerBIReport\" display-name-key=\"PowerBI_Display_Key\" description-key=\"PowerBI_Desc_Key\" of-type=\"PowerBI.Report\" usage=\"input\" required=\"true\" hidden=\"false\" /><property name=\"TEMP_EmbedUrl\" display-name-key=\"EmbedUrl_Display_Key\" description-key=\"EmbedUrl_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"true\" /><property name=\"FilterPaneVisible\" display-name-key=\"FilterPaneVisible_Display_Key\" of-type=\"Enum\" usage=\"input\" required=\"false\" hidden=\"false\" default-value=\"false\"><value name=\"True\" display-name-key=\"FilterPaneVisible_True_Display_Key\">true</value><value name=\"False\" display-name-key=\"FilterPaneVisible_False_Display_Key\">false</value></property><property name=\"FilterPaneExpanded\" display-name-key=\"FilterPaneExpanded_Display_Key\" of-type=\"Enum\" usage=\"input\" required=\"false\" hidden=\"false\" default-value=\"false\"><value name=\"True\" display-name-key=\"FilterPaneExpanded_True_Display_Key\">true</value><value name=\"False\" display-name-key=\"FilterPaneExpanded_False_Display_Key\">false</value></property><property name=\"PersistentFiltersEnabled\" display-name-key=\"PersistentFiltersEnabled_Display_Key\" description-key=\"PersistentFiltersEnabled_Desc_Key\" of-type=\"Enum\" usage=\"input\" required=\"false\" hidden=\"false\" default-value=\"false\"><value name=\"True\" display-name-key=\"PersistentFiltersEnabled_True_Display_Key\">true</value><value name=\"False\" display-name-key=\"PersistentFiltersEnabled_False_Display_Key\">false</value></property><property name=\"ActionBarVisible\" display-name-key=\"ActionBarVisible_Display_Key\" description-key=\"ActionBarVisible_Desc_Key\" of-type=\"Enum\" usage=\"input\" required=\"false\" hidden=\"false\" default-value=\"false\"><value name=\"True\" display-name-key=\"ActionBarVisible_True_Display_Key\">true</value><value name=\"False\" display-name-key=\"ActionBarVisible_False_Display_Key\">false</value></property><property name=\"BookmarksVisible\" display-name-key=\"BookmarksVisible_Display_Key\" of-type=\"Enum\" usage=\"input\" required=\"false\" hidden=\"false\" default-value=\"false\"><value name=\"True\" display-name-key=\"BookmarksVisible_True_Display_Key\">true</value><value name=\"False\" display-name-key=\"BookmarksVisible_False_Display_Key\">false</value></property><property name=\"PageNavigationVisible\" display-name-key=\"PageNavigationVisible_Display_Key\" of-type=\"Enum\" usage=\"input\" required=\"false\" hidden=\"false\" default-value=\"false\"><value name=\"True\" display-name-key=\"PageNavigationVisible_True_Display_Key\">true</value><value name=\"False\" display-name-key=\"PageNavigationVisible_False_Display_Key\">false</value></property><property name=\"PageNavigationPosition\" display-name-key=\"PageNavigationPosition_Display_Key\" of-type=\"Enum\" usage=\"input\" required=\"false\" hidden=\"false\" default-value=\"1\"><value name=\"Bottom\" display-name-key=\"PageNavigationPosition_Bottom_Display_Key\">0</value><value name=\"Left\" display-name-key=\"PageNavigationPosition_Left_Display_Key\">1</value></property><property name=\"Background\" display-name-key=\"Background_Display_Key\" of-type=\"Enum\" usage=\"input\" required=\"false\" hidden=\"false\" default-value=\"0\"><value name=\"Default\" display-name-key=\"Background_Default_Display_Key\">0</value><value name=\"Transparent\" display-name-key=\"Background_Transparent_Display_Key\">1</value></property><property name=\"PowerBIFilter\" display-name-key=\"PowerBIFilter_Display_Key\" description-key=\"PowerBIFilter_Desc_Key\" of-type=\"SingleLine.TextArea\" usage=\"input\" required=\"false\" hidden=\"false\" /><resources><code path=\"bundle.js\" order=\"2\" /><resx path=\"strings/PowerBIPCFControl.1033.resx\" version=\"1.0.1\" /><img path=\"images/powerbi_icon.svg\" /><library name=\"fluentui-react\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/fluentui-react.js\" version=\"8.121.1\" /></library></resources><feature-usage><uses-feature name=\"Utility\" required=\"true\" /></feature-usage><built-by name=\"pac\" version=\"1.49.1-alpha-25090500\" /><subscribed-functionalities><subscribed-functionality name=\"sharedTemplate\" value=\"false\" /></subscribed-functionalities></control></manifest>",
+    "name": "MscrmControls.PowerBIPCFControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.28"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.PowerBIPCFControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

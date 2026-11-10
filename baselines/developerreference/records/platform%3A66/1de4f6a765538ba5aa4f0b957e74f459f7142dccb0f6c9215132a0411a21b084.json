@@ -1,0 +1,91 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "HolidayListControl",
+        "ControlManifestVersion": "1.0.3",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.CustomerServiceSchedule.HolidayListControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_HolidayList_Name",
+        "FullName": "MscrmControls.AppCommon.CustomerServiceSchedule.HolidayListControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.CustomerServiceSchedule.HolidayListControl",
+        "Namespace": "MscrmControls.AppCommon.CustomerServiceSchedule",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "holidayListControlInput",
+              "Required": true,
+              "TypeGroup": "Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 5,
+              "Name": "MscrmControls.AppCommon.CustomerServiceSchedule.HolidayListControl_HolidayListControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/HolidayListControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.Text",
+    "componentstate": 0,
+    "introducedversion": "9.0.1904.4006",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.CustomerServiceSchedule\" constructor=\"HolidayListControl\" version=\"1.0.3\" display-name-key=\"CC_HolidayList_Name\" control-type=\"virtual\"><modes></modes><type-group name=\"Text\"><type>SingleLine.Text</type></type-group><property name=\"holidayListControlInput\" display-name-key=\"CC_HolidayList\" description-key=\"Input data of holiday list control\" of-type-group=\"Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><resources><code path=\"HolidayListControl.js\" order=\"5\" /><resx path=\"locale/HolidayListControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.CustomerServiceSchedule.HolidayListControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.3"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.CustomerServiceSchedule.HolidayListControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch",
+      "version": "9.0.1904.4006"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

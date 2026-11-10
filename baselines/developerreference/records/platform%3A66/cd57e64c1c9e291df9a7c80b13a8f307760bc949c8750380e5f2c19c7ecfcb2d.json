@@ -1,0 +1,506 @@
+{
+  "configuration": {
+    "authoringmanifest": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<authoring-manifest schema-version=\"1.0\" display-name-override-key=\"PowerAppsOneGrid_Override_Name\">\r\n  <group>\r\n    <section type=\"GeneralSection\">\r\n      <property name=\"Items\" show-in-canvas-inline-action-bar=\"true\" />\r\n      <property name=\"NoDataText\" />\r\n      <property name=\"Visible\"/>\r\n      <property name=\"DateTimeFormat\" />\r\n      <property name=\"DateOnlyFormat\" />\r\n    </section>\r\n    <section type=\"BehaviorSection\">\r\n        <property name=\"ReflowBehavior\" />\r\n        <property name=\"EnableSorting\" />\r\n        <property name=\"EnableRangeSelection\" />\r\n        <property name=\"EnableMultipleSelection\" />\r\n    </section>\r\n    <section type=\"SizeAndPositioningSection\">\r\n      <property-group name=\"Position\">\r\n        <property name=\"X\" />\r\n        <property name=\"Y\" />\r\n      </property-group>\r\n      <property-group name=\"Size\">\r\n        <property name=\"Width\" />\r\n        <property name=\"Height\" />\r\n      </property-group>\r\n    </section>\r\n    <section type=\"StyleAndThemeSection\">\r\n      <property name=\"HeaderFont\" complex-type=\"Font\" />\r\n      <property name=\"HeaderFontSize\"/>\r\n      <property name=\"HeaderFontColor\" complex-type=\"FontColor\" helper-ui=\"color\" />\r\n      <property name=\"HeaderFontWeight\" complex-type=\"FontWeight\" />\r\n      <property name=\"BasePaletteColor\" complex-type=\"ColorPalette\" />\r\n      <property name=\"Font\" complex-type=\"Font\" />\r\n      <property name=\"FontSize\"/>\r\n      <property name=\"FontColor\" complex-type=\"FontColor\" helper-ui=\"color\" />\r\n      <property name=\"FontWeight\" complex-type=\"FontWeight\" />\r\n    </section>\r\n  </group>\r\n</authoring-manifest>",
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.18",
+        "Children": [],
+        "ConstructorName": "PowerAppsOneGrid",
+        "ControlManifestVersion": "1.0.359",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "Microsoft.PowerApps.PowerAppsOneGrid"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "PowerAppsOneGrid_Name",
+        "FullName": "Microsoft.PowerApps.PowerAppsOneGrid",
+        "IsVirtual": true,
+        "Name": "Microsoft.PowerApps.PowerAppsOneGrid",
+        "Namespace": "Microsoft.PowerApps",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [],
+              "InitialDataSetFetch": true,
+              "Name": "Items",
+              "Type": "Grid"
+            },
+            {
+              "CDSDataSetOptions": "displayCommandBar:true",
+              "Columns": [
+                {
+                  "Hidden": false,
+                  "Name": "ParentId",
+                  "Required": false,
+                  "Type": "Lookup.Simple",
+                  "Usage": 0
+                }
+              ],
+              "InitialDataSetFetch": true,
+              "Name": "ChildItems",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [
+            {
+              "Description": "PowerAppsOneGrid_onCellValueChange_Desc",
+              "DisplayName": "PowerAppsOneGrid_onCellValueChange_Name",
+              "Hidden": true,
+              "Name": "onCellValueChange"
+            },
+            {
+              "Description": "PowerAppsOneGrid_onFilter_Desc",
+              "DisplayName": "PowerAppsOneGrid_onFilter_Name",
+              "Hidden": true,
+              "Name": "onFilter"
+            },
+            {
+              "Description": "PowerAppsOneGrid_onNavigate_Desc",
+              "DisplayName": "PowerAppsOneGrid_onNavigate_Name",
+              "Hidden": true,
+              "Name": "onNavigate"
+            },
+            {
+              "Description": "PowerAppsOneGrid_onRowSelect_Desc",
+              "DisplayName": "PowerAppsOneGrid_onRowSelect_Name",
+              "Hidden": true,
+              "Name": "onRowSelect"
+            },
+            {
+              "Description": "PowerAppsOneGrid_onSave_Desc",
+              "DisplayName": "PowerAppsOneGrid_onSave_Name",
+              "Hidden": true,
+              "Name": "onSave"
+            },
+            {
+              "Description": "PowerAppsOneGrid_OnSelect_Desc",
+              "DisplayName": "PowerAppsOneGrid_OnSelect_Name",
+              "Hidden": false,
+              "Name": "OnSelect"
+            }
+          ],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "ExplicitCommonEvents",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "PreventDefaultSort",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [
+            {
+              "ActionType": 0
+            }
+          ],
+          "Properties": [
+            {
+              "DefaultValue": "",
+              "Hidden": false,
+              "Name": "AccessibleLabel",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnableEditing",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "DisableChildItemsEditing",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "HeadlessRendering",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnableFiltering",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnableSorting",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnableGrouping",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "",
+              "Hidden": true,
+              "Name": "GroupColumnAction",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnableAggregation",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnableColumnMoving",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnableMultipleSelection",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnableRangeSelection",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnableJumpBar",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnablePagination",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnableDropdownColor",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnableStatusIcons",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnableTypeIcons",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "NavigationTypesAllowed",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ReflowBehavior",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ShowAvatar",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ShowColumnNamesForListView",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnableBandedRowsForListView",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "3",
+              "Hidden": false,
+              "Name": "NumberOfListColumns",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "ShowFooter",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "ShowColumnHeaders",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ContextualLookupColumnFilters",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "LookupFilterBeginsWith",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "UseFirstColumnForLookupEdits",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "GridCustomizerControlFullName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "GridActions",
+              "Required": false,
+              "Type": "Object",
+              "Usage": 2
+            },
+            {
+              "DefaultValue": "",
+              "Hidden": true,
+              "Name": "BasePaletteColor",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "",
+              "Hidden": true,
+              "Name": "Font",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "",
+              "Hidden": true,
+              "Name": "FontColor",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "",
+              "Hidden": true,
+              "Name": "FontSize",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "",
+              "Hidden": true,
+              "Name": "FontWeight",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "",
+              "Hidden": true,
+              "Name": "HeaderFont",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "",
+              "Hidden": true,
+              "Name": "HeaderFontColor",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "",
+              "Hidden": true,
+              "Name": "HeaderFontSize",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "",
+              "Hidden": true,
+              "Name": "HeaderFontWeight",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "DefaultValue": "",
+              "Hidden": true,
+              "Name": "NoDataText",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "TabIndex",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "DateTimeFormat",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "DateOnlyFormat",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnableStatusColumn",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "DisableStatusColumn",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "DisableStatusColumnSavingIcons",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "react_16_14_0",
+              "LoadOrder": 0,
+              "Name": "react_16_14_0",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_8_121_1",
+              "LoadOrder": 0,
+              "Name": "fluent_8_121_1",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "Microsoft.PowerApps.PowerAppsOneGrid_PowerAppsOneGrid.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/PowerAppsOneGrid.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "Grid",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"Microsoft.PowerApps\" constructor=\"PowerAppsOneGrid\" version=\"1.0.359\" authoring-manifest=\"PowerAppsOneGrid_manifest.authoring.xml\" display-name-key=\"PowerAppsOneGrid_Name\" description-key=\"PowerAppsOneGrid_Desc\" control-type=\"virtual\" api-version=\"1.3.18\"><data-set name=\"Items\" display-name-key=\"PowerAppsOneGrid_Items_Name\" description-key=\"PowerAppsOneGrid_Items_Desc\" allow-default-selected-items=\"false\" resettable=\"true\" editable=\"true\" /><data-set name=\"ChildItems\" display-name-key=\"PowerAppsOneGrid_ChildItems_Name\" description-key=\"PowerAppsOneGrid_ChildItems_Desc\" cds-data-set-options=\"displayCommandBar:true\"><property-set name=\"ParentId\" display-name-key=\"ChildItems_ParentId_Name\" description-key=\"ChildItems_ParentId_Desc\" of-type=\"Lookup.Simple\" usage=\"bound\" required=\"false\" /></data-set><property name=\"AccessibleLabel\" display-name-key=\"PowerAppsOneGrid_AccessibleLabel_Display_Key\" description-key=\"PowerAppsOneGrid_AccessibleLabel_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" default-value=\"\" /><property name=\"EnableEditing\" display-name-key=\"PowerAppsOneGrid_EnableEditing_Name\" description-key=\"PowerAppsOneGrid_EnableEditing_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"Yes\" display-name-key=\"PowerAppsOneGrid_EnableEditing_Yes_Name\" description-key=\"PowerAppsOneGrid_EnableEditing_Yes_Desc\">yes</value><value name=\"No\" display-name-key=\"PowerAppsOneGrid_ReadOnlyMode_No_Name\" description-key=\"PowerAppsOneGrid_ReadOnlyMode_No_Desc\" default=\"true\">no</value></property><property name=\"DisableChildItemsEditing\" display-name-key=\"PowerAppsOneGrid_DisableChildItemsEditing_Name\" description-key=\"PowerAppsOneGrid_DisableChildItemsEditing_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"Yes\" display-name-key=\"PowerAppsOneGrid_DisableChildItemsEditing_Yes_Name\" description-key=\"PowerAppsOneGrid_DisableChildItemsEditing_Yes_Desc\">yes</value><value name=\"No\" display-name-key=\"PowerAppsOneGrid_DisableChildItemsEditing_No_Name\" description-key=\"PowerAppsOneGrid_DisableChildItemsEditing_No_Desc\" default=\"true\">no</value></property><property name=\"HeadlessRendering\" display-name-key=\"\" description-key=\"\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"true\"><value name=\"Yes\" display-name-key=\"\">yes</value><value name=\"No\" display-name-key=\"\" default=\"true\">no</value></property><property name=\"EnableFiltering\" display-name-key=\"PowerAppsOneGrid_EnableFiltering_Name\" description-key=\"PowerAppsOneGrid_EnableFiltering_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_EnableFiltering_Enable_Name\" description-key=\"PowerAppsOneGrid_EnableFiltering_Enable_Desc\" default=\"true\">yes</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_EnableFiltering_Disable_Name\" description-key=\"PowerAppsOneGrid_EnableFiltering_Disable_Desc\">no</value></property><property name=\"EnableSorting\" display-name-key=\"PowerAppsOneGrid_EnableSorting_Name\" description-key=\"PowerAppsOneGrid_EnableSorting_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_EnableSorting_Enable_Name\" description-key=\"PowerAppsOneGrid_EnableSorting_Enable_Desc\" default=\"true\">yes</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_EnableSorting_Disable_Name\" description-key=\"PowerAppsOneGrid_EnableSorting_Disable_Desc\">no</value></property><property name=\"EnableGrouping\" display-name-key=\"PowerAppsOneGrid_EnableGrouping_Name\" description-key=\"PowerAppsOneGrid_EnableGrouping_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_EnableGrouping_Enable_Name\" description-key=\"PowerAppsOneGrid_EnableGrouping_Enable_Desc\">yes</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_EnableGrouping_Disable_Name\" description-key=\"PowerAppsOneGrid_EnableGrouping_Disable_Desc\" default=\"true\">no</value></property><property name=\"GroupColumnAction\" display-name-key=\"\" description-key=\"\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"true\" default-value=\"\" /><property name=\"EnableAggregation\" display-name-key=\"PowerAppsOneGrid_EnableAggregation_Name\" description-key=\"PowerAppsOneGrid_EnableAggregation_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_EnableAggregation_Enable_Name\" description-key=\"PowerAppsOneGrid_EnableAggregation_Enable_Desc\">yes</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_EnableAggregation_Disable_Name\" description-key=\"PowerAppsOneGrid_EnableAggregation_Disable_Desc\" default=\"true\">no</value></property><property name=\"EnableColumnMoving\" display-name-key=\"PowerAppsOneGrid_EnableColumnMoving_Name\" description-key=\"PowerAppsOneGrid_EnableColumnMoving_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_EnableColumnMoving_Enable_Name\" description-key=\"PowerAppsOneGrid_EnableColumnMoving_Enable_Desc\">yes</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_EnableColumnMoving_Disable_Name\" description-key=\"PowerAppsOneGrid_EnableColumnMoving_Disable_Desc\" default=\"true\">no</value></property><property name=\"EnableMultipleSelection\" display-name-key=\"PowerAppsOneGrid_EnableMultipleSelection_Name\" description-key=\"PowerAppsOneGrid_EnableMultipleSelection_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_EnableMultipleSelection_Enable_Name\" description-key=\"PowerAppsOneGrid_EnableMultipleSelection_Enable_Desc\" default=\"true\">yes</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_EnableMultipleSelection_Disable_Name\" description-key=\"PowerAppsOneGrid_EnableMultipleSelection_Disable_Desc\">no</value></property><property name=\"EnableRangeSelection\" display-name-key=\"PowerAppsOneGrid_EnableRangeSelection_Name\" description-key=\"PowerAppsOneGrid_EnableRangeSelection_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_EnableRangeSelection_Enable_Name\" description-key=\"PowerAppsOneGrid_EnableRangeSelection_Enable_Desc\" default=\"true\">yes</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_EnableRangeSelection_Disable_Name\" description-key=\"PowerAppsOneGrid_EnableRangeSelection_Disable_Desc\">no</value></property><property name=\"EnableJumpBar\" display-name-key=\"PowerAppsOneGrid_EnableJumpBar_Name\" description-key=\"PowerAppsOneGrid_EnableJumpBar_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_EnableJumpBar_Enable_Name\" description-key=\"PowerAppsOneGrid_EnableJumpBar_Enable_Desc\">yes</value><value name=\"Auto\" display-name-key=\"PowerAppsOneGrid_EnableJumpBar_Auto_Name\" description-key=\"PowerAppsOneGrid_EnableJumpBar_Auto_Desc\">auto</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_EnableJumpBar_Disable_Name\" description-key=\"PowerAppsOneGrid_EnableJumpBar_Disable_Desc\" default=\"true\">no</value></property><property name=\"EnablePagination\" display-name-key=\"PowerAppsOneGrid_EnablePagination_Name\" description-key=\"PowerAppsOneGrid_EnablePagination_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_EnablePagination_Enable_Name\" description-key=\"PowerAppsOneGrid_EnablePagination_Enable_Desc\">yes</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_EnablePagination_Disable_Name\" description-key=\"PowerAppsOneGrid_EnablePagination_Disable_Desc\" default=\"true\">no</value></property><property name=\"EnableDropdownColor\" display-name-key=\"PowerAppsOneGrid_EnableDropdownColor_Name\" description-key=\"PowerAppsOneGrid_EnableDropdownColor_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_EnableDropdownColor_Enable_Name\" description-key=\"PowerAppsOneGrid_EnableDropdownColor_Enable_Desc\">yes</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_EnableDropdownColor_Disable_Name\" description-key=\"PowerAppsOneGrid_EnableDropdownColor_Disable_Desc\" default=\"true\">no</value></property><property name=\"EnableStatusIcons\" display-name-key=\"PowerAppsOneGrid_EnableStatusIcons_Name\" description-key=\"PowerAppsOneGrid_EnableStatusIcons_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_EnableStatusIcons_Enable_Name\" description-key=\"PowerAppsOneGrid_EnableStatusIcons_Enable_Desc\" default=\"true\">yes</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_EnableStatusIcons_Disable_Name\" description-key=\"PowerAppsOneGrid_EnableStatusIcons_Disable_Desc\">no</value></property><property name=\"EnableTypeIcons\" display-name-key=\"PowerAppsOneGrid_EnableTypeIcons_Name\" description-key=\"PowerAppsOneGrid_EnableTypeIcons_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_EnableTypeIcons_Enable_Name\" description-key=\"PowerAppsOneGrid_EnableTypeIcons_Enable_Desc\">yes</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_EnableTypeIcons_Disable_Name\" description-key=\"PowerAppsOneGrid_EnableTypeIcons_Disable_Desc\" default=\"true\">no</value></property><property name=\"NavigationTypesAllowed\" display-name-key=\"PowerAppsOneGrid_NavigationTypesAllowed_Name\" description-key=\"PowerAppsOneGrid_NavigationTypesAllowed_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"All\" display-name-key=\"PowerAppsOneGrid_NavigationTypesAllowed_All_Name\" description-key=\"PowerAppsOneGrid_NavigationTypesAllowed_All_Desc\" default=\"true\">all</value><value name=\"PrimaryOnly\" display-name-key=\"PowerAppsOneGrid_NavigationTypesAllowed_PrimaryOnly_Name\" description-key=\"PowerAppsOneGrid_NavigationTypesAllowed_PrimaryOnly_Desc\">primaryOnly</value><value name=\"None\" display-name-key=\"PowerAppsOneGrid_NavigationTypesAllowed_None_Name\" description-key=\"PowerAppsOneGrid_NavigationTypesAllowed_None_Desc\">none</value></property><property name=\"ReflowBehavior\" display-name-key=\"PowerAppsOneGrid_ReflowBehavior_Name\" description-key=\"PowerAppsOneGrid_ReflowBehavior_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"Reflow\" display-name-key=\"PowerAppsOneGrid_ReflowBehavior_Reflow_Name\" description-key=\"PowerAppsOneGrid_ReflowBehavior_Reflow_Desc\" default=\"true\">Reflow</value><value name=\"GridOnly\" display-name-key=\"PowerAppsOneGrid_ReflowBehavior_GridOnly_Name\" description-key=\"PowerAppsOneGrid_ReflowBehavior_GridOnly_Desc\">GridOnly</value><value name=\"ListOnly\" display-name-key=\"PowerAppsOneGrid_ReflowBehavior_ListOnly_Name\" description-key=\"PowerAppsOneGrid_ReflowBehavior_ListOnly_Desc\">ListOnly</value></property><property name=\"ShowAvatar\" display-name-key=\"PowerAppsOneGrid_ShowAvatar_Name\" description-key=\"PowerAppsOneGrid_ShowAvatar_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_ShowAvatar_Enable_Name\" description-key=\"PowerAppsOneGrid_ShowAvatar_Enable_Desc\" default=\"true\">yes</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_ShowAvatar_Disable_Name\" description-key=\"PowerAppsOneGrid_ShowAvatar_Disable_Desc\">no</value></property><property name=\"ShowColumnNamesForListView\" display-name-key=\"PowerAppsOneGrid_ListViewShowColumnNames_Name\" description-key=\"PowerAppsOneGrid_ListViewShowColumnNames_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_ListViewShowColumnNames_Enable_Name\" description-key=\"PowerAppsOneGrid_ListViewShowColumnNames_Enable_Desc\">yes</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_ListViewShowColumnNames_Disable_Name\" description-key=\"PowerAppsOneGrid_ListViewShowColumnNames_Disable_Desc\" default=\"true\">no</value></property><property name=\"EnableBandedRowsForListView\" display-name-key=\"PowerAppsOneGrid_EnableBandedRowsForListView_Name\" description-key=\"PowerAppsOneGrid_EnableBandedRowsForListView_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_EnableBandedRowsForListView_Enable_Name\" description-key=\"PowerAppsOneGrid_EnableBandedRowsForListView_Enable_Desc\">yes</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_EnableBandedRowsForListView_Disable_Name\" description-key=\"PowerAppsOneGrid_EnableBandedRowsForListView_Disable_Desc\" default=\"true\">no</value></property><property name=\"NumberOfListColumns\" hidden=\"false\" display-name-key=\"PowerAppsOneGrid_NumberOfListColumns_Name\" description-key=\"PowerAppsOneGrid_NumberOfListColumns_Desc\" of-type=\"Whole.None\" usage=\"input\" required=\"false\" default-value=\"3\" /><property name=\"ShowFooter\" display-name-key=\"PowerAppsOneGrid_ShowFooter_Name\" description-key=\"PowerAppsOneGrid_ShowFooter_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"true\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_ShowFooter_Enable_Name\" description-key=\"PowerAppsOneGrid_ShowFooter_Enable_Desc\" default=\"true\">yes</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_ShowFooter_Disable_Name\" description-key=\"PowerAppsOneGrid_ShowFooter_Disable_Desc\">no</value></property><property name=\"ShowColumnHeaders\" display-name-key=\"PowerAppsOneGrid_ShowColumnHeaders_Name\" description-key=\"PowerAppsOneGrid_ShowColumnHeaders_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"true\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_ShowColumnHeaders_Enable_Name\" description-key=\"PowerAppsOneGrid_ShowColumnHeaders_Enable_Desc\" default=\"true\">yes</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_ShowColumnHeaders_Disable_Name\" description-key=\"PowerAppsOneGrid_ShowColumnHeaders_Disable_Desc\">no</value></property><property name=\"ContextualLookupColumnFilters\" display-name-key=\"PowerAppsOneGrid_ContextualLookupColumnFilters_Name\" description-key=\"PowerAppsOneGrid_ContextualLookupColumnFilters_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_ContextualLookupColumnFilters_Enable_Name\" description-key=\"PowerAppsOneGrid_ContextualLookupColumnFilters_Enable_Desc\" default=\"true\">yes</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_ContextualLookupColumnFilters_Disable_Name\" description-key=\"PowerAppsOneGrid_ContextualLookupColumnFilters_Disable_Desc\">no</value></property><property name=\"LookupFilterBeginsWith\" display-name-key=\"PowerAppsOneGrid_LookupFilterBeginsWith_Name\" description-key=\"PowerAppsOneGrid_LookupFilterBeginsWith_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_LookupFilterBeginsWith_Enable_Name\" description-key=\"PowerAppsOneGrid_LookupFilterBeginsWith_Enable_Desc\">yes</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_LookupFilterBeginsWith_Disable_Name\" description-key=\"PowerAppsOneGrid_LookupFilterBeginsWith_Disable_Desc\" default=\"true\">no</value></property><property name=\"UseFirstColumnForLookupEdits\" display-name-key=\"PowerAppsOneGrid_UseFirstColumnForLookupEdits_Name\" description-key=\"PowerAppsOneGrid_UseFirstColumnForLookupEdits_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_UseFirstColumnForLookupEdits_Enable_Name\" description-key=\"PowerAppsOneGrid_UseFirstColumnForLookupEdits_Enable_Desc\">yes</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_UseFirstColumnForLookupEdits_Disable_Name\" description-key=\"PowerAppsOneGrid_UseFirstColumnForLookupEdits_Disable_Desc\" default=\"true\">no</value></property><property name=\"GridCustomizerControlFullName\" display-name-key=\"PowerAppsOneGrid_GridCustomizerControlFullName_Name\" description-key=\"PowerAppsOneGrid_GridCustomizerControlFullName_Desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"false\" /><property name=\"GridActions\" display-name-key=\"PowerAppsOneGrid_GridActions_Name\" description-key=\"PowerAppsOneGrid_GridActions_Desc\" of-type=\"Object\" usage=\"output\" required=\"false\" hidden=\"true\" /><property name=\"BasePaletteColor\" hidden=\"true\" default-value=\"\" display-name-key=\"Base_Palette_Color\" description-key=\"Base_Palette_Color_description\" of-type=\"SingleLine.Text\" usage=\"input\" resettable-to-manifest-default=\"true\" linkable-to-parent-theme=\"true\" /><property name=\"Font\" hidden=\"true\" default-value=\"\" display-name-key=\"Font\" description-key=\"Font_description\" of-type=\"SingleLine.Text\" usage=\"input\" resettable-to-manifest-default=\"true\" linkable-to-parent-theme=\"true\" /><property name=\"FontColor\" hidden=\"true\" default-value=\"\" display-name-key=\"Font_Color\" description-key=\"Font_Color_description\" of-type=\"SingleLine.Text\" usage=\"input\" resettable-to-manifest-default=\"true\" linkable-to-parent-theme=\"true\" /><property name=\"FontSize\" hidden=\"true\" default-value=\"\" display-name-key=\"Font_Size\" description-key=\"Font_Size_description\" of-type=\"Whole.None\" usage=\"input\" resettable-to-manifest-default=\"true\" linkable-to-parent-theme=\"true\" /><property name=\"FontWeight\" hidden=\"true\" default-value=\"\" display-name-key=\"Font_Weight\" description-key=\"Font_Weight_description\" of-type=\"SingleLine.Text\" usage=\"input\" resettable-to-manifest-default=\"true\" linkable-to-parent-theme=\"true\" /><property name=\"HeaderFont\" hidden=\"true\" default-value=\"\" display-name-key=\"Header_Font\" description-key=\"Header_Font_description\" of-type=\"SingleLine.Text\" usage=\"input\" resettable-to-manifest-default=\"true\" linkable-to-parent-theme=\"true\" /><property name=\"HeaderFontColor\" hidden=\"true\" default-value=\"\" display-name-key=\"Header_Font_Color\" description-key=\"Header_Font_Color_description\" of-type=\"SingleLine.Text\" usage=\"input\" resettable-to-manifest-default=\"true\" linkable-to-parent-theme=\"true\" /><property name=\"HeaderFontSize\" hidden=\"true\" default-value=\"\" display-name-key=\"Header_Font_Size\" description-key=\"Header_Font_Size_description\" of-type=\"Whole.None\" usage=\"input\" resettable-to-manifest-default=\"true\" linkable-to-parent-theme=\"true\" /><property name=\"HeaderFontWeight\" hidden=\"true\" default-value=\"\" display-name-key=\"Header_Font_Weight\" description-key=\"Header_Font_Weight_description\" of-type=\"SingleLine.Text\" usage=\"input\" resettable-to-manifest-default=\"true\" linkable-to-parent-theme=\"true\" /><property name=\"NoDataText\" hidden=\"true\" default-value=\"\" display-name-key=\"No_Data_Text\" description-key=\"No_Data_Text_Desc\" of-type=\"SingleLine.Text\" usage=\"input\" /><property name=\"TabIndex\" hidden=\"true\" display-name-key=\"NA\" description-key=\"NA\" of-type=\"Whole.None\" usage=\"input\" required=\"false\" /><property name=\"DateTimeFormat\" pfx-default-value=\"'PowerAppsOneGrid.DateTimeFormat'.ShortDateTime\" display-name-key=\"Date_Time_Format\" description-key=\"Date_Time_Format_description\" of-type=\"Enum\" usage=\"input\" hidden=\"true\" required=\"false\"><value name=\"LongDate\" display-name-key=\"PowerAppsOneGrid_Format_LongDate\">longDate</value><value name=\"ShortDate\" display-name-key=\"PowerAppsOneGrid_Format_ShortDate\">shortDate</value><value name=\"ShortDateTime\" display-name-key=\"PowerAppsOneGrid_Format_ShortDateTime\">shortDateTime</value><value name=\"None\" display-name-key=\"PowerAppsOneGrid_Format_None\" default=\"true\">none</value></property><property name=\"DateOnlyFormat\" pfx-default-value=\"'PowerAppsOneGrid.DateOnlyFormat'.ShortDate\" display-name-key=\"Date_Only_Format\" description-key=\"Date_Only_Format_description\" of-type=\"Enum\" usage=\"input\" hidden=\"true\" required=\"false\"><value name=\"LongDate\" display-name-key=\"PowerAppsOneGrid_DateOnly_Format_LongDate\">longDate</value><value name=\"ShortDate\" display-name-key=\"PowerAppsOneGrid_DateOnly_Format_ShortDate\">shortDate</value><value name=\"None\" display-name-key=\"PowerAppsOneGrid_DateOnly_Format_None\" default=\"true\">none</value></property><property name=\"EnableStatusColumn\" display-name-key=\"PowerAppsOneGrid_EnableStatusColumn_Name\" description-key=\"PowerAppsOneGrid_EnableStatusColumn_Desc\" of-type=\"Enum\" usage=\"input\" hidden=\"false\"><value name=\"Enable\" display-name-key=\"PowerAppsOneGrid_EnableStatusColumn_Enable_Name\" description-key=\"PowerAppsOneGrid_EnableStatusColumn_Enable_Desc\" default=\"true\">yes</value><value name=\"Disable\" display-name-key=\"PowerAppsOneGrid_EnableStatusColumn_Disable_Name\" description-key=\"PowerAppsOneGrid_EnableStatusColumn_Disable_Desc\">no</value></property><property name=\"DisableStatusColumn\" display-name-key=\"\" of-type=\"Enum\" usage=\"input\" hidden=\"true\"><value name=\"Enable\" display-name-key=\"\">yes</value><value name=\"Disable\" display-name-key=\"\">no</value></property><property name=\"DisableStatusColumnSavingIcons\" display-name-key=\"\" of-type=\"Enum\" usage=\"input\" hidden=\"true\"><value name=\"Enable\" display-name-key=\"\">yes</value><value name=\"Disable\" display-name-key=\"\">no</value></property><common-property name=\"Height\" pfx-default-value=\"If(Self.Y + 500 &gt; Parent.Height, Parent.Height - Self.Y, 500)\" default-value=\"500\" /><common-property name=\"Width\" pfx-default-value=\"If(Self.X + 800 &gt; Parent.Width, Parent.Width - Self.X, 800)\" default-value=\"800\" /><field-properties><field-property name=\"CanGrow\" display-name-key=\"PowerAppsOneGrid_ColumnGrow_Name\" description-key=\"PowerAppsOneGrid_ColumnGrow_Desc\" of-type=\"Boolean\" default-value=\"true\" /><field-property name=\"HeaderText\" display-name-key=\"PowerAppsOneGrid_ColumnHeaderText_Name\" description-key=\"PowerAppsOneGrid_ColumnHeaderText_Desc\" of-type=\"SingleLine.Text\" default-value=\"\" /><field-property name=\"Visible\" display-name-key=\"PowerAppsOneGrid_ColumnVisibility_Name\" description-key=\"PowerAppsOneGrid_ColumnVisibility_Desc\" of-type=\"Boolean\" default-value=\"true\" /><field-property name=\"Width\" display-name-key=\"PowerAppsOneGrid_ColumnWidth_Name\" description-key=\"PowerAppsOneGrid_ColumnWidth_Desc\" of-type=\"Whole.None\" default-value=\"0\" /></field-properties><overrides><template name=\"Canvas\"><control name=\"Table\" display-name-key=\"PowerAppsOneGrid_Override_Name\" /><property name=\"BasePaletteColor\" hidden=\"false\" /><property name=\"ChildItems\" hidden=\"true\" /><property name=\"ContextualLookupColumnFilters\" hidden=\"true\" /><property name=\"DateOnlyFormat\" hidden=\"false\" default=\"ShortDate\" /><property name=\"DateTimeFormat\" hidden=\"false\" default=\"ShortDateTime\" /><property name=\"DisableChildItemsEditing\" hidden=\"true\" /><property name=\"EnableAggregation\" hidden=\"true\" /><property name=\"EnableColumnMoving\" hidden=\"true\" /><property name=\"EnableDropdownColor\" hidden=\"true\" /><property name=\"EnableEditing\" hidden=\"true\" /><property name=\"EnableFiltering\" hidden=\"true\" default=\"no\" /><property name=\"EnableGrouping\" hidden=\"true\" /><property name=\"EnableJumpBar\" hidden=\"true\" /><property name=\"EnableMultipleSelection\" hidden=\"false\" default=\"no\" /><property name=\"EnablePagination\" hidden=\"true\" /><property name=\"EnableSorting\" hidden=\"false\" default=\"yes\" /><property name=\"EnableStatusColumn\" hidden=\"true\" /><property name=\"EnableStatusIcons\" hidden=\"true\" default=\"no\" /><property name=\"EnableTypeIcons\" hidden=\"true\" /><property name=\"Font\" hidden=\"false\" /><property name=\"FontColor\" hidden=\"false\" /><property name=\"FontSize\" hidden=\"false\" /><property name=\"FontWeight\" hidden=\"false\" /><property name=\"GridActions\" hidden=\"true\" /><property name=\"GridCustomizerControlFullName\" hidden=\"true\" /><property name=\"GroupColumnAction\" hidden=\"true\" /><property name=\"HeaderFont\" hidden=\"false\" /><property name=\"HeaderFontColor\" hidden=\"false\" /><property name=\"HeaderFontSize\" hidden=\"false\" /><property name=\"HeaderFontWeight\" hidden=\"false\" /><property name=\"LookupFilterBeginsWith\" hidden=\"true\" /><property name=\"NavigationTypesAllowed\" hidden=\"true\" default=\"none\" /><property name=\"NumberOfListColumns\" hidden=\"true\" /><property name=\"NoDataText\" hidden=\"false\" /><property name=\"ShowColumnHeaders\" hidden=\"false\" /><property name=\"ShowFooter\" hidden=\"false\" /><property name=\"UseFirstColumnForLookupEdits\" hidden=\"true\" /></template></overrides><event name=\"onCellValueChange\" display-name-key=\"PowerAppsOneGrid_onCellValueChange_Name\" description-key=\"PowerAppsOneGrid_onCellValueChange_Desc\" hidden=\"true\" /><event name=\"onFilter\" display-name-key=\"PowerAppsOneGrid_onFilter_Name\" description-key=\"PowerAppsOneGrid_onFilter_Desc\" hidden=\"true\" /><event name=\"onNavigate\" display-name-key=\"PowerAppsOneGrid_onNavigate_Name\" description-key=\"PowerAppsOneGrid_onNavigate_Desc\" hidden=\"true\" /><event name=\"onRowSelect\" display-name-key=\"PowerAppsOneGrid_onRowSelect_Name\" description-key=\"PowerAppsOneGrid_onRowSelect_Desc\" hidden=\"true\" /><event name=\"onSave\" display-name-key=\"PowerAppsOneGrid_onSave_Name\" description-key=\"PowerAppsOneGrid_onSave_Desc\" hidden=\"true\" /><event name=\"OnSelect\" display-name-key=\"PowerAppsOneGrid_OnSelect_Name\" description-key=\"PowerAppsOneGrid_OnSelect_Desc\" hidden=\"false\" /><resources><platform-library name=\"React\" version=\"16.14.0\" /><platform-library name=\"Fluent\" version=\"8.121.1\" /><code path=\"PowerAppsOneGrid.js\" order=\"2\" /><resx path=\"strings/PowerAppsOneGrid.1033.resx\" version=\"1.0.0\" /></resources><feature-usage><uses-feature name=\"Utility\" required=\"true\" /><uses-feature name=\"ExplicitCommonEvents\" required=\"true\" /><uses-feature name=\"PreventDefaultSort\" required=\"true\" /></feature-usage><supported-platforms><supported-platform name=\"Canvas\" /><supported-platform name=\"Model\" /></supported-platforms><platform-action action-type=\"afterPageLoad\" /><conversion from=\"1.0.103\" to=\"1.0.104\"><action name=\"BasePaletteColor\" type=\"add\" /><action name=\"AccessibleLabel\" type=\"add\" /></conversion><conversion from=\"1.0.109\" to=\"1.0.111\"><action name=\"ShowFooter\" type=\"add\" /><action name=\"ShowColumnHeaders\" type=\"add\" /></conversion><conversion from=\"1.0.112\" to=\"1.0.113\"><action name=\"ShowAvatar\" type=\"add\" /></conversion><conversion from=\"1.0.116\" to=\"1.0.117\"><action name=\"NoDataText\" type=\"add\" /></conversion><conversion from=\"1.0.117\" to=\"1.0.118\"><action name=\"FontSize\" type=\"add\" /><action name=\"HeaderFontSize\" type=\"add\" /></conversion><conversion from=\"1.0.129\" to=\"1.0.130\"><action name=\"EnableAggregation\" type=\"add\" /></conversion><conversion from=\"1.0.130\" to=\"1.0.131\"><action name=\"Font\" type=\"add\" /><action name=\"FontColor\" type=\"add\" /><action name=\"FontWeight\" type=\"add\" /><action name=\"HeaderFont\" type=\"add\" /><action name=\"HeaderFontColor\" type=\"add\" /><action name=\"HeaderFontWeight\" type=\"add\" /></conversion><conversion from=\"1.0.150\" to=\"1.0.151\"><action name=\"OnSelect\" type=\"add\" /></conversion><conversion from=\"1.0.162\" to=\"1.0.163\"><action name=\"EnableColumnMoving\" type=\"add\" /></conversion><conversion from=\"1.0.166\" to=\"1.0.167\"><action name=\"DisableChildItemsEditing\" type=\"add\" /></conversion><conversion from=\"1.0.183\" to=\"1.0.184\"><action name=\"DefaultSelectedItems\" type=\"remove\" /></conversion><conversion from=\"1.0.232\" to=\"1.0.233\"><action name=\"DateTimeFormat\" type=\"add\" /></conversion><conversion from=\"1.0.233\" to=\"1.0.234\"><action name=\"DateOnlyFormat\" type=\"add\" /></conversion><conversion from=\"1.0.242\" to=\"1.0.243\"><action name=\"ContextualLookupColumnFilters\" type=\"add\" /></conversion><conversion from=\"1.0.265\" to=\"1.0.266\"><action name=\"LookupFilterBeginsWith\" type=\"add\" /></conversion><conversion from=\"1.0.300\" to=\"1.0.301\"><action name=\"UseFirstColumnForLookupEdits\" type=\"add\" /></conversion><conversion from=\"1.0.314\" to=\"1.0.315\"><action name=\"NumberOfListColumns\" type=\"add\" /></conversion><built-by name=\"pac\" version=\"1.49.1-alpha-25090500\" /><subscribed-functionalities><subscribed-functionality name=\"sharedTemplate\" value=\"false\" /></subscribed-functionalities></control></manifest>",
+    "name": "Microsoft.PowerApps.PowerAppsOneGrid",
+    "supportedplatform": "(Canvas),(Model)",
+    "version": "1.0.359"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "Microsoft.PowerApps.PowerAppsOneGrid"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

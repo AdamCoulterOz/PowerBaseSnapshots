@@ -1,0 +1,126 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "NumberInputControl",
+        "ControlManifestVersion": "1.0.41",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.NumberInput.NumberInputControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_NumberInput_Name",
+        "FullName": "MscrmControls.NumberInput.NumberInputControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.NumberInput.NumberInputControl",
+        "Namespace": "MscrmControls.NumberInput",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "TypeGroup": "numbers",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "step",
+              "Required": true,
+              "TypeGroup": "numbers",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "wijmo",
+              "LoadOrder": 2,
+              "Name": "wijmo",
+              "Type": 0
+            },
+            {
+              "LibraryName": "wijmo-input",
+              "LoadOrder": 3,
+              "Name": "wijmo-input",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 4,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 5,
+              "Name": "MscrmControls.NumberInput.NumberInputControl_NumberInputControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 6,
+              "Name": "css/wijmo.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 7,
+              "Name": "css/wijmo.numberinput.custom.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/NumberInputControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.NumberInput\" constructor=\"NumberInputControl\" hidden=\"true\" version=\"1.0.41\" display-name-key=\"CC_NumberInput_Name\" description-key=\"CC_NumberInput_Desc\" preview-image=\"img/preview.png\"><modes><read /><edit /></modes><type-group name=\"numbers\"><type>Whole.None</type><type>Currency</type><type>FP</type><type>Decimal</type></type-group><property name=\"value\" display-name-key=\"CC_Field\" description-key=\"CC_Field_Desc\" of-type-group=\"numbers\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"step\" display-name-key=\"CC_Step\" description-key=\"CC_NumberInput_Step_Desc\" of-type-group=\"numbers\" usage=\"input\" required=\"true\" hidden=\"false\" /><AvailableOn><web classic=\"disable\" /><phone /><tablet /></AvailableOn><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-3.6.0.js\" version=\"3.6.0\" /></library><library name=\"wijmo\" version=\"&gt;=5\" order=\"2\"><packaged_library path=\"libs/wijmo.js\" version=\"5.20173.502\" /></library><library name=\"wijmo-input\" version=\"&gt;=5\" order=\"3\"><packaged_library path=\"libs/wijmo.input.js\" version=\"5.20173.502\" /></library><library name=\"mscommon\" version=\"&gt;=1\" order=\"4\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.14\" /></library><code path=\"NumberInputControl.js\" order=\"5\" /><css path=\"css/wijmo.css\" order=\"6\" /><css path=\"css/wijmo.numberinput.custom.css\" order=\"7\" /><resx path=\"strings/NumberInputControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.NumberInput.NumberInputControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.41"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.NumberInput.NumberInputControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

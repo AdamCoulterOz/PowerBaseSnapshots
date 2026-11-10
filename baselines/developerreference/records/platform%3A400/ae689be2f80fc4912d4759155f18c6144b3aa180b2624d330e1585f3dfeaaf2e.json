@@ -1,0 +1,46 @@
+{
+  "configuration": {
+    "componentstate": 0,
+    "importsequencenumber": null,
+    "introducedversion": "202608.1.4.1",
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "msdyn_aitemplateid": "ab77e20a-208b-46e4-bc19-b8e249b9a431",
+    "msdyn_databinding": null,
+    "msdyn_defaultrunschedulingoptions": null,
+    "msdyn_istrainable": true,
+    "msdyn_modelaction": null,
+    "msdyn_resourceinfo": "\n        {\n        \"ResourceType\": \"PythonVirtualEnvironment\",\n        \"PythonVirtualEnvironmentInfo\": {\n        \"FeaturizerModuleName\": \"powerai.models.generic.featurizer\",\n        \"PredictionModuleName\": \"powerai.models.generic.predictor\",\n        \"PackageName\": \"powerai-env\",\n        \"PackageVersion\": \"0.0.1\",\n        \"TrainerModuleName\": \"powerai.models.generic.trainer\"\n        },\n        \"ModelStorageType\":\"Value\"\n        }",
+    "msdyn_runconfigschema": "[\n  {\n    \"name\": \"numberOfIndividualPredictors\",\n    \"displayName\": \"Number of instance level predictors\",\n    \"description\": \"Defines the number of instance level predictors to be output during scoring\",\n    \"defaultValue\": \"3\",\n    \"type\": \"Edm.Int32\"\n  },\n  {\n    \"name\": \"isCustomPipelinesEnabled\",\n    \"displayName\": \"Is Custom Pipelines enabled for run\",\n    \"description\": \"Defines if the AI Config is enabled for Custom Pipelines\",\n    \"defaultValue\": \"True\",\n    \"type\": \"Edm.Boolean\"\n  },\n  {\n    \"name\": \"customPipelineYaml\",\n    \"displayName\": \"Custom Pipeline Yaml\",\n    \"description\": \"Defines the yaml file to be used for inference\",\n    \"defaultValue\": \"GP-Inference-Pipeline.yaml\",\n    \"type\": \"Edm.String\"\n  }\n]",
+    "msdyn_rundataspecification": "{\n  \"schemaVersion\": 2,\n  \"input\": {\n    \"attributes\": [\n      {\n        \"specificationName\": \"Label\",\n        \"dataType\": \"AnyPredictable\",\n        \"requiredLevel\": \"ApplicationRequired\"\n      }\n    ]\n  },\n  \"output\": {\n    \"attributes\": [\n      {\n        \"specificationName\": \"Prediction\",\n        \"dataType\": \"AnyPredictable\"\n      },\n      {\n        \"specificationName\": \"Likelihood\",\n        \"dataType\": \"Decimal\"\n      },\n      {\n        \"specificationName\": \"Explanation\",\n        \"dataType\": \"String\"\n      }\n    ]\n  }\n}",
+    "msdyn_templateversion": 1,
+    "msdyn_trainingconfigschema": "[\n  {\n    \"name\": \"numberOfGlobalPredictors\",\n    \"displayName\": \"Number of Global predictors\",\n    \"description\": \"Defines the number of global predictors to be output during training\",\n    \"defaultValue\": \"10\",\n    \"type\": \"Edm.Int32\"\n  },\n  {\n    \"name\": \"chiSqCorrelationThresholdForTargetLeak\",\n    \"displayName\": \"Threshold for Target leak using Chi Square Coeff\",\n    \"description\": \"Defines the threshold for target leak using Chi Square correlation coefficient during training\",\n    \"defaultValue\": \"0.9\",\n    \"type\": \"Edm.Double\"\n  },\n  {\n    \"name\": \"personCorrelationThresholdForTargetLeak\",\n    \"displayName\": \"Threshold for Target leak using Pearson Coeff\",\n    \"description\": \"Defines the threshold for target leak using Pearson correlation coefficient during training\",\n    \"defaultValue\": \"0.9\",\n    \"type\": \"Edm.Double\"\n  },\n  {\n    \"name\": \"maxThresholdForOneHotEncoding\",\n    \"displayName\": \"Threshold for distinct values for one hot encoding\",\n    \"description\": \"Defines the threshold for distinct values for one hot encoding during training\",\n    \"defaultValue\": \"20\",\n    \"type\": \"Edm.Int32\"\n  },\n  {\n    \"name\": \"isCustomPipelinesEnabled\",\n    \"displayName\": \"Is Custom Pipelines enabled for run\",\n    \"description\": \"Defines if the AI Config is enabled for Custom Pipelines\",\n    \"defaultValue\": \"True\",\n    \"type\": \"Edm.Boolean\"\n  },\n  {\n    \"name\": \"customPipelineYaml\",\n    \"displayName\": \"Custom Pipeline Yaml\",\n    \"description\": \"Defines the yaml file to be used for training\",\n    \"defaultValue\": \"GP-Train-Pipeline.yaml\",\n    \"type\": \"Edm.String\"\n  }\n]",
+    "msdyn_trainingdataspecification": "{\n  \"schemaVersion\": 2,\n  \"input\": {\n    \"attributes\": [\n      {\n        \"specificationName\": \"Label\",\n        \"dataType\": \"AnyPredictable\",\n        \"requiredLevel\": \"ApplicationRequired\"\n      }\n    ]\n  },\n  \"output\": {\n    \"attributes\": [\n      {\n        \"specificationName\": \"Prediction\",\n        \"dataType\": \"AnyPredictable\"\n      },\n      {\n        \"specificationName\": \"Likelihood\",\n        \"dataType\": \"Decimal\"\n      },\n      {\n        \"specificationName\": \"Explanation\",\n        \"dataType\": \"String\"\n      }\n    ]\n  }\n}",
+    "msdyn_uniquename": "BinaryClassification",
+    "msdyn_uxconfiguration": null,
+    "overriddencreatedon": null,
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "portability": "not-established",
+    "value": "ab77e20a-208b-46e4-bc19-b8e249b9a431"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_AISolutionDefaultTemplates",
+      "version": "202608.1.4.1"
+    }
+  ],
+  "typeIdentity": "platform:400"
+}

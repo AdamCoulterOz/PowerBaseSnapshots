@@ -1,0 +1,73 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "msdyn_appCopilot.topic.DefaultPlatformSparkContent"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponent"
+    },
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 10,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnEventActivity\r\n  id: main\r\n  actions:\r\n    - kind: ConditionGroup\r\n      id: conditionGroup_3LXuJg\r\n      conditions:\r\n        - id: conditionItem_EJuABh\r\n          actions:\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_zYoM08\r\n              value: تصرّف\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_9BuDTP\r\n              value: تحليل\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_EkrPi4\r\n              value: سؤال\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_xa3sQu\r\n              value: التنقل إلى [اسم الجدول]\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_hxAu6L\r\n              value: ما عدد [اسم الجدول] الموجودة؟\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_Bw9lQz\r\n              value: ما عدد [اسم الجدول] [أدخل الشرط]؟\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_fbkHRn\r\n              value: ما [اسم الجدول] الذي أنشأته في الأسبوع الماضي؟\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_eFjQXY\r\n              value: ما [اسم السجل] الذي تم تعيينه لي.\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_IIRGvt\r\n              value: ما [اسم الجدول] الذي تم تعيينه إلى [الشخص]؟\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_FWjnVw\r\n              value: ما [اسم الجدول] الخاص بي؟\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_qwKkPs\r\n              value: من هي جهات الاتصال لديّ؟\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_BBCLi0\r\n              value: ما جهات الاتصال التي ليس لديها عناوين بريد إلكتروني؟\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_A2gsy5\r\n              value: ما جهات الاتصال التي ليس لديها أرقام هواتف عمل؟\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_3saXSn\r\n              value: ما الفرص التي تم إغلاقها خلال الثلاثين يومًا الماضية؟\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_b2NE88\r\n              value: ما الفرص التي تحقق أعلى الإيرادات المقدرة؟\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_4wQDfG\r\n              value: ما فرصي المفتوحة؟\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_ugohCY\r\n              value: من هم العملاء المتوقعون الذين تم إغلاقهم في آخر 30 يومًا؟\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_g1WVnq\r\n              value: من هم العملاء المتوقعون المفتوحون؟\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_XAsvzk\r\n              value: ما أهم 10 حسابات ذات الإيرادات الأعلى؟\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_tMqHg9\r\n              value: احصل على آخر الأخبار عن حساب Adventure Works\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_ogSkT5\r\n              value: ما الحسابات ليس لديها جهة اتصال؟",
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": 1025,
+    "name": "محتوى النظام الأساسي الافتراضي Sparks (ar-SA)",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.DefaultPlatformSparkContent.ar-SA",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.DefaultPlatformSparkContent.ar-SA"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

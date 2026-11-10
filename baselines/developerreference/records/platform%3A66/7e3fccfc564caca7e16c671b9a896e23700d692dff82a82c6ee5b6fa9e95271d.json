@@ -1,0 +1,102 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "PreviewControl",
+        "ControlManifestVersion": "1.0.4",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.WebsitePreview.PreviewControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_WebPreview_Name",
+        "FullName": "MscrmControls.WebsitePreview.PreviewControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.WebsitePreview.PreviewControl",
+        "Namespace": "MscrmControls.WebsitePreview",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "Type": "SingleLine.URL",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 2,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.WebsitePreview.PreviewControl_WebsitePreviewControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 4,
+              "Name": "css/WebsitePreviewControl.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/WebsitePreviewControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.WebsitePreview\" constructor=\"PreviewControl\" hidden=\"true\" version=\"1.0.4\" display-name-key=\"CC_WebPreview_Name\" description-key=\"CC_WebPreview_Desc\" preview-image=\"img/preview.png\"><modes><read /><edit /></modes><property name=\"value\" display-name-key=\"CC_Field\" description-key=\"CC_Field_Desc\" of-type=\"SingleLine.URL\" usage=\"bound\" required=\"true\" hidden=\"true\" /><dependencies><dependency name=\"MscrmControls.FieldControls.UrlControl\" /></dependencies><AvailableOn><web classic=\"disable\" /><phone /><tablet /></AvailableOn><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><library name=\"mscommon\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><code path=\"WebsitePreviewControl.js\" order=\"3\" /><css path=\"css/WebsitePreviewControl.css\" order=\"4\" /><resx path=\"strings/WebsitePreviewControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.WebsitePreview.PreviewControl",
+    "supportedplatform": null,
+    "version": "1.0.4"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.WebsitePreview.PreviewControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

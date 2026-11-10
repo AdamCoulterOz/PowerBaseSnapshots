@@ -1,0 +1,86 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "KbMigrationStatusControl",
+        "ControlManifestVersion": "1.26094.3006",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.KbMigrationStatusControl.KbMigrationStatusControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "KbMigrationStatusControl_Name",
+        "FullName": "MscrmControls.KbMigrationStatusControl.KbMigrationStatusControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.KbMigrationStatusControl.KbMigrationStatusControl",
+        "Namespace": "MscrmControls.KbMigrationStatusControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "statusString",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.KbMigrationStatusControl.KbMigrationStatusControl_KbMigrationStatusControl.js",
+              "Type": 4
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.26094.3005",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.KbMigrationStatusControl\" constructor=\"KbMigrationStatusControl\" version=\"1.26094.3006\" display-name-key=\"KbMigrationStatusControl_Name\" control-type=\"virtual\"><modes></modes><property name=\"statusString\" display-name-key=\"CC_statusString\" description-key=\"CC_statusString_desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"true\" /><resources><code path=\"KbMigrationStatusControl.js\" order=\"3\" /></resources></control></manifest>",
+    "name": "MscrmControls.KbMigrationStatusControl.KbMigrationStatusControl",
+    "supportedplatform": "(Model)",
+    "version": "1.26094.3006"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.KbMigrationStatusControl.KbMigrationStatusControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdynce_KnowledgeManagementFeatures",
+      "version": "9.0.26094.3006"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_KnowledgeManagementPatch",
+      "version": "9.0.26094.3006"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

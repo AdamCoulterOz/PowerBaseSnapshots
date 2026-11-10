@@ -1,0 +1,237 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "GridControl",
+        "ControlManifestVersion": "1.11.551",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Grid.GridControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_Grid_Name",
+        "FullName": "MscrmControls.Grid.GridControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.Grid.GridControl",
+        "Namespace": "MscrmControls.Grid",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "displayCommandBar:true",
+              "Columns": [],
+              "InitialDataSetFetch": true,
+              "Name": "Grid",
+              "Type": "Grid"
+            },
+            {
+              "CDSDataSetOptions": "displayCommandBar:true",
+              "Columns": [
+                {
+                  "Hidden": false,
+                  "Name": "SubGridParentId",
+                  "Required": false,
+                  "Type": "Lookup.Simple",
+                  "Usage": 0
+                }
+              ],
+              "InitialDataSetFetch": true,
+              "Name": "SubGrid",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "EnableGroupBy",
+              "Required": true,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "UseDefaultCardFormForList",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "EnableItemContextualActions",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "EnableEditing",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "ReflowBehavior",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ListLayoutDirection",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "EnableSubGridAutoCollapse",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnableFiltering",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "HideNestedGridColumnHeader",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnableJumpBar",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "NativeFilterExpressionToRestore",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "PageNumberToRestore",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "solCustom",
+              "LoadOrder": 1,
+              "Name": "solCustom",
+              "Type": 0
+            },
+            {
+              "LibraryName": "reactPatchForWebClient",
+              "LoadOrder": 1,
+              "Name": "reactPatchForWebClient",
+              "Type": 0
+            },
+            {
+              "LibraryName": "proptypes",
+              "LoadOrder": 1,
+              "Name": "proptypes",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluentui-react",
+              "LoadOrder": 1,
+              "Name": "fluentui-react",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "gridlib",
+              "LoadOrder": 2,
+              "Name": "gridlib",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.Grid.GridControl_Grid.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "css/searchableOptionList.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "css/msos.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/Grid.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "Grid",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Grid\" constructor=\"GridControl\" version=\"1.11.551\" display-name-key=\"CC_Grid_Name\" preview-image=\"img/preview.png\"><modes><read /><edit /></modes><AvailableOn><web classic=\"enable\" /><phone /><tablet /></AvailableOn><data-set name=\"Grid\" display-name-key=\"CC_Grid_DSGrid\" editable=\"true\" cds-data-set-options=\"displayCommandBar:true\"></data-set><data-set name=\"SubGrid\" display-name-key=\"CC_Grid_SubGrid_DS\" cds-data-set-options=\"displayCommandBar:true\"><property-set name=\"SubGridParentId\" display-name-key=\"CC_Grid_SubGrid_ParentID\" description-key=\"CC_Grid_SubGrid_ParentID_Desc\" of-type=\"Lookup.Simple\" usage=\"bound\" required=\"false\" /></data-set><property name=\"EnableGroupBy\" display-name-key=\"CC_GroupBy_Column\" description-key=\"CC_GroupBy_Column_Desc\" usage=\"input\" of-type=\"Enum\" required=\"true\" hidden=\"false\"><value name=\"Yes\" display-name-key=\"CC_Enable_GroupBy\" description-key=\"CC_Enable_GroupBy_Desc\" default=\"true\">yes</value><value name=\"No\" display-name-key=\"CC_Disable_GroupBy\" description-key=\"CC_Disable_GroupBy_Desc\">no</value></property><property name=\"UseDefaultCardFormForList\" display-name-key=\"CC_Grid_UseDefaultCardFormForList\" description-key=\"CC_Grid_UseDefaultCardFormForList_Desc\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"true\" /><property name=\"EnableItemContextualActions\" display-name-key=\"CC_Grid_EnableItemContextualActions\" description-key=\"CC_Grid_EnableItemContextualActions_Desc\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"true\" /><property name=\"EnableEditing\" display-name-key=\"CC_Allow_Editing_Grid\" description-key=\"CC_Allow_Editing_Grid_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"true\"><value name=\"Yes\" display-name-key=\"CC_Enable_Editing_Grid\" description-key=\"CC_Enable_Editing_Grid_Desc\" default=\"true\">yes</value><value name=\"No\" display-name-key=\"CC_Disable_Editing_Grid\" description-key=\"CC_Disable_Editing_Grid_Desc\">no</value></property><property name=\"ReflowBehavior\" display-name-key=\"CC_ReflowBehavior\" description-key=\"CC_ReflowBehavior_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"true\"><value name=\"Reflow\" display-name-key=\"CC_ReflowBehavior_Reflow\" description-key=\"CC_ReflowBehavior_Reflow_Desc\">Reflow</value><value name=\"GridOnly\" display-name-key=\"CC_ReflowBehavior_GridOnly\" description-key=\"CC_ReflowBehavior_GridOnly_Desc\" default=\"true\">GridOnly</value><value name=\"ListOnly\" display-name-key=\"CC_ReflowBehavior_ListOnly\" description-key=\"CC_ReflowBehavior_ListOnly_Desc\">ListOnly</value></property><property name=\"ListLayoutDirection\" display-name-key=\"CC_ListLayoutDirection\" description-key=\"CC_ListLayoutDirection_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"Vertical\" display-name-key=\"CC_ListLayoutDirection_Vertical\" description-key=\"CC_ListLayoutDirection_Vertical_Desc\" default=\"true\">Vertical</value><value name=\"Horizontal\" display-name-key=\"CC_ListLayoutDirection_Horizontal\" description-key=\"CC_ListLayoutDirection_Horizontal_Desc\">Horizontal</value></property><property name=\"EnableSubGridAutoCollapse\" display-name-key=\"CC_EnableSubGridAutoCollapse\" description-key=\"CC_EnableSubGridAutoCollapse_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"true\"><value name=\"Enabled\" display-name-key=\"CC_Enable_SubGridAutoCollapse\" description-key=\"CC_Enable_SubGridAutoCollapse_Desc\">true</value><value name=\"Disabled\" display-name-key=\"CC_Disable_SubGridAutoCollapse\" description-key=\"CC_Disable_SubGridAutoCollapse_Desc\" default=\"true\">false</value></property><property name=\"EnableFiltering\" display-name-key=\"CC_Allow_Filtering\" description-key=\"CC_Allow_Filtering_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"Yes\" display-name-key=\"CC_Enable_Filtering\" description-key=\"CC_Enable_Filtering_Desc\" default=\"true\">yes</value><value name=\"No\" display-name-key=\"CC_Disable_Filtering\" description-key=\"CC_Disable_Filtering_Desc\">no</value></property><property name=\"HideNestedGridColumnHeader\" display-name-key=\"CC_Grid_NestedGrid_ColumnHeader\" description-key=\"CC_Grid_NestedGrid_ColumnHeader_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"Yes\" display-name-key=\"CC_Hide_ColumnHeader\" description-key=\"CC_Hide_ColumnHeader_Desc\">yes</value><value name=\"No\" display-name-key=\"CC_Show_ColumnHeader\" description-key=\"CC_Show_ColumnHeader_Desc\" default=\"true\">no</value></property><property name=\"EnableJumpBar\" display-name-key=\"CC_Allow_JumpBar\" description-key=\"CC_Allow_JumpBar_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"Yes\" display-name-key=\"CC_Enable_JumpBar\" description-key=\"CC_Enable_JumpBar_Desc\" default=\"true\">yes</value><value name=\"No\" display-name-key=\"CC_Disable_JumpBar\" description-key=\"CC_Disable_JumpBar_Desc\">no</value></property><property name=\"NativeFilterExpressionToRestore\" display-name-key=\"CC_Grid_NativeFilterExpressionToRestore\" description-key=\"CC_Grid_NativeFilterExpressionToRestore_Desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"PageNumberToRestore\" display-name-key=\"CC_Grid_PageNumberToRestore\" description-key=\"CC_Grid_PageNumberToRestore_Desc\" usage=\"input\" of-type=\"Whole.None\" required=\"false\" hidden=\"true\" /><resources><css path=\"css/searchableOptionList.css\" order=\"1\" /><css path=\"css/msos.css\" order=\"1\" /><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery/jquery-3.6.0.js\" version=\"3.6.0\" /></library><library name=\"solCustom\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/msos.js\" version=\"3.0.28\" /></library><library name=\"reactPatchForWebClient\" version=\"&gt;=1.0.15\" order=\"1\"><packaged_library path=\"libs/reactPatchForWebClient.js\" version=\"1.0.15\" /></library><library name=\"proptypes\" version=\"&gt;=15.6.2\" order=\"1\"><packaged_library path=\"libs/prop-types.min.js\" version=\"15.6.2\" /></library><library name=\"fluentui-react\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/fluentui-react.js\" version=\"8.121.1\" /></library><library name=\"mscommon\" version=\"&gt;=1.2.6\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.26\" /></library><library name=\"gridlib\" version=\"&gt;=1.11.551\" order=\"2\"><packaged_library path=\"libs/Mscrm.Grid.js\" version=\"1.11.551\" /></library><code path=\"Grid.js\" order=\"3\" /><resx path=\"strings/Grid.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.Grid.GridControl",
+    "supportedplatform": "(Model)",
+    "version": "1.11.551"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Grid.GridControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

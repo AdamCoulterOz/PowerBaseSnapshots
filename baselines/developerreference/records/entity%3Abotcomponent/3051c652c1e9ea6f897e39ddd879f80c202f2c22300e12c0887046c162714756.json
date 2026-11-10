@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": null,
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 9,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnUnknownIntent\r\n  id: main\r\n  priority: -1\r\n  actions:\r\n    - kind: SetVariable\r\n      id: setVariable_RMwJKo\r\n      variable: Topic.MatchedEntities\r\n      value: |+\r\n        =Filter(\r\n            Global.PA_Copilot_EntityContext, \r\n            Find(Lower(ThisRecord.DisplayName), Lower(System.Activity.Text)) > 0\r\n        )\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_RMwJKo2\r\n      variable: Topic.MatchedEntities2\r\n      value: |+\r\n        =Filter(\r\n            Global.PA_Copilot_EntityContext, \r\n            Find(Lower(ThisRecord.TargetEntity), Lower(System.Activity.Text)) > 0\r\n        )\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_BLZAgi\r\n      variable: Topic.HasNoURLs\r\n      value: =IsBlank(System.Activity.ChannelData.answersUrl1) && IsBlank(System.Activity.ChannelData.answersUrl2) && IsBlank(System.Activity.ChannelData.answersUrl3) && IsBlank(System.Activity.ChannelData.answersUrl4) && IsBlank(Global.PA_Copilot_Model_SessionContext.generativeAnswersSettings) && IsEmpty(Global.PA_Copilot_Model_SessionContext.generativeAnswersSettings.public_websites) && IsBlank(Global.PA_Copilot_Model_SessionContext.generativeAnswersSettings.bing_configuration_id)\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_TVhII\r\n      variable: Topic.appsOptedOutOfDataQandA\r\n      value: =(Global.PA_Copilot_Model_SessionContext.appUniqueName = \"msdyncrm_MarketingSMBApp\" && System.User.Language = Locale.English) || Global.PA_Copilot_Model_SessionContext.appUniqueName = \"msdyn_BusinessPerformanceAnalytics\" || Global.PA_Copilot_Model_SessionContext.appUniqueName = \"msdyn_XPnAModeler\"\r\n\r\n    - kind: BeginDialog\r\n      id: Pqr34B\r\n      input:\r\n        binding:\r\n          DefaultSettingValue: false\r\n          FeatureSetting: \"=\\\"EnableGenerativeAnswersDVFallback\\\"\"\r\n\r\n      dialog: msdyn_appCopilot.topic.AppCopilotGetFeatureSetting\r\n      output:\r\n        binding:\r\n          FeatureValue: Topic.EnableGenerativeAnswersDVFallback\r\n\r\n    - kind: BeginDialog\r\n      id: Mno56C\r\n      input:\r\n        binding:\r\n          DefaultSettingValue: false\r\n          FeatureSetting: \"=\\\"IsBingSearchEnabled\\\"\"\r\n\r\n      dialog: msdyn_appCopilot.topic.AppCopilotGetFeatureSetting\r\n      output:\r\n        binding:\r\n          FeatureValue: Topic.IsBingSearchEnabled\r\n\r\n    - kind: ConditionGroup\r\n      id: conditionGroup_TmQgBC\r\n      conditions:\r\n        - id: conditionItem_5Eho6B\r\n          condition: =Topic.EnableGenerativeAnswersDVFallback = true && Topic.IsBingSearchEnabled = true && Topic.appsOptedOutOfDataQandA = false && If(IsBlank(Global.PA_Copilot_SessionContext) Or Global.PA_Copilot_SessionContext.host <> \"Webplayer-SideCar\", true, false)\r\n          actions:\r\n            - kind: BeginDialog\r\n              id: 1E36zn\r\n              dialog: msdyn_appCopilot.topic.DataverseStructuredData\r\n\r\n            - kind: EndDialog\r\n              id: 3JsLoG\r\n\r\n    - kind: ConditionGroup\r\n      id: conditionGroup_TM3TIy\r\n      conditions:\r\n        - id: conditionItem_ougi4g\r\n          condition: =(CountRows(Topic.MatchedEntities) > 0 || CountRows(Topic.MatchedEntities2) > 0 || Topic.HasNoURLs) && !Topic.appsOptedOutOfDataQandA\r\n          actions:\r\n            - kind: ConditionGroup\r\n              id: conditionGroup_x6XivR\r\n              conditions:\r\n                - id: conditionItem_NN3P8m\r\n                  condition: =If(!IsBlank(Global.PA_Copilot_SessionContext) And Global.PA_Copilot_SessionContext.host = \"Webplayer-SideCar\", true, false)\r\n                  actions:\r\n                    - kind: BeginDialog\r\n                      id: E5DnTd\r\n                      dialog: msdyn_appCopilot.topic.DVQAndA\r\n\r\n              elseActions:\r\n                - kind: BeginDialog\r\n                  id: nbCA9c\r\n                  dialog: msdyn_appCopilot.topic.DataverseStructuredData\r\n\r\n            - kind: EndDialog\r\n              id: mq9xW4\r\n\r\n      elseActions:\r\n        - kind: BeginDialog\r\n          id: 3yvJsp\r\n          dialog: msdyn_appCopilot.topic.GenerativeAnswers\r\n\r\n        - kind: SearchAndSummarizeContent\r\n          id: search-content\r\n          userInput: =System.Activity.Text\r\n          moderationLevel: High\r\n          variable: Topic.Answer\r\n          publicDataSource:\r\n            kind: PublicSiteSearchDataSource\r\n            sites: |-\r\n              =Filter(\r\n                  [Text(System.Activity.ChannelData.answersUrl1), Text(System.Activity.ChannelData.answersUrl2), Text(System.Activity.ChannelData.answersUrl3), Text(System.Activity.ChannelData.answersUrl4)],\r\n                  (Value <> \"\")\r\n              )\r\n\r\n          sharePointSearchDataSource: {}\r\n          customDataSource: {}\r\n\r\n        - kind: ConditionGroup\r\n          id: has-answer-conditions\r\n          conditions:\r\n            - id: has-answer\r\n              condition: =!IsBlank(Topic.Answer)\r\n              actions:\r\n                - kind: EndDialog\r\n                  id: end-topic\r\n                  clearTopicQueue: true",
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": 1033,
+    "name": "Platform conversational boosting",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.PlatformConversationalBoosting",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.PlatformConversationalBoosting"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

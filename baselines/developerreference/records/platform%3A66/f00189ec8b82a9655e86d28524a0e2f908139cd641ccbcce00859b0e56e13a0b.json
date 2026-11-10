@@ -1,0 +1,117 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ItemConditionBuilderControl",
+        "ControlManifestVersion": "1.0.35",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.ConditionBuilder.ItemConditionBuilderControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_ItemConditionBuilderControl_Name",
+        "FullName": "MscrmControls.ConditionBuilder.ItemConditionBuilderControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.ConditionBuilder.ItemConditionBuilderControl",
+        "Namespace": "MscrmControls.ConditionBuilder",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "fetchxml",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "parentid",
+              "Required": true,
+              "Type": "Lookup.Simple",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "isvalid",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 2
+            },
+            {
+              "Hidden": true,
+              "Name": "validationerrormessage",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 2
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "item-cds-expression-builder",
+              "LoadOrder": 1,
+              "Name": "item-cds-expression-builder",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.ConditionBuilder.ItemConditionBuilderControl_ItemConditionBuilderControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "css/ItemConditionBuilderControl.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/ItemConditionBuilderControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.1.22091.1008",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.ConditionBuilder\" constructor=\"ItemConditionBuilderControl\" version=\"1.0.35\" display-name-key=\"CC_ItemConditionBuilderControl_Name\" control-type=\"standard\" hidden=\"true\"><modes></modes><property name=\"fetchxml\" display-name-key=\"ItemConditionBuilderControl_fetchxml\" description-key=\"ItemConditionBuilderControl_fetchxml_desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"parentid\" display-name-key=\"ItemConditionBuilderControl_parentid\" description-key=\"ItemConditionBuilderControl_parentid_desc\" of-type=\"Lookup.Simple\" usage=\"input\" required=\"true\" hidden=\"true\" /><property name=\"isvalid\" display-name-key=\"ItemConditionBuilderControl_isvalid\" description-key=\"ItemConditionBuilderControl_isvalid_desc\" of-type=\"Enum\" usage=\"output\" required=\"false\" hidden=\"true\"><value name=\"yes\" display-name-key=\"ItemConditionBuilderControl_isvalid_yes\" description-key=\"ItemConditionBuilderControl_isvalid_yes_desc\" default=\"true\">true</value><value name=\"no\" display-name-key=\"ItemConditionBuilderControl_isvalid_no\" description-key=\"ItemConditionBuilderControl_isvalid_no_desc\">false</value></property><property name=\"validationerrormessage\" display-name-key=\"ItemConditionBuilderControl_validationerrormessage\" description-key=\"ItemConditionBuilderControl_validationerrormessage_desc\" of-type=\"SingleLine.Text\" usage=\"output\" required=\"false\" hidden=\"true\" /><resources><css path=\"css/ItemConditionBuilderControl.css\" order=\"1\" /><library name=\"item-cds-expression-builder\" version=\"&gt;=1\" order=\"1\"><!--Expression data provider 0.1.0-dev.80+86--><packaged_library path=\"libs/item-cds-expression-builder.js\" version=\"1.0.22\" /></library><code path=\"ItemConditionBuilderControl.js\" order=\"2\" /><resx path=\"strings/ItemConditionBuilderControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.ConditionBuilder.ItemConditionBuilderControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.35"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.ConditionBuilder.ItemConditionBuilderControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdynce_ServiceManagementControlsExtension",
+      "version": "9.1.26093.1002"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

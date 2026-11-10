@@ -1,0 +1,105 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "OptionSet",
+        "ControlManifestVersion": "1.0.87",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.FieldControls.OptionSet"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_OptionSetGeneric",
+        "FullName": "MscrmControls.FieldControls.OptionSet",
+        "IsVirtual": true,
+        "Name": "MscrmControls.FieldControls.OptionSet",
+        "Namespace": "MscrmControls.FieldControls",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "Type": "OptionSet",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "ShowLabelWhenUnfocused",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "ShowAsSingleLine",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "msvcontrol",
+              "LoadOrder": 1,
+              "Name": "msvcontrol",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.FieldControls.OptionSet_OptionSet.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/OptionSet.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.FieldControls\" constructor=\"OptionSet\" version=\"1.0.87\" display-name-key=\"CC_OptionSetGeneric\" control-type=\"virtual\" hidden=\"true\"><modes><edit /><read /></modes><property name=\"value\" display-name-key=\"CC_OptionSet_value_name\" of-type=\"OptionSet\" usage=\"bound\" required=\"true\" hidden=\"false\"><doc description-key=\"CC_OptionSet_value_desc\" /></property><property display-name-key=\"ShowLabelWhenUnfocused\" name=\"ShowLabelWhenUnfocused\" of-type=\"TwoOptions\" usage=\"input\" required=\"false\" hidden=\"true\" /><property display-name-key=\"ShowAsSingleLine\" name=\"ShowAsSingleLine\" of-type=\"TwoOptions\" usage=\"input\" required=\"false\" hidden=\"true\" /><resources><library name=\"msvcontrol\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/msvcontrollib-1.0.0.js\" version=\"1.1.13\" /></library><code path=\"OptionSet.js\" order=\"2\" /><resx path=\"strings/OptionSet.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.FieldControls.OptionSet",
+    "supportedplatform": "(Model)",
+    "version": "1.0.87"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.FieldControls.OptionSet"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

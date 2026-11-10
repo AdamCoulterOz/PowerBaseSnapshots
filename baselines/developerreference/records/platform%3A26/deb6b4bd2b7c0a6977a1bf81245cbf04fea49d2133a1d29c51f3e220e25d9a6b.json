@@ -1,0 +1,200 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": "Displays Draft Appointments the current user owns.",
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"true\" savedqueryid=\"116ae565-8b51-4bdf-a51b-76a3b7cec9d6\"><entity name=\"appointment\"><attribute name=\"subject\" /><attribute name=\"scheduledstart\" /><attribute name=\"scheduledend\" /><attribute name=\"regardingobjectid\" /><attribute name=\"prioritycode\" /><attribute name=\"activityid\" /><attribute name=\"instancetypecode\" /><attribute name=\"location\" /><order attribute=\"scheduledstart\" descending=\"false\" /><filter type=\"and\"><condition attribute=\"statecode\" operator=\"in\"><value>0</value><value>3</value></condition><condition attribute=\"isdraft\" operator=\"eq\" value=\"1\" /></filter><link-entity name=\"activityparty\" from=\"activityid\" to=\"activityid\" alias=\"aa\"><filter type=\"and\"><condition attribute=\"partyid\" operator=\"eq-userid\" /><condition attribute=\"participationtypemask\" operator=\"in\"><value>7</value><value>9</value><value>5</value><value>6</value></condition></filter></link-entity></entity></fetch>",
+    "introducedversion": "9.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "subject",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "appointment"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "subject",
+                "RelatedEntityName": "",
+                "Width": 250
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "regardingobjectid",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "location",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "prioritycode",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "scheduledstart",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "scheduledend",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "instancetypecode",
+                "RelatedEntityName": "",
+                "Width": 100
+              }
+            ],
+            "Id": "activityid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "appointment"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:appointment\" jump=\"subject\" select=\"1\" preview=\"1\" icon=\"1\"><row name=\"result\" id=\"activityid\"><cell name=\"subject\" width=\"250\" /><cell name=\"regardingobjectid\" width=\"100\" /><cell name=\"location\" width=\"100\" /><cell name=\"prioritycode\" width=\"100\" /><cell name=\"scheduledstart\" width=\"100\" /><cell name=\"scheduledend\" width=\"100\" /><cell name=\"instancetypecode\" width=\"100\" ishidden=\"1\" /></row></grid>"
+    },
+    "name": "My Draft Appointments",
+    "offlinesqlquery": "/*SelectStart*/select   DISTINCT  \"appointment0\".[subject] as \"subject\"\r , \"appointment0\".[scheduledstart] as \"scheduledstart\"\r , \"appointment0\".[scheduledend] as \"scheduledend\"\r , \"appointment0\".[regardingobjectid!id] as \"regardingobjectid!id\"\r , \"appointment0\".[regardingobjectid!logicalname] as \"regardingobjectid!logicalname\"\r , \"appointment0\".[regardingobjectid!name] as \"regardingobjectid!name\"\r , \"appointment0\".[prioritycode] as \"prioritycode\"\r , \"appointment0\".[activityid] as \"activityid\"\r , \"appointment0\".[instancetypecode] as \"instancetypecode\"\r , \"appointment0\".[location] as \"location\"/*SelectEnd*/  /*FromStart*/from  Appointment as \"appointment0\" \t/*JoinStart*/ join ActivityParty as \"aa\" on (\"appointment0\".[activityid]  =  \"aa\".[activityid!id] and (\"aa\".[partyid!id] = \"!eq-userid!\" and (\"aa\".[participationtypemask] in (7\r , 9\r , 5\r , 6))))/*JoinEnd*//*FromEnd*/  /*WhereStart*/where  ((\"appointment0\".[statecode] in (0\r , 3)) and \"appointment0\".[isdraft] = 1)/*WhereEnd*/  /*OrderByStart*/order by  \"appointment0\".[scheduledstart] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "appointment",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "116ae565-8b51-4bdf-a51b-76a3b7cec9d6",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "appointment",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "116ae565-8b51-4bdf-a51b-76a3b7cec9d6"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "System",
+      "version": "5.0"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

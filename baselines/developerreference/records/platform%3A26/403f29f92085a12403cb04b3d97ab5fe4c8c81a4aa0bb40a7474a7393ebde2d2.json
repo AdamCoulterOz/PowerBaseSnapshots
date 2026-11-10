@@ -1,0 +1,152 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" savedqueryid=\"9a100fa0-81cb-4b96-a1f3-069d10fea6d7\"><entity name=\"msdyn_slakpi\"><attribute name=\"msdyn_slakpiid\" /><attribute name=\"msdyn_name\" /><attribute name=\"createdon\" /><attribute name=\"msdyn_entityname\" /><attribute name=\"msdyn_applicablefromfield\" /><attribute name=\"msdyn_entitydisplayname\" /><attribute name=\"msdyn_applicablefromdisplayname\" /><order attribute=\"msdyn_name\" descending=\"false\" /><filter type=\"and\"><condition attribute=\"statecode\" operator=\"eq\" value=\"1\" /></filter></entity></fetch>",
+    "introducedversion": "9.1.0.0",
+    "iscustom": true,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "msdyn_name",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "msdyn_slakpi"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "msdyn_name",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "createdon",
+                "RelatedEntityName": "",
+                "Width": 125
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "msdyn_entitydisplayname",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "msdyn_applicablefromdisplayname",
+                "RelatedEntityName": "",
+                "Width": 100
+              }
+            ],
+            "Id": "msdyn_slakpiid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "msdyn_slakpi"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" jump=\"msdyn_name\" select=\"1\" icon=\"1\" preview=\"1\" object=\"logical:msdyn_slakpi\"><row name=\"result\" id=\"msdyn_slakpiid\"><cell name=\"msdyn_name\" width=\"300\" /><cell name=\"createdon\" width=\"125\" /><cell name=\"msdyn_entitydisplayname\" width=\"100\" /><cell name=\"msdyn_applicablefromdisplayname\" width=\"100\" /></row></grid>"
+    },
+    "name": "Active SLAKPIs",
+    "offlinesqlquery": "/*SelectStart*/select  \"msdyn_slakpi0\".[msdyn_slakpiid] as \"msdyn_slakpiid\"\r , \"msdyn_slakpi0\".[msdyn_name] as \"msdyn_name\"\r , \"msdyn_slakpi0\".[createdon] as \"createdon\"\r , \"msdyn_slakpi0\".[msdyn_entityname] as \"msdyn_entityname\"\r , \"msdyn_slakpi0\".[msdyn_applicablefromfield] as \"msdyn_applicablefromfield\"\r , \"msdyn_slakpi0\".[msdyn_entitydisplayname] as \"msdyn_entitydisplayname\"\r , \"msdyn_slakpi0\".[msdyn_applicablefromdisplayname] as \"msdyn_applicablefromdisplayname\"/*SelectEnd*/  /*FromStart*/from  msdyn_slakpi as \"msdyn_slakpi0\"/*FromEnd*/  /*WhereStart*/where  (\"msdyn_slakpi0\".[statecode] = 1)/*WhereEnd*/  /*OrderByStart*/order by  \"msdyn_slakpi0\".[msdyn_name] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "msdyn_slakpi",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "9a100fa0-81cb-4b96-a1f3-069d10fea6d7",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "msdyn_slakpi",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "9a100fa0-81cb-4b96-a1f3-069d10fea6d7"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}

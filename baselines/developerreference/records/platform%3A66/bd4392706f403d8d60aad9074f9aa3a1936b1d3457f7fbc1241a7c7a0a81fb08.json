@@ -1,0 +1,150 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "MapControl",
+        "ControlManifestVersion": "1.0.51",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Map.MapControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_Map_Name",
+        "FullName": "MscrmControls.Map.MapControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.Map.MapControl",
+        "Namespace": "MscrmControls.Map",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "TypeGroup": "Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "isStatic",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "showGetDirectionsButton",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "height",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "latitude",
+              "Required": true,
+              "Type": "FP",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "longitude",
+              "Required": true,
+              "Type": "FP",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "outputLatitude",
+              "Required": true,
+              "Type": "FP",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "outputLongitude",
+              "Required": true,
+              "Type": "FP",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.Map.MapControl_MapControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 4,
+              "Name": "css/MapControl.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "libs/MapControlIframeContent.html",
+              "Type": 3
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/MapControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Map\" constructor=\"MapControl\" version=\"1.0.51\" display-name-key=\"CC_Map_Name\" description-key=\"CC_Map_Desc\" preview-image=\"img/preview.png\" hidden=\"true\"><modes><read /><edit /></modes><AvailableOn><web classic=\"enable\" /><phone /><tablet /></AvailableOn><type-group name=\"Text\"><type>SingleLine.Text</type><type>Multiple</type></type-group><property name=\"value\" display-name-key=\"CC_Value\" description-key=\"CC_Value_Desc\" of-type-group=\"Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"isStatic\" display-name-key=\"CC_isStatic\" description-key=\"isStatic_Desc_Key\" of-type=\"Enum\" usage=\"input\" required=\"false\" hidden=\"true\"><value name=\"Yes\" display-name-key=\"Yes\">Yes</value><value name=\"No\" display-name-key=\"No\">No</value></property><property name=\"showGetDirectionsButton\" display-name-key=\"CC_showGetDirectionsButton\" description-key=\"showGetDirectionsButton_Desc_Key\" of-type=\"Enum\" usage=\"input\" required=\"false\" hidden=\"true\"><value name=\"Yes\" display-name-key=\"Yes\">Yes</value><value name=\"No\" display-name-key=\"No\">No</value></property><property name=\"height\" display-name-key=\"CC_height\" description-key=\"CC_height_Desc\" of-type=\"Whole.None\" usage=\"input\" required=\"false\" hidden=\"true\" /><groups name=\"mapSourceSwitch\" display-name-key=\"CC_Map_Source\" description-key=\"CC_Map_Source_Desc\" required=\"true\"><group name=\"AddressGroup\" display-name-key=\"CC_Address\"></group><group name=\"CoordinatesGroup\" display-name-key=\"CC_Coordinates\"><property name=\"latitude\" display-name-key=\"CC_Latitude\" description-key=\"CC_Latitude_Desc\" of-type=\"FP\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"longitude\" display-name-key=\"CC_Longitude\" description-key=\"CC_Longitude_Desc\" of-type=\"FP\" usage=\"bound\" required=\"true\" hidden=\"true\" /></group></groups><groups name=\"addressEditableSwitch\" display-name-key=\"CC_Allow_Editing\" description-key=\"CC_Allow_Editing_Desc\" required=\"true\"><group name=\"isAddressEditableNoGroup\" display-name-key=\"CC_Address_Editable_No\" /><group name=\"isAddressEditableYesGroup\" display-name-key=\"CC_Address_Editable_Yes\"><property name=\"outputLatitude\" display-name-key=\"CC_Output_Latitude\" description-key=\"CC_Output_Latitude_Desc\" of-type=\"FP\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"outputLongitude\" display-name-key=\"CC_Output_Longitude\" description-key=\"CC_Output_Longitude_Desc\" of-type=\"FP\" usage=\"bound\" required=\"true\" hidden=\"true\" /></group></groups><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.7\" /></library><code path=\"MapControl.js\" order=\"2\" /><html path=\"libs/MapControlIframeContent.html\" order=\"3\" /><css path=\"css/MapControl.css\" order=\"4\" /><resx path=\"strings/MapControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.Map.MapControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.51"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Map.MapControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

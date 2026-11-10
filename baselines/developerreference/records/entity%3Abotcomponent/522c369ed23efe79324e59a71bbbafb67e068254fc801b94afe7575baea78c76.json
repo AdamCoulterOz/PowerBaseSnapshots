@@ -1,0 +1,73 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "msdyn_appCopilot.topic.DefaultPlatformSparkContent"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponent"
+    },
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 10,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnEventActivity\r\n  id: main\r\n  actions:\r\n    - kind: ConditionGroup\r\n      id: conditionGroup_3LXuJg\r\n      conditions:\r\n        - id: conditionItem_EJuABh\r\n          actions:\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_zYoM08\r\n              value: Act\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_9BuDTP\r\n              value: Analyze\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_EkrPi4\r\n              value: Ask\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_xa3sQu\r\n              value: Navigate to [table name]\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_hxAu6L\r\n              value: How many [table name] are there?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_Bw9lQz\r\n              value: How many [table name] are [insert condition]?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_fbkHRn\r\n              value: What are the [table name] I created in the last week?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_eFjQXY\r\n              value: Who is [record name] assigned to?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_IIRGvt\r\n              value: What are the [table name] assigned to [person]?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_FWjnVw\r\n              value: What are my [table name]?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_qwKkPs\r\n              value: Who are my contacts?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_BBCLi0\r\n              value: Which contacts do not have emails addresses?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_A2gsy5\r\n              value: Which contacts do not have business phone numbers?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_3saXSn\r\n              value: Which opportunities closed in the past 30 days?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_b2NE88\r\n              value: What opportunities have the highest estimated revenue?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_4wQDfG\r\n              value: What are my open opportunities?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_ugohCY\r\n              value: What leads have closed in the last 30 days?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_g1WVnq\r\n              value: What are my open leads?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_XAsvzk\r\n              value: What are the top 10 accounts with the highest revenue?\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_tMqHg9\r\n              value: Get latest news for account adventure works\r\n\r\n            - kind: SetTextVariable\r\n              id: setTextVariable_ogSkT5\r\n              value: What accounts do not have a contact?",
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": 1033,
+    "name": "Sparks Default Platform Content (en-US)",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.DefaultPlatformSparkContent.en-US",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.DefaultPlatformSparkContent.en-US"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

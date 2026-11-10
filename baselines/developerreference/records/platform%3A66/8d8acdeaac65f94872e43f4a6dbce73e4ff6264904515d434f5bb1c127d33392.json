@@ -1,0 +1,131 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "MentionsControl",
+        "ControlManifestVersion": "1.26062.1",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Mentions.MentionsControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_MentionsControl",
+        "FullName": "MscrmControls.Mentions.MentionsControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.Mentions.MentionsControl",
+        "Namespace": "MscrmControls.Mentions",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "LookUpDataSet",
+              "Required": true,
+              "TypeGroup": "lookups",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "SearchString",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "SpecialCharKey",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "Config",
+              "Required": true,
+              "Type": "Multiple",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "PreFetchedRecords",
+              "Required": false,
+              "Type": "Multiple",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "Output",
+              "Required": false,
+              "Type": "Multiple",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "RecordPickerControl",
+              "LoadOrder": 1,
+              "Name": "RecordPickerControl",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.Mentions.MentionsControl_MentionsControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "css/MentionsControl.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/MentionsControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Mentions\" constructor=\"MentionsControl\" version=\"1.26062.1\" display-name-key=\"CC_MentionsControl\" control-type=\"virtual\" hidden=\"true\"><modes></modes><type-group name=\"lookups\"><type>Lookup.Simple</type></type-group><property name=\"LookUpDataSet\" display-name-key=\"CC_SimpleLookupControl\" description-key=\"CC_SimpleLookupControl_Desc\" of-type-group=\"lookups\" usage=\"input\" required=\"true\" hidden=\"false\" /><property name=\"SearchString\" display-name-key=\"CC_MentionsControl_SearchString\" description-key=\"CC_MentionsControl_SearchString_Desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"SpecialCharKey\" display-name-key=\"CC_MentionsControl_CharKey\" description-key=\"CC_MentionsControl_CharKey_Desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"Config\" display-name-key=\"CC_MentionsControl_Config\" description-key=\"CC_MentionsControl_Config_Desc\" usage=\"input\" of-type=\"Multiple\" required=\"true\" hidden=\"false\" /><property name=\"PreFetchedRecords\" display-name-key=\"CC_MentionsControl_PreFetchedRecords\" description-key=\"CC_MentionsControl_PreFetchedRecords_Desc\" usage=\"input\" of-type=\"Multiple\" required=\"false\" hidden=\"false\" /><property name=\"Output\" display-name-key=\"CC_MentionsControl_Output\" description-key=\"CC_MentionsControl_Output_Desc\" usage=\"bound\" of-type=\"Multiple\" required=\"false\" hidden=\"false\" /><resources><library name=\"RecordPickerControl\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/RecordPickerControl.js\" version=\"1.0.25\" /></library><css path=\"css/MentionsControl.css\" order=\"2\" /><resx path=\"strings/MentionsControl.1033.resx\" version=\"1.0.1\" /><code path=\"MentionsControl.js\" order=\"3\" /></resources></control></manifest>",
+    "name": "MscrmControls.Mentions.MentionsControl",
+    "supportedplatform": "(Model)",
+    "version": "1.26062.1"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Mentions.MentionsControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

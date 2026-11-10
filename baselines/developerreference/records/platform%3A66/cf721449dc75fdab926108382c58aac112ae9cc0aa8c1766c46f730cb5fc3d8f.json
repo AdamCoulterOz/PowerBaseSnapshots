@@ -1,0 +1,144 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ActivityEditorControl",
+        "ControlManifestVersion": "1.21015.0",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.ActivityControls.ActivityEditorControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "ActivityEditorControl",
+        "FullName": "MscrmControls.ActivityControls.ActivityEditorControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.ActivityControls.ActivityEditorControl",
+        "Namespace": "MscrmControls.ActivityControls",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "TypeGroup": "strings",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "isUnsafe",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "isContextualEmailToolbar",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "jqueryui",
+              "LoadOrder": 2,
+              "Name": "jqueryui",
+              "Type": 0
+            },
+            {
+              "LibraryName": "jsanity",
+              "LoadOrder": 3,
+              "Name": "jsanity",
+              "Type": 0
+            },
+            {
+              "LibraryName": "MktSvcCommonBundle",
+              "LoadOrder": 4,
+              "Name": "MktSvcCommonBundle",
+              "Type": 0
+            },
+            {
+              "LibraryName": "Editor",
+              "LoadOrder": 6,
+              "Name": "Editor",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 7,
+              "Name": "MscrmControls.ActivityControls.ActivityEditorControl_ActivityEditorControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 8,
+              "Name": "css/jquery-ui.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 9,
+              "Name": "css/Editor.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 10,
+              "Name": "css/ActivityEditorControl.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/ActivityEditorControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.ActivityControls\" constructor=\"ActivityEditorControl\" version=\"1.21015.0\" display-name-key=\"ActivityEditorControl\" description-key=\"ActivityEditorControl\" preview-image=\"img/preview.png\" hidden=\"true\"><modes><read /><edit /></modes><type-group name=\"strings\"><type>SingleLine.Text</type><type>SingleLine.TextArea</type><type>Multiple</type></type-group><property name=\"value\" display-name-key=\"CC_Field\" description-key=\"CC_Field_Desc\" of-type-group=\"strings\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"isUnsafe\" display-name-key=\"CC_IsUnsafe\" description-key=\"CC_IsUnsafe_Desc\" of-type=\"Whole.None\" usage=\"bound\" required=\"false\" hidden=\"true\" /><property name=\"isContextualEmailToolbar\" display-name-key=\"CC_isContextualEmailToolbar\" description-key=\"CC_isContextualEmailToolbar_Desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"true\" /><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><library name=\"jqueryui\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/jqueryui-1.11.4.js\" version=\"1.11.4\" /></library><library name=\"jsanity\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"libs/jsanity.min.js\" version=\"1.0.1\" /></library><library name=\"MktSvcCommonBundle\" version=\"=1.90.59\" order=\"4\"><packaged_library path=\"libs/CommonBundle.js\" version=\"1.90.59\" /></library><library name=\"Editor\" version=\"=1.2.43\" order=\"6\"><packaged_library path=\"libs/Editor.js\" version=\"1.2.43\" /></library><code path=\"ActivityEditorControl.js\" order=\"7\" /><css path=\"css/jquery-ui.css\" order=\"8\" /><css path=\"css/Editor.css\" order=\"9\" /><css path=\"css/ActivityEditorControl.css\" order=\"10\" /><resx path=\"strings/ActivityEditorControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.ActivityControls.ActivityEditorControl",
+    "supportedplatform": null,
+    "version": "1.21015.0"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.ActivityControls.ActivityEditorControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

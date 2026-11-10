@@ -1,0 +1,124 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": "Displays the Name and Email of active contacts.",
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" savedqueryid=\"73bc2d9b-4e0e-424c-8839-ed59d6817e3a\"><entity name=\"contact\"><attribute name=\"fullname\" /><attribute name=\"emailaddress1\" /><order attribute=\"fullname\" descending=\"false\" /><filter type=\"and\"><condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /></filter></entity></fetch>",
+    "introducedversion": "5.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "fullname",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "contact"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "fullname",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "emailaddress1",
+                "RelatedEntityName": "",
+                "Width": 150
+              }
+            ],
+            "Id": "contactid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "contact"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:contact\" jump=\"fullname\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"result\" id=\"contactid\"><cell name=\"fullname\" width=\"150\" /><cell name=\"emailaddress1\" width=\"150\" /></row></grid>"
+    },
+    "name": "Active Contacts Subgrid View",
+    "offlinesqlquery": "/*SelectStart*/select  \"contact0\".[fullname] as \"fullname\"\r , \"contact0\".[emailaddress1] as \"emailaddress1\"\r , \"contact0\".[contactid] as \"contactid\"/*SelectEnd*/  /*FromStart*/from  Contact as \"contact0\"/*FromEnd*/  /*WhereStart*/where  (\"contact0\".[statecode] = 0)/*WhereEnd*/  /*OrderByStart*/order by  \"contact0\".[fullname] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "contact",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "73bc2d9b-4e0e-424c-8839-ed59d6817e3a",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "contact",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "73bc2d9b-4e0e-424c-8839-ed59d6817e3a"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}

@@ -1,0 +1,46 @@
+{
+  "configuration": {
+    "componentstate": 0,
+    "importsequencenumber": null,
+    "introducedversion": "202608.1.4.1",
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "msdyn_aitemplateid": "2f68d9c1-4910-43d1-974e-1c456d39763e",
+    "msdyn_databinding": null,
+    "msdyn_defaultrunschedulingoptions": null,
+    "msdyn_istrainable": false,
+    "msdyn_modelaction": "[{\n  \"apiName\": \"Microsoft.Dynamics.CRM.msdyn_PrettyPredict\",\n  \"actionName\": \"Predict\",\n  \"dataSpecification\": {\n    \"schemaVersion\": 2,\n    \"input\": {\n      \"attributes\": [\n        {\n          \"specificationName\": \"text\",\n          \"displayName\": \"Text\",\n          \"requiredLevel\": \"ApplicationRequired\",\n          \"dataType\": \"String\"\n        },\n        {\n          \"specificationName\": \"language\",\n          \"displayName\": \"Language\",\n          \"requiredLevel\": \"Recommended\",\n          \"dataType\": \"String\"\n        }\n      ]\n    },\n    \"output\": {\n      \"displayName\": \"\",\n      \"embeddedObjects\": [\n        {\n          \"specificationName\": \"Document\",\n          \"displayName\": \"Document\",\n          \"isCollection\": false,\n          \"embeddedObjects\": [\n            {\n              \"specificationName\": \"AllSentiments\",\n              \"displayName\": \"AllSentiments\",\n              \"isCollection\": true,\n              \"attributes\": [\n                {\n                  \"specificationName\": \"Name\",\n                  \"displayName\": \"\",\n                  \"dataType\": \"String\"\n                },\n                {\n                  \"specificationName\": \"Confidence\",\n                  \"displayName\": \"\",\n                  \"dataType\": \"Double\"\n                }\n              ]\n            },\n            {\n              \"specificationName\": \"TopSentiment\",\n              \"displayName\": \"TopSentiment\",\n              \"isCollection\": false,\n              \"attributes\": [\n                {\n                  \"specificationName\": \"Name\",\n                  \"displayName\": \"\",\n                  \"dataType\": \"String\"\n                },\n                {\n                  \"specificationName\": \"Confidence\",\n                  \"displayName\": \"\",\n                  \"dataType\": \"Double\"\n                }\n              ]\n            }\n          ]\n        },\n        {\n          \"specificationName\": \"Sentences\",\n          \"displayName\": \"Sentences\",\n          \"isCollection\": true,\n          \"attributes\": [\n            {\n              \"specificationName\": \"Text\",\n              \"displayName\": \"\",\n              \"dataType\": \"String\"\n            },\n            {\n              \"specificationName\": \"StartIndex\",\n              \"displayName\": \"\",\n              \"dataType\": \"Integer\"\n            },\n            {\n              \"specificationName\": \"Length\",\n              \"displayName\": \"\",\n              \"dataType\": \"Integer\"\n            }\n          ],\n          \"embeddedObjects\": [\n            {\n              \"specificationName\": \"AllSentiments\",\n              \"displayName\": \"AllSentiments\",\n              \"isCollection\": true,\n              \"attributes\": [\n                {\n                  \"specificationName\": \"Name\",\n                  \"displayName\": \"\",\n                  \"dataType\": \"String\"\n                },\n                {\n                  \"specificationName\": \"Confidence\",\n                  \"displayName\": \"\",\n                  \"dataType\": \"Double\"\n                }\n              ]\n            },\n            {\n              \"specificationName\": \"TopSentiment\",\n              \"displayName\": \"TopSentiment\",\n              \"isCollection\": false,\n              \"attributes\": [\n                {\n                  \"specificationName\": \"Name\",\n                  \"displayName\": \"\",\n                  \"dataType\": \"String\"\n                },\n                {\n                  \"specificationName\": \"Confidence\",\n                  \"displayName\": \"\",\n                  \"dataType\": \"Double\"\n                }\n              ]\n            }\n          ]\n        }\n      ]\n    }\n  }\n}]",
+    "msdyn_resourceinfo": "{\"ResourceType\":\"CognitiveService\",\"CognitiveInfo\":{\"CognitiveType\":\"SentimentAnalysis\"}, \"ModelStorageType\":\"None\"}",
+    "msdyn_runconfigschema": null,
+    "msdyn_rundataspecification": "{\n  \"SpecFormatVersion\": 1,\n  \"InputRootEntity\": {\n    \"DisplayName\": \"\",\n    \"Attributes\": {\n      \"text\": { \"Type\": \"String\", \"DisplayName\": \"Text\" },\n      \"language\": { \"Type\": \"String\", \"DisplayName\": \"Language\" }\n    }\n  },\n  \"OutputRootEntity\": {\n    \"DisplayName\": \"\",\n    \"Attributes\": {\n       \"result\": {\n          \"Type\": \"Object\",\n          \"Entity\": {\n            \"DisplayName\": \"\",\n            \"Attributes\": {\n              \"sentiment\": { \"Type\": \"String\", \"DisplayName\": \"Global sentiment\" },\n              \"documentScores\": {\n                \"Type\": \"Object\",\n                \"Entity\": {\n                  \"DisplayName\": \"Global\",\n                  \"Attributes\": {\n                    \"positive\": { \"Type\": \"Real\", \"DisplayName\": \"positive score\" },\n                    \"neutral\": { \"Type\": \"Real\", \"DisplayName\": \"neutral score\" },\n                    \"negative\": { \"Type\": \"Real\", \"DisplayName\": \"negative score\" }\n                  }\n                }\n              },\n              \"sentences\": {\n                \"Type\": \"Array\",\n                \"Entity\": {\n                  \"DisplayName\": \"Sentence\",\n                  \"Attributes\": {\n                    \"sentiment\": { \"Type\": \"String\" },\n                    \"offset\": { \"Type\": \"Integer\" },\n                    \"length\": { \"Type\": \"Integer\" },\n                    \"sentenceScores\": {\n                      \"Type\": \"Object\",\n                      \"Entity\": {\n                        \"DisplayName\": \"\",\n                        \"Attributes\": {\n                          \"positive\": { \"Type\": \"Real\", \"DisplayName\": \"positive score\" },\n                          \"neutral\": { \"Type\": \"Real\", \"DisplayName\": \"neutral score\" },\n                          \"negative\": { \"Type\": \"Real\", \"DisplayName\": \"negative score\" }\n                        }\n                      }\n                    }\n                  }\n                }\n              }\n            }\n          }\n       }\n    }\n  }\n}",
+    "msdyn_templateversion": 1,
+    "msdyn_trainingconfigschema": null,
+    "msdyn_trainingdataspecification": null,
+    "msdyn_uniquename": "SentimentAnalysis",
+    "msdyn_uxconfiguration": null,
+    "overriddencreatedon": null,
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "portability": "not-established",
+    "value": "2f68d9c1-4910-43d1-974e-1c456d39763e"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_AISolutionDefaultTemplates",
+      "version": "202608.1.4.1"
+    }
+  ],
+  "typeIdentity": "platform:400"
+}

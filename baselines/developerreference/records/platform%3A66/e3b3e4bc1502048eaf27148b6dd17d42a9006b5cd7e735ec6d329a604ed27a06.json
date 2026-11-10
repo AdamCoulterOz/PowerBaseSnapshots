@@ -1,0 +1,111 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.18",
+        "Children": [],
+        "ConstructorName": "EmailResolutionControl",
+        "ControlManifestVersion": "1.0.12",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.FieldControl.EmailResolutionControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "EmailResolutionControl_Display_Key",
+        "FullName": "MscrmControls.FieldControl.EmailResolutionControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.FieldControl.EmailResolutionControl",
+        "Namespace": "MscrmControls.FieldControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "TypeGroup": "lookups",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "searchText",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "recordCount",
+              "Required": false,
+              "Type": "Whole.None",
+              "Usage": 2
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.FieldControl.EmailResolutionControl_bundle.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/EmailResolutionControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "Lookup.PartyList",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.FieldControl\" constructor=\"EmailResolutionControl\" version=\"1.0.12\" display-name-key=\"EmailResolutionControl_Display_Key\" description-key=\"EmailResolutionControl_Desc_Key\" control-type=\"virtual\" api-version=\"1.3.18\"><external-service-usage enabled=\"false\" /><type-group name=\"lookups\"><type>Lookup.PartyList</type></type-group><property name=\"value\" display-name-key=\"value_Display_Key\" description-key=\"value_Desc_Key\" of-type-group=\"lookups\" usage=\"bound\" required=\"true\" /><property name=\"searchText\" display-name-key=\"searchText_Display_Key\" description-key=\"searchText_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"input\" /><property name=\"recordCount\" display-name-key=\"RecordCount_Display_Key\" description-key=\"RecordCount_Desc_Key\" of-type=\"Whole.None\" usage=\"output\" /><resources><code path=\"bundle.js\" order=\"1\" /><resx path=\"strings/EmailResolutionControl.1033.resx\" version=\"1.0.0\" /></resources><feature-usage><uses-feature name=\"Utility\" required=\"true\" /><uses-feature name=\"WebAPI\" required=\"true\" /></feature-usage><built-by name=\"pac\" version=\"1.49.1-alpha-25090500\" /></control></manifest>",
+    "name": "MscrmControls.FieldControl.EmailResolutionControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.12"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.FieldControl.EmailResolutionControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

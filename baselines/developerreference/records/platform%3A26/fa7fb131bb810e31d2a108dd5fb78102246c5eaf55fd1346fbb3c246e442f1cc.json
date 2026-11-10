@@ -1,0 +1,270 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"false\" savedqueryid=\"361e641e-4b27-df11-893c-00155d26c21d\"><entity name=\"goal\"><attribute name=\"goalid\" /><attribute name=\"title\" /><attribute name=\"goalownerid\" /><attribute name=\"fiscalperiod\" /><attribute name=\"fiscalyear\" /><attribute name=\"targetstring\" /><attribute name=\"percentage\" /><attribute name=\"actualstring\" /><attribute name=\"inprogressstring\" /><attribute name=\"metricid\" /><attribute name=\"parentgoalid\" /><attribute name=\"goalstartdate\" /><attribute name=\"goalenddate\" /><order attribute=\"fiscalyear\" descending=\"true\" /><order attribute=\"fiscalperiod\" descending=\"false\" /><filter type=\"and\"><condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /></filter></entity></fetch>",
+    "introducedversion": "5.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "title",
+        "Name": "goals",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "goal"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "title",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "goalownerid",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "fiscalperiod",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "fiscalyear",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "targetstring",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "percentage",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": true,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "actualstring",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": true,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "inprogressstring",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "metricid",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "parentgoalid",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "goalstartdate",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "goalenddate",
+                "RelatedEntityName": "",
+                "Width": 150
+              }
+            ],
+            "Id": "goalid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "goal"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "goal"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"goals\" object=\"logical:goal\" jump=\"title\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"goal\" id=\"goalid\"><cell name=\"title\" width=\"200\" /><cell name=\"goalownerid\" width=\"150\" /><cell name=\"fiscalperiod\" width=\"150\" /><cell name=\"fiscalyear\" width=\"150\" /><cell name=\"targetstring\" width=\"150\" /><cell name=\"percentage\" width=\"150\" /><cell name=\"actualstring\" disableSorting=\"1\" width=\"150\" /><cell name=\"inprogressstring\" disableSorting=\"1\" width=\"150\" /><cell name=\"metricid\" width=\"150\" /><cell name=\"parentgoalid\" width=\"150\" /><cell name=\"goalstartdate\" width=\"150\" /><cell name=\"goalenddate\" width=\"150\" /></row></grid>"
+    },
+    "name": "Active Goals",
+    "offlinesqlquery": "/*SelectStart*/select  \"goal0\".[goalid] as \"goalid\"\r , \"goal0\".[title] as \"title\"\r , \"goal0\".[goalownerid!id] as \"goalownerid!id\"\r , \"goal0\".[goalownerid!logicalname] as \"goalownerid!logicalname\"\r , \"goal0\".[goalownerid!name] as \"goalownerid!name\"\r , \"goal0\".[fiscalperiod] as \"fiscalperiod\"\r , \"goal0\".[fiscalyear] as \"fiscalyear\"\r , \"goal0\".[targetstring] as \"targetstring\"\r , \"goal0\".[percentage] as \"percentage\"\r , \"goal0\".[actualstring] as \"actualstring\"\r , \"goal0\".[inprogressstring] as \"inprogressstring\"\r , \"goal0\".[metricid!id] as \"metricid!id\"\r , \"goal0\".[metricid!logicalname] as \"metricid!logicalname\"\r , \"goal0\".[metricid!name] as \"metricid!name\"\r , \"goal0\".[parentgoalid!id] as \"parentgoalid!id\"\r , \"goal0\".[parentgoalid!logicalname] as \"parentgoalid!logicalname\"\r , \"goal0\".[parentgoalid!name] as \"parentgoalid!name\"\r , \"goal0\".[goalstartdate] as \"goalstartdate\"\r , \"goal0\".[goalenddate] as \"goalenddate\"/*SelectEnd*/  /*FromStart*/from  Goal as \"goal0\"/*FromEnd*/  /*WhereStart*/where  (\"goal0\".[statecode] = 0)/*WhereEnd*/  /*OrderByStart*/order by  case \"goal0\".[fiscalyear] when 2038 then  'FY2038' when 2037 then  'FY2037' when 2036 then  'FY2036' when 2035 then  'FY2035' when 2034 then  'FY2034' when 2033 then  'FY2033' when 2032 then  'FY2032' when 2031 then  'FY2031' when 2030 then  'FY2030' when 2029 then  'FY2029' when 2028 then  'FY2028' when 2027 then  'FY2027' when 2026 then  'FY2026' when 2025 then  'FY2025' when 2024 then  'FY2024' when 2023 then  'FY2023' when 2022 then  'FY2022' when 2021 then  'FY2021' when 2020 then  'FY2020' when 2019 then  'FY2019' when 2018 then  'FY2018' when 2017 then  'FY2017' when 2016 then  'FY2016' when 2015 then  'FY2015' when 2014 then  'FY2014' when 2013 then  'FY2013' when 2012 then  'FY2012' when 2011 then  'FY2011' when 2010 then  'FY2010' when 2009 then  'FY2009' when 2008 then  'FY2008' when 2007 then  'FY2007' when 2006 then  'FY2006' when 2005 then  'FY2005' when 2004 then  'FY2004' when 2003 then  'FY2003' when 2002 then  'FY2002' when 2001 then  'FY2001' when 2000 then  'FY2000' when 1999 then  'FY1999' when 1998 then  'FY1998' when 1997 then  'FY1997' when 1996 then  'FY1996' when 1995 then  'FY1995' when 1994 then  'FY1994' when 1993 then  'FY1993' when 1992 then  'FY1992' when 1991 then  'FY1991' when 1990 then  'FY1990' when 1989 then  'FY1989' when 1988 then  'FY1988' when 1987 then  'FY1987' when 1986 then  'FY1986' when 1985 then  'FY1985' when 1984 then  'FY1984' when 1983 then  'FY1983' when 1982 then  'FY1982' when 1981 then  'FY1981' when 1980 then  'FY1980' when 1979 then  'FY1979' when 1978 then  'FY1978' when 1977 then  'FY1977' when 1976 then  'FY1976' when 1975 then  'FY1975' when 1974 then  'FY1974' when 1973 then  'FY1973' when 1972 then  'FY1972' when 1971 then  'FY1971' when 1970 then  'FY1970' else null end  desc\r , case \"goal0\".[fiscalperiod] when 1 then  'Quarter 1' when 2 then  'Quarter 2' when 3 then  'Quarter 3' when 4 then  'Quarter 4' when 101 then  'January' when 102 then  'February' when 103 then  'March' when 104 then  'April' when 105 then  'May' when 106 then  'June' when 107 then  'July' when 108 then  'August' when 109 then  'September' when 110 then  'October' when 111 then  'November' when 112 then  'December' when 201 then  'Semester 1' when 202 then  'Semester 2' when 301 then  'Annual' when 401 then  'P1' when 402 then  'P2' when 403 then  'P3' when 404 then  'P4' when 405 then  'P5' when 406 then  'P6' when 407 then  'P7' when 408 then  'P8' when 409 then  'P9' when 410 then  'P10' when 411 then  'P11' when 412 then  'P12' when 413 then  'P13' else null end  asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "goal",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "361e641e-4b27-df11-893c-00155d26c21d",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "goal",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "361e641e-4b27-df11-893c-00155d26c21d"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "System",
+      "version": "5.0"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

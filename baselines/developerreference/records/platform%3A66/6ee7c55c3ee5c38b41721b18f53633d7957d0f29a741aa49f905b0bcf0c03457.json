@@ -1,0 +1,160 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "RichTextEditorControl",
+        "ControlManifestVersion": "1.26082.1",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.RichTextEditor.RichTextEditorControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "RichTextEditorControl_Name",
+        "FullName": "MscrmControls.RichTextEditor.RichTextEditorControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.RichTextEditor.RichTextEditorControl",
+        "Namespace": "MscrmControls.RichTextEditor",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "configUrl",
+              "Required": false,
+              "Type": "SingleLine.URL",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "mentionableEntitiesConfig",
+              "Required": false,
+              "Type": "Multiple",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "mentionedRecords",
+              "Required": false,
+              "Type": "Object",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluentui-react",
+              "LoadOrder": 2,
+              "Name": "fluentui-react",
+              "Type": 0
+            },
+            {
+              "LibraryName": "CommonBundle",
+              "LoadOrder": 3,
+              "Name": "CommonBundle",
+              "Type": 0
+            },
+            {
+              "LibraryName": "rtejsanity",
+              "LoadOrder": 4,
+              "Name": "rtejsanity",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 5,
+              "Name": "MscrmControls.RichTextEditor.RichTextEditorControl_libs/ckeditor/ckeditor.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 6,
+              "Name": "MscrmControls.RichTextEditor.RichTextEditorControl_libs/ckeditor/editor-language-resources.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 7,
+              "Name": "MscrmControls.RichTextEditor.RichTextEditorControl_libs/ckeditor/skin.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 8,
+              "Name": "MscrmControls.RichTextEditor.RichTextEditorControl_RichTextEditorControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 9,
+              "Name": "css/RichTextEditorControl.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 11,
+              "Name": "css/Editor.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 12,
+              "Name": "libs/ckeditor/editor.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "Multiple,SingleLine.Text,SingleLine.TextArea",
+    "componentstate": 0,
+    "introducedversion": "1.0.0.5",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.RichTextEditor\" constructor=\"RichTextEditorControl\" version=\"1.26082.1\" display-name-key=\"RichTextEditorControl_Name\" description-key=\"RichTextEditorControl_Description\" preview-image=\"img/preview.png\" control-type=\"standard\"><modes><read /><edit /></modes><type-group name=\"all\"><type>Multiple</type><type>SingleLine.Text</type><type>SingleLine.TextArea</type></type-group><property name=\"value\" required=\"true\" display-name-key=\"RichTextEditorControl_Value\" description-key=\"RichTextEditorControl_Value_Desc\" usage=\"bound\" of-type-group=\"all\" /><property name=\"configUrl\" required=\"false\" display-name-key=\"RichTextEditorControl_URL\" description-key=\"RichTextEditorControl_URL_Desc\" of-type=\"SingleLine.URL\" usage=\"input\" /><property name=\"mentionableEntitiesConfig\" display-name-key=\"RichTextEditorControl_mentionableConfig\" description-key=\"RichTextEditorControl_mentionableConfig_Desc\" usage=\"input\" of-type=\"Multiple\" required=\"false\" hidden=\"true\" /><property name=\"mentionedRecords\" required=\"false\" display-name-key=\"RichTextEditorControl_mentionedRecords\" description-key=\"RichTextEditorControl_mentionedRecords_Desc\" usage=\"bound\" of-type=\"Object\" hidden=\"true\" /><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-3.6.0.js\" version=\"3.6.0\" /></library><library name=\"fluentui-react\" version=\"&gt;=8.37.0\" order=\"2\"><packaged_library path=\"libs/fluentui-react.js\" version=\"8.37.0\" /></library><library name=\"CommonBundle\" version=\"=1.30.211\" order=\"3\"><packaged_library path=\"libs/CommonBundle.js\" version=\"1.30.211\" /></library><library name=\"rtejsanity\" version=\"&gt;=1\" order=\"4\"><packaged_library path=\"libs/jsanity.min.js\" version=\"1.0.6\" /></library><code path=\"libs/ckeditor/ckeditor.js\" order=\"5\" /><code path=\"libs/ckeditor/editor-language-resources.js\" order=\"6\" /><code path=\"libs/ckeditor/skin.js\" order=\"7\" /><code path=\"RichTextEditorControl.js\" order=\"8\" /><css path=\"css/RichTextEditorControl.css\" order=\"9\" /><css path=\"css/Editor.css\" order=\"11\" /><css path=\"libs/ckeditor/editor.css\" order=\"12\" /><resx path=\"strings/RichTextEditorControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.RichTextEditor.RichTextEditorControl",
+    "supportedplatform": "(Model)",
+    "version": "1.26082.1"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.RichTextEditor.RichTextEditorControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_RichTextEditor",
+      "version": "9.0.26101.2000"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

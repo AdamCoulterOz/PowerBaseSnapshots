@@ -1,0 +1,76 @@
+{
+  "configuration": {
+    "body": {
+      "bindings": [
+        {
+          "kind": "dataverse-source-origin"
+        }
+      ],
+      "content": "<?xml version=\"1.0\"?><xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"1.0\"><xsl:output method=\"text\" indent=\"no\" /><xsl:template match=\"/data\"><![CDATA[<p>This Microsoft Dynamics CRM import completed successfully</p><p>Name: ]]><xsl:choose><xsl:when test=\"asyncoperation/name\"><xsl:value-of select=\"asyncoperation/name\" /></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose><![CDATA[</p> <p>Started: ]]><xsl:choose><xsl:when test=\"asyncoperation/createdon\"><xsl:value-of select=\"asyncoperation/createdon\" /></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose><![CDATA[</p> <p><p><A href=https://dataverse.invalid/import/edit.aspx?id=]]><xsl:choose><xsl:when test=\"asyncoperation/regardingobjectid\"><xsl:value-of select=\"asyncoperation/regardingobjectid\" /></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose><![CDATA[>View your import in Microsoft Dynamics CRM.</A></p></p> <p><p>For help resolving failures, open <A href=\"\">Microsoft CRM Help.</A><p>If the links do not open, paste the following links into Internet Explorer:<p><p>Import: <A name=\"slugAnchorTag\"  href=\"#\" >https://dataverse.invalid/import/edit.aspx?id=]]><xsl:choose><xsl:when test=\"asyncoperation/regardingobjectid\"><xsl:value-of select=\"asyncoperation/regardingobjectid\" /></xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose><![CDATA[</A><p>Help resolving failures:<A href=\"\"></A>]]></xsl:template></xsl:stylesheet>",
+      "kind": "normalized-document-v1"
+    },
+    "componentstate": 0,
+    "description": "Use this e-mail template for sending notification to system users on successful completion of Import task.",
+    "entityimage": null,
+    "entityimage_timestamp": null,
+    "entityimage_url": null,
+    "entityimageid": null,
+    "generationtypecode": 5,
+    "importsequencenumber": null,
+    "introducedversion": "5.0",
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "ispersonal": false,
+    "isrecommended": false,
+    "languagecode": 1033,
+    "mimetype": "text/html",
+    "opencount": null,
+    "openrate": null,
+    "presentationxml": {
+      "bindings": [
+        {
+          "kind": "dataverse-source-origin"
+        }
+      ],
+      "content": "<template><text><![CDATA[<p>This Microsoft Dynamics CRM import completed successfully.</p> <p>Name: ]]></text><slugs><slug><entity>asyncoperation</entity><attribute>name</attribute></slug><default>[Import]</default></slugs><text><![CDATA[</p> <p>Started: ]]></text><slugs><slug><entity>asyncoperation</entity><attribute>createdon</attribute></slug><default /></slugs><text><![CDATA[</p> <p><p><A href=https://dataverse.invalid/import/edit.aspx?id=]]></text><slugs><slug><entity>asyncoperation</entity><attribute>regardingobjectid</attribute></slug><default /></slugs><text><![CDATA[View your import in Microsoft Dynamics CRM.</A></p></p> <p><p>For help resolving failures, open <A href=\"\">Microsoft CRM Help.</A><p>If the links do not open, paste the following links into Internet Explorer:<p><p>Import:<A name=\"slugAnchorTag\"  href=\"#\" >https://dataverse.invalid/import/edit.aspx?id=]]></text><slugs><slug><entity>asyncoperation</entity><attribute>regardingobjectid</attribute></slug><default /></slugs><text><![CDATA[</A><p>Help resolving failures:<A href=\"\"></A>]]></text></template>",
+      "kind": "normalized-document-v1"
+    },
+    "replycount": null,
+    "replyrate": null,
+    "safehtml": {
+      "bindings": [
+        {
+          "kind": "dataverse-source-origin"
+        }
+      ],
+      "content": "<div>\n<p>This Microsoft Dynamics CRM import completed successfully.</p>\n<p>Name: <span class=\"dataslug\" id=\"TemplateEditor0\" data-value=\"{!asyncoperation:name;[Import]}\" contenteditable=\"false\" style=\"background-color: #E7EFFF;\">{!System Job:System Job Name;[Import]}</span></p>\n<p>Started: <span class=\"dataslug\" id=\"TemplateEditor1\" data-value=\"{!asyncoperation:createdon;}\" contenteditable=\"false\" style=\"background-color: #E7EFFF;\">{!System Job:Created On;}</span></p>\n<p></p>\n<p><a href=\"https://dataverse.invalid/import/edit.aspx?id=&lt;span\" class=\"dataslug\"><span id=\"DataSlug\" style=\"\">{!asyncoperation:regardingobjectid;}</span>{!System Job:Regarding;}View your import in Microsoft Dynamics CRM.</a></p>\n<p></p>\n<p></p>\n<p>For help resolving failures, open <a href=\"\">Microsoft CRM Help.</a></p>\n<p>If the links do not open, paste the following links into Internet Explorer:</p>\n<p></p>\n<p>Import:<a name=\"slugAnchorTag\" href=\"\">https://dataverse.invalid/import/edit.aspx?id=<span class=\"dataslug\" id=\"TemplateEditor2\" data-value=\"{!asyncoperation:regardingobjectid;}\" contenteditable=\"false\" style=\"background-color: #E7EFFF;\">{!System Job:Regarding;}</span></a></p>\n<p>Help resolving failures:<a href=\"\"></a></p>\n</div>\n",
+      "kind": "normalized-document-v1"
+    },
+    "subject": "<?xml version=\"1.0\"?><xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"1.0\"><xsl:output method=\"text\" indent=\"no\" /><xsl:template match=\"/data\"><![CDATA[Microsoft Dynamics CRM: ]]><xsl:choose><xsl:when test=\"asyncoperation/name\"><xsl:value-of select=\"asyncoperation/name\" /></xsl:when><xsl:otherwise>Import</xsl:otherwise></xsl:choose><![CDATA[ is complete]]></xsl:template></xsl:stylesheet>",
+    "subjectpresentationxml": "<template><text><![CDATA[Microsoft Dynamics CRM: ]]></text><slugs><slug><entity>asyncoperation</entity><attribute>name</attribute></slug><default>Import </default></slugs><text><![CDATA[ is complete]]></text></template>",
+    "subjectsafehtml": "Microsoft Dynamics CRM: <span class=\"dataslug\" id=\"TemplateEditor0\" data-value=\"{!asyncoperation:name;Import }\" contenteditable=\"false\" style=\"background-color: #E7EFFF;\">{!System Job:System Job Name;Import }</span> is complete",
+    "templateid": "ba699c93-6b75-4318-b129-59e2fe4cf0ca",
+    "templatetypecode": "asyncoperation",
+    "title": "Import Data Task Completion Template",
+    "usedcount": null
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "portability": "not-established",
+    "value": "ba699c93-6b75-4318-b129-59e2fe4cf0ca"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "System",
+      "version": "5.0"
+    }
+  ],
+  "typeIdentity": "platform:36"
+}

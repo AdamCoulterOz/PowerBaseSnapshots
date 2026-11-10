@@ -1,0 +1,124 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" savedqueryid=\"6573f1b0-823a-4c8b-80c8-4f887d81d7d4\"><entity name=\"msdyn_solutionhealthruleset\"><attribute name=\"msdyn_solutionhealthrulesetid\" /><attribute name=\"msdyn_name\" /><attribute name=\"createdon\" /><filter type=\"and\"><condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /></filter></entity></fetch>",
+    "introducedversion": "1.0.0.0",
+    "iscustom": true,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "msdyn_name",
+        "Name": "",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "msdyn_solutionhealthruleset"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": false,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "msdyn_name",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "createdon",
+                "RelatedEntityName": "",
+                "Width": 125
+              }
+            ],
+            "Id": "msdyn_solutionhealthrulesetid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "msdyn_solutionhealthruleset"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "msdyn_solutionhealthruleset"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"\" jump=\"msdyn_name\" select=\"1\" icon=\"1\" preview=\"0\" object=\"logical:msdyn_solutionhealthruleset\"><row name=\"msdyn_solutionhealthruleset\" id=\"msdyn_solutionhealthrulesetid\"><cell name=\"msdyn_name\" width=\"300\" /><cell name=\"createdon\" width=\"125\" /></row></grid>"
+    },
+    "name": "Solution Health Rule Set Lookup View",
+    "offlinesqlquery": "/*SelectStart*/select  \"msdyn_solutionhealthruleset0\".[msdyn_solutionhealthrulesetid] as \"msdyn_solutionhealthrulesetid\"\r , \"msdyn_solutionhealthruleset0\".[msdyn_name] as \"msdyn_name\"\r , \"msdyn_solutionhealthruleset0\".[createdon] as \"createdon\"/*SelectEnd*/  /*FromStart*/from  msdyn_solutionhealthruleset as \"msdyn_solutionhealthruleset0\"/*FromEnd*/  /*WhereStart*/where  (\"msdyn_solutionhealthruleset0\".[statecode] = 0)/*WhereEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 64,
+    "returnedtypecode": "msdyn_solutionhealthruleset",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "6573f1b0-823a-4c8b-80c8-4f887d81d7d4",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "msdyn_solutionhealthruleset",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "6573f1b0-823a-4c8b-80c8-4f887d81d7d4"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}

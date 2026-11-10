@@ -1,0 +1,98 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "GenericTreeControl",
+        "ControlManifestVersion": "1.0.3",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.GenericTree.GenericTreeControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_Generic_Tree",
+        "FullName": "MscrmControls.AppCommon.GenericTree.GenericTreeControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.GenericTree.GenericTreeControl",
+        "Namespace": "MscrmControls.AppCommon.GenericTree",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "TypeGroup": "lookups",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "treeData",
+              "Required": true,
+              "TypeGroup": "text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.AppCommon.GenericTree.GenericTreeControl_GenericTreeControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "css/treeControlStyle.css",
+              "Type": 1
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "Lookup.Simple",
+    "componentstate": 0,
+    "introducedversion": "9.0.1904.4006",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.GenericTree\" constructor=\"GenericTreeControl\" version=\"1.0.3\" display-name-key=\"CC_Generic_Tree\" control-type=\"virtual\"><modes></modes><type-group name=\"lookups\"><type>Lookup.Simple</type></type-group><property name=\"value\" display-name-key=\"CC_SubjectTree\" description-key=\"CC_SubjectTree_Desc\" of-type-group=\"lookups\" usage=\"bound\" required=\"true\" hidden=\"false\" /><property name=\"treeData\" display-name-key=\"CC_treeData\" description-key=\"CC_treeData_Desc\" of-type-group=\"text\" usage=\"input\" required=\"true\" hidden=\"false\" /><resources><code path=\"GenericTreeControl.js\" order=\"1\" /><css path=\"css/treeControlStyle.css\" order=\"2\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.GenericTree.GenericTreeControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.3"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.GenericTree.GenericTreeControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch",
+      "version": "9.0.1904.4006"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

@@ -1,0 +1,116 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" savedqueryid=\"05abdcae-a30c-466c-bfd0-59f54ddf1475\"><entity name=\"teamtemplate\"><attribute name=\"teamtemplatename\" /><order attribute=\"teamtemplatename\" descending=\"false\" /><attribute name=\"teamtemplateid\" /><attribute name=\"objecttypecode\" /></entity></fetch>",
+    "introducedversion": "7.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "name",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "teamtemplate"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": false,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "teamtemplatename",
+                "RelatedEntityName": "",
+                "Width": 300
+              }
+            ],
+            "Id": "teamtemplateid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "teamtemplate"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:teamtemplate\" jump=\"name\" select=\"1\" preview=\"0\" icon=\"1\"><row name=\"result\" id=\"teamtemplateid\"><cell name=\"teamtemplatename\" width=\"300\" /></row></grid>"
+    },
+    "name": "TeamTemplate Lookup View",
+    "offlinesqlquery": "/*SelectStart*/select  \"teamtemplate0\".[teamtemplatename] as \"teamtemplatename\"\r , \"teamtemplate0\".[teamtemplateid] as \"teamtemplateid\"\r , \"teamtemplate0\".[objecttypecode] as \"objecttypecode\"/*SelectEnd*/  /*FromStart*/from  TeamTemplate as \"teamtemplate0\"/*FromEnd*/  /*OrderByStart*/order by  \"teamtemplate0\".[teamtemplatename] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 64,
+    "returnedtypecode": "teamtemplate",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "05abdcae-a30c-466c-bfd0-59f54ddf1475",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "teamtemplate",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "05abdcae-a30c-466c-bfd0-59f54ddf1475"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "System",
+      "version": "5.0"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

@@ -1,0 +1,127 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ExcelWordTemplateControl",
+        "ControlManifestVersion": "1.0.0",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.ExcelWordTemplate.ExcelWordTemplateControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_Mock_Name",
+        "FullName": "MscrmControls.AppCommon.ExcelWordTemplate.ExcelWordTemplateControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.ExcelWordTemplate.ExcelWordTemplateControl",
+        "Namespace": "MscrmControls.AppCommon.ExcelWordTemplate",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "FilteringInput",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "ViewId",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "FRECommon",
+              "LoadOrder": 3,
+              "Name": "FRECommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "FREShell",
+              "LoadOrder": 4,
+              "Name": "FREShell",
+              "Type": 0
+            },
+            {
+              "LibraryName": "smbappmoduleappconfig",
+              "LoadOrder": 5,
+              "Name": "smbappmoduleappconfig",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 5,
+              "Name": "MscrmControls.AppCommon.ExcelWordTemplate.ExcelWordTemplateControl_ExcelWordTemplate.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 10,
+              "Name": "css/ExcelWordTemplate.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/excelword.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.4.0066",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.ExcelWordTemplate\" constructor=\"ExcelWordTemplateControl\" version=\"1.0.0\" display-name-key=\"CC_Mock_Name\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"FilteringInput\" display-name-key=\"CC_FilteringInput\" description-key=\"CC_FilteringInput_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"ViewId\" display-name-key=\"CC_ViewId\" description-key=\"CC_ViewId_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><library name=\"FRECommon\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"libs/frecommon-lib.js\" version=\"1.0.0\" /></library><library name=\"FREShell\" version=\"&gt;=1\" order=\"4\"><packaged_library path=\"libs/FREShell.js\" version=\"1.0.0\" /></library><library name=\"smbappmoduleappconfig\" version=\"&gt;=1\" order=\"5\"><packaged_library path=\"libs/smbappmoduleappconfig-lib.js\" version=\"1.0.0\" /></library><code path=\"ExcelWordTemplate.js\" order=\"5\" /><css path=\"css/ExcelWordTemplate.css\" order=\"10\" /><resx path=\"locale/excelword.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.ExcelWordTemplate.ExcelWordTemplateControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.0"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.ExcelWordTemplate.ExcelWordTemplateControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommon",
+      "version": "9.0.4.0066"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

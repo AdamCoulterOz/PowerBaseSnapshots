@@ -1,0 +1,115 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "FormProcessor",
+        "ControlManifestVersion": "1.0.114",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "Intelligence.FormProcessorControl.FormProcessor"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "FormProcessor",
+        "FullName": "Intelligence.FormProcessorControl.FormProcessor",
+        "IsVirtual": true,
+        "Name": "Intelligence.FormProcessorControl.FormProcessor",
+        "Namespace": "Intelligence.FormProcessorControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "OriginalImage",
+              "Required": true,
+              "Type": "Multiple",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "exif",
+              "LoadOrder": 2,
+              "Name": "exif",
+              "Type": 0
+            },
+            {
+              "LibraryName": "pdf-worker",
+              "LoadOrder": 3,
+              "Name": "pdf-worker",
+              "Type": 0
+            },
+            {
+              "LibraryName": "react-pdf",
+              "LoadOrder": 5,
+              "Name": "react-pdf",
+              "Type": 0
+            },
+            {
+              "LibraryName": "react_16_14_0",
+              "LoadOrder": 0,
+              "Name": "react_16_14_0",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_8_121_1",
+              "LoadOrder": 0,
+              "Name": "fluent_8_121_1",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 6,
+              "Name": "Intelligence.FormProcessorControl.FormProcessor_FormProcessor.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/FormProcessorControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"Intelligence.FormProcessorControl\" constructor=\"FormProcessor\" version=\"1.0.114\" display-name-key=\"FormProcessor\" control-type=\"virtual\" hidden=\"true\"><property name=\"OriginalImage\" display-name-key=\"OriginalImage_Property_Name\" description-key=\"OriginalImage_Property_Description\" usage=\"bound\" of-type=\"Multiple\" required=\"true\" hidden=\"false\" /><resources><platform-library name=\"React\" version=\"16.14.0\" /><platform-library name=\"Fluent\" version=\"8.121.1\" /><library name=\"exif\" version=\"&gt;=2\" order=\"2\"><packaged_library path=\"libs/exif.js\" version=\"2.3.0\" /></library><library name=\"pdf-worker\" version=\"&gt;=4\" order=\"3\"><packaged_library path=\"libs/PDF/pdf.worker.js\" version=\"4.4.168\" /></library><library name=\"react-pdf\" version=\"&gt;=9\" order=\"5\"><packaged_library path=\"libs/PDF/react-pdf.js\" version=\"9.1.0\" /></library><code path=\"FormProcessor.js\" order=\"6\" /><resx path=\"strings/FormProcessorControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "Intelligence.FormProcessorControl.FormProcessor",
+    "supportedplatform": "(Model)",
+    "version": "1.0.114"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "Intelligence.FormProcessorControl.FormProcessor"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

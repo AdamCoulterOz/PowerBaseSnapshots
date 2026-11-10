@@ -1,0 +1,166 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" savedqueryid=\"1ea4877e-a619-47c8-9644-032c275d699c\"><entity name=\"sla\"><attribute name=\"name\" /><attribute name=\"statecode\" /><attribute name=\"applicablefrom\" /><attribute name=\"slaid\" /><attribute name=\"createdon\" /><attribute name=\"modifiedon\" /><filter type=\"and\"><condition attribute=\"statecode\" operator=\"eq\" value=\"1\" /></filter><order attribute=\"name\" descending=\"false\" /></entity></fetch>",
+    "introducedversion": "6.1.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "name",
+        "Name": "sla",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "sla"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "name",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "statecode",
+                "RelatedEntityName": "",
+                "Width": 400
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "applicablefrom",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "createdon",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "modifiedon",
+                "RelatedEntityName": "",
+                "Width": 150
+              }
+            ],
+            "Id": "slaid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "SLA"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "sla"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"sla\" object=\"logical:sla\" jump=\"name\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"SLA\" id=\"slaid\"><cell name=\"name\" width=\"300\" /><cell name=\"statecode\" width=\"400\" /><cell name=\"applicablefrom\" width=\"300\" /><cell name=\"createdon\" width=\"150\" /><cell name=\"modifiedon\" width=\"150\" /></row></grid>"
+    },
+    "name": "SLA Lookup View",
+    "offlinesqlquery": "/*SelectStart*/select  \"sla0\".[name] as \"name\"\r , \"sla0\".[statecode] as \"statecode\"\r , \"sla0\".[applicablefrom] as \"applicablefrom\"\r , \"sla0\".[slaid] as \"slaid\"\r , \"sla0\".[createdon] as \"createdon\"\r , \"sla0\".[modifiedon] as \"modifiedon\"/*SelectEnd*/  /*FromStart*/from  SLA as \"sla0\"/*FromEnd*/  /*WhereStart*/where  (\"sla0\".[statecode] = 1)/*WhereEnd*/  /*OrderByStart*/order by  \"sla0\".[name] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 64,
+    "returnedtypecode": "sla",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "1ea4877e-a619-47c8-9644-032c275d699c",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "sla",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "1ea4877e-a619-47c8-9644-032c275d699c"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}

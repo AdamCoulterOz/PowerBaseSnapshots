@@ -1,0 +1,53 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": null,
+    "_parentbotcomponentid_value": null,
+    "_parentbotid_value": null,
+    "accentcolor": "#001950",
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 4,
+    "content": null,
+    "data": "{\r\n  \"$kind\": \"Microsoft.AdaptiveDialog\",\r\n  \"$designer\": {\r\n    \"id\": \"TqG6hg\",\r\n    \"name\": \"Searchknowledgearticles\",\r\n    \"comment\": \"\"\r\n  },\r\n  \"autoEndDialog\": true,\r\n  \"defaultResultProperty\": \"dialog.result\",\r\n  \"triggers\": [\r\n    {\r\n      \"$kind\": \"Microsoft.OnBeginDialog\",\r\n      \"$designer\": {\r\n        \"name\": \"BeginDialog\",\r\n        \"description\": \"\",\r\n        \"id\": \"beblj1\"\r\n      },\r\n      \"actions\": [\r\n        {\r\n          \"$kind\": \"Microsoft.SetProperty\",\r\n          \"$designer\": {\r\n            \"id\": \"VupoMU\"\r\n          },\r\n          \"value\": \"={\\\"textResult\\\":\\\"\\\",\\\"jsonResult\\\":\\\"\\\",\\\"articleCount\\\":\\\"\\\"}\",\r\n          \"property\": \"dialog.result\"\r\n        },\r\n        {\r\n          \"$kind\": \"Microsoft.IfCondition\",\r\n          \"$designer\": {\r\n            \"id\": \"ySac5x\"\r\n          },\r\n          \"condition\": \"=length(dialog.filter) == 0\",\r\n          \"actions\": [\r\n            {\r\n              \"$kind\": \"Microsoft.SetProperty\",\r\n              \"$designer\": {\r\n                \"id\": \"268npW\"\r\n              },\r\n              \"property\": \"virtualagent.filter\",\r\n              \"value\": \"=\\\"statecode eq 3 and isinternal eq false\\\"\"\r\n            }\r\n          ],\r\n          \"elseActions\": [\r\n            {\r\n              \"$kind\": \"Microsoft.SetProperty\",\r\n              \"$designer\": {\r\n                \"id\": \"EmqFbv\"\r\n              },\r\n              \"property\": \"virtualagent.filter\",\r\n              \"value\": \"=dialog.filter\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"$kind\": \"Microsoft.SetProperties\",\r\n          \"$designer\": {\r\n            \"id\": \"M8twra\"\r\n          },\r\n          \"assignments\": [\r\n            {\r\n              \"property\": \"virtualagent.searchText\",\r\n              \"value\": \"=dialog.searchText\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"$kind\": \"Microsoft.BeginDialog\",\r\n          \"$designer\": {\r\n            \"id\": \"H7oLRR\"\r\n          },\r\n          \"activityProcessed\": true,\r\n          \"dialog\": \"msdyn_topic_9688398bfc794abe90edab4943d1893f\"\r\n        },\r\n        {\r\n          \"$kind\": \"Microsoft.SetProperties\",\r\n          \"$designer\": {\r\n            \"id\": \"snl2v8\"\r\n          },\r\n          \"assignments\": [\r\n            {\r\n              \"property\": \"dialog.result.textResult\",\r\n              \"value\": \"=virtualagent.textResult\"\r\n            },\r\n            {\r\n              \"property\": \"dialog.result.jsonResult\",\r\n              \"value\": \"=virtualagent.jsonResult\"\r\n            },\r\n            {\r\n              \"value\": \"=virtualagent.articlecount\",\r\n              \"property\": \"dialog.result.articlecount\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"$kind\": \"Microsoft.EndDialog\",\r\n          \"$designer\": {\r\n            \"id\": \"mwXJ5u\"\r\n          },\r\n          \"value\": \"=dialog.result\"\r\n        }\r\n      ]\r\n    }\r\n  ],\r\n  \"generator\": \"Searchknowledgearticles.lg\",\r\n  \"recognizer\": {\r\n    \"$kind\": \"Microsoft.VirtualAgents.Recognizer\"\r\n  },\r\n  \"id\": \"Searchknowledgearticles\"\r\n}\r\n",
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": "https://go.microsoft.com/fwlink/p/?linkid=2189522",
+    "iconurl": "msdyn_knowledgepvaicon",
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": null,
+    "name": "Search Dynamics 365 knowledge articles",
+    "overriddencreatedon": null,
+    "reusepolicy": 2,
+    "schemaname": "msdyn_bot_0cc7c97715094ae5a7bb3e1707d5bc8d.Searchknowledgearticles.dialog",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_bot_0cc7c97715094ae5a7bb3e1707d5bc8d.Searchknowledgearticles.dialog"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdynce_KnowledgeManagementOnlineExtension",
+      "version": "9.0.26094.3006"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

@@ -1,0 +1,93 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "AuditControl",
+        "ControlManifestVersion": "1.0.12",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AuditAssociatedGrid.AuditControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "AuditAssociatedGrid_Control",
+        "FullName": "MscrmControls.AuditAssociatedGrid.AuditControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AuditAssociatedGrid.AuditControl",
+        "Namespace": "MscrmControls.AuditAssociatedGrid",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "FormId",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "OType",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 3,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.AuditAssociatedGrid.AuditControl_AuditAssociatedGridControl.js",
+              "Type": 4
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AuditAssociatedGrid\" constructor=\"AuditControl\" version=\"1.0.12\" display-name-key=\"AuditAssociatedGrid_Control\" control-type=\"virtual\"><modes><container /></modes><property name=\"FormId\" display-name-key=\"AuditAssociatedGrid_FormId\" description-key=\"AuditAssociatedGrid_FormId\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"OType\" display-name-key=\"AuditAssociatedGrid_OType\" description-key=\"AuditAssociatedGrid_OType\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.7\" /></library><code path=\"AuditAssociatedGridControl.js\" order=\"1\" /></resources></control></manifest>",
+    "name": "MscrmControls.AuditAssociatedGrid.AuditControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.12"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AuditAssociatedGrid.AuditControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

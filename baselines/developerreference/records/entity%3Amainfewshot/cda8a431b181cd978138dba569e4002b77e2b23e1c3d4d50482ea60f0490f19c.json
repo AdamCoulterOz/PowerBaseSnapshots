@@ -1,0 +1,44 @@
+{
+  "configuration": {
+    "category": "Default",
+    "comment": null,
+    "componentstate": 0,
+    "entitytype": 0,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "objectpartitionid": null,
+    "overriddencreatedon": null,
+    "query": "What are Alex's high risk deals this year?",
+    "rephrase": "The query will list out all customer deals where deal owner is Alex, risk is high, and deal date is this year",
+    "savedqueryversionnumber": null,
+    "savedqueryviewid": null,
+    "standardsql": "SELECT [cr696_customerdeal].* FROM [cr696_customerdeal] JOIN [cr696_dealowner] ON [cr696_customerdeal].[cr696_dealowner] = [cr696_dealowner].[cr696_dealownerid] WHERE [cr696_dealowner].[cr696_dealownername] = 'Alex' AND [cr696_customerdeal].[cr696_risk] = 'High' AND [cr696_customerdeal].[cr696_dealdate] = 'this year'",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "uniquename": "cds_mainfewshot_uniquename_1dd54d95-3462-487a-8860-1460a7828c94",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "cds_mainfewshot_uniquename_1dd54d95-3462-487a-8860-1460a7828c94"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_RelevanceSearch_Anchor",
+      "version": "1.0.3581.1"
+    }
+  ],
+  "typeIdentity": "entity:mainfewshot"
+}

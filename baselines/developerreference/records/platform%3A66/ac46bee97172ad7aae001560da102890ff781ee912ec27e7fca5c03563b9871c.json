@@ -1,0 +1,104 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "TemplatePreviewControl",
+        "ControlManifestVersion": "1.0.6",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Activity.TemplatePreviewControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "Email_Preview_Control",
+        "FullName": "MscrmControls.Activity.TemplatePreviewControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.Activity.TemplatePreviewControl",
+        "Namespace": "MscrmControls.Activity",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "templateIdProperty",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "entityTypeProperty",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "entityIdProperty",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.Activity.TemplatePreviewControl_purify.min.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.Activity.TemplatePreviewControl_TemplatePreviewControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "css/TemplatePreviewControl.css",
+              "Type": 1
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.Text",
+    "componentstate": 0,
+    "introducedversion": "9.0.26093.260917001",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Activity\" constructor=\"TemplatePreviewControl\" version=\"1.0.6\" display-name-key=\"Email_Preview_Control\" description-key=\"Control_Desc_Key\"><property name=\"templateIdProperty\" display-name-key=\"template_Id_Property_Display_Key\" description-key=\"template_Id_Property_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" /><property name=\"entityTypeProperty\" display-name-key=\"entity_Type_Property_Display_Key\" description-key=\"entity_Type_Property_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" /><property name=\"entityIdProperty\" display-name-key=\"entity_Id_Property_Display_Key\" description-key=\"entity_Id_Property_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" /><resources><code path=\"purify.min.js\" order=\"1\" /><code path=\"TemplatePreviewControl.js\" order=\"2\" /><css path=\"css/TemplatePreviewControl.css\" order=\"3\" /></resources></control></manifest>",
+    "name": "MscrmControls.Activity.TemplatePreviewControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.6"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Activity.TemplatePreviewControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_ActivitiesPatch",
+      "version": "9.0.26093.260917001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

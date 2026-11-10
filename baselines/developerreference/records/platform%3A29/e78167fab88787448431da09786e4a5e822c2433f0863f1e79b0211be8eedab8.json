@@ -1,0 +1,112 @@
+{
+  "configuration": {
+    "_flowgroup_value": null,
+    "_licensee_value": null,
+    "_licenseentitledby_value": null,
+    "_parentworkflowid_value": null,
+    "_plugintypeid_value": null,
+    "_sdkmessageid_value": {
+      "key": [
+        {
+          "field": "sdkmessageid",
+          "type": "Uniqueidentifier",
+          "value": "88327955-03c2-4616-b11c-964b9b8efbab"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "sdkmessage"
+    },
+    "asyncautodelete": true,
+    "billingcontext": null,
+    "businessprocesstype": null,
+    "category": 3,
+    "claims": null,
+    "clientdata": null,
+    "clientdataiscompressed": null,
+    "componentstate": 0,
+    "connectionreferences": null,
+    "createmetadata": null,
+    "createstage": 40,
+    "credentials": null,
+    "definition": null,
+    "deletestage": null,
+    "dependencies": null,
+    "description": null,
+    "desktopflowmodules": null,
+    "dynamicssolutioncontext": null,
+    "entityimage": null,
+    "entityimage_timestamp": null,
+    "entityimage_url": null,
+    "entityimageid": null,
+    "formid": "00000000-0000-0000-0000-000000000000",
+    "inputparameters": null,
+    "inputs": null,
+    "introducedversion": "1.2.0.118",
+    "iscrmuiworkflow": true,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "iscustomprocessingstepallowedforotherpublishers": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": true
+    },
+    "ismanaged": true,
+    "istransacted": true,
+    "languagecode": null,
+    "metadata": null,
+    "mode": 0,
+    "modernflowtype": 0,
+    "modifymetadata": null,
+    "name": "Check If Forms Have Unhealthy Customizations",
+    "ondemand": false,
+    "outputs": null,
+    "planverified": null,
+    "primaryentity": "none",
+    "processorder": null,
+    "processroleassignment": null,
+    "processtriggerformid": null,
+    "processtriggerscope": null,
+    "rank": null,
+    "rendererobjecttypecode": null,
+    "resourcecontainer": null,
+    "resourceid": null,
+    "runas": 1,
+    "schemaversion": null,
+    "scope": 4,
+    "statecode": 1,
+    "statuscode": 2,
+    "subprocess": false,
+    "suspensionreasondetails": null,
+    "syncworkflowlogonfailure": true,
+    "throttlingbehavior": null,
+    "triggeroncreate": false,
+    "triggerondelete": false,
+    "triggeronupdateattributelist": null,
+    "trustedaccess": null,
+    "type": 1,
+    "uidata": null,
+    "uiflowtype": null,
+    "uniquename": "CheckIfFormsHaveTooManyCustomControls",
+    "updatestage": null,
+    "workflowid": "eb3853e1-3eec-4e5e-95f7-31a6b32da3c7",
+    "xaml": "<?xml version=\"1.0\" encoding=\"utf-16\"?><Activity x:Class=\"XrmWorkfloweb3853e13eec4e5e95f731a6b32da3c7\" xmlns=\"http://schemas.microsoft.com/netfx/2009/xaml/activities\" xmlns:mva=\"clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" xmlns:mxs=\"clr-namespace:Microsoft.Xrm.Sdk;assembly=Microsoft.Xrm.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" xmlns:mxsw=\"clr-namespace:Microsoft.Xrm.Sdk.Workflow;assembly=Microsoft.Xrm.Sdk.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" xmlns:mxswa=\"clr-namespace:Microsoft.Xrm.Sdk.Workflow.Activities;assembly=Microsoft.Xrm.Sdk.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" xmlns:scg=\"clr-namespace:System.Collections.Generic;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" xmlns:srs=\"clr-namespace:System.Runtime.Serialization;assembly=System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" xmlns:this=\"clr-namespace:\" xmlns:x=\"http://schemas.microsoft.com/winfx/2006/xaml\"><x:Members><x:Property Name=\"InputEntities\" Type=\"InArgument(scg:IDictionary(x:String, mxs:Entity))\" /><x:Property Name=\"CreatedEntities\" Type=\"InArgument(scg:IDictionary(x:String, mxs:Entity))\" /><x:Property Name=\"SolutionName\" Type=\"InArgument(x:String)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"False\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"New Argument\" /><mxsw:ArgumentDirectionAttribute Value=\"Input\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property><x:Property Name=\"LogicalNamesOfEntitiesToCheck\" Type=\"InArgument(x:String)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"False\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"New Argument\" /><mxsw:ArgumentDirectionAttribute Value=\"Input\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property><x:Property Name=\"NotificationRecipientUserIds\" Type=\"InArgument(x:String)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"False\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"New Argument\" /><mxsw:ArgumentDirectionAttribute Value=\"Input\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property><x:Property Name=\"ControlsAndLimits\" Type=\"InArgument(x:String)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"False\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"New Argument\" /><mxsw:ArgumentDirectionAttribute Value=\"Input\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property><x:Property Name=\"Message\" Type=\"OutArgument(x:String)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"False\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"The result message that will be displayed to the user.\" /><mxsw:ArgumentDirectionAttribute Value=\"Output\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property><x:Property Name=\"ResultEntities\" Type=\"OutArgument(x:String)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"False\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"[Description of message]\" /><mxsw:ArgumentDirectionAttribute Value=\"Output\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property><x:Property Name=\"ReturnStatus\" Type=\"OutArgument(x:Int32)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"False\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"The return status of the rule run: 0 = fail, 1 = pass.\" /><mxsw:ArgumentDirectionAttribute Value=\"Output\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property><x:Property Name=\"ReturnSeverity\" Type=\"OutArgument(x:Int32)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"False\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"Failure severity of rule.\" /><mxsw:ArgumentDirectionAttribute Value=\"Output\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property><x:Property Name=\"HelpLink\" Type=\"OutArgument(x:String)\"><x:Property.Attributes><mxsw:ArgumentRequiredAttribute Value=\"False\" /><mxsw:ArgumentTargetAttribute Value=\"False\" /><mxsw:ArgumentDescriptionAttribute Value=\"Forward link to the rule document\" /><mxsw:ArgumentDirectionAttribute Value=\"Output\" /><mxsw:ArgumentEntityAttribute Value=\"\" /></x:Property.Attributes></x:Property></x:Members><this:XrmWorkfloweb3853e13eec4e5e95f731a6b32da3c7.InputEntities><InArgument x:TypeArguments=\"scg:IDictionary(x:String, mxs:Entity)\" /></this:XrmWorkfloweb3853e13eec4e5e95f731a6b32da3c7.InputEntities><this:XrmWorkfloweb3853e13eec4e5e95f731a6b32da3c7.CreatedEntities><InArgument x:TypeArguments=\"scg:IDictionary(x:String, mxs:Entity)\" /></this:XrmWorkfloweb3853e13eec4e5e95f731a6b32da3c7.CreatedEntities><mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings><mxswa:Workflow /></Activity>"
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "portability": "not-established",
+    "value": "eb3853e1-3eec-4e5e-95f7-31a6b32da3c7"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_PowerAppsChecker",
+      "version": "2.2.3321.1"
+    }
+  ],
+  "typeIdentity": "platform:29"
+}

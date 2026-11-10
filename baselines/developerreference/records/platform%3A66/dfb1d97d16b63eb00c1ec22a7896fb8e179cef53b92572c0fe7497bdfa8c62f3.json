@@ -1,0 +1,135 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.18",
+        "Children": [],
+        "ConstructorName": "AdvancedLookupControl",
+        "ControlManifestVersion": "0.0.323",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.FieldControls.AdvancedLookupControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "AdvancedLookupControl",
+        "FullName": "MscrmControls.FieldControls.AdvancedLookupControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.FieldControls.AdvancedLookupControl",
+        "Namespace": "MscrmControls.FieldControls",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "TypeGroup": "lookups",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "initialSearchText",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "DefaultValue": "false",
+              "Hidden": true,
+              "Name": "forceAllowMultiSelection",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "react_16_14_0",
+              "LoadOrder": 0,
+              "Name": "react_16_14_0",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_8_121_1",
+              "LoadOrder": 0,
+              "Name": "fluent_8_121_1",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.FieldControls.AdvancedLookupControl_AdvancedLookup.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "img/NoResults.png",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "img/Error.png",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/AdvancedLookupControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.FieldControls\" constructor=\"AdvancedLookupControl\" version=\"0.0.323\" display-name-key=\"AdvancedLookupControl\" description-key=\"AdvancedLookupControl description\" control-type=\"virtual\" hidden=\"true\" api-version=\"1.3.18\"><type-group name=\"lookups\"><type>Lookup.Customer</type><type>Lookup.Owner</type><type>Lookup.PartyList</type><type>Lookup.Regarding</type><type>Lookup.Simple</type></type-group><property name=\"value\" display-name-key=\"CC_AdvancedLookupControl\" description-key=\"CC_AdvancedLookupControl_Desc\" of-type-group=\"lookups\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"initialSearchText\" display-name-key=\"CC_AdvancedLookupControl_InitialSearchText\" description-key=\"CC_AdvancedLookupControl_InitialSearchText_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"forceAllowMultiSelection\" display-name-key=\"CC_AdvancedLookupControl_forceAllowMultiSelection\" description-key=\"CC_AdvancedLookupControl_forceAllowMultiSelection_Desc\" of-type=\"TwoOptions\" usage=\"input\" required=\"false\" hidden=\"true\" default-value=\"false\" /><resources><platform-library name=\"React\" version=\"16.14.0\" /><platform-library name=\"Fluent\" version=\"8.121.1\" /><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.7\" /></library><code path=\"AdvancedLookup.js\" order=\"2\" /><resx path=\"strings/AdvancedLookupControl.1033.resx\" version=\"0.0.1\" /><img path=\"img/NoResults.png\" /><img path=\"img/Error.png\" /></resources><feature-usage><uses-feature name=\"Utility\" required=\"true\" /></feature-usage><built-by name=\"pac\" version=\"1.49.1-alpha-25090500\" /></control></manifest>",
+    "name": "MscrmControls.FieldControls.AdvancedLookupControl",
+    "supportedplatform": "(Model)",
+    "version": "0.0.323"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.FieldControls.AdvancedLookupControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

@@ -1,0 +1,144 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" savedqueryid=\"f0a20746-0fe7-4edc-9889-569776b2d76a\"><entity name=\"goal\"><attribute name=\"goalid\" /><attribute name=\"title\" /><attribute name=\"goalownerid\" /><attribute name=\"targetstring\" /><filter type=\"and\"><condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /></filter><order attribute=\"createdon\" descending=\"true\" /></entity></fetch>",
+    "introducedversion": "5.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "title",
+        "Name": "goals",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "goal"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "title",
+                "RelatedEntityName": "",
+                "Width": 250
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "goalownerid",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "targetstring",
+                "RelatedEntityName": "",
+                "Width": 150
+              }
+            ],
+            "Id": "goalid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "goal"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "goal"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"goals\" object=\"logical:goal\" jump=\"title\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"goal\" id=\"goalid\"><cell name=\"title\" width=\"250\" /><cell name=\"goalownerid\" width=\"150\" /><cell name=\"targetstring\" width=\"150\" /></row></grid>"
+    },
+    "name": "Goals With Same Metrics and Time Period",
+    "offlinesqlquery": "/*SelectStart*/select  \"goal0\".[goalid] as \"goalid\"\r , \"goal0\".[title] as \"title\"\r , \"goal0\".[goalownerid!id] as \"goalownerid!id\"\r , \"goal0\".[goalownerid!logicalname] as \"goalownerid!logicalname\"\r , \"goal0\".[goalownerid!name] as \"goalownerid!name\"\r , \"goal0\".[targetstring] as \"targetstring\"/*SelectEnd*/  /*FromStart*/from  Goal as \"goal0\"/*FromEnd*/  /*WhereStart*/where  (\"goal0\".[statecode] = 0)/*WhereEnd*/  /*OrderByStart*/order by  \"goal0\".[createdon] desc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 64,
+    "returnedtypecode": "goal",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "f0a20746-0fe7-4edc-9889-569776b2d76a",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "goal",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "f0a20746-0fe7-4edc-9889-569776b2d76a"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "System",
+      "version": "5.0"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

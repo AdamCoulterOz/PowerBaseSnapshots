@@ -1,0 +1,52 @@
+{
+  "configuration": {
+    "body": "<?xml version=\"1.0\" ?><xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"1.0\"><xsl:output method=\"text\" indent=\"no\"/><xsl:template match=\"/data\"><![CDATA[<P>Dear Customer,</P>\n\t\t\t\t\t<P>As per your request, we have unsubscribed you from receiving marketing related communication from us.</P>\n\t\t\t\t\t<P>Please call us at ]]><xsl:choose><xsl:when test=\"systemuser/address1_telephone1\"><xsl:value-of select=\"systemuser/address1_telephone1\" /></xsl:when><xsl:otherwise>UserPhone</xsl:otherwise></xsl:choose><![CDATA[ for any further changes or clarifications.</P>\n\t\t\t\t\t<P>Thanks</P>]]></xsl:template></xsl:stylesheet>\n\t\t\t\t",
+    "componentstate": 0,
+    "description": "Use this e-mail template for sending acknowledgement to customers during auto unsubscribe.",
+    "entityimage": null,
+    "entityimage_timestamp": null,
+    "entityimage_url": null,
+    "entityimageid": null,
+    "generationtypecode": 0,
+    "importsequencenumber": null,
+    "introducedversion": "5.0",
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "ispersonal": false,
+    "isrecommended": false,
+    "languagecode": 1033,
+    "mimetype": "",
+    "opencount": null,
+    "openrate": null,
+    "presentationxml": "<template><text><![CDATA[<P>Dear Customer,</P>\n\t\t\t\t\t<P>As per your request, we have unsubscribed you from receiving marketing related communication from us.</P>\n\t\t\t\t\t<P>Please call us at ]]></text><slugs><slug><entity>systemuser</entity><attribute>address1_telephone1</attribute></slug><default>UserPhone</default></slugs><text><![CDATA[ for any further changes or clarifications.</P>\n\t\t\t\t\t<P>Thanks</P>]]></text></template>\n\t\t\t\t",
+    "replycount": null,
+    "replyrate": null,
+    "safehtml": "<div>\n<p>Dear Customer,</p>\n<p>As per your request, we have unsubscribed you from receiving marketing related communication from us.</p>\n<p>Please call us at <span class=\"dataslug\" id=\"TemplateEditor0\" data-value=\"{!systemuser:address1_telephone1;UserPhone}\" contenteditable=\"false\" style=\"background-color: #E7EFFF;\">{!User:Main Phone;UserPhone}</span> for any further changes or clarifications.</p>\n<p>Thanks</p>\n</div>\n",
+    "subject": "<?xml version=\"1.0\" ?><xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"1.0\"><xsl:output method=\"text\" indent=\"no\" /><xsl:template match=\"/data\"><![CDATA[You have been unsubscribed...]]></xsl:template></xsl:stylesheet>",
+    "subjectpresentationxml": "<template><text><![CDATA[You have been unsubscribed...]]></text></template>",
+    "subjectsafehtml": "You have been unsubscribed...",
+    "templateid": "7cdc528e-9c3e-4170-b04f-97a30fb736c9",
+    "templatetypecode": "systemuser",
+    "title": "Marketing communication unsubscribe acknowledgement",
+    "usedcount": null
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "portability": "not-established",
+    "value": "7cdc528e-9c3e-4170-b04f-97a30fb736c9"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "System",
+      "version": "5.0"
+    }
+  ],
+  "typeIdentity": "platform:36"
+}

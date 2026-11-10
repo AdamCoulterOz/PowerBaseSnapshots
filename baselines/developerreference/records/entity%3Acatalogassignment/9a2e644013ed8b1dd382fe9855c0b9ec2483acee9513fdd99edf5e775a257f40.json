@@ -1,0 +1,83 @@
+{
+  "configuration": {
+    "_catalogid_value": {
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "msdyn_iapdataprocessing"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "catalog"
+    },
+    "_object_value": {
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "RunDataProcessingModule"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "customapi"
+    },
+    "componentstate": 0,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "name": "DataProcessingAssignment",
+    "overriddencreatedon": null,
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "catalogid",
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "msdyn_iapdataprocessing"
+        }
+      ],
+      "targetEntity": "catalog",
+      "type": "lookup"
+    },
+    {
+      "field": "object",
+      "key": [
+        {
+          "field": "uniquename",
+          "type": "String",
+          "value": "RunDataProcessingModule"
+        }
+      ],
+      "targetEntity": "customapi",
+      "type": "lookup"
+    },
+    {
+      "annotationEvidence": "captured-payload",
+      "derivedFrom": "typed-lookup-annotation:_object_value",
+      "field": "objectidtype",
+      "type": "EntityName",
+      "value": "customapi"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_InsightsAppPlatform",
+      "version": "1.0.3526.1"
+    }
+  ],
+  "typeIdentity": "entity:catalogassignment"
+}

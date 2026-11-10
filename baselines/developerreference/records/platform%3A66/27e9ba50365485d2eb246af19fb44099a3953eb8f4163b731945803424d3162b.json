@@ -1,0 +1,119 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ManageDuplicatesEnhanced",
+        "ControlManifestVersion": "1.0.41",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.ManageDuplicatesEnhancedContainer.ManageDuplicatesEnhanced"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_Manage_Duplicates_EnhancedControl_Name",
+        "FullName": "MscrmControls.ManageDuplicatesEnhancedContainer.ManageDuplicatesEnhanced",
+        "IsVirtual": true,
+        "Name": "MscrmControls.ManageDuplicatesEnhancedContainer.ManageDuplicatesEnhanced",
+        "Namespace": "MscrmControls.ManageDuplicatesEnhancedContainer",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "EntityRecord",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "SelectedRecordId",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "ShowEntityLookupFlag",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "MatchingEntityName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "SelectedRecordName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "SIClientUtilityLogger",
+              "LoadOrder": 1,
+              "Name": "SIClientUtilityLogger",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.ManageDuplicatesEnhancedContainer.ManageDuplicatesEnhanced_ManageDuplicatesEnhanced.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/ManageDuplicatesEnhancedControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.ManageDuplicatesEnhancedContainer\" constructor=\"ManageDuplicatesEnhanced\" version=\"1.0.41\" display-name-key=\"CC_Manage_Duplicates_EnhancedControl_Name\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"EntityRecord\" display-name-key=\"CC_entityRecord\" description-key=\"CC_entityRecord_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"SelectedRecordId\" display-name-key=\"CC_SelectedRecordId\" description-key=\"CC_SelectedRecordId_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"ShowEntityLookupFlag\" display-name-key=\"CC_ShowEntityLookupFlag\" description-key=\"CC_ShowEntityLookupFlag_desc\" usage=\"bound\" of-type=\"TwoOptions\" required=\"false\" hidden=\"true\" /><property name=\"MatchingEntityName\" display-name-key=\"CC_MatchingEntityName\" description-key=\"CC_MatchingEntityName_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"SelectedRecordName\" display-name-key=\"CC_SelectedRecordName\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><resources><library name=\"SIClientUtilityLogger\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/SIClientUtilityLogger.js\" version=\"1.0.0\" /></library><code path=\"ManageDuplicatesEnhanced.js\" order=\"1\" /><resx path=\"strings/ManageDuplicatesEnhancedControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.ManageDuplicatesEnhancedContainer.ManageDuplicatesEnhanced",
+    "supportedplatform": "(Model)",
+    "version": "1.0.41"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.ManageDuplicatesEnhancedContainer.ManageDuplicatesEnhanced"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

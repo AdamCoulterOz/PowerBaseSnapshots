@@ -1,0 +1,69 @@
+{
+  "configuration": {
+    "_msdyn_aimodelid_value": {
+      "key": {
+        "kind": "wire-guid",
+        "portability": "not-established",
+        "value": "88aa739f-274c-4460-aebb-08da62a94745"
+      },
+      "kind": "typed-reference",
+      "targetEntity": "msdyn_aimodel"
+    },
+    "_msdyn_connectionreferenceid_value": null,
+    "_msdyn_createdfromconfigurationid_value": null,
+    "_msdyn_trainedmodelaiconfigurationpareid_value": {
+      "key": {
+        "kind": "wire-guid",
+        "portability": "not-established",
+        "value": "e1ab3c0b-5c73-f011-b4cb-6045bd0172cb"
+      },
+      "kind": "typed-reference",
+      "targetEntity": "msdyn_aiconfiguration"
+    },
+    "componentstate": 0,
+    "importsequencenumber": null,
+    "introducedversion": "202608.1.4.1",
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "msdyn_aiconfigurationid": "06fba334-5c41-4297-96e7-e23b9f9cb14f",
+    "msdyn_customconfiguration": "{\"version\":\"GptDynamicPrompt-2\",\"prompt\":[{\"type\":\"literal\",\"text\":\"Please analyze the attached tabular dataset \"},{\"type\":\"inputVariable\",\"id\":\"Text_20input\"},{\"type\":\"literal\",\"text\":\"  , focusing on activity from the most recent seven calendar days relative to today’s date.Return a concise summary in JSON format with the following fields:\\nTitle: A brief headline capturing key performance trends\\nPeriod: The start and end dates of the analysis window\\nHighlights: One to three notable observations, preferably with numbers (e.g., total revenue, average transaction size, category spend).\\nOpportunity: A single actionable insight based on gaps, inefficiencies, or missed targets\\nOptimization: One clear suggestion to improve outcomes using existing data or operations\\nRisk: Analyze the metric over the past 14 days. \\n\\nIf the trend is downward or shows signs of risk (e.g., consistent decline, sharp drops, or values approaching a critical threshold), flag it as 'At Risk'. Otherwise, mark it as 'Stable'Make sure the output is Teams-ready: clean JSON, concise insights, financial context where appropriate. Each section should have bullet points.\"}],\"definitions\":{\"inputs\":[{\"id\":\"Text_20input\",\"text\":\"Text input\",\"type\":\"text\"}],\"formulas\":[],\"data\":[],\"output\":{\"formats\":[\"text\"]}},\"modelParameters\":{\"modelType\":\"gpt-41-mini\",\"gptParameters\":{\"temperature\":0}},\"settings\":{\"recordRetrievalLimit\":30,\"shouldPreserveRecordLinks\":null,\"runtime\":null,\"enableReasoning\":true}}",
+    "msdyn_databinding": null,
+    "msdyn_lasterrors": null,
+    "msdyn_lasttrainorrundate": null,
+    "msdyn_majoriterationnumber": 1,
+    "msdyn_minoriterationnumber": 0,
+    "msdyn_model": null,
+    "msdyn_model_name": null,
+    "msdyn_modelaction": null,
+    "msdyn_modeldata": null,
+    "msdyn_modelglobalexplainability": null,
+    "msdyn_modelperformance": null,
+    "msdyn_modelprovisioningmetadata": null,
+    "msdyn_modelprovisioningstatus": null,
+    "msdyn_modelrundataspecification": "H4sIAAAAAAAACpWQPQvCMBRF/4q8OYOKOGSrHwUXC21xlWhTDbRJSF7AUvrfTayiGBfnc+/Ju+mh0PycKtMyPHBjhZJAZwR2UjvMlcKtRIEd0B42wuqGdXvWcqAABBJEI04OuQ245Dc8zqciFON4oJOREcg0+ndYA7RmjeUEyk6HUOF98gIDAVZVYsyslUTfjY1JFPkUo3Fv74pZvly87IP3Zw7/3ff7irDLR6MBtZDCXnPObPjQ71b6oJMnjur+xDucNKc2mAEAAA==",
+    "msdyn_name": "Intelligent Weekly Reporting",
+    "msdyn_resourceinfo": null,
+    "msdyn_runconfiguration": null,
+    "msdyn_schedulingoptions": null,
+    "msdyn_templateversion": 1,
+    "msdyn_type": 190690001,
+    "overriddencreatedon": null,
+    "statecode": 2,
+    "statuscode": 7,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "portability": "not-established",
+    "value": "06fba334-5c41-4297-96e7-e23b9f9cb14f"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:402"
+}

@@ -1,0 +1,91 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "SubjectTreeWrapperControl",
+        "ControlManifestVersion": "1.0.3",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.SubjectTreeWrapper.SubjectTreeWrapperControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_SubjectTreeWrapper",
+        "FullName": "MscrmControls.AppCommon.SubjectTreeWrapper.SubjectTreeWrapperControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.SubjectTreeWrapper.SubjectTreeWrapperControl",
+        "Namespace": "MscrmControls.AppCommon.SubjectTreeWrapper",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "selectedSubject",
+              "Required": true,
+              "TypeGroup": "Lookups",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.AppCommon.SubjectTreeWrapper.SubjectTreeWrapperControl_SubjectTreeWrapper.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "Locale/SubjectTreeWrapper.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "Lookup.Simple",
+    "componentstate": 0,
+    "introducedversion": "9.0.1904.4006",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.SubjectTreeWrapper\" constructor=\"SubjectTreeWrapperControl\" version=\"1.0.3\" display-name-key=\"CC_SubjectTreeWrapper\" control-type=\"virtual\"><modes></modes><type-group name=\"Lookups\"><type>Lookup.Simple</type></type-group><property name=\"selectedSubject\" display-name-key=\"CC_selectedEntities\" description-key=\"CC_selectedEntities_Desc\" of-type-group=\"Lookups\" usage=\"bound\" required=\"true\" hidden=\"true\" /><resources><code path=\"SubjectTreeWrapper.js\" order=\"1\" /><resx path=\"Locale/SubjectTreeWrapper.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.SubjectTreeWrapper.SubjectTreeWrapperControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.3"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.SubjectTreeWrapper.SubjectTreeWrapperControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch",
+      "version": "9.0.1904.4006"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

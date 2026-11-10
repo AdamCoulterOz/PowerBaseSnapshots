@@ -1,0 +1,98 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ProcessBreadCrumb",
+        "ControlManifestVersion": "1.1.151",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Containers.ProcessBreadCrumb"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_Process_Control_Name",
+        "FullName": "MscrmControls.Containers.ProcessBreadCrumb",
+        "IsVirtual": true,
+        "MappingFileName": "design-maps/map.*.xml",
+        "Name": "MscrmControls.Containers.ProcessBreadCrumb",
+        "Namespace": "MscrmControls.Containers",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "Type": "BusinessProcessFlow",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "processcontrolmanager",
+              "LoadOrder": 2,
+              "Name": "processcontrolmanager",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 4,
+              "Name": "MscrmControls.Containers.ProcessBreadCrumb_ProcessBreadCrumb.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/ProcessControlResources.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Containers\" constructor=\"ProcessBreadCrumb\" version=\"1.1.151\" display-name-key=\"CC_Process_Control_Name\" control-type=\"virtual\" hidden=\"true\" design-mapping-file=\"design-maps/map.*.xml\"><modes><read /><edit /></modes><property name=\"value\" required=\"true\" display-name-key=\"CC_Process_Value\" description-key=\"CC_Process_Value_Desc\" usage=\"bound\" of-type=\"BusinessProcessFlow\" /><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.20\" /></library><library name=\"processcontrolmanager\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/processcontrolmanager-1.0.0.js\" version=\"1.0.99\" /></library><resx path=\"strings/ProcessControlResources.1033.resx\" version=\"1.0.3\" /><code path=\"ProcessBreadCrumb.js\" order=\"4\" /></resources></control></manifest>",
+    "name": "MscrmControls.Containers.ProcessBreadCrumb",
+    "supportedplatform": "(Model)",
+    "version": "1.1.151"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Containers.ProcessBreadCrumb"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

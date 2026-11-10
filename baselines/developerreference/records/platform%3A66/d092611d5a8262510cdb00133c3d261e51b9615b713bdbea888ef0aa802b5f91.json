@@ -1,0 +1,113 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "MultiSelectPicklistControl",
+        "ControlManifestVersion": "1.1.23",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.MultiSelectPicklist.MultiSelectPicklistControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_MultiSelectPicklist_Name",
+        "FullName": "MscrmControls.MultiSelectPicklist.MultiSelectPicklistControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.MultiSelectPicklist.MultiSelectPicklistControl",
+        "Namespace": "MscrmControls.MultiSelectPicklist",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "Type": "MultiSelectOptionSet",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 3,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 4,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "sol",
+              "LoadOrder": 5,
+              "Name": "sol",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 6,
+              "Name": "MscrmControls.MultiSelectPicklist.MultiSelectPicklistControl_MultiSelectPicklistControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "css/searchableOptionList.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "css/MultiSelectPicklistStyles.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/MultiSelectPicklistControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.MultiSelectPicklist\" constructor=\"MultiSelectPicklistControl\" version=\"1.1.23\" display-name-key=\"CC_MultiSelectPicklist_Name\" hidden=\"true\"><modes><read /><edit /></modes><property name=\"value\" display-name-key=\"CC_Field\" description-key=\"CC_Field_Desc\" of-type=\"MultiSelectOptionSet\" usage=\"bound\" required=\"true\" hidden=\"true\" /><resources><css path=\"css/searchableOptionList.css\" order=\"1\" /><css path=\"css/MultiSelectPicklistStyles.css\" order=\"2\" /><library name=\"jquery\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"libs/jquery-3.6.0.js\" version=\"3.6.0\" /></library><library name=\"mscommon\" version=\"&gt;=1\" order=\"4\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.15\" /></library><library name=\"sol\" version=\"&gt;=1\" order=\"5\"><packaged_library path=\"libs/sol-2.0.0.js\" version=\"2.7.4\" /></library><code path=\"MultiSelectPicklistControl.js\" order=\"6\" /><resx path=\"strings/MultiSelectPicklistControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.MultiSelectPicklist.MultiSelectPicklistControl",
+    "supportedplatform": "(Model)",
+    "version": "1.1.23"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.MultiSelectPicklist.MultiSelectPicklistControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

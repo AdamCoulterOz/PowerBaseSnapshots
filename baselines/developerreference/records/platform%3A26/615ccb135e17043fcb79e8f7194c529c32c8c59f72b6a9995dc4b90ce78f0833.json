@@ -1,0 +1,159 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" savedqueryid=\"34852847-b1ef-4183-b1ea-936eb11d504c\"><entity name=\"knowledgearticle\"><attribute name=\"languagelocaleid\" /><attribute name=\"knowledgearticleid\" /><attribute name=\"majorversionnumber\" /><attribute name=\"minorversionnumber\" /><attribute name=\"statuscode\" /><order attribute=\"majorversionnumber\" descending=\"true\" /><order attribute=\"minorversionnumber\" descending=\"true\" /><link-entity name=\"knowledgearticle\" from=\"knowledgearticleid\" to=\"parentarticlecontentid\" alias=\"aa\"></link-entity><filter type=\"and\"><condition attribute=\"isrootarticle\" operator=\"eq\" value=\"0\" /><condition attribute=\"statecode\" operator=\"ne\" value=\"6\" /></filter></entity></fetch>",
+    "introducedversion": "8.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "title",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "knowledgearticle"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "languagelocaleid",
+                "RelatedEntityName": "",
+                "Width": 125
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "majorversionnumber",
+                "RelatedEntityName": "",
+                "Width": 125
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "minorversionnumber",
+                "RelatedEntityName": "",
+                "Width": 125
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "statuscode",
+                "RelatedEntityName": "",
+                "Width": 125
+              }
+            ],
+            "Id": "knowledgearticleid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "knowledgearticle"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:knowledgearticle\" jump=\"title\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"result\" id=\"knowledgearticleid\"><cell name=\"languagelocaleid\" width=\"125\" /><cell name=\"majorversionnumber\" width=\"125\" /><cell name=\"minorversionnumber\" width=\"125\" /><cell name=\"statuscode\" width=\"125\" /></row></grid>"
+    },
+    "name": "Related Versions",
+    "offlinesqlquery": "/*SelectStart*/select  \"knowledgearticle0\".[languagelocaleid!id] as \"languagelocaleid!id\"\r , \"knowledgearticle0\".[languagelocaleid!logicalname] as \"languagelocaleid!logicalname\"\r , \"knowledgearticle0\".[languagelocaleid!name] as \"languagelocaleid!name\"\r , \"knowledgearticle0\".[knowledgearticleid] as \"knowledgearticleid\"\r , \"knowledgearticle0\".[majorversionnumber] as \"majorversionnumber\"\r , \"knowledgearticle0\".[minorversionnumber] as \"minorversionnumber\"\r , \"knowledgearticle0\".[statuscode] as \"statuscode\"/*SelectEnd*/  /*FromStart*/from  KnowledgeArticle as \"knowledgearticle0\" \t/*JoinStart*/ join KnowledgeArticle as \"aa\" on (\"knowledgearticle0\".[parentarticlecontentid!id]  =  \"aa\".[knowledgearticleid])/*JoinEnd*//*FromEnd*/  /*WhereStart*/where  (\"knowledgearticle0\".[isrootarticle] = 0 and (\"knowledgearticle0\".[statecode] != 6 or \"knowledgearticle0\".[statecode] is null))/*WhereEnd*/  /*OrderByStart*/order by  \"knowledgearticle0\".[majorversionnumber] desc\r , \"knowledgearticle0\".[minorversionnumber] desc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 64,
+    "returnedtypecode": "knowledgearticle",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "34852847-b1ef-4183-b1ea-936eb11d504c",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "knowledgearticle",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "34852847-b1ef-4183-b1ea-936eb11d504c"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_KnowledgeManagementPatch",
+      "version": "9.0.26094.3006"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

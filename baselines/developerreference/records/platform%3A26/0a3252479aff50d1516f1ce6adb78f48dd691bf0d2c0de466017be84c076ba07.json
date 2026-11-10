@@ -1,0 +1,166 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" savedqueryid=\"2c5e0a5b-b506-447e-80ec-5526d25a4b8d\"><entity name=\"exchangesyncidmapping\"><attribute name=\"ownerid\" /><attribute name=\"itemsubject\" /><attribute name=\"objectid\" /><attribute name=\"lastsyncerroroccurredon\" /><attribute name=\"lastsyncerror\" /><filter type=\"and\"><condition attribute=\"objecttypecode\" operator=\"eq\" value=\"4202\" /><condition attribute=\"objectid\" operator=\"not-null\" /><condition attribute=\"objectid\" operator=\"ne\" value=\"00000000-0000-0000-0000-000000000000\" /></filter><order attribute=\"lastsyncerroroccurredon\" descending=\"true\" /></entity></fetch>",
+    "introducedversion": "8.2.2.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "name",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "exchangesyncidmapping"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "ownerid",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "itemsubject",
+                "RelatedEntityName": "",
+                "Width": 250
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "objectid",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "lastsyncerroroccurredon",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "lastsyncerror",
+                "RelatedEntityName": "",
+                "Width": 225
+              }
+            ],
+            "Id": "exchangesyncidmappingid",
+            "LayoutStyle": "SSSItemErrorsGrid",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "exchangesyncidmapping"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:exchangesyncidmapping\" jump=\"name\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"result\" id=\"exchangesyncidmappingid\" layoutstyle=\"SSSItemErrorsGrid\"><cell name=\"ownerid\" width=\"150\" /><cell name=\"itemsubject\" width=\"250\" /><cell name=\"objectid\" width=\"300\" /><cell name=\"lastsyncerroroccurredon\" width=\"200\" /><cell name=\"lastsyncerror\" width=\"225\" /></row></grid>"
+    },
+    "name": "Failed Outgoing Emails View",
+    "offlinesqlquery": "/*SelectStart*/select  \"exchangesyncidmapping0\".[ownerid!id] as \"ownerid!id\"\r , \"exchangesyncidmapping0\".[ownerid!logicalname] as \"ownerid!logicalname\"\r , \"exchangesyncidmapping0\".[ownerid!name] as \"ownerid!name\"\r , \"exchangesyncidmapping0\".[itemsubject] as \"itemsubject\"\r , \"exchangesyncidmapping0\".[objectid] as \"objectid\"\r , \"exchangesyncidmapping0\".[lastsyncerroroccurredon] as \"lastsyncerroroccurredon\"\r , \"exchangesyncidmapping0\".[lastsyncerror] as \"lastsyncerror\"\r , \"exchangesyncidmapping0\".[exchangesyncidmappingid] as \"exchangesyncidmappingid\"/*SelectEnd*/  /*FromStart*/from  ExchangeSyncIdMapping as \"exchangesyncidmapping0\"/*FromEnd*/  /*WhereStart*/where  (\"exchangesyncidmapping0\".[objecttypecode] = 4202 and \"exchangesyncidmapping0\".[objectid] is not null and (\"exchangesyncidmapping0\".[objectid] !=  '00000000-0000-0000-0000-000000000000' or \"exchangesyncidmapping0\".[objectid] is null))/*WhereEnd*/  /*OrderByStart*/order by  \"exchangesyncidmapping0\".[lastsyncerroroccurredon] desc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 1,
+    "returnedtypecode": "exchangesyncidmapping",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "2c5e0a5b-b506-447e-80ec-5526d25a4b8d",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "exchangesyncidmapping",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "2c5e0a5b-b506-447e-80ec-5526d25a4b8d"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}

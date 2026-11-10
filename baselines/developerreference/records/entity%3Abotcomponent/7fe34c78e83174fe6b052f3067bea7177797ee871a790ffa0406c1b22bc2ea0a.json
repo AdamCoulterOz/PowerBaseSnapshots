@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": null,
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 9,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnEventActivity\r\n  id: main\r\n  eventName: Microsoft.PowerApps.Copilot.DatasetSearch\r\n  actions:\r\n    - kind: SetVariable\r\n      id: setVariable_3JmZE8\r\n      variable: Topic.nlPrompt\r\n      value: =Text(System.Activity.Value.nlPrompt)\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_3tXGx4\r\n      variable: Topic.appId\r\n      value: =Text(System.Activity.Value.appId)\r\n\r\n    - kind: LogCustomTelemetryEvent\r\n      id: GGn82P\r\n      eventName: Log AppId\r\n      properties: =Topic.appId\r\n\r\n    - kind: ConditionGroup\r\n      id: conditionGroup_SEp2Dt\r\n      conditions:\r\n        - id: conditionItem_yfUzmJ\r\n          condition: =IsBlank(Topic.nlPrompt)\r\n          actions:\r\n            - kind: SendActivity\r\n              id: sendActivity_FT0aIx\r\n              activity:\r\n                kind: EventActivity\r\n                value: \"=ParseJSON(\\\"{\\\"\\\"error\\\"\\\": \\\"\\\"Blank_Prompt\\\"\\\"}\\\")\"\r\n                name: MS.PA.DatasetSearch\r\n\r\n            - kind: EndDialog\r\n              id: gMH4wb\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_GFvpsy\r\n      variable: Topic.requestBody\r\n      value: \"=Concatenate(\\\"{\\\"\\\"queryText\\\"\\\": \\\"\\\"\\\",Topic.nlPrompt, \\\"\\\"\\\", \\\"\\\"options\\\"\\\": [\\\"\\\"GetResultsSummary\\\"\\\",\\\"\\\"GenerateFetchXML\\\"\\\"]}\\\")\"\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_v6XCEt\r\n      variable: Topic.userAgent\r\n      value: =Global.PA_Copilot_SessionContext.host\r\n\r\n    - kind: HttpRequestAction\r\n      id: FfQL0b\r\n      method: Post\r\n      url: https://dataverse/api/copilot/v1.0/QueryStructuredData\r\n      headers:\r\n        x-ms-app-id: =Topic.appId\r\n        x-ms-user-agent: =Topic.userAgent\r\n\r\n      body:\r\n        kind: RawRequestContent\r\n        contentType: application/json\r\n        content: =Topic.requestBody\r\n\r\n      errorHandling:\r\n        kind: ContinueOnErrorBehavior\r\n        statusCode: Topic.statusCode\r\n        errorResponseBody: Topic.callError\r\n\r\n      response: Topic.Response\r\n      responseSchema: Any\r\n\r\n    - kind: LogCustomTelemetryEvent\r\n      id: g9Ic7C\r\n      eventName: Log StatusCode\r\n      properties: =Topic.statusCode\r\n\r\n    - kind: SendActivity\r\n      id: sendActivity_xITQ9N\r\n      activity:\r\n        kind: EventActivity\r\n        value: =Topic.Response\r\n        name: MS.PA.DatasetSearch",
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": null,
+    "name": "DatasetSearch",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.DatasetSearch",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.DatasetSearch"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

@@ -1,0 +1,136 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.18",
+        "Children": [],
+        "ConstructorName": "ShareControl",
+        "ControlManifestVersion": "0.0.65",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.ShareControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "ShareControl",
+        "FullName": "MscrmControls.ShareControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.ShareControl",
+        "Namespace": "MscrmControls",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "entityName",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "objectId",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "openedFromGrid",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "pageType",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "fluentui-react",
+              "LoadOrder": 1,
+              "Name": "fluentui-react",
+              "Type": 0
+            },
+            {
+              "LibraryName": "react_16_14_0",
+              "LoadOrder": 0,
+              "Name": "react_16_14_0",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_9_4_0",
+              "LoadOrder": 0,
+              "Name": "fluent_9_4_0",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.ShareControl_bundle.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/ShareControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls\" constructor=\"ShareControl\" version=\"0.0.65\" display-name-key=\"ShareControl\" description-key=\"ShareControl_Description\" control-type=\"virtual\" api-version=\"1.3.18\"><property name=\"entityName\" display-name-key=\"entityName_Display_Key\" description-key=\"entityName_Desc_Key\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"objectId\" display-name-key=\"objectId_Display_Key\" description-key=\"objectId_Desc_Key\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"openedFromGrid\" display-name-key=\"openedFromGrid_Display_Key\" description-key=\"openedFromGrid_Desc_Key\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"true\" /><property name=\"pageType\" display-name-key=\"pageType_Display_Key\" description-key=\"pageType_Desc_Key\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"true\"><value name=\"EntityRecord\" display-name-key=\"pageType_EntityRecord\" default=\"true\">entityrecord</value><value name=\"EntityList\" display-name-key=\"pageType_EntityList\">entitylist</value><value name=\"Dashboard\" display-name-key=\"pageType_Dashboard\">dashboard</value></property><resources><platform-library name=\"React\" version=\"16.8.6\" /><platform-library name=\"Fluent\" version=\"9.4.0\" /><library name=\"fluentui-react\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"fluentui-react.js\" version=\"8.121.1\" /></library><code path=\"bundle.js\" order=\"2\" /><resx path=\"strings/ShareControl.1033.resx\" version=\"1.0.15\" /></resources><feature-usage><uses-feature name=\"Utility\" required=\"true\" /><uses-feature name=\"WebAPI\" required=\"true\" /></feature-usage><built-by name=\"pac\" version=\"1.49.1-alpha-25090500\" /></control></manifest>",
+    "name": "MscrmControls.ShareControl",
+    "supportedplatform": "(Model)",
+    "version": "0.0.65"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.ShareControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

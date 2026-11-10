@@ -1,0 +1,90 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "AttachmentPreviewControl",
+        "ControlManifestVersion": "1.0.7",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Activity.AttachmentPreviewControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_AttachmentPreviewControl",
+        "FullName": "MscrmControls.Activity.AttachmentPreviewControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.Activity.AttachmentPreviewControl",
+        "Namespace": "MscrmControls.Activity",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "attachmentId",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.Activity.AttachmentPreviewControl_libs/pdf.min.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.Activity.AttachmentPreviewControl_AttachmentPreviewControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/AttachmentPreviewControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.Text",
+    "componentstate": 0,
+    "introducedversion": "9.0.26093.260917001",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Activity\" constructor=\"AttachmentPreviewControl\" version=\"1.0.7\" display-name-key=\"CC_AttachmentPreviewControl\"><property name=\"attachmentId\" display-name-key=\"CC_attachmentId\" description-key=\"CC_attachmentId_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" /><modes></modes><resources><code path=\"libs/pdf.min.js\" order=\"1\" /><resx path=\"strings/AttachmentPreviewControl.1033.resx\" version=\"1.0.0\" /><code path=\"AttachmentPreviewControl.js\" order=\"2\" /></resources></control></manifest>",
+    "name": "MscrmControls.Activity.AttachmentPreviewControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.7"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Activity.AttachmentPreviewControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_ActivitiesPatch",
+      "version": "9.0.26093.260917001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

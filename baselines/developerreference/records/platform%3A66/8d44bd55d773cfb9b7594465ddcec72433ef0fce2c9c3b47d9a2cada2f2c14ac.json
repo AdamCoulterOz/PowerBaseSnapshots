@@ -1,0 +1,127 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ClientContextGridControl",
+        "ControlManifestVersion": "1.0.1",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Containers.ClientContextGridControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_ClientContext_GridControl_Name",
+        "FullName": "MscrmControls.Containers.ClientContextGridControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.Containers.ClientContextGridControl",
+        "Namespace": "MscrmControls.Containers",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [],
+              "InitialDataSetFetch": true,
+              "Name": "Grid",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "SelectedRecordId",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "EntityLogicalName",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "QueryParameters",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "GridColumns",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ReflowBehavior",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.Containers.ClientContextGridControl_ClientContextGridControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/ClientContextGridControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Containers\" constructor=\"ClientContextGridControl\" version=\"1.0.1\" display-name-key=\"CC_ClientContext_GridControl_Name\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"SelectedRecordId\" display-name-key=\"CC_SelectedRecordId\" description-key=\"CC_SelectedRecordId_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"EntityLogicalName\" display-name-key=\"CC_EntityLogicalName\" description-key=\"CC_EntityLogicalName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"QueryParameters\" display-name-key=\"CC_QueryParameters\" description-key=\"CC_QueryParameters_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"GridColumns\" display-name-key=\"CC_GridColumns\" description-key=\"CC_GridColumns_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"ReflowBehavior\" display-name-key=\"CC_ReflowBehavior\" description-key=\"CC_ReflowBehavior_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"false\" /><data-set name=\"Grid\" display-name-key=\"CC_Grid\"></data-set><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><code path=\"ClientContextGridControl.js\" order=\"2\" /><resx path=\"strings/ClientContextGridControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.Containers.ClientContextGridControl",
+    "supportedplatform": null,
+    "version": "1.0.1"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Containers.ClientContextGridControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

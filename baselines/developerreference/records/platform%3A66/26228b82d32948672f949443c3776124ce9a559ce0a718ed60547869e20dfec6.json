@@ -1,0 +1,110 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ObjectDetector",
+        "ControlManifestVersion": "1.0.112",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "Intelligence.ObjectDetectorControl.ObjectDetector"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "ObjectDetector",
+        "FullName": "Intelligence.ObjectDetectorControl.ObjectDetector",
+        "IsVirtual": true,
+        "Name": "Intelligence.ObjectDetectorControl.ObjectDetector",
+        "Namespace": "Intelligence.ObjectDetectorControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "OriginalImage",
+              "Required": true,
+              "Type": "Multiple",
+              "Usage": 2
+            },
+            {
+              "Hidden": false,
+              "Name": "ProjectId",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "exif",
+              "LoadOrder": 2,
+              "Name": "exif",
+              "Type": 0
+            },
+            {
+              "LibraryName": "react_16_14_0",
+              "LoadOrder": 0,
+              "Name": "react_16_14_0",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_8_121_1",
+              "LoadOrder": 0,
+              "Name": "fluent_8_121_1",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "Intelligence.ObjectDetectorControl.ObjectDetector_ObjectDetector.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/ObjectDetectorControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"Intelligence.ObjectDetectorControl\" constructor=\"ObjectDetector\" version=\"1.0.112\" display-name-key=\"ObjectDetector\" control-type=\"virtual\" hidden=\"true\"><property name=\"OriginalImage\" display-name-key=\"OriginalImage_Property_Name\" description-key=\"OriginalImage_Property_Description\" usage=\"output\" of-type=\"Multiple\" required=\"true\" hidden=\"false\" /><property name=\"ProjectId\" display-name-key=\"ProjectId_Property_Name\" description-key=\"ProjectId_Property_Description\" of-type=\"SingleLine.Text\" usage=\"input\" hidden=\"false\" /><resources><platform-library name=\"React\" version=\"16.14.0\" /><platform-library name=\"Fluent\" version=\"8.121.1\" /><library name=\"exif\" version=\"&gt;=2\" order=\"2\"><packaged_library path=\"libs/exif.js\" version=\"2.3.0\" /></library><resx path=\"strings/ObjectDetectorControl.1033.resx\" version=\"1.0.0\" /><code path=\"ObjectDetector.js\" order=\"3\" /></resources></control></manifest>",
+    "name": "Intelligence.ObjectDetectorControl.ObjectDetector",
+    "supportedplatform": "(Model)",
+    "version": "1.0.112"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "Intelligence.ObjectDetectorControl.ObjectDetector"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

@@ -1,0 +1,266 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "MicrosoftFlowsIFrameControl",
+        "ControlManifestVersion": "1.0.18",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Containers.MicrosoftFlowsIFrameControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_Flows_IFrame_Name",
+        "FullName": "MscrmControls.Containers.MicrosoftFlowsIFrameControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.Containers.MicrosoftFlowsIFrameControl",
+        "Namespace": "MscrmControls.Containers",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "FlowId",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "EntityIds",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "FlowEnvironmentId",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "OrgUniqueName",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "EntityLogicalCollectionName",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "EntityLogicalName",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "Dynamics365AccessToken",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "FlowsDestinationURL",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "FlowsFPISiteURL",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "FlowsAuthenticationString",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "FlowsEnableWidgetV2",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "FlowsWorkflowLogId",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "BPFInstanceId",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "BPFInstanceEntityName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "BPFDefinitionId",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "BPFDefinitionEntityName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "StepId",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "BPFDefinitionName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "BPFInstanceName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "BPFFlowStageLocalizedName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "BPFFlowStageEntityName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "BPFFlowStageEntityCollectionName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "BPFFlowStageEntityRecordId",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "BPFActiveStageId",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "BPFActiveStageEntityName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "BPFActiveStageLocalizedName",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.Containers.MicrosoftFlowsIFrameControl_MicrosoftFlowsIFrameControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/MicrosoftFlowsIFrameControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Containers\" constructor=\"MicrosoftFlowsIFrameControl\" version=\"1.0.18\" display-name-key=\"CC_Flows_IFrame_Name\" control-type=\"virtual\"><modes /><AvailableOn><web classic=\"enable\" /><phone /><tablet /></AvailableOn><property name=\"FlowId\" display-name-key=\"CC_FlowIs\" description-key=\"CC_FlowId_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"EntityIds\" display-name-key=\"CC_EntityIds\" description-key=\"CC_EntityIds_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"FlowEnvironmentId\" display-name-key=\"CC_FlowEnvironmentId\" description-key=\"CC_FlowEnvironmentId_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"OrgUniqueName\" display-name-key=\"CC_OrgUniqueName\" description-key=\"CC_OrgUniqueName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"EntityLogicalCollectionName\" display-name-key=\"CC_EntityLogicalCollectionName\" description-key=\"CC_EntityLogicalCollectionName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"EntityLogicalName\" display-name-key=\"CC_EntityLogicalName\" description-key=\"CC_EntityLogicalName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"Dynamics365AccessToken\" display-name-key=\"CC_Dynamics365AccessToken\" description-key=\"CC_Dynamics365AccessToken_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"FlowsDestinationURL\" display-name-key=\"CC_FlowsDestinationURL\" description-key=\"CC_FlowsDestinationURL_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"FlowsFPISiteURL\" display-name-key=\"CC_FlowsFPISiteURL\" description-key=\"CC_FlowsFPISiteURL_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"FlowsAuthenticationString\" display-name-key=\"CC_FlowsAuthenticationString\" description-key=\"CC_FlowsAuthenticationString_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"FlowsEnableWidgetV2\" display-name-key=\"CC_FlowsEnableWidgetV2\" description-key=\"CC_FlowsEnableWidgetV2_desc\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"true\" /><property name=\"FlowsWorkflowLogId\" display-name-key=\"CC_FlowsWorkflowLogId\" description-key=\"CC_FlowsWorkflowLogId_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"BPFInstanceId\" display-name-key=\"CC_BPFInstanceId\" description-key=\"CC_BPFInstanceId_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"BPFInstanceEntityName\" display-name-key=\"CC_BPFInstanceEntityName\" description-key=\"CC_BPFInstanceEntityName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"BPFDefinitionId\" display-name-key=\"CC_BPFDefinitionId\" description-key=\"CC_BPFDefinitionId_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"BPFDefinitionEntityName\" display-name-key=\"CC_BPFDefinitionEntityName\" description-key=\"CC_BPFDefinitionEntityName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"StepId\" display-name-key=\"CC_StepId\" description-key=\"CC_StepId_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"BPFDefinitionName\" display-name-key=\"CC_BPFDefinitionName\" description-key=\"CC_BPFDefinitionName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"BPFInstanceName\" display-name-key=\"CC_BPFInstanceName\" description-key=\"CC_BPFInstanceName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"BPFFlowStageLocalizedName\" display-name-key=\"CC_BPFFlowStageLocalizedName\" description-key=\"CC_BPFFlowStageLocalizedName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"BPFFlowStageEntityName\" display-name-key=\"CC_BPFFlowStageEntityName\" description-key=\"CC_BPFFlowStageEntityName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"BPFFlowStageEntityCollectionName\" display-name-key=\"CC_BPFFlowStageEntityCollectionName\" description-key=\"CC_BPFFlowStageEntityCollectionName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"BPFFlowStageEntityRecordId\" display-name-key=\"CC_BPFFlowStageEntityRecordId\" description-key=\"CC_BPFFlowStageEntityRecordId_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"BPFActiveStageId\" display-name-key=\"CC_BPFActiveStageId\" description-key=\"CC_BPFActiveStageId_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"BPFActiveStageEntityName\" display-name-key=\"CC_BPFActiveStageEntityName\" description-key=\"CC_BPFActiveStageEntityName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><property name=\"BPFActiveStageLocalizedName\" display-name-key=\"CC_BPFActiveStageLocalizedName\" description-key=\"CC_BPFActiveStageLocalizedName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"true\" /><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><code path=\"MicrosoftFlowsIFrameControl.js\" order=\"2\" /><resx path=\"strings/MicrosoftFlowsIFrameControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.Containers.MicrosoftFlowsIFrameControl",
+    "supportedplatform": null,
+    "version": "1.0.18"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Containers.MicrosoftFlowsIFrameControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

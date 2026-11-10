@@ -1,0 +1,400 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.4",
+        "Children": [
+          "MscrmControls.Mentions.MentionsControl",
+          "MscrmControls.AttachmentPreviewDialog.AttachmentPreviewDialogControl"
+        ],
+        "ConstructorName": "RichTextEditorControlV2",
+        "ControlManifestVersion": "1.26094.1",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.RichTextEditorV2.RichTextEditorControlV2"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "RichTextEditorControl_Name",
+        "FullName": "MscrmControls.RichTextEditorV2.RichTextEditorControlV2",
+        "IsVirtual": true,
+        "Name": "MscrmControls.RichTextEditorV2.RichTextEditorControlV2",
+        "Namespace": "MscrmControls.RichTextEditorV2",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Device.captureAudio",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "Device.captureImage",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "Device.captureVideo",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "Device.getBarcodeValue",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "Device.pickFile",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "isReadOnly",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "labelForPrefix",
+              "Required": false,
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "configurationJson",
+              "Required": false,
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "configUrl",
+              "Required": false,
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "mentionableEntitiesConfig",
+              "Required": false,
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "autoExpand",
+              "Required": false,
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "enableReadonlyTranslation",
+              "Required": false,
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "react_16_14_0",
+              "LoadOrder": 0,
+              "Name": "react_16_14_0",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_9_4_0",
+              "LoadOrder": 0,
+              "Name": "fluent_9_4_0",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.RichTextEditorV2.RichTextEditorControlV2_bundle.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1033.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1025.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1026.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1027.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1028.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1029.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1030.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1031.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1032.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1035.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1036.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1037.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1038.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1040.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1041.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1042.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1043.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1044.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1045.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1046.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1048.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1049.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1050.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1051.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1053.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1054.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1055.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1057.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1058.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1060.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1061.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1062.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1063.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1066.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1069.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1081.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1086.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1087.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.1110.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.2052.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.2070.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.2074.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.3076.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.3082.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/RichTextEditorControlV2.3098.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "Multiple,SingleLine.Text,SingleLine.TextArea",
+    "componentstate": 0,
+    "introducedversion": "9.0.26094.1003",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.RichTextEditorV2\" constructor=\"RichTextEditorControlV2\" version=\"1.26094.1\" display-name-key=\"RichTextEditorControl_Name\" description-key=\"RichTextEditorControl_Description\" preview-image=\"img/preview.png\" control-type=\"virtual\" api-version=\"1.3.4\"><external-service-usage enabled=\"false\" /><type-group name=\"all\"><type>Multiple</type><type>SingleLine.Text</type><type>SingleLine.TextArea</type></type-group><property name=\"value\" required=\"true\" display-name-key=\"RichTextEditorControl_Value\" description-key=\"RichTextEditorControl_Value_Desc\" usage=\"bound\" of-type-group=\"all\" /><property name=\"isReadOnly\" required=\"false\" display-name-key=\"RichTextEditorControl_IsReadOnly\" description-key=\"RichTextEditorControl_IsReadOnly_Desc\" usage=\"bound\" of-type=\"TwoOptions\" hidden=\"true\" /><property name=\"labelForPrefix\" required=\"false\" display-name-key=\"RichTextEditorControl_LabelForPrefix\" description-key=\"RichTextEditorControl_LabelForPrefix_Desc\" usage=\"input\" /><property name=\"configurationJson\" required=\"false\" display-name-key=\"RichTextEditorControl_ConfigurationJson\" description-key=\"RichTextEditorControl_ConfigurationJson_Desc\" usage=\"input\" /><property name=\"configUrl\" required=\"false\" display-name-key=\"RichTextEditorControl_ConfigUrl\" description-key=\"RichTextEditorControl_ConfigUrl_Desc\" usage=\"input\" /><property name=\"mentionableEntitiesConfig\" required=\"false\" display-name-key=\"RichTextEditorControl_MentionableEntitiesConfig\" description-key=\"RichTextEditorControl_MentionableEntitiesConfig_Desc\" usage=\"input\" /><property name=\"autoExpand\" required=\"false\" display-name-key=\"RichTextEditorControl_AutoExpand\" description-key=\"RichTextEditorControl_AutoExpand_Desc\" usage=\"input\" /><property name=\"enableReadonlyTranslation\" required=\"false\" display-name-key=\"RichTextEditorControl_EnableReadonlyTranslation\" description-key=\"RichTextEditorControl_EnableReadonlyTranslation_Desc\" usage=\"input\" /><resources><platform-library name=\"React\" version=\"16.8.6\" /><platform-library name=\"Fluent\" version=\"9.4.0\" /><code path=\"bundle.js\" order=\"1\" /><resx path=\"strings/RichTextEditorControlV2.1033.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1025.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1026.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1027.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1028.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1029.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1030.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1031.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1032.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1035.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1036.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1037.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1038.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1040.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1041.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1042.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1043.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1044.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1045.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1046.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1048.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1049.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1050.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1051.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1053.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1054.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1055.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1057.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1058.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1060.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1061.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1062.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1063.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1066.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1069.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1081.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1086.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1087.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.1110.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.2052.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.2070.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.2074.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.3076.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.3082.resx\" version=\"1.0.0\" /><resx path=\"strings/RichTextEditorControlV2.3098.resx\" version=\"1.0.0\" /></resources><feature-usage><uses-feature name=\"Device.captureAudio\" required=\"true\" /><uses-feature name=\"Device.captureImage\" required=\"true\" /><uses-feature name=\"Device.captureVideo\" required=\"true\" /><uses-feature name=\"Device.getBarcodeValue\" required=\"true\" /><uses-feature name=\"Device.pickFile\" required=\"true\" /><uses-feature name=\"Utility\" required=\"true\" /><uses-feature name=\"WebAPI\" required=\"true\" /></feature-usage><child><customcontrol name=\"MscrmControls.Mentions.MentionsControl\" /><customcontrol name=\"MscrmControls.AttachmentPreviewDialog.AttachmentPreviewDialogControl\" /></child><built-by name=\"pac\" version=\"1.28.2\" /></control></manifest>",
+    "name": "MscrmControls.RichTextEditorV2.RichTextEditorControlV2",
+    "supportedplatform": "(Model)",
+    "version": "1.26094.1"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.RichTextEditorV2.RichTextEditorControlV2"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_RichTextEditor",
+      "version": "9.0.26101.2000"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

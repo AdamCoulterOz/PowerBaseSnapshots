@@ -1,0 +1,112 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "RolesSelector",
+        "ControlManifestVersion": "1.0.2",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.RolesSelector"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_RolesSelector",
+        "FullName": "MscrmControls.AppCommon.RolesSelector",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.RolesSelector",
+        "Namespace": "MscrmControls.AppCommon",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "rowsData",
+              "Required": true,
+              "TypeGroup": "Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "columnsDefinition",
+              "Required": true,
+              "TypeGroup": "Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "selectedRecords",
+              "Required": true,
+              "TypeGroup": "Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "FREShell",
+              "LoadOrder": 1,
+              "Name": "FREShell",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 11,
+              "Name": "MscrmControls.AppCommon.RolesSelector_RolesSelector.js",
+              "Type": 4
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.4.0066",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon\" constructor=\"RolesSelector\" version=\"1.0.2\" display-name-key=\"CC_RolesSelector\" control-type=\"virtual\" hidden=\"true\"><modes></modes><type-group name=\"Text\"><type>SingleLine.Text</type></type-group><type-group name=\"Lookups\"><type>Lookup.PartyList</type><type>Lookup.Simple</type></type-group><property name=\"rowsData\" display-name-key=\"CC_rowsData\" description-key=\"CC_rowsData_Desc\" of-type-group=\"Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"columnsDefinition\" display-name-key=\"CC_columnsDefinition\" description-key=\"CC_columnsDefinition_Desc\" of-type-group=\"Text\" usage=\"input\" required=\"true\" hidden=\"true\" /><property name=\"selectedRecords\" display-name-key=\"CC_selectedRecords\" description-key=\"CC_selectedRecords_Desc\" of-type-group=\"Text\" usage=\"input\" required=\"true\" hidden=\"true\" /><resources><library name=\"FREShell\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/FREShell.js\" version=\"1.0.0\" /></library><code path=\"RolesSelector.js\" order=\"11\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.RolesSelector",
+    "supportedplatform": "(Model)",
+    "version": "1.0.2"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.RolesSelector"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommon",
+      "version": "9.0.4.0066"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch",
+      "version": "9.0.1904.4006"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

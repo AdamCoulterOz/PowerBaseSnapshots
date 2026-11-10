@@ -1,0 +1,116 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.11",
+        "Children": [],
+        "ConstructorName": "BulkRecordDeletion",
+        "ControlManifestVersion": "1.2.45",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "msdyn_PowerAdmin.EnvironmentSettings.DataManagement.BulkRecordDeletion"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "BulkRecordDeletion",
+        "FullName": "msdyn_PowerAdmin.EnvironmentSettings.DataManagement.BulkRecordDeletion",
+        "IsVirtual": true,
+        "Name": "PowerAdmin.EnvironmentSettings.DataManagement.BulkRecordDeletion",
+        "Namespace": "PowerAdmin.EnvironmentSettings.DataManagement",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "sampleProperty",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "ViewMode",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "react_16_14_0",
+              "LoadOrder": 0,
+              "Name": "react_16_14_0",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_9_4_0",
+              "LoadOrder": 0,
+              "Name": "fluent_9_4_0",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "PowerAdmin.EnvironmentSettings.DataManagement.BulkRecordDeletion_bundle.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/BulkRecordDeletion.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.Text",
+    "componentstate": 0,
+    "introducedversion": "2.2.3552.1",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"PowerAdmin.EnvironmentSettings.DataManagement\" constructor=\"BulkRecordDeletion\" version=\"1.2.45\" display-name-key=\"BulkRecordDeletion\" description-key=\"BulkRecordDeletion description\" control-type=\"virtual\" api-version=\"1.3.11\"><external-service-usage enabled=\"false\" /><property name=\"sampleProperty\" display-name-key=\"Property_Display_Key\" description-key=\"Property_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" /><property name=\"ViewMode\" display-name-key=\"View_Mode_Display_Key\" description-key=\"View_Mode_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" /><resources><code path=\"bundle.js\" order=\"1\" /><platform-library name=\"React\" version=\"16.8.6\" /><platform-library name=\"Fluent\" version=\"9.4.0\" /><resx path=\"strings/BulkRecordDeletion.1033.resx\" version=\"1.0.0\" /></resources><feature-usage><uses-feature name=\"Utility\" required=\"true\" /><uses-feature name=\"WebAPI\" required=\"true\" /></feature-usage><built-by name=\"pac\" version=\"1.30.2\" /></control></manifest>",
+    "name": "msdyn_PowerAdmin.EnvironmentSettings.DataManagement.BulkRecordDeletion",
+    "supportedplatform": "(Model)",
+    "version": "1.2.45"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "msdyn_PowerAdmin.EnvironmentSettings.DataManagement.BulkRecordDeletion"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_PowerAdminSettingsDataManagementSolution",
+      "version": "2.2.3552.1"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

@@ -1,0 +1,114 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.18",
+        "Children": [],
+        "ConstructorName": "ShareSecuredFieldsDialog",
+        "ControlManifestVersion": "1.0.0",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "PowerAppsModernization.UserShareSecuredFields.ShareSecuredFieldsDialog"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "ShareSecuredFieldsDialog",
+        "FullName": "PowerAppsModernization.UserShareSecuredFields.ShareSecuredFieldsDialog",
+        "IsVirtual": false,
+        "Name": "PowerAppsModernization.UserShareSecuredFields.ShareSecuredFieldsDialog",
+        "Namespace": "PowerAppsModernization.UserShareSecuredFields",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI.retrieveRecord",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "sampleProperty",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "react_16_14_0",
+              "LoadOrder": 0,
+              "Name": "react_16_14_0",
+              "Type": 0
+            },
+            {
+              "LibraryName": "fluent_9_4_0",
+              "LoadOrder": 0,
+              "Name": "fluent_9_4_0",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "PowerAppsModernization.UserShareSecuredFields.ShareSecuredFieldsDialog_bundle.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/ShareSecuredFields.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.Text",
+    "componentstate": 0,
+    "introducedversion": "1.0.0.0",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"PowerAppsModernization.UserShareSecuredFields\" constructor=\"ShareSecuredFieldsDialog\" version=\"1.0.0\" display-name-key=\"ShareSecuredFieldsDialog\" description-key=\"ShareSecuredFieldsDialog description\" control-type=\"standard\" api-version=\"1.3.18\"><external-service-usage enabled=\"false\" /><property name=\"sampleProperty\" display-name-key=\"Property_Display_Key\" description-key=\"Property_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" /><resources><code path=\"bundle.js\" order=\"1\" /><resx path=\"strings/ShareSecuredFields.1033.resx\" version=\"1.0.0\" /><platform-library name=\"React\" version=\"16.8.6\" /><platform-library name=\"Fluent\" version=\"9.4.0\" /></resources><feature-usage><uses-feature name=\"Utility\" required=\"true\" /><uses-feature name=\"WebAPI\" required=\"true\" /><uses-feature name=\"WebAPI.retrieveRecord\" required=\"true\" /></feature-usage><built-by name=\"pac\" version=\"1.53.1\" /></control></manifest>",
+    "name": "PowerAppsModernization.UserShareSecuredFields.ShareSecuredFieldsDialog",
+    "supportedplatform": "(Model)",
+    "version": "1.0.0"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "PowerAppsModernization.UserShareSecuredFields.ShareSecuredFieldsDialog"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_UserShareSecuredFields",
+      "version": "1.0.0.0"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

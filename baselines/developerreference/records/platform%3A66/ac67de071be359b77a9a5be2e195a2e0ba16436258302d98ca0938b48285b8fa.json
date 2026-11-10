@@ -1,0 +1,91 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ManageDuplicatesGridControl",
+        "ControlManifestVersion": "1.0.2",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.ManageDuplicates.ManageDuplicatesGridControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_Manage_Duplicates_GridControl_Name",
+        "FullName": "MscrmControls.ManageDuplicates.ManageDuplicatesGridControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.ManageDuplicates.ManageDuplicatesGridControl",
+        "Namespace": "MscrmControls.ManageDuplicates",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "EntityRecord",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.ManageDuplicates.ManageDuplicatesGridControl_ManageDuplicatesGridControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/ManageDuplicatesGridControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.ManageDuplicates\" constructor=\"ManageDuplicatesGridControl\" version=\"1.0.2\" display-name-key=\"CC_Manage_Duplicates_GridControl_Name\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"EntityRecord\" display-name-key=\"CC_entityRecord\" description-key=\"CC_entityRecord_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><code path=\"ManageDuplicatesGridControl.js\" order=\"2\" /><resx path=\"strings/ManageDuplicatesGridControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.ManageDuplicates.ManageDuplicatesGridControl",
+    "supportedplatform": null,
+    "version": "1.0.2"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.ManageDuplicates.ManageDuplicatesGridControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

@@ -1,0 +1,142 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "AutoCompleteControl",
+        "ControlManifestVersion": "1.0.14",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AutoComplete.AutoCompleteControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_AutoComplete_Name",
+        "FullName": "MscrmControls.AutoComplete.AutoCompleteControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.AutoComplete.AutoCompleteControl",
+        "Namespace": "MscrmControls.AutoComplete",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [
+                {
+                  "Hidden": false,
+                  "Name": "displayValue",
+                  "Required": true,
+                  "Type": "SingleLine.Text",
+                  "Usage": 0
+                }
+              ],
+              "InitialDataSetFetch": true,
+              "Name": "dynamicSource",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "source",
+              "Required": true,
+              "Type": "OptionSet",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "wijmo",
+              "LoadOrder": 2,
+              "Name": "wijmo",
+              "Type": 0
+            },
+            {
+              "LibraryName": "wijmo-input",
+              "LoadOrder": 3,
+              "Name": "wijmo-input",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 4,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 5,
+              "Name": "MscrmControls.AutoComplete.AutoCompleteControl_AutoCompleteControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 6,
+              "Name": "css/wijmo.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 7,
+              "Name": "css/crm.wijmo.autocomplete.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/AutoCompleteControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AutoComplete\" constructor=\"AutoCompleteControl\" hidden=\"true\" version=\"1.0.14\" display-name-key=\"CC_AutoComplete_Name\" description-key=\"CC_AutoComplete_Desc\" preview-image=\"img/preview.png\"><modes><read /><edit /></modes><property name=\"value\" display-name-key=\"CC_Field\" description-key=\"CC_Field_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" /><groups name=\"dataSourceSwitch\" display-name-key=\"CC_Source\" description-key=\"CC_Source_Desc\" required=\"true\"><group name=\"DataSetGroup\" display-name-key=\"CC_View\"><data-set name=\"dynamicSource\" display-name-key=\"CC_View\" description-key=\"CC_View_Source_Desc\"><property-set name=\"displayValue\" display-name-key=\"CC_Field\" description-key=\"CC_View_Field_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" /></data-set></group><group name=\"OptionSetGroup\" display-name-key=\"CC_OptionSet_Name\"><property name=\"source\" display-name-key=\"CC_OptionSet_Name\" description-key=\"CC_OptionSet_Source_Desc\" of-type=\"OptionSet\" usage=\"bound\" required=\"true\" /></group></groups><AvailableOn><web classic=\"disable\" /><phone /><tablet /></AvailableOn><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><library name=\"wijmo\" version=\"&gt;=5\" order=\"2\"><packaged_library path=\"libs/wijmo.js\" version=\"5.20172.328\" /></library><library name=\"wijmo-input\" version=\"&gt;=5\" order=\"3\"><packaged_library path=\"libs/wijmo.input.js\" version=\"5.20172.328\" /></library><library name=\"mscommon\" version=\"&gt;=1\" order=\"4\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><code path=\"AutoCompleteControl.js\" order=\"5\" /><css path=\"css/wijmo.css\" order=\"6\" /><css path=\"css/crm.wijmo.autocomplete.css\" order=\"7\" /><resx path=\"strings/AutoCompleteControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.AutoComplete.AutoCompleteControl",
+    "supportedplatform": null,
+    "version": "1.0.14"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AutoComplete.AutoCompleteControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

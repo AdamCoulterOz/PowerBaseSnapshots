@@ -1,0 +1,155 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ContextualEmailControl",
+        "ControlManifestVersion": "1.0.37",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.ContextualEmail.ContextualEmailControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_AppCommon_ContextualEmailControl",
+        "FullName": "MscrmControls.AppCommon.ContextualEmail.ContextualEmailControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.ContextualEmail.ContextualEmailControl",
+        "Namespace": "MscrmControls.AppCommon.ContextualEmail",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "createNewContextualEmail",
+              "Required": true,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "createFromEntity",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "entityParameters",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "refreshTimelineWall",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "maxPopups",
+              "Required": false,
+              "Type": "Decimal",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "isBulkMode",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "skipRegarding",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "JsPanel",
+              "LoadOrder": 1,
+              "Name": "JsPanel",
+              "Type": 0
+            },
+            {
+              "LibraryName": "PopupManager",
+              "LoadOrder": 3,
+              "Name": "PopupManager",
+              "Type": 0
+            },
+            {
+              "LibraryName": "SIClientUtilityLogger",
+              "LoadOrder": 5,
+              "Name": "SIClientUtilityLogger",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 10,
+              "Name": "MscrmControls.AppCommon.ContextualEmail.ContextualEmailControl_ContextualEmailControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "OpenSource/jspanel.min.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 4,
+              "Name": "css/ContextualEmailIcons.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/contextualemail.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.26092.10001",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.ContextualEmail\" constructor=\"ContextualEmailControl\" version=\"1.0.37\" display-name-key=\"CC_AppCommon_ContextualEmailControl\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"createNewContextualEmail\" display-name-key=\"cc_createNewContextualEmail_id\" description-key=\"CC_createNewContextualEmail_Desc\" usage=\"input\" of-type=\"TwoOptions\" required=\"true\" hidden=\"false\" /><property name=\"createFromEntity\" display-name-key=\"cc_createFromEntity_id\" description-key=\"CC_createFromEntity_Desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"false\" /><property name=\"entityParameters\" display-name-key=\"cc_entityParameters_id\" description-key=\"CC_entityParameters_Desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"false\" hidden=\"false\" /><property name=\"refreshTimelineWall\" display-name-key=\"cc_refreshTimelineWall_id\" description-key=\"CC_refreshTimelineWall_Desc\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"false\" /><!-- added below property to support accelerated sales scenarios--><property name=\"maxPopups\" display-name-key=\"cc_maxPopups_id\" description-key=\"CC_maxPopups_Desc\" usage=\"input\" of-type=\"Decimal\" required=\"false\" hidden=\"false\" /><property name=\"isBulkMode\" display-name-key=\"cc_isBulkMode_id\" description-key=\"CC_isBulkMode_Desc\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"false\" /><!-- added below property to support relationship hub scenarios--><property name=\"skipRegarding\" display-name-key=\"cc_skipRegarding_id\" description-key=\"CC_skipRegarding_Desc\" usage=\"input\" of-type=\"TwoOptions\" required=\"false\" hidden=\"false\" /><resources><library name=\"JsPanel\" version=\"&gt;=4\" order=\"1\"><packaged_library path=\"OpenSource/jspanel.min.js\" version=\"4.6.0\" /></library><css path=\"OpenSource/jspanel.min.css\" order=\"2\" /><library name=\"PopupManager\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"libs/PopupManager.js\" version=\"1.0.33\" /></library><css path=\"css/ContextualEmailIcons.css\" order=\"4\" /><library name=\"SIClientUtilityLogger\" version=\"&gt;=1\" order=\"5\"><packaged_library path=\"libs/SIClientUtilityLogger.js\" version=\"1.0.0\" /></library><code path=\"ContextualEmailControl.js\" order=\"10\" /><resx path=\"locale/contextualemail.1033.resx\" version=\"1.0.7\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.ContextualEmail.ContextualEmailControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.37"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.ContextualEmail.ContextualEmailControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

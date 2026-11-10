@@ -1,0 +1,87 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "FilterControl",
+        "ControlManifestVersion": "1.0.6",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Gallery.FilterControl.FilterControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "FilterControl",
+        "FullName": "MscrmControls.Gallery.FilterControl.FilterControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.Gallery.FilterControl.FilterControl",
+        "Namespace": "MscrmControls.Gallery.FilterControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "options",
+              "Required": true,
+              "Type": "OptionSet",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.Gallery.FilterControl.FilterControl_FilterControl.js",
+              "Type": 4
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Gallery.FilterControl\" constructor=\"FilterControl\" display-name-key=\"FilterControl\" description-key=\"FilterControl\" version=\"1.0.6\" hidden=\"true\"><modes><read /><edit /></modes><property name=\"value\" display-name-key=\"FilterControl\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" hidden=\"false\"><doc description-key=\"FilterControl\" /></property><property name=\"options\" display-name-key=\"FilterControl\" of-type=\"OptionSet\" usage=\"bound\" required=\"true\" hidden=\"false\"><doc description-key=\"FilterControl\" /></property><resources><code path=\"FilterControl.js\" order=\"1\" /></resources><AvailableOn><web classic=\"enable\" /><phone /><tablet /></AvailableOn></control></manifest>",
+    "name": "MscrmControls.Gallery.FilterControl.FilterControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.6"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Gallery.FilterControl.FilterControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

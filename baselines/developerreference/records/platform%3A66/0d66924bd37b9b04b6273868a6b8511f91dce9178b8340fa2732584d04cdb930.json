@@ -1,0 +1,154 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "BulletGraphControl",
+        "ControlManifestVersion": "1.0.5",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.BulletGraph.BulletGraphControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_BulletGraph_Name",
+        "FullName": "MscrmControls.BulletGraph.BulletGraphControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.BulletGraph.BulletGraphControl",
+        "Namespace": "MscrmControls.BulletGraph",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "TypeGroup": "numbers",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "min",
+              "Required": true,
+              "TypeGroup": "numbers",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "max",
+              "Required": true,
+              "TypeGroup": "numbers",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "good",
+              "Required": false,
+              "TypeGroup": "numbers",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "bad",
+              "Required": false,
+              "TypeGroup": "numbers",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "target",
+              "Required": true,
+              "TypeGroup": "numbers",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "wijmo",
+              "LoadOrder": 2,
+              "Name": "wijmo",
+              "Type": 0
+            },
+            {
+              "LibraryName": "wijmo-gauge",
+              "LoadOrder": 3,
+              "Name": "wijmo-gauge",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 4,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 5,
+              "Name": "MscrmControls.BulletGraph.BulletGraphControl_BulletGraphControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 6,
+              "Name": "css/wijmo.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 7,
+              "Name": "css/crm.wijmo.bulletgraph.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/BulletGraphControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.BulletGraph\" constructor=\"BulletGraphControl\" version=\"1.0.5\" display-name-key=\"CC_BulletGraph_Name\" description-key=\"CC_BulletGraph_Desc\" hidden=\"true\" preview-image=\"img/preview.png\"><modes><read /><edit /></modes><type-group name=\"numbers\"><type>Whole.None</type><type>Currency</type><type>FP</type><type>Decimal</type></type-group><property name=\"value\" display-name-key=\"CC_Value\" description-key=\"CC_BulletGraph_Value_Desc\" of-type-group=\"numbers\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"min\" display-name-key=\"CC_Min\" description-key=\"CC_BulletGraph_Min_Desc\" usage=\"input\" of-type-group=\"numbers\" required=\"true\" hidden=\"false\" /><property name=\"max\" display-name-key=\"CC_Max\" description-key=\"CC_BulletGraph_Max_Desc\" usage=\"input\" of-type-group=\"numbers\" required=\"true\" hidden=\"false\" /><property name=\"good\" display-name-key=\"CC_Good\" description-key=\"CC_Good_Desc\" usage=\"input\" of-type-group=\"numbers\" required=\"false\" hidden=\"false\" /><property name=\"bad\" display-name-key=\"CC_Bad\" description-key=\"CC_Bad_Desc\" usage=\"input\" of-type-group=\"numbers\" required=\"false\" hidden=\"false\" /><property name=\"target\" display-name-key=\"CC_Target\" description-key=\"CC_Target_Desc\" usage=\"input\" of-type-group=\"numbers\" required=\"true\" hidden=\"false\" /><AvailableOn><web classic=\"disable\" /><phone /><tablet /></AvailableOn><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><library name=\"wijmo\" version=\"&gt;=5\" order=\"2\"><packaged_library path=\"libs/wijmo.js\" version=\"5.20172.328\" /></library><library name=\"wijmo-gauge\" version=\"&gt;=5\" order=\"3\"><packaged_library path=\"libs/wijmo.gauge.js\" version=\"5.20172.328\" /></library><library name=\"mscommon\" version=\"&gt;=1\" order=\"4\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><code path=\"BulletGraphControl.js\" order=\"5\" /><css path=\"css/wijmo.css\" order=\"6\" /><css path=\"css/crm.wijmo.bulletgraph.css\" order=\"7\" /><resx path=\"strings/BulletGraphControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.BulletGraph.BulletGraphControl",
+    "supportedplatform": null,
+    "version": "1.0.5"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.BulletGraph.BulletGraphControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

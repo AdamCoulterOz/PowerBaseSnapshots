@@ -1,0 +1,88 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "EKSearchControl",
+        "ControlManifestVersion": "1.26094.3006",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.EKSearch.EKSearchControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_EmbeddedKnowledgeSearchControl",
+        "FullName": "MscrmControls.EKSearch.EKSearchControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.EKSearch.EKSearchControl",
+        "Namespace": "MscrmControls.EKSearch",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [],
+          "Resources": [
+            {
+              "LibraryName": "KbCommonUtils",
+              "LoadOrder": 2,
+              "Name": "KbCommonUtils",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.EKSearch.EKSearchControl_EmbeddedKnowledgeSearchControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "css/EmbeddedKnowledgeSearchStyle.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/EmbeddedKnowledgeSearchControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.26094.3005",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.EKSearch\" constructor=\"EKSearchControl\" version=\"1.26094.3006\" display-name-key=\"CC_EmbeddedKnowledgeSearchControl\" control-type=\"virtual\"><modes></modes><resources><library name=\"KbCommonUtils\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/KbCommonUtils.js\" version=\"1.26094.3006\" /></library><code path=\"EmbeddedKnowledgeSearchControl.js\" order=\"2\" /><css path=\"css/EmbeddedKnowledgeSearchStyle.css\" order=\"3\" /><resx path=\"strings/EmbeddedKnowledgeSearchControl.1033.resx\" version=\"1.26094.3006\" /></resources></control></manifest>",
+    "name": "MscrmControls.EKSearch.EKSearchControl",
+    "supportedplatform": "(Model)",
+    "version": "1.26094.3006"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.EKSearch.EKSearchControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_KnowledgeManagementPatch",
+      "version": "9.0.26094.3006"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

@@ -1,0 +1,144 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": "Entity Specific and Global Email Templates",
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" savedqueryid=\"21b8d323-06c2-4cde-b756-95b86f0b3ea1\"><entity name=\"template\"><attribute name=\"title\" /><attribute name=\"templatetypecode\" /><attribute name=\"createdby\" /><attribute name=\"ispersonal\" /><attribute name=\"languagecode\" /><attribute name=\"templateid\" /><order attribute=\"templatetypecode\" descending=\"false\" /><order attribute=\"title\" descending=\"false\" /></entity></fetch>",
+    "introducedversion": "9.1.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "title",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "template"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "title",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "Crm.EmailTemplateGlobal",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "templatetypecode",
+                "RelatedEntityName": "",
+                "Width": 125
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "ispersonal",
+                "RelatedEntityName": "",
+                "Width": 125
+              }
+            ],
+            "Id": "templateid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "template"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:template\" jump=\"title\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"result\" id=\"templateid\"><cell name=\"title\" width=\"300\" /><cell name=\"templatetypecode\" width=\"125\" cellType=\"Crm.EmailTemplateGlobal\" /><cell name=\"ispersonal\" width=\"125\" /></row></grid>"
+    },
+    "name": "Email Templates Sorted View",
+    "offlinesqlquery": "/*SelectStart*/select  \"template0\".[title] as \"title\"\r , \"template0\".[templatetypecode] as \"templatetypecode\"\r , \"template0\".[createdby!id] as \"createdby!id\"\r , \"template0\".[createdby!logicalname] as \"createdby!logicalname\"\r , \"template0\".[createdby!name] as \"createdby!name\"\r , \"template0\".[ispersonal] as \"ispersonal\"\r , \"template0\".[languagecode] as \"languagecode\"\r , \"template0\".[templateid] as \"templateid\"/*SelectEnd*/  /*FromStart*/from  Template as \"template0\"  left outer join EntityView as \"EVLL0\" on (\"EVLL0\".ObjectTypeCode = \"template0\".TemplateTypeCode) left outer join LocalizedLabelView as \"LL0\" on (\"LL0\".ObjectId = \"EVLL0\".EntityId and \"LL0\".ObjectColumnName = 'LocalizedName' and \"LL0\".LanguageId = @LanguageId0) /*FromEnd*/  /*OrderByStart*/order by   \"LL0\".Label  asc\r , \"template0\".[title] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "template",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "21b8d323-06c2-4cde-b756-95b86f0b3ea1",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "template",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "21b8d323-06c2-4cde-b756-95b86f0b3ea1"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_ActivitiesPatch",
+      "version": "9.0.26093.260917001"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

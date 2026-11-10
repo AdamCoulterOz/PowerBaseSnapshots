@@ -1,0 +1,44 @@
+{
+  "configuration": {
+    "category": "Default",
+    "comment": null,
+    "componentstate": 0,
+    "entitytype": 0,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": true,
+    "objectpartitionid": null,
+    "overriddencreatedon": null,
+    "query": "What accounts with opportunities have contacts in New York?",
+    "rephrase": "The query will join between account, contact and opportunity. It will list out accounts with opportunities where the primary contact's city or state is New York.",
+    "savedqueryversionnumber": null,
+    "savedqueryviewid": null,
+    "standardsql": "SELECT [account].* FROM [account] JOIN [contact] ON [account].[primarycontactid] = [contact].[contactid] WHERE ([contact].[address1_city] = 'New York' OR [contact].[address1_stateorprovince] = 'New York') AND EXISTS( SELECT [opportunityid] FROM [Opportunity] WHERE [parentaccountId] = [account].[accountid])",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "uniquename": "cds_mainfewshot_uniquename_dc30e5fe-8597-4259-bd04-606117e4f74e",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "cds_mainfewshot_uniquename_dc30e5fe-8597-4259-bd04-606117e4f74e"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_RelevanceSearch_Anchor",
+      "version": "1.0.3581.1"
+    }
+  ],
+  "typeIdentity": "entity:mainfewshot"
+}

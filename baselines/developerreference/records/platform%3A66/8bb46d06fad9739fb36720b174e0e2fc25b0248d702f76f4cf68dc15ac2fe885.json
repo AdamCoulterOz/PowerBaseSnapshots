@@ -1,0 +1,160 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ImportSettings",
+        "ControlManifestVersion": "1.0.6",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.ImportExport.ImportSettings"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_ImportSettings",
+        "FullName": "MscrmControls.ImportExport.ImportSettings",
+        "IsVirtual": true,
+        "Name": "MscrmControls.ImportExport.ImportSettings",
+        "Namespace": "MscrmControls.ImportExport",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "FieldDelimiter",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "DataDelimiter",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "IsFirstRowHeader",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "EntityKey",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "EntityKeyAttributes",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "UpsertMode",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "ImportFileName",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EntityLogicalName",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ImportFileType",
+              "Required": true,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "ImportFileSize",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 2,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.ImportExport.ImportSettings_ImportSettings.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/ImportSettings.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.ImportExport\" constructor=\"ImportSettings\" version=\"1.0.6\" display-name-key=\"CC_ImportSettings\" control-type=\"virtual\" hidden=\"true\"><modes><container /></modes><property name=\"FieldDelimiter\" display-name-key=\"CC_fieldDelimiter\" description-key=\"CC_fieldDelimiter_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"DataDelimiter\" display-name-key=\"CC_dataDelimiter\" description-key=\"CC_dataDelimiter_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"IsFirstRowHeader\" display-name-key=\"CC_isFirstRowHeader\" description-key=\"CC_isFirstRowHeader_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"EntityKey\" display-name-key=\"CC_entityKey\" description-key=\"CC_entityKey_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"EntityKeyAttributes\" display-name-key=\"CC_entityKeyAttributes\" description-key=\"CC_entityKeyAttributes_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"UpsertMode\" display-name-key=\"CC_upsertMode\" description-key=\"CC_upsertMode_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"ImportFileName\" display-name-key=\"CC_importFileName\" description-key=\"CC_importFileName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"EntityLogicalName\" display-name-key=\"CC_entityLogicalName\" description-key=\"CC_entityLogicalName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"ImportFileType\" display-name-key=\"CC_importFileType\" description-key=\"CC_importFileType_desc\" usage=\"input\" of-type=\"Whole.None\" required=\"true\" hidden=\"false\" /><property name=\"ImportFileSize\" display-name-key=\"CC_importFileSize\" description-key=\"CC_importFileSize_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><library name=\"mscommon\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><code path=\"ImportSettings.js\" order=\"3\" /><resx path=\"strings/ImportSettings.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.ImportExport.ImportSettings",
+    "supportedplatform": null,
+    "version": "1.0.6"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.ImportExport.ImportSettings"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

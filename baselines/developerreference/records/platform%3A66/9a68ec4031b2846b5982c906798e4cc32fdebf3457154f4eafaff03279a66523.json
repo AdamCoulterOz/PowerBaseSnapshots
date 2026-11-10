@@ -1,0 +1,109 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "EmailView",
+        "ControlManifestVersion": "1.0.33",
+        "ControlMode": "Read",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.EmailEngagement.EmailView"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_EmailEngagement_RecipientActivity",
+        "FullName": "MscrmControls.EmailEngagement.EmailView",
+        "IsVirtual": false,
+        "Name": "MscrmControls.EmailEngagement.EmailView",
+        "Namespace": "MscrmControls.EmailEngagement",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "entityId",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "TimelineBehavior",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.EmailEngagement.EmailView_EmailEngagement.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "css/EmailEngagement.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/EmailEngagement.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.EmailEngagement\" constructor=\"EmailView\" display-name-key=\"CC_EmailEngagement_RecipientActivity\" version=\"1.0.33\"><modes><read /></modes><property name=\"entityId\" display-name-key=\"CC_EntityId_Value\" description-key=\"CC_EntityId_desc\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"true\" /><property name=\"TimelineBehavior\" display-name-key=\"CC_TimelineBehavior_Value\" description-key=\"CC_TimelineBehavior_Desc\" usage=\"input\" of-type=\"Enum\" required=\"false\" hidden=\"false\"><value name=\"None\" display-name-key=\"CC_TimelineBehavior_Collapsed_Value\" description-key=\"CC_TimelineBehavior_Collapsed_Desc\">None</value><value name=\"Collapsed\" display-name-key=\"CC_TimelineBehavior_Collapsed_Value\" description-key=\"CC_TimelineBehavior_Collapsed_Desc\">Collapsed</value><value name=\"Expanded\" display-name-key=\"CC_TimelineBehavior_Expanded_Value\" description-key=\"CC_TimelineBehavior_Expanded_Desc\">Expanded</value></property><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><css path=\"css/EmailEngagement.css\" order=\"2\" /><code path=\"EmailEngagement.js\" order=\"2\" /><resx path=\"strings/EmailEngagement.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.EmailEngagement.EmailView",
+    "supportedplatform": null,
+    "version": "1.0.33"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.EmailEngagement.EmailView"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

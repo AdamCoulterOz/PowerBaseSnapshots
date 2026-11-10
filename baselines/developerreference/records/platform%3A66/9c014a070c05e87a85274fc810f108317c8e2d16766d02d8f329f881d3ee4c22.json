@@ -1,0 +1,113 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "NoteAttachmentControl",
+        "ControlManifestVersion": "1.0.3",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Activity.NoteAttachmentControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "MscrmControls.Activity.NoteAttachmentControl",
+        "FullName": "MscrmControls.Activity.NoteAttachmentControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.Activity.NoteAttachmentControl",
+        "Namespace": "MscrmControls.Activity",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "fileNameProperty",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "fileSizeProperty",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "fileTypeProperty",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "documentBodyProperty",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "isDocumentProperty",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.Activity.NoteAttachmentControl_NoteAttachmentControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/NoteAttachmentControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.Text",
+    "componentstate": 0,
+    "introducedversion": "9.0.26093.260917001",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Activity\" constructor=\"NoteAttachmentControl\" version=\"1.0.3\" display-name-key=\"MscrmControls.Activity.NoteAttachmentControl\" description-key=\"NoteAttachment_Desc_Key\" control-type=\"virtual\"><property name=\"fileNameProperty\" display-name-key=\"file_Name_Property_Display_Key\" description-key=\"file_Name_Property_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" /><property name=\"fileSizeProperty\" display-name-key=\"file_Size_Property_Display_Key\" description-key=\"file_Size_Property_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" hidden=\"true\" /><property name=\"fileTypeProperty\" display-name-key=\"file_Type_Property_Display_Key\" description-key=\"file_Type_Property_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" hidden=\"true\" /><property name=\"documentBodyProperty\" display-name-key=\"document_Body_Property_Display_Key\" description-key=\"document_Body_Property_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" hidden=\"true\" /><property name=\"isDocumentProperty\" display-name-key=\"is_Document_Property_Display_Key\" description-key=\"is_Document_Property_Desc_Key\" of-type=\"SingleLine.Text\" usage=\"bound\" hidden=\"true\" /><resources><resx path=\"strings/NoteAttachmentControl.1033.resx\" version=\"1.0.1\" /><code path=\"NoteAttachmentControl.js\" order=\"1\" /></resources></control></manifest>",
+    "name": "MscrmControls.Activity.NoteAttachmentControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.3"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Activity.NoteAttachmentControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_ActivitiesPatch",
+      "version": "9.0.26093.260917001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

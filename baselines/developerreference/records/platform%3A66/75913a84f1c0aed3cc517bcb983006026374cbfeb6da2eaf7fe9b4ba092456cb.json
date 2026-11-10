@@ -1,0 +1,156 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "DownloadTemplateControl",
+        "ControlManifestVersion": "1.0.2",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.DownloadTemplate.DownloadTemplateControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_DownloadTemplateControl",
+        "FullName": "MscrmControls.AppCommon.DownloadTemplate.DownloadTemplateControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.DownloadTemplate.DownloadTemplateControl",
+        "Namespace": "MscrmControls.AppCommon.DownloadTemplate",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "entity_id",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "view_id",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "entityview_fetchxml",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "entityview_layoutxml",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "upload_later",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "templateType",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "templateInfo",
+              "Required": true,
+              "TypeGroup": "all",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "FRECommon",
+              "LoadOrder": 1,
+              "Name": "FRECommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "FREShell",
+              "LoadOrder": 2,
+              "Name": "FREShell",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 4,
+              "Name": "MscrmControls.AppCommon.DownloadTemplate.DownloadTemplateControl_DownloadTemplateControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "css/DownloadTemplateControl.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/downloadtemplate.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.4.0066",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.DownloadTemplate\" constructor=\"DownloadTemplateControl\" version=\"1.0.2\" display-name-key=\"CC_DownloadTemplateControl\" control-type=\"virtual\" hidden=\"true\"><modes></modes><type-group name=\"all\"><type>SingleLine.Text</type></type-group><property name=\"entity_id\" display-name-key=\"CC_entity_id\" description-key=\"CC_entity_id_Desc\" of-type-group=\"all\" usage=\"input\" required=\"true\" hidden=\"true\" /><property name=\"view_id\" display-name-key=\"CC_view_id\" description-key=\"CC_view_id_Desc\" of-type-group=\"all\" usage=\"input\" required=\"true\" hidden=\"true\" /><property name=\"entityview_fetchxml\" display-name-key=\"CC_entityview_fetchxml\" description-key=\"CC_entityview_fetchxml_Desc\" of-type-group=\"all\" usage=\"input\" required=\"true\" hidden=\"true\" /><property name=\"entityview_layoutxml\" display-name-key=\"CC_entityview_layoutxml\" description-key=\"CC_entityview_layoutxml_Desc\" of-type-group=\"all\" usage=\"input\" required=\"true\" hidden=\"true\" /><property name=\"upload_later\" display-name-key=\"CC_upload_later\" description-key=\"CC_upload_later_Desc\" of-type-group=\"all\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"templateType\" display-name-key=\"CC_template_type\" description-key=\"CC_template_type_Desc\" of-type-group=\"all\" usage=\"input\" required=\"true\" hidden=\"true\" /><property name=\"templateInfo\" display-name-key=\"CC_templateInfo\" description-key=\"CC_templateInfo_Desc\" of-type-group=\"all\" usage=\"input\" required=\"true\" hidden=\"true\" /><resources><library name=\"FRECommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/frecommon-lib.js\" version=\"1.0.0\" /></library><library name=\"FREShell\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/FREShell.js\" version=\"1.0.0\" /></library><css path=\"css/DownloadTemplateControl.css\" order=\"3\" /><code path=\"DownloadTemplateControl.js\" order=\"4\" /><resx path=\"locale/downloadtemplate.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.DownloadTemplate.DownloadTemplateControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.2"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.DownloadTemplate.DownloadTemplateControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommon",
+      "version": "9.0.4.0066"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch",
+      "version": "9.0.1904.4006"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

@@ -1,0 +1,54 @@
+{
+  "configuration": {
+    "baseentityname": "contact",
+    "baseentitytypecode": {
+      "key": [
+        {
+          "field": "LogicalName",
+          "type": "String",
+          "value": "contact"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "entity"
+    },
+    "componentstate": 0,
+    "description": "Detects contact records that have the same values in the First Name and Last Name fields.",
+    "excludeinactiverecords": false,
+    "iscasesensitive": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": false,
+    "matchingentityname": "contact",
+    "matchingentitytypecode": {
+      "key": [
+        {
+          "field": "LogicalName",
+          "type": "String",
+          "value": "contact"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "entity"
+    },
+    "name": "Contacts with the same first name and last name",
+    "statecode": 1,
+    "statuscode": 2,
+    "timezoneruleversionnumber": null,
+    "uniquename": "dr41c1931b9880dfe74fbc2eca1b8b355f49c5d5987bc6d03ead34031aa3aa251d",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "dr41c1931b9880dfe74fbc2eca1b8b355f49c5d5987bc6d03ead34031aa3aa251d"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "entity:duplicaterule"
+}

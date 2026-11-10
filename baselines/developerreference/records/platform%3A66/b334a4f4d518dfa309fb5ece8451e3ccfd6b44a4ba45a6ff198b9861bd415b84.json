@@ -1,0 +1,112 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "FetchXmlResultsViewer",
+        "ControlManifestVersion": "1.0.11",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Grid.FetchXmlResultsViewer"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_FetchXmlResultsViewer_Name",
+        "FullName": "MscrmControls.Grid.FetchXmlResultsViewer",
+        "IsVirtual": true,
+        "Name": "MscrmControls.Grid.FetchXmlResultsViewer",
+        "Namespace": "MscrmControls.Grid",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "entitylogicalname",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "fetchxml",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "layoutxml",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "selectedrecords",
+              "Required": false,
+              "Type": "Multiple",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.Grid.FetchXmlResultsViewer_FetchXmlResultsViewer.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/FetchXmlResultsViewer.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Grid\" constructor=\"FetchXmlResultsViewer\" version=\"1.0.11\" display-name-key=\"CC_FetchXmlResultsViewer_Name\" control-type=\"virtual\" hidden=\"true\"><modes></modes><property name=\"entitylogicalname\" display-name-key=\"FetchXmlResultsViewer_entitylogicalname\" description-key=\"FetchXmlResultsViewer_entitylogicalname_desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"fetchxml\" display-name-key=\"FetchXmlResultsViewer_fetchxml\" description-key=\"FetchXmlResultsViewer_fetchxml_desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"layoutxml\" display-name-key=\"FetchXmlResultsViewer_layoutxml\" description-key=\"FetchXmlResultsViewer_layoutxml_desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"selectedrecords\" display-name-key=\"FetchXmlResultsViewer_selectedrecords\" description-key=\"FetchXmlResultsViewer_selectedrecords_desc\" of-type=\"Multiple\" usage=\"bound\" required=\"false\" hidden=\"true\" /><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.7\" /></library><code path=\"FetchXmlResultsViewer.js\" order=\"2\" /><resx path=\"strings/FetchXmlResultsViewer.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.Grid.FetchXmlResultsViewer",
+    "supportedplatform": "(Model)",
+    "version": "1.0.11"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Grid.FetchXmlResultsViewer"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

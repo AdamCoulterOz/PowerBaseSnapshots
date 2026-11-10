@@ -1,0 +1,169 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.3.16",
+        "Children": [],
+        "ConstructorName": "TemplateEnhanceGalleryHostControl",
+        "ControlManifestVersion": "2.91.29",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.TemplateEnhanceGalleryHostControl.TemplateEnhanceGalleryHostControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "TemplateEnhanceGalleryHostControl",
+        "FullName": "MscrmControls.TemplateEnhanceGalleryHostControl.TemplateEnhanceGalleryHostControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.TemplateEnhanceGalleryHostControl.TemplateEnhanceGalleryHostControl",
+        "Namespace": "MscrmControls.TemplateEnhanceGalleryHostControl",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Device.captureAudio",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "Device.captureImage",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "Device.captureVideo",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "Device.getBarcodeValue",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "Device.getCurrentPosition",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "Device.pickFile",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            },
+            {
+              "IsRequired": true,
+              "Name": "WebAPI",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "value",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "selectButtonId",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "cancelButtonId",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "titleLabelId",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "inputConfig",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "dialogResult",
+              "Required": false,
+              "Type": "TwoOptions",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "outputItems",
+              "Required": false,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 4,
+              "Name": "MscrmControls.TemplateEnhanceGalleryHostControl.TemplateEnhanceGalleryHostControl_bundle.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/TemplateEnhanceGalleryHostControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.26093.260917001",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.TemplateEnhanceGalleryHostControl\" constructor=\"TemplateEnhanceGalleryHostControl\" display-name-key=\"TemplateEnhanceGalleryHostControl\" description-key=\"TemplateEnhanceGalleryHostControl\" version=\"2.91.29\" preview-image=\"imgs/Preview.jpg\" hidden=\"true\" api-version=\"1.3.16\"><property name=\"value\" display-name-key=\"Value\" description-key=\"CC_Value_Desc\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" hidden=\"false\" /><property name=\"selectButtonId\" display-name-key=\"selectButtonId\" description-key=\"selectButtonId\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"false\" /><property name=\"cancelButtonId\" display-name-key=\"cancelButtonId\" description-key=\"cancelButtonId\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"false\" /><property name=\"titleLabelId\" display-name-key=\"titleLabelId\" description-key=\"titleLabelId\" of-type=\"SingleLine.Text\" usage=\"input\" required=\"false\" hidden=\"false\" /><property name=\"inputConfig\" display-name-key=\"inputConfig\" description-key=\"inputConfig\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" hidden=\"false\" /><property name=\"dialogResult\" display-name-key=\"dialogResult\" description-key=\"dialogResult\" of-type=\"TwoOptions\" usage=\"bound\" required=\"false\" hidden=\"false\" /><property name=\"outputItems\" display-name-key=\"outputItems\" description-key=\"outputItems\" of-type=\"SingleLine.Text\" usage=\"bound\" required=\"false\" hidden=\"false\" /><resources><resx path=\"strings/TemplateEnhanceGalleryHostControl.1033.resx\" version=\"1.0.1\" /><code path=\"bundle.js\" order=\"4\" /></resources><feature-usage><uses-feature name=\"Device.captureAudio\" required=\"true\" /><uses-feature name=\"Device.captureImage\" required=\"true\" /><uses-feature name=\"Device.captureVideo\" required=\"true\" /><uses-feature name=\"Device.getBarcodeValue\" required=\"true\" /><uses-feature name=\"Device.getCurrentPosition\" required=\"true\" /><uses-feature name=\"Device.pickFile\" required=\"true\" /><uses-feature name=\"Utility\" required=\"true\" /><uses-feature name=\"WebAPI\" required=\"true\" /></feature-usage><built-by name=\"pac\" version=\"1.39.3\" /></control></manifest>",
+    "name": "MscrmControls.TemplateEnhanceGalleryHostControl.TemplateEnhanceGalleryHostControl",
+    "supportedplatform": "(Model)",
+    "version": "2.91.29"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.TemplateEnhanceGalleryHostControl.TemplateEnhanceGalleryHostControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_ActivitiesPatch",
+      "version": "9.0.26093.260917001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

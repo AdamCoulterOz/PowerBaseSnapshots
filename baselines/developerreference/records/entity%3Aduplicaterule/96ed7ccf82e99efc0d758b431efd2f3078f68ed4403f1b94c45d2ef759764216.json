@@ -1,0 +1,54 @@
+{
+  "configuration": {
+    "baseentityname": "account",
+    "baseentitytypecode": {
+      "key": [
+        {
+          "field": "LogicalName",
+          "type": "String",
+          "value": "account"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "entity"
+    },
+    "componentstate": 0,
+    "description": "Detects account records that have the same value in the Phone field.",
+    "excludeinactiverecords": false,
+    "iscasesensitive": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": false,
+    "matchingentityname": "account",
+    "matchingentitytypecode": {
+      "key": [
+        {
+          "field": "LogicalName",
+          "type": "String",
+          "value": "account"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "entity"
+    },
+    "name": "Accounts with the same phone number",
+    "statecode": 1,
+    "statuscode": 2,
+    "timezoneruleversionnumber": null,
+    "uniquename": "drf177b0a8f1e63b58406ed19a6f84236cf149a7448032f6de966eb298db9d7df1",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "drf177b0a8f1e63b58406ed19a6f84236cf149a7448032f6de966eb298db9d7df1"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "entity:duplicaterule"
+}

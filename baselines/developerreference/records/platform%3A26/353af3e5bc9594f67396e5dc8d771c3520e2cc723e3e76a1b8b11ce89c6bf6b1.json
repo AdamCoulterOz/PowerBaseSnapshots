@@ -1,0 +1,145 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" savedqueryid=\"8a34b2e6-d82a-4ccf-a71f-ead4332b3f08\"><entity name=\"knowledgearticleviews\"><attribute name=\"viewdate\" /><attribute name=\"knowledgearticleview\" /><attribute name=\"location\" /><link-entity name=\"knowledgearticle\" from=\"knowledgearticleid\" to=\"knowledgearticleid\" alias=\"aa\"></link-entity><order attribute=\"viewdate\" descending=\"true\" /></entity></fetch>",
+    "introducedversion": "8.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "title",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "knowledgearticleviews"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "viewdate",
+                "RelatedEntityName": "",
+                "Width": 125
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "query.0B994CD2-8434-48D2-9A31-D525EC87C8CE.cell.knowledgearticleviews.label",
+                "Name": "knowledgearticleview",
+                "RelatedEntityName": "",
+                "Width": 125
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "location",
+                "RelatedEntityName": "",
+                "Width": 125
+              }
+            ],
+            "Id": "knowledgearticleviewsid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "knowledgearticleviews"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:knowledgearticleviews\" jump=\"title\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"result\" id=\"knowledgearticleviewsid\"><cell name=\"viewdate\" width=\"125\" /><cell name=\"knowledgearticleview\" width=\"125\" LabelId=\"query.0B994CD2-8434-48D2-9A31-D525EC87C8CE.cell.knowledgearticleviews.label\" /><cell name=\"location\" width=\"125\" /></row></grid>"
+    },
+    "name": "Knowledge Article Views ",
+    "offlinesqlquery": "/*SelectStart*/select  \"knowledgearticleviews0\".[viewdate] as \"viewdate\"\r , \"knowledgearticleviews0\".[knowledgearticleview] as \"knowledgearticleview\"\r , \"knowledgearticleviews0\".[location] as \"location\"\r , \"knowledgearticleviews0\".[knowledgearticleviewsid] as \"knowledgearticleviewsid\"/*SelectEnd*/  /*FromStart*/from  KnowledgeArticleViews as \"knowledgearticleviews0\" \t/*JoinStart*/ join KnowledgeArticle as \"aa\" on (\"knowledgearticleviews0\".[knowledgearticleid!id]  =  \"aa\".[knowledgearticleid])/*JoinEnd*//*FromEnd*/  /*OrderByStart*/order by  \"knowledgearticleviews0\".[viewdate] desc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 64,
+    "returnedtypecode": "knowledgearticleviews",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "8a34b2e6-d82a-4ccf-a71f-ead4332b3f08",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "knowledgearticleviews",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "8a34b2e6-d82a-4ccf-a71f-ead4332b3f08"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "System",
+      "version": "5.0"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

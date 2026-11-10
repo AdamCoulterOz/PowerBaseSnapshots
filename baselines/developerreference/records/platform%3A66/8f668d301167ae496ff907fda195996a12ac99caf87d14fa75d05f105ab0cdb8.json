@@ -1,0 +1,159 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ExportToExcelOnlineControl",
+        "ControlManifestVersion": "1.0.9",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.ExportToExcelOnline.ExportToExcelOnlineControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_AppCommon_ExportToExcelOnline",
+        "FullName": "MscrmControls.AppCommon.ExportToExcelOnline.ExportToExcelOnlineControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.AppCommon.ExportToExcelOnline.ExportToExcelOnlineControl",
+        "Namespace": "MscrmControls.AppCommon.ExportToExcelOnline",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "view",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "fetchXml",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "layoutXml",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "entityTypeName",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "file_id",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "entityIsImportable",
+              "Required": true,
+              "Type": "TwoOptions",
+              "Usage": 0
+            },
+            {
+              "Hidden": true,
+              "Name": "originalEntityId",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "originalEntityTypeCode",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            },
+            {
+              "Hidden": true,
+              "Name": "rollupType",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "FRECommon",
+              "LoadOrder": 2,
+              "Name": "FRECommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.AppCommon.ExportToExcelOnline.ExportToExcelOnlineControl_ExportToExcelOnline.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/ExportToExcelOnline.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.4.0066",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.ExportToExcelOnline\" constructor=\"ExportToExcelOnlineControl\" version=\"1.0.9\" display-name-key=\"CC_AppCommon_ExportToExcelOnline\" hidden=\"true\"><modes></modes><property name=\"view\" display-name-key=\"ExportToExcelOnline_view\" description-key=\"ExportToExcelOnline_view_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"fetchXml\" display-name-key=\"ExportToExcelOnline_fetchXml\" description-key=\"ExportToExcelOnline_fetchXml_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"layoutXml\" display-name-key=\"ExportToExcelOnline_layoutXml\" description-key=\"ExportToExcelOnline_layoutXml_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"entityTypeName\" display-name-key=\"ExportToExcelOnline_entityTypeName\" description-key=\"ExportToExcelOnline_entityTypeName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"file_id\" display-name-key=\"ExportToExcelOnline_fileid\" description-key=\"ExportToExcelOnline_fileid_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"entityIsImportable\" display-name-key=\"ExportToExcelOnline_entityIsImportable\" description-key=\"ExportToExcelOnline_entityIsImportable_desc\" usage=\"bound\" of-type=\"TwoOptions\" required=\"true\" hidden=\"true\" /><property name=\"originalEntityId\" display-name-key=\"ExportToExcelOnline_originalEntityId\" description-key=\"ExportToExcelOnline_originalEntityId_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"originalEntityTypeCode\" display-name-key=\"ExportToExcelOnline_originalEntityTypeCode\" description-key=\"ExportToExcelOnline_originalEntityTypeCode_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><property name=\"rollupType\" display-name-key=\"ExportToExcelOnline_rollupType\" description-key=\"ExportToExcelOnline_rollupType_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"true\" /><resources><library name=\"FRECommon\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/frecommon-lib.js\" version=\"1.0.0\" /></library><code order=\"2\" path=\"ExportToExcelOnline.js\" /><resx path=\"locale/ExportToExcelOnline.1033.resx\" version=\"1.0.1\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.ExportToExcelOnline.ExportToExcelOnlineControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.9"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.ExportToExcelOnline.ExportToExcelOnlineControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommon",
+      "version": "9.0.4.0066"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch",
+      "version": "9.0.1904.4006"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

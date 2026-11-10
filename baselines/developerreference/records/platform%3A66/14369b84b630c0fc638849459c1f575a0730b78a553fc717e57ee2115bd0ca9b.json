@@ -1,0 +1,108 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "CardFeedContainer",
+        "ControlManifestVersion": "1.8.348",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.CardFeedContainer.CardFeedContainer"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_CardFeed_Name",
+        "FullName": "MscrmControls.CardFeedContainer.CardFeedContainer",
+        "IsVirtual": true,
+        "Name": "MscrmControls.CardFeedContainer.CardFeedContainer",
+        "Namespace": "MscrmControls.CardFeedContainer",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [
+                {
+                  "Hidden": false,
+                  "Name": "SubGridParentId",
+                  "Required": false,
+                  "Type": "Lookup.Simple",
+                  "Usage": 0
+                }
+              ],
+              "InitialDataSetFetch": false,
+              "Name": "SubGrid",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "EntityTypeCode",
+              "Required": false,
+              "Type": "Decimal",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "Location",
+              "Required": false,
+              "Type": "Decimal",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LoadOrder": 5,
+              "Name": "MscrmControls.CardFeedContainer.CardFeedContainer_CardFeedCustomControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/CardFeedLabels.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "Grid",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.CardFeedContainer\" constructor=\"CardFeedContainer\" version=\"1.8.348\" display-name-key=\"CC_CardFeed_Name\" control-type=\"virtual\"><modes><read /><edit /></modes><data-set name=\"SubGrid\" display-name-key=\"CC_CardFeed_SubGrid\" initial-data-set-fetch=\"false\"><property-set name=\"SubGridParentId\" display-name-key=\"CC_CardFeed_SubGrid_ParentID\" description-key=\"CC_CardFeed_SubGrid_ParentID_Desc\" of-type=\"Lookup.Simple\" usage=\"bound\" required=\"false\" /></data-set><property name=\"EntityTypeCode\" display-name-key=\"CC_EntityTypeCode\" description-key=\"CC_EntityTypeCode\" usage=\"input\" of-type=\"Decimal\" required=\"false\" hidden=\"false\" /><property name=\"Location\" display-name-key=\"Location\" of-type=\"Decimal\" usage=\"input\" required=\"false\" hidden=\"false\" /><resources><code path=\"CardFeedCustomControl.js\" order=\"5\" /><resx path=\"strings/CardFeedLabels.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.CardFeedContainer.CardFeedContainer",
+    "supportedplatform": "(Model)",
+    "version": "1.8.348"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.CardFeedContainer.CardFeedContainer"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

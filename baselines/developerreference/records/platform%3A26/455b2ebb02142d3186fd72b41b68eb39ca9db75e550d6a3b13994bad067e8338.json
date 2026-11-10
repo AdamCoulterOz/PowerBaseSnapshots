@@ -1,0 +1,194 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"false\" savedqueryid=\"90f0300e-101a-4462-96af-677cdfd654da\"><entity name=\"feedback\"><attribute name=\"regardingobjectid\" /><attribute name=\"title\" /><attribute name=\"rating\" /><attribute name=\"comments\" /><attribute name=\"source\" /><attribute name=\"ownerid\" /><attribute name=\"statuscode\" /><attribute name=\"createdon\" /><order attribute=\"createdon\" descending=\"true\" /><order attribute=\"rating\" descending=\"false\" /></entity></fetch>",
+    "introducedversion": "8.1.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "regardingobjectid",
+        "Name": "feedback",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "feedback"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "title",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "rating",
+                "RelatedEntityName": "",
+                "Width": 80
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "comments",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "source",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "ownerid",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "statuscode",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "createdon",
+                "RelatedEntityName": "",
+                "Width": 150
+              }
+            ],
+            "Id": "feedbackid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "feedback"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "feedback"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"feedback\" object=\"logical:feedback\" jump=\"regardingobjectid\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"feedback\" id=\"feedbackid\"><cell name=\"title\" width=\"150\" /><cell name=\"rating\" width=\"80\" /><cell name=\"comments\" width=\"150\" /><cell name=\"source\" width=\"150\" /><cell name=\"ownerid\" width=\"150\" /><cell name=\"statuscode\" width=\"150\" /><cell name=\"createdon\" width=\"150\" /></row></grid>"
+    },
+    "name": "Related Feedback View",
+    "offlinesqlquery": "/*SelectStart*/select  \"feedback0\".[regardingobjectid!id] as \"regardingobjectid!id\"\r , \"feedback0\".[regardingobjectid!logicalname] as \"regardingobjectid!logicalname\"\r , \"feedback0\".[regardingobjectid!name] as \"regardingobjectid!name\"\r , \"feedback0\".[title] as \"title\"\r , \"feedback0\".[rating] as \"rating\"\r , \"feedback0\".[comments] as \"comments\"\r , \"feedback0\".[source] as \"source\"\r , \"feedback0\".[ownerid!id] as \"ownerid!id\"\r , \"feedback0\".[ownerid!logicalname] as \"ownerid!logicalname\"\r , \"feedback0\".[ownerid!name] as \"ownerid!name\"\r , \"feedback0\".[statuscode] as \"statuscode\"\r , \"feedback0\".[createdon] as \"createdon\"\r , \"feedback0\".[feedbackid] as \"feedbackid\"/*SelectEnd*/  /*FromStart*/from  Feedback as \"feedback0\"/*FromEnd*/  /*OrderByStart*/order by  \"feedback0\".[createdon] desc\r , \"feedback0\".[rating] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "feedback",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "90f0300e-101a-4462-96af-677cdfd654da",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "feedback",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "90f0300e-101a-4462-96af-677cdfd654da"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}

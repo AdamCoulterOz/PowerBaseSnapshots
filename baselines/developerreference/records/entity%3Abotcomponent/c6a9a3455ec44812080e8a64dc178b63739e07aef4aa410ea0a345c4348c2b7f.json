@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": null,
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 9,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnRecognizedIntent\r\n  id: main\r\n  intent:\r\n    displayName: Questions about my data\r\n\r\n  actions:\r\n    - kind: BeginDialog\r\n      id: 1PSkgv\r\n      input:\r\n        binding:\r\n          FeatureSetting: DVRecordContext\r\n\r\n      dialog: msdyn_appCopilot.topic.AppCopilotGetFeatureSetting\r\n      output:\r\n        binding:\r\n          FeatureValue: Topic.FeatureValue\r\n\r\n    - kind: ConditionGroup\r\n      id: conditionGroup_OIQZyC\r\n      conditions:\r\n        - id: conditionItem_hqGuSq\r\n          condition: =Topic.FeatureValue = true\r\n          actions:\r\n            - kind: SetVariable\r\n              id: setVariable_mxgnFc\r\n              variable: Topic.DVContent\r\n              value: |-\r\n                ={\r\n                    Prompt: System.Activity.Text,\r\n                    RecordContext: Global.PA_Copilot_DVRecordContext,\r\n                    TableContext: Global.PA_Copilot_DVTableContext\r\n                }\r\n\r\n            - kind: SendActivity\r\n              id: sendActivity_bOpmCB\r\n              activity:\r\n                kind: EventActivity\r\n                value: =Topic.DVContent\r\n                name: MS.PA.DVCopilot\r\n\r\n      elseActions:\r\n        - kind: SendActivity\r\n          id: sendActivity_Y9ESLB\r\n          activity:\r\n            kind: EventActivity\r\n            value: =System.Activity.Text\r\n            name: MS.PA.DVCopilot",
+    "dependencies": null,
+    "description": "Used when there are questions about the data in the application",
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": 1033,
+    "name": "Dataverse Structured Data Question and Answer",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.DataverseStructuredData",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.DataverseStructuredData"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

@@ -1,0 +1,131 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "DocTemplateDownloadControl",
+        "ControlManifestVersion": "1.0.17",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.AppCommon.DocTemplateDownload.DocTemplateDownloadControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_AppCommon_DocTemplateDownloadControl",
+        "FullName": "MscrmControls.AppCommon.DocTemplateDownload.DocTemplateDownloadControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.AppCommon.DocTemplateDownload.DocTemplateDownloadControl",
+        "Namespace": "MscrmControls.AppCommon.DocTemplateDownload",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "dialogtype",
+              "Required": true,
+              "Type": "Whole.None",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "file_data",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "entityname",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "viewid",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "fetchxmldata",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 1,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.AppCommon.DocTemplateDownload.DocTemplateDownloadControl_DocTemplateDownloadControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/DocTemplateDownloadControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "SingleLine.Text",
+    "componentstate": 0,
+    "introducedversion": "9.0.4.0066",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.AppCommon.DocTemplateDownload\" constructor=\"DocTemplateDownloadControl\" version=\"1.0.17\" display-name-key=\"CC_AppCommon_DocTemplateDownloadControl\" control-type=\"virtual\"><modes></modes><property name=\"dialogtype\" display-name-key=\"DocTemplateDownloadControl_dialogtype\" description-key=\"DocTemplateDownloadControl_dialogtype_desc\" usage=\"input\" of-type=\"Whole.None\" required=\"true\" hidden=\"false\" /><property name=\"file_data\" display-name-key=\"DocTemplateDownloadControl_filedata\" description-key=\"DocTemplateDownloadControl_filedata_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"entityname\" display-name-key=\"DocTemplateDownloadControl_entity_name\" description-key=\"DocTemplateDownloadControl_entity_name_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"viewid\" display-name-key=\"DocTemplateDownloadControl_view_id\" description-key=\"DocTemplateDownloadControl_view_id_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><property name=\"fetchxmldata\" display-name-key=\"DocTemplateDownloadControl_fetch_xml_data\" description-key=\"DocTemplateDownloadControl_fetch_xml_data_desc\" usage=\"bound\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><resources><library name=\"mscommon\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.0.0\" /></library><code path=\"DocTemplateDownloadControl.js\" order=\"2\" /><resx path=\"locale/DocTemplateDownloadControl.1033.resx\" version=\"1.0.2\" /></resources></control></manifest>",
+    "name": "MscrmControls.AppCommon.DocTemplateDownload.DocTemplateDownloadControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.17"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.AppCommon.DocTemplateDownload.DocTemplateDownloadControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommon",
+      "version": "9.0.4.0066"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch",
+      "version": "9.0.1904.4006"
+    },
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_AppCommonPatch201904",
+      "version": "9.0.26092.10001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

@@ -1,0 +1,130 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" savedqueryid=\"2f5b7d2a-7cd6-41c5-85e6-6e1613394380\"><entity name=\"environmentvariabledefinition\"><attribute name=\"environmentvariabledefinitionid\" /><attribute name=\"schemaname\" /><attribute name=\"createdon\" /><order attribute=\"schemaname\" descending=\"false\" /><filter type=\"and\"><condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /></filter></entity></fetch>",
+    "introducedversion": "1.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "schemaname",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "environmentvariabledefinition"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "schemaname",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "createdon",
+                "RelatedEntityName": "",
+                "Width": 125
+              }
+            ],
+            "Id": "environmentvariabledefinitionid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "environmentvariabledefinition"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" jump=\"schemaname\" select=\"1\" icon=\"1\" preview=\"1\" object=\"logical:environmentvariabledefinition\"><row name=\"result\" id=\"environmentvariabledefinitionid\"><cell name=\"schemaname\" width=\"300\" /><cell name=\"createdon\" width=\"125\" /></row></grid>"
+    },
+    "name": "Active Environment Variable Definitions",
+    "offlinesqlquery": "/*SelectStart*/select  \"environmentvariabledefinition0\".[environmentvariabledefinitionid] as \"environmentvariabledefinitionid\"\r , \"environmentvariabledefinition0\".[schemaname] as \"schemaname\"\r , \"environmentvariabledefinition0\".[createdon] as \"createdon\"/*SelectEnd*/  /*FromStart*/from  EnvironmentVariableDefinition as \"environmentvariabledefinition0\"/*FromEnd*/  /*WhereStart*/where  (\"environmentvariabledefinition0\".[statecode] = 0)/*WhereEnd*/  /*OrderByStart*/order by  \"environmentvariabledefinition0\".[schemaname] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "environmentvariabledefinition",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "2f5b7d2a-7cd6-41c5-85e6-6e1613394380",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "environmentvariabledefinition",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "2f5b7d2a-7cd6-41c5-85e6-6e1613394380"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "EnvironmentVariablesV2",
+      "version": "1.0.2408.1"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

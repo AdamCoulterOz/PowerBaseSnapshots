@@ -1,0 +1,214 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" savedqueryid=\"b51b324d-798b-4fe1-bee1-7b23735c6a46\"><entity name=\"sla\"><attribute name=\"name\" /><attribute name=\"objecttypecode\" /><attribute name=\"statecode\" /><attribute name=\"isdefault\" /><attribute name=\"applicablefrom\" /><attribute name=\"ownerid\" /><attribute name=\"createdon\" /><attribute name=\"modifiedon\" /><attribute name=\"slaid\" /><order attribute=\"name\" descending=\"false\" /></entity></fetch>",
+    "introducedversion": "6.1.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "name",
+        "Name": "sla",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "sla"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "name",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "Object_Singular_Entity",
+                "Name": "objecttypecode",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "statecode",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "isdefault",
+                "RelatedEntityName": "",
+                "Width": 125
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "applicablefrom",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "ownerid",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "createdon",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "modifiedon",
+                "RelatedEntityName": "",
+                "Width": 150
+              }
+            ],
+            "Id": "slaid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "SLA"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "sla"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"sla\" object=\"logical:sla\" jump=\"name\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"SLA\" id=\"slaid\"><cell name=\"name\" width=\"300\" /><cell name=\"objecttypecode\" width=\"200\" LabelId=\"Object_Singular_Entity\" /><cell name=\"statecode\" width=\"150\" /><cell name=\"isdefault\" width=\"125\" /><cell name=\"applicablefrom\" width=\"200\" /><cell name=\"ownerid\" width=\"200\" /><cell name=\"createdon\" width=\"150\" /><cell name=\"modifiedon\" width=\"150\" /></row></grid>"
+    },
+    "name": "All Service Level Agreements",
+    "offlinesqlquery": "/*SelectStart*/select  \"sla0\".[name] as \"name\"\r , \"sla0\".[objecttypecode] as \"objecttypecode\"\r , \"sla0\".[statecode] as \"statecode\"\r , \"sla0\".[isdefault] as \"isdefault\"\r , \"sla0\".[applicablefrom] as \"applicablefrom\"\r , \"sla0\".[ownerid!id] as \"ownerid!id\"\r , \"sla0\".[ownerid!logicalname] as \"ownerid!logicalname\"\r , \"sla0\".[ownerid!name] as \"ownerid!name\"\r , \"sla0\".[createdon] as \"createdon\"\r , \"sla0\".[modifiedon] as \"modifiedon\"\r , \"sla0\".[slaid] as \"slaid\"/*SelectEnd*/  /*FromStart*/from  SLA as \"sla0\"/*FromEnd*/  /*OrderByStart*/order by  \"sla0\".[name] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "sla",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "b51b324d-798b-4fe1-bee1-7b23735c6a46",
+    "statecode": 1,
+    "statuscode": 2
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "sla",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "b51b324d-798b-4fe1-bee1-7b23735c6a46"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "System",
+      "version": "5.0"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

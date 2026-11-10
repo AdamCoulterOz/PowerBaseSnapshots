@@ -1,0 +1,380 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "ApiVersion": "1.2.3",
+        "Children": [],
+        "ConstructorName": "SlaTimerControl",
+        "ControlManifestVersion": "1.0.25",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.SlaTimer.SlaTimerControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_Control_Title_DisplayKey",
+        "FullName": "MscrmControls.SlaTimer.SlaTimerControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.SlaTimer.SlaTimerControl",
+        "Namespace": "MscrmControls.SlaTimer",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [],
+              "InitialDataSetFetch": true,
+              "Name": "dataSetGrid_1",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [
+            {
+              "IsRequired": true,
+              "Name": "Utility",
+              "Type": 0
+            }
+          ],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "Update_Frequency",
+              "Required": true,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "EnableNegativeTimer",
+              "Required": false,
+              "Type": "Enum",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "sla_kpi_labels",
+              "Required": false,
+              "Type": "Multiple",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "fluentui-react",
+              "LoadOrder": 1,
+              "Name": "fluentui-react",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "MscrmControls.SlaTimer.SlaTimerControl_bundle.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "css/index.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "img/Cancelled.svg",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "img/InProgress.svg",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "img/NearingNonCompliance.svg",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "img/NonCompliant.svg",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "img/NotApplicable.svg",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "img/Paused.svg",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "img/Succeeded.svg",
+              "Type": 2
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1025.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1026.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1027.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1028.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1029.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1030.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1031.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1032.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1033.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1035.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1036.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1037.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1038.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1040.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1041.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1042.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1043.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1044.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1045.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1046.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1048.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1049.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1050.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1051.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1053.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1054.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1055.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1057.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1058.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1060.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1061.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1062.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1063.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1066.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1069.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1081.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1086.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1087.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.1110.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.2052.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.2070.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.2074.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.3076.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.3082.resx",
+              "Type": 5
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "locale/SlaTimerControl.3098.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "Grid",
+    "componentstate": 0,
+    "introducedversion": "9.0.26094.1001",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.SlaTimer\" constructor=\"SlaTimerControl\" version=\"1.0.25\" display-name-key=\"CC_Control_Title_DisplayKey\" description-key=\"CC_Control_Title_DescriptionKey\" control-type=\"standard\" api-version=\"1.2.3\"><data-set name=\"dataSetGrid_1\" display-name-key=\"CC_DataSetGridProperty_Display_Key\" description-key=\"CC_DataSetGridProperty_Display_description\" /><property name=\"Update_Frequency\" display-name-key=\"CC_Update_Frequency_key\" description-key=\"CC_Update_Frequency_description\" of-type=\"Enum\" usage=\"input\" required=\"true\"><value name=\"Int_30s\" display-name-key=\"Interval30s\">30</value><value name=\"Int_5m\" display-name-key=\"Interval5m\">300</value><value name=\"Int_30m\" display-name-key=\"Interval30m\" default=\"true\">1800</value><value name=\"Int_1h\" display-name-key=\"Interval1h\">3600</value><value name=\"Int_6h\" display-name-key=\"Interval6h\">21600</value><value name=\"Int_24h\" display-name-key=\"Interval24h\">86400</value><value name=\"Int_NoRefresh\" display-name-key=\"NoRefresh\">0</value></property><property name=\"EnableNegativeTimer\" display-name-key=\"CC_Enable_Negative_Timer\" description-key=\"CC_Enable_NegativeTimer_description\" of-type=\"Enum\" usage=\"input\" required=\"false\"><value name=\"Yes\" display-name-key=\"Yes\">1</value><value name=\"No\" display-name-key=\"No\" default=\"true\">0</value></property><property name=\"sla_kpi_labels\" display-name-key=\"CC_Customized_Labels\" description-key=\"CC_Customized_Labels_description\" of-type=\"Multiple\" usage=\"input\" required=\"false\" /><feature-usage><uses-feature name=\"Utility\" required=\"true\" /></feature-usage><resources><code path=\"bundle.js\" order=\"1\" /><library name=\"fluentui-react\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/fluentui-react.js\" version=\"7.109.1\" /></library><css path=\"css/index.css\" order=\"1\" /><img path=\"img/Cancelled.svg\" /><img path=\"img/InProgress.svg\" /><img path=\"img/NearingNonCompliance.svg\" /><img path=\"img/NonCompliant.svg\" /><img path=\"img/NotApplicable.svg\" /><img path=\"img/Paused.svg\" /><img path=\"img/Succeeded.svg\" /><resx path=\"locale/SlaTimerControl.1025.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1026.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1027.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1028.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1029.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1030.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1031.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1032.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1033.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1035.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1036.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1037.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1038.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1040.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1041.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1042.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1043.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1044.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1045.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1046.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1048.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1049.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1050.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1051.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1053.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1054.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1055.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1057.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1058.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1060.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1061.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1062.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1063.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1066.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1069.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1081.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1086.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1087.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.1110.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.2052.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.2070.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.2074.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.3076.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.3082.resx\" version=\"1.0.0\" /><resx path=\"locale/SlaTimerControl.3098.resx\" version=\"1.0.0\" /></resources><built-by name=\"pac\" version=\"1.4.4\" /></control></manifest>",
+    "name": "MscrmControls.SlaTimer.SlaTimerControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.25"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.SlaTimer.SlaTimerControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdynce_ServiceLevelAgreementExtension",
+      "version": "9.0.26094.1002"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

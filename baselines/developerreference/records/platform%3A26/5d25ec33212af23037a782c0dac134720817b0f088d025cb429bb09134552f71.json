@@ -1,0 +1,194 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": "",
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" mapping=\"logical\" savedqueryid=\"711e32bf-df5c-4090-a928-f3363c041750\"><entity name=\"mspp_webform\"><attribute name=\"mspp_webformid\" /><attribute name=\"mspp_name\" /><attribute name=\"mspp_createdon\" /><filter type=\"and\"><condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /></filter><order attribute=\"mspp_name\" descending=\"false\" /><attribute name=\"mspp_startstep\" /><attribute name=\"mspp_modifiedon\" /><attribute name=\"mspp_modifiedby\" /><attribute name=\"mspp_createdby\" /><attribute name=\"mspp_authenticationrequired\" /></entity></fetch>",
+    "introducedversion": "1.0.0.0",
+    "iscustom": true,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "mspp_name",
+        "Name": "",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "mspp_webform"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": false,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "mspp_name",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "mspp_startstep",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "mspp_authenticationrequired",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "mspp_modifiedby",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "mspp_modifiedon",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "mspp_createdby",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "mspp_createdon",
+                "RelatedEntityName": "",
+                "Width": 125
+              }
+            ],
+            "Id": "mspp_webformid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "mspp_webform"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "mspp_webform"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"\" jump=\"mspp_name\" select=\"1\" icon=\"1\" preview=\"0\" object=\"logical:mspp_webform\"><row name=\"mspp_webform\" id=\"mspp_webformid\"><cell name=\"mspp_name\" width=\"200\" /><cell name=\"mspp_startstep\" width=\"200\" /><cell name=\"mspp_authenticationrequired\" width=\"150\" /><cell name=\"mspp_modifiedby\" width=\"100\" /><cell name=\"mspp_modifiedon\" width=\"100\" /><cell name=\"mspp_createdby\" width=\"100\" /><cell name=\"mspp_createdon\" width=\"125\" /></row></grid>"
+    },
+    "name": "Multistep Form Lookup View",
+    "offlinesqlquery": "/*SelectStart*/select  \"mspp_webform0\".[mspp_webformid] as \"mspp_webformid\"\r , \"mspp_webform0\".[mspp_name] as \"mspp_name\"\r , \"mspp_webform0\".[mspp_createdon] as \"mspp_createdon\"\r , \"mspp_webform0\".[mspp_startstep!id] as \"mspp_startstep!id\"\r , \"mspp_webform0\".[mspp_startstep!logicalname] as \"mspp_startstep!logicalname\"\r , \"mspp_webform0\".[mspp_startstep!name] as \"mspp_startstep!name\"\r , \"mspp_webform0\".[mspp_modifiedon] as \"mspp_modifiedon\"\r , \"mspp_webform0\".[mspp_modifiedby!id] as \"mspp_modifiedby!id\"\r , \"mspp_webform0\".[mspp_modifiedby!logicalname] as \"mspp_modifiedby!logicalname\"\r , \"mspp_webform0\".[mspp_modifiedby!name] as \"mspp_modifiedby!name\"\r , \"mspp_webform0\".[mspp_createdby!id] as \"mspp_createdby!id\"\r , \"mspp_webform0\".[mspp_createdby!logicalname] as \"mspp_createdby!logicalname\"\r , \"mspp_webform0\".[mspp_createdby!name] as \"mspp_createdby!name\"\r , \"mspp_webform0\".[mspp_authenticationrequired] as \"mspp_authenticationrequired\"/*SelectEnd*/  /*FromStart*/from  mspp_webform as \"mspp_webform0\"/*FromEnd*/  /*WhereStart*/where  (\"mspp_webform0\".[statecode] = 0)/*WhereEnd*/  /*OrderByStart*/order by  \"mspp_webform0\".[mspp_name] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 64,
+    "returnedtypecode": "mspp_webform",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "711e32bf-df5c-4090-a928-f3363c041750",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "mspp_webform",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "711e32bf-df5c-4090-a928-f3363c041750"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}

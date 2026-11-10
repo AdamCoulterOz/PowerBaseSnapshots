@@ -1,0 +1,166 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"false\" savedqueryid=\"1cdc5a28-6b3a-451b-b38a-0ac62d86e46c\"><entity name=\"emailserverprofile\"><attribute name=\"name\" /><attribute name=\"emailservertypename\" /><order attribute=\"name\" descending=\"false\" /><filter type=\"and\"><condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /></filter><attribute name=\"outgoingserverlocation\" /><attribute name=\"incomingserverlocation\" /><attribute name=\"createdon\" /></entity></fetch>",
+    "introducedversion": "6.0.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "name",
+        "Name": "resultset",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "emailserverprofile"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "name",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "emailservertypename",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "incomingserverlocation",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "outgoingserverlocation",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "createdon",
+                "RelatedEntityName": "",
+                "Width": 100
+              }
+            ],
+            "Id": "emailserverprofileid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "result"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "emailserverprofile"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"resultset\" object=\"logical:emailserverprofile\" jump=\"name\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"result\" id=\"emailserverprofileid\"><cell name=\"name\" width=\"150\" /><cell name=\"emailservertypename\" width=\"150\" /><cell name=\"incomingserverlocation\" width=\"200\" /><cell name=\"outgoingserverlocation\" width=\"200\" /><cell name=\"createdon\" width=\"100\" /></row></grid>"
+    },
+    "name": "Email Server Profile Lookup View",
+    "offlinesqlquery": "/*SelectStart*/select  \"emailserverprofile0\".[name] as \"name\"\r , \"emailserverprofile0\".[emailservertypename] as \"emailservertypename\"\r , \"emailserverprofile0\".[outgoingserverlocation] as \"outgoingserverlocation\"\r , \"emailserverprofile0\".[incomingserverlocation] as \"incomingserverlocation\"\r , \"emailserverprofile0\".[createdon] as \"createdon\"\r , \"emailserverprofile0\".[emailserverprofileid] as \"emailserverprofileid\"/*SelectEnd*/  /*FromStart*/from  EmailServerProfile as \"emailserverprofile0\"/*FromEnd*/  /*WhereStart*/where  (\"emailserverprofile0\".[statecode] = 0)/*WhereEnd*/  /*OrderByStart*/order by  \"emailserverprofile0\".[name] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 64,
+    "returnedtypecode": "emailserverprofile",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "1cdc5a28-6b3a-451b-b38a-0ac62d86e46c",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "emailserverprofile",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "1cdc5a28-6b3a-451b-b38a-0ac62d86e46c"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}

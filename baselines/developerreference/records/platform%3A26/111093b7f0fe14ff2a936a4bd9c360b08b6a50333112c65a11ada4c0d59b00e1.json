@@ -1,0 +1,152 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": "Displays information about related queueitems in sub grid of detail form ",
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch distinct=\"false\" mapping=\"logical\" savedqueryid=\"fad31c91-6638-45e7-84db-7257bd940e9c\"><entity name=\"queueitem\"><attribute name=\"title\" /><attribute name=\"enteredon\" /><attribute name=\"objecttypecode\" /><attribute name=\"objectid\" /><attribute name=\"queueitemid\" /><attribute name=\"workerid\" /><filter type=\"and\"><condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /></filter><order attribute=\"enteredon\" descending=\"true\" /></entity></fetch>",
+    "introducedversion": "6.1.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "title",
+        "Name": "queueitems",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "queueitem"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "title",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "enteredon",
+                "RelatedEntityName": "",
+                "Width": 140
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "workerid",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "queueitemid",
+                "RelatedEntityName": "",
+                "Width": 100
+              }
+            ],
+            "Id": "objectid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "objecttypecode",
+            "Name": "queueitem"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "queueitem"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"queueitems\" object=\"logical:queueitem\" jump=\"title\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"queueitem\" id=\"objectid\" multiobjectidfield=\"objecttypecode\"><cell name=\"title\" width=\"300\" /><cell name=\"enteredon\" width=\"140\" /><cell name=\"workerid\" width=\"150\" /><cell name=\"queueitemid\" ishidden=\"1\" width=\"100\" /></row></grid>"
+    },
+    "name": "Queue Item Sub Grid View",
+    "offlinesqlquery": "/*SelectStart*/select  \"queueitem0\".[title] as \"title\"\r , \"queueitem0\".[enteredon] as \"enteredon\"\r , \"queueitem0\".[objecttypecode] as \"objecttypecode\"\r , \"queueitem0\".[objectid!id] as \"objectid!id\"\r , \"queueitem0\".[objectid!logicalname] as \"objectid!logicalname\"\r , \"queueitem0\".[objectid!name] as \"objectid!name\"\r , \"queueitem0\".[queueitemid] as \"queueitemid\"\r , \"queueitem0\".[workerid!id] as \"workerid!id\"\r , \"queueitem0\".[workerid!logicalname] as \"workerid!logicalname\"\r , \"queueitem0\".[workerid!name] as \"workerid!name\"/*SelectEnd*/  /*FromStart*/from  QueueItem as \"queueitem0\"/*FromEnd*/  /*WhereStart*/where  (\"queueitem0\".[statecode] = 0)/*WhereEnd*/  /*OrderByStart*/order by  \"queueitem0\".[enteredon] desc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 2,
+    "returnedtypecode": "queueitem",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "fad31c91-6638-45e7-84db-7257bd940e9c",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "queueitem",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "fad31c91-6638-45e7-84db-7257bd940e9c"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}

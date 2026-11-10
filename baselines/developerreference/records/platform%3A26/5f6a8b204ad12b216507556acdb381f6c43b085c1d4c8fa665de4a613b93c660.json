@@ -1,0 +1,326 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": "All SharePoint Document",
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch distinct=\"false\" mapping=\"logical\" savedqueryid=\"a5b008ac-07d9-4554-8509-2c05767bff51\"><entity name=\"sharepointdocument\"><attribute name=\"documentid\" /><attribute name=\"fullname\" /><attribute name=\"relativelocation\" /><attribute name=\"sharepointcreatedon\" /><attribute name=\"filetype\" /><attribute name=\"absoluteurl\" /><attribute name=\"modified\" /><attribute name=\"sharepointmodifiedby\" /><attribute name=\"title\" /><attribute name=\"readurl\" /><attribute name=\"editurl\" /><attribute name=\"author\" /><attribute name=\"sharepointdocumentid\" /><attribute name=\"ischeckedout\" /><attribute name=\"locationid\" /><attribute name=\"iconclassname\" /><filter><condition attribute=\"isrecursivefetch\" operator=\"eq\" value=\"1\" /></filter><order attribute=\"relativelocation\" descending=\"false\" /></entity></fetch>",
+    "introducedversion": "6.1.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "isdefault": true,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": false,
+        "IconRenderer": "",
+        "Jump": "fullname",
+        "Name": "sharepointdocument",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "sharepointdocument"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "DocumentManagement.FileTypeIcon.loadSharePointFileTypeIcon",
+                "ImageProviderWebresource": "$webresource:SharePoint_main_system_library.js",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "fullname",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "relativelocation",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "modified",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "sharepointmodifiedby",
+                "RelatedEntityName": "",
+                "Width": 150
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "sharepointcreatedon",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "documentid",
+                "RelatedEntityName": "",
+                "Width": 0
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "title",
+                "RelatedEntityName": "",
+                "Width": 0
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "readurl",
+                "RelatedEntityName": "",
+                "Width": 0
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "editurl",
+                "RelatedEntityName": "",
+                "Width": 0
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "author",
+                "RelatedEntityName": "",
+                "Width": 0
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "absoluteurl",
+                "RelatedEntityName": "",
+                "Width": 0
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "sharepointdocumentid",
+                "RelatedEntityName": "",
+                "Width": 0
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "filetype",
+                "RelatedEntityName": "",
+                "Width": 0
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "ischeckedout",
+                "RelatedEntityName": "",
+                "Width": 0
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "locationid",
+                "RelatedEntityName": "",
+                "Width": 0
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": true,
+                "LabelId": "",
+                "Name": "iconclassname",
+                "RelatedEntityName": "",
+                "Width": 0
+              }
+            ],
+            "Id": "sharepointdocumentid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "sharepointdocument"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "sharepointdocument"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"sharepointdocument\" object=\"logical:sharepointdocument\" jump=\"fullname\" select=\"1\" icon=\"0\" preview=\"1\"><row name=\"sharepointdocument\" id=\"sharepointdocumentid\"><cell name=\"fullname\" width=\"300\" imageproviderfunctionname=\"DocumentManagement.FileTypeIcon.loadSharePointFileTypeIcon\" imageproviderwebresource=\"$webresource:SharePoint_main_system_library.js\" /><cell name=\"relativelocation\" width=\"200\" /><cell name=\"modified\" width=\"150\" /><cell name=\"sharepointmodifiedby\" width=\"150\" /><cell name=\"sharepointcreatedon\" width=\"300\" /><cell name=\"documentid\" ishidden=\"1\" /><cell name=\"title\" ishidden=\"1\" /><cell name=\"readurl\" ishidden=\"1\" /><cell name=\"editurl\" ishidden=\"1\" /><cell name=\"author\" ishidden=\"1\" /><cell name=\"absoluteurl\" ishidden=\"1\" /><cell name=\"sharepointdocumentid\" ishidden=\"1\" /><cell name=\"filetype\" ishidden=\"1\" /><cell name=\"ischeckedout\" ishidden=\"1\" /><cell name=\"locationid\" ishidden=\"1\" /><cell name=\"iconclassname\" ishidden=\"1\" /></row></grid>"
+    },
+    "name": "All SharePoint Document",
+    "offlinesqlquery": "/*SelectStart*/select  \"sharepointdocument0\".[documentid] as \"documentid\"\r , \"sharepointdocument0\".[fullname] as \"fullname\"\r , \"sharepointdocument0\".[relativelocation] as \"relativelocation\"\r , \"sharepointdocument0\".[sharepointcreatedon] as \"sharepointcreatedon\"\r , \"sharepointdocument0\".[filetype] as \"filetype\"\r , \"sharepointdocument0\".[absoluteurl] as \"absoluteurl\"\r , \"sharepointdocument0\".[modified] as \"modified\"\r , \"sharepointdocument0\".[sharepointmodifiedby] as \"sharepointmodifiedby\"\r , \"sharepointdocument0\".[title] as \"title\"\r , \"sharepointdocument0\".[readurl] as \"readurl\"\r , \"sharepointdocument0\".[editurl] as \"editurl\"\r , \"sharepointdocument0\".[author] as \"author\"\r , \"sharepointdocument0\".[sharepointdocumentid] as \"sharepointdocumentid\"\r , \"sharepointdocument0\".[ischeckedout] as \"ischeckedout\"\r , \"sharepointdocument0\".[locationid] as \"locationid\"\r , \"sharepointdocument0\".[iconclassname] as \"iconclassname\"/*SelectEnd*/  /*FromStart*/from  SharePointDocument as \"sharepointdocument0\"/*FromEnd*/  /*WhereStart*/where  (\"sharepointdocument0\".[isrecursivefetch] = 1)/*WhereEnd*/  /*OrderByStart*/order by  \"sharepointdocument0\".[relativelocation] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "sharepointdocument",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "a5b008ac-07d9-4554-8509-2c05767bff51",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "sharepointdocument",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "a5b008ac-07d9-4554-8509-2c05767bff51"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "System",
+      "version": "5.0"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

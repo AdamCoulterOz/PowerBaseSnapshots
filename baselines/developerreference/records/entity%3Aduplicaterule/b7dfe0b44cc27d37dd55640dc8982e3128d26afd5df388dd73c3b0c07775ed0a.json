@@ -1,0 +1,54 @@
+{
+  "configuration": {
+    "baseentityname": "account",
+    "baseentitytypecode": {
+      "key": [
+        {
+          "field": "LogicalName",
+          "type": "String",
+          "value": "account"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "entity"
+    },
+    "componentstate": 0,
+    "description": "Detects account records that have the same value in the email address field.",
+    "excludeinactiverecords": false,
+    "iscasesensitive": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": true
+    },
+    "ismanaged": false,
+    "matchingentityname": "account",
+    "matchingentitytypecode": {
+      "key": [
+        {
+          "field": "LogicalName",
+          "type": "String",
+          "value": "account"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "entity"
+    },
+    "name": "Accounts with the same e-mail address",
+    "statecode": 1,
+    "statuscode": 2,
+    "timezoneruleversionnumber": null,
+    "uniquename": "drc37745be4004a4bc967ca7d189c7d53d7262fd3cafd0c9c964524ad65e24336e",
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "drc37745be4004a4bc967ca7d189c7d53d7262fd3cafd0c9c964524ad65e24336e"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "entity:duplicaterule"
+}

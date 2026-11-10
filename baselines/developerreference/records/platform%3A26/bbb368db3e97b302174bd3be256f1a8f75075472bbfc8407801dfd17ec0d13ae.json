@@ -1,0 +1,200 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": null,
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch mapping=\"logical\" savedqueryid=\"152a8253-f9f4-4da9-8e8e-a47c6a1f6e5f\" version=\"1.0\"><entity name=\"asyncoperation\"><attribute name=\"asyncoperationid\" /><attribute name=\"name\" /><attribute name=\"operationtype\" /><attribute name=\"statuscode\" /><attribute name=\"ownerid\" /><attribute name=\"startedon\" /><attribute name=\"postponeuntil\" /><attribute name=\"errorcode\" /><attribute name=\"dependencytoken\" /><order attribute=\"startedon\" descending=\"true\" /><filter type=\"and\"><condition attribute=\"operationtype\" operator=\"eq\" value=\"59\" /></filter></entity></fetch>",
+    "introducedversion": "7.0.0.0",
+    "iscustom": true,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": true,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "name",
+        "Name": "asyncoperations",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "asyncoperation"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": false,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": true,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "name",
+                "RelatedEntityName": "",
+                "Width": 300
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": true,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "statuscode",
+                "RelatedEntityName": "",
+                "Width": 100
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": true,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "ownerid",
+                "RelatedEntityName": "",
+                "Width": 200
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "startedon",
+                "RelatedEntityName": "",
+                "Width": 125
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "postponeuntil",
+                "RelatedEntityName": "",
+                "Width": 80
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "errorcode",
+                "RelatedEntityName": "",
+                "Width": 80
+              },
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "dependencytoken",
+                "RelatedEntityName": "",
+                "Width": 80
+              }
+            ],
+            "Id": "asyncoperationid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "operationtype",
+            "Name": "asyncoperation"
+          }
+        ],
+        "Select": false
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "asyncoperation"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid icon=\"1\" jump=\"name\" name=\"asyncoperations\" object=\"logical:asyncoperation\" preview=\"0\"><row id=\"asyncoperationid\" multiobjectidfield=\"operationtype\" name=\"asyncoperation\"><cell disableSorting=\"1\" name=\"name\" width=\"300\" /><cell disableSorting=\"1\" name=\"statuscode\" width=\"100\" /><cell disableSorting=\"1\" name=\"ownerid\" width=\"200\" /><cell name=\"startedon\" width=\"125\" /><cell name=\"postponeuntil\" width=\"80\" /><cell name=\"errorcode\" width=\"80\" /><cell name=\"dependencytoken\" width=\"80\" /></row></grid>"
+    },
+    "name": "All Field Translation Import Jobs",
+    "offlinesqlquery": "/*SelectStart*/select  \"asyncoperation0\".[asyncoperationid] as \"asyncoperationid\"\r , \"asyncoperation0\".[name] as \"name\"\r , \"asyncoperation0\".[operationtype] as \"operationtype\"\r , \"asyncoperation0\".[statuscode] as \"statuscode\"\r , \"asyncoperation0\".[ownerid!id] as \"ownerid!id\"\r , \"asyncoperation0\".[ownerid!logicalname] as \"ownerid!logicalname\"\r , \"asyncoperation0\".[ownerid!name] as \"ownerid!name\"\r , \"asyncoperation0\".[startedon] as \"startedon\"\r , \"asyncoperation0\".[postponeuntil] as \"postponeuntil\"\r , \"asyncoperation0\".[errorcode] as \"errorcode\"\r , \"asyncoperation0\".[dependencytoken] as \"dependencytoken\"/*SelectEnd*/  /*FromStart*/from  AsyncOperation as \"asyncoperation0\"/*FromEnd*/  /*WhereStart*/where  (\"asyncoperation0\".[operationtype] = 59)/*WhereEnd*/  /*OrderByStart*/order by  \"asyncoperation0\".[startedon] desc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 0,
+    "returnedtypecode": "asyncoperation",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "152a8253-f9f4-4da9-8e8e-a47c6a1f6e5f",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "asyncoperation",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "152a8253-f9f4-4da9-8e8e-a47c6a1f6e5f"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_PowerAdminSettingsDataManagementSolution",
+      "version": "2.2.3552.1"
+    }
+  ],
+  "typeIdentity": "platform:26"
+}

@@ -1,0 +1,108 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "UpdMSPicklistControl",
+        "ControlManifestVersion": "1.0.73",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.MultiSelectPicklist.UpdMSPicklistControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_MultiSelectPicklist_Name",
+        "FullName": "MscrmControls.MultiSelectPicklist.UpdMSPicklistControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.MultiSelectPicklist.UpdMSPicklistControl",
+        "Namespace": "MscrmControls.MultiSelectPicklist",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "Type": "MultiSelectOptionSet",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 2,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 3,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LibraryName": "solCustom",
+              "LoadOrder": 4,
+              "Name": "solCustom",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 5,
+              "Name": "MscrmControls.MultiSelectPicklist.UpdMSPicklistControl_UpdatedMultiSelectPicklistControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 1,
+              "Name": "css/msos.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/MultiSelectPicklistControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.MultiSelectPicklist\" constructor=\"UpdMSPicklistControl\" version=\"1.0.73\" display-name-key=\"CC_MultiSelectPicklist_Name\" hidden=\"true\"><modes><read /><edit /></modes><property name=\"value\" display-name-key=\"CC_Field\" description-key=\"CC_Field_Desc\" of-type=\"MultiSelectOptionSet\" usage=\"bound\" required=\"true\" hidden=\"true\" /><resources><css path=\"css/msos.css\" order=\"1\" /><library name=\"jquery\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/jquery-3.6.0.js\" version=\"3.6.0\" /></library><library name=\"mscommon\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.37\" /></library><library name=\"solCustom\" version=\"&gt;=1\" order=\"4\"><packaged_library path=\"libs/msos.js\" version=\"3.0.34\" /></library><code path=\"UpdatedMultiSelectPicklistControl.js\" order=\"5\" /><resx path=\"strings/MultiSelectPicklistControl.1033.resx\" version=\"1.0.0\" /></resources></control></manifest>",
+    "name": "MscrmControls.MultiSelectPicklist.UpdMSPicklistControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.73"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.MultiSelectPicklist.UpdMSPicklistControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

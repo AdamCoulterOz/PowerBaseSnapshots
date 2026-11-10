@@ -1,0 +1,351 @@
+{
+  "configuration": {
+    "_publisherid_value": null,
+    "aiappdescription": null,
+    "aidescriptiongeneratedon": null,
+    "appgraph": null,
+    "appmoduleversion": null,
+    "appmodulexmlmanaged": null,
+    "clienttype": 4,
+    "componentstate": 0,
+    "configxml": null,
+    "description": "Solution Health Hub enables rules-based validation on the health of your organization and its components. Developers and solution implementers can create rules that allow admins to prevent or diagnose potential problems and promote the health of your organization and organization components. Administrators can run the defined rules periodically and as a first step in troubleshooting to discover potential problems, help prevent difficulties, and safeguard operations in their organization.",
+    "descriptor": {
+      "kind": "normalized-appmodule-descriptor-v1",
+      "value": {
+        "appInfo": {
+          "AppComponents": {
+            "Entities": [
+              {
+                "Id": {
+                  "key": [
+                    {
+                      "field": "LogicalName",
+                      "type": "String",
+                      "value": "msdyn_analysiscomponent"
+                    }
+                  ],
+                  "kind": "typed-reference",
+                  "targetEntity": "entity"
+                },
+                "LogicalName": "msdyn_analysiscomponent"
+              },
+              {
+                "Id": {
+                  "key": [
+                    {
+                      "field": "LogicalName",
+                      "type": "String",
+                      "value": "msdyn_analysisoverride"
+                    }
+                  ],
+                  "kind": "typed-reference",
+                  "targetEntity": "entity"
+                },
+                "LogicalName": "msdyn_analysisoverride"
+              },
+              {
+                "Id": {
+                  "key": [
+                    {
+                      "field": "LogicalName",
+                      "type": "String",
+                      "value": "msdyn_analysisjob"
+                    }
+                  ],
+                  "kind": "typed-reference",
+                  "targetEntity": "entity"
+                },
+                "LogicalName": "msdyn_analysisjob"
+              },
+              {
+                "Id": {
+                  "key": [
+                    {
+                      "field": "LogicalName",
+                      "type": "String",
+                      "value": "msdyn_analysisresult"
+                    }
+                  ],
+                  "kind": "typed-reference",
+                  "targetEntity": "entity"
+                },
+                "LogicalName": "msdyn_analysisresult"
+              },
+              {
+                "Id": {
+                  "key": [
+                    {
+                      "field": "LogicalName",
+                      "type": "String",
+                      "value": "msdyn_solutionhealthrule"
+                    }
+                  ],
+                  "kind": "typed-reference",
+                  "targetEntity": "entity"
+                },
+                "LogicalName": "msdyn_solutionhealthrule"
+              },
+              {
+                "Id": {
+                  "key": [
+                    {
+                      "field": "LogicalName",
+                      "type": "String",
+                      "value": "msdyn_solutionhealthruleargument"
+                    }
+                  ],
+                  "kind": "typed-reference",
+                  "targetEntity": "entity"
+                },
+                "LogicalName": "msdyn_solutionhealthruleargument"
+              },
+              {
+                "Id": {
+                  "key": [
+                    {
+                      "field": "LogicalName",
+                      "type": "String",
+                      "value": "msdyn_solutionhealthruleset"
+                    }
+                  ],
+                  "kind": "typed-reference",
+                  "targetEntity": "entity"
+                },
+                "LogicalName": "msdyn_solutionhealthruleset"
+              }
+            ]
+          },
+          "AppElements": [],
+          "AppId": {
+            "key": [
+              {
+                "field": "uniquename",
+                "type": "String",
+                "value": "msdyn_SolutionHealthHub"
+              }
+            ],
+            "kind": "typed-reference",
+            "targetEntity": "appmodule"
+          },
+          "ClientType": 4,
+          "Components": [
+            {
+              "Id": {
+                "componentType": 62,
+                "key": {
+                  "componentState": 0,
+                  "configurationBodyStatus": "not-evaluated",
+                  "kind": "layered-singleton",
+                  "overwriteTime": "1900-01-01T00:00:00Z",
+                  "portability": "not-established",
+                  "selector": "SiteMap",
+                  "solutionUniqueName": "msdyn_PowerAppsChecker",
+                  "solutionVersion": "2.2.3321.1"
+                },
+                "kind": "typed-reference",
+                "targetEntity": "sitemap"
+              },
+              "Type": 62
+            },
+            {
+              "Id": {
+                "componentType": 1,
+                "key": [
+                  {
+                    "field": "LogicalName",
+                    "type": "String",
+                    "value": "msdyn_analysiscomponent"
+                  }
+                ],
+                "kind": "typed-reference",
+                "targetEntity": "entity"
+              },
+              "Type": 1
+            },
+            {
+              "Id": {
+                "componentType": 1,
+                "key": [
+                  {
+                    "field": "LogicalName",
+                    "type": "String",
+                    "value": "msdyn_analysisoverride"
+                  }
+                ],
+                "kind": "typed-reference",
+                "targetEntity": "entity"
+              },
+              "Type": 1
+            },
+            {
+              "Id": {
+                "componentType": 1,
+                "key": [
+                  {
+                    "field": "LogicalName",
+                    "type": "String",
+                    "value": "msdyn_analysisjob"
+                  }
+                ],
+                "kind": "typed-reference",
+                "targetEntity": "entity"
+              },
+              "Type": 1
+            },
+            {
+              "Id": {
+                "componentType": 1,
+                "key": [
+                  {
+                    "field": "LogicalName",
+                    "type": "String",
+                    "value": "msdyn_analysisresult"
+                  }
+                ],
+                "kind": "typed-reference",
+                "targetEntity": "entity"
+              },
+              "Type": 1
+            },
+            {
+              "Id": {
+                "componentType": 1,
+                "key": [
+                  {
+                    "field": "LogicalName",
+                    "type": "String",
+                    "value": "msdyn_solutionhealthrule"
+                  }
+                ],
+                "kind": "typed-reference",
+                "targetEntity": "entity"
+              },
+              "Type": 1
+            },
+            {
+              "Id": {
+                "componentType": 1,
+                "key": [
+                  {
+                    "field": "LogicalName",
+                    "type": "String",
+                    "value": "msdyn_solutionhealthruleargument"
+                  }
+                ],
+                "kind": "typed-reference",
+                "targetEntity": "entity"
+              },
+              "Type": 1
+            },
+            {
+              "Id": {
+                "componentType": 1,
+                "key": [
+                  {
+                    "field": "LogicalName",
+                    "type": "String",
+                    "value": "msdyn_solutionhealthruleset"
+                  }
+                ],
+                "kind": "typed-reference",
+                "targetEntity": "entity"
+              },
+              "Type": 1
+            }
+          ],
+          "Description": "Solution Health Hub enables rules-based validation on the health of your organization and its components. Developers and solution implementers can create rules that allow admins to prevent or diagnose potential problems and promote the health of your organization and organization components. Administrators can run the defined rules periodically and as a first step in troubleshooting to discover potential problems, help prevent difficulties, and safeguard operations in their organization.",
+          "IsDefault": false,
+          "IsFeatured": 0,
+          "IsManaged": false,
+          "NavigationType": 0,
+          "OptimizedFor": "",
+          "SolutionId": "msdyn_PowerAppsChecker",
+          "Status": 0,
+          "Title": "Solution Health Hub",
+          "UniqueName": "msdyn_SolutionHealthHub",
+          "webResourceId": {
+            "key": [
+              {
+                "field": "name",
+                "type": "String",
+                "value": "msdyn_/Icons/SolutionHealthAppModuleTeal.svg"
+              }
+            ],
+            "kind": "typed-reference",
+            "targetEntity": "webresource"
+          },
+          "welcomePageId": "00000000-0000-0000-0000-000000000000"
+        },
+        "eventHandlers": [],
+        "publisherInfo": {
+          "Id": "microsoftdynamics"
+        },
+        "webResourceInfo": {
+          "DisplayName": "SolutionHealthAppModuleTeal.svg",
+          "Guid": {
+            "key": [
+              {
+                "field": "name",
+                "type": "String",
+                "value": "msdyn_/Icons/SolutionHealthAppModuleTeal.svg"
+              }
+            ],
+            "kind": "typed-reference",
+            "targetEntity": "webresource"
+          },
+          "Name": "msdyn_/Icons/SolutionHealthAppModuleTeal.svg",
+          "WebResourceType": 11
+        },
+        "welcomePageInfo": {
+          "WebResourceType": 0
+        }
+      }
+    },
+    "eventhandlers": null,
+    "formfactor": 1,
+    "importsequencenumber": null,
+    "introducedversion": "1.0",
+    "isdefault": false,
+    "isfeatured": false,
+    "ismanaged": true,
+    "name": "Solution Health Hub",
+    "navigationtype": 0,
+    "optimizedfor": "",
+    "overriddencreatedon": null,
+    "publishedon": null,
+    "statecode": 0,
+    "statuscode": 1,
+    "uniquename": "msdyn_SolutionHealthHub",
+    "url": null,
+    "webresourceid": {
+      "key": [
+        {
+          "field": "name",
+          "type": "String",
+          "value": "msdyn_/Icons/SolutionHealthAppModuleTeal.svg"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "webresource"
+    },
+    "welcomepageid": "00000000-0000-0000-0000-000000000000"
+  },
+  "exportIdentity": [
+    {
+      "field": "uniquename",
+      "type": "String",
+      "value": "msdyn_SolutionHealthHub"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "msdyn_PowerAppsChecker",
+      "version": "2.2.3321.1"
+    }
+  ],
+  "typeIdentity": "platform:80"
+}

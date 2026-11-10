@@ -1,0 +1,129 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ArcKnobControl",
+        "ControlManifestVersion": "1.0.5",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.Knob.ArcKnobControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_ArcKnob_Name",
+        "FullName": "MscrmControls.Knob.ArcKnobControl",
+        "IsVirtual": false,
+        "Name": "MscrmControls.Knob.ArcKnobControl",
+        "Namespace": "MscrmControls.Knob",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": true,
+              "Name": "value",
+              "Required": true,
+              "TypeGroup": "numbers",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "min",
+              "Required": true,
+              "TypeGroup": "numbers",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "max",
+              "Required": true,
+              "TypeGroup": "numbers",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "step",
+              "Required": true,
+              "TypeGroup": "numbers",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "jqueryknob",
+              "LoadOrder": 2,
+              "Name": "jqueryknob",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 3,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 4,
+              "Name": "MscrmControls.Knob.ArcKnobControl_ArcKnobControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 5,
+              "Name": "css/jquery.knobgauge.custom.css",
+              "Type": 1
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/ArcKnobControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.Knob\" constructor=\"ArcKnobControl\" hidden=\"true\" version=\"1.0.5\" display-name-key=\"CC_ArcKnob_Name\" description-key=\"CC_NumericInterval_Desc\" preview-image=\"img/preview.png\"><modes><read /><edit /></modes><type-group name=\"numbers\"><type>Whole.None</type><type>Currency</type><type>FP</type><type>Decimal</type></type-group><property name=\"value\" display-name-key=\"CC_Value\" description-key=\"CC_Value_Desc\" of-type-group=\"numbers\" usage=\"bound\" required=\"true\" hidden=\"true\" /><property name=\"min\" display-name-key=\"CC_Min\" description-key=\"CC_Min_Desc\" usage=\"input\" of-type-group=\"numbers\" required=\"true\" hidden=\"false\" /><property name=\"max\" display-name-key=\"CC_Max\" description-key=\"CC_Max_Desc\" usage=\"input\" of-type-group=\"numbers\" required=\"true\" hidden=\"false\" /><property name=\"step\" display-name-key=\"CC_Step\" description-key=\"CC_Step_Desc\" of-type-group=\"numbers\" usage=\"input\" required=\"true\" hidden=\"false\" /><AvailableOn><web classic=\"disable\" /><phone /><tablet /></AvailableOn><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><library name=\"jqueryknob\" version=\"&gt;=1.10\" order=\"2\"><packaged_library path=\"libs/jquery.knob-1.2.11.js\" version=\"1.2.11\" /></library><library name=\"mscommon\" version=\"&gt;=1\" order=\"3\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><code path=\"ArcKnobControl.js\" order=\"4\" /><css path=\"css/jquery.knobgauge.custom.css\" order=\"5\" /><resx path=\"strings/ArcKnobControl.1033.resx\" version=\"1.0.1\" /></resources></control></manifest>",
+    "name": "MscrmControls.Knob.ArcKnobControl",
+    "supportedplatform": null,
+    "version": "1.0.5"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.Knob.ArcKnobControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

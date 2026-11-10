@@ -1,0 +1,114 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "ImportLogDataSetControl",
+        "ControlManifestVersion": "1.0.200",
+        "ControlMode": "Unknown",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.ImportExport.ImportLogDataSetControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "ImportLogDataSetControl",
+        "FullName": "MscrmControls.ImportExport.ImportLogDataSetControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.ImportExport.ImportLogDataSetControl",
+        "Namespace": "MscrmControls.ImportExport",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [],
+              "InitialDataSetFetch": true,
+              "Name": "ImportLogDataSet",
+              "Type": "Grid"
+            },
+            {
+              "CDSDataSetOptions": "",
+              "Columns": [],
+              "InitialDataSetFetch": true,
+              "Name": "ImportLogPartialFailureDataSet",
+              "Type": "Grid"
+            }
+          ],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "resultType",
+              "Required": false,
+              "Type": "Decimal",
+              "Usage": 1
+            },
+            {
+              "Hidden": false,
+              "Name": "targetEntityPrimaryIdAttributeName",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 1
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "jquery",
+              "LoadOrder": 1,
+              "Name": "jquery",
+              "Type": 0
+            },
+            {
+              "LibraryName": "mscommon",
+              "LoadOrder": 2,
+              "Name": "mscommon",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.ImportExport.ImportLogDataSetControl_ImportLogDataSetControl.js",
+              "Type": 4
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.2.26094.00165",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.ImportExport\" constructor=\"ImportLogDataSetControl\" version=\"1.0.200\" display-name-key=\"ImportLogDataSetControl\" control-type=\"virtual\" hidden=\"true\"><modes></modes><data-set name=\"ImportLogDataSet\" display-name-key=\"cc_LogDataSet\"></data-set><data-set name=\"ImportLogPartialFailureDataSet\" display-name-key=\"cc_PartialFailureDataSet\"></data-set><property name=\"resultType\" display-name-key=\"CC_result_Type\" description-key=\"CC_result_Type_Desc\" of-type=\"Decimal\" usage=\"input\" required=\"false\" hidden=\"false\" /><property name=\"targetEntityPrimaryIdAttributeName\" display-name-key=\"CC_targetEntityPrimaryIdAttributeName\" description-key=\"CC_targetEntityPrimaryIdAttributeName_desc\" usage=\"input\" of-type=\"SingleLine.Text\" required=\"true\" hidden=\"false\" /><resources><library name=\"jquery\" version=\"&gt;=2\" order=\"1\"><packaged_library path=\"libs/jquery-2.1.1.js\" version=\"2.1.1\" /></library><library name=\"mscommon\" version=\"&gt;=1\" order=\"2\"><packaged_library path=\"libs/mscommonlib-1.0.0.js\" version=\"1.2.1\" /></library><code path=\"ImportLogDataSetControl.js\" order=\"3\" /></resources></control></manifest>",
+    "name": "MscrmControls.ImportExport.ImportLogDataSetControl",
+    "supportedplatform": null,
+    "version": "1.0.200"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.ImportExport.ImportLogDataSetControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "CustomControlsCore",
+      "version": "9.2.26101.00184"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

@@ -1,0 +1,133 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "EmailTemplatesControl",
+        "ControlManifestVersion": "1.0.16",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.FieldControls.EmailTemplatesControl"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "CC_ETControl_Name",
+        "FullName": "MscrmControls.FieldControls.EmailTemplatesControl",
+        "IsVirtual": true,
+        "Name": "MscrmControls.FieldControls.EmailTemplatesControl",
+        "Namespace": "MscrmControls.FieldControls",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [
+            {
+              "Hidden": false,
+              "Name": "emailFormData",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "entityId",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "entityType",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "emailsubject",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "emaildescription",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "templateId",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            },
+            {
+              "Hidden": false,
+              "Name": "templateTitle",
+              "Required": true,
+              "Type": "SingleLine.Text",
+              "Usage": 0
+            }
+          ],
+          "Resources": [
+            {
+              "LibraryName": "SIClientUtilityLogger",
+              "LoadOrder": 1,
+              "Name": "SIClientUtilityLogger",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 3,
+              "Name": "MscrmControls.FieldControls.EmailTemplatesControl_EmailTemplatesControl.js",
+              "Type": 4
+            },
+            {
+              "LoadOrder": 0,
+              "Name": "strings/EmailTemplatesControl.1033.resx",
+              "Type": 5
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.26093.260917001",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.FieldControls\" constructor=\"EmailTemplatesControl\" version=\"1.0.16\" control-type=\"virtual\" display-name-key=\"CC_ETControl_Name\" hidden=\"true\"><property name=\"emailFormData\" required=\"true\" display-name-key=\"CC_emailFormData\" description-key=\"CC_EmailFOrmData_Desc\" usage=\"bound\" of-type=\"SingleLine.Text\" /><property name=\"entityId\" required=\"true\" display-name-key=\"CC_entityId\" description-key=\"CC_entityId_Desc\" usage=\"bound\" of-type=\"SingleLine.Text\" /><property name=\"entityType\" required=\"true\" display-name-key=\"CC_entityType\" description-key=\"CC_entityType_Desc\" usage=\"bound\" of-type=\"SingleLine.Text\" /><property name=\"emailsubject\" required=\"true\" display-name-key=\"CC_emailsubject\" description-key=\"CC_emailsubject_Desc\" usage=\"bound\" of-type=\"SingleLine.Text\" /><property name=\"emaildescription\" required=\"true\" display-name-key=\"CC_emaildescription\" description-key=\"CC_emaildescription_Desc\" usage=\"bound\" of-type=\"SingleLine.Text\" /><property name=\"templateId\" required=\"true\" display-name-key=\"CC_templateId\" description-key=\"CC_templateId_Desc\" usage=\"bound\" of-type=\"SingleLine.Text\" /><property name=\"templateTitle\" required=\"true\" display-name-key=\"CC_templateTitle\" description-key=\"CC_templateTitle_Desc\" usage=\"bound\" of-type=\"SingleLine.Text\" /><resources><library name=\"SIClientUtilityLogger\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/SIClientUtilityLogger.js\" version=\"1.0.0\" /></library><resx path=\"strings/EmailTemplatesControl.1033.resx\" version=\"1.0.3\" /><code path=\"EmailTemplatesControl.js\" order=\"3\" /></resources></control></manifest>",
+    "name": "MscrmControls.FieldControls.EmailTemplatesControl",
+    "supportedplatform": "(Model)",
+    "version": "1.0.16"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.FieldControls.EmailTemplatesControl"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "MicrosoftCorporation",
+      "uniqueName": "msdynce_ActivitiesPatch",
+      "version": "9.0.26093.260917001"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

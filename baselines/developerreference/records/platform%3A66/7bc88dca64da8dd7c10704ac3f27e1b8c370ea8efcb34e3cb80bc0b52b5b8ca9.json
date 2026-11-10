@@ -1,0 +1,84 @@
+{
+  "configuration": {
+    "authoringmanifest": null,
+    "clientjson": {
+      "kind": "normalized-control-client-v1",
+      "value": {
+        "Children": [],
+        "ConstructorName": "CanvasControlAuthoring",
+        "ControlManifestVersion": "1.9.6",
+        "ControlMode": "Both",
+        "CustomControlId": {
+          "key": [
+            {
+              "field": "name",
+              "type": "String",
+              "value": "MscrmControls.CanvasAuthoring.CanvasControlAuthoring"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "customcontrol"
+        },
+        "DisplayName": "Canvas_Control_Authoring",
+        "FullName": "MscrmControls.CanvasAuthoring.CanvasControlAuthoring",
+        "IsVirtual": false,
+        "Name": "MscrmControls.CanvasAuthoring.CanvasControlAuthoring",
+        "Namespace": "MscrmControls.CanvasAuthoring",
+        "OverallVersionNumber": 0,
+        "Properties": {
+          "Actions": [],
+          "DataSets": [],
+          "Events": [],
+          "FeatureUsage": [],
+          "PlatformAction": [],
+          "Properties": [],
+          "Resources": [
+            {
+              "LibraryName": "AppMagic.Authoring.Sdk.Embedding",
+              "LoadOrder": 1,
+              "Name": "AppMagic.Authoring.Sdk.Embedding",
+              "Type": 0
+            },
+            {
+              "LibraryName": "universal_remote",
+              "LoadOrder": 1,
+              "Name": "universal_remote",
+              "Type": 0
+            },
+            {
+              "LoadOrder": 2,
+              "Name": "MscrmControls.CanvasAuthoring.CanvasControlAuthoring_CanvasControlAuthoring.js",
+              "Type": 4
+            }
+          ]
+        },
+        "VersionNumber": 0
+      }
+    },
+    "compatibledatatypes": "",
+    "componentstate": 0,
+    "introducedversion": "9.0.2609.4004",
+    "ismanaged": true,
+    "manifest": "<manifest><control namespace=\"MscrmControls.CanvasAuthoring\" constructor=\"CanvasControlAuthoring\" version=\"1.9.6\" display-name-key=\"Canvas_Control_Authoring\" hidden=\"true\"><resources><library name=\"AppMagic.Authoring.Sdk.Embedding\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/AppMagic.Authoring.Sdk.Embedding.js\" version=\"1.1.0\" /></library><library name=\"universal_remote\" version=\"&gt;=1\" order=\"1\"><packaged_library path=\"libs/universal_remote.js\" version=\"1.0.0\" /></library><code path=\"CanvasControlAuthoring.js\" order=\"2\" /></resources></control></manifest>",
+    "name": "MscrmControls.CanvasAuthoring.CanvasControlAuthoring",
+    "supportedplatform": "(Model)",
+    "version": "1.9.6"
+  },
+  "exportIdentity": [
+    {
+      "field": "name",
+      "type": "String",
+      "value": "MscrmControls.CanvasAuthoring.CanvasControlAuthoring"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftdynamics",
+      "uniqueName": "BaseCustomControlsCore",
+      "version": "9.0.2609.4005"
+    }
+  ],
+  "typeIdentity": "platform:66"
+}

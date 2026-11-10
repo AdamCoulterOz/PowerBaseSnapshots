@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "_parentbotcomponentcollectionid_value": {
+      "key": [
+        {
+          "field": "schemaname",
+          "type": "String",
+          "value": "bot_componentcollection_appcopilot_v1"
+        }
+      ],
+      "kind": "typed-reference",
+      "targetEntity": "botcomponentcollection"
+    },
+    "_parentbotcomponentid_value": null,
+    "_parentbotid_value": null,
+    "accentcolor": null,
+    "canmodifystate": null,
+    "category": null,
+    "componentstate": 0,
+    "componenttype": 9,
+    "content": null,
+    "data": "kind: AdaptiveDialog\r\nbeginDialog:\r\n  kind: OnRecognizedIntent\r\n  id: main\r\n  intent:\r\n    displayName: DV QAndA\r\n\r\n  actions:\r\n    - kind: SetVariable\r\n      id: setVariable_RTKy4A\r\n      variable: Topic.userPrompt\r\n      value: =System.Activity.Text\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_3XFTlE\r\n      variable: Topic.appId\r\n      value: =If(!IsBlank(System.Activity.ChannelData.appId), Text(System.Activity.ChannelData.appId), Text(GUID()))\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_usid5u\r\n      variable: Topic.correlationId\r\n      value: =If(!IsBlank(System.Activity.ChannelData.correlationId), Text(System.Activity.ChannelData.correlationId), Text(GUID()))\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_ypbI0m\r\n      variable: Topic.userAgent\r\n      value: =Global.PA_Copilot_SessionContext.host\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_KhIiny\r\n      variable: Topic.clientRequestId\r\n      value: =If(!IsBlank(System.Activity.ChannelData.clientRequestId), Text(System.Activity.ChannelData.clientRequestId), Text(GUID()))\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_YNL3Bg\r\n      variable: Topic.clientSessionId\r\n      value: =If(!IsBlank(System.Activity.ChannelData.clientSessionId), Text(System.Activity.ChannelData.clientSessionId), Text(GUID()))\r\n\r\n    - kind: SetVariable\r\n      id: setVariable_3SqOXB\r\n      variable: Topic.requestBody\r\n      value: \"=Concatenate(\\\"{\\\"\\\"queryText\\\"\\\": \\\"\\\"\\\",Topic.userPrompt, \\\"\\\"\\\", \\\"\\\"options\\\"\\\": [\\\"\\\"GetResultsSummary\\\"\\\"], \\\"\\\"entityParameters\\\"\\\": [\\\", Concat(Global.PA_Copilot_EntityContext, \\\"{ \\\"\\\"name\\\"\\\" : \\\" & \\\"\\\"\\\"\\\" & TargetEntity & \\\"\\\"\\\"\\\" & \\\"}\\\", \\\", \\\"), \\\"]\\\")\"\r\n\r\n    - kind: HttpRequestAction\r\n      id: fZyIdb\r\n      method: Post\r\n      url: https://dataverse/api/copilot/v1.0/QueryStructuredData\r\n      headers:\r\n        X-Ms-App-Id: =Topic.appId\r\n        X-Ms-Client-Request-Id: =Topic.clientRequestId\r\n        X-Ms-Correlation-Id: =Topic.correlationId\r\n        X-Ms-User-Agent: =Topic.userAgent\r\n        X-Ms-Client-Session-Id: =Topic.clientSessionId\r\n        X-Ms-Bot-Schema-Name: =System.Bot.SchemaName\r\n\r\n      body:\r\n        kind: RawRequestContent\r\n        contentType: application/json\r\n        content: =Topic.requestBody\r\n\r\n      errorHandling:\r\n        kind: ContinueOnErrorBehavior\r\n        statusCode: Topic.callStatusCode\r\n        errorResponseBody: Topic.callError\r\n\r\n      response: Topic.DVResponse\r\n\r\n    - kind: LogCustomTelemetryEvent\r\n      id: TK2sNh\r\n      eventName: Log CorrelationId\r\n      properties: =Topic.correlationId\r\n\r\n    - kind: LogCustomTelemetryEvent\r\n      id: C3kDsO\r\n      eventName: Log ClientSessionId\r\n      properties: =Topic.clientSessionId\r\n\r\n    - kind: LogCustomTelemetryEvent\r\n      id: ncQcco\r\n      eventName: Log ClientRequestId\r\n      properties: =Topic.clientRequestId\r\n\r\n    - kind: LogCustomTelemetryEvent\r\n      id: I7W43O\r\n      eventName: Log userAgent\r\n      properties: =Topic.userAgent\r\n\r\n    - kind: LogCustomTelemetryEvent\r\n      id: qeIgvE\r\n      eventName: Log AppId\r\n      properties: =Topic.appId\r\n\r\n    - kind: SendActivity\r\n      id: sendActivity_DXzO8M\r\n      activity:\r\n        kind: EventActivity\r\n        value: =Topic.DVResponse\r\n        name: MS.PA.DataverseCopilotResponse",
+    "dependencies": null,
+    "description": null,
+    "filedata": null,
+    "filedata_name": null,
+    "helplink": null,
+    "iconurl": null,
+    "importsequencenumber": null,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "ismanaged": true,
+    "language": 1033,
+    "name": "DV QAndA",
+    "overriddencreatedon": null,
+    "reusepolicy": null,
+    "schemaname": "msdyn_appCopilot.topic.DVQAndA",
+    "statecode": 0,
+    "statuscode": 1,
+    "timezoneruleversionnumber": null,
+    "utcconversiontimezonecode": null
+  },
+  "exportIdentity": [
+    {
+      "field": "schemaname",
+      "type": "String",
+      "value": "msdyn_appCopilot.topic.DVQAndA"
+    }
+  ],
+  "opaqueAssets": [],
+  "solutionProvenance": [
+    {
+      "managed": true,
+      "publisher": "microsoftfirstparty",
+      "uniqueName": "msdyn_AppCopilotPVABotComponentCollection",
+      "version": "9.1.2026042.260403199"
+    }
+  ],
+  "typeIdentity": "entity:botcomponent"
+}

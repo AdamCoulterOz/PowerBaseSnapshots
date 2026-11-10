@@ -1,0 +1,110 @@
+{
+  "configuration": {
+    "advancedgroupby": null,
+    "canbedeleted": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbedeleted",
+      "Value": false
+    },
+    "columnsetxml": null,
+    "componentstate": 0,
+    "conditionalformatting": null,
+    "description": "Display all associated Categories for the current Knowledge Article.",
+    "enablecrosspartition": false,
+    "fetchxml": "<fetch distinct=\"false\" mapping=\"logical\" savedqueryid=\"50e935ba-2e0d-460d-ad36-b699b9b991d8\"><entity name=\"category\"><attribute name=\"title\" /><attribute name=\"categoryid\" /><order attribute=\"title\" descending=\"false\" /></entity></fetch>",
+    "introducedversion": "8.1.0.0",
+    "iscustom": false,
+    "iscustomizable": {
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizableanddeletable",
+      "Value": false
+    },
+    "isdefault": false,
+    "ismanaged": true,
+    "isquickfindquery": false,
+    "isuserdefined": true,
+    "layoutjson": {
+      "kind": "normalized-layout-json-v1",
+      "value": {
+        "CustomControlDescriptions": [],
+        "Icon": true,
+        "IconRenderer": "",
+        "Jump": "title",
+        "Name": "category",
+        "Object": {
+          "key": [
+            {
+              "field": "LogicalName",
+              "type": "String",
+              "value": "category"
+            }
+          ],
+          "kind": "typed-reference",
+          "targetEntity": "entity"
+        },
+        "Preview": true,
+        "Rows": [
+          {
+            "Cells": [
+              {
+                "AddedBy": "",
+                "CellType": "",
+                "Desc": "",
+                "DisableMetaDataBinding": false,
+                "DisableSorting": false,
+                "ImageProviderFunctionName": "",
+                "ImageProviderWebresource": "",
+                "IsHidden": false,
+                "LabelId": "",
+                "Name": "title",
+                "RelatedEntityName": "",
+                "Width": 300
+              }
+            ],
+            "Id": "categoryid",
+            "LayoutStyle": "",
+            "MultiObjectIdField": "",
+            "Name": "category"
+          }
+        ],
+        "Select": true
+      }
+    },
+    "layoutxml": {
+      "kind": "normalized-layout-xml-v1",
+      "objectTable": {
+        "key": [
+          {
+            "field": "LogicalName",
+            "type": "String",
+            "value": "category"
+          }
+        ],
+        "kind": "typed-reference",
+        "targetEntity": "entity"
+      },
+      "xmlWithLogicalObject": "<grid name=\"category\" object=\"logical:category\" jump=\"title\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"category\" id=\"categoryid\"><cell name=\"title\" width=\"300\" /></row></grid>"
+    },
+    "name": "Related Categories",
+    "offlinesqlquery": "/*SelectStart*/select  \"category0\".[title] as \"title\"\r , \"category0\".[categoryid] as \"categoryid\"/*SelectEnd*/  /*FromStart*/from  Category as \"category0\"/*FromEnd*/  /*OrderByStart*/order by  \"category0\".[title] asc/*OrderByEnd*/",
+    "organizationtaborder": null,
+    "queryappusage": null,
+    "querytype": 64,
+    "returnedtypecode": "category",
+    "roledisplayconditionsxml": null,
+    "savedqueryid": "50e935ba-2e0d-460d-ad36-b699b9b991d8",
+    "statecode": 0,
+    "statuscode": 1
+  },
+  "configurationReference": true,
+  "exportIdentity": {
+    "kind": "wire-guid",
+    "parentLogicalName": "category",
+    "parentReferenceStatus": "resolved",
+    "portability": "not-established",
+    "value": "50e935ba-2e0d-460d-ad36-b699b9b991d8"
+  },
+  "opaqueAssets": [],
+  "solutionProvenance": [],
+  "typeIdentity": "platform:26"
+}
