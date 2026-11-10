@@ -6,7 +6,7 @@ For a new exact four-part service version, an approved exact producer policy and
 
 This configuration pins producer `ce785ee24b74cd26ece82970a24938be7b148e83` and its approved policy hash. Hosted R13 run 42785220484 completed 888 metadata captures with no failures, nonmaterialization and operational scope, and had zero final unresolved scope; reproducibility and loss accounting passed. It held before finalization on two type 64 missing representations, 63 identity and 63 AI reference issues, and 15 field issues. R13 rejected the entire partial contained capture; R14 supports verified usable records in partial captures, and a same-input local check selected 130 usable records and no denied records.
 
-A local access test identified two type 64 reads denied for missing complex-control Read access. The dedicated role gained that Global Read privilege; after four unrelated automatic grants were removed, it has 74 Read privileges. Both exact reads subsequently returned matching original bytes under the dedicated reader. Hosted confirmation remains pending. The hourly schedule remains paused; no qualified baseline or service-version tag has been published. The sentinel profile is `developerreference`.
+A local access test identified two type 64 reads denied for missing complex-control Read access. The dedicated role gained that Global Read privilege; after four unrelated automatic grants were removed, it has 74 Read privileges. Both exact reads subsequently returned matching original bytes under the dedicated reader. Hosted run [42822394639](https://github.com/AdamCoulterOz/PowerBaseSnapshots/actions/runs/42822394639) published the first qualified baseline at commit `647fc1ba6f5665deec90305bacf52f0c5fb83f50`, tagged `service/9.2.26101.184`. The hourly schedule is being restored; its next scheduled poll remains pending. The sentinel profile is `developerreference`.
 
 Public commit `80e16a432cd6e26398a8c9ba3224ce040ddc47df` deployed the controller OIDC path. [Auth-check run 41234952032](https://github.com/AdamCoulterOz/PowerBaseSnapshots/actions/runs/41234952032) succeeded at service version `9.2.26094.165`: two token exchanges, matching configured application identity, four bounded capability reads, and matching before/after versions. The check did not clone the producer, perform a full acquisition or test token renewal during a long capture.
 
@@ -16,6 +16,6 @@ The prepared capture workflow supplies the configured client and instrumentation
 
 Prepared publication preflights validate Git object sizes and the staged index against attested content, then measure the outgoing commit-and-tag pack with margin before an atomic push.
 
-Prepared a manual isolated contained-metadata probe and temporary schedule pause for diagnosis; incomplete normal acquisitions also report the same bounded metadata summary. This remains local until deployed and does not qualify a snapshot.
+The manual contained-metadata probe and bounded summaries for incomplete acquisitions are diagnostic and do not qualify a snapshot.
 
 Prepared periodic sanitized acquisition stage progress and independent optional coverage diagnostics; these are observability only and do not alter publication gates.
